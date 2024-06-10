@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World</title>
+    <title>Phrase Display</title>
     <style>
       body {
         background-color: white;
@@ -11,10 +11,43 @@
         height: 100vh;
         margin: 0;
         font-family: Arial, sans-serif;
+        font-size: 24px;
       }
     </style>
   </head>
   <body>
-    <h1>Hello, World 123!</h1>
+    <div id="phrase-container"></div>
+    <script>
+      const { ipcRenderer } = require('electron');
+
+      const phrases = [
+        'Phrase 1: Hello World!',
+        'Phrase 2: Welcome to Electron!',
+        'Phrase 3: Enjoy coding!',
+        'Phrase 4: Have a great day!',
+      ];
+
+      let currentIndex = 0;
+      const phraseContainer = document.getElementById('phrase-container');
+
+      function displayNextPhrase() {
+        const phrase = phrases[currentIndex];
+        phraseContainer.textContent = phrase;
+        adjustWindowSize(phrase);
+        currentIndex = (currentIndex + 1) % phrases.length;
+      }
+
+      function adjustWindowSize(text) {
+        const fontSize = 24;
+        const padding = 15;
+        const verticalPadding = 50; // 50px top + 50px bottom
+        const width = (text.length * fontSize * 0.6) + padding;
+        const height = fontSize + verticalPadding;
+        ipcRenderer.send('resize-window', Math.ceil(width), Math.ceil(height));
+      }
+
+      displayNextPhrase();
+      setInterval(displayNextPhrase, 2000);
+    </script>
   </body>
 </html>
