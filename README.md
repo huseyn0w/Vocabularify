@@ -47,7 +47,7 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
 
 ## Feedback and Contributions
 
-We are always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
+I am always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
 
 ## Contact
 
