@@ -103,7 +103,7 @@ function createTray() {
       {
         label: 'About',
         click: () => {
-          shell.openExternal('https://github.com/your-repository'); // Replace with your repository URL
+          shell.openExternal('https://github.com/huseyn0w/Vocabularify'); // Replace with your repository URL
         }
       },
       {
