@@ -49,12 +49,8 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
 
 We are always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
-For any inquiries or support, please contact us at [your-email@example.com].
+For any inquiries or support, please contact me at [https://linkedin.com/in/huseyn0w].
 
 Happy Learning! 🌟
