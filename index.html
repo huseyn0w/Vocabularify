@@ -56,9 +56,16 @@
         }
       }
 
+      function cyclePhrases() {
+        currentIndex = (currentIndex + 1) % phrases.length;
+        displayPhrase(currentIndex);
+      }
+
       displayPhrase(currentIndex);
       document.addEventListener('keydown', handleKeyPress);
-      setInterval(displayNextPhrase, 2000);
+
+      // Set interval to change phrases every 5 seconds
+      setInterval(cyclePhrases, 2000);
     </script>
   </body>
 </html>
