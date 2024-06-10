@@ -1,5 +1,11 @@
 const { app, BrowserWindow } = require('electron');
 
+// Require electron-reload to watch your files for changes
+require('electron-reload')(__dirname, {
+  // Optionally, specify files to watch
+  electron: require(`${__dirname}/node_modules/electron`)
+});
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
