@@ -26,11 +26,11 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
 
    - Clone the repository:
      ```bash
-     git clone https://github.com/your-username/vocabulary-booster.git
+     git clone https://github.com/huseyn0w/Vocabularify.git
      ```
    - Navigate to the project directory:
      ```bash
-     cd vocabulary-booster
+     cd vocabularify
      ```
    - Install the dependencies:
      ```bash
@@ -40,10 +40,7 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
      ```bash
      yarn build
      ```
-   - Run the application:
-     ```bash
-     yarn start
-     ```
+   - Open the app installation file in 'dist' folder:
 
 2. **Choose Your Language**: Select the language you want to learn.
 3. **Start Learning**: Position the app window where it's most convenient and start absorbing new words effortlessly.
