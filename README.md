@@ -22,16 +22,42 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
 
 ## Getting Started
 
-1. **Download and Install**: yarn install + yarn build
+1. **Download and Install**
+
+   - Clone the repository:
+     ```bash
+     git clone https://github.com/your-username/vocabulary-booster.git
+     ```
+   - Navigate to the project directory:
+     ```bash
+     cd vocabulary-booster
+     ```
+   - Install the dependencies:
+     ```bash
+     yarn install
+     ```
+   - Build the application:
+     ```bash
+     yarn build
+     ```
+   - Run the application:
+     ```bash
+     yarn start
+     ```
+
 2. **Choose Your Language**: Select the language you want to learn.
 3. **Start Learning**: Position the app window where it's most convenient and start absorbing new words effortlessly.
 
 ## Feedback and Contributions
 
-I am always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
+We are always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any inquiries or support, please contact me at [https://linkedin.com/in/huseyn0w].
+For any inquiries or support, please contact us at [your-email@example.com].
 
 Happy Learning! 🌟
