@@ -21,26 +21,35 @@
   <body>
     <div id="phrase-container"></div>
     <script>
-      const { ipcRenderer } = require('electron');
+      const { ipcRenderer, remote } = require('electron');
       const phraseContainer = document.getElementById('phrase-container');
 
-      ipcRenderer.on('display-phrase', (event, phrase) => {
-        phraseContainer.textContent = phrase;
-      });
+      function showError(message, error) {
+        const dialog = remote.dialog;
+        dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
+      }
 
-      ipcRenderer.on('set-mode', (event, mode) => {
-        if (mode === 'dark') {
-          document.body.style.backgroundColor = 'black';
-          document.body.style.color = 'white';
-        } else {
-          document.body.style.backgroundColor = 'white';
-          document.body.style.color = 'black';
-        }
-      });
+      try {
+        ipcRenderer.on('display-phrase', (event, phrase) => {
+          phraseContainer.textContent = phrase;
+        });
 
-      document.addEventListener('keydown', (event) => {
-        ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
-      });
+        ipcRenderer.on('set-mode', (event, mode) => {
+          if (mode === 'dark') {
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+          } else {
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
+        });
+      } catch (error) {
+        showError('An error occurred in the renderer process.', error);
+      }
     </script>
   </body>
 </html>

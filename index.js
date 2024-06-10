@@ -1,155 +1,204 @@
-const { app, BrowserWindow, Menu, Tray, ipcMain, shell } = require('electron');
+const { app, BrowserWindow, Menu, Tray, ipcMain, shell, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs');
+
 // Conditionally include electron-reload in development mode
 if (process.env.NODE_ENV === 'development') {
-  require('electron-reload')(__dirname, {
-    electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-  });
+  try {
+    require('electron-reload')(__dirname, {
+      electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+    });
+  } catch (error) {
+    console.error('Error loading electron-reload:', error);
+  }
 }
-
 
 let mainWindow;
 let tray;
 let phrases = [];
 let currentIndex = 0;
 let intervalId;
-let currentLanguagePath = 'languages/de/vocabulary.json';
+let currentLanguagePath = getLanguageFilePath('de');
+
+function getLanguageFilePath(language) {
+  const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
+  return path.join(basePath, 'languages', language, 'vocabulary.json');
+}
 
 function createWindow() {
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    alwaysOnTop: true,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
-    }
-  });
+  try {
+    mainWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+      alwaysOnTop: true,
+      webPreferences: {
+        nodeIntegration: true,
+        contextIsolation: false
+      }
+    });
 
-  mainWindow.loadFile('index.html');
-  mainWindow.setBackgroundColor('#FFFFFF');
+    mainWindow.loadFile('index.html');
+    mainWindow.setBackgroundColor('#FFFFFF');
 
-  mainWindow.webContents.on('did-finish-load', () => {
-    loadPhrases(currentLanguagePath);
-  });
+    mainWindow.on('close', () => {
+      app.quit();
+    });
+
+    mainWindow.webContents.on('did-finish-load', () => {
+      loadPhrases(currentLanguagePath);
+    });
+  } catch (error) {
+    showError('Failed to create the main window.', error);
+  }
 }
 
 function createTray() {
-  tray = new Tray(path.join(__dirname, 'context_menu_icon.png'));
-  const contextMenu = Menu.buildFromTemplate([
-    {
-      label: 'Vocabularify',
-      enabled: false
-    },
-    {
-      label: 'Mode',
-      submenu: [
-        {
-          label: 'Light Mode',
-          type: 'radio',
-          checked: true,
-          click: () => {
-            mainWindow.webContents.send('set-mode', 'light');
+  try {
+    tray = new Tray(path.join(__dirname, 'context_menu_icon.png'));
+    const contextMenu = Menu.buildFromTemplate([
+      {
+        label: 'Vocabularify',
+        enabled: false
+      },
+      {
+        label: 'Mode',
+        submenu: [
+          {
+            label: 'Light Mode',
+            type: 'radio',
+            checked: true,
+            click: () => {
+              mainWindow.webContents.send('set-mode', 'light');
+            }
+          },
+          {
+            label: 'Dark Mode',
+            type: 'radio',
+            click: () => {
+              mainWindow.webContents.send('set-mode', 'dark');
+            }
           }
-        },
-        {
-          label: 'Dark Mode',
-          type: 'radio',
-          click: () => {
-            mainWindow.webContents.send('set-mode', 'dark');
+        ]
+      },
+      {
+        label: 'Language',
+        submenu: [
+          {
+            label: 'Russian -> German',
+            type: 'radio',
+            checked: true,
+            click: () => {
+              switchLanguage(getLanguageFilePath('de'));
+            }
+          },
+          {
+            label: 'English -> French',
+            type: 'radio',
+            click: () => {
+              switchLanguage(getLanguageFilePath('fr'));
+            }
           }
+        ]
+      },
+      {
+        label: 'About',
+        click: () => {
+          shell.openExternal('https://github.com/your-repository'); // Replace with your repository URL
         }
-      ]
-    },
-    {
-      label: 'Language',
-      submenu: [
-        {
-          label: 'Russian -> German',
-          type: 'radio',
-          checked: true,
-          click: () => {
-            switchLanguage('languages/de/vocabulary.json');
-          }
-        },
-        {
-          label: 'Russian -> French',
-          type: 'radio',
-          click: () => {
-            switchLanguage('languages/fr/vocabulary.json');
-          }
+      },
+      {
+        label: 'Quit',
+        click: () => {
+          app.quit();
         }
-      ]
-    },
-    {
-      label: 'About',
-      click: () => {
-        shell.openExternal('https://github.com/huseyn0w/Vocabularify'); // Replace with your repository URL
       }
-    },
-    {
-      label: 'Quit',
-      click: () => {
-        app.quit();
-      }
-    }
-  ]);
+    ]);
 
-  tray.setTitle('Vocabularify');
-  tray.setContextMenu(contextMenu);
+    tray.setTitle('Vocabularify');
+    tray.setContextMenu(contextMenu);
+  } catch (error) {
+    showError('Failed to create the tray.', error);
+  }
 }
 
 function switchLanguage(filePath) {
-  currentLanguagePath = filePath;
-  loadPhrases(filePath);
+  try {
+    currentLanguagePath = filePath;
+    loadPhrases(filePath);
+  } catch (error) {
+    showError('Failed to switch language.', error);
+  }
 }
 
 function loadPhrases(filePath) {
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      console.error('Failed to load phrases:', err);
-      return;
-    }
-    const vocabulary = JSON.parse(data);
-    phrases = vocabulary.map(entry => `${entry.word_1} - ${entry.word_2}`);
-    if (phrases.length > 0) {
-      currentIndex = 0;
-      displayPhrase(currentIndex);
-      clearInterval(intervalId);
-      intervalId = setInterval(cyclePhrases, 5000);
-    }
-  });
+  try {
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        showError('Failed to load phrases.', err);
+        return;
+      }
+      const vocabulary = JSON.parse(data);
+      phrases = vocabulary.map(entry => `${entry.word_1} - ${entry.word_2}`);
+      if (phrases.length > 0) {
+        currentIndex = 0;
+        displayPhrase(currentIndex);
+        clearInterval(intervalId);
+        intervalId = setInterval(cyclePhrases, 5000);
+      }
+    });
+  } catch (error) {
+    showError('Failed to read phrases file.', error);
+  }
 }
 
 function displayPhrase(index) {
-  const phrase = phrases[index];
-  mainWindow.webContents.send('display-phrase', phrase);
-  adjustWindowSize(phrase);
+  try {
+    const phrase = phrases[index];
+    mainWindow.webContents.send('display-phrase', phrase);
+    adjustWindowSize(phrase);
+  } catch (error) {
+    showError('Failed to display phrase.', error);
+  }
 }
 
 function adjustWindowSize(text) {
-  const fontSize = 24;
-  const padding = 20;
-  const verticalPadding = 100; // 50px top + 50px bottom
-  const width = (text.length * fontSize * 0.6) + padding;
-  const height = fontSize + verticalPadding;
-  mainWindow.setSize(Math.ceil(width), Math.ceil(height));
+  try {
+    const fontSize = 24;
+    const padding = 20;
+    const verticalPadding = 100; // 50px top + 50px bottom
+    const width = (text.length * fontSize * 0.6) + padding;
+    const height = fontSize + verticalPadding;
+    mainWindow.setSize(Math.ceil(width), Math.ceil(height));
+  } catch (error) {
+    showError('Failed to adjust window size.', error);
+  }
 }
 
 function handleKeyPress(event) {
-  if (event.shiftKey && event.key === 'ArrowRight') {
-    currentIndex = (currentIndex + 1) % phrases.length;
-    displayPhrase(currentIndex);
-  } else if (event.shiftKey && event.key === 'ArrowLeft') {
-    currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
-    displayPhrase(currentIndex);
+  try {
+    if (event.shiftKey && event.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      displayPhrase(currentIndex);
+    } else if (event.shiftKey && event.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      displayPhrase(currentIndex);
+    }
+  } catch (error) {
+    showError('Failed to handle key press.', error);
   }
 }
 
 function cyclePhrases() {
-  currentIndex = (currentIndex + 1) % phrases.length;
-  displayPhrase(currentIndex);
+  try {
+    currentIndex = (currentIndex + 1) % phrases.length;
+    displayPhrase(currentIndex);
+  } catch (error) {
+    showError('Failed to cycle phrases.', error);
+  }
+}
+
+function showError(message, error) {
+  dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
 }
 
 app.whenReady().then(() => {
@@ -166,8 +215,12 @@ app.on('window-all-closed', function () {
 });
 
 ipcMain.on('resize-window', (event, width, height) => {
-  if (mainWindow) {
-    mainWindow.setSize(width, height);
+  try {
+    if (mainWindow) {
+      mainWindow.setSize(width, height);
+    }
+  } catch (error) {
+    showError('Failed to resize window.', error);
   }
 });
 
