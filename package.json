@@ -4,8 +4,39 @@
   "description": "Vocabularify - improve your vocabulary by doing nothing",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.elmanhuseynov.vocabularify",
+    "productName": "Vocabularify",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "**/*",
+      "!node_modules",
+      "!dist",
+      "!build"
+    ],
+    "extraResources": [
+      {
+        "from": "languages",
+        "to": "languages"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build"
+    }
   },
   "repository": {
     "type": "git",
@@ -27,7 +58,8 @@
   },
   "homepage": "https://github.com/huseyn0w/Vocabularify#readme",
   "devDependencies": {
-    "electron": "^31.0.0"
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
   },
   "dependencies": {
     "electron-reload": "^2.0.0-alpha.1"

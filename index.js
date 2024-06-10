@@ -1,9 +1,13 @@
 const { app, BrowserWindow, Menu, Tray, ipcMain, shell } = require('electron');
 const path = require('path');
 const fs = require('fs');
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-});
+// Conditionally include electron-reload in development mode
+if (process.env.NODE_ENV === 'development') {
+  require('electron-reload')(__dirname, {
+    electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+  });
+}
+
 
 let mainWindow;
 let tray;
@@ -32,7 +36,7 @@ function createWindow() {
 }
 
 function createTray() {
-  tray = new Tray(path.join(__dirname, 'icon.png'));
+  tray = new Tray(path.join(__dirname, 'context_menu_icon.png'));
   const contextMenu = Menu.buildFromTemplate([
     {
       label: 'Vocabularify',
