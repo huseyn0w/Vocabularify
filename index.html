@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Phrase Display</title>
+    <title>Vocabularify</title>
     <style>
       body {
         background-color: white;
@@ -12,6 +12,8 @@
         margin: 0;
         font-family: Arial, sans-serif;
         font-size: 24px;
+        color: black;
+        transition: all .3s;
         -webkit-app-region: drag; /* Makes the window draggable */
       }
     </style>
@@ -61,11 +63,21 @@
         displayPhrase(currentIndex);
       }
 
+      ipcRenderer.on('set-mode', (event, mode) => {
+        if (mode === 'dark') {
+          document.body.style.backgroundColor = 'black';
+          document.body.style.color = 'white';
+        } else {
+          document.body.style.backgroundColor = 'white';
+          document.body.style.color = 'black';
+        }
+      });
+
       displayPhrase(currentIndex);
       document.addEventListener('keydown', handleKeyPress);
 
       // Set interval to change phrases every 5 seconds
-      setInterval(cyclePhrases, 2000);
+      setInterval(cyclePhrases, 5000);
     </script>
   </body>
 </html>
