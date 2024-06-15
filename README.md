@@ -32,15 +32,22 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
      ```bash
      cd vocabularify
      ```
-   - Install the dependencies:
-     ```bash
-     yarn install
-     ```
-   - Build the application:
-     ```bash
-     yarn build
-     ```
-   - Open the app installation file in 'dist' folder:
+
+- Make sure you have node 18 installed and selected:
+  ```bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  nvm install 18
+  nvm use 18
+  ```
+- Install the dependencies:
+  ```bash
+  yarn install
+  ```
+- Build the application:
+  ```bash
+  yarn build
+  ```
+- Open the app installation file in 'dist' folder:
 
 2. **Choose Your Language**: Select the language you want to learn.
 3. **Start Learning**: Position the app window where it's most convenient and start absorbing new words effortlessly.
