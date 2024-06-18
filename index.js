@@ -18,11 +18,13 @@ let tray;
 let phrases = [];
 let currentIndex = 0;
 let intervalId;
-let currentLanguagePath = getLanguageFilePath('de');
+let currentLanguage = 'de';
+let currentLevel = 'A1';
+let currentLanguagePath = getLanguageFilePath(currentLanguage, currentLevel);
 
-function getLanguageFilePath(language) {
+function getLanguageFilePath(language, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
-  return path.join(basePath, 'languages', language, 'vocabulary.json');
+  return path.join(basePath, 'languages', language, `${level.toLowerCase()}.json`);
 }
 
 function createWindow() {
@@ -85,18 +87,11 @@ function createTray() {
         submenu: [
           {
             label: 'Russian -> German',
-            type: 'radio',
-            checked: true,
-            click: () => {
-              switchLanguage(getLanguageFilePath('de'));
-            }
+            submenu: createLevelSubmenu('de')
           },
           {
             label: 'English -> French',
-            type: 'radio',
-            click: () => {
-              switchLanguage(getLanguageFilePath('fr'));
-            }
+            submenu: createLevelSubmenu('fr')
           }
         ]
       },
@@ -121,10 +116,23 @@ function createTray() {
   }
 }
 
-function switchLanguage(filePath) {
+function createLevelSubmenu(languageTo) {
+  const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
+  return levels.map(level => ({
+    label: `Level ${level}`,
+    type: 'radio',
+    click: () => {
+      switchLanguage(languageTo, level);
+    }
+  }));
+}
+
+function switchLanguage(language, level) {
   try {
-    currentLanguagePath = filePath;
-    loadPhrases(filePath);
+    currentLanguage = language;
+    currentLevel = level;
+    currentLanguagePath = getLanguageFilePath(currentLanguage, currentLevel);
+    loadPhrases(currentLanguagePath);
   } catch (error) {
     showError('Failed to switch language.', error);
   }

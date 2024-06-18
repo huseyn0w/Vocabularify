@@ -15,6 +15,7 @@
         color: black;
         -webkit-app-region: drag; /* Makes the window draggable */
         transition: all .3s;
+        flex-direction: column; /* Added this line */
       }
     </style>
   </head>
@@ -47,6 +48,7 @@
         document.addEventListener('keydown', (event) => {
           ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
         });
+
       } catch (error) {
         showError('An error occurred in the renderer process.', error);
       }
