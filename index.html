@@ -35,8 +35,8 @@
           phraseContainer.textContent = phrase;
         });
 
-        ipcRenderer.on('set-mode', (event, mode) => {
-          if (mode === 'dark') {
+        ipcRenderer.on('set-background', (event, background) => {
+          if (background === 'dark') {
             document.body.style.backgroundColor = 'black';
             document.body.style.color = 'white';
           } else {

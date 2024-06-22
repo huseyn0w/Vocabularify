@@ -19,12 +19,13 @@ let phrases = [];
 let currentIndex = 0;
 let intervalId;
 let currentLanguage = 'de';
+let currentFromLanguage = 'ru';
 let currentLevel = 'A1';
-let currentLanguagePath = getLanguageFilePath(currentLanguage, currentLevel);
+let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
 
-function getLanguageFilePath(language, level) {
+function getLanguageFilePath(language, fromLanguage, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
-  return path.join(basePath, 'languages', language, `${level.toLowerCase()}.json`);
+  return path.join(basePath, 'languages', language, fromLanguage, `${level.toLowerCase()}.json`);
 }
 
 function createWindow() {
@@ -63,37 +64,28 @@ function createTray() {
         enabled: false
       },
       {
-        label: 'Mode',
+        label: 'Background',
         submenu: [
           {
-            label: 'Light Mode',
+            label: 'Light',
             type: 'radio',
             checked: true,
             click: () => {
-              mainWindow.webContents.send('set-mode', 'light');
+              mainWindow.webContents.send('set-background', 'light');
             }
           },
           {
-            label: 'Dark Mode',
+            label: 'Dark',
             type: 'radio',
             click: () => {
-              mainWindow.webContents.send('set-mode', 'dark');
+              mainWindow.webContents.send('set-background', 'dark');
             }
           }
         ]
       },
       {
         label: 'Language',
-        submenu: [
-          {
-            label: 'Russian -> German',
-            submenu: createLevelSubmenu('de')
-          },
-          {
-            label: 'English -> French',
-            submenu: createLevelSubmenu('fr')
-          }
-        ]
+        submenu: createLanguageSubmenu()
       },
       {
         label: 'About',
@@ -116,22 +108,40 @@ function createTray() {
   }
 }
 
-function createLevelSubmenu(languageTo) {
+function createLanguageSubmenu() {
+  const languages = ['en', 'de', 'fr'];
+  const fromLanguages = {
+    en: ['de', 'ru'],
+    de: ['en', 'ru'],
+    fr: ['en', 'ru']
+  };
+
+  return languages.map(language => ({
+    label: language.toUpperCase(),
+    submenu: fromLanguages[language].map(fromLang => ({
+      label: `${fromLang.toUpperCase()} -> ${language.toUpperCase()}`,
+      submenu: createLevelSubmenu(language, fromLang)
+    }))
+  }));
+}
+
+function createLevelSubmenu(languageTo, languageFrom) {
   const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
   return levels.map(level => ({
     label: `Level ${level}`,
     type: 'radio',
     click: () => {
-      switchLanguage(languageTo, level);
+      switchLanguage(languageTo, languageFrom, level);
     }
   }));
 }
 
-function switchLanguage(language, level) {
+function switchLanguage(language, fromLanguage, level) {
   try {
     currentLanguage = language;
+    currentFromLanguage = fromLanguage;
     currentLevel = level;
-    currentLanguagePath = getLanguageFilePath(currentLanguage, currentLevel);
+    currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
     loadPhrases(currentLanguagePath);
   } catch (error) {
     showError('Failed to switch language.', error);
