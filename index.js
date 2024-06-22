@@ -14,6 +14,11 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
+const MODES = {
+  MENU_BAR: 'Menu Bar',
+  WINDOW: 'Window'
+}
+
 let mainWindow;
 let tray;
 let phrases = [];
@@ -22,7 +27,7 @@ let intervalId;
 let currentLanguage = 'de';
 let currentFromLanguage = 'ru';
 let currentLevel = 'A1';
-let currentMode = 'Window';
+let currentMode = MODES.MENU_BAR;
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
 
 function getLanguageFilePath(language, fromLanguage, level) {
@@ -39,7 +44,8 @@ function createWindow() {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false
-      }
+      },
+      skipTaskbar: true,
     });
 
     mainWindow.loadFile('index.html');
@@ -172,14 +178,14 @@ function switchLanguage(language, fromLanguage, level) {
 function switchMode(mode) {
   try {
     currentMode = mode;
-    if (mode === 'Window') {
+    if (mode === MODES.WINDOW) {
       if (!mainWindow) {
         createWindow();
       } else {
         mainWindow.show();
       }
       tray.setTitle('Vocabularify');
-    } else if (mode === 'Menu Bar') {
+    } else if (mode === MODES.MENU_BAR) {
       if (mainWindow) {
         mainWindow.hide();
       }
@@ -294,6 +300,11 @@ app.whenReady().then(() => {
   createWindow();
   createTray();
   registerGlobalShortcuts();
+
+  // Hide the dock icon on macOS
+  if (process.platform === 'darwin') {
+    app.dock.hide();
+  }
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0 && currentMode === 'Window') createWindow();
