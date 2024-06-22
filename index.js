@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, Tray, ipcMain, shell, dialog, globalShortcut } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const { createAboutWindow } = require('./about');
 
 // Conditionally include electron-reload in development mode
 if (process.env.NODE_ENV === 'development') {
@@ -111,7 +112,7 @@ function createTray() {
       {
         label: 'About',
         click: () => {
-          shell.openExternal('https://github.com/huseyn0w/Vocabularify'); // Replace with your repository URL
+          createAboutWindow();
         }
       },
       {
