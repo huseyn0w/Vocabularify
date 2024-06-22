@@ -19,6 +19,8 @@ const MODES = {
   WINDOW: 'Window'
 }
 
+const WORDS_CHANGE_INTERVAL_IN_MS = 5000;
+
 let mainWindow;
 let tray;
 let phrases = [];
@@ -155,6 +157,9 @@ function createLanguageSubmenu() {
 
 function createLevelSubmenu(languageTo, languageFrom) {
   const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
+  if (process.env.NODE_ENV === 'development') {
+    levels.push('custom')
+  }
   return levels.map(level => ({
     label: `Level ${level}`,
     type: 'radio',
@@ -211,7 +216,7 @@ function loadPhrases(filePath) {
         currentIndex = 0;
         displayPhrase(currentIndex);
         clearInterval(intervalId);
-        intervalId = setInterval(cyclePhrases, 5000);
+        intervalId = setInterval(cyclePhrases, WORDS_CHANGE_INTERVAL_IN_MS);
       }
     });
   } catch (error) {
