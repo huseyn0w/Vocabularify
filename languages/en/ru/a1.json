@@ -1,310 +1,946 @@
 [
-    {"word_1": "apple", "word_2": "pomme"},
-    {"word_1": "book", "word_2": "livre"},
-    {"word_1": "house", "word_2": "maison"},
-    {"word_1": "car", "word_2": "voiture"},
-    {"word_1": "school", "word_2": "école"},
-    {"word_1": "cat", "word_2": "chat"},
-    {"word_1": "dog", "word_2": "chien"},
-    {"word_1": "tree", "word_2": "arbre"},
-    {"word_1": "food", "word_2": "nourriture"},
-    {"word_1": "water", "word_2": "eau"},
-    {"word_1": "family", "word_2": "famille"},
-    {"word_1": "friend", "word_2": "ami"},
-    {"word_1": "love", "word_2": "amour"},
-    {"word_1": "work", "word_2": "travail"},
-    {"word_1": "money", "word_2": "argent"},
-    {"word_1": "weather", "word_2": "temps"},
-    {"word_1": "happy", "word_2": "heureux"},
-    {"word_1": "sad", "word_2": "triste"},
-    {"word_1": "beautiful", "word_2": "beau"},
-    {"word_1": "ugly", "word_2": "laid"},
-    {"word_1": "big", "word_2": "grand"},
-    {"word_1": "small", "word_2": "petit"},
-    {"word_1": "fast", "word_2": "rapide"},
-    {"word_1": "slow", "word_2": "lent"},
-    {"word_1": "strong", "word_2": "fort"},
-    {"word_1": "weak", "word_2": "faible"},
-    {"word_1": "new", "word_2": "nouveau"},
-    {"word_1": "old", "word_2": "vieux"},
-    {"word_1": "day", "word_2": "jour"},
-    {"word_1": "night", "word_2": "nuit"},
-    {"word_1": "morning", "word_2": "matin"},
-    {"word_1": "evening", "word_2": "soir"},
-    {"word_1": "week", "word_2": "semaine"},
-    {"word_1": "month", "word_2": "mois"},
-    {"word_1": "year", "word_2": "année"},
-    {"word_1": "time", "word_2": "temps"},
-    {"word_1": "country", "word_2": "pays"},
-    {"word_1": "city", "word_2": "ville"},
-    {"word_1": "street", "word_2": "rue"},
-    {"word_1": "market", "word_2": "marché"},
-    {"word_1": "shop", "word_2": "magasin"},
-    {"word_1": "restaurant", "word_2": "restaurant"},
-    {"word_1": "hotel", "word_2": "hôtel"},
-    {"word_1": "hospital", "word_2": "hôpital"},
-    {"word_1": "airport", "word_2": "aéroport"},
-    {"word_1": "station", "word_2": "gare"},
-    {"word_1": "bus", "word_2": "bus"},
-    {"word_1": "train", "word_2": "train"},
-    {"word_1": "bicycle", "word_2": "vélo"},
-    {"word_1": "airplane", "word_2": "avion"},
-    {"word_1": "boat", "word_2": "bateau"},
-    {"word_1": "taxi", "word_2": "taxi"},
-    {"word_1": "kitchen", "word_2": "cuisine"},
-    {"word_1": "bathroom", "word_2": "salle de bain"},
-    {"word_1": "bedroom", "word_2": "chambre"},
-    {"word_1": "living room", "word_2": "salon"},
-    {"word_1": "garden", "word_2": "jardin"},
-    {"word_1": "window", "word_2": "fenêtre"},
-    {"word_1": "door", "word_2": "porte"},
-    {"word_1": "chair", "word_2": "chaise"},
-    {"word_1": "table", "word_2": "table"},
-    {"word_1": "computer", "word_2": "ordinateur"},
-    {"word_1": "phone", "word_2": "téléphone"},
-    {"word_1": "internet", "word_2": "internet"},
-    {"word_1": "music", "word_2": "musique"},
-    {"word_1": "movie", "word_2": "film"},
-    {"word_1": "book", "word_2": "livre"},
-    {"word_1": "newspaper", "word_2": "journal"},
-    {"word_1": "magazine", "word_2": "magazine"},
-    {"word_1": "letter", "word_2": "lettre"},
-    {"word_1": "email", "word_2": "email"},
-    {"word_1": "message", "word_2": "message"},
-    {"word_1": "friend", "word_2": "ami"},
-    {"word_1": "neighbor", "word_2": "voisin"},
-    {"word_1": "colleague", "word_2": "collègue"},
-    {"word_1": "boss", "word_2": "chef"},
-    {"word_1": "employee", "word_2": "employé"},
-    {"word_1": "doctor", "word_2": "docteur"},
-    {"word_1": "nurse", "word_2": "infirmier"},
-    {"word_1": "teacher", "word_2": "professeur"},
-    {"word_1": "student", "word_2": "étudiant"},
-    {"word_1": "child", "word_2": "enfant"},
-    {"word_1": "baby", "word_2": "bébé"},
-    {"word_1": "man", "word_2": "homme"},
-    {"word_1": "woman", "word_2": "femme"},
-    {"word_1": "boy", "word_2": "garçon"},
-    {"word_1": "girl", "word_2": "fille"},
-    {"word_1": "father", "word_2": "père"},
-    {"word_1": "mother", "word_2": "mère"},
-    {"word_1": "brother", "word_2": "frère"},
-    {"word_1": "sister", "word_2": "sœur"},
-    {"word_1": "aunt", "word_2": "tante"},
-    {"word_1": "uncle", "word_2": "oncle"},
-    {"word_1": "cousin", "word_2": "cousin"},
-    {"word_1": "grandfather", "word_2": "grand-père"},
-    {"word_1": "grandmother", "word_2": "grand-mère"},
-    {"word_1": "food", "word_2": "nourriture"},
-    {"word_1": "fruit", "word_2": "fruit"},
-    {"word_1": "vegetable", "word_2": "légume"},
-    {"word_1": "meat", "word_2": "viande"},
-    {"word_1": "fish", "word_2": "poisson"},
-    {"word_1": "bread", "word_2": "pain"},
-    {"word_1": "butter", "word_2": "beurre"},
-    {"word_1": "cheese", "word_2": "fromage"},
-    {"word_1": "egg", "word_2": "œuf"},
-    {"word_1": "milk", "word_2": "lait"},
-    {"word_1": "coffee", "word_2": "café"},
-    {"word_1": "tea", "word_2": "thé"},
-    {"word_1": "juice", "word_2": "jus"},
-    {"word_1": "water", "word_2": "eau"},
-    {"word_1": "wine", "word_2": "vin"},
-    {"word_1": "beer", "word_2": "bière"},
-    {"word_1": "breakfast", "word_2": "petit déjeuner"},
-    {"word_1": "lunch", "word_2": "déjeuner"},
-    {"word_1": "dinner", "word_2": "dîner"},
-    {"word_1": "fruit", "word_2": "fruit"},
-    {"word_1": "apple", "word_2": "pomme"},
-    {"word_1": "banana", "word_2": "banane"},
-    {"word_1": "orange", "word_2": "orange"},
-    {"word_1": "grape", "word_2": "raisin"},
-    {"word_1": "strawberry", "word_2": "fraise"},
-    {"word_1": "vegetable", "word_2": "légume"},
-    {"word_1": "carrot", "word_2": "carotte"},
-    {"word_1": "potato", "word_2": "pomme de terre"},
-    {"word_1": "onion", "word_2": "oignon"},
-    {"word_1": "tomato", "word_2": "tomate"},
-    {"word_1": "lettuce", "word_2": "laitue"},
-    {"word_1": "pepper", "word_2": "poivron"},
-    {"word_1": "meat", "word_2": "viande"},
-    {"word_1": "chicken", "word_2": "poulet"},
-    {"word_1": "beef", "word_2": "bœuf"},
-    {"word_1": "pork", "word_2": "porc"},
-    {"word_1": "lamb", "word_2": "agneau"},
-    {"word_1": "fish", "word_2": "poisson"},
-    {"word_1": "salmon", "word_2": "saumon"},
-    {"word_1": "tuna", "word_2": "thon"},
-    {"word_1": "shrimp", "word_2": "crevette"},
-    {"word_1": "bread", "word_2": "pain"},
-    {"word_1": "butter", "word_2": "beurre"},
-    {"word_1": "cheese", "word_2": "fromage"},
-    {"word_1": "egg", "word_2": "œuf"},
-    {"word_1": "milk", "word_2": "lait"},
-    {"word_1": "coffee", "word_2": "café"},
-    {"word_1": "tea", "word_2": "thé"},
-    {"word_1": "juice", "word_2": "jus"},
-    {"word_1": "water", "word_2": "eau"},
-    {"word_1": "wine", "word_2": "vin"},
-    {"word_1": "beer", "word_2": "bière"},
-    {"word_1": "breakfast", "word_2": "petit déjeuner"},
-    {"word_1": "lunch", "word_2": "déjeuner"},
-    {"word_1": "dinner", "word_2": "dîner"},
-    {"word_1": "dessert", "word_2": "dessert"},
-    {"word_1": "cake", "word_2": "gâteau"},
-    {"word_1": "pie", "word_2": "tarte"},
-    {"word_1": "ice cream", "word_2": "glace"},
-    {"word_1": "chocolate", "word_2": "chocolat"},
-    {"word_1": "cookie", "word_2": "biscuit"},
-    {"word_1": "candy", "word_2": "bonbon"},
-    {"word_1": "sugar", "word_2": "sucre"},
-    {"word_1": "salt", "word_2": "sel"},
-    {"word_1": "pepper", "word_2": "poivre"},
-    {"word_1": "rice", "word_2": "riz"},
-    {"word_1": "pasta", "word_2": "pâtes"},
-    {"word_1": "soup", "word_2": "soupe"},
-    {"word_1": "salad", "word_2": "salade"},
-    {"word_1": "sandwich", "word_2": "sandwich"},
-    {"word_1": "burger", "word_2": "burger"},
-    {"word_1": "pizza", "word_2": "pizza"},
-    {"word_1": "fries", "word_2": "frites"},
-    {"word_1": "noodle", "word_2": "nouilles"},
-    {"word_1": "sauce", "word_2": "sauce"},
-    {"word_1": "breakfast", "word_2": "petit déjeuner"},
-    {"word_1": "lunch", "word_2": "déjeuner"},
-    {"word_1": "dinner", "word_2": "dîner"},
-    {"word_1": "dessert", "word_2": "dessert"},
-    {"word_1": "cake", "word_2": "gâteau"},
-    {"word_1": "pie", "word_2": "tarte"},
-    {"word_1": "ice cream", "word_2": "glace"},
-    {"word_1": "chocolate", "word_2": "chocolat"},
-    {"word_1": "cookie", "word_2": "biscuit"},
-    {"word_1": "candy", "word_2": "bonbon"},
-    {"word_1": "sugar", "word_2": "sucre"},
-    {"word_1": "salt", "word_2": "sel"},
-    {"word_1": "pepper", "word_2": "poivre"},
-    {"word_1": "rice", "word_2": "riz"},
-    {"word_1": "pasta", "word_2": "pâtes"},
-    {"word_1": "soup", "word_2": "soupe"},
-    {"word_1": "salad", "word_2": "salade"},
-    {"word_1": "sandwich", "word_2": "sandwich"},
-    {"word_1": "burger", "word_2": "burger"},
-    {"word_1": "pizza", "word_2": "pizza"},
-    {"word_1": "fries", "word_2": "frites"},
-    {"word_1": "noodle", "word_2": "nouilles"},
-    {"word_1": "sauce", "word_2": "sauce"},
-    {"word_1": "breakfast", "word_2": "petit déjeuner"},
-    {"word_1": "lunch", "word_2": "déjeuner"},
-    {"word_1": "dinner", "word_2": "dîner"},
-    {"word_1": "dessert", "word_2": "dessert"},
-    {"word_1": "cake", "word_2": "gâteau"},
-    {"word_1": "pie", "word_2": "tarte"},
-    {"word_1": "ice cream", "word_2": "glace"},
-    {"word_1": "chocolate", "word_2": "chocolat"},
-    {"word_1": "cookie", "word_2": "biscuit"},
-    {"word_1": "candy", "word_2": "bonbon"},
-    {"word_1": "sugar", "word_2": "sucre"},
-    {"word_1": "salt", "word_2": "sel"},
-    {"word_1": "pepper", "word_2": "poivre"},
-    {"word_1": "rice", "word_2": "riz"},
-    {"word_1": "pasta", "word_2": "pâtes"},
-    {"word_1": "soup", "word_2": "soupe"},
-    {"word_1": "salad", "word_2": "salade"},
-    {"word_1": "sandwich", "word_2": "sandwich"},
-    {"word_1": "burger", "word_2": "burger"},
-    {"word_1": "pizza", "word_2": "pizza"},
-    {"word_1": "fries", "word_2": "frites"},
-    {"word_1": "noodle", "word_2": "nouilles"},
-    {"word_1": "sauce", "word_2": "sauce"},
-    {"word_1": "plate", "word_2": "assiette"},
-    {"word_1": "bowl", "word_2": "bol"},
-    {"word_1": "cup", "word_2": "tasse"},
-    {"word_1": "glass", "word_2": "verre"},
-    {"word_1": "knife", "word_2": "couteau"},
-    {"word_1": "fork", "word_2": "fourchette"},
-    {"word_1": "spoon", "word_2": "cuillère"},
-    {"word_1": "napkin", "word_2": "serviette"},
-    {"word_1": "dish", "word_2": "plat"},
-    {"word_1": "recipe", "word_2": "recette"},
-    {"word_1": "ingredient", "word_2": "ingrédient"},
-    {"word_1": "kitchen", "word_2": "cuisine"},
-    {"word_1": "cook", "word_2": "cuisinier"},
-    {"word_1": "chef", "word_2": "chef"},
-    {"word_1": "oven", "word_2": "four"},
-    {"word_1": "stove", "word_2": "cuisinière"},
-    {"word_1": "fridge", "word_2": "frigo"},
-    {"word_1": "freezer", "word_2": "congélateur"},
-    {"word_1": "microwave", "word_2": "micro-ondes"},
-    {"word_1": "toaster", "word_2": "grille-pain"},
-    {"word_1": "blender", "word_2": "mixeur"},
-    {"word_1": "coffee maker", "word_2": "cafetière"},
-    {"word_1": "kettle", "word_2": "bouilloire"},
-    {"word_1": "pan", "word_2": "poêle"},
-    {"word_1": "pot", "word_2": "casserole"},
-    {"word_1": "sink", "word_2": "évier"},
-    {"word_1": "tap", "word_2": "robinet"},
-    {"word_1": "soap", "word_2": "savon"},
-    {"word_1": "sponge", "word_2": "éponge"},
-    {"word_1": "towel", "word_2": "serviette"},
-    {"word_1": "basket", "word_2": "panier"},
-    {"word_1": "bottle", "word_2": "bouteille"},
-    {"word_1": "can", "word_2": "canette"},
-    {"word_1": "jar", "word_2": "bocal"},
-    {"word_1": "box", "word_2": "boîte"},
-    {"word_1": "bag", "word_2": "sac"},
-    {"word_1": "packet", "word_2": "paquet"},
-    {"word_1": "package", "word_2": "colis"},
-    {"word_1": "shopping", "word_2": "courses"},
-    {"word_1": "market", "word_2": "marché"},
-    {"word_1": "store", "word_2": "magasin"},
-    {"word_1": "supermarket", "word_2": "supermarché"},
-    {"word_1": "bakery", "word_2": "boulangerie"},
-    {"word_1": "butcher", "word_2": "boucher"},
-    {"word_1": "fishmonger", "word_2": "poissonnier"},
-    {"word_1": "greengrocer", "word_2": "primeur"},
-    {"word_1": "pharmacy", "word_2": "pharmacie"},
-    {"word_1": "clothes", "word_2": "vêtements"},
-    {"word_1": "shirt", "word_2": "chemise"},
-    {"word_1": "t-shirt", "word_2": "t-shirt"},
-    {"word_1": "pants", "word_2": "pantalon"},
-    {"word_1": "jeans", "word_2": "jeans"},
-    {"word_1": "shorts", "word_2": "short"},
-    {"word_1": "dress", "word_2": "robe"},
-    {"word_1": "skirt", "word_2": "jupe"},
-    {"word_1": "jacket", "word_2": "veste"},
-    {"word_1": "coat", "word_2": "manteau"},
-    {"word_1": "sweater", "word_2": "pull"},
-    {"word_1": "sweatshirt", "word_2": "sweatshirt"},
-    {"word_1": "suit", "word_2": "costume"},
-    {"word_1": "tie", "word_2": "cravate"},
-    {"word_1": "scarf", "word_2": "écharpe"},
-    {"word_1": "hat", "word_2": "chapeau"},
-    {"word_1": "cap", "word_2": "casquette"},
-    {"word_1": "gloves", "word_2": "gants"},
-    {"word_1": "shoes", "word_2": "chaussures"},
-    {"word_1": "boots", "word_2": "bottes"},
-    {"word_1": "sandals", "word_2": "sandales"},
-    {"word_1": "socks", "word_2": "chaussettes"},
-    {"word_1": "underwear", "word_2": "sous-vêtements"},
-    {"word_1": "belt", "word_2": "ceinture"},
-    {"word_1": "bag", "word_2": "sac"},
-    {"word_1": "wallet", "word_2": "portefeuille"},
-    {"word_1": "watch", "word_2": "montre"},
-    {"word_1": "jewelry", "word_2": "bijoux"},
-    {"word_1": "ring", "word_2": "bague"},
-    {"word_1": "necklace", "word_2": "collier"},
-    {"word_1": "bracelet", "word_2": "bracelet"},
-    {"word_1": "earrings", "word_2": "boucles d'oreilles"},
-    {"word_1": "makeup", "word_2": "maquillage"},
-    {"word_1": "lipstick", "word_2": "rouge à lèvres"},
-    {"word_1": "perfume", "word_2": "parfum"},
-    {"word_1": "mirror", "word_2": "miroir"},
-    {"word_1": "hairbrush", "word_2": "brosse à cheveux"},
-    {"word_1": "comb", "word_2": "peigne"},
-    {"word_1": "toothbrush", "word_2": "brosse à dents"},
-    {"word_1": "toothpaste", "word_2": "dentifrice"},
-    {"word_1": "shampoo", "word_2": "shampoing"},
-    {"word_1": "conditioner", "word_2": "après-shampoing"},
-    {"word_1": "soap", "word_2": "savon"},
-    {"word_1": "shower", "word_2": "douche"}
+    {
+        "word_1": "я",
+        "word_2": "I"
+    },
+    {
+        "word_1": "ты",
+        "word_2": "you"
+    },
+    {
+        "word_1": "он",
+        "word_2": "he"
+    },
+    {
+        "word_1": "она",
+        "word_2": "she"
+    },
+    {
+        "word_1": "оно",
+        "word_2": "it"
+    },
+    {
+        "word_1": "мы",
+        "word_2": "we"
+    },
+    {
+        "word_1": "они",
+        "word_2": "they"
+    },
+    {
+        "word_1": "это",
+        "word_2": "this"
+    },
+    {
+        "word_1": "тот",
+        "word_2": "that"
+    },
+    {
+        "word_1": "да",
+        "word_2": "yes"
+    },
+    {
+        "word_1": "нет",
+        "word_2": "no"
+    },
+    {
+        "word_1": "и",
+        "word_2": "and"
+    },
+    {
+        "word_1": "но",
+        "word_2": "but"
+    },
+    {
+        "word_1": "в",
+        "word_2": "in"
+    },
+    {
+        "word_1": "на",
+        "word_2": "on"
+    },
+    {
+        "word_1": "под",
+        "word_2": "under"
+    },
+    {
+        "word_1": "над",
+        "word_2": "over"
+    },
+    {
+        "word_1": "через",
+        "word_2": "through"
+    },
+    {
+        "word_1": "у",
+        "word_2": "at"
+    },
+    {
+        "word_1": "перед",
+        "word_2": "before"
+    },
+    {
+        "word_1": "после",
+        "word_2": "after"
+    },
+    {
+        "word_1": "с",
+        "word_2": "with"
+    },
+    {
+        "word_1": "без",
+        "word_2": "without"
+    },
+    {
+        "word_1": "над",
+        "word_2": "above"
+    },
+    {
+        "word_1": "ниже",
+        "word_2": "below"
+    },
+    {
+        "word_1": "первый",
+        "word_2": "first"
+    },
+    {
+        "word_1": "второй",
+        "word_2": "second"
+    },
+    {
+        "word_1": "третий",
+        "word_2": "third"
+    },
+    {
+        "word_1": "два",
+        "word_2": "two"
+    },
+    {
+        "word_1": "три",
+        "word_2": "three"
+    },
+    {
+        "word_1": "четыре",
+        "word_2": "four"
+    },
+    {
+        "word_1": "пять",
+        "word_2": "five"
+    },
+    {
+        "word_1": "друг",
+        "word_2": "friend"
+    },
+    {
+        "word_1": "семья",
+        "word_2": "family"
+    },
+    {
+        "word_1": "школа",
+        "word_2": "school"
+    },
+    {
+        "word_1": "дом",
+        "word_2": "house"
+    },
+    {
+        "word_1": "работа",
+        "word_2": "work"
+    },
+    {
+        "word_1": "магазин",
+        "word_2": "shop"
+    },
+    {
+        "word_1": "город",
+        "word_2": "city"
+    },
+    {
+        "word_1": "деревня",
+        "word_2": "village"
+    },
+    {
+        "word_1": "день",
+        "word_2": "day"
+    },
+    {
+        "word_1": "ночь",
+        "word_2": "night"
+    },
+    {
+        "word_1": "время",
+        "word_2": "time"
+    },
+    {
+        "word_1": "утро",
+        "word_2": "morning"
+    },
+    {
+        "word_1": "вечер",
+        "word_2": "evening"
+    },
+    {
+        "word_1": "час",
+        "word_2": "hour"
+    },
+    {
+        "word_1": "минут",
+        "word_2": "minute"
+    },
+    {
+        "word_1": "яблоко",
+        "word_2": "apple"
+    },
+    {
+        "word_1": "хлеб",
+        "word_2": "bread"
+    },
+    {
+        "word_1": "вода",
+        "word_2": "water"
+    },
+    {
+        "word_1": "кофе",
+        "word_2": "coffee"
+    },
+    {
+        "word_1": "чай",
+        "word_2": "tea"
+    },
+    {
+        "word_1": "сок",
+        "word_2": "juice"
+    },
+    {
+        "word_1": "молоко",
+        "word_2": "milk"
+    },
+    {
+        "word_1": "еду",
+        "word_2": "food"
+    },
+    {
+        "word_1": "завтрак",
+        "word_2": "breakfast"
+    },
+    {
+        "word_1": "обед",
+        "word_2": "lunch"
+    },
+    {
+        "word_1": "ужин",
+        "word_2": "dinner"
+    },
+    {
+        "word_1": "машина",
+        "word_2": "car"
+    },
+    {
+        "word_1": "автобус",
+        "word_2": "bus"
+    },
+    {
+        "word_1": "поезд",
+        "word_2": "train"
+    },
+    {
+        "word_1": "велосипед",
+        "word_2": "bicycle"
+    },
+    {
+        "word_1": "самолет",
+        "word_2": "airplane"
+    },
+    {
+        "word_1": "корабль",
+        "word_2": "ship"
+    },
+    {
+        "word_1": "дорога",
+        "word_2": "road"
+    },
+    {
+        "word_1": "улица",
+        "word_2": "street"
+    },
+    {
+        "word_1": "мост",
+        "word_2": "bridge"
+    },
+    {
+        "word_1": "парк",
+        "word_2": "park"
+    },
+    {
+        "word_1": "река",
+        "word_2": "river"
+    },
+    {
+        "word_1": "море",
+        "word_2": "sea"
+    },
+    {
+        "word_1": "озеро",
+        "word_2": "lake"
+    },
+    {
+        "word_1": "гора",
+        "word_2": "mountain"
+    },
+    {
+        "word_1": "лес",
+        "word_2": "forest"
+    },
+    {
+        "word_1": "дерево",
+        "word_2": "tree"
+    },
+    {
+        "word_1": "цветок",
+        "word_2": "flower"
+    },
+    {
+        "word_1": "трава",
+        "word_2": "grass"
+    },
+    {
+        "word_1": "небо",
+        "word_2": "sky"
+    },
+    {
+        "word_1": "звезда",
+        "word_2": "star"
+    },
+    {
+        "word_1": "луна",
+        "word_2": "moon"
+    },
+    {
+        "word_1": "солнце",
+        "word_2": "sun"
+    },
+    {
+        "word_1": "снег",
+        "word_2": "snow"
+    },
+    {
+        "word_1": "дождь",
+        "word_2": "rain"
+    },
+    {
+        "word_1": "ветер",
+        "word_2": "wind"
+    },
+    {
+        "word_1": "тепло",
+        "word_2": "warm"
+    },
+    {
+        "word_1": "холод",
+        "word_2": "cold"
+    },
+    {
+        "word_1": "свет",
+        "word_2": "light"
+    },
+    {
+        "word_1": "темнота",
+        "word_2": "darkness"
+    },
+    {
+        "word_1": "комната",
+        "word_2": "room"
+    },
+    {
+        "word_1": "стол",
+        "word_2": "table"
+    },
+    {
+        "word_1": "стул",
+        "word_2": "chair"
+    },
+    {
+        "word_1": "дверь",
+        "word_2": "door"
+    },
+    {
+        "word_1": "окно",
+        "word_2": "window"
+    },
+    {
+        "word_1": "кровать",
+        "word_2": "bed"
+    },
+    {
+        "word_1": "диван",
+        "word_2": "sofa"
+    },
+    {
+        "word_1": "кухня",
+        "word_2": "kitchen"
+    },
+    {
+        "word_1": "ванная",
+        "word_2": "bathroom"
+    },
+    {
+        "word_1": "гостиная",
+        "word_2": "living room"
+    },
+    {
+        "word_1": "спальня",
+        "word_2": "bedroom"
+    },
+    {
+        "word_1": "сад",
+        "word_2": "garden"
+    },
+    {
+        "word_1": "балкон",
+        "word_2": "balcony"
+    },
+    {
+        "word_1": "шкаф",
+        "word_2": "wardrobe"
+    },
+    {
+        "word_1": "полка",
+        "word_2": "shelf"
+    },
+    {
+        "word_1": "зеркало",
+        "word_2": "mirror"
+    },
+    {
+        "word_1": "ковер",
+        "word_2": "carpet"
+    },
+    {
+        "word_1": "лампа",
+        "word_2": "lamp"
+    },
+    {
+        "word_1": "стена",
+        "word_2": "wall"
+    },
+    {
+        "word_1": "пол",
+        "word_2": "floor"
+    },
+    {
+        "word_1": "потолок",
+        "word_2": "ceiling"
+    },
+    {
+        "word_1": "вход",
+        "word_2": "entrance"
+    },
+    {
+        "word_1": "выход",
+        "word_2": "exit"
+    },
+    {
+        "word_1": "путь",
+        "word_2": "way"
+    },
+    {
+        "word_1": "место",
+        "word_2": "place"
+    },
+    {
+        "word_1": "точка",
+        "word_2": "point"
+    },
+    {
+        "word_1": "конец",
+        "word_2": "end"
+    },
+    {
+        "word_1": "начало",
+        "word_2": "beginning"
+    },
+    {
+        "word_1": "игра",
+        "word_2": "game"
+    },
+    {
+        "word_1": "спорт",
+        "word_2": "sport"
+    },
+    {
+        "word_1": "музыка",
+        "word_2": "music"
+    },
+    {
+        "word_1": "песня",
+        "word_2": "song"
+    },
+    {
+        "word_1": "кино",
+        "word_2": "cinema"
+    },
+    {
+        "word_1": "фильм",
+        "word_2": "film"
+    },
+    {
+        "word_1": "театр",
+        "word_2": "theater"
+    },
+    {
+        "word_1": "книга",
+        "word_2": "book"
+    },
+    {
+        "word_1": "газета",
+        "word_2": "newspaper"
+    },
+    {
+        "word_1": "журнал",
+        "word_2": "magazine"
+    },
+    {
+        "word_1": "радио",
+        "word_2": "radio"
+    },
+    {
+        "word_1": "телевидение",
+        "word_2": "television"
+    },
+    {
+        "word_1": "интернет",
+        "word_2": "internet"
+    },
+    {
+        "word_1": "компьютер",
+        "word_2": "computer"
+    },
+    {
+        "word_1": "телефон",
+        "word_2": "phone"
+    },
+    {
+        "word_1": "почта",
+        "word_2": "mail"
+    },
+    {
+        "word_1": "письмо",
+        "word_2": "letter"
+    },
+    {
+        "word_1": "сообщение",
+        "word_2": "message"
+    },
+    {
+        "word_1": "фото",
+        "word_2": "photo"
+    },
+    {
+        "word_1": "видео",
+        "word_2": "video"
+    },
+    {
+        "word_1": "игра",
+        "word_2": "game"
+    },
+    {
+        "word_1": "ключ",
+        "word_2": "key"
+    },
+    {
+        "word_1": "ручка",
+        "word_2": "pen"
+    },
+    {
+        "word_1": "карандаш",
+        "word_2": "pencil"
+    },
+    {
+        "word_1": "тетрадь",
+        "word_2": "notebook"
+    },
+    {
+        "word_1": "бумага",
+        "word_2": "paper"
+    },
+    {
+        "word_1": "книга",
+        "word_2": "book"
+    },
+    {
+        "word_1": "часы",
+        "word_2": "clock"
+    },
+    {
+        "word_1": "будильник",
+        "word_2": "alarm clock"
+    },
+    {
+        "word_1": "чемодан",
+        "word_2": "suitcase"
+    },
+    {
+        "word_1": "рюкзак",
+        "word_2": "backpack"
+    },
+    {
+        "word_1": "одежда",
+        "word_2": "clothes"
+    },
+    {
+        "word_1": "платье",
+        "word_2": "dress"
+    },
+    {
+        "word_1": "рубашка",
+        "word_2": "shirt"
+    },
+    {
+        "word_1": "брюки",
+        "word_2": "trousers"
+    },
+    {
+        "word_1": "юбка",
+        "word_2": "skirt"
+    },
+    {
+        "word_1": "обувь",
+        "word_2": "shoes"
+    },
+    {
+        "word_1": "ботинки",
+        "word_2": "boots"
+    },
+    {
+        "word_1": "носки",
+        "word_2": "socks"
+    },
+    {
+        "word_1": "шапка",
+        "word_2": "hat"
+    },
+    {
+        "word_1": "перчатки",
+        "word_2": "gloves"
+    },
+    {
+        "word_1": "шарф",
+        "word_2": "scarf"
+    },
+    {
+        "word_1": "пальто",
+        "word_2": "coat"
+    },
+    {
+        "word_1": "куртка",
+        "word_2": "jacket"
+    },
+    {
+        "word_1": "пиджак",
+        "word_2": "blazer"
+    },
+    {
+        "word_1": "галстук",
+        "word_2": "tie"
+    },
+    {
+        "word_1": "ремень",
+        "word_2": "belt"
+    },
+    {
+        "word_1": "очки",
+        "word_2": "glasses"
+    },
+    {
+        "word_1": "сумка",
+        "word_2": "bag"
+    },
+    {
+        "word_1": "портфель",
+        "word_2": "briefcase"
+    },
+    {
+        "word_1": "зонтик",
+        "word_2": "umbrella"
+    },
+    {
+        "word_1": "телевизор",
+        "word_2": "television"
+    },
+    {
+        "word_1": "компьютер",
+        "word_2": "computer"
+    },
+    {
+        "word_1": "радио",
+        "word_2": "radio"
+    },
+    {
+        "word_1": "музыка",
+        "word_2": "music"
+    },
+    {
+        "word_1": "кино",
+        "word_2": "cinema"
+    },
+    {
+        "word_1": "фильм",
+        "word_2": "film"
+    },
+    {
+        "word_1": "театр",
+        "word_2": "theater"
+    },
+    {
+        "word_1": "книга",
+        "word_2": "book"
+    },
+    {
+        "word_1": "газета",
+        "word_2": "newspaper"
+    },
+    {
+        "word_1": "журнал",
+        "word_2": "magazine"
+    },
+    {
+        "word_1": "игра",
+        "word_2": "game"
+    },
+    {
+        "word_1": "спорт",
+        "word_2": "sport"
+    },
+    {
+        "word_1": "футбол",
+        "word_2": "football"
+    },
+    {
+        "word_1": "баскетбол",
+        "word_2": "basketball"
+    },
+    {
+        "word_1": "теннис",
+        "word_2": "tennis"
+    },
+    {
+        "word_1": "плавание",
+        "word_2": "swimming"
+    },
+    {
+        "word_1": "бег",
+        "word_2": "running"
+    },
+    {
+        "word_1": "велосипед",
+        "word_2": "bicycle"
+    },
+    {
+        "word_1": "поездка",
+        "word_2": "trip"
+    },
+    {
+        "word_1": "путешествие",
+        "word_2": "journey"
+    },
+    {
+        "word_1": "путешественник",
+        "word_2": "traveler"
+    },
+    {
+        "word_1": "турист",
+        "word_2": "tourist"
+    },
+    {
+        "word_1": "отпуск",
+        "word_2": "vacation"
+    },
+    {
+        "word_1": "выходной",
+        "word_2": "day off"
+    },
+    {
+        "word_1": "каникулы",
+        "word_2": "holidays"
+    },
+    {
+        "word_1": "музей",
+        "word_2": "museum"
+    },
+    {
+        "word_1": "галерея",
+        "word_2": "gallery"
+    },
+    {
+        "word_1": "памятник",
+        "word_2": "monument"
+    },
+    {
+        "word_1": "замок",
+        "word_2": "castle"
+    },
+    {
+        "word_1": "дворец",
+        "word_2": "palace"
+    },
+    {
+        "word_1": "церковь",
+        "word_2": "church"
+    },
+    {
+        "word_1": "собор",
+        "word_2": "cathedral"
+    },
+    {
+        "word_1": "площадь",
+        "word_2": "square"
+    },
+    {
+        "word_1": "улица",
+        "word_2": "street"
+    },
+    {
+        "word_1": "бульвар",
+        "word_2": "boulevard"
+    },
+    {
+        "word_1": "парк",
+        "word_2": "park"
+    },
+    {
+        "word_1": "сад",
+        "word_2": "garden"
+    },
+    {
+        "word_1": "лес",
+        "word_2": "forest"
+    },
+    {
+        "word_1": "гора",
+        "word_2": "mountain"
+    },
+    {
+        "word_1": "река",
+        "word_2": "river"
+    },
+    {
+        "word_1": "озеро",
+        "word_2": "lake"
+    },
+    {
+        "word_1": "море",
+        "word_2": "sea"
+    },
+    {
+        "word_1": "океан",
+        "word_2": "ocean"
+    },
+    {
+        "word_1": "берег",
+        "word_2": "shore"
+    },
+    {
+        "word_1": "пляж",
+        "word_2": "beach"
+    },
+    {
+        "word_1": "песок",
+        "word_2": "sand"
+    },
+    {
+        "word_1": "камень",
+        "word_2": "stone"
+    },
+    {
+        "word_1": "скала",
+        "word_2": "rock"
+    },
+    {
+        "word_1": "волна",
+        "word_2": "wave"
+    },
+    {
+        "word_1": "течение",
+        "word_2": "current"
+    },
+    {
+        "word_1": "лодка",
+        "word_2": "boat"
+    },
+    {
+        "word_1": "парусник",
+        "word_2": "sailing boat"
+    },
+    {
+        "word_1": "яхта",
+        "word_2": "yacht"
+    },
+    {
+        "word_1": "корабль",
+        "word_2": "ship"
+    },
+    {
+        "word_1": "подводная лодка",
+        "word_2": "submarine"
+    },
+    {
+        "word_1": "порт",
+        "word_2": "port"
+    },
+    {
+        "word_1": "гавань",
+        "word_2": "harbor"
+    },
+    {
+        "word_1": "пристань",
+        "word_2": "pier"
+    },
+    {
+        "word_1": "маяк",
+        "word_2": "lighthouse"
+    },
+    {
+        "word_1": "рыбак",
+        "word_2": "fisherman"
+    },
+    {
+        "word_1": "рыба",
+        "word_2": "fish"
+    },
+    {
+        "word_1": "удочка",
+        "word_2": "fishing rod"
+    },
+    {
+        "word_1": "сеть",
+        "word_2": "net"
+    },
+    {
+        "word_1": "улов",
+        "word_2": "catch"
+    },
+    {
+        "word_1": "корабль",
+        "word_2": "ship"
+    },
+    {
+        "word_1": "пароход",
+        "word_2": "steamer"
+    },
+    {
+        "word_1": "теплоход",
+        "word_2": "motor ship"
+    },
+    {
+        "word_1": "лодка",
+        "word_2": "boat"
+    },
+    {
+        "word_1": "катер",
+        "word_2": "motorboat"
+    },
+    {
+        "word_1": "гребная лодка",
+        "word_2": "rowboat"
+    }
 ]

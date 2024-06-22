@@ -27,7 +27,7 @@ let intervalId;
 let currentLanguage = 'de';
 let currentFromLanguage = 'ru';
 let currentLevel = 'A1';
-let currentMode = MODES.MENU_BAR;
+let currentMode = MODES.WINDOW;
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
 
 function getLanguageFilePath(language, fromLanguage, level) {
@@ -137,8 +137,9 @@ function createTray() {
 }
 
 function createLanguageSubmenu() {
-  const languages = ['de', 'fr'];
+  const languages = ['en', 'de', 'fr'];
   const fromLanguages = {
+    en: ['ru', 'de'],
     de: ['ru', 'en'],
     fr: ['en']
   };
