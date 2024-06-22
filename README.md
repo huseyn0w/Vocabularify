@@ -10,8 +10,9 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
 
 - **Effortless Learning**: Learn new words without disrupting your routine.
 - **Multitasking Friendly**: Works perfectly while watching YouTube, writing code, or any other activity.
-- **Dark Mode**: Enjoy learning with a sleek, eye-friendly dark mode.
-- **User Requests**: We welcome additional feature requests and improvements based on user feedback.
+- **Multiple Background**: Enjoy learning with a sleek, eye-friendly dark mode.
+- **Mode Selection**: Choose between displaying words in a window or in the menu bar for more flexibility.
+- **Enhanced Language Selection**: Select the language you want to learn and the language you are learning from.
 
 ## How It Works
 
@@ -39,25 +40,3 @@ Vocabulary Booster is a desktop application designed to help you continuously ex
   nvm install 18
   nvm use 18
   ```
-- Install the dependencies:
-  ```bash
-  yarn install
-  ```
-- Build the application:
-  ```bash
-  yarn build
-  ```
-- Open the app installation file in 'dist' folder:
-
-2. **Choose Your Language**: Select the language you want to learn.
-3. **Start Learning**: Position the app window where it's most convenient and start absorbing new words effortlessly.
-
-## Feedback and Contributions
-
-I am always excited to hear from our users! If you have any suggestions, feature requests, or would like to contribute to the project, please feel free to open an issue or submit a pull request.
-
-## Contact
-
-For any inquiries or support, please contact me at [https://linkedin.com/in/huseyn0w].
-
-Happy Learning! 🌟

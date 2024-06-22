@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, Tray, ipcMain, shell, dialog } = require('electron');
+const { app, BrowserWindow, Menu, Tray, ipcMain, shell, dialog, globalShortcut } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
@@ -21,6 +21,7 @@ let intervalId;
 let currentLanguage = 'de';
 let currentFromLanguage = 'ru';
 let currentLevel = 'A1';
+let currentMode = 'Window';
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
 
 function getLanguageFilePath(language, fromLanguage, level) {
@@ -88,6 +89,26 @@ function createTray() {
         submenu: createLanguageSubmenu()
       },
       {
+        label: 'Mode',
+        submenu: [
+          {
+            label: 'Window',
+            type: 'radio',
+            checked: true,
+            click: () => {
+              switchMode('Window');
+            }
+          },
+          {
+            label: 'Menu Bar',
+            type: 'radio',
+            click: () => {
+              switchMode('Menu Bar');
+            }
+          }
+        ]
+      },
+      {
         label: 'About',
         click: () => {
           shell.openExternal('https://github.com/huseyn0w/Vocabularify'); // Replace with your repository URL
@@ -109,11 +130,10 @@ function createTray() {
 }
 
 function createLanguageSubmenu() {
-  const languages = ['en', 'de', 'fr'];
+  const languages = ['de', 'fr'];
   const fromLanguages = {
-    en: ['de', 'ru'],
-    de: ['en', 'ru'],
-    fr: ['en', 'ru']
+    de: ['ru', 'en'],
+    fr: ['en']
   };
 
   return languages.map(language => ({
@@ -148,6 +168,28 @@ function switchLanguage(language, fromLanguage, level) {
   }
 }
 
+function switchMode(mode) {
+  try {
+    currentMode = mode;
+    if (mode === 'Window') {
+      if (!mainWindow) {
+        createWindow();
+      } else {
+        mainWindow.show();
+      }
+      tray.setTitle('Vocabularify');
+    } else if (mode === 'Menu Bar') {
+      if (mainWindow) {
+        mainWindow.hide();
+      }
+      displayPhraseInTray(currentIndex);
+    }
+    registerGlobalShortcuts();
+  } catch (error) {
+    showError('Failed to switch mode.', error);
+  }
+}
+
 function loadPhrases(filePath) {
   try {
     fs.readFile(filePath, (err, data) => {
@@ -172,10 +214,23 @@ function loadPhrases(filePath) {
 function displayPhrase(index) {
   try {
     const phrase = phrases[index];
-    mainWindow.webContents.send('display-phrase', phrase);
-    adjustWindowSize(phrase);
+    if (currentMode === 'Window') {
+      mainWindow.webContents.send('display-phrase', phrase);
+      adjustWindowSize(phrase);
+    } else if (currentMode === 'Menu Bar') {
+      displayPhraseInTray(index);
+    }
   } catch (error) {
     showError('Failed to display phrase.', error);
+  }
+}
+
+function displayPhraseInTray(index) {
+  try {
+    const phrase = phrases[index];
+    tray.setTitle(phrase);
+  } catch (error) {
+    showError('Failed to display phrase in tray.', error);
   }
 }
 
@@ -206,6 +261,21 @@ function handleKeyPress(event) {
   }
 }
 
+function registerGlobalShortcuts() {
+  globalShortcut.unregisterAll();
+  if (currentMode === 'Menu Bar') {
+    globalShortcut.register('Shift+Right', () => {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      displayPhrase(currentIndex);
+    });
+
+    globalShortcut.register('Shift+Left', () => {
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      displayPhrase(currentIndex);
+    });
+  }
+}
+
 function cyclePhrases() {
   try {
     currentIndex = (currentIndex + 1) % phrases.length;
@@ -222,14 +292,19 @@ function showError(message, error) {
 app.whenReady().then(() => {
   createWindow();
   createTray();
+  registerGlobalShortcuts();
 
   app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
+    if (BrowserWindow.getAllWindows().length === 0 && currentMode === 'Window') createWindow();
   });
 });
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
+});
+
+app.on('will-quit', () => {
+  globalShortcut.unregisterAll();
 });
 
 ipcMain.on('resize-window', (event, width, height) => {
