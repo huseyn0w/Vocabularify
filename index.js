@@ -145,7 +145,7 @@ function createTray() {
 function createLanguageSubmenu() {
   const languages = ['en', 'de', 'fr'];
   const fromLanguages = {
-    en: ['ru', 'de'],
+    en: ['ru', 'de', 'fr'],
     de: ['ru', 'en'],
     fr: ['en']
   };
