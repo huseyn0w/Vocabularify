@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, Tray, ipcMain, shell, dialog, globalShortcut } = require('electron');
+const { app, BrowserWindow, Menu, Tray, ipcMain, dialog, globalShortcut } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const { createAboutWindow } = require('./about');
