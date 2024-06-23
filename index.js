@@ -19,7 +19,7 @@ const MODES = {
   WINDOW: 'Window'
 }
 
-const WORDS_CHANGE_INTERVAL_IN_MS = 5000;
+let WORDS_CHANGE_INTERVAL_IN_MS = 5000;
 
 let mainWindow;
 let tray;
@@ -118,6 +118,10 @@ function createTray() {
         ]
       },
       {
+        label: 'Changing speed',
+        submenu: createWordSpeedChangingSubMenu()
+      },
+      {
         label: 'About',
         click: () => {
           createAboutWindow();
@@ -169,6 +173,24 @@ function createLevelSubmenu(languageTo, languageFrom) {
   }));
 }
 
+function createWordSpeedChangingSubMenu() {
+  const intervals = [
+    { label: '5 seconds', value: 5000 },
+    { label: '10 seconds', value: 10000 },
+    { label: '15 seconds', value: 15000 },
+    { label: '20 seconds', value: 20000 }
+  ];
+
+  return intervals.map(interval => ({
+    label: interval.label,
+    type: 'radio',
+    checked: interval.value === WORDS_CHANGE_INTERVAL_IN_MS,
+    click: () => {
+      switchInterval(interval.value);
+    }
+  }));
+}
+
 function switchLanguage(language, fromLanguage, level) {
   try {
     currentLanguage = language;
@@ -200,6 +222,16 @@ function switchMode(mode) {
     registerGlobalShortcuts();
   } catch (error) {
     showError('Failed to switch mode.', error);
+  }
+}
+
+function switchInterval(interval) {
+  try {
+    WORDS_CHANGE_INTERVAL_IN_MS = interval;
+    clearInterval(intervalId);
+    intervalId = setInterval(cyclePhrases, WORDS_CHANGE_INTERVAL_IN_MS);
+  } catch (error) {
+    showError('Failed to switch interval.', error);
   }
 }
 
