@@ -61,6 +61,8 @@ If you find **Vocabulary Booster** helpful and would like to support its develop
 
 [Donate Here](https://www.paypal.com/donate/?hosted_button_id=MMANJ7TC2SJMN) 🙏
 
+[![Donate with PayPal](paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MMANJ7TC2SJMN)
+
 Thank you for your support! 💖
 
 ---
