@@ -1,303 +1,6542 @@
 [
-    {"word_1": "hello", "word_2": "hallo"},
-    {"word_1": "goodbye", "word_2": "tschüss"},
-    {"word_1": "please", "word_2": "bitte"},
-    {"word_1": "thank you", "word_2": "danke"},
-    {"word_1": "yes", "word_2": "ja"},
-    {"word_1": "no", "word_2": "nein"},
-    {"word_1": "man", "word_2": "der Mann"},
-    {"word_1": "woman", "word_2": "die Frau"},
-    {"word_1": "child", "word_2": "das Kind"},
-    {"word_1": "house", "word_2": "das Haus"},
-    {"word_1": "car", "word_2": "das Auto"},
-    {"word_1": "dog", "word_2": "der Hund"},
-    {"word_1": "cat", "word_2": "die Katze"},
-    {"word_1": "food", "word_2": "das Essen"},
-    {"word_1": "water", "word_2": "das Wasser"},
-    {"word_1": "bread", "word_2": "das Brot"},
-    {"word_1": "school", "word_2": "die Schule"},
-    {"word_1": "book", "word_2": "das Buch"},
-    {"word_1": "table", "word_2": "der Tisch"},
-    {"word_1": "chair", "word_2": "der Stuhl"},
-    {"word_1": "friend", "word_2": "der Freund"},
-    {"word_1": "work", "word_2": "die Arbeit"},
-    {"word_1": "city", "word_2": "die Stadt"},
-    {"word_1": "train", "word_2": "der Zug"},
-    {"word_1": "airport", "word_2": "der Flughafen"},
-    {"word_1": "restaurant", "word_2": "das Restaurant"},
-    {"word_1": "hospital", "word_2": "das Krankenhaus"},
-    {"word_1": "police", "word_2": "die Polizei"},
-    {"word_1": "money", "word_2": "das Geld"},
-    {"word_1": "market", "word_2": "der Markt"},
-    {"word_1": "day", "word_2": "der Tag"},
-    {"word_1": "night", "word_2": "die Nacht"},
-    {"word_1": "morning", "word_2": "der Morgen"},
-    {"word_1": "evening", "word_2": "der Abend"},
-    {"word_1": "week", "word_2": "die Woche"},
-    {"word_1": "month", "word_2": "der Monat"},
-    {"word_1": "year", "word_2": "das Jahr"},
-    {"word_1": "time", "word_2": "die Zeit"},
-    {"word_1": "hour", "word_2": "die Stunde"},
-    {"word_1": "minute", "word_2": "die Minute"},
-    {"word_1": "second", "word_2": "die Sekunde"},
-    {"word_1": "now", "word_2": "jetzt"},
-    {"word_1": "today", "word_2": "heute"},
-    {"word_1": "tomorrow", "word_2": "morgen"},
-    {"word_1": "yesterday", "word_2": "gestern"},
-    {"word_1": "red", "word_2": "rot"},
-    {"word_1": "blue", "word_2": "blau"},
-    {"word_1": "green", "word_2": "grün"},
-    {"word_1": "yellow", "word_2": "gelb"},
-    {"word_1": "black", "word_2": "schwarz"},
-    {"word_1": "white", "word_2": "weiß"},
-    {"word_1": "brown", "word_2": "braun"},
-    {"word_1": "big", "word_2": "groß"},
-    {"word_1": "small", "word_2": "klein"},
-    {"word_1": "old", "word_2": "alt"},
-    {"word_1": "young", "word_2": "jung"},
-    {"word_1": "new", "word_2": "neu"},
-    {"word_1": "good", "word_2": "gut"},
-    {"word_1": "bad", "word_2": "schlecht"},
-    {"word_1": "happy", "word_2": "glücklich"},
-    {"word_1": "sad", "word_2": "traurig"},
-    {"word_1": "hot", "word_2": "heiß"},
-    {"word_1": "cold", "word_2": "kalt"},
-    {"word_1": "warm", "word_2": "warm"},
-    {"word_1": "cool", "word_2": "kühl"},
-    {"word_1": "easy", "word_2": "einfach"},
-    {"word_1": "difficult", "word_2": "schwierig"},
-    {"word_1": "important", "word_2": "wichtig"},
-    {"word_1": "interesting", "word_2": "interessant"},
-    {"word_1": "boring", "word_2": "langweilig"},
-    {"word_1": "beautiful", "word_2": "schön"},
-    {"word_1": "ugly", "word_2": "hässlich"},
-    {"word_1": "cheap", "word_2": "billig"},
-    {"word_1": "expensive", "word_2": "teuer"},
-    {"word_1": "short", "word_2": "kurz"},
-    {"word_1": "long", "word_2": "lang"},
-    {"word_1": "left", "word_2": "links"},
-    {"word_1": "right", "word_2": "rechts"},
-    {"word_1": "up", "word_2": "oben"},
-    {"word_1": "down", "word_2": "unten"},
-    {"word_1": "inside", "word_2": "drinnen"},
-    {"word_1": "outside", "word_2": "draußen"},
-    {"word_1": "near", "word_2": "nah"},
-    {"word_1": "far", "word_2": "weit"},
-    {"word_1": "here", "word_2": "hier"},
-    {"word_1": "there", "word_2": "dort"},
-    {"word_1": "boy", "word_2": "der Junge"},
-    {"word_1": "girl", "word_2": "das Mädchen"},
-    {"word_1": "father", "word_2": "der Vater"},
-    {"word_1": "mother", "word_2": "die Mutter"},
-    {"word_1": "brother", "word_2": "der Bruder"},
-    {"word_1": "sister", "word_2": "die Schwester"},
-    {"word_1": "son", "word_2": "der Sohn"},
-    {"word_1": "daughter", "word_2": "die Tochter"},
-    {"word_1": "family", "word_2": "die Familie"},
-    {"word_1": "student", "word_2": "der Schüler"},
-    {"word_1": "teacher", "word_2": "der Lehrer"},
-    {"word_1": "classroom", "word_2": "das Klassenzimmer"},
-    {"word_1": "home", "word_2": "das Zuhause"},
-    {"word_1": "room", "word_2": "das Zimmer"},
-    {"word_1": "bed", "word_2": "das Bett"},
-    {"word_1": "window", "word_2": "das Fenster"},
-    {"word_1": "door", "word_2": "die Tür"},
-    {"word_1": "kitchen", "word_2": "die Küche"},
-    {"word_1": "bathroom", "word_2": "das Badezimmer"},
-    {"word_1": "garden", "word_2": "der Garten"},
-    {"word_1": "computer", "word_2": "der Computer"},
-    {"word_1": "phone", "word_2": "das Telefon"},
-    {"word_1": "internet", "word_2": "das Internet"},
-    {"word_1": "television", "word_2": "der Fernseher"},
-    {"word_1": "radio", "word_2": "das Radio"},
-    {"word_1": "music", "word_2": "die Musik"},
-    {"word_1": "song", "word_2": "das Lied"},
-    {"word_1": "movie", "word_2": "der Film"},
-    {"word_1": "picture", "word_2": "das Bild"},
-    {"word_1": "camera", "word_2": "die Kamera"},
-    {"word_1": "newspaper", "word_2": "die Zeitung"},
-    {"word_1": "magazine", "word_2": "die Zeitschrift"},
-    {"word_1": "pen", "word_2": "der Stift"},
-    {"word_1": "pencil", "word_2": "der Bleistift"},
-    {"word_1": "paper", "word_2": "das Papier"},
-    {"word_1": "notebook", "word_2": "das Notizbuch"},
-    {"word_1": "bag", "word_2": "die Tasche"},
-    {"word_1": "shoe", "word_2": "der Schuh"},
-    {"word_1": "shirt", "word_2": "das Hemd"},
-    {"word_1": "pants", "word_2": "die Hose"},
-    {"word_1": "dress", "word_2": "das Kleid"},
-    {"word_1": "hat", "word_2": "der Hut"},
-    {"word_1": "coat", "word_2": "der Mantel"},
-    {"word_1": "sweater", "word_2": "der Pullover"},
-    {"word_1": "sock", "word_2": "die Socke"},
-    {"word_1": "scarf", "word_2": "der Schal"},
-    {"word_1": "glove", "word_2": "der Handschuh"},
-    {"word_1": "watch", "word_2": "die Uhr"},
-    {"word_1": "food", "word_2": "das Essen"},
-    {"word_1": "apple", "word_2": "der Apfel"},
-    {"word_1": "banana", "word_2": "die Banane"},
-    {"word_1": "orange", "word_2": "die Orange"},
-    {"word_1": "grape", "word_2": "die Traube"},
-    {"word_1": "strawberry", "word_2": "die Erdbeere"},
-    {"word_1": "lemon", "word_2": "die Zitrone"},
-    {"word_1": "watermelon", "word_2": "die Wassermelone"},
-    {"word_1": "potato", "word_2": "die Kartoffel"},
-    {"word_1": "carrot", "word_2": "die Karotte"},
-    {"word_1": "tomato", "word_2": "die Tomate"},
-    {"word_1": "onion", "word_2": "die Zwiebel"},
-    {"word_1": "garlic", "word_2": "der Knoblauch"},
-    {"word_1": "pepper", "word_2": "der Pfeffer"},
-    {"word_1": "salt", "word_2": "das Salz"},
-    {"word_1": "sugar", "word_2": "der Zucker"},
-    {"word_1": "bread", "word_2": "das Brot"},
-    {"word_1": "butter", "word_2": "die Butter"},
-    {"word_1": "cheese", "word_2": "der Käse"},
-    {"word_1": "milk", "word_2": "die Milch"},
-    {"word_1": "egg", "word_2": "das Ei"},
-    {"word_1": "meat", "word_2": "das Fleisch"},
-    {"word_1": "fish", "word_2": "der Fisch"},
-    {"word_1": "chicken", "word_2": "das Hähnchen"},
-    {"word_1": "rice", "word_2": "der Reis"},
-    {"word_1": "pasta", "word_2": "die Nudeln"},
-    {"word_1": "soup", "word_2": "die Suppe"},
-    {"word_1": "salad", "word_2": "der Salat"},
-    {"word_1": "fruit", "word_2": "die Frucht"},
-    {"word_1": "vegetable", "word_2": "das Gemüse"},
-    {"word_1": "breakfast", "word_2": "das Frühstück"},
-    {"word_1": "lunch", "word_2": "das Mittagessen"},
-    {"word_1": "dinner", "word_2": "das Abendessen"},
-    {"word_1": "coffee", "word_2": "der Kaffee"},
-    {"word_1": "tea", "word_2": "der Tee"},
-    {"word_1": "juice", "word_2": "der Saft"},
-    {"word_1": "beer", "word_2": "das Bier"},
-    {"word_1": "wine", "word_2": "der Wein"},
-    {"word_1": "water", "word_2": "das Wasser"},
-    {"word_1": "ice", "word_2": "das Eis"},
-    {"word_1": "cream", "word_2": "die Sahne"},
-    {"word_1": "cake", "word_2": "der Kuchen"},
-    {"word_1": "cookie", "word_2": "der Keks"},
-    {"word_1": "chocolate", "word_2": "die Schokolade"},
-    {"word_1": "candy", "word_2": "das Bonbon"},
-    {"word_1": "sweet", "word_2": "süß"},
-    {"word_1": "salt", "word_2": "das Salz"},
-    {"word_1": "pepper", "word_2": "der Pfeffer"},
-    {"word_1": "spice", "word_2": "das Gewürz"},
-    {"word_1": "herb", "word_2": "das Kraut"},
-    {"word_1": "sauce", "word_2": "die Soße"},
-    {"word_1": "mustard", "word_2": "der Senf"},
-    {"word_1": "ketchup", "word_2": "der Ketchup"},
-    {"word_1": "mayonnaise", "word_2": "die Mayonnaise"},
-    {"word_1": "fork", "word_2": "die Gabel"},
-    {"word_1": "knife", "word_2": "das Messer"},
-    {"word_1": "spoon", "word_2": "der Löffel"},
-    {"word_1": "plate", "word_2": "der Teller"},
-    {"word_1": "bowl", "word_2": "die Schüssel"},
-    {"word_1": "cup", "word_2": "die Tasse"},
-    {"word_1": "glass", "word_2": "das Glas"},
-    {"word_1": "bottle", "word_2": "die Flasche"},
-    {"word_1": "napkin", "word_2": "die Serviette"},
-    {"word_1": "straw", "word_2": "der Strohhalm"},
-    {"word_1": "kitchen", "word_2": "die Küche"},
-    {"word_1": "stove", "word_2": "der Herd"},
-    {"word_1": "oven", "word_2": "der Backofen"},
-    {"word_1": "microwave", "word_2": "die Mikrowelle"},
-    {"word_1": "fridge", "word_2": "der Kühlschrank"},
-    {"word_1": "freezer", "word_2": "der Gefrierschrank"},
-    {"word_1": "sink", "word_2": "das Spülbecken"},
-    {"word_1": "dishwasher", "word_2": "die Spülmaschine"},
-    {"word_1": "washing machine", "word_2": "die Waschmaschine"},
-    {"word_1": "dryer", "word_2": "der Trockner"},
-    {"word_1": "vacuum cleaner", "word_2": "der Staubsauger"},
-    {"word_1": "broom", "word_2": "der Besen"},
-    {"word_1": "dustpan", "word_2": "die Kehrschaufel"},
-    {"word_1": "mop", "word_2": "der Mopp"},
-    {"word_1": "bucket", "word_2": "der Eimer"},
-    {"word_1": "detergent", "word_2": "das Waschmittel"},
-    {"word_1": "soap", "word_2": "die Seife"},
-    {"word_1": "sponge", "word_2": "der Schwamm"},
-    {"word_1": "cloth", "word_2": "das Tuch"},
-    {"word_1": "towel", "word_2": "das Handtuch"},
-    {"word_1": "brush", "word_2": "die Bürste"},
-    {"word_1": "toothbrush", "word_2": "die Zahnbürste"},
-    {"word_1": "toothpaste", "word_2": "die Zahnpasta"},
-    {"word_1": "shampoo", "word_2": "das Shampoo"},
-    {"word_1": "conditioner", "word_2": "die Spülung"},
-    {"word_1": "soap", "word_2": "die Seife"},
-    {"word_1": "shower", "word_2": "die Dusche"},
-    {"word_1": "bath", "word_2": "das Bad"},
-    {"word_1": "bathtub", "word_2": "die Badewanne"},
-    {"word_1": "toilet", "word_2": "die Toilette"},
-    {"word_1": "sink", "word_2": "das Waschbecken"},
-    {"word_1": "mirror", "word_2": "der Spiegel"},
-    {"word_1": "towel", "word_2": "das Handtuch"},
-    {"word_1": "comb", "word_2": "der Kamm"},
-    {"word_1": "brush", "word_2": "die Bürste"},
-    {"word_1": "hairdryer", "word_2": "der Föhn"},
-    {"word_1": "razor", "word_2": "der Rasierer"},
-    {"word_1": "shaving cream", "word_2": "die Rasiercreme"},
-    {"word_1": "makeup", "word_2": "das Make-up"},
-    {"word_1": "perfume", "word_2": "das Parfüm"},
-    {"word_1": "deodorant", "word_2": "das Deo"},
-    {"word_1": "lotion", "word_2": "die Lotion"},
-    {"word_1": "medicine", "word_2": "die Medizin"},
-    {"word_1": "pill", "word_2": "die Pille"},
-    {"word_1": "vitamin", "word_2": "das Vitamin"},
-    {"word_1": "bandage", "word_2": "der Verband"},
-    {"word_1": "thermometer", "word_2": "das Thermometer"},
-    {"word_1": "doctor", "word_2": "der Arzt"},
-    {"word_1": "nurse", "word_2": "die Krankenschwester"},
-    {"word_1": "hospital", "word_2": "das Krankenhaus"},
-    {"word_1": "pharmacy", "word_2": "die Apotheke"},
-    {"word_1": "ambulance", "word_2": "der Krankenwagen"},
-    {"word_1": "firefighter", "word_2": "der Feuerwehrmann"},
-    {"word_1": "police officer", "word_2": "der Polizist"},
-    {"word_1": "soldier", "word_2": "der Soldat"},
-    {"word_1": "teacher", "word_2": "der Lehrer"},
-    {"word_1": "student", "word_2": "der Schüler"},
-    {"word_1": "professor", "word_2": "der Professor"},
-    {"word_1": "engineer", "word_2": "der Ingenieur"},
-    {"word_1": "architect", "word_2": "der Architekt"},
-    {"word_1": "scientist", "word_2": "der Wissenschaftler"},
-    {"word_1": "doctor", "word_2": "der Arzt"},
-    {"word_1": "nurse", "word_2": "die Krankenschwester"},
-    {"word_1": "lawyer", "word_2": "der Anwalt"},
-    {"word_1": "judge", "word_2": "der Richter"},
-    {"word_1": "businessman", "word_2": "der Geschäftsmann"},
-    {"word_1": "manager", "word_2": "der Manager"},
-    {"word_1": "employee", "word_2": "der Mitarbeiter"},
-    {"word_1": "worker", "word_2": "der Arbeiter"},
-    {"word_1": "farmer", "word_2": "der Bauer"},
-    {"word_1": "chef", "word_2": "der Koch"},
-    {"word_1": "waiter", "word_2": "der Kellner"},
-    {"word_1": "artist", "word_2": "der Künstler"},
-    {"word_1": "musician", "word_2": "der Musiker"},
-    {"word_1": "writer", "word_2": "der Schriftsteller"},
-    {"word_1": "journalist", "word_2": "der Journalist"},
-    {"word_1": "photographer", "word_2": "der Fotograf"},
-    {"word_1": "pilot", "word_2": "der Pilot"},
-    {"word_1": "driver", "word_2": "der Fahrer"},
-    {"word_1": "teacher", "word_2": "der Lehrer"},
-    {"word_1": "student", "word_2": "der Schüler"},
-    {"word_1": "professor", "word_2": "der Professor"},
-    {"word_1": "engineer", "word_2": "der Ingenieur"},
-    {"word_1": "architect", "word_2": "der Architekt"},
-    {"word_1": "scientist", "word_2": "der Wissenschaftler"},
-    {"word_1": "doctor", "word_2": "der Arzt"},
-    {"word_1": "nurse", "word_2": "die Krankenschwester"},
-    {"word_1": "lawyer", "word_2": "der Anwalt"},
-    {"word_1": "judge", "word_2": "der Richter"},
-    {"word_1": "businessman", "word_2": "der Geschäftsmann"},
-    {"word_1": "manager", "word_2": "der Manager"},
-    {"word_1": "employee", "word_2": "der Mitarbeiter"},
-    {"word_1": "worker", "word_2": "der Arbeiter"},
-    {"word_1": "farmer", "word_2": "der Bauer"},
-    {"word_1": "chef", "word_2": "der Koch"},
-    {"word_1": "waiter", "word_2": "der Kellner"},
-    {"word_1": "artist", "word_2": "der Künstler"},
-    {"word_1": "musician", "word_2": "der Musiker"},
-    {"word_1": "writer", "word_2": "der Schriftsteller"},
-    {"word_1": "journalist", "word_2": "der Journalist"},
-    {"word_1": "photographer", "word_2": "der Fotograf"},
-    {"word_1": "pilot", "word_2": "der Pilot"},
-    {"word_1": "driver", "word_2": "der Fahrer"}
+    {
+        "word_1": "hundred",
+        "word_2": "(ein)hundert"
+    },
+    {
+        "word_1": "thousand",
+        "word_2": "(ein)tausend"
+    },
+    {
+        "word_1": "to register",
+        "word_2": "(sich) anmelden"
+    },
+    {
+        "word_1": "to get dressed",
+        "word_2": "(sich) anziehen"
+    },
+    {
+        "word_1": "to undress",
+        "word_2": "(sich) ausziehen"
+    },
+    {
+        "word_1": "to shower",
+        "word_2": "(sich) duschen"
+    },
+    {
+        "word_1": "to be happy",
+        "word_2": "(sich) freuen"
+    },
+    {
+        "word_1": "to meet",
+        "word_2": "(sich) treffen"
+    },
+    {
+        "word_1": "to introduce oneself",
+        "word_2": "(sich) vorstellen"
+    },
+    {
+        "word_1": "to wash",
+        "word_2": "(sich) waschen"
+    },
+    {
+        "word_1": "evening",
+        "word_2": "Abend"
+    },
+    {
+        "word_1": "sender",
+        "word_2": "Absender"
+    },
+    {
+        "word_1": "attention",
+        "word_2": "Achtung"
+    },
+    {
+        "word_1": "address",
+        "word_2": "Adresse"
+    },
+    {
+        "word_1": "idea",
+        "word_2": "Ahnung"
+    },
+    {
+        "word_1": "everyday life",
+        "word_2": "Alltag"
+    },
+    {
+        "word_1": "old building",
+        "word_2": "Altbau"
+    },
+    {
+        "word_1": "nursing home",
+        "word_2": "Altenpflegeheim"
+    },
+    {
+        "word_1": "traffic light",
+        "word_2": "Ampel"
+    },
+    {
+        "word_1": "information",
+        "word_2": "Angabe"
+    },
+    {
+        "word_1": "offer",
+        "word_2": "Angebot"
+    },
+    {
+        "word_1": "arrival time",
+        "word_2": "Ankunftszeit"
+    },
+    {
+        "word_1": "registration",
+        "word_2": "Anmeldung"
+    },
+    {
+        "word_1": "anorak",
+        "word_2": "Anorak"
+    },
+    {
+        "word_1": "salutation",
+        "word_2": "Anrede"
+    },
+    {
+        "word_1": "announcement",
+        "word_2": "Ansage"
+    },
+    {
+        "word_1": "answer",
+        "word_2": "Antwort"
+    },
+    {
+        "word_1": "advertisement",
+        "word_2": "Anzeige"
+    },
+    {
+        "word_1": "suit",
+        "word_2": "Anzug"
+    },
+    {
+        "word_1": "apple",
+        "word_2": "Apfel"
+    },
+    {
+        "word_1": "apple juice",
+        "word_2": "Apfelsaft"
+    },
+    {
+        "word_1": "pharmacy",
+        "word_2": "Apotheke"
+    },
+    {
+        "word_1": "April",
+        "word_2": "April"
+    },
+    {
+        "word_1": "work",
+        "word_2": "Arbeit"
+    },
+    {
+        "word_1": "workday",
+        "word_2": "Arbeitstag"
+    },
+    {
+        "word_1": "study",
+        "word_2": "Arbeitszimmer"
+    },
+    {
+        "word_1": "arm",
+        "word_2": "Arm"
+    },
+    {
+        "word_1": "doctor",
+        "word_2": "Arzt/Ärztin"
+    },
+    {
+        "word_1": "task",
+        "word_2": "Aufgabe"
+    },
+    {
+        "word_1": "eye",
+        "word_2": "Auge"
+    },
+    {
+        "word_1": "August",
+        "word_2": "August"
+    },
+    {
+        "word_1": "education",
+        "word_2": "Ausbildung"
+    },
+    {
+        "word_1": "temporary job",
+        "word_2": "Aushilfe"
+    },
+    {
+        "word_1": "information",
+        "word_2": "Auskunft"
+    },
+    {
+        "word_1": "statement",
+        "word_2": "Aussage"
+    },
+    {
+        "word_1": "car",
+        "word_2": "Auto"
+    },
+    {
+        "word_1": "mechanic",
+        "word_2": "Automechaniker/in"
+    },
+    {
+        "word_1": "baby food",
+        "word_2": "Babynahrung"
+    },
+    {
+        "word_1": "bathroom",
+        "word_2": "Bad"
+    },
+    {
+        "word_1": "bathtub",
+        "word_2": "Badewanne"
+    },
+    {
+        "word_1": "bathroom",
+        "word_2": "Badezimmer"
+    },
+    {
+        "word_1": "train",
+        "word_2": "Bahn"
+    },
+    {
+        "word_1": "train station",
+        "word_2": "Bahnhof"
+    },
+    {
+        "word_1": "balcony",
+        "word_2": "Balkon"
+    },
+    {
+        "word_1": "ball",
+        "word_2": "Ball"
+    },
+    {
+        "word_1": "banana",
+        "word_2": "Banane"
+    },
+    {
+        "word_1": "bank",
+        "word_2": "Bank"
+    },
+    {
+        "word_1": "belly",
+        "word_2": "Bauch"
+    },
+    {
+        "word_1": "stomach ache",
+        "word_2": "Bauchschmerzen"
+    },
+    {
+        "word_1": "farm",
+        "word_2": "Bauernhof"
+    },
+    {
+        "word_1": "tree",
+        "word_2": "Baum"
+    },
+    {
+        "word_1": "cup",
+        "word_2": "Becher"
+    },
+    {
+        "word_1": "leg",
+        "word_2": "Bein"
+    },
+    {
+        "word_1": "example",
+        "word_2": "Beispiel"
+    },
+    {
+        "word_1": "Berlin",
+        "word_2": "Berlin"
+    },
+    {
+        "word_1": "profession",
+        "word_2": "Beruf"
+    },
+    {
+        "word_1": "notification",
+        "word_2": "Bescheid"
+    },
+    {
+        "word_1": "viewing appointment",
+        "word_2": "Besichtigungstermin"
+    },
+    {
+        "word_1": "recovery",
+        "word_2": "Besserung"
+    },
+    {
+        "word_1": "visit",
+        "word_2": "Besuch"
+    },
+    {
+        "word_1": "subject",
+        "word_2": "Betreff"
+    },
+    {
+        "word_1": "bed",
+        "word_2": "Bett"
+    },
+    {
+        "word_1": "movement",
+        "word_2": "Bewegung"
+    },
+    {
+        "word_1": "library",
+        "word_2": "Bibliothek"
+    },
+    {
+        "word_1": "beer",
+        "word_2": "Bier"
+    },
+    {
+        "word_1": "picture",
+        "word_2": "Bild"
+    },
+    {
+        "word_1": "pear",
+        "word_2": "Birne"
+    },
+    {
+        "word_1": "bistro",
+        "word_2": "Bistro"
+    },
+    {
+        "word_1": "leaf",
+        "word_2": "Blatt"
+    },
+    {
+        "word_1": "blueberry",
+        "word_2": "Blaubeere"
+    },
+    {
+        "word_1": "pencil",
+        "word_2": "Bleistift"
+    },
+    {
+        "word_1": "flower",
+        "word_2": "Blume"
+    },
+    {
+        "word_1": "blouse",
+        "word_2": "Bluse"
+    },
+    {
+        "word_1": "bean",
+        "word_2": "Bohne"
+    },
+    {
+        "word_1": "bride",
+        "word_2": "Braut"
+    },
+    {
+        "word_1": "letter",
+        "word_2": "Brief"
+    },
+    {
+        "word_1": "part of a letter",
+        "word_2": "Briefteil"
+    },
+    {
+        "word_1": "bread",
+        "word_2": "Brot"
+    },
+    {
+        "word_1": "brother",
+        "word_2": "Bruder"
+    },
+    {
+        "word_1": "chest",
+        "word_2": "Brust"
+    },
+    {
+        "word_1": "bread roll",
+        "word_2": "Brötchen"
+    },
+    {
+        "word_1": "book",
+        "word_2": "Buch"
+    },
+    {
+        "word_1": "bus",
+        "word_2": "Bus"
+    },
+    {
+        "word_1": "bus stop",
+        "word_2": "Bushaltestelle"
+    },
+    {
+        "word_1": "baker",
+        "word_2": "Bäcker/in"
+    },
+    {
+        "word_1": "citizens' office",
+        "word_2": "Bürgerbüro"
+    },
+    {
+        "word_1": "office",
+        "word_2": "Büro"
+    },
+    {
+        "word_1": "office clerk",
+        "word_2": "Bürokaufmann/Bürokauffrau"
+    },
+    {
+        "word_1": "café",
+        "word_2": "Café"
+    },
+    {
+        "word_1": "cent",
+        "word_2": "Cent"
+    },
+    {
+        "word_1": "boss",
+        "word_2": "Chef/in"
+    },
+    {
+        "word_1": "cola",
+        "word_2": "Cola"
+    },
+    {
+        "word_1": "computer",
+        "word_2": "Computer"
+    },
+    {
+        "word_1": "computer program",
+        "word_2": "Computerprogramm"
+    },
+    {
+        "word_1": "computer game",
+        "word_2": "Computerspiel"
+    },
+    {
+        "word_1": "computer system",
+        "word_2": "Computersystem"
+    },
+    {
+        "word_1": "couscous",
+        "word_2": "Couscous"
+    },
+    {
+        "word_1": "thanks",
+        "word_2": "Dank"
+    },
+    {
+        "word_1": "date",
+        "word_2": "Datum"
+    },
+    {
+        "word_1": "German",
+        "word_2": "Deutsch"
+    },
+    {
+        "word_1": "German course",
+        "word_2": "Deutschkurs"
+    },
+    {
+        "word_1": "map of Germany",
+        "word_2": "Deutschlandkarte"
+    },
+    {
+        "word_1": "December",
+        "word_2": "Dezember"
+    },
+    {
+        "word_1": "dialogue",
+        "word_2": "Dialog"
+    },
+    {
+        "word_1": "hallway",
+        "word_2": "Diele"
+    },
+    {
+        "word_1": "service",
+        "word_2": "Dienst"
+    },
+    {
+        "word_1": "Tuesday",
+        "word_2": "Dienstag"
+    },
+    {
+        "word_1": "Thursday",
+        "word_2": "Donnerstag"
+    },
+    {
+        "word_1": "can",
+        "word_2": "Dose"
+    },
+    {
+        "word_1": "announcement",
+        "word_2": "Durchsage"
+    },
+    {
+        "word_1": "shower",
+        "word_2": "Dusche"
+    },
+    {
+        "word_1": "egg",
+        "word_2": "Ei"
+    },
+    {
+        "word_1": "shopping spree",
+        "word_2": "Einkaufsbummel"
+    },
+    {
+        "word_1": "shopping list",
+        "word_2": "Einkaufszettel"
+    },
+    {
+        "word_1": "invitation",
+        "word_2": "Einladung"
+    },
+    {
+        "word_1": "single ticket",
+        "word_2": "Einzelfahrkarte"
+    },
+    {
+        "word_1": "ice cream",
+        "word_2": "Eis"
+    },
+    {
+        "word_1": "electrical device",
+        "word_2": "Elektrogerät"
+    },
+    {
+        "word_1": "elbow",
+        "word_2": "Ellbogen/Ellenbogen"
+    },
+    {
+        "word_1": "parents",
+        "word_2": "Eltern"
+    },
+    {
+        "word_1": "recipient",
+        "word_2": "Empfänger"
+    },
+    {
+        "word_1": "apology",
+        "word_2": "Entschuldigung"
+    },
+    {
+        "word_1": "apology letter",
+        "word_2": "Entschuldigungsschreiben"
+    },
+    {
+        "word_1": "pea",
+        "word_2": "Erbse"
+    },
+    {
+        "word_1": "strawberry",
+        "word_2": "Erdbeere"
+    },
+    {
+        "word_1": "ground floor",
+        "word_2": "Erdgeschoss"
+    },
+    {
+        "word_1": "cold",
+        "word_2": "Erkältung"
+    },
+    {
+        "word_1": "adult",
+        "word_2": "Erwachsene"
+    },
+    {
+        "word_1": "euro",
+        "word_2": "Euro"
+    },
+    {
+        "word_1": "driver",
+        "word_2": "Fahrer"
+    },
+    {
+        "word_1": "passenger",
+        "word_2": "Fahrgast"
+    },
+    {
+        "word_1": "ticket",
+        "word_2": "Fahrkarte"
+    },
+    {
+        "word_1": "bicycle",
+        "word_2": "Fahrrad"
+    },
+    {
+        "word_1": "family",
+        "word_2": "Familie"
+    },
+    {
+        "word_1": "family photo",
+        "word_2": "Familienfoto"
+    },
+    {
+        "word_1": "family name",
+        "word_2": "Familienname"
+    },
+    {
+        "word_1": "marital status",
+        "word_2": "Familienstand"
+    },
+    {
+        "word_1": "color",
+        "word_2": "Farbe"
+    },
+    {
+        "word_1": "February",
+        "word_2": "Februar"
+    },
+    {
+        "word_1": "celebration",
+        "word_2": "Feier"
+    },
+    {
+        "word_1": "end of workday",
+        "word_2": "Feierabend"
+    },
+    {
+        "word_1": "holiday",
+        "word_2": "Feiertag"
+    },
+    {
+        "word_1": "window",
+        "word_2": "Fenster"
+    },
+    {
+        "word_1": "vacation house",
+        "word_2": "Ferienhaus"
+    },
+    {
+        "word_1": "television",
+        "word_2": "Fernseher"
+    },
+    {
+        "word_1": "festival",
+        "word_2": "Fest"
+    },
+    {
+        "word_1": "fever",
+        "word_2": "Fieber"
+    },
+    {
+        "word_1": "film",
+        "word_2": "Film"
+    },
+    {
+        "word_1": "finger",
+        "word_2": "Finger"
+    },
+    {
+        "word_1": "company",
+        "word_2": "Firma"
+    },
+    {
+        "word_1": "fish",
+        "word_2": "Fisch"
+    },
+    {
+        "word_1": "bottle",
+        "word_2": "Flasche"
+    },
+    {
+        "word_1": "meat",
+        "word_2": "Fleisch"
+    },
+    {
+        "word_1": "airport",
+        "word_2": "Flughafen"
+    },
+    {
+        "word_1": "hallway",
+        "word_2": "Flur"
+    },
+    {
+        "word_1": "form",
+        "word_2": "Form"
+    },
+    {
+        "word_1": "form",
+        "word_2": "Formular"
+    },
+    {
+        "word_1": "photo",
+        "word_2": "Foto"
+    },
+    {
+        "word_1": "question",
+        "word_2": "Frage"
+    },
+    {
+        "word_1": "woman",
+        "word_2": "Frau"
+    },
+    {
+        "word_1": "Friday",
+        "word_2": "Freitag"
+    },
+    {
+        "word_1": "friend",
+        "word_2": "Freund/in"
+    },
+    {
+        "word_1": "spring",
+        "word_2": "Frühling"
+    },
+    {
+        "word_1": "breakfast",
+        "word_2": "Frühstück"
+    },
+    {
+        "word_1": "football",
+        "word_2": "Fußball"
+    },
+    {
+        "word_1": "football player",
+        "word_2": "Fußballspieler"
+    },
+    {
+        "word_1": "driver's license",
+        "word_2": "Führerschein"
+    },
+    {
+        "word_1": "garage",
+        "word_2": "Garage"
+    },
+    {
+        "word_1": "garden",
+        "word_2": "Garten"
+    },
+    {
+        "word_1": "garden party",
+        "word_2": "Gartenparty"
+    },
+    {
+        "word_1": "guest",
+        "word_2": "Gast"
+    },
+    {
+        "word_1": "birthday",
+        "word_2": "Geburtstag"
+    },
+    {
+        "word_1": "birthday cake",
+        "word_2": "Geburtstagstorte"
+    },
+    {
+        "word_1": "building",
+        "word_2": "Gebäude"
+    },
+    {
+        "word_1": "money",
+        "word_2": "Geld"
+    },
+    {
+        "word_1": "vegetables",
+        "word_2": "Gemüse"
+    },
+    {
+        "word_1": "device",
+        "word_2": "Gerät"
+    },
+    {
+        "word_1": "gift",
+        "word_2": "Geschenk"
+    },
+    {
+        "word_1": "siblings",
+        "word_2": "Geschwister"
+    },
+    {
+        "word_1": "shop",
+        "word_2": "Geschäft"
+    },
+    {
+        "word_1": "face",
+        "word_2": "Gesicht"
+    },
+    {
+        "word_1": "conversation",
+        "word_2": "Gespräch"
+    },
+    {
+        "word_1": "health",
+        "word_2": "Gesundheit"
+    },
+    {
+        "word_1": "health card",
+        "word_2": "Gesundheitskarte"
+    },
+    {
+        "word_1": "drink",
+        "word_2": "Getränk"
+    },
+    {
+        "word_1": "guitar",
+        "word_2": "Gitarre"
+    },
+    {
+        "word_1": "glass",
+        "word_2": "Glas"
+    },
+    {
+        "word_1": "track",
+        "word_2": "Gleis"
+    },
+    {
+        "word_1": "lucky day",
+        "word_2": "Glückstag"
+    },
+    {
+        "word_1": "degree",
+        "word_2": "Grad"
+    },
+    {
+        "word_1": "gram",
+        "word_2": "Gramm"
+    },
+    {
+        "word_1": "grammar",
+        "word_2": "Grammatik"
+    },
+    {
+        "word_1": "flu",
+        "word_2": "Grippe"
+    },
+    {
+        "word_1": "group",
+        "word_2": "Gruppe"
+    },
+    {
+        "word_1": "greeting",
+        "word_2": "Gruß"
+    },
+    {
+        "word_1": "size",
+        "word_2": "Größe"
+    },
+    {
+        "word_1": "hair",
+        "word_2": "Haar"
+    },
+    {
+        "word_1": "throat",
+        "word_2": "Hals"
+    },
+    {
+        "word_1": "sore throat",
+        "word_2": "Halsweh"
+    },
+    {
+        "word_1": "stop",
+        "word_2": "Haltestelle"
+    },
+    {
+        "word_1": "hand",
+        "word_2": "Hand"
+    },
+    {
+        "word_1": "glove",
+        "word_2": "Handschuh"
+    },
+    {
+        "word_1": "mobile number",
+        "word_2": "Handynummer"
+    },
+    {
+        "word_1": "rabbit",
+        "word_2": "Hase"
+    },
+    {
+        "word_1": "main station",
+        "word_2": "Hauptbahnhof"
+    },
+    {
+        "word_1": "main thing",
+        "word_2": "Hauptsache"
+    },
+    {
+        "word_1": "house",
+        "word_2": "Haus"
+    },
+    {
+        "word_1": "family doctor",
+        "word_2": "Hausarzt"
+    },
+    {
+        "word_1": "homework",
+        "word_2": "Hausaufgabe"
+    },
+    {
+        "word_1": "hallway",
+        "word_2": "Hausflur"
+    },
+    {
+        "word_1": "househusband/housewife",
+        "word_2": "Hausmann/Hausfrau"
+    },
+    {
+        "word_1": "house number",
+        "word_2": "Hausnummer"
+    },
+    {
+        "word_1": "pet",
+        "word_2": "Haustier"
+    },
+    {
+        "word_1": "notebook",
+        "word_2": "Heft"
+    },
+    {
+        "word_1": "homeland",
+        "word_2": "Heimatland"
+    },
+    {
+        "word_1": "heating",
+        "word_2": "Heizung"
+    },
+    {
+        "word_1": "shirt",
+        "word_2": "Hemd"
+    },
+    {
+        "word_1": "autumn",
+        "word_2": "Herbst"
+    },
+    {
+        "word_1": "stove",
+        "word_2": "Herd"
+    },
+    {
+        "word_1": "mister",
+        "word_2": "Herr"
+    },
+    {
+        "word_1": "help",
+        "word_2": "Hilfe"
+    },
+    {
+        "word_1": "raspberry",
+        "word_2": "Himbeere"
+    },
+    {
+        "word_1": "direction",
+        "word_2": "Himmelsrichtung"
+    },
+    {
+        "word_1": "hobby",
+        "word_2": "Hobby"
+    },
+    {
+        "word_1": "wedding",
+        "word_2": "Hochzeit"
+    },
+    {
+        "word_1": "wedding party",
+        "word_2": "Hochzeitsfeier"
+    },
+    {
+        "word_1": "honey",
+        "word_2": "Honig"
+    },
+    {
+        "word_1": "pants",
+        "word_2": "Hose"
+    },
+    {
+        "word_1": "hotel",
+        "word_2": "Hotel"
+    },
+    {
+        "word_1": "dog",
+        "word_2": "Hund"
+    },
+    {
+        "word_1": "hunger",
+        "word_2": "Hunger"
+    },
+    {
+        "word_1": "cough",
+        "word_2": "Husten"
+    },
+    {
+        "word_1": "cough syrup",
+        "word_2": "Hustensaft"
+    },
+    {
+        "word_1": "idea",
+        "word_2": "Idee"
+    },
+    {
+        "word_1": "you (formal)",
+        "word_2": "Ihnen"
+    },
+    {
+        "word_1": "your",
+        "word_2": "Ihr/Ihre"
+    },
+    {
+        "word_1": "real estate",
+        "word_2": "Immobilie"
+    },
+    {
+        "word_1": "information",
+        "word_2": "Information"
+    },
+    {
+        "word_1": "information desk",
+        "word_2": "Informationsschalter"
+    },
+    {
+        "word_1": "engineer",
+        "word_2": "Ingenieur"
+    },
+    {
+        "word_1": "island",
+        "word_2": "Insel"
+    },
+    {
+        "word_1": "island tour",
+        "word_2": "Inselrundfahrt"
+    },
+    {
+        "word_1": "intercity train",
+        "word_2": "Intercity"
+    },
+    {
+        "word_1": "interview",
+        "word_2": "Interview"
+    },
+    {
+        "word_1": "jacket",
+        "word_2": "Jacke"
+    },
+    {
+        "word_1": "year",
+        "word_2": "Jahr"
+    },
+    {
+        "word_1": "year",
+        "word_2": "Jahreszahl"
+    },
+    {
+        "word_1": "season",
+        "word_2": "Jahreszeit"
+    },
+    {
+        "word_1": "January",
+        "word_2": "Januar"
+    },
+    {
+        "word_1": "jeans",
+        "word_2": "Jeans"
+    },
+    {
+        "word_1": "job center",
+        "word_2": "Jobcenter"
+    },
+    {
+        "word_1": "jogging suit",
+        "word_2": "Jogginganzug"
+    },
+    {
+        "word_1": "yogurt",
+        "word_2": "Joghurt"
+    },
+    {
+        "word_1": "July",
+        "word_2": "Juli"
+    },
+    {
+        "word_1": "June",
+        "word_2": "Juni"
+    },
+    {
+        "word_1": "coffee",
+        "word_2": "Kaffee"
+    },
+    {
+        "word_1": "coffee machine",
+        "word_2": "Kaffeemaschine"
+    },
+    {
+        "word_1": "calendar",
+        "word_2": "Kalender"
+    },
+    {
+        "word_1": "canteen",
+        "word_2": "Kantine"
+    },
+    {
+        "word_1": "map",
+        "word_2": "Karte"
+    },
+    {
+        "word_1": "potato",
+        "word_2": "Kartoffel"
+    },
+    {
+        "word_1": "cash register",
+        "word_2": "Kasse"
+    },
+    {
+        "word_1": "receipt",
+        "word_2": "Kassenbon"
+    },
+    {
+        "word_1": "cashier",
+        "word_2": "Kassierer/in"
+    },
+    {
+        "word_1": "saleswoman",
+        "word_2": "Kauffrau"
+    },
+    {
+        "word_1": "department store",
+        "word_2": "Kaufhaus"
+    },
+    {
+        "word_1": "deposit",
+        "word_2": "Kaution"
+    },
+    {
+        "word_1": "cookie",
+        "word_2": "Keks"
+    },
+    {
+        "word_1": "cellar",
+        "word_2": "Keller"
+    },
+    {
+        "word_1": "waiter",
+        "word_2": "Kellner/in"
+    },
+    {
+        "word_1": "chickpea",
+        "word_2": "Kichererbse"
+    },
+    {
+        "word_1": "kilogram",
+        "word_2": "Kilo"
+    },
+    {
+        "word_1": "child",
+        "word_2": "Kind"
+    },
+    {
+        "word_1": "kindergarten",
+        "word_2": "Kindergarten"
+    },
+    {
+        "word_1": "children's room",
+        "word_2": "Kinderzimmer"
+    },
+    {
+        "word_1": "cinema",
+        "word_2": "Kino"
+    },
+    {
+        "word_1": "church",
+        "word_2": "Kirche"
+    },
+    {
+        "word_1": "cherry",
+        "word_2": "Kirsche"
+    },
+    {
+        "word_1": "kiwi",
+        "word_2": "Kiwi"
+    },
+    {
+        "word_1": "clothes",
+        "word_2": "Klamotten"
+    },
+    {
+        "word_1": "dress",
+        "word_2": "Kleid"
+    },
+    {
+        "word_1": "wardrobe",
+        "word_2": "Kleiderschrank"
+    },
+    {
+        "word_1": "clothing",
+        "word_2": "Kleidung"
+    },
+    {
+        "word_1": "clothes",
+        "word_2": "Kleidungsstücke"
+    },
+    {
+        "word_1": "knee",
+        "word_2": "Knie"
+    },
+    {
+        "word_1": "cook",
+        "word_2": "Koch/Köchin"
+    },
+    {
+        "word_1": "suitcase",
+        "word_2": "Koffer"
+    },
+    {
+        "word_1": "colleague",
+        "word_2": "Kollege/Kollegin"
+    },
+    {
+        "word_1": "contact",
+        "word_2": "Kontakt"
+    },
+    {
+        "word_1": "control",
+        "word_2": "Kontrolle"
+    },
+    {
+        "word_1": "concert",
+        "word_2": "Konzert"
+    },
+    {
+        "word_1": "head",
+        "word_2": "Kopf"
+    },
+    {
+        "word_1": "headache",
+        "word_2": "Kopfschmerzen"
+    },
+    {
+        "word_1": "vehicle",
+        "word_2": "Kraftfahrzeug (KFZ)"
+    },
+    {
+        "word_1": "hospital",
+        "word_2": "Krankenhaus"
+    },
+    {
+        "word_1": "health insurance",
+        "word_2": "Krankenkasse"
+    },
+    {
+        "word_1": "nurse",
+        "word_2": "Krankenpfleger/Krankenschwester"
+    },
+    {
+        "word_1": "illness",
+        "word_2": "Krankheit"
+    },
+    {
+        "word_1": "sick note",
+        "word_2": "Krankmeldung"
+    },
+    {
+        "word_1": "intersection",
+        "word_2": "Kreuzung"
+    },
+    {
+        "word_1": "cake",
+        "word_2": "Kuchen"
+    },
+    {
+        "word_1": "pen",
+        "word_2": "Kugelschreiber (Kuli)"
+    },
+    {
+        "word_1": "customer",
+        "word_2": "Kunde/Kundin"
+    },
+    {
+        "word_1": "course",
+        "word_2": "Kurs"
+    },
+    {
+        "word_1": "course book",
+        "word_2": "Kursbuch"
+    },
+    {
+        "word_1": "classroom",
+        "word_2": "Kursraum"
+    },
+    {
+        "word_1": "course participant",
+        "word_2": "Kursteilnehmer/in"
+    },
+    {
+        "word_1": "short distance",
+        "word_2": "Kurzstrecke"
+    },
+    {
+        "word_1": "cheese",
+        "word_2": "Käse"
+    },
+    {
+        "word_1": "body",
+        "word_2": "Körper"
+    },
+    {
+        "word_1": "body part",
+        "word_2": "Körperteil"
+    },
+    {
+        "word_1": "kitchen",
+        "word_2": "Küche"
+    },
+    {
+        "word_1": "refrigerator",
+        "word_2": "Kühlschrank"
+    },
+    {
+        "word_1": "lamb",
+        "word_2": "Lammfleisch"
+    },
+    {
+        "word_1": "lamp",
+        "word_2": "Lampe"
+    },
+    {
+        "word_1": "country",
+        "word_2": "Land"
+    },
+    {
+        "word_1": "map",
+        "word_2": "Landkarte"
+    },
+    {
+        "word_1": "groceries",
+        "word_2": "Lebensmittel"
+    },
+    {
+        "word_1": "teacher",
+        "word_2": "Lehrer/in"
+    },
+    {
+        "word_1": "people",
+        "word_2": "Leute"
+    },
+    {
+        "word_1": "lemonade",
+        "word_2": "Limonade (Limo)"
+    },
+    {
+        "word_1": "line",
+        "word_2": "Linie"
+    },
+    {
+        "word_1": "list",
+        "word_2": "Liste"
+    },
+    {
+        "word_1": "liter",
+        "word_2": "Liter"
+    },
+    {
+        "word_1": "balloon",
+        "word_2": "Luftballon"
+    },
+    {
+        "word_1": "solution",
+        "word_2": "Lösung"
+    },
+    {
+        "word_1": "May",
+        "word_2": "Mai"
+    },
+    {
+        "word_1": "mom",
+        "word_2": "Mama"
+    },
+    {
+        "word_1": "mandarin",
+        "word_2": "Mandarine"
+    },
+    {
+        "word_1": "mango",
+        "word_2": "Mango"
+    },
+    {
+        "word_1": "man",
+        "word_2": "Mann"
+    },
+    {
+        "word_1": "coat",
+        "word_2": "Mantel"
+    },
+    {
+        "word_1": "market",
+        "word_2": "Markt"
+    },
+    {
+        "word_1": "jam",
+        "word_2": "Marmelade"
+    },
+    {
+        "word_1": "mathematics",
+        "word_2": "Mathematik"
+    },
+    {
+        "word_1": "medicine",
+        "word_2": "Medikament"
+    },
+    {
+        "word_1": "sea",
+        "word_2": "Meer"
+    },
+    {
+        "word_1": "flour",
+        "word_2": "Mehl"
+    },
+    {
+        "word_1": "melon",
+        "word_2": "Melone"
+    },
+    {
+        "word_1": "quantity",
+        "word_2": "Mengenangabe"
+    },
+    {
+        "word_1": "person",
+        "word_2": "Mensch"
+    },
+    {
+        "word_1": "meter",
+        "word_2": "Meter"
+    },
+    {
+        "word_1": "butcher",
+        "word_2": "Metzger"
+    },
+    {
+        "word_1": "rent",
+        "word_2": "Miete"
+    },
+    {
+        "word_1": "milk",
+        "word_2": "Milch"
+    },
+    {
+        "word_1": "dairy product",
+        "word_2": "Milchprodukt"
+    },
+    {
+        "word_1": "minute",
+        "word_2": "Minute"
+    },
+    {
+        "word_1": "lunch",
+        "word_2": "Mittag"
+    },
+    {
+        "word_1": "lunch",
+        "word_2": "Mittagessen"
+    },
+    {
+        "word_1": "lunch break",
+        "word_2": "Mittagspause"
+    },
+    {
+        "word_1": "Wednesday",
+        "word_2": "Mittwoch"
+    },
+    {
+        "word_1": "mobility",
+        "word_2": "Mobilität"
+    },
+    {
+        "word_1": "fashion",
+        "word_2": "Mode"
+    },
+    {
+        "word_1": "model",
+        "word_2": "Modell"
+    },
+    {
+        "word_1": "moment",
+        "word_2": "Moment"
+    },
+    {
+        "word_1": "month",
+        "word_2": "Monat"
+    },
+    {
+        "word_1": "monthly rent",
+        "word_2": "Monatsmiete"
+    },
+    {
+        "word_1": "moon",
+        "word_2": "Mond"
+    },
+    {
+        "word_1": "Monday",
+        "word_2": "Montag"
+    },
+    {
+        "word_1": "morning",
+        "word_2": "Morgen"
+    },
+    {
+        "word_1": "motorcycle",
+        "word_2": "Motorrad"
+    },
+    {
+        "word_1": "mouth",
+        "word_2": "Mund"
+    },
+    {
+        "word_1": "music",
+        "word_2": "Musik"
+    },
+    {
+        "word_1": "music teacher",
+        "word_2": "Musiklehrer/in"
+    },
+    {
+        "word_1": "mother",
+        "word_2": "Mutter"
+    },
+    {
+        "word_1": "March",
+        "word_2": "März"
+    },
+    {
+        "word_1": "furniture",
+        "word_2": "Möbel"
+    },
+    {
+        "word_1": "carrot",
+        "word_2": "Möhre"
+    },
+    {
+        "word_1": "garbage",
+        "word_2": "Müll"
+    },
+    {
+        "word_1": "cap",
+        "word_2": "Mütze"
+    },
+    {
+        "word_1": "neighbor",
+        "word_2": "Nachbar/in"
+    },
+    {
+        "word_1": "afternoon",
+        "word_2": "Nachmittag"
+    },
+    {
+        "word_1": "surname",
+        "word_2": "Nachname"
+    },
+    {
+        "word_1": "night",
+        "word_2": "Nacht"
+    },
+    {
+        "word_1": "night shift",
+        "word_2": "Nachtdienst"
+    },
+    {
+        "word_1": "neck",
+        "word_2": "Nacken"
+    },
+    {
+        "word_1": "name",
+        "word_2": "Name"
+    },
+    {
+        "word_1": "nose",
+        "word_2": "Nase"
+    },
+    {
+        "word_1": "nature",
+        "word_2": "Natur"
+    },
+    {
+        "word_1": "additional costs",
+        "word_2": "Nebenkosten"
+    },
+    {
+        "word_1": "north",
+        "word_2": "Norden"
+    },
+    {
+        "word_1": "emergency appointment",
+        "word_2": "Notfallsprechstunde"
+    },
+    {
+        "word_1": "note",
+        "word_2": "Notizzettel"
+    },
+    {
+        "word_1": "November",
+        "word_2": "November"
+    },
+    {
+        "word_1": "noodle",
+        "word_2": "Nudel"
+    },
+    {
+        "word_1": "upper floor",
+        "word_2": "Obergeschoss"
+    },
+    {
+        "word_1": "fruit",
+        "word_2": "Obst"
+    },
+    {
+        "word_1": "fruit salad",
+        "word_2": "Obstsalat"
+    },
+    {
+        "word_1": "ear",
+        "word_2": "Ohr"
+    },
+    {
+        "word_1": "October",
+        "word_2": "Oktober"
+    },
+    {
+        "word_1": "Oktoberfest",
+        "word_2": "Oktoberfest"
+    },
+    {
+        "word_1": "olive oil",
+        "word_2": "Olivenöl"
+    },
+    {
+        "word_1": "grandmother",
+        "word_2": "Oma"
+    },
+    {
+        "word_1": "orange",
+        "word_2": "Orange"
+    },
+    {
+        "word_1": "order",
+        "word_2": "Ordnung"
+    },
+    {
+        "word_1": "orientation",
+        "word_2": "Orientierung"
+    },
+    {
+        "word_1": "place",
+        "word_2": "Ort"
+    },
+    {
+        "word_1": "orthopedist",
+        "word_2": "Orthopäde"
+    },
+    {
+        "word_1": "east",
+        "word_2": "Osten"
+    },
+    {
+        "word_1": "Easter egg",
+        "word_2": "Osterei"
+    },
+    {
+        "word_1": "Easter festival",
+        "word_2": "Osterfest"
+    },
+    {
+        "word_1": "Easter bunny",
+        "word_2": "Osterhase"
+    },
+    {
+        "word_1": "Easter",
+        "word_2": "Ostern"
+    },
+    {
+        "word_1": "pair",
+        "word_2": "Paar"
+    },
+    {
+        "word_1": "pack",
+        "word_2": "Packung"
+    },
+    {
+        "word_1": "dad",
+        "word_2": "Papa"
+    },
+    {
+        "word_1": "paper",
+        "word_2": "Papier"
+    },
+    {
+        "word_1": "wastepaper basket",
+        "word_2": "Papierkorb"
+    },
+    {
+        "word_1": "pepper",
+        "word_2": "Paprika"
+    },
+    {
+        "word_1": "park",
+        "word_2": "Park"
+    },
+    {
+        "word_1": "parking fee",
+        "word_2": "Parkgebühr"
+    },
+    {
+        "word_1": "parking space",
+        "word_2": "Parkplatz"
+    },
+    {
+        "word_1": "partner",
+        "word_2": "Partner/in"
+    },
+    {
+        "word_1": "patient",
+        "word_2": "Patient/in"
+    },
+    {
+        "word_1": "break",
+        "word_2": "Pause"
+    },
+    {
+        "word_1": "person",
+        "word_2": "Person"
+    },
+    {
+        "word_1": "plant",
+        "word_2": "Pflanze"
+    },
+    {
+        "word_1": "bandage",
+        "word_2": "Pflaster"
+    },
+    {
+        "word_1": "care",
+        "word_2": "Pflege"
+    },
+    {
+        "word_1": "pound",
+        "word_2": "Pfund"
+    },
+    {
+        "word_1": "mushroom",
+        "word_2": "Pilz"
+    },
+    {
+        "word_1": "pizza",
+        "word_2": "Pizza"
+    },
+    {
+        "word_1": "pizza delivery person",
+        "word_2": "Pizzafahrer"
+    },
+    {
+        "word_1": "pizzeria",
+        "word_2": "Pizzeria"
+    },
+    {
+        "word_1": "plan",
+        "word_2": "Plan"
+    },
+    {
+        "word_1": "place",
+        "word_2": "Platz"
+    },
+    {
+        "word_1": "police",
+        "word_2": "Polizei"
+    },
+    {
+        "word_1": "position",
+        "word_2": "Position"
+    },
+    {
+        "word_1": "post office",
+        "word_2": "Post"
+    },
+    {
+        "word_1": "postcard",
+        "word_2": "Postkarte"
+    },
+    {
+        "word_1": "postal code",
+        "word_2": "Postleitzahl"
+    },
+    {
+        "word_1": "internship",
+        "word_2": "Praktikum"
+    },
+    {
+        "word_1": "internship supervisor",
+        "word_2": "Praktikumsbetreuerin"
+    },
+    {
+        "word_1": "practice",
+        "word_2": "Praxis"
+    },
+    {
+        "word_1": "group practice",
+        "word_2": "Praxisgemeinschaft"
+    },
+    {
+        "word_1": "price",
+        "word_2": "Preis"
+    },
+    {
+        "word_1": "problem",
+        "word_2": "Problem"
+    },
+    {
+        "word_1": "projector",
+        "word_2": "Projektor"
+    },
+    {
+        "word_1": "brochure",
+        "word_2": "Prospekt"
+    },
+    {
+        "word_1": "pudding",
+        "word_2": "Pudding"
+    },
+    {
+        "word_1": "sweater",
+        "word_2": "Pullover"
+    },
+    {
+        "word_1": "square meter",
+        "word_2": "Quadratmeter"
+    },
+    {
+        "word_1": "to ride a bike",
+        "word_2": "Rad fahren"
+    },
+    {
+        "word_1": "eraser",
+        "word_2": "Radiergummi"
+    },
+    {
+        "word_1": "radio",
+        "word_2": "Radio"
+    },
+    {
+        "word_1": "town hall",
+        "word_2": "Rathaus"
+    },
+    {
+        "word_1": "room",
+        "word_2": "Raum"
+    },
+    {
+        "word_1": "shelf",
+        "word_2": "Regal"
+    },
+    {
+        "word_1": "regional train",
+        "word_2": "Regionalbahn"
+    },
+    {
+        "word_1": "terraced house",
+        "word_2": "Reihenhaus"
+    },
+    {
+        "word_1": "rice",
+        "word_2": "Reis"
+    },
+    {
+        "word_1": "trip",
+        "word_2": "Reise"
+    },
+    {
+        "word_1": "pensioner",
+        "word_2": "Rentner/in"
+    },
+    {
+        "word_1": "repair",
+        "word_2": "Reparatur"
+    },
+    {
+        "word_1": "reporter",
+        "word_2": "Reporter"
+    },
+    {
+        "word_1": "restaurant",
+        "word_2": "Restaurant"
+    },
+    {
+        "word_1": "recipe",
+        "word_2": "Rezept"
+    },
+    {
+        "word_1": "beef",
+        "word_2": "Rindfleisch"
+    },
+    {
+        "word_1": "skirt",
+        "word_2": "Rock"
+    },
+    {
+        "word_1": "novel",
+        "word_2": "Roman"
+    },
+    {
+        "word_1": "backpack",
+        "word_2": "Rucksack"
+    },
+    {
+        "word_1": "quiet",
+        "word_2": "Ruhe"
+    },
+    {
+        "word_1": "back",
+        "word_2": "Rücken"
+    },
+    {
+        "word_1": "thing",
+        "word_2": "Sache"
+    },
+    {
+        "word_1": "juice",
+        "word_2": "Saft"
+    },
+    {
+        "word_1": "cream",
+        "word_2": "Sahne"
+    },
+    {
+        "word_1": "salad",
+        "word_2": "Salat"
+    },
+    {
+        "word_1": "ointment",
+        "word_2": "Salbe"
+    },
+    {
+        "word_1": "salt",
+        "word_2": "Salz"
+    },
+    {
+        "word_1": "Saturday",
+        "word_2": "Samstag"
+    },
+    {
+        "word_1": "sentence",
+        "word_2": "Satz"
+    },
+    {
+        "word_1": "scarf",
+        "word_2": "Schal"
+    },
+    {
+        "word_1": "treasure",
+        "word_2": "Schatz"
+    },
+    {
+        "word_1": "replacement bus service",
+        "word_2": "Schienenersatzverkehr"
+    },
+    {
+        "word_1": "ship",
+        "word_2": "Schiff"
+    },
+    {
+        "word_1": "bedroom",
+        "word_2": "Schlafzimmer"
+    },
+    {
+        "word_1": "end",
+        "word_2": "Schluss"
+    },
+    {
+        "word_1": "key",
+        "word_2": "Schlüssel"
+    },
+    {
+        "word_1": "pain",
+        "word_2": "Schmerz"
+    },
+    {
+        "word_1": "snow",
+        "word_2": "Schnee"
+    },
+    {
+        "word_1": "snowman",
+        "word_2": "Schneemann"
+    },
+    {
+        "word_1": "runny nose",
+        "word_2": "Schnupfen"
+    },
+    {
+        "word_1": "chocolate",
+        "word_2": "Schokolade"
+    },
+    {
+        "word_1": "chocolate cake",
+        "word_2": "Schokoladenkuchen"
+    },
+    {
+        "word_1": "cabinet",
+        "word_2": "Schrank"
+    },
+    {
+        "word_1": "shoe",
+        "word_2": "Schuh"
+    },
+    {
+        "word_1": "school",
+        "word_2": "Schule"
+    },
+    {
+        "word_1": "shoulder",
+        "word_2": "Schulter"
+    },
+    {
+        "word_1": "pork",
+        "word_2": "Schweinefleisch"
+    },
+    {
+        "word_1": "sister",
+        "word_2": "Schwester"
+    },
+    {
+        "word_1": "swimming pool",
+        "word_2": "Schwimmbad"
+    },
+    {
+        "word_1": "student",
+        "word_2": "Schüler/in"
+    },
+    {
+        "word_1": "seal",
+        "word_2": "Seehund"
+    },
+    {
+        "word_1": "page",
+        "word_2": "Seite"
+    },
+    {
+        "word_1": "sparkling wine",
+        "word_2": "Sekt"
+    },
+    {
+        "word_1": "September",
+        "word_2": "September"
+    },
+    {
+        "word_1": "armchair",
+        "word_2": "Sessel"
+    },
+    {
+        "word_1": "shirt",
+        "word_2": "Shirt"
+    },
+    {
+        "word_1": "she",
+        "word_2": "Sie"
+    },
+    {
+        "word_1": "ski",
+        "word_2": "Ski"
+    },
+    {
+        "word_1": "sock",
+        "word_2": "Socke"
+    },
+    {
+        "word_1": "sofa",
+        "word_2": "Sofa"
+    },
+    {
+        "word_1": "son",
+        "word_2": "Sohn"
+    },
+    {
+        "word_1": "summer",
+        "word_2": "Sommer"
+    },
+    {
+        "word_1": "special offer",
+        "word_2": "Sonderangebot"
+    },
+    {
+        "word_1": "sun",
+        "word_2": "Sonne"
+    },
+    {
+        "word_1": "Sunday",
+        "word_2": "Sonntag"
+    },
+    {
+        "word_1": "fun",
+        "word_2": "Spaß"
+    },
+    {
+        "word_1": "specialty",
+        "word_2": "Spezialität"
+    },
+    {
+        "word_1": "game",
+        "word_2": "Spiel"
+    },
+    {
+        "word_1": "sharpener",
+        "word_2": "Spitzer"
+    },
+    {
+        "word_1": "sport",
+        "word_2": "Sport"
+    },
+    {
+        "word_1": "sports shoe",
+        "word_2": "Sportschuh"
+    },
+    {
+        "word_1": "language",
+        "word_2": "Sprache"
+    },
+    {
+        "word_1": "language school",
+        "word_2": "Sprachschule"
+    },
+    {
+        "word_1": "office hours",
+        "word_2": "Sprechstunde"
+    },
+    {
+        "word_1": "receptionist",
+        "word_2": "Sprechstundenhilfe"
+    },
+    {
+        "word_1": "consulting room",
+        "word_2": "Sprechzimmer"
+    },
+    {
+        "word_1": "dishwasher",
+        "word_2": "Spülmaschine"
+    },
+    {
+        "word_1": "city",
+        "word_2": "Stadt"
+    },
+    {
+        "word_1": "city map",
+        "word_2": "Stadtplan"
+    },
+    {
+        "word_1": "city forest",
+        "word_2": "Stadtwald"
+    },
+    {
+        "word_1": "registry office",
+        "word_2": "Standesamt"
+    },
+    {
+        "word_1": "forehead",
+        "word_2": "Stirn"
+    },
+    {
+        "word_1": "beach",
+        "word_2": "Strand"
+    },
+    {
+        "word_1": "street",
+        "word_2": "Straße"
+    },
+    {
+        "word_1": "tram",
+        "word_2": "Straßenbahn"
+    },
+    {
+        "word_1": "stress",
+        "word_2": "Stress"
+    },
+    {
+        "word_1": "cardigan",
+        "word_2": "Strickjacke"
+    },
+    {
+        "word_1": "stocking",
+        "word_2": "Strumpf"
+    },
+    {
+        "word_1": "student",
+        "word_2": "Student/in"
+    },
+    {
+        "word_1": "studies",
+        "word_2": "Studium"
+    },
+    {
+        "word_1": "chair",
+        "word_2": "Stuhl"
+    },
+    {
+        "word_1": "hour",
+        "word_2": "Stunde"
+    },
+    {
+        "word_1": "timetable",
+        "word_2": "Stundenplan"
+    },
+    {
+        "word_1": "piece",
+        "word_2": "Stück"
+    },
+    {
+        "word_1": "supermarket",
+        "word_2": "Supermarkt"
+    },
+    {
+        "word_1": "soup",
+        "word_2": "Suppe"
+    },
+    {
+        "word_1": "south",
+        "word_2": "Süden"
+    },
+    {
+        "word_1": "table",
+        "word_2": "Tabelle"
+    },
+    {
+        "word_1": "tablet",
+        "word_2": "Tablette"
+    },
+    {
+        "word_1": "board",
+        "word_2": "Tafel"
+    },
+    {
+        "word_1": "day",
+        "word_2": "Tag"
+    },
+    {
+        "word_1": "day ticket",
+        "word_2": "Tageskarte"
+    },
+    {
+        "word_1": "bag",
+        "word_2": "Tasche"
+    },
+    {
+        "word_1": "cup",
+        "word_2": "Tasse"
+    },
+    {
+        "word_1": "taxi",
+        "word_2": "Taxi"
+    },
+    {
+        "word_1": "taxi driver",
+        "word_2": "Taxifahrer/in"
+    },
+    {
+        "word_1": "technician",
+        "word_2": "Techniker/in"
+    },
+    {
+        "word_1": "tea",
+        "word_2": "Tee"
+    },
+    {
+        "word_1": "phone",
+        "word_2": "Telefon"
+    },
+    {
+        "word_1": "phone number",
+        "word_2": "Telefonnummer"
+    },
+    {
+        "word_1": "plate",
+        "word_2": "Teller"
+    },
+    {
+        "word_1": "tennis",
+        "word_2": "Tennis"
+    },
+    {
+        "word_1": "carpet",
+        "word_2": "Teppich"
+    },
+    {
+        "word_1": "appointment",
+        "word_2": "Termin"
+    },
+    {
+        "word_1": "terrace",
+        "word_2": "Terrasse"
+    },
+    {
+        "word_1": "text",
+        "word_2": "Text"
+    },
+    {
+        "word_1": "tip",
+        "word_2": "Tipp"
+    },
+    {
+        "word_1": "table",
+        "word_2": "Tisch"
+    },
+    {
+        "word_1": "daughter",
+        "word_2": "Tochter"
+    },
+    {
+        "word_1": "toilet",
+        "word_2": "Toilette"
+    },
+    {
+        "word_1": "tomato",
+        "word_2": "Tomate"
+    },
+    {
+        "word_1": "cake",
+        "word_2": "Torte"
+    },
+    {
+        "word_1": "tourist",
+        "word_2": "Tourist"
+    },
+    {
+        "word_1": "grape",
+        "word_2": "Traube"
+    },
+    {
+        "word_1": "dream job",
+        "word_2": "Traumberuf"
+    },
+    {
+        "word_1": "dream apartment",
+        "word_2": "Traumwohnung"
+    },
+    {
+        "word_1": "drops",
+        "word_2": "Tropfen"
+    },
+    {
+        "word_1": "door",
+        "word_2": "Tür"
+    },
+    {
+        "word_1": "clock",
+        "word_2": "Uhr"
+    },
+    {
+        "word_1": "time",
+        "word_2": "Uhrzeit"
+    },
+    {
+        "word_1": "unlucky day",
+        "word_2": "Unglückstag"
+    },
+    {
+        "word_1": "university",
+        "word_2": "Universität"
+    },
+    {
+        "word_1": "lesson",
+        "word_2": "Unterricht"
+    },
+    {
+        "word_1": "signature",
+        "word_2": "Unterschrift"
+    },
+    {
+        "word_1": "examination",
+        "word_2": "Untersuchung"
+    },
+    {
+        "word_1": "vacation",
+        "word_2": "Urlaub"
+    },
+    {
+        "word_1": "father",
+        "word_2": "Vater"
+    },
+    {
+        "word_1": "bandage",
+        "word_2": "Verband"
+    },
+    {
+        "word_1": "disposal",
+        "word_2": "Verfügung"
+    },
+    {
+        "word_1": "means of transport",
+        "word_2": "Verkehrsmittel"
+    },
+    {
+        "word_1": "salesperson",
+        "word_2": "Verkäufer/in"
+    },
+    {
+        "word_1": "quarter",
+        "word_2": "Viertel"
+    },
+    {
+        "word_1": "quarter to/after two",
+        "word_2": "Viertel vor/nach zwei"
+    },
+    {
+        "word_1": "adult education center",
+        "word_2": "Volkshochschule (VHS)"
+    },
+    {
+        "word_1": "morning",
+        "word_2": "Vormittag"
+    },
+    {
+        "word_1": "first name",
+        "word_2": "Vorname"
+    },
+    {
+        "word_1": "prevention",
+        "word_2": "Vorsorge"
+    },
+    {
+        "word_1": "toilet",
+        "word_2": "WC"
+    },
+    {
+        "word_1": "wall",
+        "word_2": "Wand"
+    },
+    {
+        "word_1": "waiting room",
+        "word_2": "Wartezimmer"
+    },
+    {
+        "word_1": "washing machine",
+        "word_2": "Waschmaschine"
+    },
+    {
+        "word_1": "water",
+        "word_2": "Wasser"
+    },
+    {
+        "word_1": "change",
+        "word_2": "Wechsel"
+    },
+    {
+        "word_1": "path",
+        "word_2": "Weg"
+    },
+    {
+        "word_1": "Christmas",
+        "word_2": "Weihnachten"
+    },
+    {
+        "word_1": "Christmas tree",
+        "word_2": "Weihnachtsbaum"
+    },
+    {
+        "word_1": "Christmas party",
+        "word_2": "Weihnachtsfeier"
+    },
+    {
+        "word_1": "Christmas present",
+        "word_2": "Weihnachtsgeschenk"
+    },
+    {
+        "word_1": "Santa Claus",
+        "word_2": "Weihnachtsmann"
+    },
+    {
+        "word_1": "wine",
+        "word_2": "Wein"
+    },
+    {
+        "word_1": "International Women's Day",
+        "word_2": "Weltfrauentag"
+    },
+    {
+        "word_1": "workshop",
+        "word_2": "Werkstatt"
+    },
+    {
+        "word_1": "West Germany",
+        "word_2": "Westdeutschland"
+    },
+    {
+        "word_1": "west",
+        "word_2": "Westen"
+    },
+    {
+        "word_1": "weather",
+        "word_2": "Wetter"
+    },
+    {
+        "word_1": "weather report",
+        "word_2": "Wetterbericht"
+    },
+    {
+        "word_1": "goodbye (on the phone)",
+        "word_2": "Wiederhören"
+    },
+    {
+        "word_1": "goodbye",
+        "word_2": "Wiedersehen"
+    },
+    {
+        "word_1": "winter",
+        "word_2": "Winter"
+    },
+    {
+        "word_1": "winter coat",
+        "word_2": "Wintermantel"
+    },
+    {
+        "word_1": "week",
+        "word_2": "Woche"
+    },
+    {
+        "word_1": "weekend",
+        "word_2": "Wochenende"
+    },
+    {
+        "word_1": "weekend market",
+        "word_2": "Wochenmarkt"
+    },
+    {
+        "word_1": "place of residence",
+        "word_2": "Wohnort"
+    },
+    {
+        "word_1": "apartment",
+        "word_2": "Wohnung"
+    },
+    {
+        "word_1": "apartment ad",
+        "word_2": "Wohnungsanzeige"
+    },
+    {
+        "word_1": "apartment search",
+        "word_2": "Wohnungssuche"
+    },
+    {
+        "word_1": "living room",
+        "word_2": "Wohnzimmer"
+    },
+    {
+        "word_1": "word",
+        "word_2": "Wort"
+    },
+    {
+        "word_1": "dictionary",
+        "word_2": "Wörterbuch"
+    },
+    {
+        "word_1": "number",
+        "word_2": "Zahl"
+    },
+    {
+        "word_1": "tooth",
+        "word_2": "Zahn"
+    },
+    {
+        "word_1": "toe",
+        "word_2": "Zeh"
+    },
+    {
+        "word_1": "time",
+        "word_2": "Zeit"
+    },
+    {
+        "word_1": "newspaper",
+        "word_2": "Zeitung"
+    },
+    {
+        "word_1": "center",
+        "word_2": "Zentrum"
+    },
+    {
+        "word_1": "note",
+        "word_2": "Zettel"
+    },
+    {
+        "word_1": "room",
+        "word_2": "Zimmer"
+    },
+    {
+        "word_1": "lemon",
+        "word_2": "Zitrone"
+    },
+    {
+        "word_1": "sugar",
+        "word_2": "Zucker"
+    },
+    {
+        "word_1": "train",
+        "word_2": "Zug"
+    },
+    {
+        "word_1": "from",
+        "word_2": "ab"
+    },
+    {
+        "word_1": "in the evening",
+        "word_2": "abends"
+    },
+    {
+        "word_1": "but",
+        "word_2": "aber"
+    },
+    {
+        "word_1": "to depart",
+        "word_2": "abfahren"
+    },
+    {
+        "word_1": "to fly off",
+        "word_2": "abfliegen"
+    },
+    {
+        "word_1": "to hand in",
+        "word_2": "abgeben"
+    },
+    {
+        "word_1": "to pick up",
+        "word_2": "abholen"
+    },
+    {
+        "word_1": "to cancel",
+        "word_2": "absagen"
+    },
+    {
+        "word_1": "eight",
+        "word_2": "acht"
+    },
+    {
+        "word_1": "eighteen",
+        "word_2": "achtzehn"
+    },
+    {
+        "word_1": "eighty",
+        "word_2": "achtzig"
+    },
+    {
+        "word_1": "Aachen",
+        "word_2": "ahlen"
+    },
+    {
+        "word_1": "alone",
+        "word_2": "allein"
+    },
+    {
+        "word_1": "everything",
+        "word_2": "alles"
+    },
+    {
+        "word_1": "as",
+        "word_2": "als"
+    },
+    {
+        "word_1": "so",
+        "word_2": "also"
+    },
+    {
+        "word_1": "old",
+        "word_2": "alt"
+    },
+    {
+        "word_1": "on the weekend",
+        "word_2": "am Wochenende"
+    },
+    {
+        "word_1": "at",
+        "word_2": "an"
+    },
+    {
+        "word_1": "to be on",
+        "word_2": "an sein"
+    },
+    {
+        "word_1": "attached",
+        "word_2": "anbei"
+    },
+    {
+        "word_1": "to offer",
+        "word_2": "anbieten"
+    },
+    {
+        "word_1": "other",
+        "word_2": "andere"
+    },
+    {
+        "word_1": "to start",
+        "word_2": "anfangen"
+    },
+    {
+        "word_1": "to click on",
+        "word_2": "anklicken"
+    },
+    {
+        "word_1": "to arrive",
+        "word_2": "ankommen"
+    },
+    {
+        "word_1": "to mark",
+        "word_2": "ankreuzen"
+    },
+    {
+        "word_1": "to turn on",
+        "word_2": "anmachen"
+    },
+    {
+        "word_1": "to register",
+        "word_2": "anmelden"
+    },
+    {
+        "word_1": "to call",
+        "word_2": "anrufen"
+    },
+    {
+        "word_1": "to answer",
+        "word_2": "antworten"
+    },
+    {
+        "word_1": "to put on",
+        "word_2": "anziehen"
+    },
+    {
+        "word_1": "to work",
+        "word_2": "arbeiten"
+    },
+    {
+        "word_1": "unemployed",
+        "word_2": "arbeitslos"
+    },
+    {
+        "word_1": "to breathe",
+        "word_2": "atmen"
+    },
+    {
+        "word_1": "also",
+        "word_2": "auch"
+    },
+    {
+        "word_1": "on",
+        "word_2": "auf"
+    },
+    {
+        "word_1": "to be open",
+        "word_2": "auf sein"
+    },
+    {
+        "word_1": "to stop",
+        "word_2": "aufhören"
+    },
+    {
+        "word_1": "to get upset",
+        "word_2": "aufregen"
+    },
+    {
+        "word_1": "to get up",
+        "word_2": "aufstehen"
+    },
+    {
+        "word_1": "to grow up",
+        "word_2": "aufwachsen"
+    },
+    {
+        "word_1": "from",
+        "word_2": "aus"
+    },
+    {
+        "word_1": "to be off",
+        "word_2": "aus sein"
+    },
+    {
+        "word_1": "to fill out",
+        "word_2": "ausfüllen"
+    },
+    {
+        "word_1": "foreign",
+        "word_2": "ausländisch"
+    },
+    {
+        "word_1": "to turn off",
+        "word_2": "ausmachen"
+    },
+    {
+        "word_1": "to look",
+        "word_2": "aussehen"
+    },
+    {
+        "word_1": "to get out",
+        "word_2": "aussteigen"
+    },
+    {
+        "word_1": "automatic",
+        "word_2": "automatisch"
+    },
+    {
+        "word_1": "besides",
+        "word_2": "außerdem"
+    },
+    {
+        "word_1": "unscheduled",
+        "word_2": "außerplanmäßig"
+    },
+    {
+        "word_1": "to bake",
+        "word_2": "backen"
+    },
+    {
+        "word_1": "to bathe",
+        "word_2": "baden"
+    },
+    {
+        "word_1": "soon",
+        "word_2": "bald"
+    },
+    {
+        "word_1": "cash",
+        "word_2": "bar"
+    },
+    {
+        "word_1": "to build",
+        "word_2": "bauen"
+    },
+    {
+        "word_1": "to answer",
+        "word_2": "beantworten"
+    },
+    {
+        "word_1": "to mean",
+        "word_2": "bedeuten"
+    },
+    {
+        "word_1": "to begin",
+        "word_2": "beginnen"
+    },
+    {
+        "word_1": "at",
+        "word_2": "bei"
+    },
+    {
+        "word_1": "both",
+        "word_2": "beide"
+    },
+    {
+        "word_1": "beige",
+        "word_2": "beige"
+    },
+    {
+        "word_1": "known",
+        "word_2": "bekannt"
+    },
+    {
+        "word_1": "to get",
+        "word_2": "bekommen"
+    },
+    {
+        "word_1": "to use",
+        "word_2": "benutzen"
+    },
+    {
+        "word_1": "comfortable",
+        "word_2": "bequem"
+    },
+    {
+        "word_1": "to report",
+        "word_2": "berichten"
+    },
+    {
+        "word_1": "professional",
+        "word_2": "beruflich"
+    },
+    {
+        "word_1": "occupied",
+        "word_2": "besetzt"
+    },
+    {
+        "word_1": "to visit",
+        "word_2": "besichtigen"
+    },
+    {
+        "word_1": "better",
+        "word_2": "besser"
+    },
+    {
+        "word_1": "to order",
+        "word_2": "bestellen"
+    },
+    {
+        "word_1": "best",
+        "word_2": "besten (am besten)"
+    },
+    {
+        "word_1": "certainly",
+        "word_2": "bestimmt"
+    },
+    {
+        "word_1": "to visit",
+        "word_2": "besuchen"
+    },
+    {
+        "word_1": "before",
+        "word_2": "bevor"
+    },
+    {
+        "word_1": "cloudy",
+        "word_2": "bewölkt"
+    },
+    {
+        "word_1": "to pay",
+        "word_2": "bezahlen"
+    },
+    {
+        "word_1": "to form",
+        "word_2": "bilden"
+    },
+    {
+        "word_1": "cheap",
+        "word_2": "billig"
+    },
+    {
+        "word_1": "until",
+        "word_2": "bis"
+    },
+    {
+        "word_1": "a bit",
+        "word_2": "bisschen"
+    },
+    {
+        "word_1": "please",
+        "word_2": "bitte"
+    },
+    {
+        "word_1": "to ask",
+        "word_2": "bitten"
+    },
+    {
+        "word_1": "bitter",
+        "word_2": "bitter"
+    },
+    {
+        "word_1": "blue",
+        "word_2": "blau"
+    },
+    {
+        "word_1": "to stay",
+        "word_2": "bleiben"
+    },
+    {
+        "word_1": "stupid",
+        "word_2": "blöd"
+    },
+    {
+        "word_1": "to need",
+        "word_2": "brauchen"
+    },
+    {
+        "word_1": "brown",
+        "word_2": "braun"
+    },
+    {
+        "word_1": "wide",
+        "word_2": "breit"
+    },
+    {
+        "word_1": "to bring",
+        "word_2": "bringen"
+    },
+    {
+        "word_1": "to spell",
+        "word_2": "buchstabieren"
+    },
+    {
+        "word_1": "angry",
+        "word_2": "böse"
+    },
+    {
+        "word_1": "about",
+        "word_2": "circa"
+    },
+    {
+        "word_1": "about",
+        "word_2": "circa/ca."
+    },
+    {
+        "word_1": "there",
+        "word_2": "da"
+    },
+    {
+        "word_1": "for that",
+        "word_2": "dafür"
+    },
+    {
+        "word_1": "after that",
+        "word_2": "danach"
+    },
+    {
+        "word_1": "next to",
+        "word_2": "daneben"
+    },
+    {
+        "word_1": "thanks",
+        "word_2": "danke"
+    },
+    {
+        "word_1": "to thank",
+        "word_2": "danken"
+    },
+    {
+        "word_1": "then",
+        "word_2": "dann"
+    },
+    {
+        "word_1": "about that",
+        "word_2": "darüber"
+    },
+    {
+        "word_1": "that",
+        "word_2": "das"
+    },
+    {
+        "word_1": "age",
+        "word_2": "das Alter"
+    },
+    {
+        "word_1": "offer",
+        "word_2": "das Angebot"
+    },
+    {
+        "word_1": "apartment",
+        "word_2": "das Apartment"
+    },
+    {
+        "word_1": "eye",
+        "word_2": "das Auge"
+    },
+    {
+        "word_1": "abroad",
+        "word_2": "das Ausland"
+    },
+    {
+        "word_1": "car",
+        "word_2": "das Auto"
+    },
+    {
+        "word_1": "baby",
+        "word_2": "das Baby"
+    },
+    {
+        "word_1": "bath",
+        "word_2": "das Bad"
+    },
+    {
+        "word_1": "leg",
+        "word_2": "das Bein"
+    },
+    {
+        "word_1": "example",
+        "word_2": "das Beispiel"
+    },
+    {
+        "word_1": "bed",
+        "word_2": "das Bett"
+    },
+    {
+        "word_1": "beer",
+        "word_2": "das Bier"
+    },
+    {
+        "word_1": "picture",
+        "word_2": "das Bild"
+    },
+    {
+        "word_1": "bread",
+        "word_2": "das Brot"
+    },
+    {
+        "word_1": "roll",
+        "word_2": "das Brötchen"
+    },
+    {
+        "word_1": "book",
+        "word_2": "das Buch"
+    },
+    {
+        "word_1": "café",
+        "word_2": "das Café"
+    },
+    {
+        "word_1": "date",
+        "word_2": "das Datum"
+    },
+    {
+        "word_1": "double room",
+        "word_2": "das Doppelzimmer"
+    },
+    {
+        "word_1": "village",
+        "word_2": "das Dorf"
+    },
+    {
+        "word_1": "egg",
+        "word_2": "das Ei"
+    },
+    {
+        "word_1": "single room",
+        "word_2": "das Einzelzimmer"
+    },
+    {
+        "word_1": "end",
+        "word_2": "das Ende"
+    },
+    {
+        "word_1": "result",
+        "word_2": "das Ergebnis"
+    },
+    {
+        "word_1": "food",
+        "word_2": "das Essen"
+    },
+    {
+        "word_1": "bicycle",
+        "word_2": "das Fahrrad"
+    },
+    {
+        "word_1": "fax",
+        "word_2": "das Fax"
+    },
+    {
+        "word_1": "fire",
+        "word_2": "das Feuer"
+    },
+    {
+        "word_1": "fever",
+        "word_2": "das Fieber"
+    },
+    {
+        "word_1": "meat",
+        "word_2": "das Fleisch"
+    },
+    {
+        "word_1": "airplane",
+        "word_2": "das Flugzeug"
+    },
+    {
+        "word_1": "form",
+        "word_2": "das Formular"
+    },
+    {
+        "word_1": "photo",
+        "word_2": "das Foto"
+    },
+    {
+        "word_1": "breakfast",
+        "word_2": "das Frühstück"
+    },
+    {
+        "word_1": "year of birth",
+        "word_2": "das Geburtsjahr"
+    },
+    {
+        "word_1": "money",
+        "word_2": "das Geld"
+    },
+    {
+        "word_1": "vegetable",
+        "word_2": "das Gemüse"
+    },
+    {
+        "word_1": "luggage",
+        "word_2": "das Gepäck"
+    },
+    {
+        "word_1": "gift",
+        "word_2": "das Geschenk"
+    },
+    {
+        "word_1": "shop",
+        "word_2": "das Geschäft"
+    },
+    {
+        "word_1": "conversation",
+        "word_2": "das Gespräch"
+    },
+    {
+        "word_1": "drink",
+        "word_2": "das Getränk"
+    },
+    {
+        "word_1": "weight",
+        "word_2": "das Gewicht"
+    },
+    {
+        "word_1": "glass",
+        "word_2": "das Glas"
+    },
+    {
+        "word_1": "track",
+        "word_2": "das Gleis"
+    },
+    {
+        "word_1": "luck",
+        "word_2": "das Glück"
+    },
+    {
+        "word_1": "hair",
+        "word_2": "das Haar"
+    },
+    {
+        "word_1": "cell phone",
+        "word_2": "das Handy"
+    },
+    {
+        "word_1": "house",
+        "word_2": "das Haus"
+    },
+    {
+        "word_1": "hobby",
+        "word_2": "das Hobby"
+    },
+    {
+        "word_1": "chicken",
+        "word_2": "das Hähnchen"
+    },
+    {
+        "word_1": "internet",
+        "word_2": "das Internet"
+    },
+    {
+        "word_1": "year",
+        "word_2": "das Jahr"
+    },
+    {
+        "word_1": "child",
+        "word_2": "das Kind"
+    },
+    {
+        "word_1": "cinema",
+        "word_2": "das Kino"
+    },
+    {
+        "word_1": "account",
+        "word_2": "das Konto"
+    },
+    {
+        "word_1": "country",
+        "word_2": "das Land"
+    },
+    {
+        "word_1": "life",
+        "word_2": "das Leben"
+    },
+    {
+        "word_1": "light",
+        "word_2": "das Licht"
+    },
+    {
+        "word_1": "song",
+        "word_2": "das Lied"
+    },
+    {
+        "word_1": "restaurant",
+        "word_2": "das Lokal"
+    },
+    {
+        "word_1": "sea",
+        "word_2": "das Meer"
+    },
+    {
+        "word_1": "girl",
+        "word_2": "das Mädchen"
+    },
+    {
+        "word_1": "fruit",
+        "word_2": "das Obst"
+    },
+    {
+        "word_1": "paper",
+        "word_2": "das Papier"
+    },
+    {
+        "word_1": "internship",
+        "word_2": "das Praktikum"
+    },
+    {
+        "word_1": "problem",
+        "word_2": "das Problem"
+    },
+    {
+        "word_1": "travel agency",
+        "word_2": "das Reisebüro"
+    },
+    {
+        "word_1": "restaurant",
+        "word_2": "das Restaurant"
+    },
+    {
+        "word_1": "salt",
+        "word_2": "das Salz"
+    },
+    {
+        "word_1": "sign",
+        "word_2": "das Schild"
+    },
+    {
+        "word_1": "swimming pool",
+        "word_2": "das Schwimmbad"
+    },
+    {
+        "word_1": "sofa",
+        "word_2": "das Sofa"
+    },
+    {
+        "word_1": "study",
+        "word_2": "das Studium"
+    },
+    {
+        "word_1": "taxi",
+        "word_2": "das Taxi"
+    },
+    {
+        "word_1": "phone",
+        "word_2": "das Telefon"
+    },
+    {
+        "word_1": "topic",
+        "word_2": "das Thema"
+    },
+    {
+        "word_1": "ticket",
+        "word_2": "das Ticket"
+    },
+    {
+        "word_1": "water",
+        "word_2": "das Wasser"
+    },
+    {
+        "word_1": "weather",
+        "word_2": "das Wetter"
+    },
+    {
+        "word_1": "goodbye",
+        "word_2": "das Wiederhören"
+    },
+    {
+        "word_1": "goodbye",
+        "word_2": "das Wiedersehen"
+    },
+    {
+        "word_1": "weekend",
+        "word_2": "das Wochenende"
+    },
+    {
+        "word_1": "word",
+        "word_2": "das Wort"
+    },
+    {
+        "word_1": "room",
+        "word_2": "das Zimmer"
+    },
+    {
+        "word_1": "oil",
+        "word_2": "das Öl"
+    },
+    {
+        "word_1": "first",
+        "word_2": "das/der/die erste"
+    },
+    {
+        "word_1": "to last",
+        "word_2": "dauern"
+    },
+    {
+        "word_1": "to it",
+        "word_2": "dazu"
+    },
+    {
+        "word_1": "your",
+        "word_2": "dein/deine"
+    },
+    {
+        "word_1": "to think",
+        "word_2": "denken"
+    },
+    {
+        "word_1": "because",
+        "word_2": "denn"
+    },
+    {
+        "word_1": "the",
+        "word_2": "der"
+    },
+    {
+        "word_1": "evening",
+        "word_2": "der Abend"
+    },
+    {
+        "word_1": "departure",
+        "word_2": "der Abflug"
+    },
+    {
+        "word_1": "sender",
+        "word_2": "der Absender"
+    },
+    {
+        "word_1": "beginning",
+        "word_2": "der Anfang"
+    },
+    {
+        "word_1": "call",
+        "word_2": "der Anruf"
+    },
+    {
+        "word_1": "answering machine",
+        "word_2": "der Anrufbeantworter"
+    },
+    {
+        "word_1": "connection",
+        "word_2": "der Anschluss"
+    },
+    {
+        "word_1": "apple",
+        "word_2": "der Apfel"
+    },
+    {
+        "word_1": "appetite",
+        "word_2": "der Appetit"
+    },
+    {
+        "word_1": "April",
+        "word_2": "der April"
+    },
+    {
+        "word_1": "workplace",
+        "word_2": "der Arbeitsplatz"
+    },
+    {
+        "word_1": "arm",
+        "word_2": "der Arm"
+    },
+    {
+        "word_1": "doctor",
+        "word_2": "der Arzt"
+    },
+    {
+        "word_1": "elevator",
+        "word_2": "der Aufzug"
+    },
+    {
+        "word_1": "August",
+        "word_2": "der August"
+    },
+    {
+        "word_1": "trip",
+        "word_2": "der Ausflug"
+    },
+    {
+        "word_1": "exit",
+        "word_2": "der Ausgang"
+    },
+    {
+        "word_1": "foreigner",
+        "word_2": "der Ausländer"
+    },
+    {
+        "word_1": "ID card",
+        "word_2": "der Ausweis"
+    },
+    {
+        "word_1": "machine",
+        "word_2": "der Automat"
+    },
+    {
+        "word_1": "train station",
+        "word_2": "der Bahnhof"
+    },
+    {
+        "word_1": "platform",
+        "word_2": "der Bahnsteig"
+    },
+    {
+        "word_1": "balcony",
+        "word_2": "der Balkon"
+    },
+    {
+        "word_1": "belly",
+        "word_2": "der Bauch"
+    },
+    {
+        "word_1": "tree",
+        "word_2": "der Baum"
+    },
+    {
+        "word_1": "official",
+        "word_2": "der Beamte"
+    },
+    {
+        "word_1": "profession",
+        "word_2": "der Beruf"
+    },
+    {
+        "word_1": "pencil",
+        "word_2": "der Bleistift"
+    },
+    {
+        "word_1": "view",
+        "word_2": "der Blick"
+    },
+    {
+        "word_1": "bow",
+        "word_2": "der Bogen"
+    },
+    {
+        "word_1": "letter",
+        "word_2": "der Brief"
+    },
+    {
+        "word_1": "brother",
+        "word_2": "der Bruder"
+    },
+    {
+        "word_1": "letter",
+        "word_2": "der Buchstabe"
+    },
+    {
+        "word_1": "bus",
+        "word_2": "der Bus"
+    },
+    {
+        "word_1": "boss",
+        "word_2": "der Chef"
+    },
+    {
+        "word_1": "computer",
+        "word_2": "der Computer"
+    },
+    {
+        "word_1": "thanks",
+        "word_2": "der Dank"
+    },
+    {
+        "word_1": "December",
+        "word_2": "der Dezember"
+    },
+    {
+        "word_1": "Tuesday",
+        "word_2": "der Dienstag"
+    },
+    {
+        "word_1": "doctor",
+        "word_2": "der Doktor"
+    },
+    {
+        "word_1": "Thursday",
+        "word_2": "der Donnerstag"
+    },
+    {
+        "word_1": "printer",
+        "word_2": "der Drucker"
+    },
+    {
+        "word_1": "thirst",
+        "word_2": "der Durst"
+    },
+    {
+        "word_1": "husband",
+        "word_2": "der Ehemann"
+    },
+    {
+        "word_1": "entrance",
+        "word_2": "der Eingang"
+    },
+    {
+        "word_1": "entry",
+        "word_2": "der Eintritt"
+    },
+    {
+        "word_1": "recipient",
+        "word_2": "der Empfänger"
+    },
+    {
+        "word_1": "adult",
+        "word_2": "der Erwachsene"
+    },
+    {
+        "word_1": "driver",
+        "word_2": "der Fahrer"
+    },
+    {
+        "word_1": "family name",
+        "word_2": "der Familienname"
+    },
+    {
+        "word_1": "marital status",
+        "word_2": "der Familienstand"
+    },
+    {
+        "word_1": "February",
+        "word_2": "der Februar"
+    },
+    {
+        "word_1": "mistake",
+        "word_2": "der Fehler"
+    },
+    {
+        "word_1": "film",
+        "word_2": "der Film"
+    },
+    {
+        "word_1": "fish",
+        "word_2": "der Fisch"
+    },
+    {
+        "word_1": "airport",
+        "word_2": "der Flughafen"
+    },
+    {
+        "word_1": "Friday",
+        "word_2": "der Freitag"
+    },
+    {
+        "word_1": "friend",
+        "word_2": "der Freund"
+    },
+    {
+        "word_1": "spring",
+        "word_2": "der Frühling"
+    },
+    {
+        "word_1": "foot",
+        "word_2": "der Fuß"
+    },
+    {
+        "word_1": "football",
+        "word_2": "der Fußball"
+    },
+    {
+        "word_1": "garden",
+        "word_2": "der Garten"
+    },
+    {
+        "word_1": "guest",
+        "word_2": "der Gast"
+    },
+    {
+        "word_1": "place of birth",
+        "word_2": "der Geburtsort"
+    },
+    {
+        "word_1": "birthday",
+        "word_2": "der Geburtstag"
+    },
+    {
+        "word_1": "congratulations",
+        "word_2": "der Glückwunsch"
+    },
+    {
+        "word_1": "grandfather",
+        "word_2": "der Großvater"
+    },
+    {
+        "word_1": "greeting",
+        "word_2": "der Gruß"
+    },
+    {
+        "word_1": "househusband",
+        "word_2": "der Hausmann"
+    },
+    {
+        "word_1": "autumn",
+        "word_2": "der Herbst"
+    },
+    {
+        "word_1": "stove",
+        "word_2": "der Herd"
+    },
+    {
+        "word_1": "mister",
+        "word_2": "der Herr"
+    },
+    {
+        "word_1": "dog",
+        "word_2": "der Hund"
+    },
+    {
+        "word_1": "hunger",
+        "word_2": "der Hunger"
+    },
+    {
+        "word_1": "January",
+        "word_2": "der Januar"
+    },
+    {
+        "word_1": "job",
+        "word_2": "der Job"
+    },
+    {
+        "word_1": "youth",
+        "word_2": "der Jugendliche"
+    },
+    {
+        "word_1": "July",
+        "word_2": "der Juli"
+    },
+    {
+        "word_1": "boy",
+        "word_2": "der Junge"
+    },
+    {
+        "word_1": "June",
+        "word_2": "der Juni"
+    },
+    {
+        "word_1": "coffee",
+        "word_2": "der Kaffee"
+    },
+    {
+        "word_1": "kindergarten",
+        "word_2": "der Kindergarten"
+    },
+    {
+        "word_1": "kiosk",
+        "word_2": "der Kiosk"
+    },
+    {
+        "word_1": "suitcase",
+        "word_2": "der Koffer"
+    },
+    {
+        "word_1": "colleague",
+        "word_2": "der Kollege"
+    },
+    {
+        "word_1": "head",
+        "word_2": "der Kopf"
+    },
+    {
+        "word_1": "cake",
+        "word_2": "der Kuchen"
+    },
+    {
+        "word_1": "pen",
+        "word_2": "der Kugelschreiber"
+    },
+    {
+        "word_1": "customer",
+        "word_2": "der Kunde"
+    },
+    {
+        "word_1": "course",
+        "word_2": "der Kurs"
+    },
+    {
+        "word_1": "refrigerator",
+        "word_2": "der Kühlschrank"
+    },
+    {
+        "word_1": "shop",
+        "word_2": "der Laden"
+    },
+    {
+        "word_1": "teacher",
+        "word_2": "der Lehrer"
+    },
+    {
+        "word_1": "truck",
+        "word_2": "der Lkw"
+    },
+    {
+        "word_1": "May",
+        "word_2": "der Mai"
+    },
+    {
+        "word_1": "man",
+        "word_2": "der Mann"
+    },
+    {
+        "word_1": "person",
+        "word_2": "der Mensch"
+    },
+    {
+        "word_1": "noon",
+        "word_2": "der Mittag"
+    },
+    {
+        "word_1": "Wednesday",
+        "word_2": "der Mittwoch"
+    },
+    {
+        "word_1": "moment",
+        "word_2": "der Moment"
+    },
+    {
+        "word_1": "Monday",
+        "word_2": "der Montag"
+    },
+    {
+        "word_1": "morning",
+        "word_2": "der Morgen"
+    },
+    {
+        "word_1": "mouth",
+        "word_2": "der Mund"
+    },
+    {
+        "word_1": "March",
+        "word_2": "der März"
+    },
+    {
+        "word_1": "afternoon",
+        "word_2": "der Nachmittag"
+    },
+    {
+        "word_1": "name",
+        "word_2": "der Name"
+    },
+    {
+        "word_1": "north",
+        "word_2": "der Norden"
+    },
+    {
+        "word_1": "November",
+        "word_2": "der November"
+    },
+    {
+        "word_1": "October",
+        "word_2": "der Oktober"
+    },
+    {
+        "word_1": "grandpa",
+        "word_2": "der Opa"
+    },
+    {
+        "word_1": "place",
+        "word_2": "der Ort"
+    },
+    {
+        "word_1": "east",
+        "word_2": "der Osten"
+    },
+    {
+        "word_1": "partner",
+        "word_2": "der Partner"
+    },
+    {
+        "word_1": "passport",
+        "word_2": "der Pass"
+    },
+    {
+        "word_1": "plan",
+        "word_2": "der Plan"
+    },
+    {
+        "word_1": "place",
+        "word_2": "der Platz"
+    },
+    {
+        "word_1": "price",
+        "word_2": "der Preis"
+    },
+    {
+        "word_1": "brochure",
+        "word_2": "der Prospekt"
+    },
+    {
+        "word_1": "room",
+        "word_2": "der Raum"
+    },
+    {
+        "word_1": "rain",
+        "word_2": "der Regen"
+    },
+    {
+        "word_1": "rice",
+        "word_2": "der Reis"
+    },
+    {
+        "word_1": "guide",
+        "word_2": "der Reiseführer"
+    },
+    {
+        "word_1": "juice",
+        "word_2": "der Saft"
+    },
+    {
+        "word_1": "salad",
+        "word_2": "der Salat"
+    },
+    {
+        "word_1": "Saturday",
+        "word_2": "der Samstag/Sonnabend"
+    },
+    {
+        "word_1": "sentence",
+        "word_2": "der Satz"
+    },
+    {
+        "word_1": "switch",
+        "word_2": "der Schalter"
+    },
+    {
+        "word_1": "ham",
+        "word_2": "der Schinken"
+    },
+    {
+        "word_1": "end",
+        "word_2": "der Schluss"
+    },
+    {
+        "word_1": "key",
+        "word_2": "der Schlüssel"
+    },
+    {
+        "word_1": "cabinet",
+        "word_2": "der Schrank"
+    },
+    {
+        "word_1": "shoe",
+        "word_2": "der Schuh"
+    },
+    {
+        "word_1": "student",
+        "word_2": "der Schüler"
+    },
+    {
+        "word_1": "lake",
+        "word_2": "der See"
+    },
+    {
+        "word_1": "September",
+        "word_2": "der September"
+    },
+    {
+        "word_1": "son",
+        "word_2": "der Sohn"
+    },
+    {
+        "word_1": "summer",
+        "word_2": "der Sommer"
+    },
+    {
+        "word_1": "Sunday",
+        "word_2": "der Sonntag"
+    },
+    {
+        "word_1": "sport",
+        "word_2": "der Sport"
+    },
+    {
+        "word_1": "floor",
+        "word_2": "der Stock"
+    },
+    {
+        "word_1": "student",
+        "word_2": "der Student"
+    },
+    {
+        "word_1": "south",
+        "word_2": "der Süden"
+    },
+    {
+        "word_1": "day",
+        "word_2": "der Tag"
+    },
+    {
+        "word_1": "tea",
+        "word_2": "der Tee"
+    },
+    {
+        "word_1": "part",
+        "word_2": "der Teil"
+    },
+    {
+        "word_1": "appointment",
+        "word_2": "der Termin"
+    },
+    {
+        "word_1": "test",
+        "word_2": "der Test"
+    },
+    {
+        "word_1": "text",
+        "word_2": "der Text"
+    },
+    {
+        "word_1": "table",
+        "word_2": "der Tisch"
+    },
+    {
+        "word_1": "lesson",
+        "word_2": "der Unterricht"
+    },
+    {
+        "word_1": "vacation",
+        "word_2": "der Urlaub"
+    },
+    {
+        "word_1": "father",
+        "word_2": "der Vater"
+    },
+    {
+        "word_1": "association",
+        "word_2": "der Verein"
+    },
+    {
+        "word_1": "salesperson",
+        "word_2": "der Verkäufer"
+    },
+    {
+        "word_1": "landlord",
+        "word_2": "der Vermieter"
+    },
+    {
+        "word_1": "relative",
+        "word_2": "der Verwandte"
+    },
+    {
+        "word_1": "morning",
+        "word_2": "der Vormittag"
+    },
+    {
+        "word_1": "first name",
+        "word_2": "der Vorname"
+    },
+    {
+        "word_1": "wine",
+        "word_2": "der Wein"
+    },
+    {
+        "word_1": "west",
+        "word_2": "der Westen"
+    },
+    {
+        "word_1": "wind",
+        "word_2": "der Wind"
+    },
+    {
+        "word_1": "winter",
+        "word_2": "der Winter"
+    },
+    {
+        "word_1": "day of the week",
+        "word_2": "der Wochentag"
+    },
+    {
+        "word_1": "customs",
+        "word_2": "der Zoll"
+    },
+    {
+        "word_1": "train",
+        "word_2": "der Zug"
+    },
+    {
+        "word_1": "the",
+        "word_2": "der, die, das"
+    },
+    {
+        "word_1": "acquaintance",
+        "word_2": "der/die Bekannte"
+    },
+    {
+        "word_1": "you",
+        "word_2": "dich"
+    },
+    {
+        "word_1": "the",
+        "word_2": "die"
+    },
+    {
+        "word_1": "departure",
+        "word_2": "die Abfahrt"
+    },
+    {
+        "word_1": "address",
+        "word_2": "die Adresse"
+    },
+    {
+        "word_1": "arrival",
+        "word_2": "die Ankunft"
+    },
+    {
+        "word_1": "registration",
+        "word_2": "die Anmeldung"
+    },
+    {
+        "word_1": "salutation",
+        "word_2": "die Anrede"
+    },
+    {
+        "word_1": "announcement",
+        "word_2": "die Ansage"
+    },
+    {
+        "word_1": "answer",
+        "word_2": "die Antwort"
+    },
+    {
+        "word_1": "advertisement",
+        "word_2": "die Anzeige"
+    },
+    {
+        "word_1": "work",
+        "word_2": "die Arbeit"
+    },
+    {
+        "word_1": "task",
+        "word_2": "die Aufgabe"
+    },
+    {
+        "word_1": "information",
+        "word_2": "die Auskunft"
+    },
+    {
+        "word_1": "statement",
+        "word_2": "die Aussage"
+    },
+    {
+        "word_1": "highway",
+        "word_2": "die Autobahn"
+    },
+    {
+        "word_1": "train",
+        "word_2": "die Bahn"
+    },
+    {
+        "word_1": "banana",
+        "word_2": "die Banane"
+    },
+    {
+        "word_1": "bank",
+        "word_2": "die Bank"
+    },
+    {
+        "word_1": "pear",
+        "word_2": "die Birne"
+    },
+    {
+        "word_1": "request",
+        "word_2": "die Bitte"
+    },
+    {
+        "word_1": "flower",
+        "word_2": "die Blume"
+    },
+    {
+        "word_1": "stamp",
+        "word_2": "die Briefmarke"
+    },
+    {
+        "word_1": "butter",
+        "word_2": "die Butter"
+    },
+    {
+        "word_1": "bakery",
+        "word_2": "die Bäckerei"
+    },
+    {
+        "word_1": "CD",
+        "word_2": "die CD"
+    },
+    {
+        "word_1": "lady",
+        "word_2": "die Dame"
+    },
+    {
+        "word_1": "disco",
+        "word_2": "die Disco"
+    },
+    {
+        "word_1": "announcement",
+        "word_2": "die Durchsage"
+    },
+    {
+        "word_1": "shower",
+        "word_2": "die Dusche"
+    },
+    {
+        "word_1": "corner",
+        "word_2": "die Ecke"
+    },
+    {
+        "word_1": "wife",
+        "word_2": "die Ehefrau"
+    },
+    {
+        "word_1": "invitation",
+        "word_2": "die Einladung"
+    },
+    {
+        "word_1": "parents",
+        "word_2": "die Eltern"
+    },
+    {
+        "word_1": "apology",
+        "word_2": "die Entschuldigung"
+    },
+    {
+        "word_1": "ticket",
+        "word_2": "die Fahrkarte"
+    },
+    {
+        "word_1": "family",
+        "word_2": "die Familie"
+    },
+    {
+        "word_1": "color",
+        "word_2": "die Farbe"
+    },
+    {
+        "word_1": "company",
+        "word_2": "die Firma"
+    },
+    {
+        "word_1": "bottle",
+        "word_2": "die Flasche"
+    },
+    {
+        "word_1": "question",
+        "word_2": "die Frage"
+    },
+    {
+        "word_1": "woman",
+        "word_2": "die Frau"
+    },
+    {
+        "word_1": "leisure time",
+        "word_2": "die Freizeit"
+    },
+    {
+        "word_1": "tour",
+        "word_2": "die Führung"
+    },
+    {
+        "word_1": "siblings",
+        "word_2": "die Geschwister"
+    },
+    {
+        "word_1": "grandparents",
+        "word_2": "die Großeltern"
+    },
+    {
+        "word_1": "grandmother",
+        "word_2": "die Großmutter"
+    },
+    {
+        "word_1": "group",
+        "word_2": "die Gruppe"
+    },
+    {
+        "word_1": "size",
+        "word_2": "die Größe"
+    },
+    {
+        "word_1": "half board",
+        "word_2": "die Halbpension"
+    },
+    {
+        "word_1": "hall",
+        "word_2": "die Halle"
+    },
+    {
+        "word_1": "stop",
+        "word_2": "die Haltestelle"
+    },
+    {
+        "word_1": "hand",
+        "word_2": "die Hand"
+    },
+    {
+        "word_1": "homework",
+        "word_2": "die Hausaufgabe"
+    },
+    {
+        "word_1": "housewife",
+        "word_2": "die Hausfrau"
+    },
+    {
+        "word_1": "homeland",
+        "word_2": "die Heimat"
+    },
+    {
+        "word_1": "help",
+        "word_2": "die Hilfe"
+    },
+    {
+        "word_1": "wedding",
+        "word_2": "die Hochzeit"
+    },
+    {
+        "word_1": "information",
+        "word_2": "die Information"
+    },
+    {
+        "word_1": "jacket",
+        "word_2": "die Jacke"
+    },
+    {
+        "word_1": "map",
+        "word_2": "die Karte"
+    },
+    {
+        "word_1": "potato",
+        "word_2": "die Kartoffel"
+    },
+    {
+        "word_1": "cash register",
+        "word_2": "die Kasse"
+    },
+    {
+        "word_1": "class",
+        "word_2": "die Klasse"
+    },
+    {
+        "word_1": "clothes",
+        "word_2": "die Kleidung"
+    },
+    {
+        "word_1": "kitchen",
+        "word_2": "die Küche"
+    },
+    {
+        "word_1": "food",
+        "word_2": "die Lebensmittel"
+    },
+    {
+        "word_1": "people",
+        "word_2": "die Leute"
+    },
+    {
+        "word_1": "solution",
+        "word_2": "die Lösung"
+    },
+    {
+        "word_1": "machine",
+        "word_2": "die Maschine"
+    },
+    {
+        "word_1": "rent",
+        "word_2": "die Miete"
+    },
+    {
+        "word_1": "milk",
+        "word_2": "die Milch"
+    },
+    {
+        "word_1": "minute",
+        "word_2": "die Minute"
+    },
+    {
+        "word_1": "middle",
+        "word_2": "die Mitte"
+    },
+    {
+        "word_1": "mother",
+        "word_2": "die Mutter"
+    },
+    {
+        "word_1": "furniture",
+        "word_2": "die Möbel"
+    },
+    {
+        "word_1": "night",
+        "word_2": "die Nacht"
+    },
+    {
+        "word_1": "number",
+        "word_2": "die Nummer"
+    },
+    {
+        "word_1": "grandmother",
+        "word_2": "die Oma"
+    },
+    {
+        "word_1": "order",
+        "word_2": "die Ordnung"
+    },
+    {
+        "word_1": "papers",
+        "word_2": "die Papiere"
+    },
+    {
+        "word_1": "partner",
+        "word_2": "die Partnerin"
+    },
+    {
+        "word_1": "party",
+        "word_2": "die Party"
+    },
+    {
+        "word_1": "break",
+        "word_2": "die Pause"
+    },
+    {
+        "word_1": "police",
+        "word_2": "die Polizei"
+    },
+    {
+        "word_1": "french fries",
+        "word_2": "die Pommes frites"
+    },
+    {
+        "word_1": "post",
+        "word_2": "die Post"
+    },
+    {
+        "word_1": "postal code",
+        "word_2": "die Postleitzahl"
+    },
+    {
+        "word_1": "practice",
+        "word_2": "die Praxis"
+    },
+    {
+        "word_1": "exam",
+        "word_2": "die Prüfung"
+    },
+    {
+        "word_1": "bill",
+        "word_2": "die Rechnung"
+    },
+    {
+        "word_1": "trip",
+        "word_2": "die Reise"
+    },
+    {
+        "word_1": "repair",
+        "word_2": "die Reparatur"
+    },
+    {
+        "word_1": "reception",
+        "word_2": "die Rezeption"
+    },
+    {
+        "word_1": "school",
+        "word_2": "die Schule"
+    },
+    {
+        "word_1": "sister",
+        "word_2": "die Schwester"
+    },
+    {
+        "word_1": "sightseeing",
+        "word_2": "die Sehenswürdigkeit"
+    },
+    {
+        "word_1": "second",
+        "word_2": "die Sekunde"
+    },
+    {
+        "word_1": "sun",
+        "word_2": "die Sonne"
+    },
+    {
+        "word_1": "menu",
+        "word_2": "die Speisekarte"
+    },
+    {
+        "word_1": "language",
+        "word_2": "die Sprache"
+    },
+    {
+        "word_1": "city",
+        "word_2": "die Stadt"
+    },
+    {
+        "word_1": "position",
+        "word_2": "die Stelle"
+    },
+    {
+        "word_1": "street",
+        "word_2": "die Straße"
+    },
+    {
+        "word_1": "tram",
+        "word_2": "die Straßenbahn"
+    },
+    {
+        "word_1": "hour",
+        "word_2": "die Stunde"
+    },
+    {
+        "word_1": "bag",
+        "word_2": "die Tasche"
+    },
+    {
+        "word_1": "daughter",
+        "word_2": "die Tochter"
+    },
+    {
+        "word_1": "toilet",
+        "word_2": "die Toilette"
+    },
+    {
+        "word_1": "tomato",
+        "word_2": "die Tomate"
+    },
+    {
+        "word_1": "stairs",
+        "word_2": "die Treppe"
+    },
+    {
+        "word_1": "clock",
+        "word_2": "die Uhr"
+    },
+    {
+        "word_1": "signature",
+        "word_2": "die Unterschrift"
+    },
+    {
+        "word_1": "caution",
+        "word_2": "die Vorsicht"
+    },
+    {
+        "word_1": "area code",
+        "word_2": "die Vorwahl"
+    },
+    {
+        "word_1": "world",
+        "word_2": "die Welt"
+    },
+    {
+        "word_1": "week",
+        "word_2": "die Woche"
+    },
+    {
+        "word_1": "apartment",
+        "word_2": "die Wohnung"
+    },
+    {
+        "word_1": "time",
+        "word_2": "die Zeit"
+    },
+    {
+        "word_1": "newspaper",
+        "word_2": "die Zeitung"
+    },
+    {
+        "word_1": "cigarette",
+        "word_2": "die Zigarette"
+    },
+    {
+        "word_1": "this",
+        "word_2": "dieser/diese/dieses"
+    },
+    {
+        "word_1": "to you",
+        "word_2": "dir"
+    },
+    {
+        "word_1": "direct",
+        "word_2": "direkt"
+    },
+    {
+        "word_1": "however",
+        "word_2": "doch"
+    },
+    {
+        "word_1": "there",
+        "word_2": "dort"
+    },
+    {
+        "word_1": "outside",
+        "word_2": "draußen"
+    },
+    {
+        "word_1": "three",
+        "word_2": "drei"
+    },
+    {
+        "word_1": "three times",
+        "word_2": "dreimal"
+    },
+    {
+        "word_1": "thirteen",
+        "word_2": "dreizehn"
+    },
+    {
+        "word_1": "thirteen seventeen",
+        "word_2": "dreizehn Uhr siebzehn"
+    },
+    {
+        "word_1": "thirty",
+        "word_2": "dreißig"
+    },
+    {
+        "word_1": "urgent",
+        "word_2": "dringend"
+    },
+    {
+        "word_1": "third",
+        "word_2": "dritte"
+    },
+    {
+        "word_1": "to print",
+        "word_2": "drucken"
+    },
+    {
+        "word_1": "to press",
+        "word_2": "drücken"
+    },
+    {
+        "word_1": "you",
+        "word_2": "du"
+    },
+    {
+        "word_1": "dark",
+        "word_2": "dunkel"
+    },
+    {
+        "word_1": "through",
+        "word_2": "durch"
+    },
+    {
+        "word_1": "may",
+        "word_2": "dürfen"
+    },
+    {
+        "word_1": "just",
+        "word_2": "eben"
+    },
+    {
+        "word_1": "urgent",
+        "word_2": "eilig"
+    },
+    {
+        "word_1": "one degree below zero",
+        "word_2": "ein Grad unter Null"
+    },
+    {
+        "word_1": "a gram",
+        "word_2": "ein Gramm"
+    },
+    {
+        "word_1": "a kilo(gram)",
+        "word_2": "ein Kilo(gramm)"
+    },
+    {
+        "word_1": "a liter",
+        "word_2": "ein Liter"
+    },
+    {
+        "word_1": "a meter",
+        "word_2": "ein Meter"
+    },
+    {
+        "word_1": "one meter fifteen",
+        "word_2": "ein Meter fünfzehn"
+    },
+    {
+        "word_1": "a pound",
+        "word_2": "ein Pfund"
+    },
+    {
+        "word_1": "a percent",
+        "word_2": "ein Prozent"
+    },
+    {
+        "word_1": "a square meter",
+        "word_2": "ein Quadratmeter"
+    },
+    {
+        "word_1": "one o'clock",
+        "word_2": "ein Uhr"
+    },
+    {
+        "word_1": "a quarter",
+        "word_2": "ein Viertel"
+    },
+    {
+        "word_1": "a centimeter",
+        "word_2": "ein Zentimeter"
+    },
+    {
+        "word_1": "a/an",
+        "word_2": "ein/eine"
+    },
+    {
+        "word_1": "a billion",
+        "word_2": "eine Milliarde"
+    },
+    {
+        "word_1": "a million",
+        "word_2": "eine Million"
+    },
+    {
+        "word_1": "simple",
+        "word_2": "einfach"
+    },
+    {
+        "word_1": "some",
+        "word_2": "einige"
+    },
+    {
+        "word_1": "to shop",
+        "word_2": "einkaufen"
+    },
+    {
+        "word_1": "to invite",
+        "word_2": "einladen"
+    },
+    {
+        "word_1": "once",
+        "word_2": "einmal"
+    },
+    {
+        "word_1": "one",
+        "word_2": "eins"
+    },
+    {
+        "word_1": "to get in",
+        "word_2": "einsteigen"
+    },
+    {
+        "word_1": "agreed",
+        "word_2": "einverstanden"
+    },
+    {
+        "word_1": "eleven",
+        "word_2": "elf"
+    },
+    {
+        "word_1": "to recommend",
+        "word_2": "empfehlen"
+    },
+    {
+        "word_1": "to end",
+        "word_2": "enden"
+    },
+    {
+        "word_1": "finally",
+        "word_2": "endlich"
+    },
+    {
+        "word_1": "narrow",
+        "word_2": "eng"
+    },
+    {
+        "word_1": "to excuse",
+        "word_2": "entschuldigen"
+    },
+    {
+        "word_1": "he",
+        "word_2": "er"
+    },
+    {
+        "word_1": "to explain",
+        "word_2": "erklären"
+    },
+    {
+        "word_1": "to catch a cold",
+        "word_2": "erkälten"
+    },
+    {
+        "word_1": "to allow",
+        "word_2": "erlauben"
+    },
+    {
+        "word_1": "to replace",
+        "word_2": "ersetzen"
+    },
+    {
+        "word_1": "first",
+        "word_2": "erst"
+    },
+    {
+        "word_1": "first",
+        "word_2": "erste"
+    },
+    {
+        "word_1": "to tell",
+        "word_2": "erzählen"
+    },
+    {
+        "word_1": "it",
+        "word_2": "es"
+    },
+    {
+        "word_1": "to eat",
+        "word_2": "essen"
+    },
+    {
+        "word_1": "something",
+        "word_2": "etwas"
+    },
+    {
+        "word_1": "you",
+        "word_2": "euch"
+    },
+    {
+        "word_1": "your",
+        "word_2": "euer"
+    },
+    {
+        "word_1": "your",
+        "word_2": "euer, eure"
+    },
+    {
+        "word_1": "extra",
+        "word_2": "extra"
+    },
+    {
+        "word_1": "to drive",
+        "word_2": "fahren"
+    },
+    {
+        "word_1": "to fall",
+        "word_2": "fallen"
+    },
+    {
+        "word_1": "wrong",
+        "word_2": "falsch"
+    },
+    {
+        "word_1": "to catch",
+        "word_2": "fangen"
+    },
+    {
+        "word_1": "almost",
+        "word_2": "fast"
+    },
+    {
+        "word_1": "to lack",
+        "word_2": "fehlen"
+    },
+    {
+        "word_1": "to celebrate",
+        "word_2": "feiern"
+    },
+    {
+        "word_1": "to watch TV",
+        "word_2": "fernsehen"
+    },
+    {
+        "word_1": "ready",
+        "word_2": "fertig"
+    },
+    {
+        "word_1": "to find",
+        "word_2": "finden"
+    },
+    {
+        "word_1": "flexible",
+        "word_2": "flexibel"
+    },
+    {
+        "word_1": "to fly",
+        "word_2": "fliegen"
+    },
+    {
+        "word_1": "to photograph",
+        "word_2": "fotografieren"
+    },
+    {
+        "word_1": "to ask",
+        "word_2": "fragen"
+    },
+    {
+        "word_1": "free",
+        "word_2": "frei"
+    },
+    {
+        "word_1": "foreign",
+        "word_2": "fremd"
+    },
+    {
+        "word_1": "to be happy",
+        "word_2": "freuen"
+    },
+    {
+        "word_1": "friendly",
+        "word_2": "freundlich"
+    },
+    {
+        "word_1": "fresh",
+        "word_2": "frisch"
+    },
+    {
+        "word_1": "happy",
+        "word_2": "froh"
+    },
+    {
+        "word_1": "early",
+        "word_2": "früh"
+    },
+    {
+        "word_1": "earlier",
+        "word_2": "früher"
+    },
+    {
+        "word_1": "to have breakfast",
+        "word_2": "frühstücken"
+    },
+    {
+        "word_1": "terrible",
+        "word_2": "furchtbar"
+    },
+    {
+        "word_1": "to feel",
+        "word_2": "fühlen"
+    },
+    {
+        "word_1": "five",
+        "word_2": "fünf"
+    },
+    {
+        "word_1": "five minutes to/past one",
+        "word_2": "fünf Minuten vor/nach eins"
+    },
+    {
+        "word_1": "fifteen",
+        "word_2": "fünfzehn"
+    },
+    {
+        "word_1": "fifty",
+        "word_2": "fünfzig"
+    },
+    {
+        "word_1": "for",
+        "word_2": "für"
+    },
+    {
+        "word_1": "whole",
+        "word_2": "ganz"
+    },
+    {
+        "word_1": "to give",
+        "word_2": "geben"
+    },
+    {
+        "word_1": "born",
+        "word_2": "geboren"
+    },
+    {
+        "word_1": "to be born",
+        "word_2": "geboren sein"
+    },
+    {
+        "word_1": "dear",
+        "word_2": "geehrter/geehrte"
+    },
+    {
+        "word_1": "to like",
+        "word_2": "gefallen"
+    },
+    {
+        "word_1": "against",
+        "word_2": "gegen"
+    },
+    {
+        "word_1": "mutual",
+        "word_2": "gegenseitig"
+    },
+    {
+        "word_1": "opposite",
+        "word_2": "gegenüber"
+    },
+    {
+        "word_1": "to go",
+        "word_2": "gehen"
+    },
+    {
+        "word_1": "to belong",
+        "word_2": "gehören"
+    },
+    {
+        "word_1": "yellow",
+        "word_2": "gelb"
+    },
+    {
+        "word_1": "together",
+        "word_2": "gemeinsam"
+    },
+    {
+        "word_1": "cozy",
+        "word_2": "gemütlich"
+    },
+    {
+        "word_1": "exactly",
+        "word_2": "genau"
+    },
+    {
+        "word_1": "just as",
+        "word_2": "genauso"
+    },
+    {
+        "word_1": "straight",
+        "word_2": "gerade"
+    },
+    {
+        "word_1": "straight ahead",
+        "word_2": "geradeaus"
+    },
+    {
+        "word_1": "gladly",
+        "word_2": "gern"
+    },
+    {
+        "word_1": "gladly",
+        "word_2": "gern(e)"
+    },
+    {
+        "word_1": "divorced",
+        "word_2": "geschieden"
+    },
+    {
+        "word_1": "closed",
+        "word_2": "geschlossen"
+    },
+    {
+        "word_1": "yesterday",
+        "word_2": "gestern"
+    },
+    {
+        "word_1": "died",
+        "word_2": "gestorben"
+    },
+    {
+        "word_1": "to win",
+        "word_2": "gewinnen"
+    },
+    {
+        "word_1": "open",
+        "word_2": "geöffnet"
+    },
+    {
+        "word_1": "to believe",
+        "word_2": "glauben"
+    },
+    {
+        "word_1": "immediately",
+        "word_2": "gleich"
+    },
+    {
+        "word_1": "happy",
+        "word_2": "glücklich"
+    },
+    {
+        "word_1": "to congratulate",
+        "word_2": "gratulieren"
+    },
+    {
+        "word_1": "gray",
+        "word_2": "grau"
+    },
+    {
+        "word_1": "to grill",
+        "word_2": "grillen"
+    },
+    {
+        "word_1": "big",
+        "word_2": "groß"
+    },
+    {
+        "word_1": "green",
+        "word_2": "grün"
+    },
+    {
+        "word_1": "to look",
+        "word_2": "gucken"
+    },
+    {
+        "word_1": "good",
+        "word_2": "gut"
+    },
+    {
+        "word_1": "valid",
+        "word_2": "gültig"
+    },
+    {
+        "word_1": "cheap",
+        "word_2": "günstig"
+    },
+    {
+        "word_1": "to have",
+        "word_2": "haben"
+    },
+    {
+        "word_1": "to hail",
+        "word_2": "hageln"
+    },
+    {
+        "word_1": "half",
+        "word_2": "halb"
+    },
+    {
+        "word_1": "half past two",
+        "word_2": "halb drei"
+    },
+    {
+        "word_1": "hello",
+        "word_2": "hallo"
+    },
+    {
+        "word_1": "to hold",
+        "word_2": "halten"
+    },
+    {
+        "word_1": "to marry",
+        "word_2": "heiraten"
+    },
+    {
+        "word_1": "hot",
+        "word_2": "heiß"
+    },
+    {
+        "word_1": "to be called",
+        "word_2": "heißen"
+    },
+    {
+        "word_1": "to help",
+        "word_2": "helfen"
+    },
+    {
+        "word_1": "light",
+        "word_2": "hell"
+    },
+    {
+        "word_1": "heartfelt",
+        "word_2": "herzlich"
+    },
+    {
+        "word_1": "today",
+        "word_2": "heute"
+    },
+    {
+        "word_1": "today is March 1st",
+        "word_2": "heute ist der 1. März"
+    },
+    {
+        "word_1": "here",
+        "word_2": "hier"
+    },
+    {
+        "word_1": "behind",
+        "word_2": "hinten"
+    },
+    {
+        "word_1": "behind",
+        "word_2": "hinter"
+    },
+    {
+        "word_1": "high",
+        "word_2": "hoch"
+    },
+    {
+        "word_1": "to fetch",
+        "word_2": "holen"
+    },
+    {
+        "word_1": "hundred and one",
+        "word_2": "hunderteins"
+    },
+    {
+        "word_1": "to hang",
+        "word_2": "hängen"
+    },
+    {
+        "word_1": "ugly",
+        "word_2": "hässlich"
+    },
+    {
+        "word_1": "to hear",
+        "word_2": "hören"
+    },
+    {
+        "word_1": "I",
+        "word_2": "ich"
+    },
+    {
+        "word_1": "him",
+        "word_2": "ihm"
+    },
+    {
+        "word_1": "her",
+        "word_2": "ihr"
+    },
+    {
+        "word_1": "her/him/him",
+        "word_2": "ihr/ihm/ihn"
+    },
+    {
+        "word_1": "her/their",
+        "word_2": "ihr/ihre"
+    },
+    {
+        "word_1": "always",
+        "word_2": "immer"
+    },
+    {
+        "word_1": "in",
+        "word_2": "in"
+    },
+    {
+        "word_1": "in total",
+        "word_2": "insgesamt"
+    },
+    {
+        "word_1": "to install",
+        "word_2": "installieren"
+    },
+    {
+        "word_1": "interesting",
+        "word_2": "interessant"
+    },
+    {
+        "word_1": "international",
+        "word_2": "international"
+    },
+    {
+        "word_1": "yes",
+        "word_2": "ja"
+    },
+    {
+        "word_1": "each",
+        "word_2": "jeder/jede/jedes"
+    },
+    {
+        "word_1": "now",
+        "word_2": "jetzt"
+    },
+    {
+        "word_1": "young",
+        "word_2": "jung"
+    },
+    {
+        "word_1": "cold",
+        "word_2": "kalt"
+    },
+    {
+        "word_1": "broken",
+        "word_2": "kaputt"
+    },
+    {
+        "word_1": "to buy",
+        "word_2": "kaufen"
+    },
+    {
+        "word_1": "no",
+        "word_2": "kein"
+    },
+    {
+        "word_1": "no",
+        "word_2": "kein/keine"
+    },
+    {
+        "word_1": "to know",
+        "word_2": "kennen"
+    },
+    {
+        "word_1": "to get to know",
+        "word_2": "kennenlernen"
+    },
+    {
+        "word_1": "clear",
+        "word_2": "klar"
+    },
+    {
+        "word_1": "great",
+        "word_2": "klasse"
+    },
+    {
+        "word_1": "small",
+        "word_2": "klein"
+    },
+    {
+        "word_1": "to ring",
+        "word_2": "klingeln"
+    },
+    {
+        "word_1": "tricky",
+        "word_2": "knifflig"
+    },
+    {
+        "word_1": "to cook",
+        "word_2": "kochen"
+    },
+    {
+        "word_1": "to come",
+        "word_2": "kommen"
+    },
+    {
+        "word_1": "to correct",
+        "word_2": "korrigieren"
+    },
+    {
+        "word_1": "to cost",
+        "word_2": "kosten"
+    },
+    {
+        "word_1": "sick",
+        "word_2": "krank"
+    },
+    {
+        "word_1": "creative",
+        "word_2": "kreativ"
+    },
+    {
+        "word_1": "to get",
+        "word_2": "kriegen"
+    },
+    {
+        "word_1": "cultural",
+        "word_2": "kulturell"
+    },
+    {
+        "word_1": "short",
+        "word_2": "kurz"
+    },
+    {
+        "word_1": "to be able",
+        "word_2": "können"
+    },
+    {
+        "word_1": "to laugh",
+        "word_2": "lachen"
+    },
+    {
+        "word_1": "long",
+        "word_2": "lang"
+    },
+    {
+        "word_1": "long",
+        "word_2": "lange"
+    },
+    {
+        "word_1": "slow",
+        "word_2": "langsam"
+    },
+    {
+        "word_1": "boring",
+        "word_2": "langweilig"
+    },
+    {
+        "word_1": "to let",
+        "word_2": "lassen"
+    },
+    {
+        "word_1": "to run",
+        "word_2": "laufen"
+    },
+    {
+        "word_1": "loud",
+        "word_2": "laut"
+    },
+    {
+        "word_1": "to live",
+        "word_2": "leben"
+    },
+    {
+        "word_1": "tasty",
+        "word_2": "lecker"
+    },
+    {
+        "word_1": "single",
+        "word_2": "ledig"
+    },
+    {
+        "word_1": "to lay",
+        "word_2": "legen"
+    },
+    {
+        "word_1": "light",
+        "word_2": "leicht"
+    },
+    {
+        "word_1": "unfortunately",
+        "word_2": "leider"
+    },
+    {
+        "word_1": "quiet",
+        "word_2": "leise"
+    },
+    {
+        "word_1": "to learn",
+        "word_2": "lernen"
+    },
+    {
+        "word_1": "to read",
+        "word_2": "lesen"
+    },
+    {
+        "word_1": "last",
+        "word_2": "letzte"
+    },
+    {
+        "word_1": "to love",
+        "word_2": "lieben"
+    },
+    {
+        "word_1": "rather",
+        "word_2": "lieber"
+    },
+    {
+        "word_1": "dear",
+        "word_2": "lieber/liebe"
+    },
+    {
+        "word_1": "most",
+        "word_2": "liebsten (am liebsten)"
+    },
+    {
+        "word_1": "to lie",
+        "word_2": "liegen"
+    },
+    {
+        "word_1": "purple",
+        "word_2": "lila"
+    },
+    {
+        "word_1": "left",
+        "word_2": "links"
+    },
+    {
+        "word_1": "funny",
+        "word_2": "lustig"
+    },
+    {
+        "word_1": "to do",
+        "word_2": "machen"
+    },
+    {
+        "word_1": "one",
+        "word_2": "man"
+    },
+    {
+        "word_1": "sometimes",
+        "word_2": "manchmal"
+    },
+    {
+        "word_1": "maximum",
+        "word_2": "maximal"
+    },
+    {
+        "word_1": "more",
+        "word_2": "mehr"
+    },
+    {
+        "word_1": "my",
+        "word_2": "mein"
+    },
+    {
+        "word_1": "my",
+        "word_2": "mein/meine"
+    },
+    {
+        "word_1": "most",
+        "word_2": "meisten (am meisten)"
+    },
+    {
+        "word_1": "mostly",
+        "word_2": "meistens"
+    },
+    {
+        "word_1": "to rent",
+        "word_2": "mieten"
+    },
+    {
+        "word_1": "at least",
+        "word_2": "mindestens"
+    },
+    {
+        "word_1": "minus",
+        "word_2": "minus"
+    },
+    {
+        "word_1": "me",
+        "word_2": "mir"
+    },
+    {
+        "word_1": "with",
+        "word_2": "mit"
+    },
+    {
+        "word_1": "to bring along",
+        "word_2": "mitbringen"
+    },
+    {
+        "word_1": "to come along",
+        "word_2": "mitkommen"
+    },
+    {
+        "word_1": "to join in",
+        "word_2": "mitmachen"
+    },
+    {
+        "word_1": "to take along",
+        "word_2": "mitnehmen"
+    },
+    {
+        "word_1": "at noon",
+        "word_2": "mittags"
+    },
+    {
+        "word_1": "modern",
+        "word_2": "modern"
+    },
+    {
+        "word_1": "tomorrow",
+        "word_2": "morgen"
+    },
+    {
+        "word_1": "in the mornings",
+        "word_2": "morgens"
+    },
+    {
+        "word_1": "male",
+        "word_2": "männlich"
+    },
+    {
+        "word_1": "furnished",
+        "word_2": "möbliert"
+    },
+    {
+        "word_1": "would like",
+        "word_2": "möchten"
+    },
+    {
+        "word_1": "to like",
+        "word_2": "mögen"
+    },
+    {
+        "word_1": "possible",
+        "word_2": "möglich"
+    },
+    {
+        "word_1": "tired",
+        "word_2": "müde"
+    },
+    {
+        "word_1": "must",
+        "word_2": "müssen"
+    },
+    {
+        "word_1": "after",
+        "word_2": "nach"
+    },
+    {
+        "word_1": "to ask",
+        "word_2": "nachfragen"
+    },
+    {
+        "word_1": "in the afternoon",
+        "word_2": "nachmittags"
+    },
+    {
+        "word_1": "at night",
+        "word_2": "nachts"
+    },
+    {
+        "word_1": "wet",
+        "word_2": "nass"
+    },
+    {
+        "word_1": "naturally",
+        "word_2": "natürlich"
+    },
+    {
+        "word_1": "foggy",
+        "word_2": "nebelig"
+    },
+    {
+        "word_1": "next to",
+        "word_2": "neben"
+    },
+    {
+        "word_1": "to take",
+        "word_2": "nehmen"
+    },
+    {
+        "word_1": "no",
+        "word_2": "nein"
+    },
+    {
+        "word_1": "nice",
+        "word_2": "nett"
+    },
+    {
+        "word_1": "new",
+        "word_2": "neu"
+    },
+    {
+        "word_1": "nine",
+        "word_2": "neun"
+    },
+    {
+        "word_1": "nineteen",
+        "word_2": "neunzehn"
+    },
+    {
+        "word_1": "ninety",
+        "word_2": "neunzig"
+    },
+    {
+        "word_1": "not",
+        "word_2": "nicht"
+    },
+    {
+        "word_1": "nothing",
+        "word_2": "nichts"
+    },
+    {
+        "word_1": "never",
+        "word_2": "nie"
+    },
+    {
+        "word_1": "still",
+        "word_2": "noch"
+    },
+    {
+        "word_1": "again",
+        "word_2": "nochmal"
+    },
+    {
+        "word_1": "normal",
+        "word_2": "normal"
+    },
+    {
+        "word_1": "midnight three",
+        "word_2": "null Uhr drei"
+    },
+    {
+        "word_1": "now",
+        "word_2": "nun"
+    },
+    {
+        "word_1": "only",
+        "word_2": "nur"
+    },
+    {
+        "word_1": "next",
+        "word_2": "nächster/nächste/nächstes"
+    },
+    {
+        "word_1": "above",
+        "word_2": "oben"
+    },
+    {
+        "word_1": "or",
+        "word_2": "oder"
+    },
+    {
+        "word_1": "often",
+        "word_2": "oft"
+    },
+    {
+        "word_1": "without",
+        "word_2": "ohne"
+    },
+    {
+        "word_1": "online",
+        "word_2": "online"
+    },
+    {
+        "word_1": "orange",
+        "word_2": "orange"
+    },
+    {
+        "word_1": "to arrange",
+        "word_2": "ordnen"
+    },
+    {
+        "word_1": "to organize",
+        "word_2": "organisieren"
+    },
+    {
+        "word_1": "local group list",
+        "word_2": "ortgruppenliste"
+    },
+    {
+        "word_1": "to pack",
+        "word_2": "packen"
+    },
+    {
+        "word_1": "to fit",
+        "word_2": "passen"
+    },
+    {
+        "word_1": "by",
+        "word_2": "per"
+    },
+    {
+        "word_1": "to plan",
+        "word_2": "planen"
+    },
+    {
+        "word_1": "positive",
+        "word_2": "positiv"
+    },
+    {
+        "word_1": "practical",
+        "word_2": "praktisch"
+    },
+    {
+        "word_1": "per",
+        "word_2": "pro"
+    },
+    {
+        "word_1": "to try",
+        "word_2": "probieren"
+    },
+    {
+        "word_1": "to check",
+        "word_2": "prüfen"
+    },
+    {
+        "word_1": "to clean",
+        "word_2": "putzen"
+    },
+    {
+        "word_1": "punctual",
+        "word_2": "pünktlich"
+    },
+    {
+        "word_1": "to advise",
+        "word_2": "raten"
+    },
+    {
+        "word_1": "to smoke",
+        "word_2": "rauchen"
+    },
+    {
+        "word_1": "to calculate",
+        "word_2": "rechnen"
+    },
+    {
+        "word_1": "right",
+        "word_2": "rechts"
+    },
+    {
+        "word_1": "to talk",
+        "word_2": "reden"
+    },
+    {
+        "word_1": "regularly",
+        "word_2": "regelmäßig"
+    },
+    {
+        "word_1": "to rain",
+        "word_2": "regnen"
+    },
+    {
+        "word_1": "to travel",
+        "word_2": "reisen"
+    },
+    {
+        "word_1": "to repair",
+        "word_2": "reparieren"
+    },
+    {
+        "word_1": "right",
+        "word_2": "richtig"
+    },
+    {
+        "word_1": "to smell",
+        "word_2": "riechen"
+    },
+    {
+        "word_1": "red",
+        "word_2": "rot"
+    },
+    {
+        "word_1": "quiet",
+        "word_2": "ruhig"
+    },
+    {
+        "word_1": "to clear",
+        "word_2": "räumen"
+    },
+    {
+        "word_1": "to say",
+        "word_2": "sagen"
+    },
+    {
+        "word_1": "on Saturdays",
+        "word_2": "samstags"
+    },
+    {
+        "word_1": "pity",
+        "word_2": "schade"
+    },
+    {
+        "word_1": "to look",
+        "word_2": "schauen"
+    },
+    {
+        "word_1": "to shine",
+        "word_2": "scheinen"
+    },
+    {
+        "word_1": "to give",
+        "word_2": "schenken"
+    },
+    {
+        "word_1": "to send",
+        "word_2": "schicken"
+    },
+    {
+        "word_1": "to sleep",
+        "word_2": "schlafen"
+    },
+    {
+        "word_1": "bad",
+        "word_2": "schlecht"
+    },
+    {
+        "word_1": "to close",
+        "word_2": "schließen"
+    },
+    {
+        "word_1": "bad",
+        "word_2": "schlimm"
+    },
+    {
+        "word_1": "narrow",
+        "word_2": "schmal"
+    },
+    {
+        "word_1": "to taste",
+        "word_2": "schmecken"
+    },
+    {
+        "word_1": "to snow",
+        "word_2": "schneien"
+    },
+    {
+        "word_1": "quick",
+        "word_2": "schnell"
+    },
+    {
+        "word_1": "already",
+        "word_2": "schon"
+    },
+    {
+        "word_1": "to write",
+        "word_2": "schreiben"
+    },
+    {
+        "word_1": "pregnant",
+        "word_2": "schwanger"
+    },
+    {
+        "word_1": "black",
+        "word_2": "schwarz"
+    },
+    {
+        "word_1": "heavy",
+        "word_2": "schwer"
+    },
+    {
+        "word_1": "to swim",
+        "word_2": "schwimmen"
+    },
+    {
+        "word_1": "beautiful",
+        "word_2": "schön"
+    },
+    {
+        "word_1": "six",
+        "word_2": "sechs"
+    },
+    {
+        "word_1": "sixteen",
+        "word_2": "sechzehn"
+    },
+    {
+        "word_1": "sixty",
+        "word_2": "sechzig"
+    },
+    {
+        "word_1": "to see",
+        "word_2": "sehen"
+    },
+    {
+        "word_1": "very",
+        "word_2": "sehr"
+    },
+    {
+        "word_1": "to be",
+        "word_2": "sein"
+    },
+    {
+        "word_1": "his",
+        "word_2": "sein/seine"
+    },
+    {
+        "word_1": "since",
+        "word_2": "seit"
+    },
+    {
+        "word_1": "rarely",
+        "word_2": "selten"
+    },
+    {
+        "word_1": "to serve",
+        "word_2": "servieren"
+    },
+    {
+        "word_1": "oneself",
+        "word_2": "sich"
+    },
+    {
+        "word_1": "to take care",
+        "word_2": "sich kümmern"
+    },
+    {
+        "word_1": "sure",
+        "word_2": "sicher"
+    },
+    {
+        "word_1": "she",
+        "word_2": "sie"
+    },
+    {
+        "word_1": "seven",
+        "word_2": "sieben"
+    },
+    {
+        "word_1": "seven fifteen",
+        "word_2": "sieben Uhr fünfzehn"
+    },
+    {
+        "word_1": "seventeen",
+        "word_2": "siebzehn"
+    },
+    {
+        "word_1": "seventy",
+        "word_2": "siebzig"
+    },
+    {
+        "word_1": "to sing",
+        "word_2": "singen"
+    },
+    {
+        "word_1": "to sit",
+        "word_2": "sitzen"
+    },
+    {
+        "word_1": "so",
+        "word_2": "so"
+    },
+    {
+        "word_1": "immediately",
+        "word_2": "sofort"
+    },
+    {
+        "word_1": "should",
+        "word_2": "sollen"
+    },
+    {
+        "word_1": "sunny",
+        "word_2": "sonnig"
+    },
+    {
+        "word_1": "otherwise",
+        "word_2": "sonst"
+    },
+    {
+        "word_1": "other",
+        "word_2": "sonstiges"
+    },
+    {
+        "word_1": "anyway",
+        "word_2": "sowieso"
+    },
+    {
+        "word_1": "to walk",
+        "word_2": "spazieren"
+    },
+    {
+        "word_1": "to play",
+        "word_2": "spielen"
+    },
+    {
+        "word_1": "to speak",
+        "word_2": "sprechen"
+    },
+    {
+        "word_1": "late",
+        "word_2": "spät"
+    },
+    {
+        "word_1": "later",
+        "word_2": "später"
+    },
+    {
+        "word_1": "to wash dishes",
+        "word_2": "spülen"
+    },
+    {
+        "word_1": "strong",
+        "word_2": "stark"
+    },
+    {
+        "word_1": "to stand",
+        "word_2": "stehen"
+    },
+    {
+        "word_1": "to rise",
+        "word_2": "steigen"
+    },
+    {
+        "word_1": "to place",
+        "word_2": "stellen"
+    },
+    {
+        "word_1": "to paint",
+        "word_2": "streichen"
+    },
+    {
+        "word_1": "stressful",
+        "word_2": "stressig"
+    },
+    {
+        "word_1": "to study",
+        "word_2": "studieren"
+    },
+    {
+        "word_1": "for hours",
+        "word_2": "stundenlang"
+    },
+    {
+        "word_1": "to search",
+        "word_2": "suchen"
+    },
+    {
+        "word_1": "super",
+        "word_2": "super"
+    },
+    {
+        "word_1": "very good",
+        "word_2": "supergut"
+    },
+    {
+        "word_1": "sweet",
+        "word_2": "süß"
+    },
+    {
+        "word_1": "to dance",
+        "word_2": "tanzen"
+    },
+    {
+        "word_1": "to phone",
+        "word_2": "telefonieren"
+    },
+    {
+        "word_1": "expensive",
+        "word_2": "teuer"
+    },
+    {
+        "word_1": "great",
+        "word_2": "toll"
+    },
+    {
+        "word_1": "dead",
+        "word_2": "tot"
+    },
+    {
+        "word_1": "to wear",
+        "word_2": "tragen"
+    },
+    {
+        "word_1": "to meet",
+        "word_2": "treffen"
+    },
+    {
+        "word_1": "to drink",
+        "word_2": "trinken"
+    },
+    {
+        "word_1": "dry",
+        "word_2": "trocken"
+    },
+    {
+        "word_1": "bye",
+        "word_2": "tschüss"
+    },
+    {
+        "word_1": "to do",
+        "word_2": "tun"
+    },
+    {
+        "word_1": "typical",
+        "word_2": "typisch"
+    },
+    {
+        "word_1": "at",
+        "word_2": "um"
+    },
+    {
+        "word_1": "to transfer",
+        "word_2": "umsteigen"
+    },
+    {
+        "word_1": "to exchange",
+        "word_2": "umtauschen"
+    },
+    {
+        "word_1": "to move",
+        "word_2": "umziehen"
+    },
+    {
+        "word_1": "absolutely",
+        "word_2": "unbedingt"
+    },
+    {
+        "word_1": "and",
+        "word_2": "und"
+    },
+    {
+        "word_1": "approximately",
+        "word_2": "ungefähr"
+    },
+    {
+        "word_1": "uncomfortable",
+        "word_2": "ungemütlich"
+    },
+    {
+        "word_1": "unhappy",
+        "word_2": "unglücklich"
+    },
+    {
+        "word_1": "irregular",
+        "word_2": "unregelmäßig"
+    },
+    {
+        "word_1": "us",
+        "word_2": "uns"
+    },
+    {
+        "word_1": "our",
+        "word_2": "unser/unsere"
+    },
+    {
+        "word_1": "below",
+        "word_2": "unten"
+    },
+    {
+        "word_1": "under",
+        "word_2": "unter"
+    },
+    {
+        "word_1": "to teach",
+        "word_2": "unterrichten"
+    },
+    {
+        "word_1": "to sign",
+        "word_2": "unterschreiben"
+    },
+    {
+        "word_1": "to underline",
+        "word_2": "unterstreichen"
+    },
+    {
+        "word_1": "to connect",
+        "word_2": "verbinden"
+    },
+    {
+        "word_1": "forbidden",
+        "word_2": "verboten"
+    },
+    {
+        "word_1": "to earn",
+        "word_2": "verdienen"
+    },
+    {
+        "word_1": "to forget",
+        "word_2": "vergessen"
+    },
+    {
+        "word_1": "to compare",
+        "word_2": "vergleichen"
+    },
+    {
+        "word_1": "married",
+        "word_2": "verheiratet"
+    },
+    {
+        "word_1": "to sell",
+        "word_2": "verkaufen"
+    },
+    {
+        "word_1": "to rent out",
+        "word_2": "vermieten"
+    },
+    {
+        "word_1": "different",
+        "word_2": "verschieden"
+    },
+    {
+        "word_1": "understood",
+        "word_2": "verstanden"
+    },
+    {
+        "word_1": "to understand",
+        "word_2": "verstehen"
+    },
+    {
+        "word_1": "widowed",
+        "word_2": "verwitwet"
+    },
+    {
+        "word_1": "to delay",
+        "word_2": "verzögern"
+    },
+    {
+        "word_1": "much",
+        "word_2": "viel"
+    },
+    {
+        "word_1": "maybe",
+        "word_2": "vielleicht"
+    },
+    {
+        "word_1": "four",
+        "word_2": "vier"
+    },
+    {
+        "word_1": "four degrees above zero",
+        "word_2": "vier Grad über Null"
+    },
+    {
+        "word_1": "fourth",
+        "word_2": "vierte"
+    },
+    {
+        "word_1": "midnight",
+        "word_2": "vierundzwanzig Uhr"
+    },
+    {
+        "word_1": "fourteen",
+        "word_2": "vierzehn"
+    },
+    {
+        "word_1": "forty",
+        "word_2": "vierzig"
+    },
+    {
+        "word_1": "full",
+        "word_2": "voll"
+    },
+    {
+        "word_1": "from",
+        "word_2": "von"
+    },
+    {
+        "word_1": "before",
+        "word_2": "vor"
+    },
+    {
+        "word_1": "past",
+        "word_2": "vorbei"
+    },
+    {
+        "word_1": "the day before yesterday",
+        "word_2": "vorgestern"
+    },
+    {
+        "word_1": "in the mornings",
+        "word_2": "vormittags"
+    },
+    {
+        "word_1": "in front",
+        "word_2": "vorne"
+    },
+    {
+        "word_1": "to introduce",
+        "word_2": "vorstellen"
+    },
+    {
+        "word_1": "to hike",
+        "word_2": "wandern"
+    },
+    {
+        "word_1": "when",
+        "word_2": "wann"
+    },
+    {
+        "word_1": "warm",
+        "word_2": "warm"
+    },
+    {
+        "word_1": "to wait",
+        "word_2": "warten"
+    },
+    {
+        "word_1": "why",
+        "word_2": "warum"
+    },
+    {
+        "word_1": "what",
+        "word_2": "was"
+    },
+    {
+        "word_1": "what kind of",
+        "word_2": "was für ein"
+    },
+    {
+        "word_1": "to wash",
+        "word_2": "waschen"
+    },
+    {
+        "word_1": "to change",
+        "word_2": "wechseln"
+    },
+    {
+        "word_1": "to be away",
+        "word_2": "weg sein"
+    },
+    {
+        "word_1": "to move away",
+        "word_2": "wegziehen"
+    },
+    {
+        "word_1": "to hurt",
+        "word_2": "weh tun"
+    },
+    {
+        "word_1": "to hurt",
+        "word_2": "wehtun"
+    },
+    {
+        "word_1": "female",
+        "word_2": "weiblich"
+    },
+    {
+        "word_1": "far",
+        "word_2": "weit"
+    },
+    {
+        "word_1": "further",
+        "word_2": "weiter"
+    },
+    {
+        "word_1": "white",
+        "word_2": "weiß"
+    },
+    {
+        "word_1": "which",
+        "word_2": "welcher/welche/welches"
+    },
+    {
+        "word_1": "little",
+        "word_2": "wenig"
+    },
+    {
+        "word_1": "if",
+        "word_2": "wenn"
+    },
+    {
+        "word_1": "who",
+        "word_2": "wer"
+    },
+    {
+        "word_1": "to become",
+        "word_2": "werden"
+    },
+    {
+        "word_1": "important",
+        "word_2": "wichtig"
+    },
+    {
+        "word_1": "how",
+        "word_2": "wie"
+    },
+    {
+        "word_1": "how much",
+        "word_2": "wie viel"
+    },
+    {
+        "word_1": "again",
+        "word_2": "wieder"
+    },
+    {
+        "word_1": "to repeat",
+        "word_2": "wiederholen"
+    },
+    {
+        "word_1": "to come back",
+        "word_2": "wiederkommen"
+    },
+    {
+        "word_1": "why",
+        "word_2": "wieso"
+    },
+    {
+        "word_1": "welcome",
+        "word_2": "willkommen"
+    },
+    {
+        "word_1": "windy",
+        "word_2": "windig"
+    },
+    {
+        "word_1": "we",
+        "word_2": "wir"
+    },
+    {
+        "word_1": "to know",
+        "word_2": "wissen"
+    },
+    {
+        "word_1": "where",
+        "word_2": "wo"
+    },
+    {
+        "word_1": "from where",
+        "word_2": "woher"
+    },
+    {
+        "word_1": "where to",
+        "word_2": "wohin"
+    },
+    {
+        "word_1": "to live",
+        "word_2": "wohnen"
+    },
+    {
+        "word_1": "to want",
+        "word_2": "wollen"
+    },
+    {
+        "word_1": "wonderful",
+        "word_2": "wunderbar"
+    },
+    {
+        "word_1": "beautiful",
+        "word_2": "wunderschön"
+    },
+    {
+        "word_1": "to choose",
+        "word_2": "wählen"
+    },
+    {
+        "word_1": "to wish",
+        "word_2": "wünschen"
+    },
+    {
+        "word_1": "to pay",
+        "word_2": "zahlen"
+    },
+    {
+        "word_1": "ten",
+        "word_2": "zehn"
+    },
+    {
+        "word_1": "to draw",
+        "word_2": "zeichnen"
+    },
+    {
+        "word_1": "to show",
+        "word_2": "zeigen"
+    },
+    {
+        "word_1": "to",
+        "word_2": "zu"
+    },
+    {
+        "word_1": "on foot",
+        "word_2": "zu Fuß"
+    },
+    {
+        "word_1": "at home",
+        "word_2": "zu Hause"
+    },
+    {
+        "word_1": "to be closed",
+        "word_2": "zu sein"
+    },
+    {
+        "word_1": "first",
+        "word_2": "zuerst"
+    },
+    {
+        "word_1": "satisfied",
+        "word_2": "zufrieden"
+    },
+    {
+        "word_1": "currently",
+        "word_2": "zurzeit"
+    },
+    {
+        "word_1": "back",
+        "word_2": "zurück"
+    },
+    {
+        "word_1": "together",
+        "word_2": "zusammen"
+    },
+    {
+        "word_1": "twenty",
+        "word_2": "zwanzig"
+    },
+    {
+        "word_1": "two",
+        "word_2": "zwei"
+    },
+    {
+        "word_1": "two hundred",
+        "word_2": "zweihundert"
+    },
+    {
+        "word_1": "two hundred kilometers",
+        "word_2": "zweihundert Kilometer"
+    },
+    {
+        "word_1": "twice",
+        "word_2": "zweimal"
+    },
+    {
+        "word_1": "two thousand fourteen",
+        "word_2": "zweitausendvierzehn"
+    },
+    {
+        "word_1": "second",
+        "word_2": "zweite"
+    },
+    {
+        "word_1": "between",
+        "word_2": "zwischen"
+    },
+    {
+        "word_1": "twelve",
+        "word_2": "zwölf"
+    },
+    {
+        "word_1": "exercise",
+        "word_2": "Übung"
+    },
+    {
+        "word_1": "exercise book",
+        "word_2": "Übungsbuch"
+    },
+    {
+        "word_1": "public",
+        "word_2": "öffentlich"
+    },
+    {
+        "word_1": "to open",
+        "word_2": "öffnen"
+    },
+    {
+        "word_1": "about",
+        "word_2": "über"
+    },
+    {
+        "word_1": "everywhere",
+        "word_2": "überall"
+    },
+    {
+        "word_1": "at all",
+        "word_2": "überhaupt"
+    },
+    {
+        "word_1": "the day after tomorrow",
+        "word_2": "übermorgen"
+    },
+    {
+        "word_1": "to stay overnight",
+        "word_2": "übernachten"
+    },
+    {
+        "word_1": "to transfer money",
+        "word_2": "überweisen"
+    }
 ]
