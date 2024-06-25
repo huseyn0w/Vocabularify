@@ -27,7 +27,7 @@ let phrases = [];
 let currentIndex = 0;
 let intervalId;
 let currentLanguage = 'de';
-let currentFromLanguage = 'ru';
+let currentFromLanguage = 'en';
 let currentLevel = 'A1';
 let currentMode = MODES.WINDOW;
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
