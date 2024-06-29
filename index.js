@@ -342,6 +342,11 @@ app.whenReady().then(() => {
   // Hide the dock icon on macOS
   if (process.platform === 'darwin') {
     app.dock.hide();
+    mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+    mainWindow.setAlwaysOnTop(true, 'screen-saver');
+  }
+  else{
+    win.setAlwaysOnTop(true, 'screen-saver');
   }
 
   app.on('activate', function () {
