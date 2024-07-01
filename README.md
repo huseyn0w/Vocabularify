@@ -6,9 +6,8 @@ Welcome to **Vocabulary Booster**! 🌟
 
 **Vocabulary Booster** is a desktop application designed to help you continuously expand your vocabulary in a highly effective manner. Unlike 99% of other language apps, you don't need to carve out specific time slots or concentrate solely on the app. Instead, Vocabulary Booster seamlessly integrates into your daily routine, allowing you to learn new words while you engage in other activities.
 <br />
+<br />
 [VIDEO DEMO HERE](https://www.loom.com/share/614d6203f5bb442fa0a5bc9b44aa1f78?sid=1a00ac4c-07f7-47b4-8c7e-08e03ef6dab4)🌟
-
-<iframe src="https://www.loom.com/share/614d6203f5bb442fa0a5bc9b44aa1f78?sid=1a00ac4c-07f7-47b4-8c7e-08e03ef6dab4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="560" height="315"></iframe>
 
 ## Key Features 💡
 
