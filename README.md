@@ -8,6 +8,8 @@ Welcome to **Vocabulary Booster**! 🌟
 <br />
 [VIDEO DEMO HERE](https://www.loom.com/share/614d6203f5bb442fa0a5bc9b44aa1f78?sid=1a00ac4c-07f7-47b4-8c7e-08e03ef6dab4)🌟
 
+<iframe src="https://www.loom.com/share/614d6203f5bb442fa0a5bc9b44aa1f78?sid=1a00ac4c-07f7-47b4-8c7e-08e03ef6dab4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="560" height="315"></iframe>
+
 ## Key Features 💡
 
 - **Effortless Learning**: Learn new words without disrupting your routine. 📚
