@@ -19,7 +19,7 @@ const MODES = {
   WINDOW: 'Window'
 }
 
-let WORDS_CHANGE_INTERVAL_IN_MS = 10000;
+let WORDS_CHANGE_INTERVAL_IN_MS = 5000;
 
 let mainWindow;
 let tray;
@@ -276,15 +276,7 @@ function displayPhrase(index) {
 function displayPhraseInTray(index) {
   try {
     const phrase = phrases[index];
-    if (process.platform === 'win32') {
-      const contextMenu = Menu.buildFromTemplate([
-        { label: phrase, enabled: false },
-        { label: 'Quit', click: () => app.quit() }
-      ]);
-      tray.setContextMenu(contextMenu);
-    } else {
-      tray.setTitle(phrase);
-    }
+    tray.setTitle(phrase);
   } catch (error) {
     showError('Failed to display phrase in tray.', error);
   }
@@ -355,8 +347,9 @@ app.whenReady().then(() => {
     app.dock.hide();
     mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
     mainWindow.setAlwaysOnTop(true, 'screen-saver');
-  } else {
-    mainWindow.setAlwaysOnTop(true, 'screen-saver');
+  }
+  else{
+    win.setAlwaysOnTop(true, 'screen-saver');
   }
 
   app.on('activate', function () {
