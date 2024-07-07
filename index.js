@@ -246,7 +246,7 @@ function loadPhrases(filePath) {
         return;
       }
       const vocabulary = JSON.parse(data);
-      phrases = vocabulary.map(entry => `${entry.word_1} - ${entry.word_2}`);
+      phrases = vocabulary.map((entry, index) => `${index + 1}. ${entry.word_1} - ${entry.word_2}`);
       if (phrases.length > 0) {
         currentIndex = 0;
         displayPhrase(currentIndex);
