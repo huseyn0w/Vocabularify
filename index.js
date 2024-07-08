@@ -16,11 +16,11 @@ if (process.env.NODE_ENV === 'development') {
 
 const MODES = {
   MENU_BAR: 'Menu Bar',
-  WINDOW: 'Window'
-}
+  WINDOW: 'Window',
+  SOUND: 'Sound'
+};
 
 let WORDS_CHANGE_INTERVAL_IN_MS = 5000;
-
 let mainWindow;
 let tray;
 let phrases = [];
@@ -31,6 +31,7 @@ let currentFromLanguage = 'en';
 let currentLevel = 'A1';
 let currentMode = MODES.WINDOW;
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
+let isSoundMode = false;
 
 function getLanguageFilePath(language, fromLanguage, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
@@ -121,6 +122,15 @@ function createTray() {
         }
       ] : []),
       {
+        label: 'Sound',
+        type: 'checkbox',
+        checked: isSoundMode,
+        click: (menuItem) => {
+          isSoundMode = menuItem.checked;
+          mainWindow.webContents.send('toggle-sound-mode', isSoundMode);
+        }
+      },
+      {
         label: 'Changing speed',
         submenu: createWordSpeedChangingSubMenu()
       },
@@ -165,7 +175,7 @@ function createLanguageSubmenu() {
 function createLevelSubmenu(languageTo, languageFrom) {
   const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
   if (process.env.NODE_ENV === 'development') {
-    levels.push('custom')
+    levels.push('custom');
   }
   return levels.map(level => ({
     label: `Level ${level}`,
@@ -201,9 +211,21 @@ function switchLanguage(language, fromLanguage, level) {
     currentLevel = level;
     currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
     loadPhrases(currentLanguagePath);
+    mainWindow.webContents.send('set-languages', getLanguageCode(currentFromLanguage), getLanguageCode(currentLanguage));
   } catch (error) {
     showError('Failed to switch language.', error);
   }
+}
+
+
+function getLanguageCode(lang) {
+  const languageMap = {
+    en: 'en-US',
+    de: 'de-DE',
+    fr: 'fr-FR',
+    ru: 'ru-RU'
+  };
+  return languageMap[lang] || 'en-US';
 }
 
 function switchMode(mode) {
@@ -341,6 +363,10 @@ app.whenReady().then(() => {
   createWindow();
   createTray();
   registerGlobalShortcuts();
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.send('set-languages', getLanguageCode(currentFromLanguage), getLanguageCode(currentLanguage));
+  });
 
   // Hide the dock icon on macOS
   if (process.platform === 'darwin') {
