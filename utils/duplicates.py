@@ -16,20 +16,18 @@ def process_json(file_path):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(formatted_data)
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <json_file>")
-    else:
-        file_path = sys.argv[1]
-        process_json(file_path)
-
-
 def remove_duplicates(file_name):
     with open(file_name, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
-    # Remove duplicates
-    unique_data = [dict(t) for t in {tuple(d.items()) for d in data}]
+    # Remove duplicates while maintaining order
+    seen = set()
+    unique_data = []
+    for entry in data:
+        entry_tuple = tuple(entry.items())
+        if entry_tuple not in seen:
+            seen.add(entry_tuple)
+            unique_data.append(entry)
     
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(unique_data, f, ensure_ascii=False, indent=4)
@@ -42,6 +40,3 @@ if __name__ == "__main__":
     file_name = sys.argv[1]
     remove_duplicates(file_name)
     process_json(file_name)
-
-
-
