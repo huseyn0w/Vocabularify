@@ -17,7 +17,8 @@ if (process.env.NODE_ENV === 'development') {
 const MODES = {
   MENU_BAR: 'Menu Bar',
   WINDOW: 'Window',
-  SOUND: 'Sound'
+  SOUND: 'Sound',
+  CHECKUP: 'Checkup'
 };
 
 let WORDS_CHANGE_INTERVAL_IN_MS = 5000;
@@ -103,7 +104,7 @@ function createTray() {
           label: 'Mode',
           submenu: [
             {
-              label: 'Window',
+              label: MODES.WINDOW,
               type: 'radio',
               checked: currentMode === MODES.WINDOW,
               click: () => {
@@ -111,18 +112,26 @@ function createTray() {
               }
             },
             {
-              label: 'Menu Bar',
+              label: MODES.MENU_BAR,
               type: 'radio',
               checked: currentMode === MODES.MENU_BAR,
               click: () => {
                 switchMode(MODES.MENU_BAR);
+              }
+            },
+            {
+              label: MODES.CHECKUP,
+              type: 'radio',
+              checked: currentMode === MODES.CHECKUP,
+              click: () => {
+                switchMode(MODES.CHECKUP);
               }
             }
           ]
         }
       ] : []),
       {
-        label: 'Sound',
+        label: MODES.SOUND,
         type: 'checkbox',
         checked: isSoundMode,
         click: (menuItem) => {
@@ -217,7 +226,6 @@ function switchLanguage(language, fromLanguage, level) {
   }
 }
 
-
 function getLanguageCode(lang) {
   const languageMap = {
     en: 'en-US',
@@ -231,7 +239,7 @@ function getLanguageCode(lang) {
 function switchMode(mode) {
   try {
     currentMode = mode;
-    if (mode === MODES.WINDOW) {
+    if (mode === MODES.WINDOW || mode === MODES.CHECKUP) {
       if (!mainWindow) {
         createWindow();
       } else {
@@ -284,12 +292,8 @@ function loadPhrases(filePath) {
 function displayPhrase(index) {
   try {
     const phrase = phrases[index];
-    if (currentMode === 'Window') {
-      mainWindow.webContents.send('display-phrase', phrase);
-      adjustWindowSize(phrase);
-    } else if (currentMode === 'Menu Bar') {
-      displayPhraseInTray(index);
-    }
+    mainWindow.webContents.send('display-phrase', phrase, currentMode);
+    adjustWindowSize(phrase);
   } catch (error) {
     showError('Failed to display phrase.', error);
   }
@@ -373,9 +377,8 @@ app.whenReady().then(() => {
     app.dock.hide();
     mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
     mainWindow.setAlwaysOnTop(true, 'screen-saver');
-  }
-  else{
-    win.setAlwaysOnTop(true, 'screen-saver');
+  } else {
+    mainWindow.setAlwaysOnTop(true, 'screen-saver');
   }
 
   app.on('activate', function () {

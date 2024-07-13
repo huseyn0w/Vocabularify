@@ -27,16 +27,33 @@ function stripOrderNumber(phrase) {
 }
 
 try {
-  ipcRenderer.on('display-phrase', (event, phrase) => {
-    phraseContainer.textContent = phrase;
+  ipcRenderer.on('display-phrase', (event, phrase, mode) => {
     const strippedPhrase = stripOrderNumber(phrase);
     const langs = getLangFromPhrase();
     const parts = strippedPhrase.split(' - ');
-    if (parts.length === 2) {
-      speakText(parts[0], langs[0]);
-      setTimeout(() => speakText(parts[1], langs[1]), 2000); // Speak second part after delay
+
+    if (mode === 'Checkup') {
+      // Display the word without translation for the first 3 seconds
+      if (parts.length === 2) {
+        phraseContainer.textContent = parts[0];
+        speakText(parts[0], langs[0]);
+        setTimeout(() => {
+          phraseContainer.textContent = `${parts[0]} - ${parts[1]}`;
+          speakText(parts[1], langs[1]);
+        }, 3000);
+      } else {
+        phraseContainer.textContent = strippedPhrase; // Default display if format is unexpected
+        speakText(strippedPhrase, languageTo); // Default to languageTo if format is unexpected
+      }
     } else {
-      speakText(strippedPhrase, languageTo); // Default to languageTo if format is unexpected
+      // Existing behavior for other modes
+      phraseContainer.textContent = phrase;
+      if (parts.length === 2) {
+        speakText(parts[0], langs[0]);
+        setTimeout(() => speakText(parts[1], langs[1]), 2000); // Speak second part after delay
+      } else {
+        speakText(strippedPhrase, languageTo); // Default to languageTo if format is unexpected
+      }
     }
   });
 
