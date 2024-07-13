@@ -3,7 +3,6 @@ const path = require('path');
 const fs = require('fs');
 const { createAboutWindow } = require('./about');
 
-// Conditionally include electron-reload in development mode
 if (process.env.NODE_ENV === 'development') {
   try {
     require('electron-reload')(__dirname, {
@@ -104,7 +103,7 @@ function createTray() {
           label: 'Mode',
           submenu: [
             {
-              label: MODES.WINDOW,
+              label: 'Window',
               type: 'radio',
               checked: currentMode === MODES.WINDOW,
               click: () => {
@@ -112,7 +111,7 @@ function createTray() {
               }
             },
             {
-              label: MODES.MENU_BAR,
+              label: 'Menu Bar',
               type: 'radio',
               checked: currentMode === MODES.MENU_BAR,
               click: () => {
@@ -120,7 +119,7 @@ function createTray() {
               }
             },
             {
-              label: MODES.CHECKUP,
+              label: 'Checkup',
               type: 'radio',
               checked: currentMode === MODES.CHECKUP,
               click: () => {
@@ -131,7 +130,7 @@ function createTray() {
         }
       ] : []),
       {
-        label: MODES.SOUND,
+        label: 'Sound',
         type: 'checkbox',
         checked: isSoundMode,
         click: (menuItem) => {
@@ -344,7 +343,7 @@ function registerGlobalShortcuts() {
     });
 
     globalShortcut.register('Shift+Left', () => {
-      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      currentIndex = ((currentIndex - 1 + phrases.length) % phrases.length);
       displayPhrase(currentIndex);
     });
   }
@@ -372,7 +371,6 @@ app.whenReady().then(() => {
     mainWindow.webContents.send('set-languages', getLanguageCode(currentFromLanguage), getLanguageCode(currentLanguage));
   });
 
-  // Hide the dock icon on macOS
   if (process.platform === 'darwin') {
     app.dock.hide();
     mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
@@ -382,7 +380,7 @@ app.whenReady().then(() => {
   }
 
   app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0 && currentMode === 'Window') createWindow();
+    if (BrowserWindow.getAllWindows().length === 0 && (currentMode === 'Window' || currentMode === 'Checkup')) createWindow();
   });
 });
 
