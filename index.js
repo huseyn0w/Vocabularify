@@ -343,7 +343,7 @@ function registerGlobalShortcuts() {
     });
 
     globalShortcut.register('Shift+Left', () => {
-      currentIndex = ((currentIndex - 1 + phrases.length) % phrases.length);
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
       displayPhrase(currentIndex);
     });
   }
@@ -404,4 +404,8 @@ ipcMain.on('resize-window', (event, width, height) => {
 
 ipcMain.on('key-press', (event, keyEvent) => {
   handleKeyPress(keyEvent);
+});
+
+ipcMain.on('clear-timeouts', (event) => {
+  mainWindow.webContents.send('clear-timeouts');
 });

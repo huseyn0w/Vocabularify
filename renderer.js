@@ -3,6 +3,7 @@ const phraseContainer = document.getElementById('phrase-container');
 let isSoundMode = false;
 let languageTo = 'en-US';
 let languageFrom = 'de-DE';
+let timeoutId;
 
 function showError(message, error) {
   const dialog = remote.dialog;
@@ -26,8 +27,15 @@ function stripOrderNumber(phrase) {
   return match ? match[1] : phrase;
 }
 
+function clearPreviousTimeout() {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+}
+
 try {
   ipcRenderer.on('display-phrase', (event, phrase, mode) => {
+    clearPreviousTimeout();
     const langs = getLangFromPhrase();
     if (mode === 'Checkup') {
       const parts = phrase.split(' - ');
@@ -35,7 +43,7 @@ try {
       if (parts.length === 2) {
         phraseContainer.textContent = parts[0];
         speakText(parts[0], langs[0]);
-        setTimeout(() => {
+        timeoutId = setTimeout(() => {
           phraseContainer.textContent = phrase;
           speakText(parts[1], langs[1]);
         }, 3000);
@@ -74,6 +82,10 @@ try {
   ipcRenderer.on('set-languages', (event, fromLang, toLang) => {
     languageFrom = fromLang;
     languageTo = toLang;
+  });
+
+  ipcRenderer.on('clear-timeouts', () => {
+    clearPreviousTimeout();
   });
 
   document.addEventListener('keydown', (event) => {
