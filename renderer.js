@@ -30,6 +30,7 @@ function stripOrderNumber(phrase) {
 function clearPreviousTimeout() {
   if (timeoutId) {
     clearTimeout(timeoutId);
+    timeoutId = null;
   }
 }
 
@@ -39,7 +40,6 @@ try {
     const langs = getLangFromPhrase();
     if (mode === 'Checkup') {
       const parts = phrase.split(' - ');
-      // Display the word without translation for the first 3 seconds
       if (parts.length === 2) {
         phraseContainer.textContent = parts[0];
         speakText(parts[0], langs[0]);
@@ -48,19 +48,18 @@ try {
           speakText(parts[1], langs[1]);
         }, 3000);
       } else {
-        phraseContainer.textContent = phrase; // Default display if format is unexpected
-        speakText(phrase, languageTo); // Default to languageTo if format is unexpected
+        phraseContainer.textContent = phrase;
+        speakText(phrase, languageTo);
       }
     } else {
-      // Existing behavior for other modes
       phraseContainer.textContent = phrase;
       const strippedPhrase = stripOrderNumber(phrase);
       const parts = strippedPhrase.split(' - ');
       if (parts.length === 2) {
         speakText(parts[0], langs[0]);
-        setTimeout(() => speakText(parts[1], langs[1]), 2000); // Speak second part after delay
+        timeoutId = setTimeout(() => speakText(parts[1], langs[1]), 2000);
       } else {
-        speakText(strippedPhrase, languageTo); // Default to languageTo if format is unexpected
+        speakText(strippedPhrase, languageTo);
       }
     }
   });
@@ -91,6 +90,7 @@ try {
   document.addEventListener('keydown', (event) => {
     ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
   });
+
 
 } catch (error) {
   showError('An error occurred in the renderer process.', error);

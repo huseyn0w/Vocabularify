@@ -322,17 +322,22 @@ function adjustWindowSize(text) {
 
 function handleKeyPress(event) {
   try {
-    if (event.shiftKey && event.key === 'ArrowRight') {
-      currentIndex = (currentIndex + 1) % phrases.length;
+    if (event.shiftKey && (event.key === 'ArrowRight' || event.key === 'ArrowLeft')) {
+      clearInterval(intervalId);
+      if (event.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % phrases.length;
+      } else if (event.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      }
+      mainWindow.webContents.send('clear-timeouts');  // Ensure renderer clears any existing timeouts
       displayPhrase(currentIndex);
-    } else if (event.shiftKey && event.key === 'ArrowLeft') {
-      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
-      displayPhrase(currentIndex);
+      intervalId = setInterval(cyclePhrases, WORDS_CHANGE_INTERVAL_IN_MS);
     }
   } catch (error) {
     showError('Failed to handle key press.', error);
   }
 }
+
 
 function registerGlobalShortcuts() {
   globalShortcut.unregisterAll();
