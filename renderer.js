@@ -12,7 +12,8 @@ function showError(message, error) {
 
 function speakText(text, lang) {
   if (isSoundMode) {
-    const utterance = new SpeechSynthesisUtterance(text);
+    const strippedText = stripOrderNumber(text);
+    const utterance = new SpeechSynthesisUtterance(strippedText);
     utterance.lang = lang;
     speechSynthesis.speak(utterance);
   }
