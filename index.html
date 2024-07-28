@@ -16,8 +16,9 @@
         -webkit-app-region: drag; /* Makes the window draggable */
         transition: all .3s;
         flex-direction: column; /* Added this line */
+        overflow: hidden; /* Prevent scroll bars */
       }
-      #disclaimer{
+      #disclaimer {
         position: absolute;
         font-style: italic;
         top: 10px;
@@ -28,13 +29,16 @@
         font-size: 12px;
         margin-bottom: 30px;
       }
-      #disclaimer strong{
+      #disclaimer strong {
         margin: 0 5px;
+      }
+      #phrase-container {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id="disclaimer">Click <strong>Shift + -> arrow</strong> or <strong>shift + <- arrow</strong> to go to next / previous word</div>
+    <div id="disclaimer"><p>Click <strong>Shift + -> arrow</strong> or <strong>Shift + <- arrow</strong> to go <br /> to next / previous word</p></div>
     <div id="phrase-container"></div>
     <script src="renderer.js"></script>
   </body>

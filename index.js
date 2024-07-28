@@ -22,6 +22,9 @@ const MODES = {
   CHECKUP: 'Checkup'
 };
 
+const MIN_WINDOW_WIDTH = 400; // Set minimum window width
+const MIN_WINDOW_HEIGHT = 200; // Set minimum window height
+
 let WORDS_CHANGE_INTERVAL_IN_MS = 5000;
 let mainWindow;
 let tray;
@@ -72,6 +75,8 @@ function createWindow() {
     mainWindow = new BrowserWindow({
       width: 800,
       height: 600,
+      minWidth: MIN_WINDOW_WIDTH,
+      minHeight: MIN_WINDOW_HEIGHT,
       alwaysOnTop: true,
       webPreferences: {
         nodeIntegration: true,
@@ -345,8 +350,8 @@ function adjustWindowSize(text) {
     const fontSize = 24;
     const padding = 20;
     const verticalPadding = 100; // 50px top + 50px bottom
-    const width = (text.length * fontSize * 0.6) + padding;
-    const height = fontSize + verticalPadding;
+    const width = Math.max((text.length * fontSize * 0.6) + padding, MIN_WINDOW_WIDTH);
+    const height = Math.max(fontSize + verticalPadding, MIN_WINDOW_HEIGHT);
     mainWindow.setSize(Math.ceil(width), Math.ceil(height));
   } catch (error) {
     showError('Failed to adjust window size.', error);
