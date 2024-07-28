@@ -1,4 +1,4 @@
-const { ipcRenderer, remote } = require('electron');
+const { ipcRenderer } = require('electron');
 const phraseContainer = document.getElementById('phrase-container');
 let isSoundMode = false;
 let languageTo = 'en-US';
@@ -6,7 +6,7 @@ let languageFrom = 'de-DE';
 let timeoutId;
 
 function showError(message, error) {
-  const dialog = remote.dialog;
+  const dialog = require('electron').remote.dialog;
   dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
 }
 
@@ -35,64 +35,58 @@ function clearPreviousTimeout() {
   }
 }
 
-try {
-  ipcRenderer.on('display-phrase', (event, phrase, mode) => {
-    clearPreviousTimeout();
-    const langs = getLangFromPhrase();
-    if (mode === 'Checkup') {
-      const parts = phrase.split(' - ');
-      if (parts.length === 2) {
-        phraseContainer.textContent = parts[0];
-        speakText(parts[0], langs[0]);
-        timeoutId = setTimeout(() => {
-          phraseContainer.textContent = phrase;
-          speakText(parts[1], langs[1]);
-        }, 3000);
-      } else {
+ipcRenderer.on('display-phrase', (event, phrase, mode) => {
+  clearPreviousTimeout();
+  const langs = getLangFromPhrase();
+  if (mode === 'Checkup') {
+    const parts = phrase.split(' - ');
+    if (parts.length === 2) {
+      phraseContainer.textContent = parts[0];
+      speakText(parts[0], langs[0]);
+      timeoutId = setTimeout(() => {
         phraseContainer.textContent = phrase;
-        speakText(phrase, languageTo);
-      }
+        speakText(parts[1], langs[1]);
+      }, 3000);
     } else {
       phraseContainer.textContent = phrase;
-      const strippedPhrase = stripOrderNumber(phrase);
-      const parts = strippedPhrase.split(' - ');
-      if (parts.length === 2) {
-        speakText(parts[0], langs[0]);
-        timeoutId = setTimeout(() => speakText(parts[1], langs[1]), 2000);
-      } else {
-        speakText(strippedPhrase, languageTo);
-      }
+      speakText(phrase, languageTo);
     }
-  });
-
-  ipcRenderer.on('set-background', (event, background) => {
-    if (background === 'dark') {
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
+  } else {
+    phraseContainer.textContent = phrase;
+    const strippedPhrase = stripOrderNumber(phrase);
+    const parts = strippedPhrase.split(' - ');
+    if (parts.length === 2) {
+      speakText(parts[0], langs[0]);
+      timeoutId = setTimeout(() => speakText(parts[1], langs[1]), 2000);
     } else {
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black';
+      speakText(strippedPhrase, languageTo);
     }
-  });
+  }
+});
 
-  ipcRenderer.on('toggle-sound-mode', (event, enabled) => {
-    isSoundMode = enabled;
-  });
+ipcRenderer.on('set-background', (event, background) => {
+  if (background === 'dark') {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+  } else {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+  }
+});
 
-  ipcRenderer.on('set-languages', (event, fromLang, toLang) => {
-    languageFrom = fromLang;
-    languageTo = toLang;
-  });
+ipcRenderer.on('toggle-sound-mode', (event, enabled) => {
+  isSoundMode = enabled;
+});
 
-  ipcRenderer.on('clear-timeouts', () => {
-    clearPreviousTimeout();
-  });
+ipcRenderer.on('set-languages', (event, fromLang, toLang) => {
+  languageFrom = fromLang;
+  languageTo = toLang;
+});
 
-  document.addEventListener('keydown', (event) => {
-    ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
-  });
+ipcRenderer.on('clear-timeouts', () => {
+  clearPreviousTimeout();
+});
 
-
-} catch (error) {
-  showError('An error occurred in the renderer process.', error);
-}
+document.addEventListener('keydown', (event) => {
+  ipcRenderer.send('key-press', { shiftKey: event.shiftKey, key: event.key });
+});

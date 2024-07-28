@@ -2,8 +2,14 @@ const { app, BrowserWindow, Menu, Tray, ipcMain, dialog, globalShortcut } = requ
 const path = require('path');
 const fs = require('fs');
 const { createAboutWindow } = require('./about');
+const { handleImportDictionary, handleDeleteDictionary } = require('./dictionary-import');
 
 const CONFIG_PATH = path.join(app.getPath('userData'), 'config.json');
+const CUSTOM_DICTS_PATH = path.join(app.getPath('userData'), 'custom_dictionaries');
+
+if (!fs.existsSync(CUSTOM_DICTS_PATH)) {
+  fs.mkdirSync(CUSTOM_DICTS_PATH);
+}
 
 if (process.env.NODE_ENV === 'development') {
   try {
@@ -40,6 +46,9 @@ let isSoundMode = false;
 
 function getLanguageFilePath(language, fromLanguage, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
+  if (level.startsWith('custom:')) {
+    return path.join(CUSTOM_DICTS_PATH, `${language}_${fromLanguage}_${level.split(':')[1]}.json`);
+  }
   return path.join(basePath, 'languages', language, fromLanguage, `${level.toLowerCase()}.json`);
 }
 
@@ -177,6 +186,16 @@ function createTray() {
         submenu: createWordSpeedChangingSubMenu()
       },
       {
+        label: 'Import Dictionary',
+        click: () => {
+          createImportWindow();
+        }
+      },
+      {
+        label: 'Delete Dictionary',
+        submenu: createDeleteDictionarySubmenu()
+      },
+      {
         label: 'About',
         click: () => {
           createAboutWindow();
@@ -217,15 +236,52 @@ function createLanguageSubmenu() {
 
 function createLevelSubmenu(languageTo, languageFrom) {
   const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
-  if (process.env.NODE_ENV === 'development') {
-    levels.push('custom');
-  }
-  return levels.map(level => ({
-    label: `Level ${level}`,
-    type: 'radio',
-    checked: currentLevel === level, // Check if this is the selected level
-    click: () => {
-      switchLanguage(languageTo, languageFrom, level);
+  const customDictionaries = fs.readdirSync(CUSTOM_DICTS_PATH)
+    .filter(file => file.endsWith('.json') && file.startsWith(`${languageTo}_${languageFrom}_`))
+    .map(file => path.basename(file, '.json').replace(`${languageTo}_${languageFrom}_`, ''));
+  
+  return [
+    ...levels.map(level => ({
+      label: `Level ${level}`,
+      type: 'radio',
+      checked: currentLevel === level,
+      click: () => {
+        switchLanguage(languageTo, languageFrom, level);
+      }
+    })),
+    ...customDictionaries.map(dict => ({
+      label: `Custom: ${dict}`,
+      type: 'radio',
+      checked: currentLevel === `custom:${dict}`,
+      click: () => {
+        switchLanguage(languageTo, languageFrom, `custom:${dict}`);
+      }
+    }))
+  ];
+}
+
+function createDeleteDictionarySubmenu() {
+  const customDictionaries = fs.readdirSync(CUSTOM_DICTS_PATH)
+    .filter(file => file.endsWith('.json'))
+    .map(file => path.basename(file, '.json'));
+  
+  return customDictionaries.map(dict => ({
+    label: dict,
+    click: async () => {
+      const result = await handleDeleteDictionary(null, dict);
+      if (result.success) {
+        if (currentLevel === `custom:${dict.split('_').slice(2).join('_')}`) {
+          switchLanguage(currentLanguage, currentFromLanguage, 'A1');
+        }
+        dialog.showMessageBoxSync({
+          type: 'info',
+          title: 'Success',
+          message: `Dictionary ${result.dictionaryName} deleted successfully. Switching back to A1 level`
+        });
+      } else {
+        dialog.showErrorBox('Error', `Failed to delete dictionary: ${result.error}`);
+      }
+      updateTrayMenu();
     }
   }));
 }
@@ -479,6 +535,16 @@ function updateTrayMenu() {
       submenu: createWordSpeedChangingSubMenu()
     },
     {
+      label: 'Import Dictionary',
+      click: () => {
+        createImportWindow();
+      }
+    },
+    {
+      label: 'Delete Dictionary',
+      submenu: createDeleteDictionarySubmenu()
+    },
+    {
       label: 'About',
       click: () => {
         createAboutWindow();
@@ -494,6 +560,19 @@ function updateTrayMenu() {
   ]);
 
   tray.setContextMenu(contextMenu);
+}
+
+function createImportWindow() {
+  const importWindow = new BrowserWindow({
+    width: 500,
+    height: 400,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+  });
+
+  importWindow.loadFile('import.html');
 }
 
 app.whenReady().then(() => {
@@ -528,20 +607,18 @@ app.on('will-quit', () => {
   saveState();
 });
 
-ipcMain.on('resize-window', (event, width, height) => {
-  try {
-    if (mainWindow) {
-      mainWindow.setSize(width, height);
-    }
-  } catch (error) {
-    showError('Failed to resize window.', error);
-  }
+ipcMain.handle('import-dictionary', async (event, ...args) => {
+  const result = await handleImportDictionary(event, ...args);
+  updateTrayMenu();
+  return result;
+});
+
+ipcMain.handle('delete-dictionary', async (event, ...args) => {
+  const result = await handleDeleteDictionary(event, ...args);
+  updateTrayMenu();
+  return result;
 });
 
 ipcMain.on('key-press', (event, keyEvent) => {
   handleKeyPress(keyEvent);
-});
-
-ipcMain.on('clear-timeouts', (event) => {
-  mainWindow.webContents.send('clear-timeouts');
 });
