@@ -3,6 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const { createAboutWindow } = require('./about');
 
+const CONFIG_PATH = path.join(app.getPath('userData'), 'config.json');
+
 if (process.env.NODE_ENV === 'development') {
   try {
     require('electron-reload')(__dirname, {
@@ -36,6 +38,33 @@ let isSoundMode = false;
 function getLanguageFilePath(language, fromLanguage, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
   return path.join(basePath, 'languages', language, fromLanguage, `${level.toLowerCase()}.json`);
+}
+
+function saveState() {
+  const state = {
+    currentIndex,
+    currentLanguage,
+    currentFromLanguage,
+    currentLevel,
+    currentMode,
+    isSoundMode,
+    WORDS_CHANGE_INTERVAL_IN_MS
+  };
+  fs.writeFileSync(CONFIG_PATH, JSON.stringify(state));
+}
+
+function loadState() {
+  if (fs.existsSync(CONFIG_PATH)) {
+    const state = JSON.parse(fs.readFileSync(CONFIG_PATH));
+    currentIndex = state.currentIndex || 0;
+    currentLanguage = state.currentLanguage || 'de';
+    currentFromLanguage = state.currentFromLanguage || 'en';
+    currentLevel = state.currentLevel || 'A1';
+    currentMode = state.currentMode || MODES.WINDOW;
+    isSoundMode = state.isSoundMode || false;
+    WORDS_CHANGE_INTERVAL_IN_MS = state.WORDS_CHANGE_INTERVAL_IN_MS || 5000;
+    currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
+  }
 }
 
 function createWindow() {
@@ -151,6 +180,7 @@ function createTray() {
       {
         label: 'Quit',
         click: () => {
+          saveState();
           app.quit();
         }
       }
@@ -188,6 +218,7 @@ function createLevelSubmenu(languageTo, languageFrom) {
   return levels.map(level => ({
     label: `Level ${level}`,
     type: 'radio',
+    checked: currentLevel === level, // Check if this is the selected level
     click: () => {
       switchLanguage(languageTo, languageFrom, level);
     }
@@ -217,9 +248,11 @@ function switchLanguage(language, fromLanguage, level) {
     currentLanguage = language;
     currentFromLanguage = fromLanguage;
     currentLevel = level;
+    currentIndex = 0; // Reset the word index to start from the first word
     currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
     loadPhrases(currentLanguagePath);
     mainWindow.webContents.send('set-languages', getLanguageCode(currentFromLanguage), getLanguageCode(currentLanguage));
+    updateTrayMenu(); // Update the tray menu to reflect the new state
   } catch (error) {
     showError('Failed to switch language.', error);
   }
@@ -277,7 +310,7 @@ function loadPhrases(filePath) {
       const vocabulary = JSON.parse(data);
       phrases = vocabulary.map((entry, index) => `${index + 1}. ${entry.word_1} - ${entry.word_2}`);
       if (phrases.length > 0) {
-        currentIndex = 0;
+        currentIndex = Math.min(currentIndex, phrases.length - 1); // Ensure currentIndex is valid
         displayPhrase(currentIndex);
         clearInterval(intervalId);
         intervalId = setInterval(cyclePhrases, WORDS_CHANGE_INTERVAL_IN_MS);
@@ -338,7 +371,6 @@ function handleKeyPress(event) {
   }
 }
 
-
 function registerGlobalShortcuts() {
   globalShortcut.unregisterAll();
   if (currentMode === 'Menu Bar') {
@@ -367,7 +399,100 @@ function showError(message, error) {
   dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
 }
 
+function updateTrayMenu() {
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Vocabularify',
+      enabled: false
+    },
+    {
+      label: 'Background',
+      submenu: [
+        {
+          label: 'Light',
+          type: 'radio',
+          checked: true,
+          click: () => {
+            mainWindow.webContents.send('set-background', 'light');
+          }
+        },
+        {
+          label: 'Dark',
+          type: 'radio',
+          click: () => {
+            mainWindow.webContents.send('set-background', 'dark');
+          }
+        }
+      ]
+    },
+    {
+      label: 'Language',
+      submenu: createLanguageSubmenu()
+    },
+    ...(process.platform === 'darwin' ? [
+      {
+        label: 'Mode',
+        submenu: [
+          {
+            label: 'Window',
+            type: 'radio',
+            checked: currentMode === MODES.WINDOW,
+            click: () => {
+              switchMode(MODES.WINDOW);
+            }
+          },
+          {
+            label: 'Menu Bar',
+            type: 'radio',
+            checked: currentMode === MODES.MENU_BAR,
+            click: () => {
+              switchMode(MODES.MENU_BAR);
+            }
+          },
+          {
+            label: 'Checkup',
+            type: 'radio',
+            checked: currentMode === MODES.CHECKUP,
+            click: () => {
+              switchMode(MODES.CHECKUP);
+            }
+          }
+        ]
+      }
+    ] : []),
+    {
+      label: 'Sound',
+      type: 'checkbox',
+      checked: isSoundMode,
+      click: (menuItem) => {
+        isSoundMode = menuItem.checked;
+        mainWindow.webContents.send('toggle-sound-mode', isSoundMode);
+      }
+    },
+    {
+      label: 'Changing speed',
+      submenu: createWordSpeedChangingSubMenu()
+    },
+    {
+      label: 'About',
+      click: () => {
+        createAboutWindow();
+      }
+    },
+    {
+      label: 'Quit',
+      click: () => {
+        saveState();
+        app.quit();
+      }
+    }
+  ]);
+
+  tray.setContextMenu(contextMenu);
+}
+
 app.whenReady().then(() => {
+  loadState();
   createWindow();
   createTray();
   registerGlobalShortcuts();
@@ -395,6 +520,7 @@ app.on('window-all-closed', function () {
 
 app.on('will-quit', () => {
   globalShortcut.unregisterAll();
+  saveState();
 });
 
 ipcMain.on('resize-window', (event, width, height) => {
