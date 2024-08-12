@@ -1,5 +1,7 @@
 const { ipcRenderer } = require('electron');
 const phraseContainer = document.getElementById('phrase-container');
+const progressBarInner = document.getElementById('progress-bar-inner');
+const progressLabel = document.getElementById('progress-label');
 let isSoundMode = false;
 let languageTo = 'en-US';
 let languageFrom = 'de-DE';
@@ -35,9 +37,16 @@ function clearPreviousTimeout() {
   }
 }
 
-ipcRenderer.on('display-phrase', (event, phrase, mode) => {
+function updateProgressBar(currentIndex, totalPhrases) {
+  const progressPercentage = (currentIndex / totalPhrases) * 100;
+  progressBarInner.style.width = `${progressPercentage}%`;
+  progressLabel.textContent = `${currentIndex + 1} / ${totalPhrases}`;
+}
+
+ipcRenderer.on('display-phrase', (event, phrase, mode, currentIndex, totalPhrases) => {
   clearPreviousTimeout();
   const langs = getLangFromPhrase();
+  updateProgressBar(currentIndex, totalPhrases);
   if (mode === 'Checkup') {
     const parts = phrase.split(' - ');
     if (parts.length === 2) {

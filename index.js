@@ -369,7 +369,7 @@ function loadPhrases(filePath) {
         return;
       }
       const vocabulary = JSON.parse(data);
-      phrases = vocabulary.map((entry, index) => `${index + 1}. ${entry.word_1} - ${entry.word_2}`);
+      phrases = vocabulary.map(entry => `${entry.word_1} - ${entry.word_2}`);
       if (phrases.length > 0) {
         currentIndex = Math.min(currentIndex, phrases.length - 1); // Ensure currentIndex is valid
         displayPhrase(currentIndex);
@@ -385,7 +385,7 @@ function loadPhrases(filePath) {
 function displayPhrase(index) {
   try {
     const phrase = phrases[index];
-    mainWindow.webContents.send('display-phrase', phrase, currentMode);
+    mainWindow.webContents.send('display-phrase', phrase, currentMode, currentIndex, phrases.length);
     adjustWindowSize(phrase);
   } catch (error) {
     showError('Failed to display phrase.', error);
