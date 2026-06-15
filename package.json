@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=development electronmon .",
     "build": "electron-builder",
-    "build:win": "electron-builder --win"
+    "build:win": "electron-builder --win",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "build": {
     "appId": "com.elmanhuseynov.vocabularify",
@@ -91,6 +93,7 @@
   "devDependencies": {
     "electron": "^42.4.0",
     "electron-builder": "^26.15.3",
-    "electronmon": "^2.0.4"
+    "electronmon": "^2.0.4",
+    "vitest": "^4.1.9"
   }
 }
