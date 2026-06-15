@@ -1,6 +1,6 @@
 const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron');
 
-const { MODES, IPC, MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT } = require('./src/shared/constants');
+const { MODES, IPC } = require('./src/shared/constants');
 const { getLanguageFilePath, parseCustomDictName, getLocale } = require('./src/shared/languagePaths');
 const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir } = require('./src/main/config');
 const { loadState, saveState } = require('./src/main/store');
@@ -29,18 +29,7 @@ function renderPhrase(phrase, index, total) {
     tray.setTitle(phrase);
   } else if (mainWindow) {
     mainWindow.webContents.send(IPC.DISPLAY_PHRASE, phrase, state.currentMode, index, total);
-    resizeWindowToPhrase(phrase);
   }
-}
-
-function resizeWindowToPhrase(text) {
-  if (!mainWindow) {
-    return;
-  }
-  const fontSize = 24;
-  const width = Math.max(text.length * fontSize * 0.6 + 20, MIN_WINDOW_WIDTH);
-  const height = Math.max(fontSize + 100, MIN_WINDOW_HEIGHT);
-  mainWindow.setSize(Math.ceil(width), Math.ceil(height));
 }
 
 function currentDictionaryPath() {
@@ -166,6 +155,11 @@ function persist() {
   saveState(state);
 }
 
+function quitApp() {
+  persist();
+  app.quit();
+}
+
 // --- Window wiring ----------------------------------------------------------
 
 function createWiredMainWindow() {
@@ -201,10 +195,7 @@ app.whenReady().then(() => {
       openImport: () => createImportWindow(),
       openAbout: () => createAboutWindow(),
       deleteDictionary: deleteDictionaryAction,
-      quit: () => {
-        persist();
-        app.quit();
-      }
+      quit: quitApp
     },
     dictionaries
   });

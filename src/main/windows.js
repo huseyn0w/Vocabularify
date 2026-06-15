@@ -1,7 +1,7 @@
 const { BrowserWindow } = require('electron');
 const path = require('path');
 const { APP_ROOT } = require('./config');
-const { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT } = require('../shared/constants');
+const { WINDOW_WIDTH, WINDOW_HEIGHT } = require('../shared/constants');
 
 const htmlPath = name => path.join(APP_ROOT, name);
 const preloadPath = name => path.join(__dirname, '..', 'preload', name);
@@ -21,17 +21,20 @@ function securePreferences(preloadScript) {
 
 function createMainWindow({ onClose, onReady } = {}) {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    minWidth: MIN_WINDOW_WIDTH,
-    minHeight: MIN_WINDOW_HEIGHT,
+    width: WINDOW_WIDTH,
+    height: WINDOW_HEIGHT,
+    minWidth: 300,
+    minHeight: 160,
+    // Standard window chrome: native minimise / maximize / close and resize
+    // handles, available directly on the window.
+    title: 'Vocabularify',
     alwaysOnTop: true,
     skipTaskbar: true,
+    backgroundColor: '#ffffff',
     webPreferences: securePreferences('main.js')
   });
 
   win.loadFile(htmlPath('index.html'));
-  win.setBackgroundColor('#FFFFFF');
 
   if (onClose) {
     win.on('close', onClose);

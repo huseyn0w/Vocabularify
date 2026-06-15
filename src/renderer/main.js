@@ -1,8 +1,12 @@
 const phraseContainer = document.getElementById('phrase-container');
+const sourceEl = document.getElementById('source');
+const targetEl = document.getElementById('target');
+const hintEl = document.getElementById('hint');
 const progressBarInner = document.getElementById('progress-bar-inner');
 const progressLabel = document.getElementById('progress-label');
 
 const PHRASE_SEPARATOR = ' - ';
+const HINT_FADE_DELAY_MS = 6000;
 
 let isSoundMode = false;
 let fromLocale = 'de-DE';
@@ -24,12 +28,12 @@ function speak(text, locale) {
   }
 }
 
-// Splits "word - translation" on the first separator; returns the whole
-// string as a single part when no separator is present.
+// Splits "word - translation" on the first separator; the source word is
+// what the learner already knows, the target is the word being learned.
 function splitPhrase(phrase) {
   const sepIndex = phrase.indexOf(PHRASE_SEPARATOR);
   if (sepIndex === -1) {
-    return [phrase];
+    return [phrase, ''];
   }
   return [phrase.slice(0, sepIndex), phrase.slice(sepIndex + PHRASE_SEPARATOR.length)];
 }
@@ -40,29 +44,45 @@ function updateProgressBar(index, total) {
   progressLabel.textContent = `${index + 1} / ${total}`;
 }
 
+// Restarts the entrance animation by forcing a reflow before re-adding it.
+function replayEnterAnimation() {
+  phraseContainer.style.animation = 'none';
+  void phraseContainer.offsetWidth;
+  phraseContainer.style.animation = '';
+}
+
 function displayPhrase({ phrase, mode, index, total }) {
   clearRevealTimeout();
   updateProgressBar(index, total);
-  const [word, translation] = splitPhrase(phrase);
+  replayEnterAnimation();
 
-  if (mode === 'Checkup' && translation !== undefined) {
-    // Show the prompt, then reveal the translation after a short delay.
-    phraseContainer.textContent = word;
-    speak(word, fromLocale);
+  const [source, target] = splitPhrase(phrase);
+  sourceEl.textContent = source;
+  targetEl.textContent = target;
+
+  if (mode === 'Checkup' && target) {
+    // Hide the answer, then reveal it after a short delay.
+    targetEl.classList.add('hidden');
+    speak(source, fromLocale);
     revealTimeoutId = setTimeout(() => {
-      phraseContainer.textContent = phrase;
-      speak(translation, toLocale);
+      targetEl.classList.remove('hidden');
+      speak(target, toLocale);
     }, 3000);
     return;
   }
 
-  phraseContainer.textContent = phrase;
-  if (translation !== undefined) {
-    speak(word, fromLocale);
-    revealTimeoutId = setTimeout(() => speak(translation, toLocale), 2000);
+  targetEl.classList.remove('hidden');
+  if (target) {
+    speak(source, fromLocale);
+    revealTimeoutId = setTimeout(() => speak(target, toLocale), 2000);
   } else {
-    speak(phrase, toLocale);
+    speak(source, toLocale);
   }
+}
+
+function scheduleHintFade() {
+  hintEl.classList.remove('faded');
+  setTimeout(() => hintEl.classList.add('faded'), HINT_FADE_DELAY_MS);
 }
 
 window.vocab.onSetLanguages(({ fromLocale: from, toLocale: to }) => {
@@ -75,9 +95,7 @@ window.vocab.onToggleSound(enabled => {
 });
 
 window.vocab.onSetBackground(background => {
-  const dark = background === 'dark';
-  document.body.style.backgroundColor = dark ? 'black' : 'white';
-  document.body.style.color = dark ? 'white' : 'black';
+  document.body.classList.toggle('dark', background === 'dark');
 });
 
 window.vocab.onClearTimeouts(clearRevealTimeout);
@@ -86,3 +104,5 @@ window.vocab.onDisplayPhrase(displayPhrase);
 document.addEventListener('keydown', event => {
   window.vocab.sendKeyPress({ shiftKey: event.shiftKey, key: event.key });
 });
+
+scheduleHintFade();

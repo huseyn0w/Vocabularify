@@ -32,8 +32,10 @@ const DEFAULT_LOCALE = 'en-US';
 const SPEED_INTERVALS = Object.freeze([5000, 10000, 15000, 20000]);
 const DEFAULT_INTERVAL_MS = 5000;
 
-const MIN_WINDOW_WIDTH = 400;
-const MIN_WINDOW_HEIGHT = 200;
+// Fixed size for the floating card window (no per-phrase resizing, which
+// previously made the window jump every few seconds).
+const WINDOW_WIDTH = 460;
+const WINDOW_HEIGHT = 240;
 
 // Separator between a word and its translation, in both stored phrases and
 // the plain-text import format ("word - translation").
@@ -64,9 +66,9 @@ module.exports = {
   DEFAULT_LOCALE,
   SPEED_INTERVALS,
   DEFAULT_INTERVAL_MS,
-  MIN_WINDOW_WIDTH,
-  MIN_WINDOW_HEIGHT,
   PHRASE_SEPARATOR,
   CUSTOM_LEVEL_PREFIX,
+  WINDOW_WIDTH,
+  WINDOW_HEIGHT,
   IPC
 };
