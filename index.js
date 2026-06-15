@@ -176,6 +176,13 @@ function quitApp() {
   app.quit();
 }
 
+// Parent dialogs to the main window only when it is actually visible; a
+// child of a hidden window (Menu Bar mode) may not display. When hidden,
+// returning undefined makes the dialog a normal top-level window.
+function dialogParent() {
+  return mainWindow && !mainWindow.isDestroyed() && mainWindow.isVisible() ? mainWindow : undefined;
+}
+
 // --- Window wiring ----------------------------------------------------------
 
 function createWiredMainWindow() {
@@ -211,9 +218,9 @@ app.whenReady().then(() => {
       switchMode,
       setSpeed,
       toggleSound,
-      openImport: () => createImportWindow(),
-      openCustomSpeed: () => createSpeedWindow(),
-      openAbout: () => createAboutWindow(),
+      openImport: () => createImportWindow({ parent: dialogParent() }),
+      openCustomSpeed: () => createSpeedWindow({ parent: dialogParent() }),
+      openAbout: () => createAboutWindow({ parent: dialogParent() }),
       deleteDictionary: deleteDictionaryAction,
       quit: quitApp
     },

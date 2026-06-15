@@ -46,21 +46,29 @@ function createMainWindow({ onClose, onReady } = {}) {
   return win;
 }
 
-function createImportWindow() {
+// Dialogs are created as children of the main window (`parent`) so they
+// always sit above it — the main window is always-on-top at screen-saver
+// level, which would otherwise hide a plain top-level dialog behind it.
+// They stay non-modal so the user can still move and interact with them.
+function createImportWindow({ parent } = {}) {
   const win = new BrowserWindow({
     width: 500,
     height: 400,
+    parent,
+    center: true,
     webPreferences: securePreferences('import.js')
   });
   win.loadFile(htmlPath('import.html'));
   return win;
 }
 
-function createSpeedWindow() {
+function createSpeedWindow({ parent } = {}) {
   const win = new BrowserWindow({
     width: 360,
     height: 260,
     resizable: false,
+    parent,
+    center: true,
     title: 'Custom Speed',
     webPreferences: securePreferences('speed.js')
   });
@@ -71,7 +79,7 @@ function createSpeedWindow() {
 // The About window is a singleton: re-invoking focuses the existing one.
 let aboutWindow = null;
 
-function createAboutWindow() {
+function createAboutWindow({ parent } = {}) {
   if (aboutWindow) {
     aboutWindow.focus();
     return aboutWindow;
@@ -83,6 +91,8 @@ function createAboutWindow() {
     resizable: false,
     minimizable: false,
     maximizable: false,
+    parent,
+    center: true,
     webPreferences: securePreferences('about.js')
   });
 
