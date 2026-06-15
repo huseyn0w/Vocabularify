@@ -52,9 +52,12 @@ const IPC = Object.freeze({
   SET_LANGUAGES: 'set-languages',
   CLEAR_TIMEOUTS: 'clear-timeouts',
   KEY_PRESS: 'key-press',
+  SET_PAUSED: 'set-paused',
   IMPORT_DICTIONARY: 'import-dictionary',
   CHOOSE_DICTIONARY_FILE: 'choose-dictionary-file',
-  OPEN_EXTERNAL: 'open-external'
+  OPEN_EXTERNAL: 'open-external',
+  GET_INTERVAL: 'get-interval',
+  SET_CUSTOM_SPEED: 'set-custom-speed'
 });
 
 module.exports = {

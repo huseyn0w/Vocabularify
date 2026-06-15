@@ -1,4 +1,8 @@
-const { MODES, DEFAULT_INTERVAL_MS, SPEED_INTERVALS } = require('./constants');
+const { MODES, DEFAULT_INTERVAL_MS } = require('./constants');
+
+// Bounds for a (possibly custom) word-change interval: 1s to 10 minutes.
+const MIN_INTERVAL_MS = 1000;
+const MAX_INTERVAL_MS = 600000;
 
 // The persisted application state and its defaults. Defaults are applied
 // whenever a field is missing or invalid, so a partial/corrupt config file
@@ -43,10 +47,25 @@ function normalizeState(raw) {
     currentBackground: VALID_BACKGROUNDS.has(source.currentBackground)
       ? source.currentBackground
       : DEFAULT_STATE.currentBackground,
-    intervalMs: SPEED_INTERVALS.includes(source.intervalMs)
+    intervalMs: isValidInterval(source.intervalMs)
       ? source.intervalMs
       : DEFAULT_STATE.intervalMs
   };
+}
+
+// Accepts any whole-millisecond interval within bounds, so custom speeds
+// (not just the tray presets) persist correctly.
+function isValidInterval(value) {
+  return Number.isInteger(value) && value >= MIN_INTERVAL_MS && value <= MAX_INTERVAL_MS;
+}
+
+// Clamps an arbitrary interval (e.g. from the custom-speed input) into the
+// supported range; non-numbers fall back to the default.
+function clampInterval(value) {
+  if (typeof value !== 'number' || Number.isNaN(value)) {
+    return DEFAULT_INTERVAL_MS;
+  }
+  return Math.min(Math.max(Math.round(value), MIN_INTERVAL_MS), MAX_INTERVAL_MS);
 }
 
 function isNonEmptyString(value) {
@@ -59,5 +78,8 @@ function isNonNegativeInt(value) {
 
 module.exports = {
   DEFAULT_STATE,
-  normalizeState
+  MIN_INTERVAL_MS,
+  MAX_INTERVAL_MS,
+  normalizeState,
+  clampInterval
 };

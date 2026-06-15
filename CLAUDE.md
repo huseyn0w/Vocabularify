@@ -36,16 +36,17 @@ Each of these has a co-located `*.test.js` (Vitest). Keep this layer Electron-fr
 - **store.js** — load/save state via `normalizeState`.
 - **dictionaries.js** — import/delete/list custom dictionaries.
 - **phraseEngine.js** — owns the phrase list, current index and auto-advance timer; surface-agnostic via an injected `onRender(phrase, index, total)`.
-- **windows.js** — main/import/about window factories (`securePreferences()` wires the preload + isolation flags).
+- **windows.js** — main/import/about/custom-speed window factories (`securePreferences()` wires the preload + isolation flags).
 - **tray.js** — a **single** tray-menu template builder used for both creation and every refresh (do not reintroduce a second copy).
 - **ipc.js** — registers the whitelisted `ipcMain` handlers.
 
 [index.js](index.js) is the thin composition root: it holds the `state` object, creates the engine/tray/windows, wires tray actions and IPC callbacks, and owns app lifecycle. `renderPhrase` routes the current phrase to the tray title (Menu Bar mode) or the window (otherwise).
 
 ### `src/preload/` and `src/renderer/`
-- **preload/{main,import,about}.js** — expose `window.vocab` per window.
-- **renderer/main.js** — main display window logic (phrase rendering, fade animation, TTS via `SpeechSynthesisUtterance`, progress bar, theme).
-- HTML lives at the project root (`index.html`, `import.html`, `about.html`); `import.html`/`about.html` keep small inline scripts.
+- **preload/{main,import,about,speed}.js** — expose `window.vocab` per window.
+- **renderer/main.js** — main display window logic (phrase rendering, fade animation, TTS via `SpeechSynthesisUtterance`, progress bar, theme). Auto-advance **pauses while the window is hovered** (`setPaused` → engine stop/restart) and the keyboard hint only shows on hover. The target font scales with the window via CSS `clamp(.., vw, ..)`.
+- **renderer/speed.js** — the custom-speed prompt.
+- HTML lives at the project root (`index.html`, `import.html`, `about.html`, `speed.html`); `import.html`/`about.html` keep small inline scripts.
 
 ### Key cross-cutting concepts
 - **Modes** (`MODES`): `Window`, `Menu Bar` (tray title, macOS only), `Checkup` (shows the source word, reveals the translation after 3s), `Sound` (TTS). Mode switching is gated to `process.platform === 'darwin'`.
