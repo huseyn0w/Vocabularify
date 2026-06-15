@@ -76,6 +76,31 @@ function createSpeedWindow({ parent } = {}) {
   return win;
 }
 
+// Language settings window is a singleton.
+let settingsWindow = null;
+
+function createSettingsWindow({ parent } = {}) {
+  if (settingsWindow) {
+    settingsWindow.focus();
+    return settingsWindow;
+  }
+  settingsWindow = new BrowserWindow({
+    width: 560,
+    height: 560,
+    minWidth: 460,
+    minHeight: 460,
+    parent,
+    center: true,
+    title: 'Language',
+    webPreferences: securePreferences('settings.js')
+  });
+  settingsWindow.loadFile(htmlPath('settings.html'));
+  settingsWindow.on('closed', () => {
+    settingsWindow = null;
+  });
+  return settingsWindow;
+}
+
 // The About window is a singleton: re-invoking focuses the existing one.
 let aboutWindow = null;
 
@@ -108,5 +133,6 @@ module.exports = {
   createMainWindow,
   createImportWindow,
   createSpeedWindow,
+  createSettingsWindow,
   createAboutWindow
 };

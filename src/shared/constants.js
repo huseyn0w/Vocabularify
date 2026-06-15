@@ -24,9 +24,25 @@ const LANGUAGE_LOCALES = Object.freeze({
   en: 'en-US',
   de: 'de-DE',
   fr: 'fr-FR',
-  ru: 'ru-RU'
+  ru: 'ru-RU',
+  es: 'es-ES',
+  it: 'it-IT',
+  tr: 'tr-TR'
 });
 const DEFAULT_LOCALE = 'en-US';
+
+// Display name + flag for every language the app can handle. Used by the
+// language settings window. Availability of an actual pair is determined
+// from the on-disk dictionaries, not from this map.
+const LANGUAGE_META = Object.freeze({
+  en: { name: 'English', flag: '🇬🇧' },
+  de: { name: 'German', flag: '🇩🇪' },
+  fr: { name: 'French', flag: '🇫🇷' },
+  ru: { name: 'Russian', flag: '🇷🇺' },
+  es: { name: 'Spanish', flag: '🇪🇸' },
+  it: { name: 'Italian', flag: '🇮🇹' },
+  tr: { name: 'Turkish', flag: '🇹🇷' }
+});
 
 // Word-change speeds offered in the tray menu (milliseconds).
 const SPEED_INTERVALS = Object.freeze([5000, 10000, 15000, 20000]);
@@ -57,7 +73,9 @@ const IPC = Object.freeze({
   CHOOSE_DICTIONARY_FILE: 'choose-dictionary-file',
   OPEN_EXTERNAL: 'open-external',
   GET_INTERVAL: 'get-interval',
-  SET_CUSTOM_SPEED: 'set-custom-speed'
+  SET_CUSTOM_SPEED: 'set-custom-speed',
+  GET_LANGUAGE_OPTIONS: 'get-language-options',
+  SET_LANGUAGE_PAIR: 'set-language-pair'
 });
 
 module.exports = {
@@ -66,6 +84,7 @@ module.exports = {
   LANGUAGES,
   FROM_LANGUAGES,
   LANGUAGE_LOCALES,
+  LANGUAGE_META,
   DEFAULT_LOCALE,
   SPEED_INTERVALS,
   DEFAULT_INTERVAL_MS,

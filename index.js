@@ -1,13 +1,13 @@
 const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron');
 
-const { MODES, IPC } = require('./src/shared/constants');
-const { getLanguageFilePath, parseCustomDictName, getLocale } = require('./src/shared/languagePaths');
-const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir } = require('./src/main/config');
+const { MODES, IPC, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } = require('./src/shared/constants');
+const { getLanguageFilePath, getLocale } = require('./src/shared/languagePaths');
+const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir, listAvailablePairs } = require('./src/main/config');
 const { clampInterval } = require('./src/shared/state');
 const { loadState, saveState } = require('./src/main/store');
 const dictionaries = require('./src/main/dictionaries');
 const { createPhraseEngine } = require('./src/main/phraseEngine');
-const { createMainWindow, createImportWindow, createSpeedWindow, createAboutWindow } = require('./src/main/windows');
+const { createMainWindow, createImportWindow, createSpeedWindow, createSettingsWindow, createAboutWindow } = require('./src/main/windows');
 const { createTrayController } = require('./src/main/tray');
 const { registerIpcHandlers } = require('./src/main/ipc');
 
@@ -106,26 +106,23 @@ function toggleSound(enabled) {
   sendToWindow(IPC.TOGGLE_SOUND_MODE, enabled);
 }
 
-function deleteDictionaryAction(baseName) {
-  const result = dictionaries.deleteDictionary(baseName);
-  if (result.success) {
-    const parsed = parseCustomDictName(baseName);
-    const isActive = parsed
-      && state.currentLanguage === parsed.language
-      && state.currentFromLanguage === parsed.fromLanguage
-      && state.currentLevel === `custom:${parsed.name}`;
-    if (isActive) {
-      switchLanguage(state.currentLanguage, state.currentFromLanguage, 'A1');
-    }
-    dialog.showMessageBoxSync({
-      type: 'info',
-      title: 'Success',
-      message: `Dictionary ${result.dictionaryName} deleted successfully.`
-    });
-  } else {
-    dialog.showErrorBox('Error', `Failed to delete dictionary: ${result.error}`);
-  }
-  tray.refresh();
+function setLevel(level) {
+  switchLanguage(state.currentLanguage, state.currentFromLanguage, level);
+}
+
+// Called from the language settings window. Switches the pair, keeping a
+// standard CEFR level (custom levels are pair-specific, so reset to A1).
+function setLanguagePair({ to, from }) {
+  const level = String(state.currentLevel).startsWith(CUSTOM_LEVEL_PREFIX) ? 'A1' : state.currentLevel;
+  switchLanguage(to, from, level);
+}
+
+function getLanguageOptions() {
+  return {
+    meta: LANGUAGE_META,
+    pairs: listAvailablePairs(),
+    current: { to: state.currentLanguage, from: state.currentFromLanguage }
+  };
 }
 
 // --- Input ------------------------------------------------------------------
@@ -214,14 +211,14 @@ app.whenReady().then(() => {
     getState: () => state,
     actions: {
       setBackground,
-      switchLanguage,
+      setLevel,
       switchMode,
       setSpeed,
       toggleSound,
+      openSettings: () => createSettingsWindow({ parent: dialogParent() }),
       openImport: () => createImportWindow({ parent: dialogParent() }),
       openCustomSpeed: () => createSpeedWindow({ parent: dialogParent() }),
       openAbout: () => createAboutWindow({ parent: dialogParent() }),
-      deleteDictionary: deleteDictionaryAction,
       quit: quitApp
     },
     dictionaries
@@ -252,7 +249,9 @@ app.whenReady().then(() => {
     onKeyPress: handleKeyPress,
     onSetPaused: setHoverPaused,
     getIntervalMs: () => state.intervalMs,
-    setCustomSpeed: seconds => setSpeed(clampInterval(seconds * 1000))
+    setCustomSpeed: seconds => setSpeed(clampInterval(seconds * 1000)),
+    getLanguageOptions,
+    setLanguagePair
   });
 
   createWiredMainWindow();

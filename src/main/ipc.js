@@ -11,13 +11,17 @@ function registerIpcHandlers({
   onKeyPress,
   onSetPaused,
   getIntervalMs,
-  setCustomSpeed
+  setCustomSpeed,
+  getLanguageOptions,
+  setLanguagePair
 }) {
   ipcMain.handle(IPC.IMPORT_DICTIONARY, (event, payload) => importDictionary(payload));
   ipcMain.handle(IPC.CHOOSE_DICTIONARY_FILE, () => chooseDictionaryFile());
   ipcMain.handle(IPC.OPEN_EXTERNAL, (event, url) => openExternal(url));
   ipcMain.handle(IPC.GET_INTERVAL, () => getIntervalMs());
   ipcMain.handle(IPC.SET_CUSTOM_SPEED, (event, seconds) => setCustomSpeed(seconds));
+  ipcMain.handle(IPC.GET_LANGUAGE_OPTIONS, () => getLanguageOptions());
+  ipcMain.handle(IPC.SET_LANGUAGE_PAIR, (event, pair) => setLanguagePair(pair));
   ipcMain.on(IPC.KEY_PRESS, (event, keyEvent) => onKeyPress(keyEvent));
   ipcMain.on(IPC.SET_PAUSED, (event, paused) => onSetPaused(paused));
 }

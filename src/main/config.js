@@ -24,10 +24,30 @@ function ensureCustomDictsDir() {
   fs.mkdirSync(CUSTOM_DICTS_PATH, { recursive: true });
 }
 
+// Scans the built-in dictionaries and returns { <targetLang>: [<sourceLang>, ...] }
+// for every pair that actually has data on disk. This is the source of truth
+// for which language combinations the UI offers.
+function listAvailablePairs() {
+  const base = path.join(getDictionariesBasePath(), 'languages');
+  const pairs = {};
+  for (const to of fs.readdirSync(base)) {
+    if (to.startsWith('_') || to.startsWith('.')) continue;
+    const toDir = path.join(base, to);
+    if (!fs.statSync(toDir).isDirectory()) continue;
+    const froms = fs.readdirSync(toDir).filter(from => {
+      const d = path.join(toDir, from);
+      return !from.startsWith('.') && fs.statSync(d).isDirectory();
+    });
+    if (froms.length) pairs[to] = froms.sort();
+  }
+  return pairs;
+}
+
 module.exports = {
   APP_ROOT,
   CONFIG_PATH,
   CUSTOM_DICTS_PATH,
   getDictionariesBasePath,
-  ensureCustomDictsDir
+  ensureCustomDictsDir,
+  listAvailablePairs
 };

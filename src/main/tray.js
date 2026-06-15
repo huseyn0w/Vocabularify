@@ -3,16 +3,15 @@ const path = require('path');
 const { APP_ROOT } = require('./config');
 const {
   MODES,
-  LANGUAGES,
-  FROM_LANGUAGES,
   LEVELS,
   SPEED_INTERVALS,
-  CUSTOM_LEVEL_PREFIX
+  CUSTOM_LEVEL_PREFIX,
+  LANGUAGE_META
 } = require('../shared/constants');
 
 // Builds and owns the tray + its context menu. A single template builder
 // is used for both initial creation and every refresh, so the menu can
-// never drift between code paths (the previous code duplicated it).
+// never drift between code paths.
 //
 // `getState` returns the current persisted state; `actions` holds the
 // callbacks the menu items invoke; `dictionaries` lists custom dictionaries.
@@ -41,8 +40,11 @@ function createTrayController({ getState, actions, dictionaries }) {
   function buildTemplate(state) {
     return [
       { label: 'Vocabularify', enabled: false },
+      // Language pair is chosen in the settings window; the label shows the
+      // current source -> target as flags.
+      { label: languageLabel(state), click: actions.openSettings },
+      { label: 'Level', submenu: levelSubmenu(state) },
       backgroundSubmenu(state),
-      { label: 'Language', submenu: languageSubmenu(state) },
       // Menu Bar / Checkup modes only make sense with a macOS menu-bar tray.
       ...(process.platform === 'darwin' ? [modeSubmenu(state)] : []),
       {
@@ -53,9 +55,39 @@ function createTrayController({ getState, actions, dictionaries }) {
       },
       { label: 'Changing speed', submenu: speedSubmenu(state) },
       { label: 'Import Dictionary', click: actions.openImport },
-      { label: 'Delete Dictionary', submenu: deleteSubmenu() },
       { label: 'About', click: actions.openAbout },
       { label: 'Quit', click: actions.quit }
+    ];
+  }
+
+  function languageLabel(state) {
+    const from = LANGUAGE_META[state.currentFromLanguage];
+    const to = LANGUAGE_META[state.currentLanguage];
+    const pair = from && to ? `${from.flag} → ${to.flag}` : '';
+    return `Language ${pair}…`.trim();
+  }
+
+  // Level + any custom dictionaries for the CURRENT pair.
+  function levelSubmenu(state) {
+    const { currentLanguage: to, currentFromLanguage: from, currentLevel } = state;
+    const customs = dictionaries.listCustomDictionaryNamesFor(to, from);
+    return [
+      ...LEVELS.map(level => ({
+        label: `Level ${level}`,
+        type: 'radio',
+        checked: currentLevel === level,
+        click: () => actions.setLevel(level)
+      })),
+      ...(customs.length ? [{ type: 'separator' }] : []),
+      ...customs.map(name => {
+        const level = `${CUSTOM_LEVEL_PREFIX}${name}`;
+        return {
+          label: `Custom: ${name}`,
+          type: 'radio',
+          checked: currentLevel === level,
+          click: () => actions.setLevel(level)
+        };
+      })
     ];
   }
 
@@ -69,39 +101,6 @@ function createTrayController({ getState, actions, dictionaries }) {
         click: () => actions.setBackground(bg)
       }))
     };
-  }
-
-  function languageSubmenu(state) {
-    return LANGUAGES.map(language => ({
-      label: language.toUpperCase(),
-      submenu: FROM_LANGUAGES[language].map(fromLang => ({
-        label: `${fromLang.toUpperCase()} -> ${language.toUpperCase()}`,
-        submenu: levelSubmenu(state, language, fromLang)
-      }))
-    }));
-  }
-
-  function levelSubmenu(state, language, fromLang) {
-    const isActivePair = state.currentLanguage === language && state.currentFromLanguage === fromLang;
-    const customs = dictionaries.listCustomDictionaryNamesFor(language, fromLang);
-
-    return [
-      ...LEVELS.map(level => ({
-        label: `Level ${level}`,
-        type: 'radio',
-        checked: isActivePair && state.currentLevel === level,
-        click: () => actions.switchLanguage(language, fromLang, level)
-      })),
-      ...customs.map(name => {
-        const level = `${CUSTOM_LEVEL_PREFIX}${name}`;
-        return {
-          label: `Custom: ${name}`,
-          type: 'radio',
-          checked: isActivePair && state.currentLevel === level,
-          click: () => actions.switchLanguage(language, fromLang, level)
-        };
-      })
-    ];
   }
 
   function modeSubmenu(state) {
@@ -133,13 +132,6 @@ function createTrayController({ getState, actions, dictionaries }) {
         click: () => actions.openCustomSpeed()
       }
     ];
-  }
-
-  function deleteSubmenu() {
-    return dictionaries.listCustomDictionaries().map(baseName => ({
-      label: baseName,
-      click: () => actions.deleteDictionary(baseName)
-    }));
   }
 
   return { create, refresh, setTitle };
