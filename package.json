@@ -4,9 +4,11 @@
   "description": "Vocabularify - improve your vocabulary by doing nothing",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development electron .",
-    "build": "sudo electron-builder",
-    "build:win": "sudo electron-builder --win"
+    "start": "NODE_ENV=development electronmon .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "build": {
     "appId": "com.elmanhuseynov.vocabularify",
@@ -16,12 +18,10 @@
     },
     "files": [
       "**/*",
+      "!**/*.test.js",
       "!node_modules",
       "!dist",
-      "!build",
-      "index.js",
-      "index.html",
-      "context_menu_icon.png"
+      "!build"
     ],
     "extraResources": [
       {
@@ -85,11 +85,13 @@
     "url": "https://github.com/huseyn0w/Vocabularify/issues"
   },
   "homepage": "https://github.com/huseyn0w/Vocabularify#readme",
-  "devDependencies": {
-    "electron": "^31.0.0",
-    "electron-builder": "^24.13.3"
+  "engines": {
+    "node": ">=22.12.0"
   },
-  "dependencies": {
-    "electron-reload": "^2.0.0-alpha.1"
+  "devDependencies": {
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3",
+    "electronmon": "^2.0.4",
+    "vitest": "^4.1.9"
   }
 }
