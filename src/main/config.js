@@ -10,8 +10,12 @@ const APP_ROOT = path.join(__dirname, '..', '..');
 const CONFIG_PATH = path.join(app.getPath('userData'), 'config.json');
 const CUSTOM_DICTS_PATH = path.join(app.getPath('userData'), 'custom_dictionaries');
 
+// In a packaged build the dictionaries are shipped under resourcesPath (see
+// `extraResources` in package.json); when running from source they live in
+// the project root. app.isPackaged is the reliable signal for this — unlike
+// NODE_ENV, it is correct however the app was launched.
 function getDictionariesBasePath() {
-  return process.env.NODE_ENV === 'development' ? APP_ROOT : process.resourcesPath;
+  return app.isPackaged ? process.resourcesPath : APP_ROOT;
 }
 
 // Ensures the directory for user-imported dictionaries exists. Safe to call

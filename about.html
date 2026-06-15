@@ -61,12 +61,10 @@
     Created by Elman Huseynov / <span id="current-year"></span>. All Rights Reserved.
   </footer>
   <script>
-    const { shell } = require('electron');
-
     document.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        shell.openExternal(link.href);
+        window.vocab.openExternal(link.href);
       });
     });
 

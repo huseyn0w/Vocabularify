@@ -1,4 +1,4 @@
-const { app, BrowserWindow, dialog, globalShortcut } = require('electron');
+const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron');
 
 const { MODES, IPC, MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT } = require('./src/shared/constants');
 const { getLanguageFilePath, parseCustomDictName, getLocale } = require('./src/shared/languagePaths');
@@ -215,6 +215,21 @@ app.whenReady().then(() => {
       const result = dictionaries.importDictionary(payload);
       tray.refresh();
       return result;
+    },
+    chooseDictionaryFile: async () => {
+      const { canceled, filePaths } = await dialog.showOpenDialog({
+        title: 'Select Dictionary File',
+        properties: ['openFile'],
+        filters: [{ name: 'Text', extensions: ['txt'] }]
+      });
+      return canceled ? null : filePaths[0];
+    },
+    openExternal: url => {
+      // Only ever hand http(s) URLs to the OS to avoid opening arbitrary
+      // schemes (file:, etc.) from renderer-supplied input.
+      if (typeof url === 'string' && /^https?:\/\//i.test(url)) {
+        shell.openExternal(url);
+      }
     },
     onKeyPress: handleKeyPress
   });

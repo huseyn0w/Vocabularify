@@ -51,7 +51,8 @@ const IPC = Object.freeze({
   CLEAR_TIMEOUTS: 'clear-timeouts',
   KEY_PRESS: 'key-press',
   IMPORT_DICTIONARY: 'import-dictionary',
-  DELETE_DICTIONARY: 'delete-dictionary'
+  CHOOSE_DICTIONARY_FILE: 'choose-dictionary-file',
+  OPEN_EXTERNAL: 'open-external'
 });
 
 module.exports = {

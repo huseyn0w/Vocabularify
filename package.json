@@ -18,12 +18,10 @@
     },
     "files": [
       "**/*",
+      "!**/*.test.js",
       "!node_modules",
       "!dist",
-      "!build",
-      "index.js",
-      "index.html",
-      "context_menu_icon.png"
+      "!build"
     ],
     "extraResources": [
       {

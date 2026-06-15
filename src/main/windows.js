@@ -4,13 +4,20 @@ const { APP_ROOT } = require('./config');
 const { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT } = require('../shared/constants');
 
 const htmlPath = name => path.join(APP_ROOT, name);
+const preloadPath = name => path.join(__dirname, '..', 'preload', name);
 
-// NOTE: webPreferences are hardened (contextIsolation + preload) in a later
-// stage; for now they preserve the existing renderer contract.
-const LEGACY_WEB_PREFERENCES = {
-  nodeIntegration: true,
-  contextIsolation: false
-};
+// Hardened defaults: the renderer gets no Node access and runs in an
+// isolated world; it talks to the main process only through the channels
+// each preload script exposes. sandbox is disabled so the preload can
+// require the shared constants module.
+function securePreferences(preloadScript) {
+  return {
+    preload: preloadPath(preloadScript),
+    contextIsolation: true,
+    nodeIntegration: false,
+    sandbox: false
+  };
+}
 
 function createMainWindow({ onClose, onReady } = {}) {
   const win = new BrowserWindow({
@@ -20,7 +27,7 @@ function createMainWindow({ onClose, onReady } = {}) {
     minHeight: MIN_WINDOW_HEIGHT,
     alwaysOnTop: true,
     skipTaskbar: true,
-    webPreferences: { ...LEGACY_WEB_PREFERENCES }
+    webPreferences: securePreferences('main.js')
   });
 
   win.loadFile(htmlPath('index.html'));
@@ -40,7 +47,7 @@ function createImportWindow() {
   const win = new BrowserWindow({
     width: 500,
     height: 400,
-    webPreferences: { ...LEGACY_WEB_PREFERENCES }
+    webPreferences: securePreferences('import.js')
   });
   win.loadFile(htmlPath('import.html'));
   return win;
@@ -61,7 +68,7 @@ function createAboutWindow() {
     resizable: false,
     minimizable: false,
     maximizable: false,
-    webPreferences: { ...LEGACY_WEB_PREFERENCES }
+    webPreferences: securePreferences('about.js')
   });
 
   aboutWindow.loadFile(htmlPath('about.html'));
