@@ -7,11 +7,6 @@ let languageTo = 'en-US';
 let languageFrom = 'de-DE';
 let timeoutId;
 
-function showError(message, error) {
-  const dialog = require('electron').remote.dialog;
-  dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
-}
-
 function speakText(text, lang) {
   if (isSoundMode) {
     const strippedText = stripOrderNumber(text);

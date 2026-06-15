@@ -43,6 +43,7 @@ let currentLevel = 'A1';
 let currentMode = MODES.WINDOW;
 let currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
 let isSoundMode = false;
+let currentBackground = 'light';
 
 function getLanguageFilePath(language, fromLanguage, level) {
   const basePath = process.env.NODE_ENV === 'development' ? __dirname : process.resourcesPath;
@@ -60,6 +61,7 @@ function saveState() {
     currentLevel,
     currentMode,
     isSoundMode,
+    currentBackground,
     WORDS_CHANGE_INTERVAL_IN_MS
   };
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(state));
@@ -74,6 +76,7 @@ function loadState() {
     currentLevel = state.currentLevel || 'A1';
     currentMode = state.currentMode || MODES.WINDOW;
     isSoundMode = state.isSoundMode || false;
+    currentBackground = state.currentBackground || 'light';
     WORDS_CHANGE_INTERVAL_IN_MS = state.WORDS_CHANGE_INTERVAL_IN_MS || 5000;
     currentLanguagePath = getLanguageFilePath(currentLanguage, currentFromLanguage, currentLevel);
   }
@@ -123,16 +126,17 @@ function createTray() {
           {
             label: 'Light',
             type: 'radio',
-            checked: true,
+            checked: currentBackground === 'light',
             click: () => {
-              mainWindow.webContents.send('set-background', 'light');
+              setBackground('light');
             }
           },
           {
             label: 'Dark',
             type: 'radio',
+            checked: currentBackground === 'dark',
             click: () => {
-              mainWindow.webContents.send('set-background', 'dark');
+              setBackground('dark');
             }
           }
         ]
@@ -329,6 +333,13 @@ function getLanguageCode(lang) {
   return languageMap[lang] || 'en-US';
 }
 
+function setBackground(background) {
+  currentBackground = background;
+  if (mainWindow) {
+    mainWindow.webContents.send('set-background', background);
+  }
+}
+
 function switchMode(mode) {
   try {
     currentMode = mode;
@@ -401,6 +412,16 @@ function displayPhraseInTray(index) {
   }
 }
 
+// Renders the current phrase to whichever surface the active mode uses.
+// In Menu Bar mode the phrase lives in the tray title; otherwise in the window.
+function renderCurrentPhrase() {
+  if (currentMode === MODES.MENU_BAR) {
+    displayPhraseInTray(currentIndex);
+  } else {
+    displayPhrase(currentIndex);
+  }
+}
+
 function adjustWindowSize(text) {
   try {
     const fontSize = 24;
@@ -437,12 +458,12 @@ function registerGlobalShortcuts() {
   if (currentMode === 'Menu Bar') {
     globalShortcut.register('Shift+Right', () => {
       currentIndex = (currentIndex + 1) % phrases.length;
-      displayPhrase(currentIndex);
+      renderCurrentPhrase();
     });
 
     globalShortcut.register('Shift+Left', () => {
       currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
-      displayPhrase(currentIndex);
+      renderCurrentPhrase();
     });
   }
 }
@@ -450,7 +471,7 @@ function registerGlobalShortcuts() {
 function cyclePhrases() {
   try {
     currentIndex = (currentIndex + 1) % phrases.length;
-    displayPhrase(currentIndex);
+    renderCurrentPhrase();
   } catch (error) {
     showError('Failed to cycle phrases.', error);
   }
@@ -472,16 +493,17 @@ function updateTrayMenu() {
         {
           label: 'Light',
           type: 'radio',
-          checked: true,
+          checked: currentBackground === 'light',
           click: () => {
-            mainWindow.webContents.send('set-background', 'light');
+            setBackground('light');
           }
         },
         {
           label: 'Dark',
           type: 'radio',
+          checked: currentBackground === 'dark',
           click: () => {
-            mainWindow.webContents.send('set-background', 'dark');
+            setBackground('dark');
           }
         }
       ]
@@ -583,6 +605,7 @@ app.whenReady().then(() => {
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('set-languages', getLanguageCode(currentFromLanguage), getLanguageCode(currentLanguage));
+    mainWindow.webContents.send('set-background', currentBackground);
   });
 
   if (process.platform === 'darwin') {
