@@ -8,10 +8,10 @@ Vocabularify is an Electron desktop app (macOS/Windows/Linux) that displays a ne
 
 ## Commands
 
-Requires Node 18 and Yarn.
+Requires Node 22 (LTS) and Yarn. Electron 42 / electron-builder 26.
 
 - `yarn install` — install dependencies
-- `yarn start` — run in development (`NODE_ENV=development electron .`, enables `electron-reload` hot-reload)
+- `yarn start` — run in development (`NODE_ENV=development electronmon .`; electronmon watches files and auto-restarts the main process / reloads renderers on save)
 - `yarn build` — package with electron-builder for the current platform (DMG/ZIP on mac, AppImage on Linux). Runs under `sudo`.
 - `yarn build:win` — package NSIS installer for Windows (x64 + ia32)
 

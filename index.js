@@ -11,16 +11,6 @@ if (!fs.existsSync(CUSTOM_DICTS_PATH)) {
   fs.mkdirSync(CUSTOM_DICTS_PATH);
 }
 
-if (process.env.NODE_ENV === 'development') {
-  try {
-    require('electron-reload')(__dirname, {
-      electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-    });
-  } catch (error) {
-    console.error('Error loading electron-reload:', error);
-  }
-}
-
 const MODES = {
   MENU_BAR: 'Menu Bar',
   WINDOW: 'Window',
