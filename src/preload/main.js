@@ -18,5 +18,6 @@ contextBridge.exposeInMainWorld('vocab', {
       callback({ fromLocale, toLocale })
     ),
   onClearTimeouts: callback => ipcRenderer.on(IPC.CLEAR_TIMEOUTS, () => callback()),
-  sendKeyPress: keyEvent => ipcRenderer.send(IPC.KEY_PRESS, keyEvent)
+  sendKeyPress: keyEvent => ipcRenderer.send(IPC.KEY_PRESS, keyEvent),
+  setPaused: paused => ipcRenderer.send(IPC.SET_PAUSED, paused)
 });

@@ -117,12 +117,22 @@ function createTrayController({ getState, actions, dictionaries }) {
   }
 
   function speedSubmenu(state) {
-    return SPEED_INTERVALS.map(ms => ({
-      label: `${ms / 1000} seconds`,
-      type: 'radio',
-      checked: state.intervalMs === ms,
-      click: () => actions.setSpeed(ms)
-    }));
+    const isCustom = !SPEED_INTERVALS.includes(state.intervalMs);
+    return [
+      ...SPEED_INTERVALS.map(ms => ({
+        label: `${ms / 1000} seconds`,
+        type: 'radio',
+        checked: state.intervalMs === ms,
+        click: () => actions.setSpeed(ms)
+      })),
+      { type: 'separator' },
+      {
+        label: isCustom ? `Custom… (${state.intervalMs / 1000}s)` : 'Custom…',
+        type: 'radio',
+        checked: isCustom,
+        click: () => actions.openCustomSpeed()
+      }
+    ];
   }
 
   function deleteSubmenu() {

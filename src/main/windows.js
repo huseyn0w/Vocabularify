@@ -56,6 +56,18 @@ function createImportWindow() {
   return win;
 }
 
+function createSpeedWindow() {
+  const win = new BrowserWindow({
+    width: 360,
+    height: 260,
+    resizable: false,
+    title: 'Custom Speed',
+    webPreferences: securePreferences('speed.js')
+  });
+  win.loadFile(htmlPath('speed.html'));
+  return win;
+}
+
 // The About window is a singleton: re-invoking focuses the existing one.
 let aboutWindow = null;
 
@@ -85,5 +97,6 @@ function createAboutWindow() {
 module.exports = {
   createMainWindow,
   createImportWindow,
+  createSpeedWindow,
   createAboutWindow
 };

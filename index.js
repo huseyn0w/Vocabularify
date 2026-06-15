@@ -3,10 +3,11 @@ const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron'
 const { MODES, IPC } = require('./src/shared/constants');
 const { getLanguageFilePath, parseCustomDictName, getLocale } = require('./src/shared/languagePaths');
 const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir } = require('./src/main/config');
+const { clampInterval } = require('./src/shared/state');
 const { loadState, saveState } = require('./src/main/store');
 const dictionaries = require('./src/main/dictionaries');
 const { createPhraseEngine } = require('./src/main/phraseEngine');
-const { createMainWindow, createImportWindow, createAboutWindow } = require('./src/main/windows');
+const { createMainWindow, createImportWindow, createSpeedWindow, createAboutWindow } = require('./src/main/windows');
 const { createTrayController } = require('./src/main/tray');
 const { registerIpcHandlers } = require('./src/main/ipc');
 
@@ -14,6 +15,7 @@ let state = loadState();
 let mainWindow = null;
 let engine;
 let tray;
+let isHoverPaused = false;
 
 function showError(message, error) {
   dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
@@ -138,7 +140,20 @@ function handleKeyPress(keyEvent) {
   } else {
     engine.previous();
   }
-  engine.restartTimer();
+  // Don't resume auto-advance if the pointer is still hovering the window.
+  if (!isHoverPaused) {
+    engine.restartTimer();
+  }
+}
+
+// Pauses auto-advance while the window is hovered; the current word stays put.
+function setHoverPaused(paused) {
+  isHoverPaused = paused;
+  if (paused) {
+    engine.stop();
+  } else {
+    engine.restartTimer();
+  }
 }
 
 function registerGlobalShortcuts() {
@@ -197,6 +212,7 @@ app.whenReady().then(() => {
       setSpeed,
       toggleSound,
       openImport: () => createImportWindow(),
+      openCustomSpeed: () => createSpeedWindow(),
       openAbout: () => createAboutWindow(),
       deleteDictionary: deleteDictionaryAction,
       quit: quitApp
@@ -226,7 +242,10 @@ app.whenReady().then(() => {
         shell.openExternal(url);
       }
     },
-    onKeyPress: handleKeyPress
+    onKeyPress: handleKeyPress,
+    onSetPaused: setHoverPaused,
+    getIntervalMs: () => state.intervalMs,
+    setCustomSpeed: seconds => setSpeed(clampInterval(seconds * 1000))
   });
 
   createWiredMainWindow();

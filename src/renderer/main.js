@@ -1,12 +1,10 @@
 const phraseContainer = document.getElementById('phrase-container');
 const sourceEl = document.getElementById('source');
 const targetEl = document.getElementById('target');
-const hintEl = document.getElementById('hint');
 const progressBarInner = document.getElementById('progress-bar-inner');
 const progressLabel = document.getElementById('progress-label');
 
 const PHRASE_SEPARATOR = ' - ';
-const HINT_FADE_DELAY_MS = 6000;
 
 let isSoundMode = false;
 let fromLocale = 'de-DE';
@@ -51,6 +49,20 @@ function replayEnterAnimation() {
   phraseContainer.style.animation = '';
 }
 
+// Hides the answer instantly (no fade), so a new Checkup word never flashes
+// its translation before hiding it.
+function hideTarget() {
+  targetEl.style.transition = 'none';
+  targetEl.classList.add('hidden');
+  void targetEl.offsetWidth; // commit the hidden state before any paint
+}
+
+// Reveals the answer with the normal fade-in transition.
+function revealTarget() {
+  targetEl.style.transition = '';
+  targetEl.classList.remove('hidden');
+}
+
 function displayPhrase({ phrase, mode, index, total }) {
   clearRevealTimeout();
   updateProgressBar(index, total);
@@ -61,28 +73,22 @@ function displayPhrase({ phrase, mode, index, total }) {
   targetEl.textContent = target;
 
   if (mode === 'Checkup' && target) {
-    // Hide the answer, then reveal it after a short delay.
-    targetEl.classList.add('hidden');
+    hideTarget();
     speak(source, fromLocale);
     revealTimeoutId = setTimeout(() => {
-      targetEl.classList.remove('hidden');
+      revealTarget();
       speak(target, toLocale);
     }, 3000);
     return;
   }
 
-  targetEl.classList.remove('hidden');
+  revealTarget();
   if (target) {
     speak(source, fromLocale);
     revealTimeoutId = setTimeout(() => speak(target, toLocale), 2000);
   } else {
     speak(source, toLocale);
   }
-}
-
-function scheduleHintFade() {
-  hintEl.classList.remove('faded');
-  setTimeout(() => hintEl.classList.add('faded'), HINT_FADE_DELAY_MS);
 }
 
 window.vocab.onSetLanguages(({ fromLocale: from, toLocale: to }) => {
@@ -105,4 +111,7 @@ document.addEventListener('keydown', event => {
   window.vocab.sendKeyPress({ shiftKey: event.shiftKey, key: event.key });
 });
 
-scheduleHintFade();
+// Pause auto-advance while the pointer is over the window so the user can
+// read the current word; resume on leave.
+document.documentElement.addEventListener('mouseenter', () => window.vocab.setPaused(true));
+document.documentElement.addEventListener('mouseleave', () => window.vocab.setPaused(false));
