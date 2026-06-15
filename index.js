@@ -19,6 +19,15 @@ function showError(message, error) {
   dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
 }
 
+// Sends to the main window only when it is alive. Guards against the
+// teardown race where the auto-advance timer fires after the window has
+// been destroyed (closing the window quits the app).
+function sendToWindow(channel, ...args) {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.webContents.send(channel, ...args);
+  }
+}
+
 // --- Phrase rendering -------------------------------------------------------
 
 // Routes the current phrase to whichever surface the active mode uses:
@@ -27,8 +36,8 @@ function renderPhrase(phrase, index, total) {
   state.currentIndex = index;
   if (state.currentMode === MODES.MENU_BAR) {
     tray.setTitle(phrase);
-  } else if (mainWindow) {
-    mainWindow.webContents.send(IPC.DISPLAY_PHRASE, phrase, state.currentMode, index, total);
+  } else {
+    sendToWindow(IPC.DISPLAY_PHRASE, phrase, state.currentMode, index, total);
   }
 }
 
@@ -54,9 +63,7 @@ function loadCurrentDictionary(startIndex) {
 
 function setBackground(background) {
   state.currentBackground = background;
-  if (mainWindow) {
-    mainWindow.webContents.send(IPC.SET_BACKGROUND, background);
-  }
+  sendToWindow(IPC.SET_BACKGROUND, background);
   tray.refresh();
 }
 
@@ -65,9 +72,7 @@ function switchLanguage(language, fromLanguage, level) {
   state.currentFromLanguage = fromLanguage;
   state.currentLevel = level;
   loadCurrentDictionary(0); // restart from the first word of the new dictionary
-  if (mainWindow) {
-    mainWindow.webContents.send(IPC.SET_LANGUAGES, getLocale(fromLanguage), getLocale(language));
-  }
+  sendToWindow(IPC.SET_LANGUAGES, getLocale(fromLanguage), getLocale(language));
   tray.refresh();
 }
 
@@ -96,9 +101,7 @@ function setSpeed(intervalMs) {
 
 function toggleSound(enabled) {
   state.isSoundMode = enabled;
-  if (mainWindow) {
-    mainWindow.webContents.send(IPC.TOGGLE_SOUND_MODE, enabled);
-  }
+  sendToWindow(IPC.TOGGLE_SOUND_MODE, enabled);
 }
 
 function deleteDictionaryAction(baseName) {
@@ -129,9 +132,7 @@ function handleKeyPress(keyEvent) {
   if (!keyEvent.shiftKey || (keyEvent.key !== 'ArrowRight' && keyEvent.key !== 'ArrowLeft')) {
     return;
   }
-  if (mainWindow) {
-    mainWindow.webContents.send(IPC.CLEAR_TIMEOUTS);
-  }
+  sendToWindow(IPC.CLEAR_TIMEOUTS);
   if (keyEvent.key === 'ArrowRight') {
     engine.next();
   } else {
@@ -164,7 +165,10 @@ function quitApp() {
 
 function createWiredMainWindow() {
   mainWindow = createMainWindow({
-    onClose: () => app.quit(),
+    onClose: () => {
+      engine.stop(); // halt the timer before the window is destroyed
+      app.quit();
+    },
     onReady: win => {
       win.webContents.send(IPC.SET_LANGUAGES, getLocale(state.currentFromLanguage), getLocale(state.currentLanguage));
       win.webContents.send(IPC.SET_BACKGROUND, state.currentBackground);
