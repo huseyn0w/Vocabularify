@@ -54,8 +54,12 @@ Each of these has a co-located `*.test.js` (Vitest). Keep this layer Electron-fr
 - **State persistence**: saved to `config.json` in `app.getPath('userData')` on quit, restored (and validated) on launch.
 
 ### Language / dictionary data
-- Built-in dictionaries: `languages/<targetLang>/<fromLang>/<level>.json` (levels `a1`–`c1`, lowercase). Available pairs are defined in `LANGUAGES`/`FROM_LANGUAGES` in `src/shared/constants.js` — update those **and** the `languages/` files when adding a pair. Packaged builds bundle `languages/` via `extraResources` in package.json.
-- **Custom dictionaries**: imported from plain `.txt` (`word - translation` per line, chosen via a native file dialog), stored as `<target>_<from>_<name>.json` in `<userData>/custom_dictionaries`, surfaced in the level submenu as `custom:<name>`.
+- Built-in dictionaries: `languages/<targetLang>/<fromLang>/<level>.json` (levels `a1`–`c1`, lowercase). The app supports **7 languages** (en, de, fr, es, it, tr, ru) in a full any-from-any matrix (42 pairs). Which pairs exist is discovered at runtime by scanning the `languages/` directory (`config.listAvailablePairs`) — no hard-coded language map. Packaged builds bundle `languages/` via `extraResources`.
+- **Generated from a multilingual bank**: the pair files are *generated*, not hand-edited. `languages/_bank/<level>.json` holds concept rows `{ en, de, fr, es, it, tr, ru }` (one concept, all 7 translations; target nouns carry their article/gender, verbs are infinitives). `node utils/generate_pairs.js` projects the bank into all 42 pairs × 5 levels (a concept is kept at its lowest level; each target word appears once per pair). To change vocabulary, edit the bank and regenerate — do not hand-edit the pair files. `languages/_audit/` holds the audit + bank-build reports (ignored as a language by the `_` prefix).
+- **Custom dictionaries**: imported from plain `.txt` (`word - translation` per line, chosen via a native file dialog), stored as `<target>_<from>_<name>.json` in `<userData>/custom_dictionaries`, surfaced in the tray Level submenu as `custom:<name>`.
+- **Language selection UI**: the tray's `Language …` item opens a settings window (`settings.html` + `src/renderer/settings.js`) with flag cards for target + source, driven by `listAvailablePairs`.
 
 ### utils/ (offline data tooling)
-Standalone Python scripts (not part of the app runtime) used to prepare vocabulary data: [parser.py](utils/parser.py) (txt → JSON), [format.py](utils/format.py), [sort.py](utils/sort.py), [duplicates.py](utils/duplicates.py). Raw source data (`vocabulary.txt`, `backup.txt`) also lives here.
+- `clean_dictionaries.js` — phase-1 cleanup (dedup, junk, column-orientation fix).
+- `generate_pairs.js` — generate all pair files from `languages/_bank/`.
+- Legacy Python scripts ([parser.py](utils/parser.py), [format.py](utils/format.py), [sort.py](utils/sort.py), [duplicates.py](utils/duplicates.py)) from the original single-pair data prep.

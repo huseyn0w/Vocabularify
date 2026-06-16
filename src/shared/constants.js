@@ -11,13 +11,9 @@ const MODES = Object.freeze({
 // Built-in CEFR levels shipped under languages/<to>/<from>/<level>.json
 const LEVELS = Object.freeze(['A1', 'A2', 'B1', 'B2', 'C1']);
 
-// Target languages and, for each, the source languages we ship dictionaries for.
-const LANGUAGES = Object.freeze(['en', 'de', 'fr']);
-const FROM_LANGUAGES = Object.freeze({
-  en: ['ru', 'de', 'fr'],
-  de: ['ru', 'en'],
-  fr: ['en']
-});
+// Note: which (target, source) pairs are available is derived at runtime
+// from the on-disk dictionaries (see config.listAvailablePairs), not from a
+// hard-coded map — so adding a language pair needs no code change here.
 
 // BCP-47 locales used for speech synthesis.
 const LANGUAGE_LOCALES = Object.freeze({
@@ -81,8 +77,6 @@ const IPC = Object.freeze({
 module.exports = {
   MODES,
   LEVELS,
-  LANGUAGES,
-  FROM_LANGUAGES,
   LANGUAGE_LOCALES,
   LANGUAGE_META,
   DEFAULT_LOCALE,
