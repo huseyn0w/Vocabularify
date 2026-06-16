@@ -62,21 +62,7 @@ function createImportWindow({ parent } = {}) {
   return win;
 }
 
-function createSpeedWindow({ parent } = {}) {
-  const win = new BrowserWindow({
-    width: 360,
-    height: 260,
-    resizable: false,
-    parent,
-    center: true,
-    title: 'Custom Speed',
-    webPreferences: securePreferences('speed.js')
-  });
-  win.loadFile(htmlPath('speed.html'));
-  return win;
-}
-
-// Language settings window is a singleton.
+// Settings window is a singleton.
 let settingsWindow = null;
 
 function createSettingsWindow({ parent } = {}) {
@@ -85,13 +71,13 @@ function createSettingsWindow({ parent } = {}) {
     return settingsWindow;
   }
   settingsWindow = new BrowserWindow({
-    width: 560,
-    height: 560,
-    minWidth: 460,
-    minHeight: 460,
+    width: 580,
+    height: 680,
+    minWidth: 480,
+    minHeight: 520,
     parent,
     center: true,
-    title: 'Language',
+    title: 'Settings',
     webPreferences: securePreferences('settings.js')
   });
   settingsWindow.loadFile(htmlPath('settings.html'));
@@ -132,7 +118,6 @@ function createAboutWindow({ parent } = {}) {
 module.exports = {
   createMainWindow,
   createImportWindow,
-  createSpeedWindow,
   createSettingsWindow,
   createAboutWindow
 };

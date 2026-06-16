@@ -68,10 +68,15 @@ const IPC = Object.freeze({
   IMPORT_DICTIONARY: 'import-dictionary',
   CHOOSE_DICTIONARY_FILE: 'choose-dictionary-file',
   OPEN_EXTERNAL: 'open-external',
-  GET_INTERVAL: 'get-interval',
-  SET_CUSTOM_SPEED: 'set-custom-speed',
-  GET_LANGUAGE_OPTIONS: 'get-language-options',
-  SET_LANGUAGE_PAIR: 'set-language-pair'
+  OPEN_IMPORT: 'open-import',
+  // Settings window <-> main
+  GET_SETTINGS: 'get-settings',
+  SET_LANGUAGE_PAIR: 'set-language-pair',
+  SET_LEVEL: 'set-level',
+  SET_BACKGROUND_PREF: 'set-background-pref',
+  SET_MODE: 'set-mode',
+  SET_SOUND: 'set-sound',
+  SET_SPEED: 'set-speed'
 });
 
 module.exports = {

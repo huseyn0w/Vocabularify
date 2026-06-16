@@ -1,84 +1,160 @@
-const learnGrid = document.getElementById('learn-grid');
-const fromGrid = document.getElementById('from-grid');
-const summary = document.getElementById('summary');
+const els = {
+  learn: document.getElementById('learn-grid'),
+  from: document.getElementById('from-grid'),
+  langSummary: document.getElementById('lang-summary'),
+  level: document.getElementById('level-row'),
+  bg: document.getElementById('bg-row'),
+  modeSection: document.getElementById('mode-section'),
+  mode: document.getElementById('mode-row'),
+  soundToggle: document.getElementById('sound-toggle'),
+  speed: document.getElementById('speed-row'),
+  speedCustom: document.getElementById('speed-custom'),
+  importBtn: document.getElementById('import-btn')
+};
 
-let meta = {};
-let pairs = {}; // { targetLang: [sourceLang, ...] }
-let selectedTo = null;
-let selectedFrom = null;
+let s = null; // full settings snapshot from main
 
-function card(code, { selected, disabled } = {}) {
+function langCard(code, { selected, disabled } = {}) {
+  const info = s.languages.meta[code] || { name: code, flag: '🏳️' };
   const el = document.createElement('div');
   el.className = 'lang' + (selected ? ' selected' : '') + (disabled ? ' disabled' : '');
-  el.dataset.code = code;
-  const info = meta[code] || { name: code, flag: '🏳️' };
   el.innerHTML = `<span class="flag">${info.flag}</span><span>${info.name}</span>`;
   return el;
 }
 
-function renderLearn() {
-  learnGrid.innerHTML = '';
-  // Targets are the languages we have any dictionary for.
+function chip(label, { selected } = {}) {
+  const el = document.createElement('div');
+  el.className = 'chip' + (selected ? ' selected' : '');
+  el.textContent = label;
+  return el;
+}
+
+function renderLanguages() {
+  const { meta, pairs } = s.languages;
+  const { to, from } = s.current;
+
+  els.learn.innerHTML = '';
   for (const code of Object.keys(pairs).sort()) {
-    const el = card(code, { selected: code === selectedTo });
-    el.addEventListener('click', () => selectTarget(code));
-    learnGrid.appendChild(el);
+    const el = langCard(code, { selected: code === to });
+    el.addEventListener('click', () => changePair(code, null));
+    els.learn.appendChild(el);
   }
-}
 
-function renderFrom() {
-  fromGrid.innerHTML = '';
-  const sources = pairs[selectedTo] || [];
-  // Show every language except the target; disable ones without data.
+  els.from.innerHTML = '';
+  const sources = pairs[to] || [];
   for (const code of Object.keys(meta)) {
-    if (code === selectedTo) continue;
+    if (code === to) continue;
     const available = sources.includes(code);
-    const el = card(code, { selected: code === selectedFrom, disabled: !available });
-    if (available) el.addEventListener('click', () => selectSource(code));
-    fromGrid.appendChild(el);
+    const el = langCard(code, { selected: code === from, disabled: !available });
+    if (available) el.addEventListener('click', () => changePair(to, code));
+    els.from.appendChild(el);
+  }
+
+  const t = meta[to], f = meta[from];
+  els.langSummary.innerHTML = t && f ? `Learning <b>${t.flag} ${t.name}</b> from <b>${f.flag} ${f.name}</b>` : '';
+}
+
+function renderLevels() {
+  els.level.innerHTML = '';
+  const items = [...s.levels, ...s.customLevels.map(name => `custom:${name}`)];
+  for (const lvl of items) {
+    const label = lvl.startsWith('custom:') ? `Custom: ${lvl.slice(7)}` : lvl;
+    const el = chip(label, { selected: s.current.level === lvl });
+    el.addEventListener('click', async () => {
+      await window.vocab.setLevel(lvl);
+      s.current.level = lvl;
+      renderLevels();
+    });
+    els.level.appendChild(el);
   }
 }
 
-function renderSummary() {
-  if (!selectedTo || !selectedFrom) {
-    summary.textContent = '';
+function renderBackground() {
+  els.bg.innerHTML = '';
+  for (const bg of ['light', 'dark']) {
+    const el = chip(bg === 'light' ? 'Light' : 'Dark', { selected: s.current.background === bg });
+    el.addEventListener('click', async () => {
+      await window.vocab.setBackground(bg);
+      s.current.background = bg;
+      renderBackground();
+    });
+    els.bg.appendChild(el);
+  }
+}
+
+function renderMode() {
+  if (!s.isMac) {
+    els.modeSection.classList.add('hidden');
     return;
   }
-  const t = meta[selectedTo], f = meta[selectedFrom];
-  summary.innerHTML = `Learning <b>${t.flag} ${t.name}</b> from <b>${f.flag} ${f.name}</b>`;
-}
-
-function selectTarget(code) {
-  selectedTo = code;
-  const sources = pairs[code] || [];
-  // Keep the current source if still valid, else pick the first available.
-  if (!sources.includes(selectedFrom)) {
-    selectedFrom = sources[0] || null;
-  }
-  renderLearn();
-  renderFrom();
-  apply();
-}
-
-function selectSource(code) {
-  selectedFrom = code;
-  renderFrom();
-  apply();
-}
-
-function apply() {
-  renderSummary();
-  if (selectedTo && selectedFrom) {
-    window.vocab.setLanguagePair(selectedTo, selectedFrom);
+  els.mode.innerHTML = '';
+  for (const mode of s.modes) {
+    const el = chip(mode, { selected: s.current.mode === mode });
+    el.addEventListener('click', async () => {
+      await window.vocab.setMode(mode);
+      s.current.mode = mode;
+      renderMode();
+    });
+    els.mode.appendChild(el);
   }
 }
 
-window.vocab.getLanguageOptions().then(opts => {
-  meta = opts.meta;
-  pairs = opts.pairs;
-  selectedTo = opts.current.to;
-  selectedFrom = opts.current.from;
-  renderLearn();
-  renderFrom();
-  renderSummary();
+function renderSound() {
+  els.soundToggle.classList.toggle('on', s.current.sound);
+}
+
+function renderSpeed() {
+  els.speed.innerHTML = '';
+  for (const ms of s.speeds) {
+    const el = chip(`${ms / 1000}s`, { selected: s.current.intervalMs === ms });
+    el.addEventListener('click', () => applySpeed(ms));
+    els.speed.appendChild(el);
+  }
+  els.speedCustom.value = Math.round(s.current.intervalMs / 1000);
+}
+
+async function applySpeed(ms) {
+  await window.vocab.setSpeed(ms);
+  s.current.intervalMs = ms;
+  renderSpeed();
+}
+
+async function changePair(to, from) {
+  // When only the target changed, keep the source if still valid else pick first.
+  const sources = s.languages.pairs[to] || [];
+  const nextFrom = from || (sources.includes(s.current.from) ? s.current.from : sources[0]);
+  if (!nextFrom) return;
+  await window.vocab.setLanguagePair(to, nextFrom);
+  s = await window.vocab.getSettings(); // refresh (level/custom dicts may change)
+  renderAll();
+}
+
+function renderAll() {
+  renderLanguages();
+  renderLevels();
+  renderBackground();
+  renderMode();
+  renderSound();
+  renderSpeed();
+}
+
+els.soundToggle.addEventListener('click', async () => {
+  const next = !s.current.sound;
+  await window.vocab.setSound(next);
+  s.current.sound = next;
+  renderSound();
+});
+
+els.speedCustom.addEventListener('change', () => {
+  const seconds = Number(els.speedCustom.value);
+  if (Number.isFinite(seconds) && seconds > 0) {
+    applySpeed(Math.round(seconds * 1000));
+  }
+});
+
+els.importBtn.addEventListener('click', () => window.vocab.openImport());
+
+window.vocab.getSettings().then(settings => {
+  s = settings;
+  renderAll();
 });

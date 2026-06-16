@@ -36,16 +36,16 @@ Each of these has a co-located `*.test.js` (Vitest). Keep this layer Electron-fr
 - **store.js** — load/save state via `normalizeState`.
 - **dictionaries.js** — import/delete/list custom dictionaries.
 - **phraseEngine.js** — owns the phrase list, current index and auto-advance timer; surface-agnostic via an injected `onRender(phrase, index, total)`.
-- **windows.js** — main/import/about/custom-speed window factories (`securePreferences()` wires the preload + isolation flags).
+- **windows.js** — main/import/settings/about window factories (`securePreferences()` wires the preload + isolation flags).
 - **tray.js** — a **single** tray-menu template builder used for both creation and every refresh (do not reintroduce a second copy).
 - **ipc.js** — registers the whitelisted `ipcMain` handlers.
 
 [index.js](index.js) is the thin composition root: it holds the `state` object, creates the engine/tray/windows, wires tray actions and IPC callbacks, and owns app lifecycle. `renderPhrase` routes the current phrase to the tray title (Menu Bar mode) or the window (otherwise).
 
 ### `src/preload/` and `src/renderer/`
-- **preload/{main,import,about,speed}.js** — expose `window.vocab` per window.
+- **preload/{main,import,settings,about}.js** — expose `window.vocab` per window.
 - **renderer/main.js** — main display window logic (phrase rendering, fade animation, TTS via `SpeechSynthesisUtterance`, progress bar, theme). Auto-advance **pauses while the window is hovered** (`setPaused` → engine stop/restart) and the keyboard hint only shows on hover. The target font scales with the window via CSS `clamp(.., vw, ..)`.
-- **renderer/speed.js** — the custom-speed prompt.
+- **renderer/settings.js** — the unified Settings window logic.
 - HTML lives at the project root (`index.html`, `import.html`, `about.html`, `speed.html`); `import.html`/`about.html` keep small inline scripts.
 
 ### Key cross-cutting concepts
@@ -57,7 +57,7 @@ Each of these has a co-located `*.test.js` (Vitest). Keep this layer Electron-fr
 - Built-in dictionaries: `languages/<targetLang>/<fromLang>/<level>.json` (levels `a1`–`c1`, lowercase). The app supports **7 languages** (en, de, fr, es, it, tr, ru) in a full any-from-any matrix (42 pairs). Which pairs exist is discovered at runtime by scanning the `languages/` directory (`config.listAvailablePairs`) — no hard-coded language map. Packaged builds bundle `languages/` via `extraResources`.
 - **Generated from a multilingual bank**: the pair files are *generated*, not hand-edited. `languages/_bank/<level>.json` holds concept rows `{ en, de, fr, es, it, tr, ru }` (one concept, all 7 translations; target nouns carry their article/gender, verbs are infinitives). `node utils/generate_pairs.js` projects the bank into all 42 pairs × 5 levels (a concept is kept at its lowest level; each target word appears once per pair). To change vocabulary, edit the bank and regenerate — do not hand-edit the pair files. `languages/_audit/` holds the audit + bank-build reports (ignored as a language by the `_` prefix).
 - **Custom dictionaries**: imported from plain `.txt` (`word - translation` per line, chosen via a native file dialog), stored as `<target>_<from>_<name>.json` in `<userData>/custom_dictionaries`, surfaced in the tray Level submenu as `custom:<name>`.
-- **Language selection UI**: the tray's `Language …` item opens a settings window (`settings.html` + `src/renderer/settings.js`) with flag cards for target + source, driven by `listAvailablePairs`.
+- **Settings UI**: the tray is minimal (Settings… / About / Quit). All configuration — language pair (flag cards, driven by `listAvailablePairs`), level (+ custom dicts), background, mode, sound, speed, dictionary import — lives in one Settings window (`settings.html` + `src/renderer/settings.js`), talking to main via the `get-settings` / `set-*` IPC channels.
 
 ### utils/ (offline data tooling)
 - `clean_dictionaries.js` — phase-1 cleanup (dedup, junk, column-orientation fix).

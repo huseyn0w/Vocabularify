@@ -1,13 +1,13 @@
 const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron');
 
-const { MODES, IPC, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } = require('./src/shared/constants');
+const { MODES, IPC, LEVELS, SPEED_INTERVALS, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } = require('./src/shared/constants');
 const { getLanguageFilePath, getLocale } = require('./src/shared/languagePaths');
 const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir, listAvailablePairs } = require('./src/main/config');
 const { clampInterval } = require('./src/shared/state');
 const { loadState, saveState } = require('./src/main/store');
 const dictionaries = require('./src/main/dictionaries');
 const { createPhraseEngine } = require('./src/main/phraseEngine');
-const { createMainWindow, createImportWindow, createSpeedWindow, createSettingsWindow, createAboutWindow } = require('./src/main/windows');
+const { createMainWindow, createImportWindow, createSettingsWindow, createAboutWindow } = require('./src/main/windows');
 const { createTrayController } = require('./src/main/tray');
 const { registerIpcHandlers } = require('./src/main/ipc');
 
@@ -117,11 +117,24 @@ function setLanguagePair({ to, from }) {
   switchLanguage(to, from, level);
 }
 
-function getLanguageOptions() {
+// Full snapshot consumed by the Settings window.
+function getSettings() {
   return {
-    meta: LANGUAGE_META,
-    pairs: listAvailablePairs(),
-    current: { to: state.currentLanguage, from: state.currentFromLanguage }
+    languages: { meta: LANGUAGE_META, pairs: listAvailablePairs() },
+    levels: LEVELS,
+    customLevels: dictionaries.listCustomDictionaryNamesFor(state.currentLanguage, state.currentFromLanguage),
+    speeds: SPEED_INTERVALS,
+    isMac: process.platform === 'darwin',
+    modes: [MODES.WINDOW, MODES.MENU_BAR, MODES.CHECKUP],
+    current: {
+      to: state.currentLanguage,
+      from: state.currentFromLanguage,
+      level: state.currentLevel,
+      background: state.currentBackground,
+      mode: state.currentMode,
+      sound: state.isSoundMode,
+      intervalMs: state.intervalMs
+    }
   };
 }
 
@@ -208,20 +221,11 @@ app.whenReady().then(() => {
   engine = createPhraseEngine({ intervalMs: state.intervalMs, onRender: renderPhrase });
 
   tray = createTrayController({
-    getState: () => state,
     actions: {
-      setBackground,
-      setLevel,
-      switchMode,
-      setSpeed,
-      toggleSound,
       openSettings: () => createSettingsWindow({ parent: dialogParent() }),
-      openImport: () => createImportWindow({ parent: dialogParent() }),
-      openCustomSpeed: () => createSpeedWindow({ parent: dialogParent() }),
       openAbout: () => createAboutWindow({ parent: dialogParent() }),
       quit: quitApp
-    },
-    dictionaries
+    }
   });
   tray.create();
 
@@ -246,12 +250,16 @@ app.whenReady().then(() => {
         shell.openExternal(url);
       }
     },
+    openImport: () => createImportWindow({ parent: dialogParent() }),
     onKeyPress: handleKeyPress,
     onSetPaused: setHoverPaused,
-    getIntervalMs: () => state.intervalMs,
-    setCustomSpeed: seconds => setSpeed(clampInterval(seconds * 1000)),
-    getLanguageOptions,
-    setLanguagePair
+    getSettings,
+    setLanguagePair,
+    setLevel,
+    setBackground,
+    setMode: switchMode,
+    setSound: toggleSound,
+    setSpeed: ms => setSpeed(clampInterval(ms))
   });
 
   createWiredMainWindow();
