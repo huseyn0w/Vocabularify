@@ -71,10 +71,10 @@ function createSettingsWindow({ parent } = {}) {
     return settingsWindow;
   }
   settingsWindow = new BrowserWindow({
-    width: 580,
-    height: 680,
-    minWidth: 480,
-    minHeight: 520,
+    width: 740,
+    height: 560,
+    minWidth: 640,
+    minHeight: 480,
     parent,
     center: true,
     title: 'Settings',

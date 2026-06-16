@@ -4,7 +4,7 @@ const els = {
   langSummary: document.getElementById('lang-summary'),
   level: document.getElementById('level-row'),
   bg: document.getElementById('bg-row'),
-  modeSection: document.getElementById('mode-section'),
+  modeBlock: document.getElementById('mode-block'),
   mode: document.getElementById('mode-row'),
   soundToggle: document.getElementById('sound-toggle'),
   speed: document.getElementById('speed-row'),
@@ -13,6 +13,22 @@ const els = {
 };
 
 let s = null; // full settings snapshot from main
+
+// Sidebar navigation: show one panel at a time.
+const navItems = [...document.querySelectorAll('.nav-item')];
+const panels = [...document.querySelectorAll('.panel')];
+for (const item of navItems) {
+  item.addEventListener('click', () => {
+    const target = item.dataset.target;
+    navItems.forEach(n => n.classList.toggle('active', n === item));
+    panels.forEach(p => p.classList.toggle('active', p.dataset.panel === target));
+  });
+}
+
+// Apply the chosen Light/Dark theme to the settings window itself.
+function applyTheme() {
+  document.body.classList.toggle('dark', s.current.background === 'dark');
+}
 
 function langCard(code, { selected, disabled } = {}) {
   const info = s.languages.meta[code] || { name: code, flag: '🏳️' };
@@ -77,6 +93,7 @@ function renderBackground() {
       await window.vocab.setBackground(bg);
       s.current.background = bg;
       renderBackground();
+      applyTheme();
     });
     els.bg.appendChild(el);
   }
@@ -84,9 +101,10 @@ function renderBackground() {
 
 function renderMode() {
   if (!s.isMac) {
-    els.modeSection.classList.add('hidden');
+    els.modeBlock.classList.add('hidden');
     return;
   }
+  els.modeBlock.classList.remove('hidden');
   els.mode.innerHTML = '';
   for (const mode of s.modes) {
     const el = chip(mode, { selected: s.current.mode === mode });
@@ -130,6 +148,7 @@ async function changePair(to, from) {
 }
 
 function renderAll() {
+  applyTheme();
   renderLanguages();
   renderLevels();
   renderBackground();
