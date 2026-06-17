@@ -32,7 +32,8 @@ export function createMainWindow(
     title: 'Vocabularify',
     alwaysOnTop: true,
     skipTaskbar: true,
-    backgroundColor: '#ffffff',
+    // Obsidian base — avoids a white flash before the renderer paints (dark is default).
+    backgroundColor: '#16171c',
     webPreferences: securePreferences('main.js')
   });
 

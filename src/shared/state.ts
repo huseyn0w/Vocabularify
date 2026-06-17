@@ -15,7 +15,8 @@ const DEFAULT_STATE: AppState = Object.freeze({
   currentLevel: 'A1',
   currentMode: MODES.WINDOW,
   isSoundMode: false,
-  currentBackground: 'light',
+  // Obsidian (dark) is the signature premium look — ship it out of the box.
+  currentBackground: 'dark',
   intervalMs: DEFAULT_INTERVAL_MS
 });
 

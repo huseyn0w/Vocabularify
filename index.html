@@ -4,112 +4,149 @@
     <meta charset="utf-8" />
     <title>Vocabularify</title>
     <style>
+      /* ============================================================
+         Obsidian / Alabaster design system — see DESIGN.md
+         ============================================================ */
       :root {
-        --bg: #ffffff;
-        --text: #1d1d1f;
-        --muted: #86868b;
-        --bar-bg: rgba(0, 0, 0, 0.08);
-        --bar-fill: #34c759;
+        /* Alabaster (light) */
+        --bg: oklch(0.975 0.003 264);
+        --bg-elev: oklch(0.99 0.002 264);
+        --ink: oklch(0.20 0.014 264);
+        --muted: oklch(0.50 0.012 264);
+        --accent: oklch(0.55 0.10 70);
+        --bar-bg: oklch(0 0 0 / 0.09);
+        --hairline: oklch(0 0 0 / 0.07);
+        --glow: oklch(0.55 0.10 70 / 0.08);
+        --target-glow: transparent;
+
+        --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       }
       body.dark {
-        --bg: #1c1c1e;
-        --text: #f5f5f7;
-        --muted: #98989d;
-        --bar-bg: rgba(255, 255, 255, 0.14);
-        --bar-fill: #34c759;
+        /* Obsidian (dark, default) */
+        --bg: oklch(0.18 0.012 264);
+        --bg-elev: oklch(0.235 0.014 264);
+        --ink: oklch(0.965 0.014 90);
+        --muted: oklch(0.70 0.012 264);
+        --accent: oklch(0.80 0.085 82);
+        --bar-bg: oklch(1 0 0 / 0.10);
+        --hairline: oklch(1 0 0 / 0.09);
+        --glow: oklch(0.80 0.085 82 / 0.18);
+        --target-glow: oklch(0.80 0.085 82 / 0.18);
       }
 
-      * {
-        box-sizing: border-box;
-      }
-      html,
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+
       body {
-        height: 100%;
-        margin: 0;
-      }
-      body {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 16px;
-        padding: 22px 26px;
-        background: var(--bg);
-        color: var(--text);
+        gap: 18px;
+        padding: 26px 30px;
+        /* Soft top vignette: light pools at the top, settles into the field. */
+        background:
+          radial-gradient(130% 90% at 50% -10%, var(--bg-elev), var(--bg) 62%);
+        color: var(--ink);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        /* Crisp text rendering: Electron on macOS otherwise renders the large
-           target word slightly soft/heavy compared with native apps. */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
         user-select: none;
         overflow: hidden;
-        transition: background 0.3s ease, color 0.3s ease;
+        transition: background 0.4s var(--ease-out), color 0.4s var(--ease-out);
+      }
+
+      /* A single brass glow breathing behind the word — the luxe light source. */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        width: 78%;
+        height: 56%;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(closest-side, var(--glow), transparent 78%);
+        filter: blur(6px);
+        pointer-events: none;
+        z-index: 0;
       }
 
       #phrase-container {
+        position: relative;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         text-align: center;
-        animation: phrase-in 0.32s ease;
+        animation: phrase-in 0.42s var(--ease-out) both;
       }
+
       #source {
-        /* Scales with the window width so a larger window means larger text. */
-        font-size: clamp(13px, 3vw, 28px);
+        font-size: clamp(13px, 3vw, 27px);
         font-weight: 500;
+        letter-spacing: 0.01em;
         color: var(--muted);
       }
+
       #target {
-        font-size: clamp(22px, 7.5vw, 80px);
-        font-weight: 650;
-        letter-spacing: -0.01em;
-        line-height: 1.15;
-        transition: opacity 0.25s ease;
+        font-size: clamp(23px, 7.6vw, 82px);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        text-wrap: balance;
+        color: var(--ink);
+        text-shadow: 0 0 28px var(--target-glow);
+        /* The Checkup reveal eases the answer into focus (blur → crisp). */
+        transition: opacity 0.32s var(--ease-out), filter 0.32s var(--ease-out),
+                    transform 0.32s var(--ease-out);
       }
       #target.hidden {
         opacity: 0;
+        filter: blur(7px);
+        transform: translateY(3px);
       }
 
+      /* The signature focus-pull: every new word resolves out of soft focus. */
       @keyframes phrase-in {
-        from {
-          opacity: 0;
-          transform: translateY(5px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(8px); filter: blur(6px); }
+        to   { opacity: 1; transform: translateY(0);   filter: blur(0); }
       }
 
       #hint {
-        font-size: clamp(10px, 2.2vw, 15px);
+        position: relative;
+        z-index: 1;
+        font-size: clamp(10px, 2.2vw, 14px);
         color: var(--muted);
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s var(--ease-out);
       }
-      /* The hint stays out of the way and only appears while hovering. */
-      body:hover #hint {
-        opacity: 0.85;
-      }
+      body:hover #hint { opacity: 0.9; }
       #hint kbd {
         font-family: inherit;
         font-weight: 600;
-        color: var(--text);
-        opacity: 0.7;
+        color: var(--ink);
+        opacity: 0.85;
+        padding: 1px 6px;
+        border-radius: 6px;
+        border: 1px solid var(--hairline);
+        background: oklch(1 0 0 / 0.04);
       }
 
       .progress {
+        position: relative;
+        z-index: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
       }
       #progress-bar {
         width: 100%;
-        height: 6px;
+        height: 5px;
         background: var(--bar-bg);
         border-radius: 999px;
         overflow: hidden;
@@ -117,14 +154,23 @@
       #progress-bar-inner {
         height: 100%;
         width: 0;
-        background: var(--bar-fill);
         border-radius: 999px;
-        transition: width 0.3s ease;
+        background: var(--accent);
+        box-shadow: 0 0 12px var(--target-glow);
+        transition: width 0.4s var(--ease-out);
       }
       #progress-label {
-        font-size: clamp(10px, 2vw, 15px);
+        font-size: clamp(10px, 2vw, 14px);
         color: var(--muted);
         font-variant-numeric: tabular-nums;
+        letter-spacing: 0.02em;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #phrase-container { animation: phrase-fade 0.25s ease both; }
+        #target, #progress-bar-inner, body { transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease; }
+        #target.hidden { filter: none; transform: none; }
+        @keyframes phrase-fade { from { opacity: 0; } to { opacity: 1; } }
       }
     </style>
   </head>

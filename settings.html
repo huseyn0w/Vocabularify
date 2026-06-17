@@ -4,81 +4,145 @@
     <meta charset="utf-8" />
     <title>Settings</title>
     <style>
+      /* Obsidian / Alabaster — see DESIGN.md */
       :root {
-        --bg: #f5f5f7; --sidebar: #ececf1; --card: #ffffff; --text: #1d1d1f;
-        --muted: #86868b; --accent: #1f6feb; --border: #e3e3e8; --chip: #ececf1;
+        /* Alabaster (light) */
+        --bg: oklch(0.975 0.003 264);
+        --sidebar: oklch(0.955 0.004 264);
+        --card: oklch(1 0 0);
+        --surface-2: oklch(0.965 0.004 264);
+        --heading: oklch(0.20 0.014 264);
+        --text: oklch(0.28 0.012 264);
+        --muted: oklch(0.50 0.012 264);
+        --accent: oklch(0.55 0.10 70);
+        --accent-ink: oklch(0.99 0 0);
+        --accent-soft: oklch(0.55 0.10 70 / 0.12);
+        --border: oklch(0 0 0 / 0.10);
+        --shadow: 0 1px 2px oklch(0 0 0 / 0.06), 0 8px 24px oklch(0 0 0 / 0.06);
+
+        --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       }
       body.dark {
-        --bg: #1c1c1e; --sidebar: #232325; --card: #2c2c2e; --text: #f5f5f7;
-        --muted: #9b9ba0; --accent: #6aa6ff; --border: #3a3a3c; --chip: #3a3a3c;
+        /* Obsidian (dark, default) */
+        --bg: oklch(0.18 0.012 264);
+        --sidebar: oklch(0.205 0.012 264);
+        --card: oklch(0.235 0.013 264);
+        --surface-2: oklch(0.215 0.012 264);
+        --heading: oklch(0.965 0.012 90);
+        --text: oklch(0.92 0.008 264);
+        --muted: oklch(0.70 0.012 264);
+        --accent: oklch(0.80 0.085 82);
+        --accent-ink: oklch(0.20 0.02 80);
+        --accent-soft: oklch(0.80 0.085 82 / 0.15);
+        --border: oklch(1 0 0 / 0.10);
+        --shadow: 0 1px 2px oklch(0 0 0 / 0.4), 0 12px 32px oklch(0 0 0 / 0.45);
       }
+
       * { box-sizing: border-box; }
       html, body { height: 100%; margin: 0; }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
         background: var(--bg); color: var(--text); font-size: 14px;
-        transition: background 0.25s, color 0.25s;
+        transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
       }
+      :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent); }
       .layout { display: flex; height: 100vh; }
 
+      /* ---- Sidebar ---- */
       .sidebar {
-        width: 196px; flex-shrink: 0; background: var(--sidebar);
-        border-right: 1px solid var(--border); padding: 16px 10px; overflow-y: auto;
+        width: 208px; flex-shrink: 0; background: var(--sidebar);
+        border-right: 1px solid var(--border); padding: 22px 12px; overflow-y: auto;
       }
-      .sidebar h2 { font-size: 1.05em; margin: 4px 8px 14px; }
+      .sidebar h2 {
+        font-size: 0.74em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+        color: var(--muted); margin: 2px 10px 16px;
+      }
       .nav-item {
-        display: flex; align-items: center; gap: 9px; padding: 9px 11px; border-radius: 9px;
-        cursor: pointer; color: var(--text); user-select: none; margin-bottom: 2px;
-        transition: background 0.12s;
+        display: flex; align-items: center; gap: 11px; padding: 9px 11px; border-radius: 10px;
+        cursor: pointer; color: var(--text); user-select: none; margin-bottom: 2px; font-weight: 500;
+        transition: background 0.15s var(--ease-out), color 0.15s var(--ease-out);
       }
-      .nav-item:hover { background: rgba(127,127,127,0.12); }
-      .nav-item.active { background: var(--accent); color: #fff; }
-      .nav-item .ic { font-size: 16px; width: 20px; text-align: center; }
+      .nav-item:hover { background: oklch(from var(--text) l c h / 0.07); }
+      .nav-item.active { background: var(--accent-soft); color: var(--accent); }
+      .nav-item .ic { font-size: 16px; width: 20px; text-align: center; opacity: 0.9; }
 
-      .content { flex: 1; padding: 26px 30px; overflow-y: auto; }
+      /* ---- Content ---- */
+      .content { flex: 1; padding: 34px 38px; overflow-y: auto; }
       .panel { display: none; }
-      .panel.active { display: block; }
-      .panel h3 { font-size: 1.2em; margin: 0 0 4px; }
-      .panel .desc { color: var(--muted); margin: 0 0 18px; }
+      .panel.active { display: block; animation: panel-in 0.22s var(--ease-out) both; }
+      @keyframes panel-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+      .panel h3 { font-size: 1.5em; font-weight: 600; letter-spacing: -0.01em; color: var(--heading); margin: 0 0 6px; }
+      .panel .desc { color: var(--muted); margin: 0 0 26px; max-width: 60ch; line-height: 1.5; }
 
-      .block { margin-bottom: 22px; }
+      .block { margin-bottom: 28px; }
       .block-label {
-        font-size: 12px; font-weight: 600; text-transform: uppercase;
-        letter-spacing: 0.04em; color: var(--muted); margin: 0 0 10px;
+        font-size: 11px; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.1em; color: var(--muted); margin: 0 0 12px;
       }
-      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 9px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; }
+
       .lang, .chip {
-        display: flex; align-items: center; gap: 9px; padding: 10px 12px;
-        border: 1.5px solid var(--border); border-radius: 11px; background: var(--card);
-        cursor: pointer; transition: border-color 0.15s, opacity 0.15s, transform 0.06s; user-select: none;
+        display: flex; align-items: center; gap: 10px; padding: 11px 13px;
+        border: 1px solid var(--border); border-radius: 12px; background: var(--card);
+        color: var(--text); cursor: pointer; user-select: none;
+        transition: border-color 0.16s var(--ease-out), background 0.16s var(--ease-out),
+                    box-shadow 0.16s var(--ease-out), transform 0.12s var(--ease-out), opacity 0.16s var(--ease-out);
       }
-      .lang .flag { font-size: 21px; line-height: 1; }
-      .lang:hover, .chip:hover { border-color: var(--accent); }
-      .lang:active, .chip:active { transform: scale(0.98); }
-      .lang.selected, .chip.selected { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-      .lang.disabled { opacity: 0.3; pointer-events: none; }
-      .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-      .chip { justify-content: center; padding: 8px 14px; min-width: 54px; }
+      .lang .flag { font-size: 22px; line-height: 1; }
+      .lang:hover, .chip:hover { border-color: oklch(from var(--accent) l c h / 0.5); transform: translateY(-1px); box-shadow: var(--shadow); }
+      .lang:active, .chip:active { transform: translateY(0) scale(0.975); box-shadow: none; }
+      .lang.selected, .chip.selected {
+        border-color: var(--accent); background: var(--accent-soft);
+        box-shadow: inset 0 0 0 1px var(--accent);
+      }
+      .lang.disabled { opacity: 0.28; pointer-events: none; }
+      .row { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
+      .chip { justify-content: center; padding: 9px 16px; min-width: 56px; font-weight: 500; }
 
-      .toggle { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
-      .switch { width: 42px; height: 25px; border-radius: 999px; background: var(--chip); position: relative; transition: background 0.2s; }
-      .switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 19px; height: 19px; border-radius: 50%; background: #fff; transition: transform 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.3); }
-      .toggle.on .switch { background: #34c759; }
-      .toggle.on .switch::after { transform: translateX(17px); }
+      /* ---- Toggle ---- */
+      .toggle { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; }
+      .switch {
+        width: 44px; height: 26px; border-radius: 999px; background: var(--surface-2);
+        border: 1px solid var(--border); position: relative; flex-shrink: 0;
+        transition: background 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+      }
+      .switch::after {
+        content: ""; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%;
+        background: oklch(1 0 0); box-shadow: 0 1px 3px oklch(0 0 0 / 0.35);
+        transition: transform 0.22s var(--ease-out);
+      }
+      .toggle.on .switch { background: var(--accent); border-color: transparent; }
+      .toggle.on .switch::after { transform: translateX(18px); }
+      .toggle:active .switch::after { width: 23px; }
 
+      /* ---- Inputs & buttons ---- */
       input[type="number"] {
-        width: 78px; padding: 8px 9px; font-size: 14px; border: 1.5px solid var(--border);
-        border-radius: 9px; background: var(--card); color: var(--text);
+        width: 84px; padding: 9px 11px; font-size: 14px; border: 1px solid var(--border);
+        border-radius: 10px; background: var(--surface-2); color: var(--text);
+        transition: border-color 0.16s var(--ease-out), box-shadow 0.16s var(--ease-out);
       }
+      input[type="number"]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
       button.action {
-        padding: 9px 16px; font-size: 14px; font-weight: 600; border: none; border-radius: 9px;
-        background: var(--accent); color: #fff; cursor: pointer;
+        padding: 11px 20px; font-size: 14px; font-weight: 600; border: none; border-radius: 11px;
+        background: var(--accent); color: var(--accent-ink); cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: filter 0.16s var(--ease-out), transform 0.12s var(--ease-out);
       }
-      button.action:hover { filter: brightness(1.07); }
-      .summary { font-size: 13px; color: var(--muted); margin-top: 6px; }
-      .summary b { color: var(--text); }
+      button.action:hover { filter: brightness(1.06); }
+      button.action:active { transform: scale(0.97); }
+
+      .summary { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+      .summary b { color: var(--heading); font-weight: 600; }
       .hidden { display: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .panel.active { animation: panel-fade 0.18s ease both; }
+        .lang, .chip { transition: border-color 0.15s ease, background 0.15s ease; }
+        .lang:hover, .chip:hover { transform: none; }
+        @keyframes panel-fade { from { opacity: 0; } to { opacity: 1; } }
+      }
     </style>
   </head>
   <body>
@@ -121,7 +185,7 @@
           </div>
           <div class="block"><div class="block-label">Changing speed</div>
             <div class="row" id="speed-row"></div>
-            <div class="row" style="margin-top: 8px;">
+            <div class="row" style="margin-top: 10px;">
               <span style="color: var(--muted);">Custom:</span>
               <input type="number" id="speed-custom" min="1" max="600" step="1" />
               <span style="color: var(--muted);">seconds</span>
