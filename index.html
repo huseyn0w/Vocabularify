@@ -37,6 +37,11 @@
         background: var(--bg);
         color: var(--text);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        /* Crisp text rendering: Electron on macOS otherwise renders the large
+           target word slightly soft/heavy compared with native apps. */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
         user-select: none;
         overflow: hidden;
         transition: background 0.3s ease, color 0.3s ease;
