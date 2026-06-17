@@ -187,17 +187,11 @@ function quitApp() {
   app.quit();
 }
 
-// Parent dialogs to the main window only when it is actually visible; a
-// child of a hidden window (Menu Bar mode) may not display. When hidden,
-// returning undefined makes the dialog a normal top-level window.
-function dialogParent(): BrowserWindow | undefined {
-  return mainWindow && !mainWindow.isDestroyed() && mainWindow.isVisible() ? mainWindow : undefined;
-}
-
 // --- Window wiring ----------------------------------------------------------
 
 function createWiredMainWindow() {
   mainWindow = createMainWindow({
+    initialBackground: state.currentBackground,
     onClose: () => {
       engine.stop(); // halt the timer before the window is destroyed
       app.quit();
@@ -223,8 +217,8 @@ app.whenReady().then(() => {
 
   tray = createTrayController({
     actions: {
-      openSettings: () => createSettingsWindow({ parent: dialogParent() }),
-      openAbout: () => createAboutWindow({ parent: dialogParent() }),
+      openSettings: () => createSettingsWindow(),
+      openAbout: () => createAboutWindow(),
       quit: quitApp
     }
   });
@@ -251,7 +245,7 @@ app.whenReady().then(() => {
         shell.openExternal(url);
       }
     },
-    openImport: () => createImportWindow({ parent: dialogParent() }),
+    openImport: () => createImportWindow(),
     onKeyPress: handleKeyPress,
     onSetPaused: setHoverPaused,
     getSettings,

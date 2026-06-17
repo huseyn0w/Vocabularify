@@ -2,6 +2,12 @@ import { BrowserWindow } from 'electron';
 import path from 'path';
 import { APP_ROOT } from './config';
 import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../shared/constants';
+import type { Background } from '../shared/types';
+
+// Native window background per theme — painted on the very first frame so the
+// window opens already in the right theme (see also the renderer's synchronous
+// theme application via the --vocab-theme launch argument).
+const WINDOW_BG: Record<Background, string> = { dark: '#16171c', light: '#f5f5f7' };
 
 const htmlPath = (name: string) => path.join(APP_ROOT, name);
 const preloadPath = (name: string) => path.join(__dirname, '..', 'preload', name);
@@ -20,7 +26,11 @@ function securePreferences(preloadScript: string) {
 }
 
 export function createMainWindow(
-  { onClose, onReady }: { onClose?: () => void; onReady?: (win: BrowserWindow) => void } = {}
+  { onClose, onReady, initialBackground = 'dark' }: {
+    onClose?: () => void;
+    onReady?: (win: BrowserWindow) => void;
+    initialBackground?: Background;
+  } = {}
 ): BrowserWindow {
   const win = new BrowserWindow({
     width: WINDOW_WIDTH,
@@ -32,9 +42,13 @@ export function createMainWindow(
     title: 'Vocabularify',
     alwaysOnTop: true,
     skipTaskbar: true,
-    // Obsidian base — avoids a white flash before the renderer paints (dark is default).
-    backgroundColor: '#16171c',
-    webPreferences: securePreferences('main.js')
+    // Paint the persisted theme on the first frame (no flash before the renderer paints).
+    backgroundColor: WINDOW_BG[initialBackground],
+    webPreferences: {
+      ...securePreferences('main.js'),
+      // Hand the theme to the preload so the renderer can apply it before paint.
+      additionalArguments: [`--vocab-theme=${initialBackground}`]
+    }
   });
 
   win.loadFile(htmlPath('index.html'));
@@ -49,18 +63,25 @@ export function createMainWindow(
   return win;
 }
 
-// Dialogs are created as children of the main window (`parent`) so they
-// always sit above it — the main window is always-on-top at screen-saver
-// level, which would otherwise hide a plain top-level dialog behind it.
-// They stay non-modal so the user can still move and interact with them.
-export function createImportWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
+// Dialogs are independent top-level windows, NOT children of the main card.
+// A child window on macOS is pinned to its parent and moves together with it,
+// so dragging the card dragged the open dialog along with it. Instead each
+// dialog floats at the same screen-saver always-on-top level as the card — it
+// stays above the card (which would otherwise hide a plain window) while being
+// freely movable on its own.
+function floatAboveCard(win: BrowserWindow): void {
+  win.setAlwaysOnTop(true, 'screen-saver');
+}
+
+export function createImportWindow(): BrowserWindow {
   const win = new BrowserWindow({
     width: 500,
     height: 400,
-    parent,
     center: true,
+    alwaysOnTop: true,
     webPreferences: securePreferences('import.js')
   });
+  floatAboveCard(win);
   win.loadFile(htmlPath('import.html'));
   return win;
 }
@@ -68,7 +89,7 @@ export function createImportWindow({ parent }: { parent?: BrowserWindow } = {}):
 // Settings window is a singleton.
 let settingsWindow: BrowserWindow | null = null;
 
-export function createSettingsWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
+export function createSettingsWindow(): BrowserWindow {
   if (settingsWindow) {
     settingsWindow.focus();
     return settingsWindow;
@@ -78,11 +99,12 @@ export function createSettingsWindow({ parent }: { parent?: BrowserWindow } = {}
     height: 560,
     minWidth: 640,
     minHeight: 480,
-    parent,
     center: true,
+    alwaysOnTop: true,
     title: 'Settings',
     webPreferences: securePreferences('settings.js')
   });
+  floatAboveCard(settingsWindow);
   settingsWindow.loadFile(htmlPath('settings.html'));
   settingsWindow.on('closed', () => {
     settingsWindow = null;
@@ -93,7 +115,7 @@ export function createSettingsWindow({ parent }: { parent?: BrowserWindow } = {}
 // The About window is a singleton: re-invoking focuses the existing one.
 let aboutWindow: BrowserWindow | null = null;
 
-export function createAboutWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
+export function createAboutWindow(): BrowserWindow {
   if (aboutWindow) {
     aboutWindow.focus();
     return aboutWindow;
@@ -105,11 +127,12 @@ export function createAboutWindow({ parent }: { parent?: BrowserWindow } = {}): 
     resizable: false,
     minimizable: false,
     maximizable: false,
-    parent,
     center: true,
+    alwaysOnTop: true,
     webPreferences: securePreferences('about.js')
   });
 
+  floatAboveCard(aboutWindow);
   aboutWindow.loadFile(htmlPath('about.html'));
   aboutWindow.on('closed', () => {
     aboutWindow = null;

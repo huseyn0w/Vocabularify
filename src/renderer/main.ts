@@ -11,6 +11,10 @@ type DisplayPhrasePayload = import('../shared/types').DisplayPhrasePayload;
 (() => {
   const vocab = window.vocab as MainVocabApi;
 
+  // Apply the persisted theme synchronously, before the first paint, so the
+  // window never flashes the wrong theme on launch.
+  document.body.classList.toggle('dark', vocab.initialBackground === 'dark');
+
   const phraseContainer = document.getElementById('phrase-container') as HTMLElement;
   const sourceEl = document.getElementById('source') as HTMLElement;
   const targetEl = document.getElementById('target') as HTMLElement;

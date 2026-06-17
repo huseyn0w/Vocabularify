@@ -103,6 +103,9 @@ export interface DisplayPhrasePayload {
 }
 
 export interface MainVocabApi {
+  /** The persisted theme, exposed synchronously so the renderer can apply it
+   *  before first paint (avoids a light/dark flash on launch). */
+  initialBackground: Background;
   onDisplayPhrase(callback: (payload: DisplayPhrasePayload) => void): void;
   onSetBackground(callback: (background: Background) => void): void;
   onToggleSound(callback: (enabled: boolean) => void): void;

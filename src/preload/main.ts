@@ -1,11 +1,18 @@
 import { contextBridge, ipcRenderer } from 'electron';
 import { IPC } from '../shared/constants';
-import type { MainVocabApi } from '../shared/types';
+import type { Background, MainVocabApi } from '../shared/types';
+
+// The main process passes the persisted theme as a launch argument
+// (`--vocab-theme=dark|light`) so the renderer can paint the right theme on the
+// very first frame instead of waiting for the post-load SET_BACKGROUND message.
+const themeArg = process.argv.find(arg => arg.startsWith('--vocab-theme='));
+const initialBackground: Background = themeArg?.split('=')[1] === 'dark' ? 'dark' : 'light';
 
 // Exposes a minimal, explicit API to the main display window. The renderer
 // runs with contextIsolation + nodeIntegration disabled and can only reach
 // the main process through these whitelisted channels.
 const api: MainVocabApi = {
+  initialBackground,
   onDisplayPhrase: callback =>
     ipcRenderer.on(IPC.DISPLAY_PHRASE, (_event, phrase, mode, index, total) =>
       callback({ phrase, mode, index, total })
