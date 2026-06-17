@@ -211,6 +211,14 @@ function createWiredMainWindow() {
 // --- App lifecycle ----------------------------------------------------------
 
 app.whenReady().then(() => {
+  // Become an accessory app (no Dock icon) BEFORE creating any window. Hiding
+  // the Dock flips the activation policy, and doing it after a window exists
+  // makes macOS hide and re-show that window — a visible pop/disappear/pop
+  // flicker on launch. Setting it first avoids the flicker entirely.
+  if (process.platform === 'darwin') {
+    app.dock?.hide();
+  }
+
   ensureCustomDictsDir();
 
   engine = createPhraseEngine({ intervalMs: state.intervalMs, onRender: renderPhrase });
@@ -261,7 +269,6 @@ app.whenReady().then(() => {
   registerGlobalShortcuts();
 
   if (process.platform === 'darwin') {
-    app.dock?.hide();
     mainWindow!.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   }
   mainWindow!.setAlwaysOnTop(true, 'screen-saver');

@@ -20,6 +20,13 @@
     "sourceMap": true,
     "declaration": false,
 
+    // Incremental build cache so `tsc -w` (yarn start) does NOT re-emit
+    // already-current files on startup — that re-emit makes electronmon
+    // restart the app right after launch (a visible relaunch flicker). Kept
+    // outside out/ so it is neither packaged nor watched.
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+
     "types": ["node"]
   },
   "include": ["src/**/*.ts"],
