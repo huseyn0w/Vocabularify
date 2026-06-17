@@ -1,16 +1,16 @@
-const { BrowserWindow } = require('electron');
-const path = require('path');
-const { APP_ROOT } = require('./config');
-const { WINDOW_WIDTH, WINDOW_HEIGHT } = require('../shared/constants');
+import { BrowserWindow } from 'electron';
+import path from 'path';
+import { APP_ROOT } from './config';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../shared/constants';
 
-const htmlPath = name => path.join(APP_ROOT, name);
-const preloadPath = name => path.join(__dirname, '..', 'preload', name);
+const htmlPath = (name: string) => path.join(APP_ROOT, name);
+const preloadPath = (name: string) => path.join(__dirname, '..', 'preload', name);
 
 // Hardened defaults: the renderer gets no Node access and runs in an
 // isolated world; it talks to the main process only through the channels
 // each preload script exposes. sandbox is disabled so the preload can
 // require the shared constants module.
-function securePreferences(preloadScript) {
+function securePreferences(preloadScript: string) {
   return {
     preload: preloadPath(preloadScript),
     contextIsolation: true,
@@ -19,7 +19,9 @@ function securePreferences(preloadScript) {
   };
 }
 
-function createMainWindow({ onClose, onReady } = {}) {
+export function createMainWindow(
+  { onClose, onReady }: { onClose?: () => void; onReady?: (win: BrowserWindow) => void } = {}
+): BrowserWindow {
   const win = new BrowserWindow({
     width: WINDOW_WIDTH,
     height: WINDOW_HEIGHT,
@@ -50,7 +52,7 @@ function createMainWindow({ onClose, onReady } = {}) {
 // always sit above it — the main window is always-on-top at screen-saver
 // level, which would otherwise hide a plain top-level dialog behind it.
 // They stay non-modal so the user can still move and interact with them.
-function createImportWindow({ parent } = {}) {
+export function createImportWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
   const win = new BrowserWindow({
     width: 500,
     height: 400,
@@ -63,9 +65,9 @@ function createImportWindow({ parent } = {}) {
 }
 
 // Settings window is a singleton.
-let settingsWindow = null;
+let settingsWindow: BrowserWindow | null = null;
 
-function createSettingsWindow({ parent } = {}) {
+export function createSettingsWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
   if (settingsWindow) {
     settingsWindow.focus();
     return settingsWindow;
@@ -88,9 +90,9 @@ function createSettingsWindow({ parent } = {}) {
 }
 
 // The About window is a singleton: re-invoking focuses the existing one.
-let aboutWindow = null;
+let aboutWindow: BrowserWindow | null = null;
 
-function createAboutWindow({ parent } = {}) {
+export function createAboutWindow({ parent }: { parent?: BrowserWindow } = {}): BrowserWindow {
   if (aboutWindow) {
     aboutWindow.focus();
     return aboutWindow;
@@ -114,10 +116,3 @@ function createAboutWindow({ parent } = {}) {
 
   return aboutWindow;
 }
-
-module.exports = {
-  createMainWindow,
-  createImportWindow,
-  createSettingsWindow,
-  createAboutWindow
-};

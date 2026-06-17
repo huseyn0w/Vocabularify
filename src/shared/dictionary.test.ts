@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseDictionaryText, parseDictionaryLine } from './dictionary.js';
+import { parseDictionaryText, parseDictionaryLine } from './dictionary';
 
 describe('parseDictionaryLine', () => {
   it('splits a well-formed line and trims both sides', () => {

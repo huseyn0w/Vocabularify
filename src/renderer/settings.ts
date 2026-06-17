@@ -1,22 +1,36 @@
+// NOTE: this script is loaded as a classic <script> in the browser context, so
+// it must compile to a plain script with no module wrapper (no require/exports).
+// We therefore avoid a top-level `import` (even `import type`, which would still
+// flag the file as a module under this CommonJS tsconfig) and reach the shared
+// types through inline `import("...")` type references, which are fully erased
+// and keep the output a classic script. The body is wrapped in an IIFE so its
+// declarations stay file-local (classic scripts share global scope otherwise).
+type SettingsVocabApi = import('../shared/types').SettingsVocabApi;
+type SettingsSnapshot = import('../shared/types').SettingsSnapshot;
+type Background = import('../shared/types').Background;
+
+(() => {
+const vocab = window.vocab as SettingsVocabApi;
+
 const els = {
-  learn: document.getElementById('learn-grid'),
-  from: document.getElementById('from-grid'),
-  langSummary: document.getElementById('lang-summary'),
-  level: document.getElementById('level-row'),
-  bg: document.getElementById('bg-row'),
-  modeBlock: document.getElementById('mode-block'),
-  mode: document.getElementById('mode-row'),
-  soundToggle: document.getElementById('sound-toggle'),
-  speed: document.getElementById('speed-row'),
-  speedCustom: document.getElementById('speed-custom'),
-  importBtn: document.getElementById('import-btn')
+  learn: document.getElementById('learn-grid') as HTMLElement,
+  from: document.getElementById('from-grid') as HTMLElement,
+  langSummary: document.getElementById('lang-summary') as HTMLElement,
+  level: document.getElementById('level-row') as HTMLElement,
+  bg: document.getElementById('bg-row') as HTMLElement,
+  modeBlock: document.getElementById('mode-block') as HTMLElement,
+  mode: document.getElementById('mode-row') as HTMLElement,
+  soundToggle: document.getElementById('sound-toggle') as HTMLElement,
+  speed: document.getElementById('speed-row') as HTMLElement,
+  speedCustom: document.getElementById('speed-custom') as HTMLInputElement,
+  importBtn: document.getElementById('import-btn') as HTMLElement
 };
 
-let s = null; // full settings snapshot from main
+let s!: SettingsSnapshot; // full settings snapshot from main
 
 // Sidebar navigation: show one panel at a time.
-const navItems = [...document.querySelectorAll('.nav-item')];
-const panels = [...document.querySelectorAll('.panel')];
+const navItems = Array.from(document.querySelectorAll<HTMLElement>('.nav-item'));
+const panels = Array.from(document.querySelectorAll<HTMLElement>('.panel'));
 for (const item of navItems) {
   item.addEventListener('click', () => {
     const target = item.dataset.target;
@@ -30,7 +44,7 @@ function applyTheme() {
   document.body.classList.toggle('dark', s.current.background === 'dark');
 }
 
-function langCard(code, { selected, disabled } = {}) {
+function langCard(code: string, { selected, disabled }: { selected?: boolean; disabled?: boolean } = {}) {
   const info = s.languages.meta[code] || { name: code, flag: '🏳️' };
   const el = document.createElement('div');
   el.className = 'lang' + (selected ? ' selected' : '') + (disabled ? ' disabled' : '');
@@ -38,7 +52,7 @@ function langCard(code, { selected, disabled } = {}) {
   return el;
 }
 
-function chip(label, { selected } = {}) {
+function chip(label: string, { selected }: { selected?: boolean } = {}) {
   const el = document.createElement('div');
   el.className = 'chip' + (selected ? ' selected' : '');
   el.textContent = label;
@@ -77,7 +91,7 @@ function renderLevels() {
     const label = lvl.startsWith('custom:') ? `Custom: ${lvl.slice(7)}` : lvl;
     const el = chip(label, { selected: s.current.level === lvl });
     el.addEventListener('click', async () => {
-      await window.vocab.setLevel(lvl);
+      await vocab.setLevel(lvl);
       s.current.level = lvl;
       renderLevels();
     });
@@ -87,10 +101,10 @@ function renderLevels() {
 
 function renderBackground() {
   els.bg.innerHTML = '';
-  for (const bg of ['light', 'dark']) {
+  for (const bg of ['light', 'dark'] as Background[]) {
     const el = chip(bg === 'light' ? 'Light' : 'Dark', { selected: s.current.background === bg });
     el.addEventListener('click', async () => {
-      await window.vocab.setBackground(bg);
+      await vocab.setBackground(bg);
       s.current.background = bg;
       renderBackground();
       applyTheme();
@@ -109,7 +123,7 @@ function renderMode() {
   for (const mode of s.modes) {
     const el = chip(mode, { selected: s.current.mode === mode });
     el.addEventListener('click', async () => {
-      await window.vocab.setMode(mode);
+      await vocab.setMode(mode);
       s.current.mode = mode;
       renderMode();
     });
@@ -128,22 +142,22 @@ function renderSpeed() {
     el.addEventListener('click', () => applySpeed(ms));
     els.speed.appendChild(el);
   }
-  els.speedCustom.value = Math.round(s.current.intervalMs / 1000);
+  els.speedCustom.value = String(Math.round(s.current.intervalMs / 1000));
 }
 
-async function applySpeed(ms) {
-  await window.vocab.setSpeed(ms);
+async function applySpeed(ms: number) {
+  await vocab.setSpeed(ms);
   s.current.intervalMs = ms;
   renderSpeed();
 }
 
-async function changePair(to, from) {
+async function changePair(to: string, from: string | null) {
   // When only the target changed, keep the source if still valid else pick first.
   const sources = s.languages.pairs[to] || [];
   const nextFrom = from || (sources.includes(s.current.from) ? s.current.from : sources[0]);
   if (!nextFrom) return;
-  await window.vocab.setLanguagePair(to, nextFrom);
-  s = await window.vocab.getSettings(); // refresh (level/custom dicts may change)
+  await vocab.setLanguagePair(to, nextFrom);
+  s = await vocab.getSettings(); // refresh (level/custom dicts may change)
   renderAll();
 }
 
@@ -159,7 +173,7 @@ function renderAll() {
 
 els.soundToggle.addEventListener('click', async () => {
   const next = !s.current.sound;
-  await window.vocab.setSound(next);
+  await vocab.setSound(next);
   s.current.sound = next;
   renderSound();
 });
@@ -171,9 +185,10 @@ els.speedCustom.addEventListener('change', () => {
   }
 });
 
-els.importBtn.addEventListener('click', () => window.vocab.openImport());
+els.importBtn.addEventListener('click', () => vocab.openImport());
 
-window.vocab.getSettings().then(settings => {
+vocab.getSettings().then(settings => {
   s = settings;
   renderAll();
 });
+})();

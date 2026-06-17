@@ -1,12 +1,13 @@
-const { Tray, Menu } = require('electron');
-const path = require('path');
-const { APP_ROOT } = require('./config');
+import { Tray, Menu } from 'electron';
+import path from 'path';
+import { APP_ROOT } from './config';
+import type { TrayActions, TrayController } from '../shared/types';
 
 // Owns the tray icon + its (minimal) context menu. All configuration lives
 // in the Settings window; the tray only opens it, About, and Quit. The tray
 // title is also used to show the current phrase in Menu Bar mode.
-function createTrayController({ actions }) {
-  let tray = null;
+export function createTrayController({ actions }: { actions: TrayActions }): TrayController {
+  let tray: Tray | null = null;
 
   function create() {
     tray = new Tray(path.join(APP_ROOT, 'context_menu_icon.png'));
@@ -31,7 +32,7 @@ function createTrayController({ actions }) {
     );
   }
 
-  function setTitle(title) {
+  function setTitle(title: string) {
     if (tray) {
       tray.setTitle(title);
     }
@@ -39,5 +40,3 @@ function createTrayController({ actions }) {
 
   return { create, refresh, setTitle };
 }
-
-module.exports = { createTrayController };

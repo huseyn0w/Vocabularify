@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeState, DEFAULT_STATE, clampInterval, MIN_INTERVAL_MS, MAX_INTERVAL_MS } from './state.js';
+import { normalizeState, DEFAULT_STATE, clampInterval, MIN_INTERVAL_MS, MAX_INTERVAL_MS } from './state';
 
 describe('normalizeState', () => {
   it('returns the defaults for empty / non-object input', () => {
