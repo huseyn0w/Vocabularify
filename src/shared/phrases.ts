@@ -1,13 +1,14 @@
-const { PHRASE_SEPARATOR } = require('./constants');
+import { PHRASE_SEPARATOR } from './constants';
+import type { Phrase, VocabEntry } from './types';
 
 // Turns stored vocabulary entries into displayable "word - translation" strings.
-function toPhrases(vocabulary) {
+export function toPhrases(vocabulary: VocabEntry[]): Phrase[] {
   return vocabulary.map(entry => `${entry.word_1}${PHRASE_SEPARATOR}${entry.word_2}`);
 }
 
 // Splits a phrase back into [word, translation]. If the separator is absent
 // the whole phrase is returned as a single-element array.
-function splitPhrase(phrase) {
+export function splitPhrase(phrase: string): string[] {
   const sepIndex = phrase.indexOf(PHRASE_SEPARATOR);
   if (sepIndex === -1) {
     return [phrase];
@@ -20,26 +21,18 @@ function splitPhrase(phrase) {
 
 // Index arithmetic for cycling through phrases; all wrap around and are
 // safe for an empty list (return 0).
-function nextIndex(index, length) {
+export function nextIndex(index: number, length: number): number {
   return length > 0 ? (index + 1) % length : 0;
 }
 
-function prevIndex(index, length) {
+export function prevIndex(index: number, length: number): number {
   return length > 0 ? (index - 1 + length) % length : 0;
 }
 
 // Keeps a restored index within the bounds of the current phrase list.
-function clampIndex(index, length) {
+export function clampIndex(index: number, length: number): number {
   if (length <= 0) {
     return 0;
   }
   return Math.min(Math.max(index, 0), length - 1);
 }
-
-module.exports = {
-  toPhrases,
-  splitPhrase,
-  nextIndex,
-  prevIndex,
-  clampIndex
-};

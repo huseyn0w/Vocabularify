@@ -1,30 +1,31 @@
-const { app, BrowserWindow, dialog, globalShortcut, shell } = require('electron');
+import { app, BrowserWindow, dialog, globalShortcut, shell } from 'electron';
 
-const { MODES, IPC, LEVELS, SPEED_INTERVALS, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } = require('./src/shared/constants');
-const { getLanguageFilePath, getLocale } = require('./src/shared/languagePaths');
-const { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir, listAvailablePairs } = require('./src/main/config');
-const { clampInterval } = require('./src/shared/state');
-const { loadState, saveState } = require('./src/main/store');
-const dictionaries = require('./src/main/dictionaries');
-const { createPhraseEngine } = require('./src/main/phraseEngine');
-const { createMainWindow, createImportWindow, createSettingsWindow, createAboutWindow } = require('./src/main/windows');
-const { createTrayController } = require('./src/main/tray');
-const { registerIpcHandlers } = require('./src/main/ipc');
+import { MODES, IPC, LEVELS, SPEED_INTERVALS, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } from './shared/constants';
+import { getLanguageFilePath, getLocale } from './shared/languagePaths';
+import { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir, listAvailablePairs } from './main/config';
+import { clampInterval } from './shared/state';
+import { loadState, saveState } from './main/store';
+import * as dictionaries from './main/dictionaries';
+import { createPhraseEngine } from './main/phraseEngine';
+import { createMainWindow, createImportWindow, createSettingsWindow, createAboutWindow } from './main/windows';
+import { createTrayController } from './main/tray';
+import { registerIpcHandlers } from './main/ipc';
+import type { AppState, PhraseEngine, TrayController, KeyEvent, LanguagePair, Background, SettingsSnapshot, ImportPayload } from './shared/types';
 
-let state = loadState();
-let mainWindow = null;
-let engine;
-let tray;
+let state: AppState = loadState();
+let mainWindow: BrowserWindow | null = null;
+let engine: PhraseEngine;
+let tray: TrayController;
 let isHoverPaused = false;
 
-function showError(message, error) {
-  dialog.showErrorBox(message, error ? error.stack || error.toString() : 'Unknown error');
+function showError(message: string, error?: unknown) {
+  dialog.showErrorBox(message, error ? (error instanceof Error ? error.stack ?? error.toString() : String(error)) : 'Unknown error');
 }
 
 // Sends to the main window only when it is alive. Guards against the
 // teardown race where the auto-advance timer fires after the window has
 // been destroyed (closing the window quits the app).
-function sendToWindow(channel, ...args) {
+function sendToWindow(channel: string, ...args: unknown[]) {
   if (mainWindow && !mainWindow.isDestroyed()) {
     mainWindow.webContents.send(channel, ...args);
   }
@@ -34,7 +35,7 @@ function sendToWindow(channel, ...args) {
 
 // Routes the current phrase to whichever surface the active mode uses:
 // the tray title in Menu Bar mode, the window otherwise.
-function renderPhrase(phrase, index, total) {
+function renderPhrase(phrase: string, index: number, total: number) {
   state.currentIndex = index;
   if (state.currentMode === MODES.MENU_BAR) {
     tray.setTitle(phrase);
@@ -53,7 +54,7 @@ function currentDictionaryPath() {
   });
 }
 
-function loadCurrentDictionary(startIndex) {
+function loadCurrentDictionary(startIndex: number) {
   try {
     engine.load(currentDictionaryPath(), startIndex);
   } catch (error) {
@@ -63,13 +64,13 @@ function loadCurrentDictionary(startIndex) {
 
 // --- Tray actions -----------------------------------------------------------
 
-function setBackground(background) {
+function setBackground(background: Background) {
   state.currentBackground = background;
   sendToWindow(IPC.SET_BACKGROUND, background);
   tray.refresh();
 }
 
-function switchLanguage(language, fromLanguage, level) {
+function switchLanguage(language: string, fromLanguage: string, level: string) {
   state.currentLanguage = language;
   state.currentFromLanguage = fromLanguage;
   state.currentLevel = level;
@@ -78,7 +79,7 @@ function switchLanguage(language, fromLanguage, level) {
   tray.refresh();
 }
 
-function switchMode(mode) {
+function switchMode(mode: AppState['currentMode']) {
   state.currentMode = mode;
   if (mode === MODES.WINDOW || mode === MODES.CHECKUP) {
     if (!mainWindow) {
@@ -95,30 +96,30 @@ function switchMode(mode) {
   tray.refresh();
 }
 
-function setSpeed(intervalMs) {
+function setSpeed(intervalMs: number) {
   state.intervalMs = intervalMs;
   engine.setIntervalMs(intervalMs);
   tray.refresh();
 }
 
-function toggleSound(enabled) {
+function toggleSound(enabled: boolean) {
   state.isSoundMode = enabled;
   sendToWindow(IPC.TOGGLE_SOUND_MODE, enabled);
 }
 
-function setLevel(level) {
+function setLevel(level: string) {
   switchLanguage(state.currentLanguage, state.currentFromLanguage, level);
 }
 
 // Called from the language settings window. Switches the pair, keeping a
 // standard CEFR level (custom levels are pair-specific, so reset to A1).
-function setLanguagePair({ to, from }) {
+function setLanguagePair({ to, from }: LanguagePair) {
   const level = String(state.currentLevel).startsWith(CUSTOM_LEVEL_PREFIX) ? 'A1' : state.currentLevel;
   switchLanguage(to, from, level);
 }
 
 // Full snapshot consumed by the Settings window.
-function getSettings() {
+function getSettings(): SettingsSnapshot {
   return {
     languages: { meta: LANGUAGE_META, pairs: listAvailablePairs() },
     levels: LEVELS,
@@ -140,7 +141,7 @@ function getSettings() {
 
 // --- Input ------------------------------------------------------------------
 
-function handleKeyPress(keyEvent) {
+function handleKeyPress(keyEvent: KeyEvent) {
   if (!keyEvent.shiftKey || (keyEvent.key !== 'ArrowRight' && keyEvent.key !== 'ArrowLeft')) {
     return;
   }
@@ -157,7 +158,7 @@ function handleKeyPress(keyEvent) {
 }
 
 // Pauses auto-advance while the window is hovered; the current word stays put.
-function setHoverPaused(paused) {
+function setHoverPaused(paused: boolean) {
   isHoverPaused = paused;
   if (paused) {
     engine.stop();
@@ -189,7 +190,7 @@ function quitApp() {
 // Parent dialogs to the main window only when it is actually visible; a
 // child of a hidden window (Menu Bar mode) may not display. When hidden,
 // returning undefined makes the dialog a normal top-level window.
-function dialogParent() {
+function dialogParent(): BrowserWindow | undefined {
   return mainWindow && !mainWindow.isDestroyed() && mainWindow.isVisible() ? mainWindow : undefined;
 }
 
@@ -230,7 +231,7 @@ app.whenReady().then(() => {
   tray.create();
 
   registerIpcHandlers({
-    importDictionary: payload => {
+    importDictionary: (payload: ImportPayload) => {
       const result = dictionaries.importDictionary(payload);
       tray.refresh();
       return result;
@@ -266,10 +267,10 @@ app.whenReady().then(() => {
   registerGlobalShortcuts();
 
   if (process.platform === 'darwin') {
-    app.dock.hide();
-    mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+    app.dock?.hide();
+    mainWindow!.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   }
-  mainWindow.setAlwaysOnTop(true, 'screen-saver');
+  mainWindow!.setAlwaysOnTop(true, 'screen-saver');
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0 && (state.currentMode === MODES.WINDOW || state.currentMode === MODES.CHECKUP)) {

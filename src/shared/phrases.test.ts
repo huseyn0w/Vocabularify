@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { toPhrases, splitPhrase, nextIndex, prevIndex, clampIndex } from './phrases.js';
+import { toPhrases, splitPhrase, nextIndex, prevIndex, clampIndex } from './phrases';
 
 describe('toPhrases', () => {
   it('joins vocabulary entries with the separator', () => {

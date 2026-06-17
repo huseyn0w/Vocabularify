@@ -1,20 +1,21 @@
-const fs = require('fs');
-const { toPhrases, nextIndex, prevIndex, clampIndex } = require('../shared/phrases');
+import fs from 'fs';
+import { toPhrases, nextIndex, prevIndex, clampIndex } from '../shared/phrases';
+import type { Phrase, PhraseEngine, PhraseEngineOptions } from '../shared/types';
 
 // Owns the loaded phrase list, the current position, and the auto-advance
 // timer. It is surface-agnostic: it calls `onRender(phrase, index, total)`
 // and lets the caller decide where the phrase is shown (window or tray).
-function createPhraseEngine({ intervalMs, onRender }) {
-  let phrases = [];
+export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions): PhraseEngine {
+  let phrases: Phrase[] = [];
   let index = 0;
   let interval = intervalMs;
-  let timer = null;
+  let timer: ReturnType<typeof setInterval> | null = null;
 
   // Loads vocabulary from a JSON file and (re)starts cycling. `startIndex`
   // lets a restored position survive across dictionary switches; it is
   // clamped to the new list length. Throws on read/parse errors so the
   // caller can surface them.
-  function load(filePath, startIndex = 0) {
+  function load(filePath: string, startIndex = 0): void {
     const vocabulary = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     phrases = toPhrases(vocabulary);
     index = clampIndex(startIndex, phrases.length);
@@ -22,35 +23,35 @@ function createPhraseEngine({ intervalMs, onRender }) {
     restartTimer();
   }
 
-  function render() {
+  function render(): void {
     if (phrases.length > 0) {
       onRender(phrases[index], index, phrases.length);
     }
   }
 
-  function next() {
+  function next(): void {
     index = nextIndex(index, phrases.length);
     render();
   }
 
-  function previous() {
+  function previous(): void {
     index = prevIndex(index, phrases.length);
     render();
   }
 
-  function setIntervalMs(ms) {
+  function setIntervalMs(ms: number): void {
     interval = ms;
     restartTimer();
   }
 
-  function restartTimer() {
+  function restartTimer(): void {
     stop();
     if (phrases.length > 0) {
       timer = setInterval(next, interval);
     }
   }
 
-  function stop() {
+  function stop(): void {
     if (timer) {
       clearInterval(timer);
       timer = null;
@@ -69,5 +70,3 @@ function createPhraseEngine({ intervalMs, onRender }) {
     getCurrentPhrase: () => phrases[index]
   };
 }
-
-module.exports = { createPhraseEngine };

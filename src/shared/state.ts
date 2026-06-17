@@ -1,13 +1,14 @@
-const { MODES, DEFAULT_INTERVAL_MS } = require('./constants');
+import { MODES, DEFAULT_INTERVAL_MS } from './constants';
+import type { AppState, Mode, Background } from './types';
 
 // Bounds for a (possibly custom) word-change interval: 1s to 10 minutes.
-const MIN_INTERVAL_MS = 1000;
-const MAX_INTERVAL_MS = 600000;
+export const MIN_INTERVAL_MS = 1000;
+export const MAX_INTERVAL_MS = 600000;
 
 // The persisted application state and its defaults. Defaults are applied
 // whenever a field is missing or invalid, so a partial/corrupt config file
 // can never put the app into an unusable state.
-const DEFAULT_STATE = Object.freeze({
+const DEFAULT_STATE: AppState = Object.freeze({
   currentIndex: 0,
   currentLanguage: 'de',
   currentFromLanguage: 'en',
@@ -18,13 +19,15 @@ const DEFAULT_STATE = Object.freeze({
   intervalMs: DEFAULT_INTERVAL_MS
 });
 
-const VALID_MODES = new Set(Object.values(MODES));
-const VALID_BACKGROUNDS = new Set(['light', 'dark']);
+export { DEFAULT_STATE };
+
+const VALID_MODES: ReadonlySet<string> = new Set(Object.values(MODES));
+const VALID_BACKGROUNDS: ReadonlySet<string> = new Set(['light', 'dark']);
 
 // Merges a raw (untrusted) config object onto the defaults, validating each
 // field. Always returns a complete, well-formed state object.
-function normalizeState(raw) {
-  const source = raw && typeof raw === 'object' ? raw : {};
+export function normalizeState(raw: unknown): AppState {
+  const source = (raw && typeof raw === 'object' ? raw : {}) as Record<string, unknown>;
   return {
     currentIndex: isNonNegativeInt(source.currentIndex)
       ? source.currentIndex
@@ -38,14 +41,14 @@ function normalizeState(raw) {
     currentLevel: isNonEmptyString(source.currentLevel)
       ? source.currentLevel
       : DEFAULT_STATE.currentLevel,
-    currentMode: VALID_MODES.has(source.currentMode)
-      ? source.currentMode
+    currentMode: typeof source.currentMode === 'string' && VALID_MODES.has(source.currentMode)
+      ? (source.currentMode as Mode)
       : DEFAULT_STATE.currentMode,
     isSoundMode: typeof source.isSoundMode === 'boolean'
       ? source.isSoundMode
       : DEFAULT_STATE.isSoundMode,
-    currentBackground: VALID_BACKGROUNDS.has(source.currentBackground)
-      ? source.currentBackground
+    currentBackground: typeof source.currentBackground === 'string' && VALID_BACKGROUNDS.has(source.currentBackground)
+      ? (source.currentBackground as Background)
       : DEFAULT_STATE.currentBackground,
     intervalMs: isValidInterval(source.intervalMs)
       ? source.intervalMs
@@ -55,31 +58,23 @@ function normalizeState(raw) {
 
 // Accepts any whole-millisecond interval within bounds, so custom speeds
 // (not just the tray presets) persist correctly.
-function isValidInterval(value) {
-  return Number.isInteger(value) && value >= MIN_INTERVAL_MS && value <= MAX_INTERVAL_MS;
+function isValidInterval(value: unknown): value is number {
+  return Number.isInteger(value) && (value as number) >= MIN_INTERVAL_MS && (value as number) <= MAX_INTERVAL_MS;
 }
 
 // Clamps an arbitrary interval (e.g. from the custom-speed input) into the
 // supported range; non-numbers fall back to the default.
-function clampInterval(value) {
+export function clampInterval(value: unknown): number {
   if (typeof value !== 'number' || Number.isNaN(value)) {
     return DEFAULT_INTERVAL_MS;
   }
   return Math.min(Math.max(Math.round(value), MIN_INTERVAL_MS), MAX_INTERVAL_MS);
 }
 
-function isNonEmptyString(value) {
+function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.length > 0;
 }
 
-function isNonNegativeInt(value) {
-  return Number.isInteger(value) && value >= 0;
+function isNonNegativeInt(value: unknown): value is number {
+  return Number.isInteger(value) && (value as number) >= 0;
 }
-
-module.exports = {
-  DEFAULT_STATE,
-  MIN_INTERVAL_MS,
-  MAX_INTERVAL_MS,
-  normalizeState,
-  clampInterval
-};

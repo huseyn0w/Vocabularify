@@ -1,11 +1,12 @@
-const path = require('path');
-const fs = require('fs');
-const { CUSTOM_DICTS_PATH } = require('./config');
-const { parseDictionaryText } = require('../shared/dictionary');
-const { customDictFileName, parseCustomDictName } = require('../shared/languagePaths');
+import path from 'path';
+import fs from 'fs';
+import { CUSTOM_DICTS_PATH } from './config';
+import { parseDictionaryText } from '../shared/dictionary';
+import { customDictFileName, parseCustomDictName } from '../shared/languagePaths';
+import type { ImportPayload, DictionaryResult } from '../shared/types';
 
 // Imports a plain-text dictionary file into a stored JSON custom dictionary.
-function importDictionary({ filePath, dictionaryName, language, fromLanguage }) {
+export function importDictionary({ filePath, dictionaryName, language, fromLanguage }: ImportPayload): DictionaryResult {
   try {
     const vocabulary = parseDictionaryText(fs.readFileSync(filePath, 'utf-8'));
     if (vocabulary.length === 0) {
@@ -15,12 +16,12 @@ function importDictionary({ filePath, dictionaryName, language, fromLanguage }) 
     fs.writeFileSync(path.join(CUSTOM_DICTS_PATH, fileName), JSON.stringify(vocabulary, null, 2));
     return { success: true, dictionaryName: path.basename(fileName, '.json') };
   } catch (error) {
-    return { success: false, error: error.message };
+    return { success: false, error: error instanceof Error ? error.message : String(error) };
   }
 }
 
 // Deletes a custom dictionary by its base name ("<target>_<source>_<name>").
-function deleteDictionary(baseName) {
+export function deleteDictionary(baseName: string): DictionaryResult {
   try {
     const dictPath = path.join(CUSTOM_DICTS_PATH, `${baseName}.json`);
     if (!fs.existsSync(dictPath)) {
@@ -29,12 +30,12 @@ function deleteDictionary(baseName) {
     fs.unlinkSync(dictPath);
     return { success: true, dictionaryName: baseName };
   } catch (error) {
-    return { success: false, error: error.message };
+    return { success: false, error: error instanceof Error ? error.message : String(error) };
   }
 }
 
 // All custom dictionary base names (no extension).
-function listCustomDictionaries() {
+export function listCustomDictionaries(): string[] {
   return fs
     .readdirSync(CUSTOM_DICTS_PATH)
     .filter(file => file.endsWith('.json'))
@@ -42,16 +43,9 @@ function listCustomDictionaries() {
 }
 
 // Custom dictionary names available for a given (target, source) pair.
-function listCustomDictionaryNamesFor(language, fromLanguage) {
+export function listCustomDictionaryNamesFor(language: string, fromLanguage: string): string[] {
   return listCustomDictionaries()
     .map(parseCustomDictName)
     .filter(parsed => parsed && parsed.language === language && parsed.fromLanguage === fromLanguage)
-    .map(parsed => parsed.name);
+    .map(parsed => parsed!.name);
 }
-
-module.exports = {
-  importDictionary,
-  deleteDictionary,
-  listCustomDictionaries,
-  listCustomDictionaryNamesFor
-};

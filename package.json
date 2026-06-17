@@ -2,11 +2,13 @@
   "name": "vocabularify",
   "version": "1.1.1",
   "description": "Vocabularify - improve your vocabulary by doing nothing",
-  "main": "index.js",
+  "main": "out/index.js",
   "scripts": {
-    "start": "NODE_ENV=development electronmon .",
-    "build": "electron-builder",
-    "build:win": "electron-builder --win",
+    "compile": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "tsc && NODE_ENV=development concurrently -k -n tsc,electron \"tsc -w --preserveWatchOutput\" \"electronmon .\"",
+    "build": "tsc && electron-builder",
+    "build:win": "tsc && electron-builder --win",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -17,11 +19,11 @@
       "buildResources": "build"
     },
     "files": [
-      "**/*",
-      "!**/*.test.js",
-      "!node_modules",
-      "!dist",
-      "!build"
+      "out/**/*",
+      "!out/**/*.map",
+      "*.html",
+      "*.png",
+      "*.icns"
     ],
     "extraResources": [
       {
@@ -89,9 +91,12 @@
     "node": ">=22.12.0"
   },
   "devDependencies": {
+    "@types/node": "^22.10.0",
+    "concurrently": "^9.1.0",
     "electron": "^42.4.0",
     "electron-builder": "^26.15.3",
     "electronmon": "^2.0.4",
+    "typescript": "^5.7.2",
     "vitest": "^4.1.9"
   }
 }

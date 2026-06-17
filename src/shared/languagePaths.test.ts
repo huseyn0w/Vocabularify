@@ -5,7 +5,7 @@ import {
   customDictFileName,
   parseCustomDictName,
   getLocale
-} from './languagePaths.js';
+} from './languagePaths';
 
 describe('getLanguageFilePath', () => {
   const base = { basePath: '/app', customDictsPath: '/user/custom' };
