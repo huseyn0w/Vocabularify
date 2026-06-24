@@ -4,7 +4,8 @@ import {
   getLanguageFilePath,
   customDictFileName,
   parseCustomDictName,
-  getLocale
+  getLocale,
+  isSafePathSegment
 } from './languagePaths';
 
 describe('getLanguageFilePath', () => {
@@ -18,6 +19,38 @@ describe('getLanguageFilePath', () => {
   it('resolves a custom dictionary into the custom dir', () => {
     const result = getLanguageFilePath({ ...base, language: 'de', fromLanguage: 'en', level: 'custom:my_words' });
     expect(result).toBe(path.join('/user/custom', 'de_en_my_words.json'));
+  });
+
+  it('throws when the level would traverse outside the base dir', () => {
+    expect(() =>
+      getLanguageFilePath({ ...base, language: 'de', fromLanguage: 'en', level: '../../../../etc/passwd' })
+    ).toThrow(/Unsafe path segment/);
+  });
+
+  it('throws when a custom dictionary name would traverse outside the custom dir', () => {
+    expect(() =>
+      getLanguageFilePath({ ...base, language: 'de', fromLanguage: 'en', level: 'custom:../../evil' })
+    ).toThrow(/Unsafe path segment/);
+  });
+
+  it('throws when the language code contains a path separator', () => {
+    expect(() =>
+      getLanguageFilePath({ ...base, language: '../de', fromLanguage: 'en', level: 'a1' })
+    ).toThrow(/Unsafe path segment/);
+  });
+});
+
+describe('isSafePathSegment', () => {
+  it('accepts plain segments (codes, level names, underscore names)', () => {
+    for (const ok of ['de', 'en', 'a1', 'my_travel_words', 'C1']) {
+      expect(isSafePathSegment(ok)).toBe(true);
+    }
+  });
+
+  it('rejects separators, parent refs, empty, and NUL', () => {
+    for (const bad of ['', '.', '..', 'a/b', 'a\\b', '../x', 'x\0y']) {
+      expect(isSafePathSegment(bad)).toBe(false);
+    }
   });
 });
 

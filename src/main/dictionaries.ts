@@ -2,12 +2,17 @@ import path from 'path';
 import fs from 'fs';
 import { CUSTOM_DICTS_PATH } from './config';
 import { parseDictionaryText } from '../shared/dictionary';
-import { customDictFileName, parseCustomDictName } from '../shared/languagePaths';
+import { customDictFileName, parseCustomDictName, isSafePathSegment } from '../shared/languagePaths';
 import type { ImportPayload, DictionaryResult } from '../shared/types';
 
 // Imports a plain-text dictionary file into a stored JSON custom dictionary.
 export function importDictionary({ filePath, dictionaryName, language, fromLanguage }: ImportPayload): DictionaryResult {
   try {
+    // The dictionary name and language codes become a filename written under
+    // CUSTOM_DICTS_PATH; reject anything that could traverse out of that dir.
+    if (![dictionaryName, language, fromLanguage].every(isSafePathSegment)) {
+      return { success: false, error: 'Invalid dictionary name.' };
+    }
     const vocabulary = parseDictionaryText(fs.readFileSync(filePath, 'utf-8'));
     if (vocabulary.length === 0) {
       return { success: false, error: 'No valid "word - translation" lines found in file.' };
