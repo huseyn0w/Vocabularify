@@ -25,6 +25,8 @@ vocabulary grows passively while you work, watch, or browse. No drills, no sched
 
 > **Note:** the built‑in word lists are AI‑generated and may be refined over time.
 
+> **On the go?** A companion mobile app, [VocabularifyMobile](https://github.com/huseyn0w/VocabularifyMobile) (Expo / React Native), ships the same 7 languages and full 42‑pair × A1–C1 matrix.
+
 ## How it works
 
 1. Open the app and pick, in **Settings**, the language you want to learn and the one to translate
