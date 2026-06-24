@@ -11,7 +11,7 @@ export function importDictionary({ filePath, dictionaryName, language, fromLangu
     // The dictionary name and language codes become a filename written under
     // CUSTOM_DICTS_PATH; reject anything that could traverse out of that dir.
     if (![dictionaryName, language, fromLanguage].every(isSafePathSegment)) {
-      return { success: false, error: 'Invalid dictionary name.' };
+      return { success: false, error: 'Invalid import parameters.' };
     }
     const vocabulary = parseDictionaryText(fs.readFileSync(filePath, 'utf-8'));
     if (vocabulary.length === 0) {
@@ -28,6 +28,10 @@ export function importDictionary({ filePath, dictionaryName, language, fromLangu
 // Deletes a custom dictionary by its base name ("<target>_<source>_<name>").
 export function deleteDictionary(baseName: string): DictionaryResult {
   try {
+    // baseName is caller-supplied; keep it from traversing out of the dir.
+    if (!isSafePathSegment(baseName)) {
+      return { success: false, error: 'Invalid dictionary name.' };
+    }
     const dictPath = path.join(CUSTOM_DICTS_PATH, `${baseName}.json`);
     if (!fs.existsSync(dictPath)) {
       return { success: false, error: 'Dictionary not found' };
