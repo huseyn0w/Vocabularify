@@ -1,4 +1,4 @@
-# Vocabularify Phase 3 — Re-authoring `languages/en/de/` b1/b2/c1
+# Vocabularify Phase 3 - Re-authoring `languages/en/de/` b1/b2/c1
 
 Date: 2026-06-16. Pair `en/de` teaches **English to German speakers**.
 Entry shape `{word_1, word_2}` where `word_1` = German source, `word_2` = English target.
@@ -16,9 +16,9 @@ the difficulty of the English word.
 
 ## Sources used (level grounding)
 
-- Oxford 3000 & Oxford 5000 by CEFR level (Oxford Learner's Dictionaries) — A1–B2 core (3000) and
+- Oxford 3000 & Oxford 5000 by CEFR level (Oxford Learner's Dictionaries) - A1–B2 core (3000) and
   the B2–C1 advanced extension (5000). https://www.oxfordlearnersdictionaries.com/about/wordlists/oxford3000-5000
-- Cambridge English Vocabulary Profile (EVP) — meaning-level CEFR mapping. https://englishprofile.org/?menu=english-vocabulary-profile
+- Cambridge English Vocabulary Profile (EVP) - meaning-level CEFR mapping. https://englishprofile.org/?menu=english-vocabulary-profile
 - esl-lounge CEFR word lists B1 / B2 / C1. https://www.esl-lounge.com/student/reference/b1-cefr-vocabulary-word-list.php
 - British Council LearnEnglish B1–B2 / B2–C1 vocabulary.
 
@@ -28,13 +28,13 @@ register-marked words (Oxford 5000 C1 band).
 
 ## Counts per level (this pair)
 
-| Level | Entries |
-|-------|--------:|
-| a1 (unchanged) | 279 |
-| a2 (unchanged) | 269 |
-| **b1 (new)** | **197** |
-| **b2 (new)** | **169** |
-| **c1 (new)** | **140** |
+| Level          | Entries |
+| -------------- | ------: |
+| a1 (unchanged) |     279 |
+| a2 (unchanged) |     269 |
+| **b1 (new)**   | **197** |
+| **b2 (new)**   | **169** |
+| **c1 (new)**   | **140** |
 
 All three new levels exceed the 120 minimum; spread covers verbs, nouns, adjectives, adverbs and
 connectors at each level.
@@ -43,7 +43,7 @@ connectors at each level.
 
 - All five files parse as JSON.
 - 0 within-file duplicates in b1/b2/c1; 0 repeated German source within each new file.
-- 0 cross-level duplicates by English target (`word_2`) introduced by the new files — checked
+- 0 cross-level duplicates by English target (`word_2`) introduced by the new files - checked
   against each other and against a1/a2. (Pre-existing a1/a2 internal duplicates were left untouched
   per scope.)
 - German written with literal Unicode (ä ö ü ß), no `\u` escapes; exact line format with 4-space
@@ -53,6 +53,7 @@ connectors at each level.
 ## Sample entries (15 per level)
 
 ### b1
+
 ```
     {"word_1": "zugeben", "word_2": "admit"},
     {"word_1": "beraten", "word_2": "advise"},
@@ -72,6 +73,7 @@ connectors at each level.
 ```
 
 ### b2
+
 ```
     {"word_1": "anerkennen", "word_2": "acknowledge"},
     {"word_1": "erwerben", "word_2": "acquire"},
@@ -91,6 +93,7 @@ connectors at each level.
 ```
 
 ### c1
+
 ```
     {"word_1": "abschaffen", "word_2": "abolish"},
     {"word_1": "beschwichtigen", "word_2": "appease"},

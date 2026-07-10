@@ -1,18 +1,21 @@
-import path from 'path';
-import fs from 'fs';
-import { app } from 'electron';
+import path from "path";
+import fs from "fs";
+import { app } from "electron";
 
 // Project root (two levels up from src/main). Built-in dictionaries live
 // under <root>/languages in development; under process.resourcesPath when
 // packaged (see the `extraResources` entry in package.json).
-export const APP_ROOT = path.join(__dirname, '..', '..');
+export const APP_ROOT = path.join(__dirname, "..", "..");
 
-export const CONFIG_PATH = path.join(app.getPath('userData'), 'config.json');
-export const CUSTOM_DICTS_PATH = path.join(app.getPath('userData'), 'custom_dictionaries');
+export const CONFIG_PATH = path.join(app.getPath("userData"), "config.json");
+export const CUSTOM_DICTS_PATH = path.join(
+  app.getPath("userData"),
+  "custom_dictionaries",
+);
 
 // In a packaged build the dictionaries are shipped under resourcesPath (see
 // `extraResources` in package.json); when running from source they live in
-// the project root. app.isPackaged is the reliable signal for this — unlike
+// the project root. app.isPackaged is the reliable signal for this - unlike
 // NODE_ENV, it is correct however the app was launched.
 export function getDictionariesBasePath(): string {
   return app.isPackaged ? process.resourcesPath : APP_ROOT;
@@ -28,15 +31,15 @@ export function ensureCustomDictsDir(): void {
 // for every pair that actually has data on disk. This is the source of truth
 // for which language combinations the UI offers.
 export function listAvailablePairs(): Record<string, string[]> {
-  const base = path.join(getDictionariesBasePath(), 'languages');
+  const base = path.join(getDictionariesBasePath(), "languages");
   const pairs: Record<string, string[]> = {};
   for (const to of fs.readdirSync(base)) {
-    if (to.startsWith('_') || to.startsWith('.')) continue;
+    if (to.startsWith("_") || to.startsWith(".")) continue;
     const toDir = path.join(base, to);
     if (!fs.statSync(toDir).isDirectory()) continue;
-    const froms = fs.readdirSync(toDir).filter(from => {
+    const froms = fs.readdirSync(toDir).filter((from) => {
       const d = path.join(toDir, from);
-      return !from.startsWith('.') && fs.statSync(d).isDirectory();
+      return !from.startsWith(".") && fs.statSync(d).isDirectory();
     });
     if (froms.length) pairs[to] = froms.sort();
   }

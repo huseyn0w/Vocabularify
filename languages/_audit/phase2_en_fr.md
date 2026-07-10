@@ -1,4 +1,4 @@
-# Phase 2 changelog — English-from-French (`languages/en/fr/`)
+# Phase 2 changelog - English-from-French (`languages/en/fr/`)
 
 **Date:** 2026-06-15 · **Scope:** a1.json + a2.json ONLY. b1/b2/c1 left untouched (mis-sourced, to be re-authored later).
 
@@ -8,18 +8,21 @@
 
 ---
 
-## TASK A — French articles added to word_1
+## TASK A - French articles added to word_1
 
 ### a1 (2 nouns; a1 already carried articles on the rest)
+
 - "copain" -> "un copain" (friend/boyfriend)
 - "anniversaire" -> "un anniversaire" (birthday)
 
 _Skipped in a1: verbs/adverbs/pronouns/phrases, entries already carrying an article, and titles/terms of address (`papa`, `maman`, `monsieur`, `madame`, `mademoiselle`, `dieu`)._
 
 ### a2 (282 nouns received an article)
-All bare common nouns in a2 were prefixed with le/la/l’/les by known gender (uncertain ones — `primeur`, `bocal`, `mixeur` — confirmed masculine via web search). Verbs (to-prefixed), adjectives (happy, big, fast, delicious, spicy, cheap, expensive, etc.), and `internet` (used article-less in French) were left unchanged.
+
+All bare common nouns in a2 were prefixed with le/la/l’/les by known gender (uncertain ones - `primeur`, `bocal`, `mixeur` - confirmed masculine via web search). Verbs (to-prefixed), adjectives (happy, big, fast, delicious, spicy, cheap, expensive, etc.), and `internet` (used article-less in French) were left unchanged.
 
 Full per-entry list:
+
 - "pomme" -> "la pomme" (apple)
 - "livre" -> "le livre" (book)
 - "maison" -> "la maison" (house)
@@ -305,9 +308,10 @@ Full per-entry list:
 
 ---
 
-## TASK B — level moves (a1 ↔ a2 only)
+## TASK B - level moves (a1 ↔ a2 only)
 
 Conservative. 7 entries moved a2 → a1 (clear A1-core English target, Oxford-3000 A1 / universal; none collided with an existing a1 target):
+
 - {"la pomme","apple"} (clear A1-core)
 - {"grand","big"} (clear A1-core)
 - {"le matin","morning"} (clear A1-core)
@@ -316,13 +320,14 @@ Conservative. 7 entries moved a2 → a1 (clear A1-core English target, Oxford-30
 - {"le bus","bus"} (clear A1-core)
 - {"le restaurant","restaurant"} (clear A1-core)
 
-No a1 → a2 moves made: the remaining a1 leveling candidates (society, government, security, relationship, impression) belong at B1 per the audit, and B1 is out of scope/frozen — moving them to a2 would not be clearly correct.
+No a1 → a2 moves made: the remaining a1 leveling candidates (society, government, security, relationship, impression) belong at B1 per the audit, and B1 is out of scope/frozen - moving them to a2 would not be clearly correct.
 
 ---
 
 ## Dedup (forced by article normalization)
 
 Adding articles to a2 made 14 a2 entries byte-identical to existing a1 entries. Per the rule (keep lowest valid level), the redundant copy was removed from a2:
+
 - l'amour=love
 - le travail=work
 - l'argent=money

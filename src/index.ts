@@ -1,16 +1,42 @@
-import { app, BrowserWindow, dialog, globalShortcut, shell } from 'electron';
+import { app, BrowserWindow, dialog, globalShortcut, shell } from "electron";
 
-import { MODES, IPC, LEVELS, SPEED_INTERVALS, CUSTOM_LEVEL_PREFIX, LANGUAGE_META } from './shared/constants';
-import { getLanguageFilePath, getLocale } from './shared/languagePaths';
-import { CUSTOM_DICTS_PATH, getDictionariesBasePath, ensureCustomDictsDir, listAvailablePairs } from './main/config';
-import { clampInterval } from './shared/state';
-import { loadState, saveState } from './main/store';
-import * as dictionaries from './main/dictionaries';
-import { createPhraseEngine } from './main/phraseEngine';
-import { createMainWindow, createImportWindow, createSettingsWindow, createAboutWindow } from './main/windows';
-import { createTrayController } from './main/tray';
-import { registerIpcHandlers } from './main/ipc';
-import type { AppState, PhraseEngine, TrayController, KeyEvent, LanguagePair, Background, SettingsSnapshot, ImportPayload } from './shared/types';
+import {
+  MODES,
+  IPC,
+  LEVELS,
+  SPEED_INTERVALS,
+  CUSTOM_LEVEL_PREFIX,
+  LANGUAGE_META,
+} from "./shared/constants";
+import { getLanguageFilePath, getLocale } from "./shared/languagePaths";
+import {
+  CUSTOM_DICTS_PATH,
+  getDictionariesBasePath,
+  ensureCustomDictsDir,
+  listAvailablePairs,
+} from "./main/config";
+import { clampInterval } from "./shared/state";
+import { loadState, saveState } from "./main/store";
+import * as dictionaries from "./main/dictionaries";
+import { createPhraseEngine } from "./main/phraseEngine";
+import {
+  createMainWindow,
+  createImportWindow,
+  createSettingsWindow,
+  createAboutWindow,
+} from "./main/windows";
+import { createTrayController } from "./main/tray";
+import { registerIpcHandlers } from "./main/ipc";
+import type {
+  AppState,
+  PhraseEngine,
+  TrayController,
+  KeyEvent,
+  LanguagePair,
+  Background,
+  SettingsSnapshot,
+  ImportPayload,
+} from "./shared/types";
 
 let state: AppState = loadState();
 let mainWindow: BrowserWindow | null = null;
@@ -19,7 +45,14 @@ let tray: TrayController;
 let isHoverPaused = false;
 
 function showError(message: string, error?: unknown) {
-  dialog.showErrorBox(message, error ? (error instanceof Error ? error.stack ?? error.toString() : String(error)) : 'Unknown error');
+  dialog.showErrorBox(
+    message,
+    error
+      ? error instanceof Error
+        ? (error.stack ?? error.toString())
+        : String(error)
+      : "Unknown error",
+  );
 }
 
 // Sends to the main window only when it is alive. Guards against the
@@ -50,7 +83,7 @@ function currentDictionaryPath() {
     customDictsPath: CUSTOM_DICTS_PATH,
     language: state.currentLanguage,
     fromLanguage: state.currentFromLanguage,
-    level: state.currentLevel
+    level: state.currentLevel,
   });
 }
 
@@ -58,7 +91,7 @@ function loadCurrentDictionary(startIndex: number) {
   try {
     engine.load(currentDictionaryPath(), startIndex);
   } catch (error) {
-    showError('Failed to load phrases.', error);
+    showError("Failed to load phrases.", error);
   }
 }
 
@@ -79,7 +112,7 @@ function switchLanguage(language: string, fromLanguage: string, level: string) {
   tray.refresh();
 }
 
-function switchMode(mode: AppState['currentMode']) {
+function switchMode(mode: AppState["currentMode"]) {
   state.currentMode = mode;
   if (mode === MODES.WINDOW || mode === MODES.CHECKUP) {
     if (!mainWindow) {
@@ -87,7 +120,7 @@ function switchMode(mode: AppState['currentMode']) {
     } else {
       mainWindow.show();
     }
-    tray.setTitle('Vocabularify');
+    tray.setTitle("Vocabularify");
   } else if (mode === MODES.MENU_BAR && mainWindow) {
     mainWindow.hide();
   }
@@ -114,7 +147,9 @@ function setLevel(level: string) {
 // Called from the language settings window. Switches the pair, keeping a
 // standard CEFR level (custom levels are pair-specific, so reset to A1).
 function setLanguagePair({ to, from }: LanguagePair) {
-  const level = String(state.currentLevel).startsWith(CUSTOM_LEVEL_PREFIX) ? 'A1' : state.currentLevel;
+  const level = String(state.currentLevel).startsWith(CUSTOM_LEVEL_PREFIX)
+    ? "A1"
+    : state.currentLevel;
   switchLanguage(to, from, level);
 }
 
@@ -123,9 +158,12 @@ function getSettings(): SettingsSnapshot {
   return {
     languages: { meta: LANGUAGE_META, pairs: listAvailablePairs() },
     levels: LEVELS,
-    customLevels: dictionaries.listCustomDictionaryNamesFor(state.currentLanguage, state.currentFromLanguage),
+    customLevels: dictionaries.listCustomDictionaryNamesFor(
+      state.currentLanguage,
+      state.currentFromLanguage,
+    ),
     speeds: SPEED_INTERVALS,
-    isMac: process.platform === 'darwin',
+    isMac: process.platform === "darwin",
     modes: [MODES.WINDOW, MODES.MENU_BAR, MODES.CHECKUP],
     current: {
       to: state.currentLanguage,
@@ -134,19 +172,22 @@ function getSettings(): SettingsSnapshot {
       background: state.currentBackground,
       mode: state.currentMode,
       sound: state.isSoundMode,
-      intervalMs: state.intervalMs
-    }
+      intervalMs: state.intervalMs,
+    },
   };
 }
 
 // --- Input ------------------------------------------------------------------
 
 function handleKeyPress(keyEvent: KeyEvent) {
-  if (!keyEvent.shiftKey || (keyEvent.key !== 'ArrowRight' && keyEvent.key !== 'ArrowLeft')) {
+  if (
+    !keyEvent.shiftKey ||
+    (keyEvent.key !== "ArrowRight" && keyEvent.key !== "ArrowLeft")
+  ) {
     return;
   }
   sendToWindow(IPC.CLEAR_TIMEOUTS);
-  if (keyEvent.key === 'ArrowRight') {
+  if (keyEvent.key === "ArrowRight") {
     engine.next();
   } else {
     engine.previous();
@@ -170,8 +211,8 @@ function setHoverPaused(paused: boolean) {
 function registerGlobalShortcuts() {
   globalShortcut.unregisterAll();
   if (state.currentMode === MODES.MENU_BAR) {
-    globalShortcut.register('Shift+Right', () => engine.next());
-    globalShortcut.register('Shift+Left', () => engine.previous());
+    globalShortcut.register("Shift+Right", () => engine.next());
+    globalShortcut.register("Shift+Left", () => engine.previous());
   }
 }
 
@@ -196,14 +237,18 @@ function createWiredMainWindow() {
       engine.stop(); // halt the timer before the window is destroyed
       app.quit();
     },
-    onReady: win => {
-      win.webContents.send(IPC.SET_LANGUAGES, getLocale(state.currentFromLanguage), getLocale(state.currentLanguage));
+    onReady: (win) => {
+      win.webContents.send(
+        IPC.SET_LANGUAGES,
+        getLocale(state.currentFromLanguage),
+        getLocale(state.currentLanguage),
+      );
       win.webContents.send(IPC.SET_BACKGROUND, state.currentBackground);
       loadCurrentDictionary(state.currentIndex);
       if (state.currentMode === MODES.MENU_BAR) {
         win.hide();
       }
-    }
+    },
   });
   return mainWindow;
 }
@@ -213,22 +258,25 @@ function createWiredMainWindow() {
 app.whenReady().then(() => {
   // Become an accessory app (no Dock icon) BEFORE creating any window. Hiding
   // the Dock flips the activation policy, and doing it after a window exists
-  // makes macOS hide and re-show that window — a visible pop/disappear/pop
+  // makes macOS hide and re-show that window - a visible pop/disappear/pop
   // flicker on launch. Setting it first avoids the flicker entirely.
-  if (process.platform === 'darwin') {
+  if (process.platform === "darwin") {
     app.dock?.hide();
   }
 
   ensureCustomDictsDir();
 
-  engine = createPhraseEngine({ intervalMs: state.intervalMs, onRender: renderPhrase });
+  engine = createPhraseEngine({
+    intervalMs: state.intervalMs,
+    onRender: renderPhrase,
+  });
 
   tray = createTrayController({
     actions: {
       openSettings: () => createSettingsWindow(),
       openAbout: () => createAboutWindow(),
-      quit: quitApp
-    }
+      quit: quitApp,
+    },
   });
   tray.create();
 
@@ -240,16 +288,16 @@ app.whenReady().then(() => {
     },
     chooseDictionaryFile: async () => {
       const { canceled, filePaths } = await dialog.showOpenDialog({
-        title: 'Select Dictionary File',
-        properties: ['openFile'],
-        filters: [{ name: 'Text', extensions: ['txt'] }]
+        title: "Select Dictionary File",
+        properties: ["openFile"],
+        filters: [{ name: "Text", extensions: ["txt"] }],
       });
       return canceled ? null : filePaths[0];
     },
-    openExternal: url => {
+    openExternal: (url) => {
       // Only ever hand http(s) URLs to the OS to avoid opening arbitrary
       // schemes (file:, etc.) from renderer-supplied input.
-      if (typeof url === 'string' && /^https?:\/\//i.test(url)) {
+      if (typeof url === "string" && /^https?:\/\//i.test(url)) {
         shell.openExternal(url);
       }
     },
@@ -262,31 +310,35 @@ app.whenReady().then(() => {
     setBackground,
     setMode: switchMode,
     setSound: toggleSound,
-    setSpeed: ms => setSpeed(clampInterval(ms))
+    setSpeed: (ms) => setSpeed(clampInterval(ms)),
   });
 
   createWiredMainWindow();
   registerGlobalShortcuts();
 
-  if (process.platform === 'darwin') {
+  if (process.platform === "darwin") {
     mainWindow!.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   }
-  mainWindow!.setAlwaysOnTop(true, 'screen-saver');
+  mainWindow!.setAlwaysOnTop(true, "screen-saver");
 
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0 && (state.currentMode === MODES.WINDOW || state.currentMode === MODES.CHECKUP)) {
+  app.on("activate", () => {
+    if (
+      BrowserWindow.getAllWindows().length === 0 &&
+      (state.currentMode === MODES.WINDOW ||
+        state.currentMode === MODES.CHECKUP)
+    ) {
       createWiredMainWindow();
     }
   });
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-app.on('will-quit', () => {
+app.on("will-quit", () => {
   globalShortcut.unregisterAll();
   engine.stop();
   persist();

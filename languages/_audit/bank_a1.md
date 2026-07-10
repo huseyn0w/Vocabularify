@@ -1,4 +1,4 @@
-# Vocabularify Bank — CEFR A1 layer
+# Vocabularify Bank - CEFR A1 layer
 
 Date: 2026-06-16. File: `languages/_bank/a1.json`.
 
@@ -6,6 +6,7 @@ Multilingual concept bank: each row is ONE concept translated into all 7 languag
 (en, de, fr, es, it, tr, ru), to be projected into arbitrary language pairs.
 
 ## Conventions applied
+
 - Nouns carry citation article where the language uses one: de (der/die/das), fr (le/la/l'/les),
   es (el/la), it (il/lo/la/l'). en/tr/ru bare.
 - Verbs as infinitive in every language (en uses "to ...").
@@ -13,9 +14,11 @@ Multilingual concept bank: each row is ONE concept translated into all 7 languag
 - Output is literal Unicode (no \u escapes), one row per line.
 
 ## Count
+
 180 concepts (target range 130–180). All rows have all 7 keys, non-empty; English values unique.
 
 ## Coverage
+
 Function words & connectors (and/or/but/with/not/yes/no/because/very/also...), question words,
 pronouns (I/you/he/she/we/they), numbers 0–10, days of the week, all 12 months, time words
 (day/night/week/month/year/hour/morning/evening), 10 colours, family (mother/father/brother...),
@@ -27,9 +30,10 @@ adjectives (big/small/good/bad/new/old/hot/cold/happy/beautiful/easy/difficult..
 politeness (hello/goodbye/please/thank you/sorry).
 
 ## Sources used (A1 scoping)
-- Goethe-Zertifikat A1 (Start Deutsch 1) official Wortliste — German A1 word/subject areas.
+
+- Goethe-Zertifikat A1 (Start Deutsch 1) official Wortliste - German A1 word/subject areas.
   https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf
-- The Oxford 3000 by CEFR level (A1 band) — Oxford Learner's Dictionaries.
+- The Oxford 3000 by CEFR level (A1 band) - Oxford Learner's Dictionaries.
   https://www.oxfordlearnersdictionaries.com/external/pdf/wordlists/oxford-3000-5000/The_Oxford_3000_by_CEFR_level.pdf
 - General CEFR A1 syllabi / common beginner topic clusters (numbers, days, months, colours,
   family, food, house, body, greetings, core verbs).
@@ -41,6 +45,7 @@ the privative "without" use the natural Turkish suffix forms (-ebilmek, -siz) as
 citations.
 
 ## ~20 sample rows for review
+
 en | de | fr | es | it | tr | ru
 
 and | und | et | y | e | ve | и

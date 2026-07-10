@@ -1,7 +1,7 @@
 /*
  * Generates every language-pair dictionary from the multilingual word bank.
  *
- * Bank: languages/_bank/<level>.json — each an array of concept rows like
+ * Bank: languages/_bank/<level>.json - each an array of concept rows like
  *   { "en": "to go", "de": "gehen", "fr": "aller", "es": "ir",
  *     "it": "andare", "tr": "gitmek", "ru": "идти" }
  * The level is the file the row lives in. A concept (identified by its English
@@ -12,20 +12,26 @@
  *
  * Run: node utils/generate_pairs.js   (DRY_RUN=1 to preview counts only)
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const ROOT = path.join(__dirname, '..', 'languages');
-const BANK = path.join(ROOT, '_bank');
-const LANGS = ['en', 'de', 'fr', 'es', 'it', 'tr', 'ru'];
-const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1'];
-const DRY_RUN = process.env.DRY_RUN === '1';
+const ROOT = path.join(__dirname, "..", "languages");
+const BANK = path.join(ROOT, "_bank");
+const LANGS = ["en", "de", "fr", "es", "it", "tr", "ru"];
+const LEVELS = ["a1", "a2", "b1", "b2", "c1"];
+const DRY_RUN = process.env.DRY_RUN === "1";
 
-const norm = s => String(s == null ? '' : s).trim().toLowerCase();
+const norm = (s) =>
+  String(s == null ? "" : s)
+    .trim()
+    .toLowerCase();
 
 function serialise(entries) {
-  const lines = entries.map(e => `    {"word_1": ${JSON.stringify(e.word_1)}, "word_2": ${JSON.stringify(e.word_2)}}`);
-  return `[\n${lines.join(',\n')}\n]\n`;
+  const lines = entries.map(
+    (e) =>
+      `    {"word_1": ${JSON.stringify(e.word_1)}, "word_2": ${JSON.stringify(e.word_2)}}`,
+  );
+  return `[\n${lines.join(",\n")}\n]\n`;
 }
 
 // Load bank, dedup each concept to the lowest level by its English value.
@@ -36,7 +42,7 @@ for (const level of LEVELS) {
   const file = path.join(BANK, `${level}.json`);
   byLevel[level] = [];
   if (!fs.existsSync(file)) continue;
-  const rows = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  const rows = JSON.parse(fs.readFileSync(file, "utf-8"));
   for (const row of rows) {
     const key = norm(row.en);
     if (!key || seenConcept.has(key)) continue;
@@ -79,5 +85,7 @@ for (const to of LANGS) {
   }
 }
 
-console.log(summary.join('\n'));
-console.log(`\n${DRY_RUN ? '[DRY RUN] ' : ''}pairs: ${summary.length}, files ${DRY_RUN ? 'to write' : 'written'}: ${DRY_RUN ? summary.length * LEVELS.length : filesWritten}`);
+console.log(summary.join("\n"));
+console.log(
+  `\n${DRY_RUN ? "[DRY RUN] " : ""}pairs: ${summary.length}, files ${DRY_RUN ? "to write" : "written"}: ${DRY_RUN ? summary.length * LEVELS.length : filesWritten}`,
+);
