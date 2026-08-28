@@ -844,6 +844,16 @@ function checkSentence(
 Run: `yarn test src/shared/course.test.ts`
 Expected: PASS, 16 tests.
 
+> **Note added during execution.** Review found this code block throws on
+> malformed hand-authored JSON: a lesson with no `new` array, a `null` element
+> in `lessons` or in the sentence bank, a sentence with no `uses`, a token with
+> no `t`. For a lint whose whole job is naming what is wrong, a `TypeError` is
+> the wrong answer. The shipped `src/shared/course.ts` guards every array it
+> iterates and every property it reads, reports a specific error, and carries
+> on so the author sees every problem in the file at once. It also has 37 tests
+> rather than 16 - the 16 here leave seven rules unpinned. Read the committed
+> file, not this block.
+
 - [ ] **Step 5: Typecheck and commit**
 
 ```bash
