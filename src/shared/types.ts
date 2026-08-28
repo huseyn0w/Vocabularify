@@ -50,6 +50,9 @@ export interface AppState {
   currentLevel: string;
   currentMode: Mode;
   isSoundMode: boolean;
+  /** The opt-in assemble exercise. Layers on top of the current mode, like
+   *  sound, rather than replacing it. */
+  isAssembleMode: boolean;
   currentBackground: Background;
   intervalMs: number;
 }
@@ -88,6 +91,7 @@ export interface SettingsSnapshot {
     background: Background;
     mode: Mode;
     sound: boolean;
+    assemble: boolean;
     intervalMs: number;
   };
 }
@@ -116,6 +120,7 @@ export interface MainVocabApi {
   onDisplayPhrase(callback: (payload: DisplayPhrasePayload) => void): void;
   onSetBackground(callback: (background: Background) => void): void;
   onToggleSound(callback: (enabled: boolean) => void): void;
+  onSetAssemble(callback: (enabled: boolean) => void): void;
   onSetLanguages(callback: (locales: { fromLocale: string; toLocale: string }) => void): void;
   onClearTimeouts(callback: () => void): void;
   sendKeyPress(keyEvent: KeyEvent): void;
@@ -132,6 +137,7 @@ export interface SettingsVocabApi {
   setBackground(background: Background): Promise<void>;
   setMode(mode: Mode): Promise<void>;
   setSound(enabled: boolean): Promise<void>;
+  setAssemble(enabled: boolean): Promise<void>;
   setSpeed(ms: number): Promise<void>;
   openImport(): Promise<void>;
 }
@@ -218,5 +224,6 @@ export interface IpcHandlers {
   setBackground: (background: Background) => void;
   setMode: (mode: Mode) => void;
   setSound: (enabled: boolean) => void;
+  setAssemble: (enabled: boolean) => void;
   setSpeed: (ms: number) => void;
 }

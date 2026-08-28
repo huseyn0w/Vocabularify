@@ -16,6 +16,7 @@ describe('normalizeState', () => {
       currentLevel: 'B2',
       currentMode: 'Menu Bar',
       isSoundMode: true,
+      isAssembleMode: true,
       currentBackground: 'dark',
       intervalMs: 10000
     };
@@ -148,5 +149,19 @@ describe('normalizeState progress', () => {
 
   it('safely degrades a Map passed as progress', () => {
     expect(normalizeState({ progress: new Map([['de:ru:A1', 5]]) }).progress).toEqual({});
+  });
+});
+
+describe('normalizeState isAssembleMode', () => {
+  it('defaults to off', () => {
+    expect(normalizeState({}).isAssembleMode).toBe(false);
+  });
+
+  it('keeps a boolean', () => {
+    expect(normalizeState({ isAssembleMode: true }).isAssembleMode).toBe(true);
+  });
+
+  it('rejects a non-boolean', () => {
+    expect(normalizeState({ isAssembleMode: 'yes' }).isAssembleMode).toBe(false);
   });
 });

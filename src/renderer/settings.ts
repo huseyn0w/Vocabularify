@@ -21,6 +21,7 @@ const els = {
   modeBlock: document.getElementById('mode-block') as HTMLElement,
   mode: document.getElementById('mode-row') as HTMLElement,
   soundToggle: document.getElementById('sound-toggle') as HTMLElement,
+  assembleToggle: document.getElementById('assemble-toggle') as HTMLElement,
   speed: document.getElementById('speed-row') as HTMLElement,
   speedCustom: document.getElementById('speed-custom') as HTMLInputElement,
   importBtn: document.getElementById('import-btn') as HTMLElement
@@ -135,6 +136,10 @@ function renderSound() {
   els.soundToggle.classList.toggle('on', s.current.sound);
 }
 
+function renderAssemble() {
+  els.assembleToggle.classList.toggle('on', s.current.assemble);
+}
+
 function renderSpeed() {
   els.speed.innerHTML = '';
   for (const ms of s.speeds) {
@@ -168,6 +173,7 @@ function renderAll() {
   renderBackground();
   renderMode();
   renderSound();
+  renderAssemble();
   renderSpeed();
 }
 
@@ -176,6 +182,13 @@ els.soundToggle.addEventListener('click', async () => {
   await vocab.setSound(next);
   s.current.sound = next;
   renderSound();
+});
+
+els.assembleToggle.addEventListener('click', async () => {
+  const next = !s.current.assemble;
+  await vocab.setAssemble(next);
+  s.current.assemble = next;
+  renderAssemble();
 });
 
 els.speedCustom.addEventListener('change', () => {

@@ -20,6 +20,7 @@ export function registerIpcHandlers(handlers: IpcHandlers): void {
     setBackground,
     setMode,
     setSound,
+    setAssemble,
     setSpeed
   } = handlers;
 
@@ -33,6 +34,7 @@ export function registerIpcHandlers(handlers: IpcHandlers): void {
   ipcMain.handle(IPC.SET_BACKGROUND_PREF, (_event, background: Background) => setBackground(background));
   ipcMain.handle(IPC.SET_MODE, (_event, mode: Mode) => setMode(mode));
   ipcMain.handle(IPC.SET_SOUND, (_event, enabled: boolean) => setSound(enabled));
+  ipcMain.handle(IPC.SET_ASSEMBLE, (_event, enabled: boolean) => setAssemble(enabled));
   ipcMain.handle(IPC.SET_SPEED, (_event, ms: number) => setSpeed(ms));
   ipcMain.on(IPC.KEY_PRESS, (_event, keyEvent: KeyEvent) => onKeyPress(keyEvent));
   ipcMain.on(IPC.SET_PAUSED, (_event, paused: boolean) => onSetPaused(paused));

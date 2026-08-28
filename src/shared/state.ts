@@ -16,6 +16,7 @@ const DEFAULT_STATE: AppState = Object.freeze({
   currentLevel: "A1",
   currentMode: MODES.WINDOW,
   isSoundMode: false,
+  isAssembleMode: false,
   // Obsidian (dark) is the signature premium look - ship it out of the box.
   currentBackground: "dark",
   intervalMs: DEFAULT_INTERVAL_MS,
@@ -56,6 +57,10 @@ export function normalizeState(raw: unknown): AppState {
       typeof source.isSoundMode === "boolean"
         ? source.isSoundMode
         : DEFAULT_STATE.isSoundMode,
+    isAssembleMode:
+      typeof source.isAssembleMode === "boolean"
+        ? source.isAssembleMode
+        : DEFAULT_STATE.isAssembleMode,
     currentBackground:
       typeof source.currentBackground === "string" &&
       VALID_BACKGROUNDS.has(source.currentBackground)

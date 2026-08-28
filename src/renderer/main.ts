@@ -27,6 +27,7 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
   const glossEl = document.getElementById('gloss') as HTMLElement;
 
   let isSoundMode = false;
+  let isAssembleMode = false;
   let fromLocale = 'de-DE';
   let toLocale = 'en-US';
   let revealTimeoutId: ReturnType<typeof setTimeout> | null = null;
@@ -147,17 +148,95 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
     return layout.map(token => (token.space ? ` ${token.text}` : token.text)).join('');
   }
 
+  const chipsEl = document.getElementById('chips') as HTMLElement;
+
+  // Fisher-Yates. A fresh order every time the card appears, so a repeat of
+  // the same sentence is not muscle memory.
+  function shuffled<T>(values: T[]): T[] {
+    const out = values.slice();
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  }
+
+  function startAssemble(layout: LaidOutToken[], onSolved: () => void) {
+    const answerable = layout.filter(token => token.concept !== null);
+    let placed = 0;
+
+    // Everything up to the next answerable token, so punctuation and articles
+    // appear as soon as the word before them is in place.
+    function visibleThrough(count: number): LaidOutToken[] {
+      const out: LaidOutToken[] = [];
+      let seen = 0;
+      for (const token of layout) {
+        if (token.concept !== null) {
+          if (seen >= count) break;
+          seen++;
+        }
+        out.push(token);
+      }
+      return out;
+    }
+
+    function paint() {
+      sentenceTargetEl.textContent = joinLayout(visibleThrough(placed));
+    }
+
+    chipsEl.textContent = '';
+    for (const token of shuffled(answerable)) {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'chip';
+      chip.textContent = token.text;
+      chip.addEventListener('click', () => {
+        // Match on the surface form, not on identity: when two chips read the
+        // same, either one is a fair answer.
+        if (token.text !== answerable[placed].text) {
+          chip.classList.remove('wrong');
+          void chip.offsetWidth;
+          chip.classList.add('wrong');
+          return;
+        }
+        chip.classList.add('used');
+        placed++;
+        paint();
+        if (placed === answerable.length) {
+          onSolved();
+        }
+      });
+      chipsEl.append(chip);
+    }
+    paint();
+  }
+
   function displaySentence(
     item: Extract<Item, { kind: 'sentence' }>,
     layout: LaidOutToken[],
     mode: string
   ) {
-    renderTokens(layout, item.gloss);
     sentenceSourceEl.textContent = item.source;
     const text = joinLayout(layout);
+    const canAssemble =
+      isAssembleMode && mode !== 'Menu Bar' && layout.some(token => token.concept !== null);
 
-    // Checkup hides the answer, which for a sentence is the sentence itself:
-    // the translation below stays as the prompt.
+    phraseContainer.classList.toggle('assemble', canAssemble);
+
+    if (canAssemble) {
+      // Auto-advance must not carry the learner past an unsolved exercise.
+      vocab.setHold(true);
+      sentenceTargetEl.classList.remove('hidden');
+      startAssemble(layout, () => {
+        vocab.setHold(false);
+        renderTokens(layout, item.gloss);
+        speak(text, toLocale);
+      });
+      return;
+    }
+
+    renderTokens(layout, item.gloss);
+
     if (mode === 'Checkup') {
       sentenceTargetEl.classList.add('hidden');
       revealTimeoutId = setTimeout(() => {
@@ -174,6 +253,9 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
   function displayPhrase({ item, layout, mode, index, total }: DisplayPhrasePayload) {
     clearRevealTimeout();
     hideGloss();
+    vocab.setHold(false);
+    chipsEl.textContent = '';
+    phraseContainer.classList.remove('assemble');
     updateProgressBar(index, total);
     replayEnterAnimation();
     phraseContainer.classList.toggle('sentence', item.kind === 'sentence');
@@ -192,6 +274,10 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
 
   vocab.onToggleSound(enabled => {
     isSoundMode = enabled;
+  });
+
+  vocab.onSetAssemble(enabled => {
+    isAssembleMode = enabled;
   });
 
   vocab.onSetBackground(background => {

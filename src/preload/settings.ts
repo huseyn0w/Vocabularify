@@ -10,6 +10,7 @@ const api: SettingsVocabApi = {
   setBackground: background => ipcRenderer.invoke(IPC.SET_BACKGROUND_PREF, background),
   setMode: mode => ipcRenderer.invoke(IPC.SET_MODE, mode),
   setSound: enabled => ipcRenderer.invoke(IPC.SET_SOUND, enabled),
+  setAssemble: enabled => ipcRenderer.invoke(IPC.SET_ASSEMBLE, enabled),
   setSpeed: ms => ipcRenderer.invoke(IPC.SET_SPEED, ms),
   openImport: () => ipcRenderer.invoke(IPC.OPEN_IMPORT)
 };

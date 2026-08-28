@@ -151,6 +151,13 @@ function switchLanguage(language: string, fromLanguage: string, level: string) {
 
 function switchMode(mode: AppState["currentMode"]) {
   state.currentMode = mode;
+  // A mode switch can leave an assemble exercise stranded mid-solve - most
+  // visibly, switching to Menu Bar, which has no interaction surface to
+  // finish it on. displayPhrase only releases the hold from inside the main
+  // window's own render loop, which stops running once it is hidden, so
+  // nothing else would ever clear it. Release it unconditionally here so a
+  // mode switch can never leave auto-advance (window or tray) stuck off.
+  setExerciseHold(false);
   if (mode === MODES.WINDOW || mode === MODES.CHECKUP) {
     if (!mainWindow) {
       createWiredMainWindow();
@@ -175,6 +182,16 @@ function setSpeed(intervalMs: number) {
 function toggleSound(enabled: boolean) {
   state.isSoundMode = enabled;
   sendToWindow(IPC.TOGGLE_SOUND_MODE, enabled);
+}
+
+function toggleAssemble(enabled: boolean) {
+  state.isAssembleMode = enabled;
+  sendToWindow(IPC.SET_ASSEMBLE, enabled);
+  // Leaving assemble mid-exercise must not strand the timer.
+  if (!enabled) {
+    setExerciseHold(false);
+  }
+  engine.render();
 }
 
 function setLevel(level: string) {
@@ -209,6 +226,7 @@ function getSettings(): SettingsSnapshot {
       background: state.currentBackground,
       mode: state.currentMode,
       sound: state.isSoundMode,
+      assemble: state.isAssembleMode,
       intervalMs: state.intervalMs,
     },
   };
@@ -281,6 +299,7 @@ function createWiredMainWindow() {
         getLocale(state.currentLanguage),
       );
       win.webContents.send(IPC.SET_BACKGROUND, state.currentBackground);
+      win.webContents.send(IPC.SET_ASSEMBLE, state.isAssembleMode);
       loadCurrentDictionary(state.progress[currentProgressKey()] ?? state.currentIndex);
       if (state.currentMode === MODES.MENU_BAR) {
         win.hide();
@@ -353,6 +372,7 @@ app.whenReady().then(() => {
     setBackground,
     setMode: switchMode,
     setSound: toggleSound,
+    setAssemble: toggleAssemble,
     setSpeed: (ms) => setSpeed(clampInterval(ms)),
   });
 

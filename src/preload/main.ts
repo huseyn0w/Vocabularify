@@ -21,6 +21,8 @@ const api: MainVocabApi = {
     ipcRenderer.on(IPC.SET_BACKGROUND, (_event, background) => callback(background)),
   onToggleSound: callback =>
     ipcRenderer.on(IPC.TOGGLE_SOUND_MODE, (_event, enabled) => callback(enabled)),
+  onSetAssemble: callback =>
+    ipcRenderer.on(IPC.SET_ASSEMBLE, (_event, enabled) => callback(enabled)),
   onSetLanguages: callback =>
     ipcRenderer.on(IPC.SET_LANGUAGES, (_event, fromLocale, toLocale) =>
       callback({ fromLocale, toLocale })
