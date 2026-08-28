@@ -159,6 +159,65 @@ describe('createPhraseEngine', () => {
     engine.stop();
   });
 
+  it('falls back to the flat list when a sentence element is null', () => {
+    fs.writeFileSync(
+      lessonsPath,
+      JSON.stringify({ lessons: [{ count: 2, sentences: [null] }] })
+    );
+    const engine = makeEngine();
+    engine.load(dictPath);
+    expect(rendered[0].total).toBe(4);
+    engine.stop();
+  });
+
+  it('falls back to the flat list when a sentence element is missing id', () => {
+    fs.writeFileSync(
+      lessonsPath,
+      JSON.stringify({
+        lessons: [
+          {
+            count: 2,
+            sentences: [{ target: [{ t: 'Hallo', c: 'hello' }], source: 'Привет', gloss: {} }]
+          }
+        ]
+      })
+    );
+    const engine = makeEngine();
+    engine.load(dictPath);
+    expect(rendered[0].total).toBe(4);
+    engine.stop();
+  });
+
+  it('honours a stop() called from inside the first onRender that load() triggers', () => {
+    const rendered3: Array<{ item: Item; index: number; total: number }> = [];
+    const engine = createPhraseEngine({
+      intervalMs: 1000,
+      onRender: (item, index, total) => {
+        rendered3.push({ item, index, total });
+        if (index === 0) {
+          engine.stop();
+        }
+      }
+    });
+    // load() renders index 0 synchronously; onRender stops it right there.
+    engine.load(dictPath);
+    expect(rendered3.length).toBe(1);
+
+    // Well past several further dwells: if the stop were undone by the
+    // unconditional restartTimer() that used to follow load()'s render,
+    // more items would have rendered by now.
+    vi.advanceTimersByTime(1000 * 10);
+    expect(rendered3.length).toBe(1);
+
+    // The hover-pause resume path: an explicit restartTimer() after a
+    // stop() must still arm the timer.
+    engine.restartTimer();
+    vi.advanceTimersByTime(1000);
+    expect(rendered3.length).toBe(2);
+    expect(rendered3[1].index).toBe(1);
+    engine.stop();
+  });
+
   it('honours a stop() called from inside onRender', () => {
     const rendered2: Array<{ item: Item; index: number; total: number }> = [];
     const engine = createPhraseEngine({
