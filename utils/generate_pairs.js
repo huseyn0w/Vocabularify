@@ -28,10 +28,11 @@
 const fs = require("fs");
 const path = require("path");
 
-const ROOT = path.join(__dirname, "..", "languages");
+const REPO_ROOT = path.join(__dirname, "..");
+const ROOT = path.join(REPO_ROOT, "languages");
 const BANK = path.join(ROOT, "_bank");
 const COURSE_DIR = path.join(ROOT, "_course");
-const OUT = path.join(__dirname, "..", "out", "shared");
+const OUT = path.join(REPO_ROOT, "out", "shared");
 
 const LANGS = ["en", "de", "fr", "es", "it", "tr", "ru"];
 const LEVELS = ["a1", "a2", "b1", "b2", "c1"];
@@ -48,8 +49,16 @@ const { joinTokens } = require(path.join(OUT, "items.js"));
 
 const norm = (s) => String(s == null ? "" : s).trim().toLowerCase();
 
+// A corrupt file here is fatal: unlike the linter, this script writes output,
+// so it must exit before writing anything rather than continue past a
+// half-readable input and leave a partial set of pair files on disk.
 function readJson(file) {
-  return JSON.parse(fs.readFileSync(file, "utf-8"));
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf-8"));
+  } catch (err) {
+    console.error(`${path.relative(REPO_ROOT, file)}: could not parse JSON: ${err.message}`);
+    process.exit(2);
+  }
 }
 
 function serialisePairs(entries) {

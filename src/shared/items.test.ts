@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { joinTokens, layoutTokens, buildItems } from './items';
-import type { LessonSpec } from './items';
+import type { LessonSpec, SentenceToken } from './items';
 import type { VocabEntry } from './types';
 
 describe('layoutTokens', () => {
@@ -23,6 +23,37 @@ describe('layoutTokens', () => {
 
   it('drops empty tokens instead of emitting an empty span', () => {
     expect(layoutTokens([{ t: 'a', c: 'x' }, '', { t: 'b', c: 'y' }])).toHaveLength(2);
+  });
+
+  it('skips a null token instead of throwing', () => {
+    expect(
+      layoutTokens([{ t: 'a', c: 'x' }, null as unknown as SentenceToken, { t: 'b', c: 'y' }])
+    ).toEqual([
+      { text: 'a', concept: 'x', space: false },
+      { text: 'b', concept: 'y', space: true }
+    ]);
+  });
+
+  it('skips a token object with no "t" instead of throwing', () => {
+    expect(
+      layoutTokens([
+        { t: 'a', c: 'x' },
+        { c: 'z' } as unknown as SentenceToken,
+        { t: 'b', c: 'y' }
+      ])
+    ).toEqual([
+      { text: 'a', concept: 'x', space: false },
+      { text: 'b', concept: 'y', space: true }
+    ]);
+  });
+
+  it('skips a non-string, non-object token instead of throwing', () => {
+    expect(
+      layoutTokens([{ t: 'a', c: 'x' }, 42 as unknown as SentenceToken, { t: 'b', c: 'y' }])
+    ).toEqual([
+      { text: 'a', concept: 'x', space: false },
+      { text: 'b', concept: 'y', space: true }
+    ]);
   });
 });
 
@@ -54,6 +85,28 @@ describe('joinTokens', () => {
 
   it('returns an empty string for an empty list', () => {
     expect(joinTokens([])).toBe('');
+  });
+
+  it('skips a null token instead of throwing', () => {
+    expect(
+      joinTokens([{ t: 'a', c: 'x' }, null as unknown as SentenceToken, { t: 'b', c: 'y' }])
+    ).toBe('a b');
+  });
+
+  it('skips a token object with no "t" instead of throwing', () => {
+    expect(
+      joinTokens([
+        { t: 'a', c: 'x' },
+        { c: 'z' } as unknown as SentenceToken,
+        { t: 'b', c: 'y' }
+      ])
+    ).toBe('a b');
+  });
+
+  it('skips a non-string, non-object token instead of throwing', () => {
+    expect(
+      joinTokens([{ t: 'a', c: 'x' }, 42 as unknown as SentenceToken, { t: 'b', c: 'y' }])
+    ).toBe('a b');
   });
 });
 

@@ -31,7 +31,7 @@ export function layoutTokens(tokens: SentenceToken[]): LaidOutToken[] {
   const out: LaidOutToken[] = [];
   let previous = '';
   for (const token of tokens) {
-    const text = typeof token === 'string' ? token : token.t;
+    const text = typeof token === 'string' ? token : token?.t;
     if (!text) {
       continue;
     }
