@@ -151,7 +151,13 @@ for (const to of LANGS) {
     const dir = path.join(ROOT, to, from);
     let pairTotal = 0;
     // A target word appears once per pair: if two concepts collapse to the
-    // same target word, only the lowest-level one survives.
+    // same target word, only the lowest-level one survives. This set is
+    // shared across all five levels, so within a level it is the first
+    // concept *visited* that wins, not the first in bank order - and course
+    // ordering decides visit order. Reordering or adding to a course can
+    // therefore change which of two colliding concepts survives (the bank
+    // has both `she -> sie` and `they -> sie`), not just the order words
+    // appear in the word list. That is intended, not a regression.
     const seenW2 = new Set();
 
     for (const level of LEVELS) {
@@ -192,14 +198,37 @@ for (const to of LANGS) {
       const lessons = loaded.course.lessons.map((lesson, index) => ({
         count: counts[index],
         sentences: lesson.sentences
-          .map((id) => loaded.sentenceById.get(id))
+          .map((id) => {
+            const sentence = loaded.sentenceById.get(id);
+            if (!sentence) {
+              skipped.push(`${level} lesson ${lesson.id}: sentence "${id}" is not in the bank`);
+            }
+            return sentence;
+          })
           .filter(Boolean)
-          .map((sentence) => ({
-            id: sentence.id,
-            target: sentence.text[to],
-            source: joinTokens(sentence.text[from]),
-            gloss: glossFor(sentence, to, from),
-          })),
+          .map((sentence) => {
+            const targetTokens = sentence.text[to];
+            const sourceTokens = sentence.text[from];
+            if (!Array.isArray(targetTokens)) {
+              skipped.push(
+                `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${to}" column (target)`,
+              );
+              return null;
+            }
+            if (!Array.isArray(sourceTokens)) {
+              skipped.push(
+                `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${from}" column (source)`,
+              );
+              return null;
+            }
+            return {
+              id: sentence.id,
+              target: targetTokens,
+              source: joinTokens(sourceTokens),
+              gloss: glossFor(sentence, to, from),
+            };
+          })
+          .filter(Boolean),
       }));
       fs.writeFileSync(lessonsPath, `${JSON.stringify({ lessons }, null, 2)}\n`);
       lessonFiles++;
