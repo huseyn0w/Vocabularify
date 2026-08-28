@@ -137,8 +137,9 @@ for (const level of LEVELS) {
       skipped.push(`${level}: lesson ${index} is not an object`);
       return;
     }
-    const id = lesson.id !== undefined ? lesson.id : `#${index}`;
-    if (lesson.id === undefined) {
+    const hasId = lesson.id !== undefined && lesson.id !== null;
+    const id = hasId ? lesson.id : `#${index}`;
+    if (!hasId) {
       skipped.push(`${level} lesson ${id}: "id" is missing, using its index`);
     }
     if (!Array.isArray(lesson.new)) {

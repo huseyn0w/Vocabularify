@@ -34,11 +34,11 @@ describe('layoutTokens', () => {
     ]);
   });
 
-  it('skips a token object with no "t" instead of throwing', () => {
+  it('skips a token whose "t" is a truthy number instead of rendering it', () => {
     expect(
       layoutTokens([
         { t: 'a', c: 'x' },
-        { c: 'z' } as unknown as SentenceToken,
+        { t: 42, c: 'z' } as unknown as SentenceToken,
         { t: 'b', c: 'y' }
       ])
     ).toEqual([
@@ -47,9 +47,13 @@ describe('layoutTokens', () => {
     ]);
   });
 
-  it('skips a non-string, non-object token instead of throwing', () => {
+  it('skips a token whose "t" is a truthy boolean instead of rendering it', () => {
     expect(
-      layoutTokens([{ t: 'a', c: 'x' }, 42 as unknown as SentenceToken, { t: 'b', c: 'y' }])
+      layoutTokens([
+        { t: 'a', c: 'x' },
+        { t: true, c: 'z' } as unknown as SentenceToken,
+        { t: 'b', c: 'y' }
+      ])
     ).toEqual([
       { text: 'a', concept: 'x', space: false },
       { text: 'b', concept: 'y', space: true }
@@ -93,19 +97,23 @@ describe('joinTokens', () => {
     ).toBe('a b');
   });
 
-  it('skips a token object with no "t" instead of throwing', () => {
+  it('skips a token whose "t" is a truthy number instead of rendering it', () => {
     expect(
       joinTokens([
         { t: 'a', c: 'x' },
-        { c: 'z' } as unknown as SentenceToken,
+        { t: 42, c: 'z' } as unknown as SentenceToken,
         { t: 'b', c: 'y' }
       ])
     ).toBe('a b');
   });
 
-  it('skips a non-string, non-object token instead of throwing', () => {
+  it('skips a token whose "t" is a truthy boolean instead of rendering it', () => {
     expect(
-      joinTokens([{ t: 'a', c: 'x' }, 42 as unknown as SentenceToken, { t: 'b', c: 'y' }])
+      joinTokens([
+        { t: 'a', c: 'x' },
+        { t: true, c: 'z' } as unknown as SentenceToken,
+        { t: 'b', c: 'y' }
+      ])
     ).toBe('a b');
   });
 });

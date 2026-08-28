@@ -32,7 +32,7 @@ export function layoutTokens(tokens: SentenceToken[]): LaidOutToken[] {
   let previous = '';
   for (const token of tokens) {
     const text = typeof token === 'string' ? token : token?.t;
-    if (!text) {
+    if (typeof text !== 'string' || !text) {
       continue;
     }
     const space =
