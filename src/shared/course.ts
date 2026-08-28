@@ -82,6 +82,32 @@ export const GLUE: Readonly<Record<string, readonly string[]>> = {
   ru: ['у']
 };
 
+// Concepts a language genuinely cannot render as a free word, so the coverage
+// check must not demand one. The test is narrow and structural: the language
+// has no standalone word for the concept at all. Turkish builds ability, the
+// locative and the dative as suffixes, so `can`, `in` and `to` are never
+// separate words; Spanish and Italian have no ordinary subject pronoun for
+// inanimate `it`.
+//
+// This is NOT an escape hatch for "the sentence happened not to use it".
+// Turkish `with` and `or` DO have free words (`ile`, `veya`); if they never
+// render, that is a gap in the sentences, and the fix is a sentence, not an
+// entry here. Every entry names a property of the language.
+//
+// The check also fails when a listed concept DOES render, so a stale
+// exemption cannot sit here unnoticed.
+export const NO_FREE_WORD: Readonly<Record<string, readonly string[]>> = {
+  en: [],
+  de: [],
+  fr: [],
+  // Spanish and Italian drop the subject pronoun, and the inanimate subject
+  // `it` has no ordinary word at all: `ello` and `esso` are literary.
+  es: ['it'],
+  it: ['it'],
+  tr: ['can', 'in', 'to', 'without'],
+  ru: []
+};
+
 const PUNCTUATION_ONLY = /^[\p{P}\p{S}]+$/u;
 
 /** The concept id: the English column, trimmed and lowercased. This is the
@@ -242,6 +268,75 @@ export function validateCourse(input: ValidateInput): string[] {
       const sentence = byId.get(id);
       if (sentence) {
         errors.push(...checkSentence(sentence, lesson.id, known, introduced, languages));
+      }
+    }
+  }
+
+  errors.push(...checkCoverage(levelConcepts, bank, languages));
+
+  return errors;
+}
+
+/** Every concept the level teaches has to be put to work: named in some
+ *  sentence's `uses`, and actually rendered as a word in every language that
+ *  has a word for it. A card the course never uses again is the thing this
+ *  rebuild exists to remove. */
+function checkCoverage(
+  levelConcepts: readonly string[],
+  bank: readonly SentenceEntry[],
+  languages: readonly string[]
+): string[] {
+  const errors: string[] = [];
+  const inUses = new Set<string>();
+  const rendered = new Map<string, Set<string>>();
+  for (const lang of languages) {
+    rendered.set(lang, new Set());
+  }
+
+  for (const sentence of bank) {
+    if (!sentence || typeof sentence !== 'object') {
+      continue;
+    }
+    for (const concept of Array.isArray(sentence.uses) ? sentence.uses : []) {
+      if (typeof concept === 'string') {
+        inUses.add(conceptId(concept));
+      }
+    }
+    const text = sentence.text && typeof sentence.text === 'object' ? sentence.text : {};
+    for (const lang of languages) {
+      const seen = rendered.get(lang);
+      const tokens = (text as Record<string, unknown>)[lang];
+      if (!seen || !Array.isArray(tokens)) {
+        continue;
+      }
+      for (const token of tokens) {
+        if (token && typeof token === 'object' && typeof (token as { c?: unknown }).c === 'string') {
+          seen.add(conceptId((token as { c: string }).c));
+        }
+      }
+    }
+  }
+
+  for (const concept of levelConcepts) {
+    if (!inUses.has(concept)) {
+      errors.push(`"${concept}" is taught but used by no sentence`);
+    }
+  }
+
+  for (const lang of languages) {
+    const seen = rendered.get(lang) ?? new Set<string>();
+    const exempt = new Set(NO_FREE_WORD[lang] ?? []);
+    for (const concept of levelConcepts) {
+      if (seen.has(concept) || exempt.has(concept)) {
+        continue;
+      }
+      errors.push(`[${lang}]: "${concept}" is taught but never renders as a word`);
+    }
+    for (const concept of exempt) {
+      if (seen.has(concept)) {
+        errors.push(
+          `[${lang}]: "${concept}" is listed in NO_FREE_WORD but does render - drop the exemption`
+        );
       }
     }
   }

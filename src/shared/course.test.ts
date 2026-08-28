@@ -4,12 +4,14 @@ import type { CourseFile, SentenceEntry } from './course';
 
 const LANGS = ['en', 'de', 'ru'] as const;
 
-// A minimal but valid course: one lesson of five concepts and one sentence
-// that uses four of them, including one introduced by that very lesson.
+// A minimal but valid course: one lesson of five concepts and two sentences
+// that between them use every concept and render every one of them in all
+// three languages. The second sentence is past tense so Russian renders the
+// copula, which it drops in the present.
 function fixture() {
   const course: CourseFile = {
     level: 'a1',
-    lessons: [{ id: 1, new: ['hello', 'i', 'to be', 'good', 'day'], sentences: ['a1_001'] }]
+    lessons: [{ id: 1, new: ['hello', 'i', 'to be', 'good', 'day'], sentences: ['a1_001', 'a1_002'] }]
   };
   const sentences: SentenceEntry[] = [
     {
@@ -19,6 +21,15 @@ function fixture() {
         en: [{ t: 'Hello', c: 'hello' }, ',', { t: 'I', c: 'i' }, { t: 'am', c: 'to be' }, { t: 'good', c: 'good' }, '.'],
         de: [{ t: 'Hallo', c: 'hello' }, ',', { t: 'ich', c: 'i' }, { t: 'bin', c: 'to be' }, { t: 'gut', c: 'good' }, '.'],
         ru: [{ t: 'Привет', c: 'hello' }, ',', { t: 'я', c: 'i' }, { t: 'хорошо', c: 'good' }, '.']
+      }
+    },
+    {
+      id: 'a1_002',
+      uses: ['day', 'to be', 'good'],
+      text: {
+        en: ['The', { t: 'day', c: 'day' }, { t: 'was', c: 'to be' }, { t: 'good', c: 'good' }, '.'],
+        de: ['Der', { t: 'Tag', c: 'day' }, { t: 'war', c: 'to be' }, { t: 'gut', c: 'good' }, '.'],
+        ru: [{ t: 'День', c: 'day' }, { t: 'был', c: 'to be' }, { t: 'хороший', c: 'good' }, '.']
       }
     }
   ];
@@ -120,8 +131,8 @@ describe('validateCourse', () => {
 
   it('reports a sentence in the bank that no lesson references', () => {
     const f = fixture();
-    f.sentences.push({ ...f.sentences[0], id: 'a1_002' });
-    expect(validateCourse(f).join('\n')).toContain('"a1_002" is in the bank but no lesson uses it');
+    f.sentences.push({ ...f.sentences[0], id: 'a1_003' });
+    expect(validateCourse(f).join('\n')).toContain('"a1_003" is in the bank but no lesson uses it');
   });
 
   it('reports a lesson that is too large', () => {
@@ -304,5 +315,63 @@ describe('validateCourse', () => {
     const sentence = f.sentences[0] as unknown as Record<string, unknown>;
     sentence.uses = 'oops';
     expect(validateCourse(f).join('\n')).toContain('a1_001: "uses" is missing or not an array');
+  });
+});
+
+describe('validateCourse coverage', () => {
+  it('reports a concept no sentence uses', () => {
+    const f = fixture();
+    f.course.lessons[0].new.push('night');
+    f.levelConcepts.push('night');
+    expect(validateCourse(f).join('\n')).toContain('"night" is taught but used by no sentence');
+  });
+
+  it('reports a concept that is in uses but renders in only some languages', () => {
+    const f = fixture();
+    f.sentences[1].text.de = f.sentences[1].text.de.filter(
+      t => typeof t === 'string' || t.c !== 'day'
+    );
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain('[de]: "day" is taught but never renders as a word');
+    expect(out).not.toContain('[en]: "day"');
+  });
+
+  it('exempts a concept the language has no free word for', () => {
+    const f = fixture();
+    // Turkish builds ability as a suffix, so `can` never renders as a token.
+    const tr = ['en', 'de', 'tr'] as const;
+    const g = { ...f, languages: tr };
+    g.course.lessons[0].new = ['hello', 'i', 'to be', 'good', 'can'];
+    g.levelConcepts = ['hello', 'i', 'to be', 'good', 'can'];
+    g.sentences[0].uses = ['hello', 'i', 'to be', 'good', 'can'];
+    g.sentences[1].uses = ['to be', 'good'];
+    g.sentences[0].text.tr = [{ t: 'Merhaba', c: 'hello' }, ',', { t: 'ben', c: 'i' }, { t: 'iyiyim', c: 'to be' }, '.'];
+    g.sentences[1].text.tr = [{ t: 'Gün', c: 'good' }, { t: 'iyiydi', c: 'to be' }, '.'];
+    g.sentences[0].text.en = [{ t: 'I', c: 'i' }, { t: 'can', c: 'can' }, { t: 'be', c: 'to be' }, { t: 'good', c: 'good' }, ',', { t: 'hello', c: 'hello' }, '.'];
+    g.sentences[0].text.de = [{ t: 'Ich', c: 'i' }, { t: 'kann', c: 'can' }, { t: 'gut', c: 'good' }, { t: 'sein', c: 'to be' }, ',', { t: 'hallo', c: 'hello' }, '.'];
+    g.sentences[1].text.en = ['The', { t: 'good', c: 'good' }, { t: 'was', c: 'to be' }, 'there', '.'];
+    g.sentences[1].text.de = ['Das', { t: 'Gute', c: 'good' }, { t: 'war', c: 'to be' }, 'da', '.'];
+    // `hello` is NOT exempt and Turkish stops rendering it, so the check has
+    // to stay loud about that one while staying quiet about `can`.
+    g.sentences[0].text.tr = [{ t: 'ben', c: 'i' }, { t: 'iyiyim', c: 'to be' }, '.'];
+    const out = validateCourse(g).join('\n');
+    expect(out).toContain('[tr]: "hello" is taught but never renders as a word');
+    expect(out).not.toContain('"can" is taught but never renders');
+  });
+
+  it('reports an exemption that has gone stale', () => {
+    const f = fixture();
+    const es = ['es'] as const;
+    const g = { ...f, languages: es };
+    g.course.lessons[0].new = ['it', 'i', 'to be', 'good', 'day'];
+    g.levelConcepts = ['it', 'i', 'to be', 'good', 'day'];
+    g.sentences[0].uses = ['it', 'i', 'to be', 'good'];
+    g.sentences[1].uses = ['day', 'to be', 'good'];
+    // `it` is exempt for Spanish, so rendering it means the exemption is wrong.
+    g.sentences[0].text.es = [{ t: 'Ello', c: 'it' }, { t: 'es', c: 'to be' }, { t: 'bueno', c: 'good' }, ',', { t: 'yo', c: 'i' }, '.'];
+    g.sentences[1].text.es = ['El', { t: 'día', c: 'day' }, { t: 'era', c: 'to be' }, { t: 'bueno', c: 'good' }, '.'];
+    expect(validateCourse(g).join('\n')).toContain(
+      '[es]: "it" is listed in NO_FREE_WORD but does render - drop the exemption'
+    );
   });
 });
