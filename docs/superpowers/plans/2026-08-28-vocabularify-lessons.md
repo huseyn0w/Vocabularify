@@ -21,6 +21,7 @@ Spec: `docs/superpowers/specs/2026-08-28-vocabularify-lessons-design.md`
 - Pair files `languages/<to>/<from>/<level>.json` are **generated**. Never hand-edit them. Edit `languages/_bank/` or `languages/_course/` and regenerate.
 - In pair files `word_1` is the **known** language and `word_2` the language being **learned**. Verify with `languages/en/ru/a1.json`, which starts `{"word_1": "и", "word_2": "and"}`. The mobile app's `app/utils/types.ts` documents the opposite; that comment is wrong.
 - `utils/*.js` that need shared logic require the **compiled** `out/shared/*.js`. Run `yarn compile` before running them.
+- **`rm -rf out` alone does not force a rebuild.** `tsconfig.json` sets `incremental: true` with `tsBuildInfoFile: ".tsbuildinfo"`, which lives outside `out/`. Delete `out/` on its own and the next `yarn compile` emits nothing, because tsc still believes the output is current — every step after that then runs against a missing or stale build. Always `rm -rf out .tsbuildinfo` together.
 - No points, streaks, badges or confetti. `PRODUCT.md` lists gamified language apps as an anti-reference.
 - Design tokens are OKLCH custom properties defined in each HTML file's `<style>` block. Reuse `--ink`, `--muted`, `--accent`, `--hairline`, `--bg-elev`, `--ease-out`. Never hardcode a colour.
 - Every animation needs a `@media (prefers-reduced-motion: reduce)` fallback, matching the existing block in `index.html`.
@@ -990,7 +991,7 @@ process.exit(totalErrors > 0 ? 1 : 0);
 - [ ] **Step 2: Verify it reports a missing build**
 
 ```bash
-rm -rf out && node utils/validate_course.js; echo "exit=$?"
+rm -rf out .tsbuildinfo && node utils/validate_course.js; echo "exit=$?"
 ```
 Expected: `out/shared/course.js is missing. Run \`yarn compile\` first.` and `exit=2`.
 
@@ -1292,7 +1293,7 @@ Expected: `IDENTICAL`, and `git status --short languages` reports no modified fi
 - [ ] **Step 3: Verify the missing-build guard**
 
 ```bash
-rm -rf out && node utils/generate_pairs.js; echo "exit=$?"
+rm -rf out .tsbuildinfo && node utils/generate_pairs.js; echo "exit=$?"
 yarn compile
 ```
 Expected: `out/shared/course.js is missing. Run \`yarn compile\` first.` and `exit=2`.
@@ -2842,6 +2843,9 @@ git commit -m "feat(ui): opt-in assemble exercise on the sentence card"
 In the "Language / dictionary data" section, after the "Generated from a multilingual bank" bullet, add:
 
 ```markdown
+- **Rebuilding**: `tsconfig.json` is incremental with `.tsbuildinfo` outside `out/`,
+  so `rm -rf out` alone leaves the next `yarn compile` emitting nothing. Remove
+  both: `rm -rf out .tsbuildinfo`.
 - **Lessons and sentences**: `languages/_course/<level>.json` orders that level's
   concepts into lessons of 5-10, and `<level>.sentences.json` holds the
   sentences shown after each one, tokenised in all 7 languages. A concept id is
