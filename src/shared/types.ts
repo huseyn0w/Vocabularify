@@ -42,6 +42,10 @@ export interface LanguagePair {
 
 export interface AppState {
   currentIndex: number;
+  /** Item index per "to:from:level", so switching a language pair or level
+   *  no longer discards where the learner was. `currentIndex` stays as the
+   *  position in the currently open dictionary. */
+  progress: Record<string, number>;
   currentLanguage: string;
   currentFromLanguage: string;
   currentLevel: string;

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeState, DEFAULT_STATE, clampInterval, MIN_INTERVAL_MS, MAX_INTERVAL_MS } from './state';
+import { normalizeState, DEFAULT_STATE, clampInterval, MIN_INTERVAL_MS, MAX_INTERVAL_MS, progressKey } from './state';
 
 describe('normalizeState', () => {
   it('returns the defaults for empty / non-object input', () => {
@@ -19,7 +19,10 @@ describe('normalizeState', () => {
       currentBackground: 'dark',
       intervalMs: 10000
     };
-    expect(normalizeState(valid)).toEqual(valid);
+    // currentIndex is non-zero and valid has no progress field of its own, so
+    // the pre-lessons migration seed (see 'normalizeState progress' below)
+    // legitimately adds one entry here.
+    expect(normalizeState(valid)).toEqual({ ...valid, progress: { 'en:ru:B2': 4 } });
   });
 
   it('falls back per-field on invalid values', () => {
@@ -66,5 +69,62 @@ describe('clampInterval', () => {
   it('falls back to the default for non-numbers', () => {
     expect(clampInterval(NaN)).toBe(DEFAULT_STATE.intervalMs);
     expect(clampInterval('5000')).toBe(DEFAULT_STATE.intervalMs);
+  });
+});
+
+describe('progressKey', () => {
+  it('keys on the pair and level together', () => {
+    expect(progressKey('de', 'ru', 'A1')).toBe('de:ru:A1');
+  });
+});
+
+describe('normalizeState progress', () => {
+  it('defaults to an empty map', () => {
+    expect(normalizeState({}).progress).toEqual({});
+  });
+
+  it('keeps valid entries', () => {
+    expect(normalizeState({ progress: { 'de:ru:A1': 12 } }).progress).toEqual({ 'de:ru:A1': 12 });
+  });
+
+  it('drops entries that are not non-negative integers', () => {
+    const state = normalizeState({
+      progress: { good: 3, negative: -1, fractional: 1.5, text: 'x', nothing: null }
+    });
+    expect(state.progress).toEqual({ good: 3 });
+  });
+
+  it('ignores a progress value that is not an object', () => {
+    expect(normalizeState({ progress: 'nope' }).progress).toEqual({});
+  });
+
+  it('seeds progress from a pre-lessons currentIndex so an upgrade keeps its place', () => {
+    const state = normalizeState({
+      currentIndex: 42,
+      currentLanguage: 'de',
+      currentFromLanguage: 'ru',
+      currentLevel: 'B1'
+    });
+    expect(state.progress).toEqual({ 'de:ru:B1': 42 });
+  });
+
+  it('does not seed when progress already has entries', () => {
+    const state = normalizeState({
+      currentIndex: 42,
+      currentLanguage: 'de',
+      currentFromLanguage: 'ru',
+      currentLevel: 'B1',
+      progress: { 'fr:en:A1': 7 }
+    });
+    expect(state.progress).toEqual({ 'fr:en:A1': 7 });
+  });
+
+  it('does not seed from a zero index', () => {
+    expect(normalizeState({ currentIndex: 0 }).progress).toEqual({});
+  });
+
+  it('is round-trip stable, so saveState cannot drop the field', () => {
+    const once = normalizeState({ progress: { 'de:ru:A1': 5 } });
+    expect(normalizeState(once)).toEqual(once);
   });
 });
