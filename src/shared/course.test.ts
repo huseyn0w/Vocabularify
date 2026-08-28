@@ -284,4 +284,25 @@ describe('validateCourse', () => {
     delete entry.id;
     expect(validateCourse(f).join('\n')).toContain('course: a sentence bank entry is missing "id"');
   });
+
+  // --- Fix round 3: pin the remaining unguarded shapes ---
+
+  it('reports a non-object element in the sentence bank instead of throwing', () => {
+    const f = fixture();
+    (f.sentences as unknown[]).unshift(null);
+    expect(validateCourse(f).join('\n')).toContain('course: a sentence bank entry is missing "id"');
+  });
+
+  it('reports "sentences" present but not an array in a lesson', () => {
+    const f = fixture();
+    (f.course.lessons[0] as unknown as Record<string, unknown>).sentences = 'oops';
+    expect(validateCourse(f).join('\n')).toContain('lesson 1: "sentences" is missing or not an array');
+  });
+
+  it('reports "uses" present but not an array in a sentence', () => {
+    const f = fixture();
+    const sentence = f.sentences[0] as unknown as Record<string, unknown>;
+    sentence.uses = 'oops';
+    expect(validateCourse(f).join('\n')).toContain('a1_001: "uses" is missing or not an array');
+  });
 });
