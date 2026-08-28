@@ -78,6 +78,37 @@ for (const level of LEVELS) {
 }
 const banked = dedupeBank(LEVELS, rowsByLevel);
 
+// A concept repeated across levels is usually deliberate redundancy that
+// dedupeBank absorbs (the bank has "problem" at both a2 and b1, with the same
+// translations both times). But the English column is the only identity a
+// concept has, so two genuinely different words that happen to share an
+// English spelling collide the same way, and dedupeBank drops the
+// higher-level one exactly as it would a harmless repeat - silently. Flag
+// only the ones that are not harmless: where some other language column
+// differs between the row dedupeBank kept and a row it dropped for the same
+// concept id.
+const collisions = [];
+{
+  const firstOccurrence = new Map(); // concept id -> { level, row }
+  for (const level of LEVELS) {
+    for (const row of rowsByLevel[level]) {
+      const id = conceptId(row.en);
+      if (!id) continue;
+      const kept = firstOccurrence.get(id);
+      if (!kept) {
+        firstOccurrence.set(id, { level, row });
+        continue;
+      }
+      const diffs = LANGS.filter((lang) => norm(kept.row[lang]) !== norm(row[lang]));
+      if (diffs.length === 0) continue;
+      const shown = diffs
+        .map((lang) => `${lang}: "${kept.row[lang]}" vs "${row[lang]}"`)
+        .join(", ");
+      collisions.push(`"${id}" kept at ${kept.level}, dropped from ${level} - ${shown}`);
+    }
+  }
+}
+
 // concept id -> its bank row, for glosses.
 const rowOfConcept = new Map();
 for (const level of LEVELS) {
@@ -305,6 +336,14 @@ for (const to of LANGS) {
 }
 
 console.log(summary.join("\n"));
+if (collisions.length > 0) {
+  // Separate from "skipped": a collision is a data warning about the bank
+  // itself, not something this run had to skip while assembling the course.
+  // It never changes the exit code - a deliberate near-duplicate with one
+  // corrected translation is legitimate, so this is for a human to judge.
+  console.log(`\ncollisions (${collisions.length}):`);
+  for (const line of collisions) console.log(`  ${line}`);
+}
 if (skipped.length > 0) {
   const skippedLines = [...new Set(skipped)];
   console.log(`\nskipped (${skippedLines.length}):`);
