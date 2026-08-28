@@ -46,6 +46,10 @@ export const LANGUAGE_META: Readonly<Record<string, LanguageMeta>> = {
 export const SPEED_INTERVALS = [5000, 10000, 15000, 20000] as const;
 export const DEFAULT_INTERVAL_MS = 5000;
 
+// A sentence takes longer to read than a word, so it stays on screen for this
+// many times the configured interval.
+export const SENTENCE_DWELL_MULTIPLIER = 2;
+
 // Fixed size for the floating card window (no per-phrase resizing, which
 // previously made the window jump every few seconds).
 export const WINDOW_WIDTH = 460;
@@ -67,6 +71,7 @@ export const IPC = {
   CLEAR_TIMEOUTS: "clear-timeouts",
   KEY_PRESS: "key-press",
   SET_PAUSED: "set-paused",
+  SET_HOLD: "set-hold",
   IMPORT_DICTIONARY: "import-dictionary",
   CHOOSE_DICTIONARY_FILE: "choose-dictionary-file",
   OPEN_EXTERNAL: "open-external",
@@ -79,6 +84,7 @@ export const IPC = {
   SET_MODE: "set-mode",
   SET_SOUND: "set-sound",
   SET_SPEED: "set-speed",
+  SET_ASSEMBLE: "set-assemble",
 } as const;
 
 // Re-export the shared Background type so existing call sites can keep

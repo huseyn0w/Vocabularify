@@ -3,6 +3,8 @@
 // stay framework-free (no Electron imports) so it remains unit-testable and
 // safe to `import type` from a browser-context renderer.
 
+import type { Item } from './items';
+
 // --- Domain primitives ------------------------------------------------------
 
 /** A stored vocabulary entry. `word_1` is the source (known) word, `word_2`
@@ -162,12 +164,12 @@ export interface PhraseEngine {
   stop(): void;
   render(): void;
   getIndex(): number;
-  getCurrentPhrase(): Phrase | undefined;
+  getCurrentItem(): Item | undefined;
 }
 
 export interface PhraseEngineOptions {
   intervalMs: number;
-  onRender: (phrase: Phrase, index: number, total: number) => void;
+  onRender: (item: Item, index: number, total: number) => void;
 }
 
 export interface TrayActions {
