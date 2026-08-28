@@ -114,10 +114,15 @@
     "text": {
       "en": [{"t":"I","c":"i"}, {"t":"have","c":"to have"}, {"t":"money","c":"money"}, ",", {"t":"and","c":"and"}, {"t":"I","c":"i"}, {"t":"want","c":"to want"}, {"t":"to buy","c":"to buy"}, {"t":"bread","c":"bread"}, ".", {"t":"Where","c":"where"}, {"t":"is","c":"to be"}, "the", {"t":"shop","c":"shop"}, "?"]
     } },
-  { "id": "a1_024",
-    "uses": ["we", "to have", "big", "house"],
+  { "id": "a1_069",
+    "uses": ["how much", "to be", "it", "please", "i", "to want", "to buy", "fish"],
     "text": {
-      "en": [{"t":"We","c":"we"}, {"t":"have","c":"to have"}, "a", {"t":"big","c":"big"}, {"t":"house","c":"house"}, "."]
+      "en": [{"t":"How much","c":"how much"}, {"t":"is","c":"to be"}, {"t":"it","c":"it"}, ",", {"t":"please","c":"please"}, "?", {"t":"I","c":"i"}, {"t":"want","c":"to want"}, {"t":"to buy","c":"to buy"}, "the", {"t":"fish","c":"fish"}, "."]
+    } },
+  { "id": "a1_024",
+    "uses": ["this", "to be", "my", "house", "and", "it", "very", "big"],
+    "text": {
+      "en": [{"t":"This","c":"this"}, {"t":"is","c":"to be"}, {"t":"my","c":"my"}, {"t":"house","c":"house"}, ",", {"t":"and","c":"and"}, {"t":"it","c":"it"}, {"t":"is","c":"to be"}, {"t":"very","c":"very"}, {"t":"big","c":"big"}, "."]
     } },
   { "id": "a1_025",
     "uses": ["room", "to have", "table", "chair", "and", "bed"],
@@ -135,9 +140,9 @@
       "en": [{"t":"Open","c":"to open"}, "the", {"t":"window","c":"window"}, {"t":"and","c":"and"}, {"t":"close","c":"to close"}, "the", {"t":"door","c":"door"}, ",", {"t":"please","c":"please"}, "!"]
     } },
   { "id": "a1_028",
-    "uses": ["book", "to be", "old", "and", "house", "new"],
+    "uses": ["this", "book", "to be", "new", "and", "that", "old"],
     "text": {
-      "en": ["The", {"t":"book","c":"book"}, {"t":"is","c":"to be"}, {"t":"old","c":"old"}, ",", {"t":"and","c":"and"}, "the", {"t":"house","c":"house"}, {"t":"is","c":"to be"}, {"t":"new","c":"new"}, "."]
+      "en": [{"t":"This","c":"this"}, {"t":"book","c":"book"}, {"t":"is","c":"to be"}, {"t":"new","c":"new"}, ",", {"t":"and","c":"and"}, {"t":"that","c":"that"}, {"t":"book","c":"book"}, {"t":"is","c":"to be"}, {"t":"old","c":"old"}, "."]
     } },
   { "id": "a1_029",
     "uses": ["i", "can", "to see", "small", "beautiful", "house"],
@@ -170,24 +175,29 @@
       "en": ["The", {"t":"man","c":"man"}, {"t":"and","c":"and"}, "the", {"t":"woman","c":"woman"}, {"t":"are","c":"to be"}, {"t":"friends","c":"friend"}, "."]
     } },
   { "id": "a1_035",
-    "uses": ["i", "to know", "man", "he", "to live", "here", "and", "to be", "also", "friend"],
+    "uses": ["i", "to know", "that", "man", "he", "to live", "here", "and", "to be", "my", "friend"],
     "text": {
-      "en": [{"t":"I","c":"i"}, {"t":"know","c":"to know"}, "a", {"t":"man","c":"man"}, ".", {"t":"He","c":"he"}, {"t":"lives","c":"to live"}, {"t":"here","c":"here"}, ",", {"t":"and","c":"and"}, {"t":"he","c":"he"}, {"t":"is","c":"to be"}, {"t":"also","c":"also"}, "a", {"t":"friend","c":"friend"}, "."]
+      "en": [{"t":"I","c":"i"}, {"t":"know","c":"to know"}, {"t":"that","c":"that"}, {"t":"man","c":"man"}, ".", {"t":"He","c":"he"}, {"t":"lives","c":"to live"}, {"t":"here","c":"here"}, ",", {"t":"and","c":"and"}, {"t":"he","c":"he"}, {"t":"is","c":"to be"}, {"t":"my","c":"my"}, {"t":"friend","c":"friend"}, "."]
+    } },
+  { "id": "a1_070",
+    "uses": ["hello", "what", "to be", "your", "name"],
+    "text": {
+      "en": [{"t":"Hello","c":"hello"}, "!", {"t":"What","c":"what"}, {"t":"is","c":"to be"}, {"t":"your","c":"your"}, {"t":"name","c":"name"}, "?"]
     } },
   { "id": "a1_036",
-    "uses": ["to come", "here", "please", "school", "to be", "there"],
+    "uses": ["to come", "here", "please", "school", "to be", "in", "this", "street"],
     "text": {
-      "en": [{"t":"Come","c":"to come"}, {"t":"here","c":"here"}, ",", {"t":"please","c":"please"}, "!", "The", {"t":"school","c":"school"}, {"t":"is","c":"to be"}, {"t":"there","c":"there"}, "."]
+      "en": [{"t":"Come","c":"to come"}, {"t":"here","c":"here"}, ",", {"t":"please","c":"please"}, "!", "The", {"t":"school","c":"school"}, {"t":"is","c":"to be"}, {"t":"in","c":"in"}, {"t":"this","c":"this"}, {"t":"street","c":"street"}, "."]
     } },
   { "id": "a1_037",
-    "uses": ["city", "to be", "big", "and", "i", "to work", "here"],
+    "uses": ["i", "to live", "in", "city", "and", "to work", "big", "shop"],
     "text": {
-      "en": ["The", {"t":"city","c":"city"}, {"t":"is","c":"to be"}, {"t":"big","c":"big"}, ",", {"t":"and","c":"and"}, {"t":"I","c":"i"}, {"t":"work","c":"to work"}, {"t":"here","c":"here"}, "."]
+      "en": [{"t":"I","c":"i"}, {"t":"live","c":"to live"}, {"t":"in","c":"in"}, "the", {"t":"city","c":"city"}, ",", {"t":"and","c":"and"}, {"t":"I","c":"i"}, {"t":"work","c":"to work"}, {"t":"in","c":"in"}, "a", {"t":"big","c":"big"}, {"t":"shop","c":"shop"}, "."]
     } },
   { "id": "a1_038",
-    "uses": ["we", "to have", "new", "car", "and", "can", "to go", "there", "fast"],
+    "uses": ["we", "to have", "new", "car", "and", "can", "to go", "to", "work", "fast"],
     "text": {
-      "en": [{"t":"We","c":"we"}, {"t":"have","c":"to have"}, "a", {"t":"new","c":"new"}, {"t":"car","c":"car"}, ",", {"t":"and","c":"and"}, {"t":"we","c":"we"}, {"t":"can","c":"can"}, {"t":"go","c":"to go"}, {"t":"there","c":"there"}, {"t":"fast","c":"fast"}, "."]
+      "en": [{"t":"We","c":"we"}, {"t":"have","c":"to have"}, "a", {"t":"new","c":"new"}, {"t":"car","c":"car"}, ",", {"t":"and","c":"and"}, {"t":"we","c":"we"}, {"t":"can","c":"can"}, {"t":"go","c":"to go"}, {"t":"to","c":"to"}, {"t":"work","c":"work"}, {"t":"fast","c":"fast"}, "."]
     } },
   { "id": "a1_039",
     "uses": ["good", "morning", "how", "to be", "you", "today"],
@@ -323,6 +333,11 @@
     "uses": ["i", "can", "not", "to take", "all", "book", "what", "to do", "you", "to help"],
     "text": {
       "en": [{"t":"I","c":"i"}, {"t":"can","c":"can"}, {"t":"not","c":"not"}, {"t":"take","c":"to take"}, {"t":"all","c":"all"}, "the", {"t":"books","c":"book"}, ".", {"t":"What","c":"what"}, {"t":"can","c":"can"}, {"t":"I","c":"i"}, {"t":"do","c":"to do"}, "?", {"t":"Can","c":"can"}, {"t":"you","c":"you"}, {"t":"help","c":"to help"}, {"t":"me","c":"i"}, "?"]
+    } },
+  { "id": "a1_071",
+    "uses": ["my", "head", "to be", "hot", "and", "i", "can", "not", "to work", "today"],
+    "text": {
+      "en": [{"t":"My","c":"my"}, {"t":"head","c":"head"}, {"t":"is","c":"to be"}, {"t":"hot","c":"hot"}, ",", {"t":"and","c":"and"}, {"t":"I","c":"i"}, {"t":"can","c":"can"}, {"t":"not","c":"not"}, {"t":"work","c":"to work"}, {"t":"today","c":"today"}, "."]
     } },
   { "id": "a1_066",
     "uses": ["work", "to be", "difficult", "but", "money", "good"],

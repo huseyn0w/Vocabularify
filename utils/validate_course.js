@@ -12,6 +12,11 @@
  * English sentences are written first, and have to lint clean before the
  * other six columns are translated.
  *
+ * After each level is checked it also reports the concepts that are taught as
+ * a card but appear in no sentence. That is not an error - some concepts have
+ * no natural A1 frame - so it is printed on stdout and never reaches the exit
+ * code; it is there so the author sees the gap.
+ *
  * Exit codes: 2 if any setup problem occurred (missing build, an unrecognised
  * argument, a bank/course/sentence file that will not parse, or a course file
  * with no matching sentence file); else 1 if any validation error occurred;
@@ -34,6 +39,22 @@ if (!fs.existsSync(COMPILED)) {
   process.exit(2);
 }
 const { validateCourse, dedupeBank, conceptId } = require(COMPILED);
+
+// Concepts taught by the course but used by no sentence. Reported, never
+// counted as an error: a concept like `zero` has no natural A1 sentence, and
+// forcing one would be worse than leaving it as a card. `uses` is the union
+// across all languages, so this is language-independent and does not care
+// which columns were linted.
+function conceptsInNoSentence(levelConcepts, sentences) {
+  const used = new Set();
+  for (const entry of Array.isArray(sentences) ? sentences : []) {
+    const uses = entry && typeof entry === "object" ? entry.uses : undefined;
+    for (const concept of Array.isArray(uses) ? uses : []) {
+      used.add(concept);
+    }
+  }
+  return levelConcepts.filter((concept) => !used.has(concept));
+}
 
 function readJson(file) {
   try {
@@ -129,10 +150,11 @@ for (const level of LEVELS) {
     priorConcepts.push(...banked[earlier].map((row) => conceptId(row.en)));
   }
 
+  const levelConcepts = banked[level].map((row) => conceptId(row.en));
   const errors = validateCourse({
     course: courseResult.value,
     sentences: sentenceResult.value,
-    levelConcepts: banked[level].map((row) => conceptId(row.en)),
+    levelConcepts,
     priorConcepts,
     languages,
   });
@@ -146,6 +168,13 @@ for (const level of LEVELS) {
       console.error(`  ${error}`);
     }
     totalErrors += errors.length;
+  }
+
+  const unused = conceptsInNoSentence(levelConcepts, sentenceResult.value);
+  if (unused.length > 0) {
+    console.log(
+      `${level}: ${unused.length} concept(s) taught but in no sentence (not an error): ${unused.join(", ")}`,
+    );
   }
 }
 
