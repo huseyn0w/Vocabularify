@@ -127,4 +127,26 @@ describe('normalizeState progress', () => {
     const once = normalizeState({ progress: { 'de:ru:A1': 5 } });
     expect(normalizeState(once)).toEqual(once);
   });
+
+  it('rejects an array as the whole progress value', () => {
+    expect(normalizeState({ progress: [1, 2, 3] }).progress).toEqual({});
+  });
+
+  it('rejects Infinity as a progress entry value', () => {
+    const state = normalizeState({
+      progress: { 'de:ru:A1': Infinity }
+    });
+    expect(state.progress).toEqual({});
+  });
+
+  it('rejects an empty-string key in progress', () => {
+    const state = normalizeState({
+      progress: { '': 5, 'de:ru:A1': 10 }
+    });
+    expect(state.progress).toEqual({ 'de:ru:A1': 10 });
+  });
+
+  it('safely degrades a Map passed as progress', () => {
+    expect(normalizeState({ progress: new Map([['de:ru:A1', 5]]) }).progress).toEqual({});
+  });
 });
