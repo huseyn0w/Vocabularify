@@ -18,6 +18,7 @@
         --hairline: oklch(0 0 0 / 0.07);
         --glow: oklch(0.55 0.10 70 / 0.08);
         --target-glow: transparent;
+        --tok-line: oklch(0.55 0.10 70 / 0.38);
 
         --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       }
@@ -32,6 +33,7 @@
         --hairline: oklch(1 0 0 / 0.09);
         --glow: oklch(0.80 0.085 82 / 0.18);
         --target-glow: oklch(0.80 0.085 82 / 0.18);
+        --tok-line: oklch(0.80 0.085 82 / 0.32);
       }
 
       * { box-sizing: border-box; }
@@ -109,6 +111,65 @@
         transform: translateY(3px);
       }
 
+      /* Sentence card. Same container, same focus-pull; a smaller type scale
+         because a sentence is read rather than glanced at. */
+      #sentence-target,
+      #sentence-source { display: none; margin: 0; }
+      #phrase-container.sentence #source,
+      #phrase-container.sentence #target { display: none; }
+      #phrase-container.sentence #sentence-target,
+      #phrase-container.sentence #sentence-source { display: block; }
+
+      #sentence-target {
+        font-size: clamp(15px, 4.4vw, 30px);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 1.4;
+        text-wrap: balance;
+        color: var(--ink);
+        text-shadow: 0 0 28px var(--target-glow);
+        transition: opacity 0.32s var(--ease-out), filter 0.32s var(--ease-out);
+      }
+      #sentence-target.hidden {
+        opacity: 0;
+        filter: blur(7px);
+      }
+
+      #sentence-source {
+        font-size: clamp(11px, 2.4vw, 15px);
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      /* A word the learner has already met as a card. The underline is the
+         only affordance; hovering it names the card it came from. */
+      .tok {
+        border-bottom: 1px solid var(--tok-line);
+        cursor: default;
+      }
+
+      #gloss {
+        position: fixed;
+        z-index: 10;
+        padding: 5px 8px;
+        border: 1px solid var(--hairline);
+        border-radius: 7px;
+        background: var(--bg-elev);
+        color: var(--ink);
+        font-size: 12px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.16s var(--ease-out);
+      }
+      #gloss.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      #gloss .gloss-source { color: var(--muted); }
+
       /* The signature focus-pull: every new word resolves out of soft focus. */
       @keyframes phrase-in {
         from { opacity: 0; transform: translateY(8px); filter: blur(6px); }
@@ -168,8 +229,8 @@
 
       @media (prefers-reduced-motion: reduce) {
         #phrase-container { animation: phrase-fade 0.25s ease both; }
-        #target, #progress-bar-inner, body { transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease; }
-        #target.hidden { filter: none; transform: none; }
+        #target, #sentence-target, #gloss, #progress-bar-inner, body { transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease; }
+        #target.hidden, #sentence-target.hidden { filter: none; transform: none; }
         @keyframes phrase-fade { from { opacity: 0; } to { opacity: 1; } }
       }
     </style>
@@ -178,7 +239,10 @@
     <div id="phrase-container">
       <span id="source"></span>
       <span id="target"></span>
+      <p id="sentence-target"></p>
+      <p id="sentence-source"></p>
     </div>
+    <div id="gloss"></div>
     <div id="hint">
       <kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd> to navigate
     </div>

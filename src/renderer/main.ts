@@ -22,6 +22,9 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
   const targetEl = document.getElementById('target') as HTMLElement;
   const progressBarInner = document.getElementById('progress-bar-inner') as HTMLElement;
   const progressLabel = document.getElementById('progress-label') as HTMLElement;
+  const sentenceTargetEl = document.getElementById('sentence-target') as HTMLElement;
+  const sentenceSourceEl = document.getElementById('sentence-source') as HTMLElement;
+  const glossEl = document.getElementById('gloss') as HTMLElement;
 
   let isSoundMode = false;
   let fromLocale = 'de-DE';
@@ -89,23 +92,94 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
     revealTimeoutId = setTimeout(() => speak(item.target, toLocale), 2000);
   }
 
-  // Unstyled for now: Task 9 gives the sentence its own card.
-  function displaySentence(layout: LaidOutToken[], source: string) {
-    sourceEl.textContent = source;
-    targetEl.textContent = layout
-      .map(token => (token.space ? ` ${token.text}` : token.text))
-      .join('');
-    revealTarget();
-    speak(targetEl.textContent, toLocale);
+  type Gloss = { t: string; s: string };
+
+  function hideGloss() {
+    glossEl.classList.remove('visible');
+  }
+
+  // Sits above the token, clamped to the window. The card is only 460x240, so
+  // a gloss near the top edge flips below the token instead of being cut off.
+  function showGloss(anchor: HTMLElement, gloss: Gloss) {
+    glossEl.textContent = '';
+    const citation = document.createElement('span');
+    citation.textContent = gloss.t;
+    const translation = document.createElement('span');
+    translation.className = 'gloss-source';
+    translation.textContent = ` · ${gloss.s}`;
+    glossEl.append(citation, translation);
+    glossEl.classList.add('visible');
+
+    const token = anchor.getBoundingClientRect();
+    const box = glossEl.getBoundingClientRect();
+    const left = Math.min(
+      Math.max(4, token.left + token.width / 2 - box.width / 2),
+      window.innerWidth - box.width - 4
+    );
+    const above = token.top - box.height - 6;
+    glossEl.style.left = `${left}px`;
+    glossEl.style.top = `${above < 4 ? token.bottom + 6 : above}px`;
+  }
+
+  // Rebuilding the children drops the old listeners with the old nodes, so
+  // there is nothing to clean up between sentences.
+  function renderTokens(layout: LaidOutToken[], gloss: Record<string, Gloss>) {
+    sentenceTargetEl.textContent = '';
+    for (const token of layout) {
+      if (token.space) {
+        sentenceTargetEl.append(' ');
+      }
+      const entry = token.concept ? gloss[token.concept] : undefined;
+      if (!entry) {
+        sentenceTargetEl.append(token.text);
+        continue;
+      }
+      const span = document.createElement('span');
+      span.className = 'tok';
+      span.textContent = token.text;
+      span.addEventListener('mouseenter', () => showGloss(span, entry));
+      span.addEventListener('mouseleave', hideGloss);
+      sentenceTargetEl.append(span);
+    }
+  }
+
+  function joinLayout(layout: LaidOutToken[]): string {
+    return layout.map(token => (token.space ? ` ${token.text}` : token.text)).join('');
+  }
+
+  function displaySentence(
+    item: Extract<Item, { kind: 'sentence' }>,
+    layout: LaidOutToken[],
+    mode: string
+  ) {
+    renderTokens(layout, item.gloss);
+    sentenceSourceEl.textContent = item.source;
+    const text = joinLayout(layout);
+
+    // Checkup hides the answer, which for a sentence is the sentence itself:
+    // the translation below stays as the prompt.
+    if (mode === 'Checkup') {
+      sentenceTargetEl.classList.add('hidden');
+      revealTimeoutId = setTimeout(() => {
+        sentenceTargetEl.classList.remove('hidden');
+        speak(text, toLocale);
+      }, 3000);
+      return;
+    }
+
+    sentenceTargetEl.classList.remove('hidden');
+    speak(text, toLocale);
   }
 
   function displayPhrase({ item, layout, mode, index, total }: DisplayPhrasePayload) {
     clearRevealTimeout();
+    hideGloss();
     updateProgressBar(index, total);
     replayEnterAnimation();
+    phraseContainer.classList.toggle('sentence', item.kind === 'sentence');
 
     if (item.kind === 'sentence') {
-      displaySentence(layout, item.source);
+      displaySentence(item, layout, mode);
     } else {
       displayWord(item, mode);
     }
