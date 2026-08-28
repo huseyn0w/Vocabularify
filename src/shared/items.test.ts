@@ -182,3 +182,13 @@ describe('layoutTokens gloss override', () => {
     expect(layoutTokens([bad])[0].lemma).toBeNull();
   });
 });
+
+describe('joinTokens narrow no-break space', () => {
+  it('does not add a second space in front of French punctuation that carries its own', () => {
+    expect(joinTokens([{ t: 'Bonjour', c: 'hello' }, '\u202f!'])).toBe('Bonjour\u202f!');
+  });
+
+  it('still spaces ordinary punctuation tight', () => {
+    expect(joinTokens([{ t: 'Hallo', c: 'hello' }, '!'])).toBe('Hallo!');
+  });
+});

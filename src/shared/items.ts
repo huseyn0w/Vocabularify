@@ -21,8 +21,12 @@ export type SentenceToken = string | { t: string; c: string; g?: string };
 // A sentence has no separate plain-text field: joining its tokens IS the
 // sentence. So the join rule has exactly one implementation, here. The
 // renderer imports it; `utils/*.js` require the compiled `out/shared/items.js`.
-const NO_SPACE_BEFORE = /^[,.!?;:)\]}»…]/;
-const NO_SPACE_AFTER = /[([{«'']$/;
+// U+202F, the narrow no-break space, leads a token that already carries its
+// own spacing. French requires one before !, ?, : and ; - the join rule is
+// language-agnostic, so the French column spells the space into the token
+// and this class stops a second one being added in front of it.
+const NO_SPACE_BEFORE = /^[\u202f,.!?;:)\]}»…]/;
+const NO_SPACE_AFTER = /[([{«¡¿'’]$/;
 
 /** A token with its spacing already decided. The main process sends these to
  *  the renderer, which draws one element per token and prepends a space when

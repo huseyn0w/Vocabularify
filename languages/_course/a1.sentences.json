@@ -41,11 +41,15 @@
           "c": "how"
         },
         {
-          "t": "bist",
-          "c": "to be"
+          "t": "geht",
+          "c": "to go"
         },
         {
-          "t": "du",
+          "t": "es",
+          "c": "it"
+        },
+        {
+          "t": "dir",
           "c": "you"
         },
         "?"
@@ -55,20 +59,20 @@
           "t": "Bonjour",
           "c": "hello"
         },
-        "!",
+        " !",
         {
-          "t": "Tu",
+          "t": "Comment",
+          "c": "how"
+        },
+        {
+          "t": "tu",
           "c": "you"
         },
         {
-          "t": "es",
-          "c": "to be"
+          "t": "vas",
+          "c": "to go"
         },
-        {
-          "t": "comment",
-          "c": "how"
-        },
-        "?"
+        " ?"
       ],
       "es": [
         "¡",
@@ -84,7 +88,8 @@
         },
         {
           "t": "estás",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         "?"
       ],
@@ -100,7 +105,8 @@
         },
         {
           "t": "stai",
-          "c": "to be"
+          "c": "to be",
+          "g": "stare"
         },
         "?"
       ],
@@ -167,12 +173,16 @@
       ],
       "de": [
         {
-          "t": "Ich",
+          "t": "Mir",
           "c": "i"
         },
         {
-          "t": "bin",
-          "c": "to be"
+          "t": "geht",
+          "c": "to go"
+        },
+        {
+          "t": "es",
+          "c": "it"
         },
         {
           "t": "gut",
@@ -191,11 +201,11 @@
           "c": "i"
         },
         {
-          "t": "suis",
-          "c": "to be"
+          "t": "vais",
+          "c": "to go"
         },
         {
-          "t": "bon",
+          "t": "bien",
           "c": "good"
         },
         ",",
@@ -208,11 +218,13 @@
       "es": [
         {
           "t": "Estoy",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
-          "t": "bueno",
-          "c": "good"
+          "t": "bien",
+          "c": "good",
+          "g": "bien"
         },
         ",",
         {
@@ -224,7 +236,8 @@
       "it": [
         {
           "t": "Sto",
-          "c": "to be"
+          "c": "to be",
+          "g": "stare"
         },
         {
           "t": "bene",
@@ -316,12 +329,16 @@
         },
         ",",
         {
-          "t": "ich",
+          "t": "mir",
           "c": "i"
         },
         {
-          "t": "bin",
-          "c": "to be"
+          "t": "geht",
+          "c": "to go"
+        },
+        {
+          "t": "es",
+          "c": "it"
         },
         {
           "t": "sehr",
@@ -349,15 +366,15 @@
           "c": "i"
         },
         {
-          "t": "suis",
-          "c": "to be"
+          "t": "vais",
+          "c": "to go"
         },
         {
           "t": "très",
           "c": "very"
         },
         {
-          "t": "bon",
+          "t": "bien",
           "c": "good"
         },
         ",",
@@ -365,7 +382,7 @@
           "t": "merci",
           "c": "thank you"
         },
-        "!"
+        " !"
       ],
       "es": [
         "¡",
@@ -375,16 +392,18 @@
         },
         ",",
         {
-          "t": "soy",
-          "c": "to be"
+          "t": "estoy",
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "muy",
           "c": "very"
         },
         {
-          "t": "bueno",
-          "c": "good"
+          "t": "bien",
+          "c": "good",
+          "g": "bien"
         },
         ",",
         {
@@ -401,7 +420,8 @@
         ",",
         {
           "t": "sto",
-          "c": "to be"
+          "c": "to be",
+          "g": "stare"
         },
         {
           "t": "molto",
@@ -424,10 +444,6 @@
           "c": "yes"
         },
         ",",
-        {
-          "t": "ben",
-          "c": "i"
-        },
         {
           "t": "çok",
           "c": "very"
@@ -509,12 +525,16 @@
         },
         ",",
         {
-          "t": "ich",
+          "t": "mir",
           "c": "i"
         },
         {
-          "t": "bin",
-          "c": "to be"
+          "t": "geht",
+          "c": "to go"
+        },
+        {
+          "t": "es",
+          "c": "it"
         },
         {
           "t": "nicht",
@@ -538,15 +558,15 @@
         },
         "ne",
         {
-          "t": "suis",
-          "c": "to be"
+          "t": "vais",
+          "c": "to go"
         },
         {
           "t": "pas",
           "c": "not"
         },
         {
-          "t": "bon",
+          "t": "bien",
           "c": "good"
         },
         "."
@@ -562,12 +582,14 @@
           "c": "not"
         },
         {
-          "t": "soy",
-          "c": "to be"
+          "t": "estoy",
+          "c": "to be",
+          "g": "estar"
         },
         {
-          "t": "bueno",
-          "c": "good"
+          "t": "bien",
+          "c": "good",
+          "g": "bien"
         },
         "."
       ],
@@ -583,7 +605,8 @@
         },
         {
           "t": "sto",
-          "c": "to be"
+          "c": "to be",
+          "g": "stare"
         },
         {
           "t": "bene",
@@ -597,10 +620,6 @@
           "c": "no"
         },
         ",",
-        {
-          "t": "ben",
-          "c": "i"
-        },
         {
           "t": "iyi",
           "c": "good"
@@ -632,11 +651,11 @@
   {
     "id": "a1_005",
     "uses": [
-      "yes",
+      "and",
+      "goodbye",
       "please",
       "thank you",
-      "and",
-      "goodbye"
+      "yes"
     ],
     "text": {
       "en": [
@@ -696,7 +715,7 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
         ".",
@@ -712,7 +731,7 @@
           "t": "au revoir",
           "c": "goodbye"
         },
-        "!"
+        " !"
       ],
       "es": [
         {
@@ -820,11 +839,11 @@
   {
     "id": "a1_006",
     "uses": [
-      "where",
-      "to be",
-      "you",
+      "here",
       "i",
-      "here"
+      "to be",
+      "where",
+      "you"
     ],
     "text": {
       "en": [
@@ -896,7 +915,7 @@
           "t": "où",
           "c": "where"
         },
-        "?",
+        " ?",
         {
           "t": "Je",
           "c": "i"
@@ -919,12 +938,14 @@
         },
         {
           "t": "estás",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         "?",
         {
           "t": "Estoy",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -997,12 +1018,12 @@
   {
     "id": "a1_007",
     "uses": [
-      "he",
-      "to be",
-      "here",
       "and",
+      "he",
+      "here",
       "she",
-      "there"
+      "there",
+      "to be"
     ],
     "text": {
       "en": [
@@ -1105,7 +1126,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -1121,7 +1143,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "allí",
@@ -1212,12 +1235,12 @@
   {
     "id": "a1_008",
     "uses": [
-      "we",
-      "to be",
-      "here",
       "and",
+      "here",
+      "there",
       "they",
-      "there"
+      "to be",
+      "we"
     ],
     "text": {
       "en": [
@@ -1318,8 +1341,13 @@
       ],
       "es": [
         {
-          "t": "Estamos",
-          "c": "to be"
+          "t": "Nosotros",
+          "c": "we"
+        },
+        {
+          "t": "estamos",
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -1336,7 +1364,8 @@
         },
         {
           "t": "están",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "allí",
@@ -1429,8 +1458,8 @@
     "id": "a1_009",
     "uses": [
       "sorry",
-      "who",
       "to be",
+      "who",
       "you"
     ],
     "text": {
@@ -1479,7 +1508,7 @@
           "t": "Pardon",
           "c": "sorry"
         },
-        "!",
+        " !",
         {
           "t": "Tu",
           "c": "you"
@@ -1492,7 +1521,7 @@
           "t": "qui",
           "c": "who"
         },
-        "?"
+        " ?"
       ],
       "es": [
         "¡",
@@ -1546,7 +1575,7 @@
       ],
       "ru": [
         {
-          "t": "Извините",
+          "t": "Прости",
           "c": "sorry"
         },
         "!",
@@ -1565,13 +1594,12 @@
   {
     "id": "a1_010",
     "uses": [
-      "now",
-      "i",
-      "to have",
-      "time",
       "and",
-      "you",
-      "to be"
+      "i",
+      "now",
+      "time",
+      "to have",
+      "you"
     ],
     "text": {
       "en": [
@@ -1657,7 +1685,7 @@
           "t": "toi",
           "c": "you"
         },
-        "?"
+        " ?"
       ],
       "es": [
         {
@@ -1740,7 +1768,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "время",
@@ -1762,12 +1791,12 @@
   {
     "id": "a1_011",
     "uses": [
-      "he",
-      "to be",
-      "here",
+      "also",
       "and",
+      "he",
+      "here",
       "she",
-      "also"
+      "to be"
     ],
     "text": {
       "en": [
@@ -1885,7 +1914,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -1906,7 +1936,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -2011,9 +2042,9 @@
     "id": "a1_012",
     "uses": [
       "coffee",
-      "with",
       "milk",
-      "please"
+      "please",
+      "with"
     ],
     "text": {
       "en": [
@@ -2073,10 +2104,10 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "!"
+        " !"
       ],
       "es": [
         "¡",
@@ -2100,8 +2131,9 @@
         "!"
       ],
       "it": [
+        "Un",
         {
-          "t": "Caffè",
+          "t": "caffè",
           "c": "coffee"
         },
         {
@@ -2121,8 +2153,12 @@
       ],
       "tr": [
         {
-          "t": "Sütlü",
+          "t": "Süt",
           "c": "milk"
+        },
+        {
+          "t": "ile",
+          "c": "with"
         },
         {
           "t": "kahve",
@@ -2161,10 +2197,10 @@
     "id": "a1_013",
     "uses": [
       "i",
-      "to want",
+      "milk",
       "tea",
-      "without",
-      "milk"
+      "to want",
+      "without"
     ],
     "text": {
       "en": [
@@ -2319,12 +2355,12 @@
   {
     "id": "a1_014",
     "uses": [
-      "you",
-      "to drink",
-      "tea",
       "and",
       "i",
-      "water"
+      "tea",
+      "to drink",
+      "water",
+      "you"
     ],
     "text": {
       "en": [
@@ -2560,11 +2596,11 @@
   {
     "id": "a1_015",
     "uses": [
-      "i",
-      "to eat",
-      "bread",
       "and",
-      "apple"
+      "apple",
+      "bread",
+      "i",
+      "to eat"
     ],
     "text": {
       "en": [
@@ -2728,15 +2764,15 @@
   {
     "id": "a1_016",
     "uses": [
-      "breakfast",
-      "to be",
-      "good",
-      "but",
-      "i",
-      "to want",
-      "more",
       "bread",
-      "please"
+      "breakfast",
+      "but",
+      "good",
+      "i",
+      "more",
+      "please",
+      "to be",
+      "to want"
     ],
     "text": {
       "en": [
@@ -2808,17 +2844,16 @@
           "c": "to want"
         },
         {
+          "t": "bitte",
+          "c": "please"
+        },
+        {
           "t": "mehr",
           "c": "more"
         },
         {
           "t": "Brot",
           "c": "bread"
-        },
-        ",",
-        {
-          "t": "bitte",
-          "c": "please"
         },
         "."
       ],
@@ -2860,7 +2895,7 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
         "."
@@ -2955,7 +2990,7 @@
           "c": "but"
         },
         {
-          "t": "daha",
+          "t": "daha fazla",
           "c": "more"
         },
         {
@@ -3015,11 +3050,11 @@
   {
     "id": "a1_017",
     "uses": [
-      "he",
-      "to eat",
       "egg",
-      "with",
-      "salt"
+      "he",
+      "salt",
+      "to eat",
+      "with"
     ],
     "text": {
       "en": [
@@ -3141,16 +3176,16 @@
       ],
       "tr": [
         {
-          "t": "Yumurtayı",
-          "c": "egg"
-        },
-        {
-          "t": "tuz",
+          "t": "Tuz",
           "c": "salt"
         },
         {
           "t": "ile",
           "c": "with"
+        },
+        {
+          "t": "yumurta",
+          "c": "egg"
         },
         {
           "t": "yiyor",
@@ -3187,10 +3222,10 @@
     "id": "a1_018",
     "uses": [
       "can",
-      "you",
-      "to help",
       "i",
-      "please"
+      "please",
+      "to help",
+      "you"
     ],
     "text": {
       "en": [
@@ -3231,13 +3266,12 @@
           "c": "i"
         },
         {
-          "t": "helfen",
-          "c": "to help"
-        },
-        ",",
-        {
           "t": "bitte",
           "c": "please"
+        },
+        {
+          "t": "helfen",
+          "c": "to help"
         },
         "?"
       ],
@@ -3260,23 +3294,19 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "?"
+        " ?"
       ],
       "es": [
         "¿",
         {
-          "t": "Me",
-          "c": "i"
-        },
-        {
-          "t": "puedes",
+          "t": "Puedes",
           "c": "can"
         },
         {
-          "t": "ayudar",
+          "t": "ayudarme",
           "c": "to help"
         },
         ",",
@@ -3348,15 +3378,15 @@
   {
     "id": "a1_019",
     "uses": [
-      "sorry",
-      "i",
       "can",
+      "i",
       "not",
-      "to understand",
-      "you",
-      "to speak",
+      "please",
       "slow",
-      "please"
+      "sorry",
+      "to speak",
+      "to understand",
+      "you"
     ],
     "text": {
       "en": [
@@ -3504,10 +3534,10 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "?"
+        " ?"
       ],
       "es": [
         {
@@ -3520,15 +3550,11 @@
           "c": "not"
         },
         {
-          "t": "te",
-          "c": "you"
-        },
-        {
           "t": "puedo",
           "c": "can"
         },
         {
-          "t": "entender",
+          "t": "entenderte",
           "c": "to understand"
         },
         ".",
@@ -3542,7 +3568,7 @@
           "c": "to speak"
         },
         {
-          "t": "lento",
+          "t": "despacio",
           "c": "slow"
         },
         ",",
@@ -3623,7 +3649,7 @@
       ],
       "ru": [
         {
-          "t": "Извините",
+          "t": "Прости",
           "c": "sorry"
         },
         ",",
@@ -3672,14 +3698,14 @@
   {
     "id": "a1_020",
     "uses": [
-      "why",
-      "to be",
-      "you",
+      "because",
       "here",
       "i",
-      "because",
+      "to be",
+      "to learn",
       "to want",
-      "to learn"
+      "why",
+      "you"
     ],
     "text": {
       "en": [
@@ -3796,7 +3822,7 @@
           "t": "ici",
           "c": "here"
         },
-        "?",
+        " ?",
         {
           "t": "Je",
           "c": "i"
@@ -3835,7 +3861,8 @@
         },
         {
           "t": "estás",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -3844,7 +3871,8 @@
         "?",
         {
           "t": "Estoy",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -3914,6 +3942,7 @@
           "t": "Buradayım",
           "c": "here"
         },
+        ",",
         {
           "t": "çünkü",
           "c": "because"
@@ -3974,9 +4003,9 @@
   {
     "id": "a1_021",
     "uses": [
+      "fish",
       "meat",
-      "or",
-      "fish"
+      "or"
     ],
     "text": {
       "en": [
@@ -4022,7 +4051,7 @@
           "t": "poisson",
           "c": "fish"
         },
-        "?"
+        " ?"
       ],
       "es": [
         "¿",
@@ -4060,13 +4089,14 @@
           "t": "Et",
           "c": "meat"
         },
-        "mi",
-        ",",
+        {
+          "t": "veya",
+          "c": "or"
+        },
         {
           "t": "balık",
           "c": "fish"
         },
-        "mı",
         "?"
       ],
       "ru": [
@@ -4089,13 +4119,13 @@
   {
     "id": "a1_022",
     "uses": [
-      "water",
-      "to be",
-      "cold",
       "but",
+      "cold",
+      "hot",
       "tea",
+      "to be",
       "very",
-      "hot"
+      "water"
     ],
     "text": {
       "en": [
@@ -4220,7 +4250,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "fría",
@@ -4238,7 +4269,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "muy",
@@ -4348,16 +4380,16 @@
   {
     "id": "a1_023",
     "uses": [
-      "i",
-      "to have",
-      "money",
       "and",
-      "to want",
-      "to buy",
       "bread",
-      "where",
+      "i",
+      "money",
+      "shop",
       "to be",
-      "shop"
+      "to buy",
+      "to have",
+      "to want",
+      "where"
     ],
     "text": {
       "en": [
@@ -4511,7 +4543,7 @@
           "t": "magasin",
           "c": "shop"
         },
-        "?"
+        " ?"
       ],
       "es": [
         {
@@ -4547,7 +4579,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         "la",
         {
@@ -4584,7 +4617,7 @@
         },
         ".",
         {
-          "t": "Dove",
+          "t": "Dov'",
           "c": "where"
         },
         {
@@ -4625,7 +4658,7 @@
         },
         ".",
         {
-          "t": "Mağaza",
+          "t": "Market",
           "c": "shop"
         },
         {
@@ -4642,7 +4675,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "деньги",
@@ -4724,24 +4758,6 @@
       ],
       "de": [
         {
-          "t": "Wie viel",
-          "c": "how much"
-        },
-        {
-          "t": "ist",
-          "c": "to be"
-        },
-        {
-          "t": "es",
-          "c": "it"
-        },
-        ",",
-        {
-          "t": "bitte",
-          "c": "please"
-        },
-        "?",
-        {
           "t": "Ich",
           "c": "i"
         },
@@ -4758,27 +4774,18 @@
           "t": "kaufen",
           "c": "to buy"
         },
-        "."
-      ],
-      "fr": [
+        ".",
         {
-          "t": "Il",
-          "c": "it"
-        },
-        {
-          "t": "est",
-          "c": "to be"
-        },
-        {
-          "t": "combien",
+          "t": "Wie viel",
           "c": "how much"
         },
-        ",",
         {
-          "t": "s'il vous plaît",
-          "c": "please"
+          "t": "Geld",
+          "c": "money"
         },
-        "?",
+        "?"
+      ],
+      "fr": [
         {
           "t": "Je",
           "c": "i"
@@ -4791,29 +4798,24 @@
           "t": "acheter",
           "c": "to buy"
         },
-        "le",
+        "du",
         {
           "t": "poisson",
           "c": "fish"
         },
-        "."
-      ],
-      "es": [
-        "¿",
+        ".",
         {
-          "t": "Cuánto",
+          "t": "Combien",
           "c": "how much"
         },
+        "d'",
         {
-          "t": "es",
-          "c": "to be"
+          "t": "argent",
+          "c": "money"
         },
-        ",",
-        {
-          "t": "por favor",
-          "c": "please"
-        },
-        "?",
+        " ?"
+      ],
+      "es": [
         {
           "t": "Quiero",
           "c": "to want"
@@ -4827,23 +4829,19 @@
           "t": "pescado",
           "c": "fish"
         },
-        "."
-      ],
-      "it": [
+        ".",
+        "¿",
         {
-          "t": "Quanto",
+          "t": "Cuánto",
           "c": "how much"
         },
         {
-          "t": "è",
-          "c": "to be"
+          "t": "dinero",
+          "c": "money"
         },
-        ",",
-        {
-          "t": "per favore",
-          "c": "please"
-        },
-        "?",
+        "?"
+      ],
+      "it": [
         {
           "t": "Voglio",
           "c": "to want"
@@ -4857,23 +4855,18 @@
           "t": "pesce",
           "c": "fish"
         },
-        "."
-      ],
-      "tr": [
+        ".",
         {
-          "t": "O",
-          "c": "it"
-        },
-        {
-          "t": "ne kadar",
+          "t": "Quanto",
           "c": "how much"
         },
-        ",",
         {
-          "t": "lütfen",
-          "c": "please"
+          "t": "denaro",
+          "c": "money"
         },
-        "?",
+        "?"
+      ],
+      "tr": [
         {
           "t": "Balığı",
           "c": "fish"
@@ -4886,23 +4879,18 @@
           "t": "istiyorum",
           "c": "to want"
         },
-        "."
-      ],
-      "ru": [
+        ".",
         {
-          "t": "Сколько",
+          "t": "Ne kadar",
           "c": "how much"
         },
         {
-          "t": "это",
-          "c": "it"
+          "t": "para",
+          "c": "money"
         },
-        ",",
-        {
-          "t": "пожалуйста",
-          "c": "please"
-        },
-        "?",
+        "?"
+      ],
+      "ru": [
         {
           "t": "Я",
           "c": "i"
@@ -4919,21 +4907,30 @@
           "t": "рыбу",
           "c": "fish"
         },
-        "."
+        ".",
+        {
+          "t": "Сколько",
+          "c": "how much"
+        },
+        {
+          "t": "денег",
+          "c": "money"
+        },
+        "?"
       ]
     }
   },
   {
     "id": "a1_024",
     "uses": [
+      "and",
+      "big",
+      "house",
+      "it",
+      "my",
       "this",
       "to be",
-      "my",
-      "house",
-      "and",
-      "it",
-      "very",
-      "big"
+      "very"
     ],
     "text": {
       "en": [
@@ -5193,12 +5190,12 @@
   {
     "id": "a1_025",
     "uses": [
-      "room",
-      "to have",
-      "table",
-      "chair",
       "and",
-      "bed"
+      "bed",
+      "chair",
+      "room",
+      "table",
+      "to have"
     ],
     "text": {
       "en": [
@@ -5393,13 +5390,15 @@
         "."
       ],
       "ru": [
+        "У",
         {
-          "t": "Комната",
+          "t": "комнаты",
           "c": "room"
         },
         {
-          "t": "имеет",
-          "c": "to have"
+          "t": "есть",
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "стол",
@@ -5425,12 +5424,12 @@
   {
     "id": "a1_026",
     "uses": [
-      "sorry",
-      "where",
-      "to be",
       "door",
-      "window",
-      "there"
+      "sorry",
+      "there",
+      "to be",
+      "where",
+      "window"
     ],
     "text": {
       "en": [
@@ -5522,7 +5521,7 @@
           "t": "porte",
           "c": "door"
         },
-        "?",
+        " ?",
         "La",
         {
           "t": "fenêtre",
@@ -5551,7 +5550,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         "la",
         {
@@ -5566,7 +5566,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "allí",
@@ -5581,7 +5582,7 @@
         },
         ",",
         {
-          "t": "dove",
+          "t": "dov'",
           "c": "where"
         },
         {
@@ -5611,7 +5612,7 @@
       ],
       "tr": [
         {
-          "t": "Özür dilerim",
+          "t": "Pardon",
           "c": "sorry"
         },
         ",",
@@ -5636,7 +5637,7 @@
       ],
       "ru": [
         {
-          "t": "Извините",
+          "t": "Прости",
           "c": "sorry"
         },
         ",",
@@ -5664,12 +5665,12 @@
   {
     "id": "a1_027",
     "uses": [
-      "to open",
-      "window",
       "and",
-      "to close",
       "door",
-      "please"
+      "please",
+      "to close",
+      "to open",
+      "window"
     ],
     "text": {
       "en": [
@@ -5757,10 +5758,10 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "!"
+        " !"
       ],
       "es": [
         "¡",
@@ -5884,13 +5885,14 @@
   {
     "id": "a1_028",
     "uses": [
-      "this",
-      "book",
-      "to be",
-      "new",
       "and",
+      "book",
+      "but",
+      "new",
+      "old",
       "that",
-      "old"
+      "this",
+      "to be"
     ],
     "text": {
       "en": [
@@ -5979,7 +5981,7 @@
           "c": "this"
         },
         {
-          "t": "livre",
+          "t": "livre-ci",
           "c": "book"
         },
         {
@@ -5997,10 +5999,10 @@
         },
         {
           "t": "ce",
-          "c": "this"
+          "c": "that"
         },
         {
-          "t": "livre",
+          "t": "livre-là",
           "c": "book"
         },
         {
@@ -6139,8 +6141,8 @@
         },
         ",",
         {
-          "t": "и",
-          "c": "and"
+          "t": "а",
+          "c": "but"
         },
         {
           "t": "та",
@@ -6157,12 +6159,12 @@
   {
     "id": "a1_029",
     "uses": [
-      "i",
-      "can",
-      "to see",
-      "small",
       "beautiful",
-      "house"
+      "can",
+      "house",
+      "i",
+      "small",
+      "to see"
     ],
     "text": {
       "en": [
@@ -6238,13 +6240,12 @@
         },
         "une",
         {
-          "t": "petite",
-          "c": "small"
-        },
-        ",",
-        {
           "t": "belle",
           "c": "beautiful"
+        },
+        {
+          "t": "petite",
+          "c": "small"
         },
         {
           "t": "maison",
@@ -6288,10 +6289,6 @@
         },
         "una",
         {
-          "t": "casa",
-          "c": "house"
-        },
-        {
           "t": "piccola",
           "c": "small"
         },
@@ -6300,17 +6297,21 @@
           "t": "bella",
           "c": "beautiful"
         },
+        {
+          "t": "casa",
+          "c": "house"
+        },
         "."
       ],
       "tr": [
         {
-          "t": "Küçük",
-          "c": "small"
+          "t": "Güzel",
+          "c": "beautiful"
         },
         ",",
         {
-          "t": "güzel",
-          "c": "beautiful"
+          "t": "küçük",
+          "c": "small"
         },
         "bir",
         {
@@ -6318,7 +6319,7 @@
           "c": "house"
         },
         {
-          "t": "görebiliyorum",
+          "t": "görüyorum",
           "c": "to see"
         },
         "."
@@ -6352,14 +6353,14 @@
   {
     "id": "a1_030",
     "uses": [
-      "family",
-      "to be",
-      "big",
-      "mother",
-      "father",
-      "son",
       "and",
-      "daughter"
+      "big",
+      "daughter",
+      "family",
+      "father",
+      "mother",
+      "son",
+      "to be"
     ],
     "text": {
       "en": [
@@ -6462,7 +6463,7 @@
           "t": "grande",
           "c": "big"
         },
-        ":",
+        " :",
         "une",
         {
           "t": "mère",
@@ -6587,28 +6588,24 @@
           "c": "big"
         },
         ":",
-        "bir",
         {
           "t": "anne",
           "c": "mother"
         },
         ",",
-        "bir",
         {
           "t": "baba",
           "c": "father"
         },
         ",",
-        "bir",
         {
-          "t": "oğul",
+          "t": "oğlan",
           "c": "son"
         },
         {
           "t": "ve",
           "c": "and"
         },
-        "bir",
         {
           "t": "kız",
           "c": "daughter"
@@ -6656,10 +6653,10 @@
     "uses": [
       "all",
       "child",
-      "to be",
       "here",
-      "with",
-      "parents"
+      "parents",
+      "to be",
+      "with"
     ],
     "text": {
       "en": [
@@ -6760,7 +6757,8 @@
         },
         {
           "t": "están",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -6808,16 +6806,17 @@
       ],
       "tr": [
         {
-          "t": "Çocukların",
-          "c": "child"
-        },
-        {
-          "t": "hepsi",
+          "t": "Bütün",
           "c": "all"
         },
         {
-          "t": "ebeveynler",
-          "c": "parents"
+          "t": "çocuklar",
+          "c": "child"
+        },
+        {
+          "t": "anne babaları",
+          "c": "parents",
+          "g": "anne baba"
         },
         {
           "t": "ile",
@@ -6857,12 +6856,12 @@
   {
     "id": "a1_032",
     "uses": [
-      "mother",
-      "to be",
-      "here",
       "but",
       "father",
-      "not"
+      "here",
+      "mother",
+      "not",
+      "to be"
     ],
     "text": {
       "en": [
@@ -6980,7 +6979,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -7002,7 +7002,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -7108,12 +7109,11 @@
   {
     "id": "a1_033",
     "uses": [
-      "i",
-      "to have",
-      "brother",
       "and",
+      "brother",
+      "i",
       "sister",
-      "to be"
+      "to have"
     ],
     "text": {
       "en": [
@@ -7262,7 +7262,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "брат",
@@ -7283,11 +7284,11 @@
   {
     "id": "a1_034",
     "uses": [
-      "man",
       "and",
-      "woman",
+      "friend",
+      "man",
       "to be",
-      "friend"
+      "woman"
     ],
     "text": {
       "en": [
@@ -7521,30 +7522,30 @@
           "c": "i"
         },
         {
-          "t": "kenne",
+          "t": "weiß",
           "c": "to know"
         },
-        "den",
+        ",",
         {
-          "t": "Mann",
-          "c": "man"
+          "t": "wo",
+          "c": "where"
+        },
+        {
+          "t": "du",
+          "c": "you"
+        },
+        {
+          "t": "wohnst",
+          "c": "to live"
         },
         ".",
         {
-          "t": "Er",
-          "c": "he"
+          "t": "Der",
+          "c": "that"
         },
         {
-          "t": "wohnt",
-          "c": "to live"
-        },
-        {
-          "t": "hier",
-          "c": "here"
-        },
-        {
-          "t": "und",
-          "c": "and"
+          "t": "Mann",
+          "c": "man"
         },
         {
           "t": "ist",
@@ -7570,33 +7571,25 @@
           "c": "to know"
         },
         {
-          "t": "que",
+          "t": "où",
+          "c": "where"
+        },
+        {
+          "t": "tu",
+          "c": "you"
+        },
+        {
+          "t": "habites",
+          "c": "to live"
+        },
+        ".",
+        {
+          "t": "Cet",
           "c": "that"
         },
-        "l'",
         {
           "t": "homme",
           "c": "man"
-        },
-        {
-          "t": "vit",
-          "c": "to live"
-        },
-        {
-          "t": "ici",
-          "c": "here"
-        },
-        {
-          "t": "et",
-          "c": "and"
-        },
-        {
-          "t": "qu'",
-          "c": "that"
-        },
-        {
-          "t": "il",
-          "c": "he"
         },
         {
           "t": "est",
@@ -7614,35 +7607,25 @@
       ],
       "es": [
         {
-          "t": "Conozco",
+          "t": "Sé",
           "c": "to know"
         },
-        "a",
         {
-          "t": "ese",
+          "t": "dónde",
+          "c": "where"
+        },
+        {
+          "t": "vives",
+          "c": "to live"
+        },
+        ".",
+        {
+          "t": "Ese",
           "c": "that"
         },
         {
           "t": "hombre",
           "c": "man"
-        },
-        ".",
-        {
-          "t": "Vive",
-          "c": "to live"
-        },
-        {
-          "t": "aquí",
-          "c": "here"
-        },
-        ",",
-        {
-          "t": "y",
-          "c": "and"
-        },
-        {
-          "t": "él",
-          "c": "he"
         },
         {
           "t": "es",
@@ -7660,30 +7643,25 @@
       ],
       "it": [
         {
-          "t": "Conosco",
+          "t": "So",
           "c": "to know"
         },
         {
-          "t": "quell'",
+          "t": "dove",
+          "c": "where"
+        },
+        {
+          "t": "vivi",
+          "c": "to live"
+        },
+        ".",
+        {
+          "t": "Quell'",
           "c": "that"
         },
         {
           "t": "uomo",
           "c": "man"
-        },
-        ".",
-        {
-          "t": "Vive",
-          "c": "to live"
-        },
-        {
-          "t": "qui",
-          "c": "here"
-        },
-        ",",
-        {
-          "t": "ed",
-          "c": "and"
         },
         {
           "t": "è",
@@ -7701,33 +7679,25 @@
       ],
       "tr": [
         {
-          "t": "Şu",
-          "c": "that"
+          "t": "Nerede",
+          "c": "where"
         },
         {
-          "t": "adamı",
-          "c": "man"
+          "t": "yaşadığını",
+          "c": "to live"
         },
         {
-          "t": "tanıyorum",
+          "t": "biliyorum",
           "c": "to know"
         },
         ".",
         {
-          "t": "O",
-          "c": "he"
+          "t": "Şu",
+          "c": "that"
         },
         {
-          "t": "burada",
-          "c": "here"
-        },
-        {
-          "t": "yaşıyor",
-          "c": "to live"
-        },
-        {
-          "t": "ve",
-          "c": "and"
+          "t": "adam",
+          "c": "man"
         },
         {
           "t": "benim",
@@ -7748,36 +7718,29 @@
           "t": "знаю",
           "c": "to know"
         },
+        ",",
         {
-          "t": "того",
-          "c": "that"
+          "t": "где",
+          "c": "where"
         },
         {
-          "t": "мужчину",
-          "c": "man"
+          "t": "ты",
+          "c": "you"
+        },
+        {
+          "t": "живёшь",
+          "c": "to live"
         },
         ".",
         {
-          "t": "Он",
-          "c": "he"
+          "t": "Тот",
+          "c": "that"
         },
         {
-          "t": "живёт",
-          "c": "to live"
+          "t": "мужчина",
+          "c": "man"
         },
-        {
-          "t": "здесь",
-          "c": "here"
-        },
-        ",",
-        {
-          "t": "и",
-          "c": "and"
-        },
-        {
-          "t": "он",
-          "c": "he"
-        },
+        "—",
         {
           "t": "мой",
           "c": "my"
@@ -7794,10 +7757,12 @@
     "id": "a1_070",
     "uses": [
       "hello",
-      "what",
+      "how",
+      "it",
+      "name",
       "to be",
-      "your",
-      "name"
+      "what",
+      "your"
     ],
     "text": {
       "en": [
@@ -7853,14 +7818,11 @@
           "t": "Bonjour",
           "c": "hello"
         },
-        "!",
+        " !",
         {
-          "t": "Ton",
-          "c": "your"
-        },
-        {
-          "t": "nom",
-          "c": "name"
+          "t": "C'",
+          "c": "it",
+          "g": "ce"
         },
         {
           "t": "est",
@@ -7870,7 +7832,16 @@
           "t": "quoi",
           "c": "what"
         },
-        "?"
+        ",",
+        {
+          "t": "ton",
+          "c": "your"
+        },
+        {
+          "t": "nom",
+          "c": "name"
+        },
+        " ?"
       ],
       "es": [
         "¡",
@@ -7881,8 +7852,9 @@
         "!",
         "¿",
         {
-          "t": "Qué",
-          "c": "what"
+          "t": "Cuál",
+          "c": "what",
+          "g": "cuál"
         },
         {
           "t": "es",
@@ -7950,8 +7922,8 @@
         },
         "!",
         {
-          "t": "Что",
-          "c": "what"
+          "t": "Как",
+          "c": "how"
         },
         {
           "t": "твоё",
@@ -8045,7 +8017,28 @@
           "c": "please"
         },
         "!",
-        "Die",
+        {
+          "t": "Diese",
+          "c": "this"
+        },
+        {
+          "t": "Straße",
+          "c": "street"
+        },
+        {
+          "t": "ist",
+          "c": "to be"
+        },
+        {
+          "t": "groß",
+          "c": "big"
+        },
+        ",",
+        {
+          "t": "und",
+          "c": "and"
+        },
+        "die",
         {
           "t": "Schule",
           "c": "school"
@@ -8055,16 +8048,8 @@
           "c": "to be"
         },
         {
-          "t": "in",
-          "c": "in"
-        },
-        {
-          "t": "dieser",
-          "c": "this"
-        },
-        {
-          "t": "Straße",
-          "c": "street"
+          "t": "hier",
+          "c": "here"
         },
         "."
       ],
@@ -8079,11 +8064,32 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "!",
-        "L'",
+        " !",
+        {
+          "t": "Cette",
+          "c": "this"
+        },
+        {
+          "t": "rue",
+          "c": "street"
+        },
+        {
+          "t": "est",
+          "c": "to be"
+        },
+        {
+          "t": "grande",
+          "c": "big"
+        },
+        ",",
+        {
+          "t": "et",
+          "c": "and"
+        },
+        "l'",
         {
           "t": "école",
           "c": "school"
@@ -8093,16 +8099,8 @@
           "c": "to be"
         },
         {
-          "t": "dans",
-          "c": "in"
-        },
-        {
-          "t": "cette",
-          "c": "this"
-        },
-        {
-          "t": "rue",
-          "c": "street"
+          "t": "ici",
+          "c": "here"
         },
         "."
       ],
@@ -8122,26 +8120,40 @@
           "c": "please"
         },
         "!",
-        "La",
+        {
+          "t": "Esta",
+          "c": "this"
+        },
+        {
+          "t": "calle",
+          "c": "street"
+        },
+        {
+          "t": "es",
+          "c": "to be"
+        },
+        {
+          "t": "grande",
+          "c": "big"
+        },
+        ",",
+        {
+          "t": "y",
+          "c": "and"
+        },
+        "la",
         {
           "t": "escuela",
           "c": "school"
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
-          "t": "en",
-          "c": "in"
-        },
-        {
-          "t": "esta",
-          "c": "this"
-        },
-        {
-          "t": "calle",
-          "c": "street"
+          "t": "aquí",
+          "c": "here"
         },
         "."
       ],
@@ -8160,7 +8172,28 @@
           "c": "please"
         },
         "!",
-        "La",
+        {
+          "t": "Questa",
+          "c": "this"
+        },
+        {
+          "t": "strada",
+          "c": "street"
+        },
+        {
+          "t": "è",
+          "c": "to be"
+        },
+        {
+          "t": "grande",
+          "c": "big"
+        },
+        ",",
+        {
+          "t": "e",
+          "c": "and"
+        },
+        "la",
         {
           "t": "scuola",
           "c": "school"
@@ -8170,16 +8203,8 @@
           "c": "to be"
         },
         {
-          "t": "in",
-          "c": "in"
-        },
-        {
-          "t": "questa",
-          "c": "this"
-        },
-        {
-          "t": "strada",
-          "c": "street"
+          "t": "qui",
+          "c": "here"
         },
         "."
       ],
@@ -8199,22 +8224,34 @@
         },
         "!",
         {
-          "t": "Okul",
-          "c": "school"
-        },
-        {
-          "t": "bu",
+          "t": "Bu",
           "c": "this"
         },
         {
-          "t": "sokakta",
+          "t": "sokak",
           "c": "street"
+        },
+        {
+          "t": "büyük",
+          "c": "big"
+        },
+        {
+          "t": "ve",
+          "c": "and"
+        },
+        {
+          "t": "okul",
+          "c": "school"
+        },
+        {
+          "t": "burada",
+          "c": "here"
         },
         "."
       ],
       "ru": [
         {
-          "t": "Иди",
+          "t": "Приходи",
           "c": "to come"
         },
         {
@@ -8228,17 +8265,29 @@
         },
         "!",
         {
-          "t": "Школа",
-          "c": "school"
-        },
-        "на",
-        {
-          "t": "этой",
+          "t": "Эта",
           "c": "this"
         },
         {
-          "t": "улице",
+          "t": "улица",
           "c": "street"
+        },
+        {
+          "t": "большая",
+          "c": "big"
+        },
+        ",",
+        {
+          "t": "и",
+          "c": "and"
+        },
+        {
+          "t": "школа",
+          "c": "school"
+        },
+        {
+          "t": "здесь",
+          "c": "here"
         },
         "."
       ]
@@ -8331,21 +8380,20 @@
           "c": "i"
         },
         {
-          "t": "arbeite",
-          "c": "to work"
+          "t": "komme",
+          "c": "to come"
         },
         {
-          "t": "in",
-          "c": "in"
-        },
-        "einem",
-        {
-          "t": "großen",
-          "c": "big"
+          "t": "zu",
+          "c": "to"
         },
         {
-          "t": "Geschäft",
-          "c": "shop"
+          "t": "deinem",
+          "c": "your"
+        },
+        {
+          "t": "Haus",
+          "c": "house"
         },
         "."
       ],
@@ -8377,21 +8425,20 @@
           "c": "i"
         },
         {
-          "t": "travaille",
-          "c": "to work"
+          "t": "viens",
+          "c": "to come"
         },
         {
-          "t": "dans",
-          "c": "in"
-        },
-        "un",
-        {
-          "t": "grand",
-          "c": "big"
+          "t": "à",
+          "c": "to"
         },
         {
-          "t": "magasin",
-          "c": "shop"
+          "t": "ta",
+          "c": "your"
+        },
+        {
+          "t": "maison",
+          "c": "house"
         },
         "."
       ],
@@ -8415,21 +8462,20 @@
           "c": "and"
         },
         {
-          "t": "trabajo",
-          "c": "to work"
+          "t": "vengo",
+          "c": "to come"
         },
         {
-          "t": "en",
-          "c": "in"
-        },
-        "una",
-        {
-          "t": "tienda",
-          "c": "shop"
+          "t": "a",
+          "c": "to"
         },
         {
-          "t": "grande",
-          "c": "big"
+          "t": "tu",
+          "c": "your"
+        },
+        {
+          "t": "casa",
+          "c": "house"
         },
         "."
       ],
@@ -8452,21 +8498,20 @@
           "c": "and"
         },
         {
-          "t": "lavoro",
-          "c": "to work"
+          "t": "vengo",
+          "c": "to come"
         },
         {
-          "t": "in",
-          "c": "in"
-        },
-        "un",
-        {
-          "t": "grande",
-          "c": "big"
+          "t": "a",
+          "c": "to"
         },
         {
-          "t": "negozio",
-          "c": "shop"
+          "t": "casa",
+          "c": "house"
+        },
+        {
+          "t": "tua",
+          "c": "your"
         },
         "."
       ],
@@ -8484,17 +8529,16 @@
           "c": "and"
         },
         {
-          "t": "büyük",
-          "c": "big"
-        },
-        "bir",
-        {
-          "t": "mağazada",
-          "c": "shop"
+          "t": "senin",
+          "c": "your"
         },
         {
-          "t": "çalışıyorum",
-          "c": "to work"
+          "t": "evine",
+          "c": "house"
+        },
+        {
+          "t": "geliyorum",
+          "c": "to come"
         },
         "."
       ],
@@ -8525,20 +8569,20 @@
           "c": "i"
         },
         {
-          "t": "работаю",
-          "c": "to work"
+          "t": "прихожу",
+          "c": "to come"
         },
         {
           "t": "в",
-          "c": "in"
+          "c": "to"
         },
         {
-          "t": "большом",
-          "c": "big"
+          "t": "твой",
+          "c": "your"
         },
         {
-          "t": "магазине",
-          "c": "shop"
+          "t": "дом",
+          "c": "house"
         },
         "."
       ]
@@ -8645,8 +8689,8 @@
         },
         "zur",
         {
-          "t": "Arbeit",
-          "c": "work"
+          "t": "Schule",
+          "c": "school"
         },
         {
           "t": "gehen",
@@ -8689,10 +8733,14 @@
           "t": "aller",
           "c": "to go"
         },
-        "au",
         {
-          "t": "travail",
-          "c": "work"
+          "t": "à",
+          "c": "to"
+        },
+        "l'",
+        {
+          "t": "école",
+          "c": "school"
         },
         {
           "t": "rapidement",
@@ -8727,14 +8775,18 @@
           "t": "ir",
           "c": "to go"
         },
-        "al",
-        {
-          "t": "trabajo",
-          "c": "work"
-        },
         {
           "t": "rápido",
           "c": "fast"
+        },
+        {
+          "t": "a",
+          "c": "to"
+        },
+        "la",
+        {
+          "t": "escuela",
+          "c": "school"
         },
         "."
       ],
@@ -8765,10 +8817,13 @@
           "t": "andare",
           "c": "to go"
         },
-        "al",
         {
-          "t": "lavoro",
-          "c": "work"
+          "t": "a",
+          "c": "to"
+        },
+        {
+          "t": "scuola",
+          "c": "school"
         },
         {
           "t": "velocemente",
@@ -8795,8 +8850,8 @@
           "c": "and"
         },
         {
-          "t": "işe",
-          "c": "work"
+          "t": "okula",
+          "c": "school"
         },
         {
           "t": "hızlı",
@@ -8816,7 +8871,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "новая",
@@ -8844,16 +8900,16 @@
           "c": "fast"
         },
         {
-          "t": "пойти",
+          "t": "поехать",
           "c": "to go"
         },
         {
-          "t": "к",
+          "t": "в",
           "c": "to"
         },
         {
-          "t": "работе",
-          "c": "work"
+          "t": "школу",
+          "c": "school"
         },
         "."
       ]
@@ -8906,13 +8962,18 @@
         "?"
       ],
       "de": [
-        {
-          "t": "Guten",
-          "c": "good"
-        },
+        "Der",
         {
           "t": "Morgen",
           "c": "morning"
+        },
+        {
+          "t": "ist",
+          "c": "to be"
+        },
+        {
+          "t": "schön",
+          "c": "beautiful"
         },
         "!",
         {
@@ -8920,11 +8981,15 @@
           "c": "how"
         },
         {
-          "t": "bist",
-          "c": "to be"
+          "t": "geht",
+          "c": "to go"
         },
         {
-          "t": "du",
+          "t": "es",
+          "c": "it"
+        },
+        {
+          "t": "dir",
           "c": "you"
         },
         {
@@ -8934,42 +8999,52 @@
         "?"
       ],
       "fr": [
-        {
-          "t": "Bon",
-          "c": "good"
-        },
+        "Le",
         {
           "t": "matin",
           "c": "morning"
         },
-        "!",
         {
-          "t": "Tu",
+          "t": "est",
+          "c": "to be"
+        },
+        {
+          "t": "beau",
+          "c": "beautiful"
+        },
+        " !",
+        {
+          "t": "Comment",
+          "c": "how"
+        },
+        {
+          "t": "tu",
           "c": "you"
+        },
+        {
+          "t": "vas",
+          "c": "to go"
+        },
+        {
+          "t": "aujourd'hui",
+          "c": "today"
+        },
+        " ?"
+      ],
+      "es": [
+        "¡",
+        "La",
+        {
+          "t": "mañana",
+          "c": "morning"
         },
         {
           "t": "es",
           "c": "to be"
         },
         {
-          "t": "comment",
-          "c": "how"
-        },
-        {
-          "t": "aujourd'hui",
-          "c": "today"
-        },
-        "?"
-      ],
-      "es": [
-        "¡",
-        {
-          "t": "Buenos",
-          "c": "good"
-        },
-        {
-          "t": "días",
-          "c": "day"
+          "t": "hermosa",
+          "c": "beautiful"
         },
         "!",
         "¿",
@@ -8979,7 +9054,8 @@
         },
         {
           "t": "estás",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "hoy",
@@ -8988,9 +9064,18 @@
         "?"
       ],
       "it": [
+        "La",
         {
-          "t": "Buongiorno",
-          "c": "good"
+          "t": "mattina",
+          "c": "morning"
+        },
+        {
+          "t": "è",
+          "c": "to be"
+        },
+        {
+          "t": "bella",
+          "c": "beautiful"
         },
         "!",
         {
@@ -8999,7 +9084,8 @@
         },
         {
           "t": "stai",
-          "c": "to be"
+          "c": "to be",
+          "g": "stare"
         },
         {
           "t": "oggi",
@@ -9009,12 +9095,12 @@
       ],
       "tr": [
         {
-          "t": "İyi",
-          "c": "good"
+          "t": "Sabah",
+          "c": "morning"
         },
         {
-          "t": "sabahlar",
-          "c": "morning"
+          "t": "güzel",
+          "c": "beautiful"
         },
         "!",
         {
@@ -9029,12 +9115,12 @@
       ],
       "ru": [
         {
-          "t": "Хорошее",
-          "c": "good"
+          "t": "Утро",
+          "c": "morning"
         },
         {
-          "t": "утро",
-          "c": "morning"
+          "t": "красивое",
+          "c": "beautiful"
         },
         "!",
         {
@@ -9056,14 +9142,14 @@
   {
     "id": "a1_040",
     "uses": [
-      "today",
-      "i",
-      "to work",
       "all",
-      "day",
       "and",
+      "day",
+      "i",
+      "night",
       "to sleep",
-      "night"
+      "to work",
+      "today"
     ],
     "text": {
       "en": [
@@ -9125,6 +9211,11 @@
         },
         "den",
         {
+          "t": "ganzen",
+          "c": "all",
+          "g": "ganz"
+        },
+        {
           "t": "Tag",
           "c": "day"
         },
@@ -9142,6 +9233,11 @@
           "c": "to sleep"
         },
         "die",
+        {
+          "t": "ganze",
+          "c": "all",
+          "g": "ganz"
+        },
         {
           "t": "Nacht",
           "c": "night"
@@ -9162,12 +9258,12 @@
           "c": "to work"
         },
         {
-          "t": "tout",
+          "t": "toute",
           "c": "all"
         },
-        "le",
+        "la",
         {
-          "t": "jour",
+          "t": "journée",
           "c": "day"
         },
         ",",
@@ -9354,14 +9450,14 @@
   {
     "id": "a1_041",
     "uses": [
-      "yesterday",
-      "evening",
-      "to be",
-      "cold",
       "but",
-      "tomorrow",
+      "cold",
+      "day",
+      "evening",
       "new",
-      "day"
+      "to be",
+      "tomorrow",
+      "yesterday"
     ],
     "text": {
       "en": [
@@ -9503,7 +9599,8 @@
         },
         {
           "t": "estaba",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "fría",
@@ -9538,7 +9635,6 @@
           "t": "Ieri",
           "c": "yesterday"
         },
-        "la",
         {
           "t": "sera",
           "c": "evening"
@@ -9648,10 +9744,11 @@
   {
     "id": "a1_042",
     "uses": [
-      "today",
-      "to be",
-      "monday",
       "and",
+      "it",
+      "monday",
+      "to be",
+      "today",
       "tomorrow",
       "tuesday"
     ],
@@ -9725,6 +9822,12 @@
           "t": "Aujourd'hui",
           "c": "today"
         },
+        ",",
+        {
+          "t": "c'",
+          "c": "it",
+          "g": "ce"
+        },
         {
           "t": "est",
           "c": "to be"
@@ -9741,6 +9844,12 @@
         {
           "t": "demain",
           "c": "tomorrow"
+        },
+        ",",
+        {
+          "t": "c'",
+          "c": "it",
+          "g": "ce"
         },
         {
           "t": "est",
@@ -9868,12 +9977,13 @@
   {
     "id": "a1_043",
     "uses": [
+      "friday",
+      "it",
+      "or",
+      "thursday",
       "to be",
       "today",
-      "wednesday",
-      "thursday",
-      "or",
-      "friday"
+      "wednesday"
     ],
     "text": {
       "en": [
@@ -9937,6 +10047,12 @@
           "t": "Aujourd'hui",
           "c": "today"
         },
+        ",",
+        {
+          "t": "c'",
+          "c": "it",
+          "g": "ce"
+        },
         {
           "t": "est",
           "c": "to be"
@@ -9958,17 +10074,17 @@
           "t": "vendredi",
           "c": "friday"
         },
-        "?"
+        " ?"
       ],
       "es": [
         "¿",
         {
-          "t": "Es",
-          "c": "to be"
+          "t": "Hoy",
+          "c": "today"
         },
         {
-          "t": "hoy",
-          "c": "today"
+          "t": "es",
+          "c": "to be"
         },
         {
           "t": "miércoles",
@@ -10026,15 +10142,14 @@
           "t": "çarşamba",
           "c": "wednesday"
         },
+        "mı",
         ",",
         {
           "t": "perşembe",
           "c": "thursday"
         },
-        {
-          "t": "veya",
-          "c": "or"
-        },
+        "mi",
+        ",",
         {
           "t": "cuma",
           "c": "friday"
@@ -10071,15 +10186,15 @@
   {
     "id": "a1_044",
     "uses": [
-      "saturday",
+      "all",
       "and",
-      "sunday",
-      "to be",
+      "day",
       "good",
       "i",
-      "to sleep",
-      "all",
-      "day"
+      "saturday",
+      "sunday",
+      "to be",
+      "to sleep"
     ],
     "text": {
       "en": [
@@ -10154,6 +10269,11 @@
         },
         "den",
         {
+          "t": "ganzen",
+          "c": "all",
+          "g": "ganz"
+        },
+        {
           "t": "Tag",
           "c": "day"
         },
@@ -10180,7 +10300,7 @@
           "t": "bons",
           "c": "good"
         },
-        ":",
+        " :",
         {
           "t": "je",
           "c": "i"
@@ -10190,12 +10310,12 @@
           "c": "to sleep"
         },
         {
-          "t": "tout",
+          "t": "toute",
           "c": "all"
         },
-        "le",
+        "la",
         {
-          "t": "jour",
+          "t": "journée",
           "c": "day"
         },
         "."
@@ -10349,14 +10469,13 @@
   {
     "id": "a1_045",
     "uses": [
-      "i",
-      "to have",
-      "two",
-      "brother",
       "and",
+      "brother",
+      "i",
       "one",
       "sister",
-      "to be"
+      "to have",
+      "two"
     ],
     "text": {
       "en": [
@@ -10442,7 +10561,10 @@
           "t": "et",
           "c": "and"
         },
-        "une",
+        {
+          "t": "une",
+          "c": "one"
+        },
         {
           "t": "sœur",
           "c": "sister"
@@ -10538,7 +10660,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "два",
@@ -10567,16 +10690,15 @@
   {
     "id": "a1_046",
     "uses": [
-      "when",
       "can",
-      "you",
-      "to come",
-      "i",
-      "to have",
-      "three",
       "hour",
+      "i",
+      "three",
+      "to come",
+      "to have",
       "today",
-      "to be"
+      "when",
+      "you"
     ],
     "text": {
       "en": [
@@ -10676,7 +10798,7 @@
           "t": "quand",
           "c": "when"
         },
-        "?",
+        " ?",
         {
           "t": "J'",
           "c": "i"
@@ -10817,7 +10939,8 @@
         },
         {
           "t": "есть",
-          "c": "to be"
+          "c": "to have",
+          "g": "быть"
         },
         {
           "t": "три",
@@ -10838,16 +10961,16 @@
   {
     "id": "a1_047",
     "uses": [
-      "house",
-      "to have",
-      "four",
-      "room",
-      "five",
-      "window",
       "and",
-      "six",
       "door",
-      "in"
+      "five",
+      "four",
+      "house",
+      "in",
+      "room",
+      "six",
+      "to have",
+      "window"
     ],
     "text": {
       "en": [
@@ -11140,15 +11263,15 @@
   {
     "id": "a1_048",
     "uses": [
-      "week",
-      "to have",
-      "seven",
-      "day",
       "and",
-      "i",
-      "to work",
+      "day",
       "five",
-      "in"
+      "i",
+      "in",
+      "seven",
+      "to have",
+      "to work",
+      "week"
     ],
     "text": {
       "en": [
@@ -11433,16 +11556,16 @@
   {
     "id": "a1_049",
     "uses": [
-      "i",
-      "to want",
-      "ten",
-      "apple",
-      "nine",
-      "egg",
       "and",
+      "apple",
+      "egg",
       "eight",
       "fish",
-      "please"
+      "i",
+      "nine",
+      "please",
+      "ten",
+      "to want"
     ],
     "text": {
       "en": [
@@ -11500,6 +11623,10 @@
           "c": "to want"
         },
         {
+          "t": "bitte",
+          "c": "please"
+        },
+        {
           "t": "zehn",
           "c": "ten"
         },
@@ -11527,11 +11654,6 @@
         {
           "t": "Fische",
           "c": "fish"
-        },
-        ",",
-        {
-          "t": "bitte",
-          "c": "please"
         },
         "."
       ],
@@ -11575,7 +11697,7 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
         "."
@@ -11753,17 +11875,17 @@
   {
     "id": "a1_050",
     "uses": [
-      "child",
-      "to be",
-      "ten",
-      "year",
-      "old",
-      "and",
-      "he",
       "always",
-      "to want",
+      "and",
+      "child",
+      "he",
+      "old",
+      "ten",
+      "to be",
+      "to have",
       "to learn",
-      "to have"
+      "to want",
+      "year"
     ],
     "text": {
       "en": [
@@ -11946,7 +12068,7 @@
         },
         {
           "t": "ha",
-          "c": "to be"
+          "c": "to have"
         },
         {
           "t": "dieci",
@@ -11986,15 +12108,12 @@
         },
         {
           "t": "yaşında",
-          "c": "year"
+          "c": "year",
+          "g": "yaş"
         },
         {
           "t": "ve",
           "c": "and"
-        },
-        {
-          "t": "o",
-          "c": "he"
         },
         {
           "t": "her zaman",
@@ -12051,15 +12170,15 @@
   {
     "id": "a1_051",
     "uses": [
-      "january",
       "and",
-      "february",
-      "to be",
-      "cold",
-      "month",
       "but",
+      "cold",
+      "february",
+      "hot",
+      "january",
       "june",
-      "hot"
+      "month",
+      "to be"
     ],
     "text": {
       "en": [
@@ -12234,7 +12353,7 @@
           "c": "to be"
         },
         {
-          "t": "caliente",
+          "t": "caluroso",
           "c": "hot"
         },
         "."
@@ -12360,14 +12479,14 @@
   {
     "id": "a1_052",
     "uses": [
-      "march",
       "and",
       "april",
-      "to be",
-      "cold",
+      "beautiful",
       "but",
+      "cold",
+      "march",
       "may",
-      "beautiful"
+      "to be"
     ],
     "text": {
       "en": [
@@ -12644,6 +12763,7 @@
       "here",
       "hot",
       "never",
+      "not",
       "sun",
       "to be",
       "water"
@@ -12696,13 +12816,18 @@
         "."
       ],
       "de": [
+        "Das",
         {
-          "t": "Ich",
-          "c": "i"
+          "t": "Wasser",
+          "c": "water"
         },
         {
-          "t": "bin",
+          "t": "ist",
           "c": "to be"
+        },
+        {
+          "t": "hier",
+          "c": "here"
         },
         {
           "t": "nie",
@@ -12723,10 +12848,6 @@
           "c": "sun"
         },
         {
-          "t": "hier",
-          "c": "here"
-        },
-        {
           "t": "immer",
           "c": "always"
         },
@@ -12741,13 +12862,14 @@
         "."
       ],
       "fr": [
+        "L'",
         {
-          "t": "Je",
-          "c": "i"
+          "t": "eau",
+          "c": "water"
         },
-        "ne",
+        "n'",
         {
-          "t": "suis",
+          "t": "est",
           "c": "to be"
         },
         {
@@ -12755,8 +12877,12 @@
           "c": "never"
         },
         {
-          "t": "froid",
+          "t": "froide",
           "c": "cold"
+        },
+        {
+          "t": "ici",
+          "c": "here"
         },
         ",",
         {
@@ -12780,24 +12906,30 @@
           "t": "chaud",
           "c": "hot"
         },
-        {
-          "t": "ici",
-          "c": "here"
-        },
         "."
       ],
       "es": [
+        "El",
         {
-          "t": "Nunca",
+          "t": "agua",
+          "c": "water"
+        },
+        {
+          "t": "nunca",
           "c": "never"
         },
         {
-          "t": "tengo",
-          "c": "to have"
+          "t": "está",
+          "c": "to be",
+          "g": "estar"
         },
         {
-          "t": "frío",
+          "t": "fría",
           "c": "cold"
+        },
+        {
+          "t": "aquí",
+          "c": "here"
         },
         ",",
         {
@@ -12821,10 +12953,6 @@
           "t": "caliente",
           "c": "hot"
         },
-        {
-          "t": "aquí",
-          "c": "here"
-        },
         "."
       ],
       "it": [
@@ -12832,12 +12960,17 @@
           "t": "Mai",
           "c": "never"
         },
+        "l'",
         {
-          "t": "ho",
+          "t": "acqua",
+          "c": "water"
+        },
+        {
+          "t": "è",
           "c": "to be"
         },
         {
-          "t": "freddo",
+          "t": "fredda",
           "c": "cold"
         },
         {
@@ -12870,8 +13003,12 @@
       ],
       "tr": [
         {
-          "t": "Ben",
-          "c": "i"
+          "t": "Burada",
+          "c": "here"
+        },
+        {
+          "t": "su",
+          "c": "water"
         },
         {
           "t": "asla",
@@ -12882,16 +13019,13 @@
           "c": "cold"
         },
         {
-          "t": "olmam",
+          "t": "olmaz",
           "c": "to be"
         },
+        ",",
         {
           "t": "çünkü",
           "c": "because"
-        },
-        {
-          "t": "burada",
-          "c": "here"
         },
         {
           "t": "güneş",
@@ -12909,8 +13043,12 @@
       ],
       "ru": [
         {
-          "t": "Мне",
-          "c": "i"
+          "t": "Вода",
+          "c": "water"
+        },
+        {
+          "t": "здесь",
+          "c": "here"
         },
         {
           "t": "никогда",
@@ -12921,7 +13059,7 @@
           "c": "not"
         },
         {
-          "t": "холодно",
+          "t": "холодная",
           "c": "cold"
         },
         ",",
@@ -12938,12 +13076,8 @@
           "c": "always"
         },
         {
-          "t": "горячее",
+          "t": "горячо",
           "c": "hot"
-        },
-        {
-          "t": "здесь",
-          "c": "here"
         },
         "."
       ]
@@ -12952,15 +13086,15 @@
   {
     "id": "a1_054",
     "uses": [
-      "july",
       "and",
       "august",
-      "to be",
+      "happy",
       "hot",
-      "month",
       "i",
-      "very",
-      "happy"
+      "july",
+      "month",
+      "to be",
+      "very"
     ],
     "text": {
       "en": [
@@ -13130,8 +13264,9 @@
           "c": "month"
         },
         {
-          "t": "calientes",
-          "c": "hot"
+          "t": "calurosos",
+          "c": "hot",
+          "g": "caluroso"
         },
         ",",
         {
@@ -13140,7 +13275,8 @@
         },
         {
           "t": "estoy",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "muy",
@@ -13278,15 +13414,15 @@
   {
     "id": "a1_055",
     "uses": [
-      "september",
-      "october",
       "and",
-      "november",
-      "to be",
-      "cold",
+      "beautiful",
       "but",
+      "cold",
       "december",
-      "beautiful"
+      "november",
+      "october",
+      "september",
+      "to be"
     ],
     "text": {
       "en": [
@@ -13592,13 +13728,13 @@
   {
     "id": "a1_056",
     "uses": [
-      "december",
-      "to be",
-      "happy",
-      "month",
       "all",
+      "december",
       "family",
-      "here"
+      "happy",
+      "here",
+      "month",
+      "to be"
     ],
     "text": {
       "en": [
@@ -13692,7 +13828,7 @@
           "t": "heureux",
           "c": "happy"
         },
-        ":",
+        " :",
         {
           "t": "toute",
           "c": "all"
@@ -13742,7 +13878,8 @@
         },
         {
           "t": "está",
-          "c": "to be"
+          "c": "to be",
+          "g": "estar"
         },
         {
           "t": "aquí",
@@ -13804,12 +13941,12 @@
         },
         ":",
         {
-          "t": "ailenin",
-          "c": "family"
+          "t": "bütün",
+          "c": "all"
         },
         {
-          "t": "hepsi",
-          "c": "all"
+          "t": "aile",
+          "c": "family"
         },
         {
           "t": "burada",
@@ -13851,11 +13988,12 @@
   {
     "id": "a1_057",
     "uses": [
-      "car",
-      "to be",
-      "red",
       "and",
+      "but",
+      "car",
       "house",
+      "red",
+      "to be",
       "white"
     ],
     "text": {
@@ -14063,8 +14201,8 @@
         },
         ",",
         {
-          "t": "и",
-          "c": "and"
+          "t": "а",
+          "c": "but"
         },
         {
           "t": "дом",
@@ -14081,11 +14219,11 @@
   {
     "id": "a1_058",
     "uses": [
-      "to give",
-      "i",
       "black",
+      "i",
       "phone",
-      "please"
+      "please",
+      "to give"
     ],
     "text": {
       "en": [
@@ -14140,12 +14278,8 @@
       ],
       "fr": [
         {
-          "t": "Donne",
+          "t": "Donne-moi",
           "c": "to give"
-        },
-        {
-          "t": "moi",
-          "c": "i"
         },
         "le",
         {
@@ -14158,10 +14292,10 @@
         },
         ",",
         {
-          "t": "s'il vous plaît",
+          "t": "s'il te plaît",
           "c": "please"
         },
-        "!"
+        " !"
       ],
       "es": [
         "¡",
@@ -14259,13 +14393,13 @@
   {
     "id": "a1_059",
     "uses": [
-      "door",
-      "to be",
-      "green",
-      "window",
-      "blue",
       "and",
+      "blue",
       "chair",
+      "door",
+      "green",
+      "to be",
+      "window",
       "yellow"
     ],
     "text": {
@@ -14579,12 +14713,12 @@
   {
     "id": "a1_060",
     "uses": [
-      "i",
-      "to love",
-      "dog",
       "and",
+      "cat",
       "child",
-      "cat"
+      "dog",
+      "i",
+      "to love"
     ],
     "text": {
       "en": [
@@ -14694,8 +14828,9 @@
       ],
       "es": [
         {
-          "t": "Amo",
-          "c": "to love"
+          "t": "Quiero",
+          "c": "to love",
+          "g": "querer"
         },
         "al",
         {
@@ -14713,8 +14848,9 @@
           "c": "child"
         },
         {
-          "t": "ama",
-          "c": "to love"
+          "t": "quiere",
+          "c": "to love",
+          "g": "querer"
         },
         "al",
         {
@@ -14826,12 +14962,13 @@
   {
     "id": "a1_061",
     "uses": [
-      "dog",
-      "to be",
-      "brown",
       "and",
+      "brown",
+      "but",
       "cat",
-      "grey"
+      "dog",
+      "grey",
+      "to be"
     ],
     "text": {
       "en": [
@@ -15038,8 +15175,8 @@
         },
         ",",
         {
-          "t": "и",
-          "c": "and"
+          "t": "а",
+          "c": "but"
         },
         {
           "t": "кошка",
@@ -15056,15 +15193,15 @@
   {
     "id": "a1_062",
     "uses": [
-      "i",
-      "can",
-      "not",
-      "to find",
-      "orange",
       "book",
+      "can",
+      "i",
+      "not",
       "or",
+      "orange",
+      "phone",
       "pink",
-      "phone"
+      "to find"
     ],
     "text": {
       "en": [
@@ -15275,7 +15412,7 @@
           "c": "book"
         },
         {
-          "t": "veya",
+          "t": "ya da",
           "c": "or"
         },
         {
@@ -15336,12 +15473,12 @@
   {
     "id": "a1_063",
     "uses": [
-      "street",
-      "to be",
-      "long",
       "but",
       "day",
-      "short"
+      "long",
+      "short",
+      "street",
+      "to be"
     ],
     "text": {
       "en": [
@@ -15509,7 +15646,7 @@
           "c": "to be"
         },
         {
-          "t": "corto",
+          "t": "breve",
           "c": "short"
         },
         "."
@@ -15566,14 +15703,14 @@
   {
     "id": "a1_064",
     "uses": [
-      "child",
-      "to have",
-      "big",
-      "eye",
-      "small",
-      "hand",
       "and",
-      "foot"
+      "big",
+      "child",
+      "eye",
+      "foot",
+      "hand",
+      "small",
+      "to have"
     ],
     "text": {
       "en": [
@@ -15862,16 +15999,16 @@
   {
     "id": "a1_065",
     "uses": [
-      "i",
-      "can",
-      "not",
-      "to take",
       "all",
       "book",
-      "what",
+      "can",
+      "i",
+      "not",
       "to do",
-      "you",
-      "to help"
+      "to help",
+      "to take",
+      "what",
+      "you"
     ],
     "text": {
       "en": [
@@ -16041,7 +16178,7 @@
           "t": "quoi",
           "c": "what"
         },
-        "?",
+        " ?",
         {
           "t": "Tu",
           "c": "you"
@@ -16058,7 +16195,7 @@
           "t": "aider",
           "c": "to help"
         },
-        "?"
+        " ?"
       ],
       "es": [
         {
@@ -16099,15 +16236,11 @@
         "?",
         "¿",
         {
-          "t": "Me",
-          "c": "i"
-        },
-        {
-          "t": "puedes",
+          "t": "Puedes",
           "c": "can"
         },
         {
-          "t": "ayudar",
+          "t": "ayudarme",
           "c": "to help"
         },
         "?"
@@ -16316,38 +16449,34 @@
           "t": "Kopf",
           "c": "head"
         },
-        {
-          "t": "ist",
-          "c": "to be"
-        },
-        {
-          "t": "heiß",
-          "c": "hot"
-        },
         ",",
+        {
+          "t": "meine",
+          "c": "my"
+        },
+        {
+          "t": "Hände",
+          "c": "hand"
+        },
         {
           "t": "und",
           "c": "and"
         },
         {
-          "t": "ich",
-          "c": "i"
+          "t": "meine",
+          "c": "my"
         },
         {
-          "t": "kann",
-          "c": "can"
+          "t": "Füße",
+          "c": "foot"
         },
         {
-          "t": "heute",
-          "c": "today"
+          "t": "sind",
+          "c": "to be"
         },
         {
-          "t": "nicht",
-          "c": "not"
-        },
-        {
-          "t": "arbeiten",
-          "c": "to work"
+          "t": "kalt",
+          "c": "cold"
         },
         "."
       ],
@@ -16360,39 +16489,34 @@
           "t": "tête",
           "c": "head"
         },
-        {
-          "t": "est",
-          "c": "to be"
-        },
-        {
-          "t": "chaude",
-          "c": "hot"
-        },
         ",",
+        {
+          "t": "mes",
+          "c": "my"
+        },
+        {
+          "t": "mains",
+          "c": "hand"
+        },
         {
           "t": "et",
           "c": "and"
         },
         {
-          "t": "je",
-          "c": "i"
-        },
-        "ne",
-        {
-          "t": "peux",
-          "c": "can"
+          "t": "mes",
+          "c": "my"
         },
         {
-          "t": "pas",
-          "c": "not"
+          "t": "pieds",
+          "c": "foot"
         },
         {
-          "t": "travailler",
-          "c": "to work"
+          "t": "sont",
+          "c": "to be"
         },
         {
-          "t": "aujourd'hui",
-          "c": "today"
+          "t": "froids",
+          "c": "cold"
         },
         "."
       ],
@@ -16405,34 +16529,35 @@
           "t": "cabeza",
           "c": "head"
         },
-        {
-          "t": "está",
-          "c": "to be"
-        },
-        {
-          "t": "caliente",
-          "c": "hot"
-        },
         ",",
+        {
+          "t": "mis",
+          "c": "my"
+        },
+        {
+          "t": "manos",
+          "c": "hand"
+        },
         {
           "t": "y",
           "c": "and"
         },
         {
-          "t": "no",
-          "c": "not"
+          "t": "mis",
+          "c": "my"
         },
         {
-          "t": "puedo",
-          "c": "can"
+          "t": "pies",
+          "c": "foot"
         },
         {
-          "t": "trabajar",
-          "c": "to work"
+          "t": "están",
+          "c": "to be",
+          "g": "estar"
         },
         {
-          "t": "hoy",
-          "c": "today"
+          "t": "fríos",
+          "c": "cold"
         },
         "."
       ],
@@ -16446,61 +16571,60 @@
           "t": "testa",
           "c": "head"
         },
-        {
-          "t": "è",
-          "c": "to be"
-        },
-        {
-          "t": "calda",
-          "c": "hot"
-        },
         ",",
+        "le",
+        {
+          "t": "mie",
+          "c": "my"
+        },
+        {
+          "t": "mani",
+          "c": "hand"
+        },
         {
           "t": "e",
           "c": "and"
         },
+        "i",
         {
-          "t": "non",
-          "c": "not"
+          "t": "miei",
+          "c": "my"
         },
         {
-          "t": "posso",
-          "c": "can"
+          "t": "piedi",
+          "c": "foot"
         },
         {
-          "t": "lavorare",
-          "c": "to work"
+          "t": "sono",
+          "c": "to be"
         },
         {
-          "t": "oggi",
-          "c": "today"
+          "t": "freddi",
+          "c": "cold"
         },
         "."
       ],
       "tr": [
         {
-          "t": "Benim",
-          "c": "my"
-        },
-        {
-          "t": "başım",
+          "t": "Başım",
           "c": "head"
         },
+        ",",
         {
-          "t": "sıcak",
-          "c": "hot"
+          "t": "ellerim",
+          "c": "hand"
         },
         {
           "t": "ve",
           "c": "and"
         },
         {
-          "t": "bugün",
-          "c": "today"
+          "t": "ayaklarım",
+          "c": "foot"
         },
         {
-          "t": "çalışamıyorum",
-          "c": "to work"
+          "t": "soğuk",
+          "c": "cold"
         },
         "."
       ],
@@ -16513,34 +16637,30 @@
           "t": "голова",
           "c": "head"
         },
-        {
-          "t": "горячая",
-          "c": "hot"
-        },
         ",",
+        {
+          "t": "мои",
+          "c": "my"
+        },
+        {
+          "t": "руки",
+          "c": "hand"
+        },
         {
           "t": "и",
           "c": "and"
         },
         {
-          "t": "я",
-          "c": "i"
+          "t": "мои",
+          "c": "my"
         },
         {
-          "t": "не",
-          "c": "not"
+          "t": "ноги",
+          "c": "foot"
         },
         {
-          "t": "могу",
-          "c": "can"
-        },
-        {
-          "t": "работать",
-          "c": "to work"
-        },
-        {
-          "t": "сегодня",
-          "c": "today"
+          "t": "холодные",
+          "c": "cold"
         },
         "."
       ]
@@ -16549,12 +16669,12 @@
   {
     "id": "a1_066",
     "uses": [
-      "work",
-      "to be",
-      "difficult",
       "but",
+      "difficult",
+      "good",
       "money",
-      "good"
+      "to be",
+      "work"
     ],
     "text": {
       "en": [
@@ -16779,14 +16899,14 @@
   {
     "id": "a1_067",
     "uses": [
-      "coffee",
-      "to be",
-      "bad",
       "and",
+      "bad",
+      "cheap",
+      "coffee",
       "expensive",
-      "tea",
       "good",
-      "cheap"
+      "tea",
+      "to be"
     ],
     "text": {
       "en": [
@@ -16876,7 +16996,7 @@
           "c": "and"
         },
         {
-          "t": "billig",
+          "t": "günstig",
           "c": "cheap"
         },
         "."
@@ -17201,25 +17321,7 @@
           "t": "sprechen",
           "c": "to speak"
         },
-        ".",
-        {
-          "t": "Einfaches",
-          "c": "easy"
-        },
-        {
-          "t": "Sagen",
-          "c": "to say"
-        },
-        ",",
-        {
-          "t": "schwieriges",
-          "c": "difficult"
-        },
-        {
-          "t": "Machen",
-          "c": "to do"
-        },
-        "!"
+        "."
       ],
       "fr": [
         {
@@ -17268,33 +17370,7 @@
           "t": "rapidement",
           "c": "fast"
         },
-        ".",
-        {
-          "t": "Facile",
-          "c": "easy"
-        },
-        {
-          "t": "à",
-          "c": "to"
-        },
-        {
-          "t": "dire",
-          "c": "to say"
-        },
-        ",",
-        {
-          "t": "difficile",
-          "c": "difficult"
-        },
-        {
-          "t": "à",
-          "c": "to"
-        },
-        {
-          "t": "faire",
-          "c": "to do"
-        },
-        "!"
+        "."
       ],
       "es": [
         {
@@ -17334,34 +17410,7 @@
           "t": "rápido",
           "c": "fast"
         },
-        ".",
-        "¡",
-        {
-          "t": "Decir",
-          "c": "to say"
-        },
-        {
-          "t": "es",
-          "c": "to be"
-        },
-        {
-          "t": "fácil",
-          "c": "easy"
-        },
-        ",",
-        {
-          "t": "hacer",
-          "c": "to do"
-        },
-        {
-          "t": "es",
-          "c": "to be"
-        },
-        {
-          "t": "difícil",
-          "c": "difficult"
-        },
-        "!"
+        "."
       ],
       "it": [
         {
@@ -17401,25 +17450,7 @@
           "t": "velocemente",
           "c": "fast"
         },
-        ".",
-        {
-          "t": "Facile",
-          "c": "easy"
-        },
-        {
-          "t": "dire",
-          "c": "to say"
-        },
-        ",",
-        {
-          "t": "difficile",
-          "c": "difficult"
-        },
-        {
-          "t": "fare",
-          "c": "to do"
-        },
-        "!"
+        "."
       ],
       "tr": [
         {
@@ -17446,25 +17477,7 @@
           "t": "konuşamıyorum",
           "c": "to speak"
         },
-        ".",
-        {
-          "t": "Söylemesi",
-          "c": "to say"
-        },
-        {
-          "t": "kolay",
-          "c": "easy"
-        },
-        ",",
-        {
-          "t": "yapması",
-          "c": "to do"
-        },
-        {
-          "t": "zor",
-          "c": "difficult"
-        },
-        "!"
+        "."
       ],
       "ru": [
         {
@@ -17508,25 +17521,7 @@
           "t": "быстро",
           "c": "fast"
         },
-        ".",
-        {
-          "t": "Легко",
-          "c": "easy"
-        },
-        {
-          "t": "сказать",
-          "c": "to say"
-        },
-        ",",
-        {
-          "t": "трудно",
-          "c": "difficult"
-        },
-        {
-          "t": "сделать",
-          "c": "to do"
-        },
-        "!"
+        "."
       ]
     }
   },
@@ -17597,6 +17592,237 @@
           "c": "easy"
         },
         "."
+      ],
+      "de": [
+        {
+          "t": "Was",
+          "c": "what"
+        },
+        {
+          "t": "sagst",
+          "c": "to say"
+        },
+        {
+          "t": "du",
+          "c": "you"
+        },
+        "?",
+        {
+          "t": "Ich",
+          "c": "i"
+        },
+        {
+          "t": "weiß",
+          "c": "to know"
+        },
+        {
+          "t": "nicht",
+          "c": "not"
+        },
+        "!",
+        {
+          "t": "Es",
+          "c": "it"
+        },
+        {
+          "t": "ist",
+          "c": "to be"
+        },
+        {
+          "t": "nicht",
+          "c": "not"
+        },
+        {
+          "t": "einfach",
+          "c": "easy"
+        },
+        "."
+      ],
+      "fr": [
+        {
+          "t": "Tu",
+          "c": "you"
+        },
+        {
+          "t": "dis",
+          "c": "to say"
+        },
+        {
+          "t": "quoi",
+          "c": "what"
+        },
+        " ?",
+        {
+          "t": "Je",
+          "c": "i"
+        },
+        "ne",
+        {
+          "t": "sais",
+          "c": "to know"
+        },
+        {
+          "t": "pas",
+          "c": "not"
+        },
+        " !",
+        {
+          "t": "Ce",
+          "c": "it"
+        },
+        "n'",
+        {
+          "t": "est",
+          "c": "to be"
+        },
+        {
+          "t": "pas",
+          "c": "not"
+        },
+        {
+          "t": "facile",
+          "c": "easy"
+        },
+        "."
+      ],
+      "es": [
+        "¿",
+        {
+          "t": "Qué",
+          "c": "what"
+        },
+        {
+          "t": "dices",
+          "c": "to say"
+        },
+        "?",
+        "¡",
+        {
+          "t": "No",
+          "c": "not"
+        },
+        {
+          "t": "sé",
+          "c": "to know"
+        },
+        "!",
+        {
+          "t": "No",
+          "c": "not"
+        },
+        {
+          "t": "es",
+          "c": "to be"
+        },
+        {
+          "t": "fácil",
+          "c": "easy"
+        },
+        "."
+      ],
+      "it": [
+        {
+          "t": "Cosa",
+          "c": "what"
+        },
+        {
+          "t": "dici",
+          "c": "to say"
+        },
+        "?",
+        {
+          "t": "Non",
+          "c": "not"
+        },
+        {
+          "t": "so",
+          "c": "to know"
+        },
+        "!",
+        {
+          "t": "Non",
+          "c": "not"
+        },
+        {
+          "t": "è",
+          "c": "to be"
+        },
+        {
+          "t": "facile",
+          "c": "easy"
+        },
+        "."
+      ],
+      "tr": [
+        {
+          "t": "Ne",
+          "c": "what"
+        },
+        {
+          "t": "diyorsun",
+          "c": "to say",
+          "g": "demek"
+        },
+        "?",
+        {
+          "t": "Bilmiyorum",
+          "c": "to know"
+        },
+        "!",
+        {
+          "t": "O",
+          "c": "it"
+        },
+        {
+          "t": "kolay",
+          "c": "easy"
+        },
+        {
+          "t": "değil",
+          "c": "not"
+        },
+        "."
+      ],
+      "ru": [
+        {
+          "t": "Что",
+          "c": "what"
+        },
+        {
+          "t": "ты",
+          "c": "you"
+        },
+        {
+          "t": "скажешь",
+          "c": "to say"
+        },
+        "?",
+        {
+          "t": "Я",
+          "c": "i"
+        },
+        {
+          "t": "не",
+          "c": "not"
+        },
+        {
+          "t": "знаю",
+          "c": "to know"
+        },
+        "!",
+        {
+          "t": "Это",
+          "c": "it"
+        },
+        {
+          "t": "не",
+          "c": "not"
+        },
+        {
+          "t": "легко",
+          "c": "easy"
+        },
+        "."
       ]
     }
   },
@@ -17651,6 +17877,259 @@
         ",",
         {
           "t": "zero",
+          "c": "zero"
+        },
+        "!"
+      ],
+      "de": [
+        {
+          "t": "Zehn",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "neun",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "acht",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "sieben",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "drei",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "zwei",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "eins",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "null",
+          "c": "zero"
+        },
+        "!"
+      ],
+      "fr": [
+        {
+          "t": "Dix",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "neuf",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "huit",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "sept",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "trois",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "deux",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "un",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "zéro",
+          "c": "zero"
+        },
+        " !"
+      ],
+      "es": [
+        "¡",
+        {
+          "t": "Diez",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "nueve",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "ocho",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "siete",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "tres",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "dos",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "uno",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "cero",
+          "c": "zero"
+        },
+        "!"
+      ],
+      "it": [
+        {
+          "t": "Dieci",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "nove",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "otto",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "sette",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "tre",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "due",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "uno",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "zero",
+          "c": "zero"
+        },
+        "!"
+      ],
+      "tr": [
+        {
+          "t": "On",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "dokuz",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "sekiz",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "yedi",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "üç",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "iki",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "bir",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "sıfır",
+          "c": "zero"
+        },
+        "!"
+      ],
+      "ru": [
+        {
+          "t": "Десять",
+          "c": "ten"
+        },
+        ",",
+        {
+          "t": "девять",
+          "c": "nine"
+        },
+        ",",
+        {
+          "t": "восемь",
+          "c": "eight"
+        },
+        ",",
+        {
+          "t": "семь",
+          "c": "seven"
+        },
+        ",",
+        {
+          "t": "три",
+          "c": "three"
+        },
+        ",",
+        {
+          "t": "два",
+          "c": "two"
+        },
+        ",",
+        {
+          "t": "один",
+          "c": "one"
+        },
+        ",",
+        {
+          "t": "ноль",
           "c": "zero"
         },
         "!"

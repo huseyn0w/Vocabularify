@@ -1,7 +1,7 @@
 {
   "lessons": [
     {
-      "count": 7,
+      "count": 9,
       "sentences": [
         {
           "id": "a1_001",
@@ -16,11 +16,15 @@
               "c": "how"
             },
             {
-              "t": "bist",
-              "c": "to be"
+              "t": "geht",
+              "c": "to go"
             },
             {
-              "t": "du",
+              "t": "es",
+              "c": "it"
+            },
+            {
+              "t": "dir",
               "c": "you"
             },
             "?"
@@ -35,9 +39,17 @@
               "t": "wie",
               "s": "how"
             },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
             "to be": {
               "t": "sein",
               "s": "to be"
+            },
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
             },
             "you": {
               "t": "du",
@@ -49,12 +61,16 @@
           "id": "a1_002",
           "target": [
             {
-              "t": "Ich",
+              "t": "Mir",
               "c": "i"
             },
             {
-              "t": "bin",
-              "c": "to be"
+              "t": "geht",
+              "c": "to go"
+            },
+            {
+              "t": "es",
+              "c": "it"
             },
             {
               "t": "gut",
@@ -69,21 +85,29 @@
           ],
           "source": "I am good, thank you.",
           "gloss": {
+            "good": {
+              "t": "gut",
+              "s": "good"
+            },
             "i": {
               "t": "ich",
               "s": "I"
+            },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "thank you": {
+              "t": "danke",
+              "s": "thank you"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "good": {
-              "t": "gut",
-              "s": "good"
-            },
-            "thank you": {
-              "t": "danke",
-              "s": "thank you"
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
             }
           }
         }
@@ -101,12 +125,16 @@
             },
             ",",
             {
-              "t": "ich",
+              "t": "mir",
               "c": "i"
             },
             {
-              "t": "bin",
-              "c": "to be"
+              "t": "geht",
+              "c": "to go"
+            },
+            {
+              "t": "es",
+              "c": "it"
             },
             {
               "t": "sehr",
@@ -125,29 +153,37 @@
           ],
           "source": "Yes, I am very good, thank you!",
           "gloss": {
-            "yes": {
-              "t": "ja",
-              "s": "yes"
+            "good": {
+              "t": "gut",
+              "s": "good"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "thank you": {
+              "t": "danke",
+              "s": "thank you"
+            },
             "to be": {
               "t": "sein",
               "s": "to be"
+            },
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
             },
             "very": {
               "t": "sehr",
               "s": "very"
             },
-            "good": {
-              "t": "gut",
-              "s": "good"
-            },
-            "thank you": {
-              "t": "danke",
-              "s": "thank you"
+            "yes": {
+              "t": "ja",
+              "s": "yes"
             }
           }
         },
@@ -160,12 +196,16 @@
             },
             ",",
             {
-              "t": "ich",
+              "t": "mir",
               "c": "i"
             },
             {
-              "t": "bin",
-              "c": "to be"
+              "t": "geht",
+              "c": "to go"
+            },
+            {
+              "t": "es",
+              "c": "it"
             },
             {
               "t": "nicht",
@@ -179,25 +219,33 @@
           ],
           "source": "No, I am not good.",
           "gloss": {
-            "no": {
-              "t": "nein",
-              "s": "no"
+            "good": {
+              "t": "gut",
+              "s": "good"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "no": {
+              "t": "nein",
+              "s": "no"
             },
             "not": {
               "t": "nicht",
               "s": "not"
             },
-            "good": {
-              "t": "gut",
-              "s": "good"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
             }
           }
         },
@@ -230,9 +278,13 @@
           ],
           "source": "Yes, please. Thank you and goodbye!",
           "gloss": {
-            "yes": {
-              "t": "ja",
-              "s": "yes"
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "goodbye": {
+              "t": "tschüss",
+              "s": "goodbye"
             },
             "please": {
               "t": "bitte",
@@ -242,20 +294,16 @@
               "t": "danke",
               "s": "thank you"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "goodbye": {
-              "t": "tschüss",
-              "s": "goodbye"
+            "yes": {
+              "t": "ja",
+              "s": "yes"
             }
           }
         }
       ]
     },
     {
-      "count": 6,
+      "count": 7,
       "sentences": [
         {
           "id": "a1_006",
@@ -289,25 +337,25 @@
           ],
           "source": "Where are you? I am here.",
           "gloss": {
-            "where": {
-              "t": "wo",
-              "s": "where"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "you": {
-              "t": "du",
-              "s": "you"
+            "here": {
+              "t": "hier",
+              "s": "here"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
-            "here": {
-              "t": "hier",
-              "s": "here"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "where": {
+              "t": "wo",
+              "s": "where"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -346,21 +394,17 @@
           ],
           "source": "He is here and she is there.",
           "gloss": {
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
             "he": {
               "t": "er",
               "s": "he"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
             "here": {
               "t": "hier",
               "s": "here"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
             },
             "she": {
               "t": "sie",
@@ -369,6 +413,10 @@
             "there": {
               "t": "dort",
               "s": "there"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -408,36 +456,36 @@
           ],
           "source": "We are here, and they are there.",
           "gloss": {
-            "we": {
-              "t": "wir",
-              "s": "we"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "here": {
               "t": "hier",
               "s": "here"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "there": {
+              "t": "dort",
+              "s": "there"
             },
             "they": {
               "t": "sie",
               "s": "they"
             },
-            "there": {
-              "t": "dort",
-              "s": "there"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "we": {
+              "t": "wir",
+              "s": "we"
             }
           }
         }
       ]
     },
     {
-      "count": 8,
+      "count": 7,
       "sentences": [
         {
           "id": "a1_009",
@@ -467,13 +515,13 @@
               "t": "Entschuldigung",
               "s": "sorry"
             },
-            "who": {
-              "t": "wer",
-              "s": "who"
-            },
             "to be": {
               "t": "sein",
               "s": "to be"
+            },
+            "who": {
+              "t": "wer",
+              "s": "who"
             },
             "you": {
               "t": "du",
@@ -513,33 +561,29 @@
           ],
           "source": "Now I have time. And you?",
           "gloss": {
-            "now": {
-              "t": "jetzt",
-              "s": "now"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
+            "now": {
+              "t": "jetzt",
+              "s": "now"
             },
             "time": {
               "t": "die Zeit",
               "s": "time"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "to have": {
+              "t": "haben",
+              "s": "to have"
             },
             "you": {
               "t": "du",
               "s": "you"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
             }
           }
         },
@@ -583,29 +627,29 @@
           ],
           "source": "He is here, and she is also here.",
           "gloss": {
-            "he": {
-              "t": "er",
-              "s": "he"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "here": {
-              "t": "hier",
-              "s": "here"
+            "also": {
+              "t": "auch",
+              "s": "also"
             },
             "and": {
               "t": "und",
               "s": "and"
             },
+            "he": {
+              "t": "er",
+              "s": "he"
+            },
+            "here": {
+              "t": "hier",
+              "s": "here"
+            },
             "she": {
               "t": "sie",
               "s": "she"
             },
-            "also": {
-              "t": "auch",
-              "s": "also"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         }
@@ -642,10 +686,6 @@
               "t": "der Kaffee",
               "s": "coffee"
             },
-            "with": {
-              "t": "mit",
-              "s": "with"
-            },
             "milk": {
               "t": "die Milch",
               "s": "milk"
@@ -653,6 +693,10 @@
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "with": {
+              "t": "mit",
+              "s": "with"
             }
           }
         },
@@ -687,21 +731,21 @@
               "t": "ich",
               "s": "I"
             },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
+            "milk": {
+              "t": "die Milch",
+              "s": "milk"
             },
             "tea": {
               "t": "der Tee",
               "s": "tea"
             },
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
+            },
             "without": {
               "t": "ohne",
               "s": "without"
-            },
-            "milk": {
-              "t": "die Milch",
-              "s": "milk"
             }
           }
         },
@@ -741,18 +785,6 @@
           ],
           "source": "You drink tea, and I drink water.",
           "gloss": {
-            "you": {
-              "t": "du",
-              "s": "you"
-            },
-            "to drink": {
-              "t": "trinken",
-              "s": "to drink"
-            },
-            "tea": {
-              "t": "der Tee",
-              "s": "tea"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -761,16 +793,28 @@
               "t": "ich",
               "s": "I"
             },
+            "tea": {
+              "t": "der Tee",
+              "s": "tea"
+            },
+            "to drink": {
+              "t": "trinken",
+              "s": "to drink"
+            },
             "water": {
               "t": "das Wasser",
               "s": "water"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         }
       ]
     },
     {
-      "count": 7,
+      "count": 6,
       "sentences": [
         {
           "id": "a1_015",
@@ -800,18 +844,6 @@
           ],
           "source": "I eat bread and an apple.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to eat": {
-              "t": "essen",
-              "s": "to eat"
-            },
-            "bread": {
-              "t": "das Brot",
-              "s": "bread"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -819,6 +851,18 @@
             "apple": {
               "t": "der Apfel",
               "s": "apple"
+            },
+            "bread": {
+              "t": "das Brot",
+              "s": "bread"
+            },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "to eat": {
+              "t": "essen",
+              "s": "to eat"
             }
           }
         },
@@ -852,6 +896,10 @@
               "c": "to want"
             },
             {
+              "t": "bitte",
+              "c": "please"
+            },
+            {
               "t": "mehr",
               "c": "more"
             },
@@ -859,50 +907,45 @@
               "t": "Brot",
               "c": "bread"
             },
-            ",",
-            {
-              "t": "bitte",
-              "c": "please"
-            },
             "."
           ],
           "source": "Breakfast is good, but I want more bread, please.",
           "gloss": {
+            "bread": {
+              "t": "das Brot",
+              "s": "bread"
+            },
             "breakfast": {
               "t": "das Frühstück",
               "s": "breakfast"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "good": {
-              "t": "gut",
-              "s": "good"
             },
             "but": {
               "t": "aber",
               "s": "but"
             },
+            "good": {
+              "t": "gut",
+              "s": "good"
+            },
             "i": {
               "t": "ich",
               "s": "I"
-            },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
             },
             "more": {
               "t": "mehr",
               "s": "more"
             },
-            "bread": {
-              "t": "das Brot",
-              "s": "bread"
-            },
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
             }
           }
         },
@@ -934,25 +977,25 @@
           ],
           "source": "He eats an egg with salt.",
           "gloss": {
+            "egg": {
+              "t": "das Ei",
+              "s": "egg"
+            },
             "he": {
               "t": "er",
               "s": "he"
+            },
+            "salt": {
+              "t": "das Salz",
+              "s": "salt"
             },
             "to eat": {
               "t": "essen",
               "s": "to eat"
             },
-            "egg": {
-              "t": "das Ei",
-              "s": "egg"
-            },
             "with": {
               "t": "mit",
               "s": "with"
-            },
-            "salt": {
-              "t": "das Salz",
-              "s": "salt"
             }
           }
         }
@@ -977,13 +1020,12 @@
               "c": "i"
             },
             {
-              "t": "helfen",
-              "c": "to help"
-            },
-            ",",
-            {
               "t": "bitte",
               "c": "please"
+            },
+            {
+              "t": "helfen",
+              "c": "to help"
             },
             "?"
           ],
@@ -993,14 +1035,6 @@
               "t": "können",
               "s": "can"
             },
-            "you": {
-              "t": "du",
-              "s": "you"
-            },
-            "to help": {
-              "t": "helfen",
-              "s": "to help"
-            },
             "i": {
               "t": "ich",
               "s": "I"
@@ -1008,6 +1042,14 @@
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "to help": {
+              "t": "helfen",
+              "s": "to help"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -1064,21 +1106,33 @@
           ],
           "source": "Sorry, I can not understand you. Can you speak slowly, please?",
           "gloss": {
-            "sorry": {
-              "t": "Entschuldigung",
-              "s": "sorry"
+            "can": {
+              "t": "können",
+              "s": "can"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
-            "can": {
-              "t": "können",
-              "s": "can"
-            },
             "not": {
               "t": "nicht",
               "s": "not"
+            },
+            "please": {
+              "t": "bitte",
+              "s": "please"
+            },
+            "slow": {
+              "t": "langsam",
+              "s": "slow"
+            },
+            "sorry": {
+              "t": "Entschuldigung",
+              "s": "sorry"
+            },
+            "to speak": {
+              "t": "sprechen",
+              "s": "to speak"
             },
             "to understand": {
               "t": "verstehen",
@@ -1087,18 +1141,6 @@
             "you": {
               "t": "du",
               "s": "you"
-            },
-            "to speak": {
-              "t": "sprechen",
-              "s": "to speak"
-            },
-            "slow": {
-              "t": "langsam",
-              "s": "slow"
-            },
-            "please": {
-              "t": "bitte",
-              "s": "please"
             }
           }
         },
@@ -1155,17 +1197,9 @@
           ],
           "source": "Why are you here? I am here because I want to learn.",
           "gloss": {
-            "why": {
-              "t": "warum",
-              "s": "why"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "you": {
-              "t": "du",
-              "s": "you"
+            "because": {
+              "t": "weil",
+              "s": "because"
             },
             "here": {
               "t": "hier",
@@ -1175,17 +1209,25 @@
               "t": "ich",
               "s": "I"
             },
-            "because": {
-              "t": "weil",
-              "s": "because"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "to learn": {
+              "t": "lernen",
+              "s": "to learn"
             },
             "to want": {
               "t": "wollen",
               "s": "to want"
             },
-            "to learn": {
-              "t": "lernen",
-              "s": "to learn"
+            "why": {
+              "t": "warum",
+              "s": "why"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         }
@@ -1213,6 +1255,10 @@
           ],
           "source": "Meat or fish?",
           "gloss": {
+            "fish": {
+              "t": "der Fisch",
+              "s": "fish"
+            },
             "meat": {
               "t": "das Fleisch",
               "s": "meat"
@@ -1220,10 +1266,6 @@
             "or": {
               "t": "oder",
               "s": "or"
-            },
-            "fish": {
-              "t": "der Fisch",
-              "s": "fish"
             }
           }
         },
@@ -1269,33 +1311,33 @@
           ],
           "source": "The water is cold, but the tea is very hot.",
           "gloss": {
-            "water": {
-              "t": "das Wasser",
-              "s": "water"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "but": {
+              "t": "aber",
+              "s": "but"
             },
             "cold": {
               "t": "kalt",
               "s": "cold"
             },
-            "but": {
-              "t": "aber",
-              "s": "but"
+            "hot": {
+              "t": "heiß",
+              "s": "hot"
             },
             "tea": {
               "t": "der Tee",
               "s": "tea"
             },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
             "very": {
               "t": "sehr",
               "s": "very"
             },
-            "hot": {
-              "t": "heiß",
-              "s": "hot"
+            "water": {
+              "t": "das Wasser",
+              "s": "water"
             }
           }
         },
@@ -1353,69 +1395,51 @@
           ],
           "source": "I have money, and I want to buy bread. Where is the shop?",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "money": {
-              "t": "das Geld",
-              "s": "money"
-            },
             "and": {
               "t": "und",
               "s": "and"
-            },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
-            },
-            "to buy": {
-              "t": "kaufen",
-              "s": "to buy"
             },
             "bread": {
               "t": "das Brot",
               "s": "bread"
             },
-            "where": {
-              "t": "wo",
-              "s": "where"
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "money": {
+              "t": "das Geld",
+              "s": "money"
+            },
+            "shop": {
+              "t": "das Geschäft",
+              "s": "shop"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "shop": {
-              "t": "das Geschäft",
-              "s": "shop"
+            "to buy": {
+              "t": "kaufen",
+              "s": "to buy"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
+            },
+            "where": {
+              "t": "wo",
+              "s": "where"
             }
           }
         },
         {
           "id": "a1_069",
           "target": [
-            {
-              "t": "Wie viel",
-              "c": "how much"
-            },
-            {
-              "t": "ist",
-              "c": "to be"
-            },
-            {
-              "t": "es",
-              "c": "it"
-            },
-            ",",
-            {
-              "t": "bitte",
-              "c": "please"
-            },
-            "?",
             {
               "t": "Ich",
               "c": "i"
@@ -1433,41 +1457,42 @@
               "t": "kaufen",
               "c": "to buy"
             },
-            "."
+            ".",
+            {
+              "t": "Wie viel",
+              "c": "how much"
+            },
+            {
+              "t": "Geld",
+              "c": "money"
+            },
+            "?"
           ],
-          "source": "How much is it, please? I want to buy the fish.",
+          "source": "I want to buy the fish. How much money?",
           "gloss": {
+            "fish": {
+              "t": "der Fisch",
+              "s": "fish"
+            },
             "how much": {
               "t": "wie viel",
               "s": "how much"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "it": {
-              "t": "es",
-              "s": "it"
-            },
-            "please": {
-              "t": "bitte",
-              "s": "please"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
+            "money": {
+              "t": "das Geld",
+              "s": "money"
             },
             "to buy": {
               "t": "kaufen",
               "s": "to buy"
             },
-            "fish": {
-              "t": "der Fisch",
-              "s": "fish"
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
             }
           }
         }
@@ -1520,6 +1545,26 @@
           ],
           "source": "This is my house, and it is very big.",
           "gloss": {
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "big": {
+              "t": "groß",
+              "s": "big"
+            },
+            "house": {
+              "t": "das Haus",
+              "s": "house"
+            },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "my": {
+              "t": "mein",
+              "s": "my"
+            },
             "this": {
               "t": "dieser",
               "s": "this"
@@ -1528,29 +1573,9 @@
               "t": "sein",
               "s": "to be"
             },
-            "my": {
-              "t": "mein",
-              "s": "my"
-            },
-            "house": {
-              "t": "das Haus",
-              "s": "house"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "it": {
-              "t": "es",
-              "s": "it"
-            },
             "very": {
               "t": "sehr",
               "s": "very"
-            },
-            "big": {
-              "t": "groß",
-              "s": "big"
             }
           }
         },
@@ -1590,22 +1615,6 @@
           ],
           "source": "The room has a table, a chair and a bed.",
           "gloss": {
-            "room": {
-              "t": "das Zimmer",
-              "s": "room"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "table": {
-              "t": "der Tisch",
-              "s": "table"
-            },
-            "chair": {
-              "t": "der Stuhl",
-              "s": "chair"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -1613,6 +1622,22 @@
             "bed": {
               "t": "das Bett",
               "s": "bed"
+            },
+            "chair": {
+              "t": "der Stuhl",
+              "s": "chair"
+            },
+            "room": {
+              "t": "das Zimmer",
+              "s": "room"
+            },
+            "table": {
+              "t": "der Tisch",
+              "s": "table"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
             }
           }
         },
@@ -1655,29 +1680,29 @@
           ],
           "source": "Sorry, where is the door? The window is there.",
           "gloss": {
+            "door": {
+              "t": "die Tür",
+              "s": "door"
+            },
             "sorry": {
               "t": "Entschuldigung",
               "s": "sorry"
             },
-            "where": {
-              "t": "wo",
-              "s": "where"
+            "there": {
+              "t": "dort",
+              "s": "there"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "door": {
-              "t": "die Tür",
-              "s": "door"
+            "where": {
+              "t": "wo",
+              "s": "where"
             },
             "window": {
               "t": "das Fenster",
               "s": "window"
-            },
-            "there": {
-              "t": "dort",
-              "s": "there"
             }
           }
         }
@@ -1720,21 +1745,9 @@
           ],
           "source": "Open the window and close the door, please!",
           "gloss": {
-            "to open": {
-              "t": "öffnen",
-              "s": "to open"
-            },
-            "window": {
-              "t": "das Fenster",
-              "s": "window"
-            },
             "and": {
               "t": "und",
               "s": "and"
-            },
-            "to close": {
-              "t": "schließen",
-              "s": "to close"
             },
             "door": {
               "t": "die Tür",
@@ -1743,6 +1756,18 @@
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "to close": {
+              "t": "schließen",
+              "s": "to close"
+            },
+            "to open": {
+              "t": "öffnen",
+              "s": "to open"
+            },
+            "window": {
+              "t": "das Fenster",
+              "s": "window"
             }
           }
         },
@@ -1790,33 +1815,37 @@
           ],
           "source": "This book is new, and that book is old.",
           "gloss": {
-            "this": {
-              "t": "dieser",
-              "s": "this"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "book": {
               "t": "das Buch",
               "s": "book"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "but": {
+              "t": "aber",
+              "s": "but"
             },
             "new": {
               "t": "neu",
               "s": "new"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "old": {
+              "t": "alt",
+              "s": "old"
             },
             "that": {
               "t": "das",
               "s": "that"
             },
-            "old": {
-              "t": "alt",
-              "s": "old"
+            "this": {
+              "t": "dieser",
+              "s": "this"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -1853,29 +1882,29 @@
           ],
           "source": "I can see a small, beautiful house.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
+            "beautiful": {
+              "t": "schön",
+              "s": "beautiful"
             },
             "can": {
               "t": "können",
               "s": "can"
             },
-            "to see": {
-              "t": "sehen",
-              "s": "to see"
+            "house": {
+              "t": "das Haus",
+              "s": "house"
+            },
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
             "small": {
               "t": "klein",
               "s": "small"
             },
-            "beautiful": {
-              "t": "schön",
-              "s": "beautiful"
-            },
-            "house": {
-              "t": "das Haus",
-              "s": "house"
+            "to see": {
+              "t": "sehen",
+              "s": "to see"
             }
           }
         }
@@ -1931,37 +1960,37 @@
           ],
           "source": "The family is big: a mother, a father, a son and a daughter.",
           "gloss": {
-            "family": {
-              "t": "die Familie",
-              "s": "family"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "big": {
               "t": "groß",
               "s": "big"
             },
-            "mother": {
-              "t": "die Mutter",
-              "s": "mother"
+            "daughter": {
+              "t": "die Tochter",
+              "s": "daughter"
+            },
+            "family": {
+              "t": "die Familie",
+              "s": "family"
             },
             "father": {
               "t": "der Vater",
               "s": "father"
             },
+            "mother": {
+              "t": "die Mutter",
+              "s": "mother"
+            },
             "son": {
               "t": "der Sohn",
               "s": "son"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "daughter": {
-              "t": "die Tochter",
-              "s": "daughter"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -2005,21 +2034,21 @@
               "t": "das Kind",
               "s": "child"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
             "here": {
               "t": "hier",
               "s": "here"
             },
-            "with": {
-              "t": "mit",
-              "s": "with"
-            },
             "parents": {
               "t": "die Eltern",
               "s": "parents"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "with": {
+              "t": "mit",
+              "s": "with"
             }
           }
         },
@@ -2057,18 +2086,6 @@
           ],
           "source": "The mother is here, but the father is not here.",
           "gloss": {
-            "mother": {
-              "t": "die Mutter",
-              "s": "mother"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "here": {
-              "t": "hier",
-              "s": "here"
-            },
             "but": {
               "t": "aber",
               "s": "but"
@@ -2077,9 +2094,21 @@
               "t": "der Vater",
               "s": "father"
             },
+            "here": {
+              "t": "hier",
+              "s": "here"
+            },
+            "mother": {
+              "t": "die Mutter",
+              "s": "mother"
+            },
             "not": {
               "t": "nicht",
               "s": "not"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         }
@@ -2117,29 +2146,25 @@
           ],
           "source": "I have a brother and a sister.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "brother": {
               "t": "der Bruder",
               "s": "brother"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
             "sister": {
               "t": "die Schwester",
               "s": "sister"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "to have": {
+              "t": "haben",
+              "s": "to have"
             }
           }
         },
@@ -2172,25 +2197,25 @@
           ],
           "source": "The man and the woman are friends.",
           "gloss": {
-            "man": {
-              "t": "der Mann",
-              "s": "man"
-            },
             "and": {
               "t": "und",
               "s": "and"
             },
-            "woman": {
-              "t": "die Frau",
-              "s": "woman"
+            "friend": {
+              "t": "der Freund",
+              "s": "friend"
+            },
+            "man": {
+              "t": "der Mann",
+              "s": "man"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "friend": {
-              "t": "der Freund",
-              "s": "friend"
+            "woman": {
+              "t": "die Frau",
+              "s": "woman"
             }
           }
         },
@@ -2202,30 +2227,30 @@
               "c": "i"
             },
             {
-              "t": "kenne",
+              "t": "weiß",
               "c": "to know"
             },
-            "den",
+            ",",
             {
-              "t": "Mann",
-              "c": "man"
+              "t": "wo",
+              "c": "where"
+            },
+            {
+              "t": "du",
+              "c": "you"
+            },
+            {
+              "t": "wohnst",
+              "c": "to live"
             },
             ".",
             {
-              "t": "Er",
-              "c": "he"
+              "t": "Der",
+              "c": "that"
             },
             {
-              "t": "wohnt",
-              "c": "to live"
-            },
-            {
-              "t": "hier",
-              "c": "here"
-            },
-            {
-              "t": "und",
-              "c": "and"
+              "t": "Mann",
+              "c": "man"
             },
             {
               "t": "ist",
@@ -2241,51 +2266,47 @@
             },
             "."
           ],
-          "source": "I know that man. He lives here, and he is my friend.",
+          "source": "I know where you live. That man is my friend.",
           "gloss": {
+            "friend": {
+              "t": "der Freund",
+              "s": "friend"
+            },
             "i": {
               "t": "ich",
               "s": "I"
-            },
-            "to know": {
-              "t": "wissen",
-              "s": "to know"
-            },
-            "that": {
-              "t": "das",
-              "s": "that"
             },
             "man": {
               "t": "der Mann",
               "s": "man"
             },
-            "he": {
-              "t": "er",
-              "s": "he"
+            "my": {
+              "t": "mein",
+              "s": "my"
             },
-            "to live": {
-              "t": "wohnen",
-              "s": "to live"
-            },
-            "here": {
-              "t": "hier",
-              "s": "here"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "that": {
+              "t": "das",
+              "s": "that"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "my": {
-              "t": "mein",
-              "s": "my"
+            "to know": {
+              "t": "wissen",
+              "s": "to know"
             },
-            "friend": {
-              "t": "der Freund",
-              "s": "friend"
+            "to live": {
+              "t": "wohnen",
+              "s": "to live"
+            },
+            "where": {
+              "t": "wo",
+              "s": "where"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -2321,28 +2342,36 @@
               "t": "hallo",
               "s": "hello"
             },
-            "what": {
-              "t": "was",
-              "s": "what"
+            "how": {
+              "t": "wie",
+              "s": "how"
+            },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "name": {
+              "t": "der Name",
+              "s": "name"
             },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
+            "what": {
+              "t": "was",
+              "s": "what"
+            },
             "your": {
               "t": "dein",
               "s": "your"
-            },
-            "name": {
-              "t": "der Name",
-              "s": "name"
             }
           }
         }
       ]
     },
     {
-      "count": 10,
+      "count": 9,
       "sentences": [
         {
           "id": "a1_036",
@@ -2361,7 +2390,28 @@
               "c": "please"
             },
             "!",
-            "Die",
+            {
+              "t": "Diese",
+              "c": "this"
+            },
+            {
+              "t": "Straße",
+              "c": "street"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
+            },
+            {
+              "t": "groß",
+              "c": "big"
+            },
+            ",",
+            {
+              "t": "und",
+              "c": "and"
+            },
+            "die",
             {
               "t": "Schule",
               "c": "school"
@@ -2371,24 +2421,20 @@
               "c": "to be"
             },
             {
-              "t": "in",
-              "c": "in"
-            },
-            {
-              "t": "dieser",
-              "c": "this"
-            },
-            {
-              "t": "Straße",
-              "c": "street"
+              "t": "hier",
+              "c": "here"
             },
             "."
           ],
-          "source": "Come here, please! The school is in this street.",
+          "source": "Come here, please! This street is big, and the school is here.",
           "gloss": {
-            "to come": {
-              "t": "kommen",
-              "s": "to come"
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "big": {
+              "t": "groß",
+              "s": "big"
             },
             "here": {
               "t": "hier",
@@ -2402,21 +2448,21 @@
               "t": "die Schule",
               "s": "school"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "in": {
-              "t": "in",
-              "s": "in"
+            "street": {
+              "t": "die Straße",
+              "s": "street"
             },
             "this": {
               "t": "dieser",
               "s": "this"
             },
-            "street": {
-              "t": "die Straße",
-              "s": "street"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "to come": {
+              "t": "kommen",
+              "s": "to come"
             }
           }
         },
@@ -2450,57 +2496,60 @@
               "c": "i"
             },
             {
-              "t": "arbeite",
-              "c": "to work"
+              "t": "komme",
+              "c": "to come"
             },
             {
-              "t": "in",
-              "c": "in"
-            },
-            "einem",
-            {
-              "t": "großen",
-              "c": "big"
+              "t": "zu",
+              "c": "to"
             },
             {
-              "t": "Geschäft",
-              "c": "shop"
+              "t": "deinem",
+              "c": "your"
+            },
+            {
+              "t": "Haus",
+              "c": "house"
             },
             "."
           ],
-          "source": "I live in the city, and I work in a big shop.",
+          "source": "I live in the city, and I come to your house.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to live": {
-              "t": "wohnen",
-              "s": "to live"
-            },
-            "in": {
-              "t": "in",
-              "s": "in"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "city": {
               "t": "die Stadt",
               "s": "city"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "house": {
+              "t": "das Haus",
+              "s": "house"
             },
-            "to work": {
-              "t": "arbeiten",
-              "s": "to work"
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
-            "big": {
-              "t": "groß",
-              "s": "big"
+            "in": {
+              "t": "in",
+              "s": "in"
             },
-            "shop": {
-              "t": "das Geschäft",
-              "s": "shop"
+            "to": {
+              "t": "zu",
+              "s": "to"
+            },
+            "to come": {
+              "t": "kommen",
+              "s": "to come"
+            },
+            "to live": {
+              "t": "wohnen",
+              "s": "to live"
+            },
+            "your": {
+              "t": "dein",
+              "s": "your"
             }
           }
         },
@@ -2543,8 +2592,8 @@
             },
             "zur",
             {
-              "t": "Arbeit",
-              "c": "work"
+              "t": "Schule",
+              "c": "school"
             },
             {
               "t": "gehen",
@@ -2552,24 +2601,8 @@
             },
             "."
           ],
-          "source": "We have a new car, and we can go to work fast.",
+          "source": "We have a new car, and we can go to school fast.",
           "gloss": {
-            "we": {
-              "t": "wir",
-              "s": "we"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "new": {
-              "t": "neu",
-              "s": "new"
-            },
-            "car": {
-              "t": "das Auto",
-              "s": "car"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -2578,25 +2611,37 @@
               "t": "können",
               "s": "can"
             },
-            "to go": {
-              "t": "gehen",
-              "s": "to go"
-            },
-            "to": {
-              "t": "zu",
-              "s": "to"
-            },
-            "work": {
-              "t": "die Arbeit",
-              "s": "work"
+            "car": {
+              "t": "das Auto",
+              "s": "car"
             },
             "fast": {
               "t": "schnell",
               "s": "fast"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "new": {
+              "t": "neu",
+              "s": "new"
+            },
+            "school": {
+              "t": "die Schule",
+              "s": "school"
+            },
+            "to": {
+              "t": "zu",
+              "s": "to"
+            },
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
+            "we": {
+              "t": "wir",
+              "s": "we"
             }
           }
         }
@@ -2608,13 +2653,18 @@
         {
           "id": "a1_039",
           "target": [
-            {
-              "t": "Guten",
-              "c": "good"
-            },
+            "Der",
             {
               "t": "Morgen",
               "c": "morning"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
+            },
+            {
+              "t": "schön",
+              "c": "beautiful"
             },
             "!",
             {
@@ -2622,11 +2672,15 @@
               "c": "how"
             },
             {
-              "t": "bist",
-              "c": "to be"
+              "t": "geht",
+              "c": "to go"
             },
             {
-              "t": "du",
+              "t": "es",
+              "c": "it"
+            },
+            {
+              "t": "dir",
               "c": "you"
             },
             {
@@ -2635,35 +2689,39 @@
             },
             "?"
           ],
-          "source": "Good morning! How are you today?",
+          "source": "The morning is beautiful! How are you today?",
           "gloss": {
-            "good": {
-              "t": "gut",
-              "s": "good"
-            },
-            "morning": {
-              "t": "der Morgen",
-              "s": "morning"
+            "beautiful": {
+              "t": "schön",
+              "s": "beautiful"
             },
             "how": {
               "t": "wie",
               "s": "how"
             },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "morning": {
+              "t": "der Morgen",
+              "s": "morning"
+            },
             "to be": {
               "t": "sein",
               "s": "to be"
             },
-            "you": {
-              "t": "du",
-              "s": "you"
+            "to go": {
+              "t": "gehen",
+              "s": "to go"
             },
             "today": {
               "t": "heute",
               "s": "today"
             },
-            "day": {
-              "t": "der Tag",
-              "s": "day"
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -2684,6 +2742,11 @@
             },
             "den",
             {
+              "t": "ganzen",
+              "c": "all",
+              "g": "ganz"
+            },
+            {
               "t": "Tag",
               "c": "day"
             },
@@ -2702,6 +2765,11 @@
             },
             "die",
             {
+              "t": "ganze",
+              "c": "all",
+              "g": "ganz"
+            },
+            {
               "t": "Nacht",
               "c": "night"
             },
@@ -2709,37 +2777,37 @@
           ],
           "source": "Today I work all day, and I sleep all night.",
           "gloss": {
-            "today": {
-              "t": "heute",
-              "s": "today"
-            },
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to work": {
-              "t": "arbeiten",
-              "s": "to work"
-            },
             "all": {
               "t": "alle",
               "s": "all"
-            },
-            "day": {
-              "t": "der Tag",
-              "s": "day"
             },
             "and": {
               "t": "und",
               "s": "and"
             },
-            "to sleep": {
-              "t": "schlafen",
-              "s": "to sleep"
+            "day": {
+              "t": "der Tag",
+              "s": "day"
+            },
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
             "night": {
               "t": "die Nacht",
               "s": "night"
+            },
+            "to sleep": {
+              "t": "schlafen",
+              "s": "to sleep"
+            },
+            "to work": {
+              "t": "arbeiten",
+              "s": "to work"
+            },
+            "today": {
+              "t": "heute",
+              "s": "today"
             }
           }
         },
@@ -2789,37 +2857,37 @@
           ],
           "source": "Yesterday the evening was cold, but tomorrow is a new day.",
           "gloss": {
-            "yesterday": {
-              "t": "gestern",
-              "s": "yesterday"
-            },
-            "evening": {
-              "t": "der Abend",
-              "s": "evening"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "but": {
+              "t": "aber",
+              "s": "but"
             },
             "cold": {
               "t": "kalt",
               "s": "cold"
             },
-            "but": {
-              "t": "aber",
-              "s": "but"
+            "day": {
+              "t": "der Tag",
+              "s": "day"
             },
-            "tomorrow": {
-              "t": "morgen",
-              "s": "tomorrow"
+            "evening": {
+              "t": "der Abend",
+              "s": "evening"
             },
             "new": {
               "t": "neu",
               "s": "new"
             },
-            "day": {
-              "t": "der Tag",
-              "s": "day"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "tomorrow": {
+              "t": "morgen",
+              "s": "tomorrow"
+            },
+            "yesterday": {
+              "t": "gestern",
+              "s": "yesterday"
             }
           }
         }
@@ -2864,21 +2932,25 @@
           ],
           "source": "Today is Monday, and tomorrow is Tuesday.",
           "gloss": {
-            "today": {
-              "t": "heute",
-              "s": "today"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "it": {
+              "t": "es",
+              "s": "it"
             },
             "monday": {
               "t": "der Montag",
               "s": "Monday"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "today": {
+              "t": "heute",
+              "s": "today"
             },
             "tomorrow": {
               "t": "morgen",
@@ -2922,6 +2994,22 @@
           ],
           "source": "Is today Wednesday, Thursday or Friday?",
           "gloss": {
+            "friday": {
+              "t": "der Freitag",
+              "s": "Friday"
+            },
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "or": {
+              "t": "oder",
+              "s": "or"
+            },
+            "thursday": {
+              "t": "der Donnerstag",
+              "s": "Thursday"
+            },
             "to be": {
               "t": "sein",
               "s": "to be"
@@ -2933,18 +3021,6 @@
             "wednesday": {
               "t": "der Mittwoch",
               "s": "Wednesday"
-            },
-            "thursday": {
-              "t": "der Donnerstag",
-              "s": "Thursday"
-            },
-            "or": {
-              "t": "oder",
-              "s": "or"
-            },
-            "friday": {
-              "t": "der Freitag",
-              "s": "Friday"
             }
           }
         },
@@ -2982,6 +3058,11 @@
             },
             "den",
             {
+              "t": "ganzen",
+              "c": "all",
+              "g": "ganz"
+            },
+            {
               "t": "Tag",
               "c": "day"
             },
@@ -2989,21 +3070,17 @@
           ],
           "source": "Saturday and Sunday are good: I sleep all day.",
           "gloss": {
-            "saturday": {
-              "t": "der Samstag",
-              "s": "Saturday"
+            "all": {
+              "t": "alle",
+              "s": "all"
             },
             "and": {
               "t": "und",
               "s": "and"
             },
-            "sunday": {
-              "t": "der Sonntag",
-              "s": "Sunday"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "day": {
+              "t": "der Tag",
+              "s": "day"
             },
             "good": {
               "t": "gut",
@@ -3013,17 +3090,21 @@
               "t": "ich",
               "s": "I"
             },
+            "saturday": {
+              "t": "der Samstag",
+              "s": "Saturday"
+            },
+            "sunday": {
+              "t": "der Sonntag",
+              "s": "Sunday"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
             "to sleep": {
               "t": "schlafen",
               "s": "to sleep"
-            },
-            "all": {
-              "t": "alle",
-              "s": "all"
-            },
-            "day": {
-              "t": "der Tag",
-              "s": "day"
             }
           }
         }
@@ -3067,25 +3148,17 @@
           ],
           "source": "I have two brothers and one sister.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "two": {
-              "t": "zwei",
-              "s": "two"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "brother": {
               "t": "der Bruder",
               "s": "brother"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
             "one": {
               "t": "eins",
@@ -3095,9 +3168,13 @@
               "t": "die Schwester",
               "s": "sister"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
+            "two": {
+              "t": "zwei",
+              "s": "two"
             }
           }
         },
@@ -3145,45 +3222,41 @@
           ],
           "source": "When can you come? I have three hours today.",
           "gloss": {
-            "when": {
-              "t": "wann",
-              "s": "when"
-            },
             "can": {
               "t": "können",
               "s": "can"
-            },
-            "you": {
-              "t": "du",
-              "s": "you"
-            },
-            "to come": {
-              "t": "kommen",
-              "s": "to come"
-            },
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "three": {
-              "t": "drei",
-              "s": "three"
             },
             "hour": {
               "t": "die Stunde",
               "s": "hour"
             },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "three": {
+              "t": "drei",
+              "s": "three"
+            },
+            "to come": {
+              "t": "kommen",
+              "s": "to come"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
             "today": {
               "t": "heute",
               "s": "today"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "when": {
+              "t": "wann",
+              "s": "when"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -3232,45 +3305,45 @@
           ],
           "source": "The house has four rooms, five windows and six doors.",
           "gloss": {
-            "house": {
-              "t": "das Haus",
-              "s": "house"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "four": {
-              "t": "vier",
-              "s": "four"
-            },
-            "room": {
-              "t": "das Zimmer",
-              "s": "room"
-            },
-            "five": {
-              "t": "fünf",
-              "s": "five"
-            },
-            "window": {
-              "t": "das Fenster",
-              "s": "window"
-            },
             "and": {
               "t": "und",
               "s": "and"
-            },
-            "six": {
-              "t": "sechs",
-              "s": "six"
             },
             "door": {
               "t": "die Tür",
               "s": "door"
             },
+            "five": {
+              "t": "fünf",
+              "s": "five"
+            },
+            "four": {
+              "t": "vier",
+              "s": "four"
+            },
+            "house": {
+              "t": "das Haus",
+              "s": "house"
+            },
             "in": {
               "t": "in",
               "s": "in"
+            },
+            "room": {
+              "t": "das Zimmer",
+              "s": "room"
+            },
+            "six": {
+              "t": "sechs",
+              "s": "six"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
+            "window": {
+              "t": "das Fenster",
+              "s": "window"
             }
           }
         }
@@ -3324,41 +3397,41 @@
           ],
           "source": "The week has seven days, and I work five days.",
           "gloss": {
-            "week": {
-              "t": "die Woche",
-              "s": "week"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
-            },
-            "seven": {
-              "t": "sieben",
-              "s": "seven"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "day": {
               "t": "der Tag",
               "s": "day"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "five": {
+              "t": "fünf",
+              "s": "five"
             },
             "i": {
               "t": "ich",
               "s": "I"
             },
+            "in": {
+              "t": "in",
+              "s": "in"
+            },
+            "seven": {
+              "t": "sieben",
+              "s": "seven"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
+            },
             "to work": {
               "t": "arbeiten",
               "s": "to work"
             },
-            "five": {
-              "t": "fünf",
-              "s": "five"
-            },
-            "in": {
-              "t": "in",
-              "s": "in"
+            "week": {
+              "t": "die Woche",
+              "s": "week"
             }
           }
         },
@@ -3372,6 +3445,10 @@
             {
               "t": "will",
               "c": "to want"
+            },
+            {
+              "t": "bitte",
+              "c": "please"
             },
             {
               "t": "zehn",
@@ -3402,42 +3479,21 @@
               "t": "Fische",
               "c": "fish"
             },
-            ",",
-            {
-              "t": "bitte",
-              "c": "please"
-            },
             "."
           ],
           "source": "I want ten apples, nine eggs and eight fish, please.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
-            },
-            "ten": {
-              "t": "zehn",
-              "s": "ten"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "apple": {
               "t": "der Apfel",
               "s": "apple"
             },
-            "nine": {
-              "t": "neun",
-              "s": "nine"
-            },
             "egg": {
               "t": "das Ei",
               "s": "egg"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
             },
             "eight": {
               "t": "acht",
@@ -3447,9 +3503,25 @@
               "t": "der Fisch",
               "s": "fish"
             },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "nine": {
+              "t": "neun",
+              "s": "nine"
+            },
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "ten": {
+              "t": "zehn",
+              "s": "ten"
+            },
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
             }
           }
         },
@@ -3502,49 +3574,129 @@
           ],
           "source": "The child is ten years old, and he always wants to learn.",
           "gloss": {
-            "child": {
-              "t": "das Kind",
-              "s": "child"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "ten": {
-              "t": "zehn",
-              "s": "ten"
-            },
-            "year": {
-              "t": "das Jahr",
-              "s": "year"
-            },
-            "old": {
-              "t": "alt",
-              "s": "old"
+            "always": {
+              "t": "immer",
+              "s": "always"
             },
             "and": {
               "t": "und",
               "s": "and"
             },
+            "child": {
+              "t": "das Kind",
+              "s": "child"
+            },
             "he": {
               "t": "er",
               "s": "he"
             },
-            "always": {
-              "t": "immer",
-              "s": "always"
+            "old": {
+              "t": "alt",
+              "s": "old"
             },
-            "to want": {
-              "t": "wollen",
-              "s": "to want"
+            "ten": {
+              "t": "zehn",
+              "s": "ten"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "to have": {
+              "t": "haben",
+              "s": "to have"
             },
             "to learn": {
               "t": "lernen",
               "s": "to learn"
             },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
+            "to want": {
+              "t": "wollen",
+              "s": "to want"
+            },
+            "year": {
+              "t": "das Jahr",
+              "s": "year"
+            }
+          }
+        },
+        {
+          "id": "a1_073",
+          "target": [
+            {
+              "t": "Zehn",
+              "c": "ten"
+            },
+            ",",
+            {
+              "t": "neun",
+              "c": "nine"
+            },
+            ",",
+            {
+              "t": "acht",
+              "c": "eight"
+            },
+            ",",
+            {
+              "t": "sieben",
+              "c": "seven"
+            },
+            ",",
+            {
+              "t": "drei",
+              "c": "three"
+            },
+            ",",
+            {
+              "t": "zwei",
+              "c": "two"
+            },
+            ",",
+            {
+              "t": "eins",
+              "c": "one"
+            },
+            ",",
+            {
+              "t": "null",
+              "c": "zero"
+            },
+            "!"
+          ],
+          "source": "Ten, nine, eight, seven, three, two, one, zero!",
+          "gloss": {
+            "eight": {
+              "t": "acht",
+              "s": "eight"
+            },
+            "nine": {
+              "t": "neun",
+              "s": "nine"
+            },
+            "one": {
+              "t": "eins",
+              "s": "one"
+            },
+            "seven": {
+              "t": "sieben",
+              "s": "seven"
+            },
+            "ten": {
+              "t": "zehn",
+              "s": "ten"
+            },
+            "three": {
+              "t": "drei",
+              "s": "three"
+            },
+            "two": {
+              "t": "zwei",
+              "s": "two"
+            },
+            "zero": {
+              "t": "null",
+              "s": "zero"
             }
           }
         }
@@ -3601,41 +3753,41 @@
           ],
           "source": "January and February are cold months, but June is hot.",
           "gloss": {
-            "january": {
-              "t": "der Januar",
-              "s": "January"
-            },
             "and": {
               "t": "und",
               "s": "and"
-            },
-            "february": {
-              "t": "der Februar",
-              "s": "February"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "cold": {
-              "t": "kalt",
-              "s": "cold"
-            },
-            "month": {
-              "t": "der Monat",
-              "s": "month"
             },
             "but": {
               "t": "aber",
               "s": "but"
             },
-            "june": {
-              "t": "der Juni",
-              "s": "June"
+            "cold": {
+              "t": "kalt",
+              "s": "cold"
+            },
+            "february": {
+              "t": "der Februar",
+              "s": "February"
             },
             "hot": {
               "t": "heiß",
               "s": "hot"
+            },
+            "january": {
+              "t": "der Januar",
+              "s": "January"
+            },
+            "june": {
+              "t": "der Juni",
+              "s": "June"
+            },
+            "month": {
+              "t": "der Monat",
+              "s": "month"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -3683,10 +3835,6 @@
           ],
           "source": "March and April are cold, but May is beautiful.",
           "gloss": {
-            "march": {
-              "t": "der März",
-              "s": "March"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -3695,38 +3843,47 @@
               "t": "der April",
               "s": "April"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "cold": {
-              "t": "kalt",
-              "s": "cold"
+            "beautiful": {
+              "t": "schön",
+              "s": "beautiful"
             },
             "but": {
               "t": "aber",
               "s": "but"
             },
+            "cold": {
+              "t": "kalt",
+              "s": "cold"
+            },
+            "march": {
+              "t": "der März",
+              "s": "March"
+            },
             "may": {
               "t": "der Mai",
               "s": "May"
             },
-            "beautiful": {
-              "t": "schön",
-              "s": "beautiful"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
         {
           "id": "a1_053",
           "target": [
+            "Das",
             {
-              "t": "Ich",
-              "c": "i"
+              "t": "Wasser",
+              "c": "water"
             },
             {
-              "t": "bin",
+              "t": "ist",
               "c": "to be"
+            },
+            {
+              "t": "hier",
+              "c": "here"
             },
             {
               "t": "nie",
@@ -3747,10 +3904,6 @@
               "c": "sun"
             },
             {
-              "t": "hier",
-              "c": "here"
-            },
-            {
               "t": "immer",
               "c": "always"
             },
@@ -3764,51 +3917,47 @@
             },
             "."
           ],
-          "source": "I am never cold, because the sun is always hot here.",
+          "source": "The water is never cold here, because the sun is always hot.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "never": {
-              "t": "nie",
-              "s": "never"
-            },
-            "cold": {
-              "t": "kalt",
-              "s": "cold"
+            "always": {
+              "t": "immer",
+              "s": "always"
             },
             "because": {
               "t": "weil",
               "s": "because"
             },
-            "sun": {
-              "t": "die Sonne",
-              "s": "sun"
-            },
-            "always": {
-              "t": "immer",
-              "s": "always"
-            },
-            "hot": {
-              "t": "heiß",
-              "s": "hot"
+            "cold": {
+              "t": "kalt",
+              "s": "cold"
             },
             "here": {
               "t": "hier",
               "s": "here"
             },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
+            "hot": {
+              "t": "heiß",
+              "s": "hot"
+            },
+            "never": {
+              "t": "nie",
+              "s": "never"
             },
             "not": {
               "t": "nicht",
               "s": "not"
+            },
+            "sun": {
+              "t": "die Sonne",
+              "s": "sun"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "water": {
+              "t": "das Wasser",
+              "s": "water"
             }
           }
         }
@@ -3869,10 +4018,6 @@
           ],
           "source": "July and August are hot months, and I am very happy.",
           "gloss": {
-            "july": {
-              "t": "der Juli",
-              "s": "July"
-            },
             "and": {
               "t": "und",
               "s": "and"
@@ -3881,29 +4026,33 @@
               "t": "der August",
               "s": "August"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "happy": {
+              "t": "glücklich",
+              "s": "happy"
             },
             "hot": {
               "t": "heiß",
               "s": "hot"
             },
-            "month": {
-              "t": "der Monat",
-              "s": "month"
-            },
             "i": {
               "t": "ich",
               "s": "I"
             },
+            "july": {
+              "t": "der Juli",
+              "s": "July"
+            },
+            "month": {
+              "t": "der Monat",
+              "s": "month"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
             "very": {
               "t": "sehr",
               "s": "very"
-            },
-            "happy": {
-              "t": "glücklich",
-              "s": "happy"
             }
           }
         },
@@ -3956,41 +4105,41 @@
           ],
           "source": "September, October and November are cold, but December is beautiful.",
           "gloss": {
-            "september": {
-              "t": "der September",
-              "s": "September"
-            },
-            "october": {
-              "t": "der Oktober",
-              "s": "October"
-            },
             "and": {
               "t": "und",
               "s": "and"
             },
-            "november": {
-              "t": "der November",
-              "s": "November"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "cold": {
-              "t": "kalt",
-              "s": "cold"
+            "beautiful": {
+              "t": "schön",
+              "s": "beautiful"
             },
             "but": {
               "t": "aber",
               "s": "but"
             },
+            "cold": {
+              "t": "kalt",
+              "s": "cold"
+            },
             "december": {
               "t": "der Dezember",
               "s": "December"
             },
-            "beautiful": {
-              "t": "schön",
-              "s": "beautiful"
+            "november": {
+              "t": "der November",
+              "s": "November"
+            },
+            "october": {
+              "t": "der Oktober",
+              "s": "October"
+            },
+            "september": {
+              "t": "der September",
+              "s": "September"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -4033,33 +4182,33 @@
           ],
           "source": "December is a happy month: all the family is here.",
           "gloss": {
-            "december": {
-              "t": "der Dezember",
-              "s": "December"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "happy": {
-              "t": "glücklich",
-              "s": "happy"
-            },
-            "month": {
-              "t": "der Monat",
-              "s": "month"
-            },
             "all": {
               "t": "alle",
               "s": "all"
+            },
+            "december": {
+              "t": "der Dezember",
+              "s": "December"
             },
             "family": {
               "t": "die Familie",
               "s": "family"
             },
+            "happy": {
+              "t": "glücklich",
+              "s": "happy"
+            },
             "here": {
               "t": "hier",
               "s": "here"
+            },
+            "month": {
+              "t": "der Monat",
+              "s": "month"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         }
@@ -4106,25 +4255,29 @@
           ],
           "source": "The car is red, and the house is white.",
           "gloss": {
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "but": {
+              "t": "aber",
+              "s": "but"
+            },
             "car": {
               "t": "das Auto",
               "s": "car"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "house": {
+              "t": "das Haus",
+              "s": "house"
             },
             "red": {
               "t": "rot",
               "s": "red"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "house": {
-              "t": "das Haus",
-              "s": "house"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             },
             "white": {
               "t": "weiß",
@@ -4161,17 +4314,13 @@
           ],
           "source": "Give me the black phone, please!",
           "gloss": {
-            "to give": {
-              "t": "geben",
-              "s": "to give"
+            "black": {
+              "t": "schwarz",
+              "s": "black"
             },
             "i": {
               "t": "ich",
               "s": "I"
-            },
-            "black": {
-              "t": "schwarz",
-              "s": "black"
             },
             "phone": {
               "t": "das Telefon",
@@ -4180,6 +4329,10 @@
             "please": {
               "t": "bitte",
               "s": "please"
+            },
+            "to give": {
+              "t": "geben",
+              "s": "to give"
             }
           }
         },
@@ -4235,33 +4388,33 @@
           ],
           "source": "The door is green, the window is blue, and the chair is yellow.",
           "gloss": {
-            "door": {
-              "t": "die Tür",
-              "s": "door"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "green": {
-              "t": "grün",
-              "s": "green"
-            },
-            "window": {
-              "t": "das Fenster",
-              "s": "window"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "blue": {
               "t": "blau",
               "s": "blue"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
             "chair": {
               "t": "der Stuhl",
               "s": "chair"
+            },
+            "door": {
+              "t": "die Tür",
+              "s": "door"
+            },
+            "green": {
+              "t": "grün",
+              "s": "green"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "window": {
+              "t": "das Fenster",
+              "s": "window"
             },
             "yellow": {
               "t": "gelb",
@@ -4313,6 +4466,22 @@
           ],
           "source": "I love the dog, and the child loves the cat.",
           "gloss": {
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "cat": {
+              "t": "die Katze",
+              "s": "cat"
+            },
+            "child": {
+              "t": "das Kind",
+              "s": "child"
+            },
+            "dog": {
+              "t": "der Hund",
+              "s": "dog"
+            },
             "i": {
               "t": "ich",
               "s": "I"
@@ -4320,22 +4489,6 @@
             "to love": {
               "t": "lieben",
               "s": "to love"
-            },
-            "dog": {
-              "t": "der Hund",
-              "s": "dog"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "child": {
-              "t": "das Kind",
-              "s": "child"
-            },
-            "cat": {
-              "t": "die Katze",
-              "s": "cat"
             }
           }
         },
@@ -4377,29 +4530,33 @@
           ],
           "source": "The dog is brown, and the cat is grey.",
           "gloss": {
-            "dog": {
-              "t": "der Hund",
-              "s": "dog"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "brown": {
               "t": "braun",
               "s": "brown"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "but": {
+              "t": "aber",
+              "s": "but"
             },
             "cat": {
               "t": "die Katze",
               "s": "cat"
             },
+            "dog": {
+              "t": "der Hund",
+              "s": "dog"
+            },
             "grey": {
               "t": "grau",
               "s": "grey"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -4448,41 +4605,41 @@
           ],
           "source": "I can not find the orange book or the pink phone.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
+            "book": {
+              "t": "das Buch",
+              "s": "book"
             },
             "can": {
               "t": "können",
               "s": "can"
             },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
             "not": {
               "t": "nicht",
               "s": "not"
-            },
-            "to find": {
-              "t": "finden",
-              "s": "to find"
-            },
-            "orange": {
-              "t": "orange",
-              "s": "orange"
-            },
-            "book": {
-              "t": "das Buch",
-              "s": "book"
             },
             "or": {
               "t": "oder",
               "s": "or"
             },
-            "pink": {
-              "t": "rosa",
-              "s": "pink"
+            "orange": {
+              "t": "orange",
+              "s": "orange"
             },
             "phone": {
               "t": "das Telefon",
               "s": "phone"
+            },
+            "pink": {
+              "t": "rosa",
+              "s": "pink"
+            },
+            "to find": {
+              "t": "finden",
+              "s": "to find"
             }
           }
         }
@@ -4529,18 +4686,6 @@
           ],
           "source": "The street is long, but the day is short.",
           "gloss": {
-            "street": {
-              "t": "die Straße",
-              "s": "street"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
-            },
-            "long": {
-              "t": "lang",
-              "s": "long"
-            },
             "but": {
               "t": "aber",
               "s": "but"
@@ -4549,9 +4694,21 @@
               "t": "der Tag",
               "s": "day"
             },
+            "long": {
+              "t": "lang",
+              "s": "long"
+            },
             "short": {
               "t": "kurz",
               "s": "short"
+            },
+            "street": {
+              "t": "die Straße",
+              "s": "street"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -4600,37 +4757,37 @@
           ],
           "source": "The child has big eyes, small hands and small feet.",
           "gloss": {
-            "child": {
-              "t": "das Kind",
-              "s": "child"
-            },
-            "to have": {
-              "t": "haben",
-              "s": "to have"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "big": {
               "t": "groß",
               "s": "big"
             },
+            "child": {
+              "t": "das Kind",
+              "s": "child"
+            },
             "eye": {
               "t": "das Auge",
               "s": "eye"
             },
-            "small": {
-              "t": "klein",
-              "s": "small"
+            "foot": {
+              "t": "der Fuß",
+              "s": "foot"
             },
             "hand": {
               "t": "die Hand",
               "s": "hand"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "small": {
+              "t": "klein",
+              "s": "small"
             },
-            "foot": {
-              "t": "der Fuß",
-              "s": "foot"
+            "to have": {
+              "t": "haben",
+              "s": "to have"
             }
           }
         },
@@ -4699,22 +4856,6 @@
           ],
           "source": "I can not take all the books. What can I do? Can you help me?",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "can": {
-              "t": "können",
-              "s": "can"
-            },
-            "not": {
-              "t": "nicht",
-              "s": "not"
-            },
-            "to take": {
-              "t": "nehmen",
-              "s": "to take"
-            },
             "all": {
               "t": "alle",
               "s": "all"
@@ -4723,21 +4864,37 @@
               "t": "das Buch",
               "s": "book"
             },
-            "what": {
-              "t": "was",
-              "s": "what"
+            "can": {
+              "t": "können",
+              "s": "can"
+            },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "not": {
+              "t": "nicht",
+              "s": "not"
             },
             "to do": {
               "t": "machen",
               "s": "to do"
             },
-            "you": {
-              "t": "du",
-              "s": "you"
-            },
             "to help": {
               "t": "helfen",
               "s": "to help"
+            },
+            "to take": {
+              "t": "nehmen",
+              "s": "to take"
+            },
+            "what": {
+              "t": "was",
+              "s": "what"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         },
@@ -4752,82 +4909,66 @@
               "t": "Kopf",
               "c": "head"
             },
-            {
-              "t": "ist",
-              "c": "to be"
-            },
-            {
-              "t": "heiß",
-              "c": "hot"
-            },
             ",",
+            {
+              "t": "meine",
+              "c": "my"
+            },
+            {
+              "t": "Hände",
+              "c": "hand"
+            },
             {
               "t": "und",
               "c": "and"
             },
             {
-              "t": "ich",
-              "c": "i"
+              "t": "meine",
+              "c": "my"
             },
             {
-              "t": "kann",
-              "c": "can"
+              "t": "Füße",
+              "c": "foot"
             },
             {
-              "t": "heute",
-              "c": "today"
+              "t": "sind",
+              "c": "to be"
             },
             {
-              "t": "nicht",
-              "c": "not"
-            },
-            {
-              "t": "arbeiten",
-              "c": "to work"
+              "t": "kalt",
+              "c": "cold"
             },
             "."
           ],
-          "source": "My head is hot, and I can not work today.",
+          "source": "My head, my hands and my feet are cold.",
           "gloss": {
-            "my": {
-              "t": "mein",
-              "s": "my"
+            "and": {
+              "t": "und",
+              "s": "and"
+            },
+            "cold": {
+              "t": "kalt",
+              "s": "cold"
+            },
+            "foot": {
+              "t": "der Fuß",
+              "s": "foot"
+            },
+            "hand": {
+              "t": "die Hand",
+              "s": "hand"
             },
             "head": {
               "t": "der Kopf",
               "s": "head"
             },
+            "my": {
+              "t": "mein",
+              "s": "my"
+            },
             "to be": {
               "t": "sein",
               "s": "to be"
-            },
-            "hot": {
-              "t": "heiß",
-              "s": "hot"
-            },
-            "and": {
-              "t": "und",
-              "s": "and"
-            },
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "can": {
-              "t": "können",
-              "s": "can"
-            },
-            "not": {
-              "t": "nicht",
-              "s": "not"
-            },
-            "to work": {
-              "t": "arbeiten",
-              "s": "to work"
-            },
-            "today": {
-              "t": "heute",
-              "s": "today"
             }
           }
         }
@@ -4874,29 +5015,29 @@
           ],
           "source": "The work is difficult, but the money is good.",
           "gloss": {
-            "work": {
-              "t": "die Arbeit",
-              "s": "work"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "but": {
+              "t": "aber",
+              "s": "but"
             },
             "difficult": {
               "t": "schwierig",
               "s": "difficult"
             },
-            "but": {
-              "t": "aber",
-              "s": "but"
+            "good": {
+              "t": "gut",
+              "s": "good"
             },
             "money": {
               "t": "das Geld",
               "s": "money"
             },
-            "good": {
-              "t": "gut",
-              "s": "good"
+            "to be": {
+              "t": "sein",
+              "s": "to be"
+            },
+            "work": {
+              "t": "die Arbeit",
+              "s": "work"
             }
           }
         },
@@ -4943,44 +5084,44 @@
               "c": "and"
             },
             {
-              "t": "billig",
+              "t": "günstig",
               "c": "cheap"
             },
             "."
           ],
           "source": "The coffee is bad and expensive. The tea is good and cheap.",
           "gloss": {
-            "coffee": {
-              "t": "der Kaffee",
-              "s": "coffee"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "and": {
+              "t": "und",
+              "s": "and"
             },
             "bad": {
               "t": "schlecht",
               "s": "bad"
             },
-            "and": {
-              "t": "und",
-              "s": "and"
+            "cheap": {
+              "t": "billig",
+              "s": "cheap"
+            },
+            "coffee": {
+              "t": "der Kaffee",
+              "s": "coffee"
             },
             "expensive": {
               "t": "teuer",
               "s": "expensive"
             },
-            "tea": {
-              "t": "der Tee",
-              "s": "tea"
-            },
             "good": {
               "t": "gut",
               "s": "good"
             },
-            "cheap": {
-              "t": "billig",
-              "s": "cheap"
+            "tea": {
+              "t": "der Tee",
+              "s": "tea"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             }
           }
         },
@@ -5032,87 +5173,136 @@
               "t": "sprechen",
               "c": "to speak"
             },
-            ".",
-            {
-              "t": "Einfaches",
-              "c": "easy"
-            },
-            {
-              "t": "Sagen",
-              "c": "to say"
-            },
-            ",",
-            {
-              "t": "schwieriges",
-              "c": "difficult"
-            },
-            {
-              "t": "Machen",
-              "c": "to do"
-            },
-            "!"
+            "."
           ],
-          "source": "I can read and write, but I can not speak fast. Easy to say, difficult to do!",
+          "source": "I can read and write, but I can not speak fast.",
           "gloss": {
-            "i": {
-              "t": "ich",
-              "s": "I"
-            },
-            "can": {
-              "t": "können",
-              "s": "can"
-            },
-            "to read": {
-              "t": "lesen",
-              "s": "to read"
-            },
             "and": {
               "t": "und",
               "s": "and"
-            },
-            "to write": {
-              "t": "schreiben",
-              "s": "to write"
             },
             "but": {
               "t": "aber",
               "s": "but"
             },
-            "not": {
-              "t": "nicht",
-              "s": "not"
-            },
-            "to speak": {
-              "t": "sprechen",
-              "s": "to speak"
+            "can": {
+              "t": "können",
+              "s": "can"
             },
             "fast": {
               "t": "schnell",
               "s": "fast"
             },
+            "i": {
+              "t": "ich",
+              "s": "I"
+            },
+            "not": {
+              "t": "nicht",
+              "s": "not"
+            },
+            "to read": {
+              "t": "lesen",
+              "s": "to read"
+            },
+            "to speak": {
+              "t": "sprechen",
+              "s": "to speak"
+            },
+            "to write": {
+              "t": "schreiben",
+              "s": "to write"
+            }
+          }
+        },
+        {
+          "id": "a1_072",
+          "target": [
+            {
+              "t": "Was",
+              "c": "what"
+            },
+            {
+              "t": "sagst",
+              "c": "to say"
+            },
+            {
+              "t": "du",
+              "c": "you"
+            },
+            "?",
+            {
+              "t": "Ich",
+              "c": "i"
+            },
+            {
+              "t": "weiß",
+              "c": "to know"
+            },
+            {
+              "t": "nicht",
+              "c": "not"
+            },
+            "!",
+            {
+              "t": "Es",
+              "c": "it"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
+            },
+            {
+              "t": "nicht",
+              "c": "not"
+            },
+            {
+              "t": "einfach",
+              "c": "easy"
+            },
+            "."
+          ],
+          "source": "What do you say? I do not know! It is not easy.",
+          "gloss": {
             "easy": {
               "t": "einfach",
               "s": "easy"
             },
-            "to say": {
-              "t": "sagen",
-              "s": "to say"
+            "i": {
+              "t": "ich",
+              "s": "I"
             },
-            "difficult": {
-              "t": "schwierig",
-              "s": "difficult"
+            "it": {
+              "t": "es",
+              "s": "it"
+            },
+            "not": {
+              "t": "nicht",
+              "s": "not"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "to be"
             },
             "to do": {
               "t": "machen",
               "s": "to do"
             },
-            "to": {
-              "t": "zu",
-              "s": "to"
+            "to know": {
+              "t": "wissen",
+              "s": "to know"
             },
-            "to be": {
-              "t": "sein",
-              "s": "to be"
+            "to say": {
+              "t": "sagen",
+              "s": "to say"
+            },
+            "what": {
+              "t": "was",
+              "s": "what"
+            },
+            "you": {
+              "t": "du",
+              "s": "you"
             }
           }
         }

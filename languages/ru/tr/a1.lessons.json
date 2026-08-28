@@ -1,7 +1,7 @@
 {
   "lessons": [
     {
-      "count": 7,
+      "count": 9,
       "sentences": [
         {
           "id": "a1_001",
@@ -31,9 +31,17 @@
               "t": "как",
               "s": "nasıl"
             },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
             "to be": {
               "t": "быть",
               "s": "olmak"
+            },
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
             },
             "you": {
               "t": "ты",
@@ -57,21 +65,29 @@
           ],
           "source": "Ben iyiyim, teşekkür ederim.",
           "gloss": {
+            "good": {
+              "t": "хороший",
+              "s": "iyi"
+            },
             "i": {
               "t": "я",
               "s": "ben"
+            },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "thank you": {
+              "t": "спасибо",
+              "s": "teşekkür ederim"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
-            },
-            "thank you": {
-              "t": "спасибо",
-              "s": "teşekkür ederim"
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
             }
           }
         }
@@ -103,31 +119,39 @@
             },
             "!"
           ],
-          "source": "Evet, ben çok iyiyim, teşekkür ederim!",
+          "source": "Evet, çok iyiyim, teşekkür ederim!",
           "gloss": {
-            "yes": {
-              "t": "да",
-              "s": "evet"
+            "good": {
+              "t": "хороший",
+              "s": "iyi"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "thank you": {
+              "t": "спасибо",
+              "s": "teşekkür ederim"
+            },
             "to be": {
               "t": "быть",
               "s": "olmak"
+            },
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
             },
             "very": {
               "t": "очень",
               "s": "çok"
             },
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
-            },
-            "thank you": {
-              "t": "спасибо",
-              "s": "teşekkür ederim"
+            "yes": {
+              "t": "да",
+              "s": "evet"
             }
           }
         },
@@ -149,27 +173,35 @@
             },
             "."
           ],
-          "source": "Hayır, ben iyi değilim.",
+          "source": "Hayır, iyi değilim.",
           "gloss": {
-            "no": {
-              "t": "нет",
-              "s": "hayır"
+            "good": {
+              "t": "хороший",
+              "s": "iyi"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "no": {
+              "t": "нет",
+              "s": "hayır"
             },
             "not": {
               "t": "не",
               "s": "değil"
             },
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
             }
           }
         },
@@ -202,9 +234,13 @@
           ],
           "source": "Evet, lütfen. Teşekkür ederim ve hoşça kal!",
           "gloss": {
-            "yes": {
-              "t": "да",
-              "s": "evet"
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "goodbye": {
+              "t": "до свидания",
+              "s": "hoşça kal"
             },
             "please": {
               "t": "пожалуйста",
@@ -214,20 +250,16 @@
               "t": "спасибо",
               "s": "teşekkür ederim"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "goodbye": {
-              "t": "до свидания",
-              "s": "hoşça kal"
+            "yes": {
+              "t": "да",
+              "s": "evet"
             }
           }
         }
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_006",
@@ -253,25 +285,25 @@
           ],
           "source": "Sen neredesin? Ben buradayım.",
           "gloss": {
-            "where": {
-              "t": "где",
-              "s": "nerede"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "you": {
-              "t": "ты",
-              "s": "sen"
+            "here": {
+              "t": "здесь",
+              "s": "burada"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
-            "here": {
-              "t": "здесь",
-              "s": "burada"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "where": {
+              "t": "где",
+              "s": "nerede"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -303,21 +335,17 @@
           ],
           "source": "O burada ve o orada.",
           "gloss": {
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
             "he": {
               "t": "он",
               "s": "o"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
             "here": {
               "t": "здесь",
               "s": "burada"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
             },
             "she": {
               "t": "она",
@@ -326,6 +354,10 @@
             "there": {
               "t": "там",
               "s": "orada"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -357,42 +389,42 @@
           ],
           "source": "Biz buradayız ve onlar orada.",
           "gloss": {
-            "we": {
-              "t": "мы",
-              "s": "biz"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "here": {
               "t": "здесь",
               "s": "burada"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "there": {
+              "t": "там",
+              "s": "orada"
             },
             "they": {
               "t": "они",
               "s": "onlar"
             },
-            "there": {
-              "t": "там",
-              "s": "orada"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "we": {
+              "t": "мы",
+              "s": "biz"
             }
           }
         }
       ]
     },
     {
-      "count": 8,
+      "count": 7,
       "sentences": [
         {
           "id": "a1_009",
           "target": [
             {
-              "t": "Извините",
+              "t": "Прости",
               "c": "sorry"
             },
             "!",
@@ -412,13 +444,13 @@
               "t": "извините",
               "s": "özür dilerim"
             },
-            "who": {
-              "t": "кто",
-              "s": "kim"
-            },
             "to be": {
               "t": "быть",
               "s": "olmak"
+            },
+            "who": {
+              "t": "кто",
+              "s": "kim"
             },
             "you": {
               "t": "ты",
@@ -440,7 +472,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "время",
@@ -459,33 +492,29 @@
           ],
           "source": "Şimdi zamanım var. Sen?",
           "gloss": {
-            "now": {
-              "t": "сейчас",
-              "s": "şimdi"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
+            "now": {
+              "t": "сейчас",
+              "s": "şimdi"
             },
             "time": {
               "t": "время",
               "s": "zaman"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "to have": {
+              "t": "иметь",
+              "s": "var"
             },
             "you": {
               "t": "ты",
               "s": "sen"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
             }
           }
         },
@@ -521,29 +550,29 @@
           ],
           "source": "O burada ve o da burada.",
           "gloss": {
-            "he": {
-              "t": "он",
-              "s": "o"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "here": {
-              "t": "здесь",
-              "s": "burada"
+            "also": {
+              "t": "тоже",
+              "s": "de"
             },
             "and": {
               "t": "и",
               "s": "ve"
             },
+            "he": {
+              "t": "он",
+              "s": "o"
+            },
+            "here": {
+              "t": "здесь",
+              "s": "burada"
+            },
             "she": {
               "t": "она",
               "s": "o"
             },
-            "also": {
-              "t": "тоже",
-              "s": "de"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         }
@@ -574,15 +603,11 @@
             },
             "!"
           ],
-          "source": "Sütlü kahve, lütfen!",
+          "source": "Süt ile kahve, lütfen!",
           "gloss": {
             "coffee": {
               "t": "кофе",
               "s": "kahve"
-            },
-            "with": {
-              "t": "с",
-              "s": "ile"
             },
             "milk": {
               "t": "молоко",
@@ -591,6 +616,10 @@
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "with": {
+              "t": "с",
+              "s": "ile"
             }
           }
         },
@@ -625,21 +654,21 @@
               "t": "я",
               "s": "ben"
             },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
+            "milk": {
+              "t": "молоко",
+              "s": "süt"
             },
             "tea": {
               "t": "чай",
               "s": "çay"
             },
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
+            },
             "without": {
               "t": "без",
               "s": "-siz"
-            },
-            "milk": {
-              "t": "молоко",
-              "s": "süt"
             }
           }
         },
@@ -679,18 +708,6 @@
           ],
           "source": "Sen çay içiyorsun ve ben su içiyorum.",
           "gloss": {
-            "you": {
-              "t": "ты",
-              "s": "sen"
-            },
-            "to drink": {
-              "t": "пить",
-              "s": "içmek"
-            },
-            "tea": {
-              "t": "чай",
-              "s": "çay"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -699,16 +716,28 @@
               "t": "я",
               "s": "ben"
             },
+            "tea": {
+              "t": "чай",
+              "s": "çay"
+            },
+            "to drink": {
+              "t": "пить",
+              "s": "içmek"
+            },
             "water": {
               "t": "вода",
               "s": "su"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         }
       ]
     },
     {
-      "count": 7,
+      "count": 6,
       "sentences": [
         {
           "id": "a1_015",
@@ -737,18 +766,6 @@
           ],
           "source": "Ekmek ve elma yiyorum.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to eat": {
-              "t": "есть",
-              "s": "yemek"
-            },
-            "bread": {
-              "t": "хлеб",
-              "s": "ekmek"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -756,6 +773,18 @@
             "apple": {
               "t": "яблоко",
               "s": "elma"
+            },
+            "bread": {
+              "t": "хлеб",
+              "s": "ekmek"
+            },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "to eat": {
+              "t": "есть",
+              "s": "yemek"
             }
           }
         },
@@ -798,43 +827,43 @@
             },
             "."
           ],
-          "source": "Kahvaltı iyi ama daha ekmek istiyorum, lütfen.",
+          "source": "Kahvaltı iyi ama daha fazla ekmek istiyorum, lütfen.",
           "gloss": {
+            "bread": {
+              "t": "хлеб",
+              "s": "ekmek"
+            },
             "breakfast": {
               "t": "завтрак",
               "s": "kahvaltı"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
             },
             "but": {
               "t": "но",
               "s": "ama"
             },
+            "good": {
+              "t": "хороший",
+              "s": "iyi"
+            },
             "i": {
               "t": "я",
               "s": "ben"
-            },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
             },
             "more": {
               "t": "больше",
               "s": "daha"
             },
-            "bread": {
-              "t": "хлеб",
-              "s": "ekmek"
-            },
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
             }
           }
         },
@@ -863,27 +892,27 @@
             },
             "."
           ],
-          "source": "Yumurtayı tuz ile yiyor.",
+          "source": "Tuz ile yumurta yiyor.",
           "gloss": {
+            "egg": {
+              "t": "яйцо",
+              "s": "yumurta"
+            },
             "he": {
               "t": "он",
               "s": "o"
+            },
+            "salt": {
+              "t": "соль",
+              "s": "tuz"
             },
             "to eat": {
               "t": "есть",
               "s": "yemek"
             },
-            "egg": {
-              "t": "яйцо",
-              "s": "yumurta"
-            },
             "with": {
               "t": "с",
               "s": "ile"
-            },
-            "salt": {
-              "t": "соль",
-              "s": "tuz"
             }
           }
         }
@@ -924,14 +953,6 @@
               "t": "мочь",
               "s": "-ebilmek"
             },
-            "you": {
-              "t": "ты",
-              "s": "sen"
-            },
-            "to help": {
-              "t": "помогать",
-              "s": "yardım etmek"
-            },
             "i": {
               "t": "я",
               "s": "ben"
@@ -939,6 +960,14 @@
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "to help": {
+              "t": "помогать",
+              "s": "yardım etmek"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -946,7 +975,7 @@
           "id": "a1_019",
           "target": [
             {
-              "t": "Извините",
+              "t": "Прости",
               "c": "sorry"
             },
             ",",
@@ -992,21 +1021,33 @@
           ],
           "source": "Özür dilerim, seni anlayamıyorum. Yavaş konuşabilir misin, lütfen?",
           "gloss": {
-            "sorry": {
-              "t": "извините",
-              "s": "özür dilerim"
+            "can": {
+              "t": "мочь",
+              "s": "-ebilmek"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
-            "can": {
-              "t": "мочь",
-              "s": "-ebilmek"
-            },
             "not": {
               "t": "не",
               "s": "değil"
+            },
+            "please": {
+              "t": "пожалуйста",
+              "s": "lütfen"
+            },
+            "slow": {
+              "t": "медленный",
+              "s": "yavaş"
+            },
+            "sorry": {
+              "t": "извините",
+              "s": "özür dilerim"
+            },
+            "to speak": {
+              "t": "говорить",
+              "s": "konuşmak"
             },
             "to understand": {
               "t": "понимать",
@@ -1015,18 +1056,6 @@
             "you": {
               "t": "ты",
               "s": "sen"
-            },
-            "to speak": {
-              "t": "говорить",
-              "s": "konuşmak"
-            },
-            "slow": {
-              "t": "медленный",
-              "s": "yavaş"
-            },
-            "please": {
-              "t": "пожалуйста",
-              "s": "lütfen"
             }
           }
         },
@@ -1073,19 +1102,11 @@
             },
             "."
           ],
-          "source": "Neden buradasın? Buradayım çünkü öğrenmek istiyorum.",
+          "source": "Neden buradasın? Buradayım, çünkü öğrenmek istiyorum.",
           "gloss": {
-            "why": {
-              "t": "почему",
-              "s": "neden"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "you": {
-              "t": "ты",
-              "s": "sen"
+            "because": {
+              "t": "потому что",
+              "s": "çünkü"
             },
             "here": {
               "t": "здесь",
@@ -1095,17 +1116,25 @@
               "t": "я",
               "s": "ben"
             },
-            "because": {
-              "t": "потому что",
-              "s": "çünkü"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "to learn": {
+              "t": "учить",
+              "s": "öğrenmek"
             },
             "to want": {
               "t": "хотеть",
               "s": "istemek"
             },
-            "to learn": {
-              "t": "учить",
-              "s": "öğrenmek"
+            "why": {
+              "t": "почему",
+              "s": "neden"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         }
@@ -1131,8 +1160,12 @@
             },
             "?"
           ],
-          "source": "Et mi, balık mı?",
+          "source": "Et veya balık?",
           "gloss": {
+            "fish": {
+              "t": "рыба",
+              "s": "balık"
+            },
             "meat": {
               "t": "мясо",
               "s": "et"
@@ -1140,10 +1173,6 @@
             "or": {
               "t": "или",
               "s": "veya"
-            },
-            "fish": {
-              "t": "рыба",
-              "s": "balık"
             }
           }
         },
@@ -1179,33 +1208,33 @@
           ],
           "source": "Su soğuk ama çay çok sıcak.",
           "gloss": {
-            "water": {
-              "t": "вода",
-              "s": "su"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "but": {
+              "t": "но",
+              "s": "ama"
             },
             "cold": {
               "t": "холодный",
               "s": "soğuk"
             },
-            "but": {
-              "t": "но",
-              "s": "ama"
+            "hot": {
+              "t": "горячий",
+              "s": "sıcak"
             },
             "tea": {
               "t": "чай",
               "s": "çay"
             },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
             "very": {
               "t": "очень",
               "s": "çok"
             },
-            "hot": {
-              "t": "горячий",
-              "s": "sıcak"
+            "water": {
+              "t": "вода",
+              "s": "su"
             }
           }
         },
@@ -1219,7 +1248,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "деньги",
@@ -1257,67 +1287,53 @@
             },
             "?"
           ],
-          "source": "Param var ve ekmek satın almak istiyorum. Mağaza nerede?",
+          "source": "Param var ve ekmek satın almak istiyorum. Market nerede?",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "money": {
-              "t": "деньги",
-              "s": "para"
-            },
             "and": {
               "t": "и",
               "s": "ve"
-            },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
-            },
-            "to buy": {
-              "t": "покупать",
-              "s": "satın almak"
             },
             "bread": {
               "t": "хлеб",
               "s": "ekmek"
             },
-            "where": {
-              "t": "где",
-              "s": "nerede"
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "money": {
+              "t": "деньги",
+              "s": "para"
+            },
+            "shop": {
+              "t": "магазин",
+              "s": "market"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "shop": {
-              "t": "магазин",
-              "s": "mağaza"
+            "to buy": {
+              "t": "покупать",
+              "s": "satın almak"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
+            },
+            "where": {
+              "t": "где",
+              "s": "nerede"
             }
           }
         },
         {
           "id": "a1_069",
           "target": [
-            {
-              "t": "Сколько",
-              "c": "how much"
-            },
-            {
-              "t": "это",
-              "c": "it"
-            },
-            ",",
-            {
-              "t": "пожалуйста",
-              "c": "please"
-            },
-            "?",
             {
               "t": "Я",
               "c": "i"
@@ -1334,41 +1350,42 @@
               "t": "рыбу",
               "c": "fish"
             },
-            "."
+            ".",
+            {
+              "t": "Сколько",
+              "c": "how much"
+            },
+            {
+              "t": "денег",
+              "c": "money"
+            },
+            "?"
           ],
-          "source": "O ne kadar, lütfen? Balığı satın almak istiyorum.",
+          "source": "Balığı satın almak istiyorum. Ne kadar para?",
           "gloss": {
+            "fish": {
+              "t": "рыба",
+              "s": "balık"
+            },
             "how much": {
               "t": "сколько",
               "s": "ne kadar"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "it": {
-              "t": "оно",
-              "s": "o"
-            },
-            "please": {
-              "t": "пожалуйста",
-              "s": "lütfen"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
+            "money": {
+              "t": "деньги",
+              "s": "para"
             },
             "to buy": {
               "t": "покупать",
               "s": "satın almak"
             },
-            "fish": {
-              "t": "рыба",
-              "s": "balık"
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
             }
           }
         }
@@ -1413,6 +1430,26 @@
           ],
           "source": "Bu benim evim ve çok büyük.",
           "gloss": {
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "big": {
+              "t": "большой",
+              "s": "büyük"
+            },
+            "house": {
+              "t": "дом",
+              "s": "ev"
+            },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "my": {
+              "t": "мой",
+              "s": "benim"
+            },
             "this": {
               "t": "этот",
               "s": "bu"
@@ -1421,42 +1458,24 @@
               "t": "быть",
               "s": "olmak"
             },
-            "my": {
-              "t": "мой",
-              "s": "benim"
-            },
-            "house": {
-              "t": "дом",
-              "s": "ev"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "it": {
-              "t": "оно",
-              "s": "o"
-            },
             "very": {
               "t": "очень",
               "s": "çok"
-            },
-            "big": {
-              "t": "большой",
-              "s": "büyük"
             }
           }
         },
         {
           "id": "a1_025",
           "target": [
+            "У",
             {
-              "t": "Комната",
+              "t": "комнаты",
               "c": "room"
             },
             {
-              "t": "имеет",
-              "c": "to have"
+              "t": "есть",
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "стол",
@@ -1479,22 +1498,6 @@
           ],
           "source": "Odada bir masa, bir sandalye ve bir yatak var.",
           "gloss": {
-            "room": {
-              "t": "комната",
-              "s": "oda"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "table": {
-              "t": "стол",
-              "s": "masa"
-            },
-            "chair": {
-              "t": "стул",
-              "s": "sandalye"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -1502,6 +1505,22 @@
             "bed": {
               "t": "кровать",
               "s": "yatak"
+            },
+            "chair": {
+              "t": "стул",
+              "s": "sandalye"
+            },
+            "room": {
+              "t": "комната",
+              "s": "oda"
+            },
+            "table": {
+              "t": "стол",
+              "s": "masa"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
             }
           }
         },
@@ -1509,7 +1528,7 @@
           "id": "a1_026",
           "target": [
             {
-              "t": "Извините",
+              "t": "Прости",
               "c": "sorry"
             },
             ",",
@@ -1532,31 +1551,31 @@
             },
             "."
           ],
-          "source": "Özür dilerim, kapı nerede? Pencere orada.",
+          "source": "Pardon, kapı nerede? Pencere orada.",
           "gloss": {
+            "door": {
+              "t": "дверь",
+              "s": "kapı"
+            },
             "sorry": {
               "t": "извините",
               "s": "özür dilerim"
             },
-            "where": {
-              "t": "где",
-              "s": "nerede"
+            "there": {
+              "t": "там",
+              "s": "orada"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "door": {
-              "t": "дверь",
-              "s": "kapı"
+            "where": {
+              "t": "где",
+              "s": "nerede"
             },
             "window": {
               "t": "окно",
               "s": "pencere"
-            },
-            "there": {
-              "t": "там",
-              "s": "orada"
             }
           }
         }
@@ -1597,21 +1616,9 @@
           ],
           "source": "Pencereyi aç ve kapıyı kapat, lütfen!",
           "gloss": {
-            "to open": {
-              "t": "открывать",
-              "s": "açmak"
-            },
-            "window": {
-              "t": "окно",
-              "s": "pencere"
-            },
             "and": {
               "t": "и",
               "s": "ve"
-            },
-            "to close": {
-              "t": "закрывать",
-              "s": "kapatmak"
             },
             "door": {
               "t": "дверь",
@@ -1620,6 +1627,18 @@
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "to close": {
+              "t": "закрывать",
+              "s": "kapatmak"
+            },
+            "to open": {
+              "t": "открывать",
+              "s": "açmak"
+            },
+            "window": {
+              "t": "окно",
+              "s": "pencere"
             }
           }
         },
@@ -1640,8 +1659,8 @@
             },
             ",",
             {
-              "t": "и",
-              "c": "and"
+              "t": "а",
+              "c": "but"
             },
             {
               "t": "та",
@@ -1655,33 +1674,37 @@
           ],
           "source": "Bu kitap yeni ve şu kitap eski.",
           "gloss": {
-            "this": {
-              "t": "этот",
-              "s": "bu"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "book": {
               "t": "книга",
               "s": "kitap"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "but": {
+              "t": "но",
+              "s": "ama"
             },
             "new": {
               "t": "новый",
               "s": "yeni"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "old": {
+              "t": "старый",
+              "s": "eski"
             },
             "that": {
               "t": "тот",
               "s": "şu"
             },
-            "old": {
-              "t": "старый",
-              "s": "eski"
+            "this": {
+              "t": "этот",
+              "s": "bu"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -1711,31 +1734,31 @@
             },
             "."
           ],
-          "source": "Küçük, güzel bir ev görebiliyorum.",
+          "source": "Güzel, küçük bir ev görüyorum.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
+            "beautiful": {
+              "t": "красивый",
+              "s": "güzel"
             },
             "can": {
               "t": "мочь",
               "s": "-ebilmek"
             },
-            "to see": {
-              "t": "видеть",
-              "s": "görmek"
+            "house": {
+              "t": "дом",
+              "s": "ev"
+            },
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
             "small": {
               "t": "маленький",
               "s": "küçük"
             },
-            "beautiful": {
-              "t": "красивый",
-              "s": "güzel"
-            },
-            "house": {
-              "t": "дом",
-              "s": "ev"
+            "to see": {
+              "t": "видеть",
+              "s": "görmek"
             }
           }
         }
@@ -1780,39 +1803,39 @@
             },
             "."
           ],
-          "source": "Aile büyük: bir anne, bir baba, bir oğul ve bir kız.",
+          "source": "Aile büyük: anne, baba, oğlan ve kız.",
           "gloss": {
-            "family": {
-              "t": "семья",
-              "s": "aile"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "big": {
               "t": "большой",
               "s": "büyük"
             },
-            "mother": {
-              "t": "мать",
-              "s": "anne"
+            "daughter": {
+              "t": "дочь",
+              "s": "kız"
+            },
+            "family": {
+              "t": "семья",
+              "s": "aile"
             },
             "father": {
               "t": "отец",
               "s": "baba"
             },
+            "mother": {
+              "t": "мать",
+              "s": "anne"
+            },
             "son": {
               "t": "сын",
-              "s": "oğul"
+              "s": "oğlan"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "daughter": {
-              "t": "дочь",
-              "s": "kız"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -1841,31 +1864,31 @@
             },
             "."
           ],
-          "source": "Çocukların hepsi ebeveynler ile burada.",
+          "source": "Bütün çocuklar anne babaları ile burada.",
           "gloss": {
             "all": {
               "t": "все",
-              "s": "hepsi"
+              "s": "bütün"
             },
             "child": {
               "t": "ребёнок",
               "s": "çocuk"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
             "here": {
               "t": "здесь",
               "s": "burada"
             },
+            "parents": {
+              "t": "родители",
+              "s": "anne baba"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
             "with": {
               "t": "с",
               "s": "ile"
-            },
-            "parents": {
-              "t": "родители",
-              "s": "ebeveynler"
             }
           }
         },
@@ -1901,18 +1924,6 @@
           ],
           "source": "Anne burada ama baba burada değil.",
           "gloss": {
-            "mother": {
-              "t": "мать",
-              "s": "anne"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "here": {
-              "t": "здесь",
-              "s": "burada"
-            },
             "but": {
               "t": "но",
               "s": "ama"
@@ -1921,9 +1932,21 @@
               "t": "отец",
               "s": "baba"
             },
+            "here": {
+              "t": "здесь",
+              "s": "burada"
+            },
+            "mother": {
+              "t": "мать",
+              "s": "anne"
+            },
             "not": {
               "t": "не",
               "s": "değil"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         }
@@ -1942,7 +1965,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "брат",
@@ -1960,29 +1984,25 @@
           ],
           "source": "Bir erkek kardeşim ve bir kız kardeşim var.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "brother": {
               "t": "брат",
               "s": "erkek kardeş"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
             "sister": {
               "t": "сестра",
               "s": "kız kardeş"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "to have": {
+              "t": "иметь",
+              "s": "var"
             }
           }
         },
@@ -2010,25 +2030,25 @@
           ],
           "source": "Adam ve kadın arkadaş.",
           "gloss": {
-            "man": {
-              "t": "мужчина",
-              "s": "adam"
-            },
             "and": {
               "t": "и",
               "s": "ve"
             },
-            "woman": {
-              "t": "женщина",
-              "s": "kadın"
+            "friend": {
+              "t": "друг",
+              "s": "arkadaş"
+            },
+            "man": {
+              "t": "мужчина",
+              "s": "adam"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "friend": {
-              "t": "друг",
-              "s": "arkadaş"
+            "woman": {
+              "t": "женщина",
+              "s": "kadın"
             }
           }
         },
@@ -2043,36 +2063,29 @@
               "t": "знаю",
               "c": "to know"
             },
+            ",",
             {
-              "t": "того",
-              "c": "that"
+              "t": "где",
+              "c": "where"
             },
             {
-              "t": "мужчину",
-              "c": "man"
+              "t": "ты",
+              "c": "you"
+            },
+            {
+              "t": "живёшь",
+              "c": "to live"
             },
             ".",
             {
-              "t": "Он",
-              "c": "he"
+              "t": "Тот",
+              "c": "that"
             },
             {
-              "t": "живёт",
-              "c": "to live"
+              "t": "мужчина",
+              "c": "man"
             },
-            {
-              "t": "здесь",
-              "c": "here"
-            },
-            ",",
-            {
-              "t": "и",
-              "c": "and"
-            },
-            {
-              "t": "он",
-              "c": "he"
-            },
+            "—",
             {
               "t": "мой",
               "c": "my"
@@ -2083,51 +2096,47 @@
             },
             "."
           ],
-          "source": "Şu adamı tanıyorum. O burada yaşıyor ve benim arkadaşım.",
+          "source": "Nerede yaşadığını biliyorum. Şu adam benim arkadaşım.",
           "gloss": {
+            "friend": {
+              "t": "друг",
+              "s": "arkadaş"
+            },
             "i": {
               "t": "я",
               "s": "ben"
-            },
-            "to know": {
-              "t": "знать",
-              "s": "bilmek"
-            },
-            "that": {
-              "t": "тот",
-              "s": "şu"
             },
             "man": {
               "t": "мужчина",
               "s": "adam"
             },
-            "he": {
-              "t": "он",
-              "s": "o"
+            "my": {
+              "t": "мой",
+              "s": "benim"
             },
-            "to live": {
-              "t": "жить",
-              "s": "yaşamak"
-            },
-            "here": {
-              "t": "здесь",
-              "s": "burada"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "that": {
+              "t": "тот",
+              "s": "şu"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "my": {
-              "t": "мой",
-              "s": "benim"
+            "to know": {
+              "t": "знать",
+              "s": "bilmek"
             },
-            "friend": {
-              "t": "друг",
-              "s": "arkadaş"
+            "to live": {
+              "t": "жить",
+              "s": "yaşamak"
+            },
+            "where": {
+              "t": "где",
+              "s": "nerede"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -2140,8 +2149,8 @@
             },
             "!",
             {
-              "t": "Что",
-              "c": "what"
+              "t": "Как",
+              "c": "how"
             },
             {
               "t": "твоё",
@@ -2159,34 +2168,42 @@
               "t": "привет",
               "s": "merhaba"
             },
-            "what": {
-              "t": "что",
-              "s": "ne"
+            "how": {
+              "t": "как",
+              "s": "nasıl"
+            },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "name": {
+              "t": "имя",
+              "s": "isim"
             },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
+            "what": {
+              "t": "что",
+              "s": "ne"
+            },
             "your": {
               "t": "твой",
               "s": "senin"
-            },
-            "name": {
-              "t": "имя",
-              "s": "isim"
             }
           }
         }
       ]
     },
     {
-      "count": 10,
+      "count": 9,
       "sentences": [
         {
           "id": "a1_036",
           "target": [
             {
-              "t": "Иди",
+              "t": "Приходи",
               "c": "to come"
             },
             {
@@ -2200,25 +2217,41 @@
             },
             "!",
             {
-              "t": "Школа",
-              "c": "school"
-            },
-            "на",
-            {
-              "t": "этой",
+              "t": "Эта",
               "c": "this"
             },
             {
-              "t": "улице",
+              "t": "улица",
               "c": "street"
+            },
+            {
+              "t": "большая",
+              "c": "big"
+            },
+            ",",
+            {
+              "t": "и",
+              "c": "and"
+            },
+            {
+              "t": "школа",
+              "c": "school"
+            },
+            {
+              "t": "здесь",
+              "c": "here"
             },
             "."
           ],
-          "source": "Buraya gel, lütfen! Okul bu sokakta.",
+          "source": "Buraya gel, lütfen! Bu sokak büyük ve okul burada.",
           "gloss": {
-            "to come": {
-              "t": "приходить",
-              "s": "gelmek"
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "big": {
+              "t": "большой",
+              "s": "büyük"
             },
             "here": {
               "t": "здесь",
@@ -2232,21 +2265,21 @@
               "t": "школа",
               "s": "okul"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "in": {
-              "t": "в",
-              "s": "-de"
+            "street": {
+              "t": "улица",
+              "s": "sokak"
             },
             "this": {
               "t": "этот",
               "s": "bu"
             },
-            "street": {
-              "t": "улица",
-              "s": "sokak"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "to come": {
+              "t": "приходить",
+              "s": "gelmek"
             }
           }
         },
@@ -2279,56 +2312,60 @@
               "c": "i"
             },
             {
-              "t": "работаю",
-              "c": "to work"
+              "t": "прихожу",
+              "c": "to come"
             },
             {
               "t": "в",
-              "c": "in"
+              "c": "to"
             },
             {
-              "t": "большом",
-              "c": "big"
+              "t": "твой",
+              "c": "your"
             },
             {
-              "t": "магазине",
-              "c": "shop"
+              "t": "дом",
+              "c": "house"
             },
             "."
           ],
-          "source": "Şehirde yaşıyorum ve büyük bir mağazada çalışıyorum.",
+          "source": "Şehirde yaşıyorum ve senin evine geliyorum.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to live": {
-              "t": "жить",
-              "s": "yaşamak"
-            },
-            "in": {
-              "t": "в",
-              "s": "-de"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "city": {
               "t": "город",
               "s": "şehir"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "house": {
+              "t": "дом",
+              "s": "ev"
             },
-            "to work": {
-              "t": "работать",
-              "s": "çalışmak"
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
-            "big": {
-              "t": "большой",
-              "s": "büyük"
+            "in": {
+              "t": "в",
+              "s": "-de"
             },
-            "shop": {
-              "t": "магазин",
-              "s": "mağaza"
+            "to": {
+              "t": "к",
+              "s": "-e"
+            },
+            "to come": {
+              "t": "приходить",
+              "s": "gelmek"
+            },
+            "to live": {
+              "t": "жить",
+              "s": "yaşamak"
+            },
+            "your": {
+              "t": "твой",
+              "s": "senin"
             }
           }
         },
@@ -2342,7 +2379,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "новая",
@@ -2370,37 +2408,21 @@
               "c": "fast"
             },
             {
-              "t": "пойти",
+              "t": "поехать",
               "c": "to go"
             },
             {
-              "t": "к",
+              "t": "в",
               "c": "to"
             },
             {
-              "t": "работе",
-              "c": "work"
+              "t": "школу",
+              "c": "school"
             },
             "."
           ],
-          "source": "Yeni bir arabamız var ve işe hızlı gidebiliyoruz.",
+          "source": "Yeni bir arabamız var ve okula hızlı gidebiliyoruz.",
           "gloss": {
-            "we": {
-              "t": "мы",
-              "s": "biz"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "new": {
-              "t": "новый",
-              "s": "yeni"
-            },
-            "car": {
-              "t": "машина",
-              "s": "araba"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -2409,25 +2431,37 @@
               "t": "мочь",
               "s": "-ebilmek"
             },
-            "to go": {
-              "t": "идти",
-              "s": "gitmek"
-            },
-            "to": {
-              "t": "к",
-              "s": "-e"
-            },
-            "work": {
-              "t": "работа",
-              "s": "iş"
+            "car": {
+              "t": "машина",
+              "s": "araba"
             },
             "fast": {
               "t": "быстрый",
               "s": "hızlı"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "new": {
+              "t": "новый",
+              "s": "yeni"
+            },
+            "school": {
+              "t": "школа",
+              "s": "okul"
+            },
+            "to": {
+              "t": "к",
+              "s": "-e"
+            },
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
+            "we": {
+              "t": "мы",
+              "s": "biz"
             }
           }
         }
@@ -2440,12 +2474,12 @@
           "id": "a1_039",
           "target": [
             {
-              "t": "Хорошее",
-              "c": "good"
+              "t": "Утро",
+              "c": "morning"
             },
             {
-              "t": "утро",
-              "c": "morning"
+              "t": "красивое",
+              "c": "beautiful"
             },
             "!",
             {
@@ -2462,35 +2496,39 @@
             },
             "?"
           ],
-          "source": "İyi sabahlar! Bugün nasılsın?",
+          "source": "Sabah güzel! Bugün nasılsın?",
           "gloss": {
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
-            },
-            "morning": {
-              "t": "утро",
-              "s": "sabah"
+            "beautiful": {
+              "t": "красивый",
+              "s": "güzel"
             },
             "how": {
               "t": "как",
               "s": "nasıl"
             },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "morning": {
+              "t": "утро",
+              "s": "sabah"
+            },
             "to be": {
               "t": "быть",
               "s": "olmak"
             },
-            "you": {
-              "t": "ты",
-              "s": "sen"
+            "to go": {
+              "t": "идти",
+              "s": "gitmek"
             },
             "today": {
               "t": "сегодня",
               "s": "bugün"
             },
-            "day": {
-              "t": "день",
-              "s": "gün"
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -2542,37 +2580,37 @@
           ],
           "source": "Bugün bütün gün çalışıyorum ve bütün gece uyuyorum.",
           "gloss": {
-            "today": {
-              "t": "сегодня",
-              "s": "bugün"
-            },
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to work": {
-              "t": "работать",
-              "s": "çalışmak"
-            },
             "all": {
               "t": "все",
-              "s": "hepsi"
-            },
-            "day": {
-              "t": "день",
-              "s": "gün"
+              "s": "bütün"
             },
             "and": {
               "t": "и",
               "s": "ve"
             },
-            "to sleep": {
-              "t": "спать",
-              "s": "uyumak"
+            "day": {
+              "t": "день",
+              "s": "gün"
+            },
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
             "night": {
               "t": "ночь",
               "s": "gece"
+            },
+            "to sleep": {
+              "t": "спать",
+              "s": "uyumak"
+            },
+            "to work": {
+              "t": "работать",
+              "s": "çalışmak"
+            },
+            "today": {
+              "t": "сегодня",
+              "s": "bugün"
             }
           }
         },
@@ -2616,37 +2654,37 @@
           ],
           "source": "Dün akşam soğuktu ama yarın yeni bir gün.",
           "gloss": {
-            "yesterday": {
-              "t": "вчера",
-              "s": "dün"
-            },
-            "evening": {
-              "t": "вечер",
-              "s": "akşam"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "but": {
+              "t": "но",
+              "s": "ama"
             },
             "cold": {
               "t": "холодный",
               "s": "soğuk"
             },
-            "but": {
-              "t": "но",
-              "s": "ama"
+            "day": {
+              "t": "день",
+              "s": "gün"
             },
-            "tomorrow": {
-              "t": "завтра",
-              "s": "yarın"
+            "evening": {
+              "t": "вечер",
+              "s": "akşam"
             },
             "new": {
               "t": "новый",
               "s": "yeni"
             },
-            "day": {
-              "t": "день",
-              "s": "gün"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "tomorrow": {
+              "t": "завтра",
+              "s": "yarın"
+            },
+            "yesterday": {
+              "t": "вчера",
+              "s": "dün"
             }
           }
         }
@@ -2683,21 +2721,25 @@
           ],
           "source": "Bugün pazartesi ve yarın salı.",
           "gloss": {
-            "today": {
-              "t": "сегодня",
-              "s": "bugün"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "it": {
+              "t": "оно",
+              "s": "o"
             },
             "monday": {
               "t": "понедельник",
               "s": "pazartesi"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "today": {
+              "t": "сегодня",
+              "s": "bugün"
             },
             "tomorrow": {
               "t": "завтра",
@@ -2735,8 +2777,24 @@
             },
             "?"
           ],
-          "source": "Bugün çarşamba, perşembe veya cuma mı?",
+          "source": "Bugün çarşamba mı, perşembe mi, cuma mı?",
           "gloss": {
+            "friday": {
+              "t": "пятница",
+              "s": "cuma"
+            },
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "or": {
+              "t": "или",
+              "s": "veya"
+            },
+            "thursday": {
+              "t": "четверг",
+              "s": "perşembe"
+            },
             "to be": {
               "t": "быть",
               "s": "olmak"
@@ -2748,18 +2806,6 @@
             "wednesday": {
               "t": "среда",
               "s": "çarşamba"
-            },
-            "thursday": {
-              "t": "четверг",
-              "s": "perşembe"
-            },
-            "or": {
-              "t": "или",
-              "s": "veya"
-            },
-            "friday": {
-              "t": "пятница",
-              "s": "cuma"
             }
           }
         },
@@ -2803,21 +2849,17 @@
           ],
           "source": "Cumartesi ve pazar iyi: bütün gün uyuyorum.",
           "gloss": {
-            "saturday": {
-              "t": "суббота",
-              "s": "cumartesi"
+            "all": {
+              "t": "все",
+              "s": "bütün"
             },
             "and": {
               "t": "и",
               "s": "ve"
             },
-            "sunday": {
-              "t": "воскресенье",
-              "s": "pazar"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "day": {
+              "t": "день",
+              "s": "gün"
             },
             "good": {
               "t": "хороший",
@@ -2827,17 +2869,21 @@
               "t": "я",
               "s": "ben"
             },
+            "saturday": {
+              "t": "суббота",
+              "s": "cumartesi"
+            },
+            "sunday": {
+              "t": "воскресенье",
+              "s": "pazar"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
             "to sleep": {
               "t": "спать",
               "s": "uyumak"
-            },
-            "all": {
-              "t": "все",
-              "s": "hepsi"
-            },
-            "day": {
-              "t": "день",
-              "s": "gün"
             }
           }
         }
@@ -2856,7 +2902,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "два",
@@ -2882,25 +2929,17 @@
           ],
           "source": "İki erkek kardeşim ve bir kız kardeşim var.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "two": {
-              "t": "два",
-              "s": "iki"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "brother": {
               "t": "брат",
               "s": "erkek kardeş"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
             "one": {
               "t": "один",
@@ -2910,9 +2949,13 @@
               "t": "сестра",
               "s": "kız kardeş"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
+            "two": {
+              "t": "два",
+              "s": "iki"
             }
           }
         },
@@ -2943,7 +2986,8 @@
             },
             {
               "t": "есть",
-              "c": "to be"
+              "c": "to have",
+              "g": "быть"
             },
             {
               "t": "три",
@@ -2961,45 +3005,41 @@
           ],
           "source": "Ne zaman gelebilirsin? Bugün üç saatim var.",
           "gloss": {
-            "when": {
-              "t": "когда",
-              "s": "ne zaman"
-            },
             "can": {
               "t": "мочь",
               "s": "-ebilmek"
-            },
-            "you": {
-              "t": "ты",
-              "s": "sen"
-            },
-            "to come": {
-              "t": "приходить",
-              "s": "gelmek"
-            },
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "three": {
-              "t": "три",
-              "s": "üç"
             },
             "hour": {
               "t": "час",
               "s": "saat"
             },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "three": {
+              "t": "три",
+              "s": "üç"
+            },
+            "to come": {
+              "t": "приходить",
+              "s": "gelmek"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
             "today": {
               "t": "сегодня",
               "s": "bugün"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "when": {
+              "t": "когда",
+              "s": "ne zaman"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -3047,45 +3087,45 @@
           ],
           "source": "Evde dört oda, beş pencere ve altı kapı var.",
           "gloss": {
-            "house": {
-              "t": "дом",
-              "s": "ev"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "four": {
-              "t": "четыре",
-              "s": "dört"
-            },
-            "room": {
-              "t": "комната",
-              "s": "oda"
-            },
-            "five": {
-              "t": "пять",
-              "s": "beş"
-            },
-            "window": {
-              "t": "окно",
-              "s": "pencere"
-            },
             "and": {
               "t": "и",
               "s": "ve"
-            },
-            "six": {
-              "t": "шесть",
-              "s": "altı"
             },
             "door": {
               "t": "дверь",
               "s": "kapı"
             },
+            "five": {
+              "t": "пять",
+              "s": "beş"
+            },
+            "four": {
+              "t": "четыре",
+              "s": "dört"
+            },
+            "house": {
+              "t": "дом",
+              "s": "ev"
+            },
             "in": {
               "t": "в",
               "s": "-de"
+            },
+            "room": {
+              "t": "комната",
+              "s": "oda"
+            },
+            "six": {
+              "t": "шесть",
+              "s": "altı"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
+            "window": {
+              "t": "окно",
+              "s": "pencere"
             }
           }
         }
@@ -3138,41 +3178,41 @@
           ],
           "source": "Bir haftada yedi gün var ve ben beş gün çalışıyorum.",
           "gloss": {
-            "week": {
-              "t": "неделя",
-              "s": "hafta"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
-            },
-            "seven": {
-              "t": "семь",
-              "s": "yedi"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "day": {
               "t": "день",
               "s": "gün"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "five": {
+              "t": "пять",
+              "s": "beş"
             },
             "i": {
               "t": "я",
               "s": "ben"
             },
+            "in": {
+              "t": "в",
+              "s": "-de"
+            },
+            "seven": {
+              "t": "семь",
+              "s": "yedi"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
+            },
             "to work": {
               "t": "работать",
               "s": "çalışmak"
             },
-            "five": {
-              "t": "пять",
-              "s": "beş"
-            },
-            "in": {
-              "t": "в",
-              "s": "-de"
+            "week": {
+              "t": "неделя",
+              "s": "hafta"
             }
           }
         },
@@ -3225,33 +3265,17 @@
           ],
           "source": "On elma, dokuz yumurta ve sekiz balık istiyorum, lütfen.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
-            },
-            "ten": {
-              "t": "десять",
-              "s": "on"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "apple": {
               "t": "яблоко",
               "s": "elma"
             },
-            "nine": {
-              "t": "девять",
-              "s": "dokuz"
-            },
             "egg": {
               "t": "яйцо",
               "s": "yumurta"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
             },
             "eight": {
               "t": "восемь",
@@ -3261,9 +3285,25 @@
               "t": "рыба",
               "s": "balık"
             },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "nine": {
+              "t": "девять",
+              "s": "dokuz"
+            },
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "ten": {
+              "t": "десять",
+              "s": "on"
+            },
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
             }
           }
         },
@@ -3305,51 +3345,131 @@
             },
             "."
           ],
-          "source": "Çocuk on yaşında ve o her zaman öğrenmek istiyor.",
+          "source": "Çocuk on yaşında ve her zaman öğrenmek istiyor.",
           "gloss": {
-            "child": {
-              "t": "ребёнок",
-              "s": "çocuk"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "ten": {
-              "t": "десять",
-              "s": "on"
-            },
-            "year": {
-              "t": "год",
-              "s": "yıl"
-            },
-            "old": {
-              "t": "старый",
-              "s": "eski"
+            "always": {
+              "t": "всегда",
+              "s": "her zaman"
             },
             "and": {
               "t": "и",
               "s": "ve"
             },
+            "child": {
+              "t": "ребёнок",
+              "s": "çocuk"
+            },
             "he": {
               "t": "он",
               "s": "o"
             },
-            "always": {
-              "t": "всегда",
-              "s": "her zaman"
+            "old": {
+              "t": "старый",
+              "s": "eski"
             },
-            "to want": {
-              "t": "хотеть",
-              "s": "istemek"
+            "ten": {
+              "t": "десять",
+              "s": "on"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "to have": {
+              "t": "иметь",
+              "s": "var"
             },
             "to learn": {
               "t": "учить",
               "s": "öğrenmek"
             },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
+            "to want": {
+              "t": "хотеть",
+              "s": "istemek"
+            },
+            "year": {
+              "t": "год",
+              "s": "yıl"
+            }
+          }
+        },
+        {
+          "id": "a1_073",
+          "target": [
+            {
+              "t": "Десять",
+              "c": "ten"
+            },
+            ",",
+            {
+              "t": "девять",
+              "c": "nine"
+            },
+            ",",
+            {
+              "t": "восемь",
+              "c": "eight"
+            },
+            ",",
+            {
+              "t": "семь",
+              "c": "seven"
+            },
+            ",",
+            {
+              "t": "три",
+              "c": "three"
+            },
+            ",",
+            {
+              "t": "два",
+              "c": "two"
+            },
+            ",",
+            {
+              "t": "один",
+              "c": "one"
+            },
+            ",",
+            {
+              "t": "ноль",
+              "c": "zero"
+            },
+            "!"
+          ],
+          "source": "On, dokuz, sekiz, yedi, üç, iki, bir, sıfır!",
+          "gloss": {
+            "eight": {
+              "t": "восемь",
+              "s": "sekiz"
+            },
+            "nine": {
+              "t": "девять",
+              "s": "dokuz"
+            },
+            "one": {
+              "t": "один",
+              "s": "bir"
+            },
+            "seven": {
+              "t": "семь",
+              "s": "yedi"
+            },
+            "ten": {
+              "t": "десять",
+              "s": "on"
+            },
+            "three": {
+              "t": "три",
+              "s": "üç"
+            },
+            "two": {
+              "t": "два",
+              "s": "iki"
+            },
+            "zero": {
+              "t": "ноль",
+              "s": "sıfır"
             }
           }
         }
@@ -3399,41 +3519,41 @@
           ],
           "source": "Ocak ve şubat soğuk aylar ama haziran sıcak.",
           "gloss": {
-            "january": {
-              "t": "январь",
-              "s": "ocak"
-            },
             "and": {
               "t": "и",
               "s": "ve"
-            },
-            "february": {
-              "t": "февраль",
-              "s": "şubat"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "cold": {
-              "t": "холодный",
-              "s": "soğuk"
-            },
-            "month": {
-              "t": "месяц",
-              "s": "ay"
             },
             "but": {
               "t": "но",
               "s": "ama"
             },
-            "june": {
-              "t": "июнь",
-              "s": "haziran"
+            "cold": {
+              "t": "холодный",
+              "s": "soğuk"
+            },
+            "february": {
+              "t": "февраль",
+              "s": "şubat"
             },
             "hot": {
               "t": "горячий",
               "s": "sıcak"
+            },
+            "january": {
+              "t": "январь",
+              "s": "ocak"
+            },
+            "june": {
+              "t": "июнь",
+              "s": "haziran"
+            },
+            "month": {
+              "t": "месяц",
+              "s": "ay"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -3473,10 +3593,6 @@
           ],
           "source": "Mart ve nisan soğuk ama mayıs güzel.",
           "gloss": {
-            "march": {
-              "t": "март",
-              "s": "mart"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -3485,25 +3601,29 @@
               "t": "апрель",
               "s": "nisan"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "cold": {
-              "t": "холодный",
-              "s": "soğuk"
+            "beautiful": {
+              "t": "красивый",
+              "s": "güzel"
             },
             "but": {
               "t": "но",
               "s": "ama"
             },
+            "cold": {
+              "t": "холодный",
+              "s": "soğuk"
+            },
+            "march": {
+              "t": "март",
+              "s": "mart"
+            },
             "may": {
               "t": "май",
               "s": "mayıs"
             },
-            "beautiful": {
-              "t": "красивый",
-              "s": "güzel"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -3511,8 +3631,12 @@
           "id": "a1_053",
           "target": [
             {
-              "t": "Мне",
-              "c": "i"
+              "t": "Вода",
+              "c": "water"
+            },
+            {
+              "t": "здесь",
+              "c": "here"
             },
             {
               "t": "никогда",
@@ -3523,7 +3647,7 @@
               "c": "not"
             },
             {
-              "t": "холодно",
+              "t": "холодная",
               "c": "cold"
             },
             ",",
@@ -3540,60 +3664,52 @@
               "c": "always"
             },
             {
-              "t": "горячее",
+              "t": "горячо",
               "c": "hot"
-            },
-            {
-              "t": "здесь",
-              "c": "here"
             },
             "."
           ],
-          "source": "Ben asla soğuk olmam çünkü burada güneş her zaman sıcak.",
+          "source": "Burada su asla soğuk olmaz, çünkü güneş her zaman sıcak.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "never": {
-              "t": "никогда",
-              "s": "asla"
-            },
-            "cold": {
-              "t": "холодный",
-              "s": "soğuk"
+            "always": {
+              "t": "всегда",
+              "s": "her zaman"
             },
             "because": {
               "t": "потому что",
               "s": "çünkü"
             },
-            "sun": {
-              "t": "солнце",
-              "s": "güneş"
-            },
-            "always": {
-              "t": "всегда",
-              "s": "her zaman"
-            },
-            "hot": {
-              "t": "горячий",
-              "s": "sıcak"
+            "cold": {
+              "t": "холодный",
+              "s": "soğuk"
             },
             "here": {
               "t": "здесь",
               "s": "burada"
             },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
+            "hot": {
+              "t": "горячий",
+              "s": "sıcak"
+            },
+            "never": {
+              "t": "никогда",
+              "s": "asla"
             },
             "not": {
               "t": "не",
               "s": "değil"
+            },
+            "sun": {
+              "t": "солнце",
+              "s": "güneş"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "water": {
+              "t": "вода",
+              "s": "su"
             }
           }
         }
@@ -3647,10 +3763,6 @@
           ],
           "source": "Temmuz ve ağustos sıcak aylar, ben çok mutluyum.",
           "gloss": {
-            "july": {
-              "t": "июль",
-              "s": "temmuz"
-            },
             "and": {
               "t": "и",
               "s": "ve"
@@ -3659,29 +3771,33 @@
               "t": "август",
               "s": "ağustos"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "happy": {
+              "t": "счастливый",
+              "s": "mutlu"
             },
             "hot": {
               "t": "горячий",
               "s": "sıcak"
             },
-            "month": {
-              "t": "месяц",
-              "s": "ay"
-            },
             "i": {
               "t": "я",
               "s": "ben"
             },
+            "july": {
+              "t": "июль",
+              "s": "temmuz"
+            },
+            "month": {
+              "t": "месяц",
+              "s": "ay"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
             "very": {
               "t": "очень",
               "s": "çok"
-            },
-            "happy": {
-              "t": "счастливый",
-              "s": "mutlu"
             }
           }
         },
@@ -3726,41 +3842,41 @@
           ],
           "source": "Eylül, ekim ve kasım soğuk ama aralık güzel.",
           "gloss": {
-            "september": {
-              "t": "сентябрь",
-              "s": "eylül"
-            },
-            "october": {
-              "t": "октябрь",
-              "s": "ekim"
-            },
             "and": {
               "t": "и",
               "s": "ve"
             },
-            "november": {
-              "t": "ноябрь",
-              "s": "kasım"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "cold": {
-              "t": "холодный",
-              "s": "soğuk"
+            "beautiful": {
+              "t": "красивый",
+              "s": "güzel"
             },
             "but": {
               "t": "но",
               "s": "ama"
             },
+            "cold": {
+              "t": "холодный",
+              "s": "soğuk"
+            },
             "december": {
               "t": "декабрь",
               "s": "aralık"
             },
-            "beautiful": {
-              "t": "красивый",
-              "s": "güzel"
+            "november": {
+              "t": "ноябрь",
+              "s": "kasım"
+            },
+            "october": {
+              "t": "октябрь",
+              "s": "ekim"
+            },
+            "september": {
+              "t": "сентябрь",
+              "s": "eylül"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -3795,35 +3911,35 @@
             },
             "."
           ],
-          "source": "Aralık mutlu bir ay: ailenin hepsi burada.",
+          "source": "Aralık mutlu bir ay: bütün aile burada.",
           "gloss": {
+            "all": {
+              "t": "все",
+              "s": "bütün"
+            },
             "december": {
               "t": "декабрь",
               "s": "aralık"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "happy": {
-              "t": "счастливый",
-              "s": "mutlu"
-            },
-            "month": {
-              "t": "месяц",
-              "s": "ay"
-            },
-            "all": {
-              "t": "все",
-              "s": "hepsi"
             },
             "family": {
               "t": "семья",
               "s": "aile"
             },
+            "happy": {
+              "t": "счастливый",
+              "s": "mutlu"
+            },
             "here": {
               "t": "здесь",
               "s": "burada"
+            },
+            "month": {
+              "t": "месяц",
+              "s": "ay"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         }
@@ -3845,8 +3961,8 @@
             },
             ",",
             {
-              "t": "и",
-              "c": "and"
+              "t": "а",
+              "c": "but"
             },
             {
               "t": "дом",
@@ -3860,25 +3976,29 @@
           ],
           "source": "Araba kırmızı ve ev beyaz.",
           "gloss": {
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "but": {
+              "t": "но",
+              "s": "ama"
+            },
             "car": {
               "t": "машина",
               "s": "araba"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "house": {
+              "t": "дом",
+              "s": "ev"
             },
             "red": {
               "t": "красный",
               "s": "kırmızı"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "house": {
-              "t": "дом",
-              "s": "ev"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             },
             "white": {
               "t": "белый",
@@ -3914,17 +4034,13 @@
           ],
           "source": "Bana siyah telefonu ver, lütfen!",
           "gloss": {
-            "to give": {
-              "t": "давать",
-              "s": "vermek"
+            "black": {
+              "t": "чёрный",
+              "s": "siyah"
             },
             "i": {
               "t": "я",
               "s": "ben"
-            },
-            "black": {
-              "t": "чёрный",
-              "s": "siyah"
             },
             "phone": {
               "t": "телефон",
@@ -3933,6 +4049,10 @@
             "please": {
               "t": "пожалуйста",
               "s": "lütfen"
+            },
+            "to give": {
+              "t": "давать",
+              "s": "vermek"
             }
           }
         },
@@ -3973,33 +4093,33 @@
           ],
           "source": "Kapı yeşil, pencere mavi ve sandalye sarı.",
           "gloss": {
-            "door": {
-              "t": "дверь",
-              "s": "kapı"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "green": {
-              "t": "зелёный",
-              "s": "yeşil"
-            },
-            "window": {
-              "t": "окно",
-              "s": "pencere"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "blue": {
               "t": "синий",
               "s": "mavi"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
             "chair": {
               "t": "стул",
               "s": "sandalye"
+            },
+            "door": {
+              "t": "дверь",
+              "s": "kapı"
+            },
+            "green": {
+              "t": "зелёный",
+              "s": "yeşil"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "window": {
+              "t": "окно",
+              "s": "pencere"
             },
             "yellow": {
               "t": "жёлтый",
@@ -4048,6 +4168,22 @@
           ],
           "source": "Ben köpeği seviyorum ve çocuk kediyi seviyor.",
           "gloss": {
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "cat": {
+              "t": "кошка",
+              "s": "kedi"
+            },
+            "child": {
+              "t": "ребёнок",
+              "s": "çocuk"
+            },
+            "dog": {
+              "t": "собака",
+              "s": "köpek"
+            },
             "i": {
               "t": "я",
               "s": "ben"
@@ -4055,22 +4191,6 @@
             "to love": {
               "t": "любить",
               "s": "sevmek"
-            },
-            "dog": {
-              "t": "собака",
-              "s": "köpek"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "child": {
-              "t": "ребёнок",
-              "s": "çocuk"
-            },
-            "cat": {
-              "t": "кошка",
-              "s": "kedi"
             }
           }
         },
@@ -4087,8 +4207,8 @@
             },
             ",",
             {
-              "t": "и",
-              "c": "and"
+              "t": "а",
+              "c": "but"
             },
             {
               "t": "кошка",
@@ -4102,29 +4222,33 @@
           ],
           "source": "Köpek kahverengi ve kedi gri.",
           "gloss": {
-            "dog": {
-              "t": "собака",
-              "s": "köpek"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "brown": {
               "t": "коричневый",
               "s": "kahverengi"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "but": {
+              "t": "но",
+              "s": "ama"
             },
             "cat": {
               "t": "кошка",
               "s": "kedi"
             },
+            "dog": {
+              "t": "собака",
+              "s": "köpek"
+            },
             "grey": {
               "t": "серый",
               "s": "gri"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -4169,43 +4293,43 @@
             },
             "."
           ],
-          "source": "Turuncu kitabı veya pembe telefonu bulamıyorum.",
+          "source": "Turuncu kitabı ya da pembe telefonu bulamıyorum.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
+            "book": {
+              "t": "книга",
+              "s": "kitap"
             },
             "can": {
               "t": "мочь",
               "s": "-ebilmek"
             },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
             "not": {
               "t": "не",
               "s": "değil"
-            },
-            "to find": {
-              "t": "находить",
-              "s": "bulmak"
-            },
-            "orange": {
-              "t": "оранжевый",
-              "s": "turuncu"
-            },
-            "book": {
-              "t": "книга",
-              "s": "kitap"
             },
             "or": {
               "t": "или",
               "s": "veya"
             },
-            "pink": {
-              "t": "розовый",
-              "s": "pembe"
+            "orange": {
+              "t": "оранжевый",
+              "s": "turuncu"
             },
             "phone": {
               "t": "телефон",
               "s": "telefon"
+            },
+            "pink": {
+              "t": "розовый",
+              "s": "pembe"
+            },
+            "to find": {
+              "t": "находить",
+              "s": "bulmak"
             }
           }
         }
@@ -4242,18 +4366,6 @@
           ],
           "source": "Sokak uzun ama gün kısa.",
           "gloss": {
-            "street": {
-              "t": "улица",
-              "s": "sokak"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
-            },
-            "long": {
-              "t": "длинный",
-              "s": "uzun"
-            },
             "but": {
               "t": "но",
               "s": "ama"
@@ -4262,9 +4374,21 @@
               "t": "день",
               "s": "gün"
             },
+            "long": {
+              "t": "длинный",
+              "s": "uzun"
+            },
             "short": {
               "t": "короткий",
               "s": "kısa"
+            },
+            "street": {
+              "t": "улица",
+              "s": "sokak"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -4305,37 +4429,37 @@
           ],
           "source": "Çocuğun büyük gözleri, küçük elleri ve küçük ayakları var.",
           "gloss": {
-            "child": {
-              "t": "ребёнок",
-              "s": "çocuk"
-            },
-            "to have": {
-              "t": "иметь",
-              "s": "var"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "big": {
               "t": "большой",
               "s": "büyük"
             },
+            "child": {
+              "t": "ребёнок",
+              "s": "çocuk"
+            },
             "eye": {
               "t": "глаз",
               "s": "göz"
             },
-            "small": {
-              "t": "маленький",
-              "s": "küçük"
+            "foot": {
+              "t": "нога",
+              "s": "ayak"
             },
             "hand": {
               "t": "рука",
               "s": "el"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "small": {
+              "t": "маленький",
+              "s": "küçük"
             },
-            "foot": {
-              "t": "нога",
-              "s": "ayak"
+            "to have": {
+              "t": "иметь",
+              "s": "var"
             }
           }
         },
@@ -4404,45 +4528,45 @@
           ],
           "source": "Kitapların hepsini alamıyorum. Ne yapabilirim? Bana yardım edebilir misin?",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "can": {
-              "t": "мочь",
-              "s": "-ebilmek"
-            },
-            "not": {
-              "t": "не",
-              "s": "değil"
-            },
-            "to take": {
-              "t": "брать",
-              "s": "almak"
-            },
             "all": {
               "t": "все",
-              "s": "hepsi"
+              "s": "bütün"
             },
             "book": {
               "t": "книга",
               "s": "kitap"
             },
-            "what": {
-              "t": "что",
-              "s": "ne"
+            "can": {
+              "t": "мочь",
+              "s": "-ebilmek"
+            },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "not": {
+              "t": "не",
+              "s": "değil"
             },
             "to do": {
               "t": "делать",
               "s": "yapmak"
             },
-            "you": {
-              "t": "ты",
-              "s": "sen"
-            },
             "to help": {
               "t": "помогать",
               "s": "yardım etmek"
+            },
+            "to take": {
+              "t": "брать",
+              "s": "almak"
+            },
+            "what": {
+              "t": "что",
+              "s": "ne"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         },
@@ -4457,78 +4581,62 @@
               "t": "голова",
               "c": "head"
             },
-            {
-              "t": "горячая",
-              "c": "hot"
-            },
             ",",
+            {
+              "t": "мои",
+              "c": "my"
+            },
+            {
+              "t": "руки",
+              "c": "hand"
+            },
             {
               "t": "и",
               "c": "and"
             },
             {
-              "t": "я",
-              "c": "i"
+              "t": "мои",
+              "c": "my"
             },
             {
-              "t": "не",
-              "c": "not"
+              "t": "ноги",
+              "c": "foot"
             },
             {
-              "t": "могу",
-              "c": "can"
-            },
-            {
-              "t": "работать",
-              "c": "to work"
-            },
-            {
-              "t": "сегодня",
-              "c": "today"
+              "t": "холодные",
+              "c": "cold"
             },
             "."
           ],
-          "source": "Benim başım sıcak ve bugün çalışamıyorum.",
+          "source": "Başım, ellerim ve ayaklarım soğuk.",
           "gloss": {
-            "my": {
-              "t": "мой",
-              "s": "benim"
+            "and": {
+              "t": "и",
+              "s": "ve"
+            },
+            "cold": {
+              "t": "холодный",
+              "s": "soğuk"
+            },
+            "foot": {
+              "t": "нога",
+              "s": "ayak"
+            },
+            "hand": {
+              "t": "рука",
+              "s": "el"
             },
             "head": {
               "t": "голова",
               "s": "baş"
             },
+            "my": {
+              "t": "мой",
+              "s": "benim"
+            },
             "to be": {
               "t": "быть",
               "s": "olmak"
-            },
-            "hot": {
-              "t": "горячий",
-              "s": "sıcak"
-            },
-            "and": {
-              "t": "и",
-              "s": "ve"
-            },
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "can": {
-              "t": "мочь",
-              "s": "-ebilmek"
-            },
-            "not": {
-              "t": "не",
-              "s": "değil"
-            },
-            "to work": {
-              "t": "работать",
-              "s": "çalışmak"
-            },
-            "today": {
-              "t": "сегодня",
-              "s": "bugün"
             }
           }
         }
@@ -4565,29 +4673,29 @@
           ],
           "source": "İş zor ama para iyi.",
           "gloss": {
-            "work": {
-              "t": "работа",
-              "s": "iş"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "but": {
+              "t": "но",
+              "s": "ama"
             },
             "difficult": {
               "t": "трудный",
               "s": "zor"
             },
-            "but": {
-              "t": "но",
-              "s": "ama"
+            "good": {
+              "t": "хороший",
+              "s": "iyi"
             },
             "money": {
               "t": "деньги",
               "s": "para"
             },
-            "good": {
-              "t": "хороший",
-              "s": "iyi"
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
+            },
+            "work": {
+              "t": "работа",
+              "s": "iş"
             }
           }
         },
@@ -4631,37 +4739,37 @@
           ],
           "source": "Kahve kötü ve pahalı. Çay iyi ve ucuz.",
           "gloss": {
-            "coffee": {
-              "t": "кофе",
-              "s": "kahve"
-            },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "and": {
+              "t": "и",
+              "s": "ve"
             },
             "bad": {
               "t": "плохой",
               "s": "kötü"
             },
-            "and": {
-              "t": "и",
-              "s": "ve"
+            "cheap": {
+              "t": "дешёвый",
+              "s": "ucuz"
+            },
+            "coffee": {
+              "t": "кофе",
+              "s": "kahve"
             },
             "expensive": {
               "t": "дорогой",
               "s": "pahalı"
             },
-            "tea": {
-              "t": "чай",
-              "s": "çay"
-            },
             "good": {
               "t": "хороший",
               "s": "iyi"
             },
-            "cheap": {
-              "t": "дешёвый",
-              "s": "ucuz"
+            "tea": {
+              "t": "чай",
+              "s": "çay"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             }
           }
         },
@@ -4709,87 +4817,132 @@
               "t": "быстро",
               "c": "fast"
             },
-            ".",
-            {
-              "t": "Легко",
-              "c": "easy"
-            },
-            {
-              "t": "сказать",
-              "c": "to say"
-            },
-            ",",
-            {
-              "t": "трудно",
-              "c": "difficult"
-            },
-            {
-              "t": "сделать",
-              "c": "to do"
-            },
-            "!"
+            "."
           ],
-          "source": "Okuyabiliyorum ve yazabiliyorum ama hızlı konuşamıyorum. Söylemesi kolay, yapması zor!",
+          "source": "Okuyabiliyorum ve yazabiliyorum ama hızlı konuşamıyorum.",
           "gloss": {
-            "i": {
-              "t": "я",
-              "s": "ben"
-            },
-            "can": {
-              "t": "мочь",
-              "s": "-ebilmek"
-            },
-            "to read": {
-              "t": "читать",
-              "s": "okumak"
-            },
             "and": {
               "t": "и",
               "s": "ve"
-            },
-            "to write": {
-              "t": "писать",
-              "s": "yazmak"
             },
             "but": {
               "t": "но",
               "s": "ama"
             },
-            "not": {
-              "t": "не",
-              "s": "değil"
-            },
-            "to speak": {
-              "t": "говорить",
-              "s": "konuşmak"
+            "can": {
+              "t": "мочь",
+              "s": "-ebilmek"
             },
             "fast": {
               "t": "быстрый",
               "s": "hızlı"
             },
+            "i": {
+              "t": "я",
+              "s": "ben"
+            },
+            "not": {
+              "t": "не",
+              "s": "değil"
+            },
+            "to read": {
+              "t": "читать",
+              "s": "okumak"
+            },
+            "to speak": {
+              "t": "говорить",
+              "s": "konuşmak"
+            },
+            "to write": {
+              "t": "писать",
+              "s": "yazmak"
+            }
+          }
+        },
+        {
+          "id": "a1_072",
+          "target": [
+            {
+              "t": "Что",
+              "c": "what"
+            },
+            {
+              "t": "ты",
+              "c": "you"
+            },
+            {
+              "t": "скажешь",
+              "c": "to say"
+            },
+            "?",
+            {
+              "t": "Я",
+              "c": "i"
+            },
+            {
+              "t": "не",
+              "c": "not"
+            },
+            {
+              "t": "знаю",
+              "c": "to know"
+            },
+            "!",
+            {
+              "t": "Это",
+              "c": "it"
+            },
+            {
+              "t": "не",
+              "c": "not"
+            },
+            {
+              "t": "легко",
+              "c": "easy"
+            },
+            "."
+          ],
+          "source": "Ne diyorsun? Bilmiyorum! O kolay değil.",
+          "gloss": {
             "easy": {
               "t": "лёгкий",
               "s": "kolay"
             },
-            "to say": {
-              "t": "сказать",
-              "s": "söylemek"
+            "i": {
+              "t": "я",
+              "s": "ben"
             },
-            "difficult": {
-              "t": "трудный",
-              "s": "zor"
+            "it": {
+              "t": "оно",
+              "s": "o"
+            },
+            "not": {
+              "t": "не",
+              "s": "değil"
+            },
+            "to be": {
+              "t": "быть",
+              "s": "olmak"
             },
             "to do": {
               "t": "делать",
               "s": "yapmak"
             },
-            "to": {
-              "t": "к",
-              "s": "-e"
+            "to know": {
+              "t": "знать",
+              "s": "bilmek"
             },
-            "to be": {
-              "t": "быть",
-              "s": "olmak"
+            "to say": {
+              "t": "сказать",
+              "s": "söylemek"
+            },
+            "what": {
+              "t": "что",
+              "s": "ne"
+            },
+            "you": {
+              "t": "ты",
+              "s": "sen"
             }
           }
         }

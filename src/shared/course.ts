@@ -423,11 +423,11 @@ function checkSentence(
           errors.push(
             `${sentence.id} [${lang}]: gloss override "${token.g}" has stray whitespace`
           );
-        } else if (token.g === token.t) {
-          errors.push(
-            `${sentence.id} [${lang}]: token "${token.t}" overrides its gloss with itself`
-          );
         }
+        // No check that `g` differs from `t`: an override is legitimate when
+        // the token IS the citation form of a second lemma. Spanish `bien`
+        // and Turkish `bütün` are exactly that - uninflected words standing
+        // in for a concept whose bank citation is a different word.
       }
     }
     safeTokensByLang.set(lang, safeTokens);
