@@ -1,74 +1,427 @@
 {
   "level": "a1",
   "lessons": [
-    { "id": 1,
-      "new": ["hello", "i", "you", "to be", "good", "how", "thank you"],
-      "sentences": ["a1_001", "a1_002"] },
-    { "id": 2,
-      "new": ["yes", "no", "not", "and", "very", "please", "goodbye"],
-      "sentences": ["a1_003", "a1_004", "a1_005"] },
-    { "id": 3,
-      "new": ["he", "she", "we", "they", "where", "here", "there"],
-      "sentences": ["a1_006", "a1_007", "a1_008"] },
-    { "id": 4,
-      "new": ["what", "who", "it", "to have", "time", "now", "also", "sorry"],
-      "sentences": ["a1_009", "a1_010", "a1_011"] },
-    { "id": 5,
-      "new": ["water", "coffee", "tea", "milk", "with", "without", "to want", "to drink", "more"],
-      "sentences": ["a1_012", "a1_013", "a1_014"] },
-    { "id": 6,
-      "new": ["bread", "apple", "egg", "salt", "breakfast", "to eat", "but"],
-      "sentences": ["a1_015", "a1_016", "a1_017"] },
-    { "id": 7,
-      "new": ["can", "to speak", "to help", "to understand", "to learn", "slow", "fast", "why", "because"],
-      "sentences": ["a1_018", "a1_019", "a1_020"] },
-    { "id": 8,
-      "new": ["meat", "fish", "or", "hot", "cold", "to buy", "money", "how much", "shop"],
-      "sentences": ["a1_021", "a1_022", "a1_023", "a1_069"] },
-    { "id": 9,
-      "new": ["this", "my", "house", "room", "door", "window", "table", "chair", "bed", "big"],
-      "sentences": ["a1_024", "a1_025", "a1_026"] },
-    { "id": 10,
-      "new": ["that", "small", "new", "old", "beautiful", "to see", "to open", "to close", "book"],
-      "sentences": ["a1_027", "a1_028", "a1_029"] },
-    { "id": 11,
-      "new": ["family", "mother", "father", "parents", "son", "daughter", "child", "all"],
-      "sentences": ["a1_030", "a1_031", "a1_032"] },
-    { "id": 12,
-      "new": ["brother", "sister", "man", "woman", "friend", "your", "name", "to know", "to live"],
-      "sentences": ["a1_033", "a1_034", "a1_035", "a1_070"] },
-    { "id": 13,
-      "new": ["city", "street", "school", "work", "in", "to", "to work", "to go", "to come", "car"],
-      "sentences": ["a1_036", "a1_037", "a1_038"] },
-    { "id": 14,
-      "new": ["today", "tomorrow", "yesterday", "day", "night", "morning", "evening", "to sleep"],
-      "sentences": ["a1_039", "a1_040", "a1_041"] },
-    { "id": 15,
-      "new": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "week"],
-      "sentences": ["a1_042", "a1_043", "a1_044"] },
-    { "id": 16,
-      "new": ["one", "two", "three", "four", "five", "six", "hour", "when"],
-      "sentences": ["a1_045", "a1_046", "a1_047"] },
-    { "id": 17,
-      "new": ["seven", "eight", "nine", "ten", "zero", "month", "year", "always"],
-      "sentences": ["a1_048", "a1_049", "a1_050"] },
-    { "id": 18,
-      "new": ["january", "february", "march", "april", "may", "june", "never", "sun"],
-      "sentences": ["a1_051", "a1_052", "a1_053"] },
-    { "id": 19,
-      "new": ["july", "august", "september", "october", "november", "december", "happy"],
-      "sentences": ["a1_054", "a1_055", "a1_056"] },
-    { "id": 20,
-      "new": ["red", "blue", "green", "yellow", "black", "white", "phone", "to give"],
-      "sentences": ["a1_057", "a1_058", "a1_059"] },
-    { "id": 21,
-      "new": ["brown", "grey", "orange", "pink", "dog", "cat", "to love", "to find"],
-      "sentences": ["a1_060", "a1_061", "a1_062"] },
-    { "id": 22,
-      "new": ["head", "hand", "eye", "foot", "long", "short", "to take", "to do"],
-      "sentences": ["a1_063", "a1_064", "a1_065", "a1_071"] },
-    { "id": 23,
-      "new": ["to read", "to write", "to say", "easy", "difficult", "expensive", "cheap", "bad"],
-      "sentences": ["a1_066", "a1_067", "a1_068"] }
+    {
+      "id": 1,
+      "new": [
+        "hello",
+        "i",
+        "you",
+        "to be",
+        "good",
+        "how",
+        "thank you",
+        "to go",
+        "it"
+      ],
+      "sentences": [
+        "a1_001",
+        "a1_002"
+      ]
+    },
+    {
+      "id": 2,
+      "new": [
+        "yes",
+        "no",
+        "not",
+        "and",
+        "very",
+        "please",
+        "goodbye"
+      ],
+      "sentences": [
+        "a1_003",
+        "a1_004",
+        "a1_005"
+      ]
+    },
+    {
+      "id": 3,
+      "new": [
+        "he",
+        "she",
+        "we",
+        "they",
+        "where",
+        "here",
+        "there"
+      ],
+      "sentences": [
+        "a1_006",
+        "a1_007",
+        "a1_008"
+      ]
+    },
+    {
+      "id": 4,
+      "new": [
+        "what",
+        "who",
+        "to have",
+        "time",
+        "now",
+        "also",
+        "sorry"
+      ],
+      "sentences": [
+        "a1_009",
+        "a1_010",
+        "a1_011"
+      ]
+    },
+    {
+      "id": 5,
+      "new": [
+        "water",
+        "coffee",
+        "tea",
+        "milk",
+        "with",
+        "without",
+        "to want",
+        "to drink",
+        "more"
+      ],
+      "sentences": [
+        "a1_012",
+        "a1_013",
+        "a1_014"
+      ]
+    },
+    {
+      "id": 6,
+      "new": [
+        "bread",
+        "apple",
+        "egg",
+        "salt",
+        "breakfast",
+        "to eat",
+        "but"
+      ],
+      "sentences": [
+        "a1_015",
+        "a1_016",
+        "a1_017"
+      ]
+    },
+    {
+      "id": 7,
+      "new": [
+        "can",
+        "to speak",
+        "to help",
+        "to understand",
+        "to learn",
+        "slow",
+        "fast",
+        "why",
+        "because"
+      ],
+      "sentences": [
+        "a1_018",
+        "a1_019",
+        "a1_020"
+      ]
+    },
+    {
+      "id": 8,
+      "new": [
+        "meat",
+        "fish",
+        "or",
+        "hot",
+        "cold",
+        "to buy",
+        "money",
+        "how much",
+        "shop"
+      ],
+      "sentences": [
+        "a1_021",
+        "a1_022",
+        "a1_023",
+        "a1_069"
+      ]
+    },
+    {
+      "id": 9,
+      "new": [
+        "this",
+        "my",
+        "house",
+        "room",
+        "door",
+        "window",
+        "table",
+        "chair",
+        "bed",
+        "big"
+      ],
+      "sentences": [
+        "a1_024",
+        "a1_025",
+        "a1_026"
+      ]
+    },
+    {
+      "id": 10,
+      "new": [
+        "that",
+        "small",
+        "new",
+        "old",
+        "beautiful",
+        "to see",
+        "to open",
+        "to close",
+        "book"
+      ],
+      "sentences": [
+        "a1_027",
+        "a1_028",
+        "a1_029"
+      ]
+    },
+    {
+      "id": 11,
+      "new": [
+        "family",
+        "mother",
+        "father",
+        "parents",
+        "son",
+        "daughter",
+        "child",
+        "all"
+      ],
+      "sentences": [
+        "a1_030",
+        "a1_031",
+        "a1_032"
+      ]
+    },
+    {
+      "id": 12,
+      "new": [
+        "brother",
+        "sister",
+        "man",
+        "woman",
+        "friend",
+        "your",
+        "name",
+        "to know",
+        "to live"
+      ],
+      "sentences": [
+        "a1_033",
+        "a1_034",
+        "a1_035",
+        "a1_070"
+      ]
+    },
+    {
+      "id": 13,
+      "new": [
+        "city",
+        "street",
+        "school",
+        "work",
+        "in",
+        "to",
+        "to work",
+        "to come",
+        "car"
+      ],
+      "sentences": [
+        "a1_036",
+        "a1_037",
+        "a1_038"
+      ]
+    },
+    {
+      "id": 14,
+      "new": [
+        "today",
+        "tomorrow",
+        "yesterday",
+        "day",
+        "night",
+        "morning",
+        "evening",
+        "to sleep"
+      ],
+      "sentences": [
+        "a1_039",
+        "a1_040",
+        "a1_041"
+      ]
+    },
+    {
+      "id": 15,
+      "new": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "week"
+      ],
+      "sentences": [
+        "a1_042",
+        "a1_043",
+        "a1_044"
+      ]
+    },
+    {
+      "id": 16,
+      "new": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "hour",
+        "when"
+      ],
+      "sentences": [
+        "a1_045",
+        "a1_046",
+        "a1_047"
+      ]
+    },
+    {
+      "id": 17,
+      "new": [
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "zero",
+        "month",
+        "year",
+        "always"
+      ],
+      "sentences": [
+        "a1_048",
+        "a1_049",
+        "a1_050",
+        "a1_073"
+      ]
+    },
+    {
+      "id": 18,
+      "new": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "never",
+        "sun"
+      ],
+      "sentences": [
+        "a1_051",
+        "a1_052",
+        "a1_053"
+      ]
+    },
+    {
+      "id": 19,
+      "new": [
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
+        "happy"
+      ],
+      "sentences": [
+        "a1_054",
+        "a1_055",
+        "a1_056"
+      ]
+    },
+    {
+      "id": 20,
+      "new": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "phone",
+        "to give"
+      ],
+      "sentences": [
+        "a1_057",
+        "a1_058",
+        "a1_059"
+      ]
+    },
+    {
+      "id": 21,
+      "new": [
+        "brown",
+        "grey",
+        "orange",
+        "pink",
+        "dog",
+        "cat",
+        "to love",
+        "to find"
+      ],
+      "sentences": [
+        "a1_060",
+        "a1_061",
+        "a1_062"
+      ]
+    },
+    {
+      "id": 22,
+      "new": [
+        "head",
+        "hand",
+        "eye",
+        "foot",
+        "long",
+        "short",
+        "to take",
+        "to do"
+      ],
+      "sentences": [
+        "a1_063",
+        "a1_064",
+        "a1_065",
+        "a1_071"
+      ]
+    },
+    {
+      "id": 23,
+      "new": [
+        "to read",
+        "to write",
+        "to say",
+        "easy",
+        "difficult",
+        "expensive",
+        "cheap",
+        "bad"
+      ],
+      "sentences": [
+        "a1_066",
+        "a1_067",
+        "a1_068",
+        "a1_072"
+      ]
+    }
   ]
 }
