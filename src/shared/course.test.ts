@@ -42,6 +42,21 @@ function fixture() {
   };
 }
 
+// The same course with all seven language columns present, for the checks
+// that can only be judged against the whole union.
+function sevenLanguages() {
+  const f = fixture();
+  const all = ['en', 'de', 'fr', 'es', 'it', 'tr', 'ru'] as const;
+  for (const sentence of f.sentences) {
+    for (const lang of all) {
+      if (!sentence.text[lang]) {
+        sentence.text[lang] = sentence.text.de;
+      }
+    }
+  }
+  return { ...f, languages: all };
+}
+
 describe('conceptId', () => {
   it('trims and lowercases, matching the generate_pairs dedupe key', () => {
     expect(conceptId(' I ')).toBe('i');
@@ -117,10 +132,18 @@ describe('validateCourse', () => {
     expect(validateCourse(f).join('\n')).toContain('which is not in uses');
   });
 
+  // `uses` is the union across all seven languages, so this check only holds
+  // when all seven are linted; a single-column authoring pass must not see it.
   it('reports a concept in uses that appears in no language', () => {
-    const f = fixture();
+    const f = sevenLanguages();
     f.sentences[0].uses.push('day');
     expect(validateCourse(f).join('\n')).toContain('"day" is in uses but appears in no language');
+  });
+
+  it('stays quiet about the union when only some languages are linted', () => {
+    const f = fixture();
+    f.sentences[0].uses.push('day');
+    expect(validateCourse(f).join('\n')).not.toContain('appears in no language');
   });
 
   it('reports a missing language', () => {

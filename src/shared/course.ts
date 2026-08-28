@@ -41,6 +41,10 @@ export interface ValidateInput {
   languages: readonly string[];
 }
 
+/** The course is authored in seven languages. Checks that judge a sentence
+ *  across the whole union of them only hold when all seven are present. */
+export const ALL_LANGUAGES = 7;
+
 export const MIN_LESSON_SIZE = 5;
 export const MAX_LESSON_SIZE = 10;
 
@@ -439,14 +443,22 @@ function checkSentence(
   // A concept listed in `uses` but never rendered means `uses` is overstated,
   // which would make the unlock check pass for a sentence that does not need
   // the concept at all.
-  for (const concept of usesList) {
-    const appears = languages.some(lang =>
-      (safeTokensByLang.get(lang) ?? []).some(
-        token => typeof token !== 'string' && token.c === concept
-      )
-    );
-    if (!appears) {
-      errors.push(`${sentence.id}: "${concept}" is in uses but appears in no language`);
+  //
+  // `uses` is the union across all seven languages, so this can only be judged
+  // when all seven are being linted. During a single-column authoring pass it
+  // would demand one language carry the whole union, which no language does:
+  // running it against Turkish alone reported 114 errors, every one of them a
+  // concept another column renders.
+  if (languages.length >= ALL_LANGUAGES) {
+    for (const concept of usesList) {
+      const appears = languages.some(lang =>
+        (safeTokensByLang.get(lang) ?? []).some(
+          token => typeof token !== 'string' && token.c === concept
+        )
+      );
+      if (!appears) {
+        errors.push(`${sentence.id}: "${concept}" is in uses but appears in no language`);
+      }
     }
   }
 
