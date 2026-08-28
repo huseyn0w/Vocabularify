@@ -8,16 +8,16 @@ describe('layoutTokens', () => {
     expect(
       layoutTokens([{ t: 'ich', c: 'i' }, { t: 'bin', c: 'to be' }, '.'])
     ).toEqual([
-      { text: 'ich', concept: 'i', space: false },
-      { text: 'bin', concept: 'to be', space: true },
-      { text: '.', concept: null, space: false }
+      { text: 'ich', concept: 'i', lemma: null, space: false },
+      { text: 'bin', concept: 'to be', lemma: null, space: true },
+      { text: '.', concept: null, lemma: null, space: false }
     ]);
   });
 
   it('marks glue with a null concept', () => {
     expect(layoutTokens(['der', { t: 'Mann', c: 'man' }])).toEqual([
-      { text: 'der', concept: null, space: false },
-      { text: 'Mann', concept: 'man', space: true }
+      { text: 'der', concept: null, lemma: null, space: false },
+      { text: 'Mann', concept: 'man', lemma: null, space: true }
     ]);
   });
 
@@ -29,8 +29,8 @@ describe('layoutTokens', () => {
     expect(
       layoutTokens([{ t: 'a', c: 'x' }, null as unknown as SentenceToken, { t: 'b', c: 'y' }])
     ).toEqual([
-      { text: 'a', concept: 'x', space: false },
-      { text: 'b', concept: 'y', space: true }
+      { text: 'a', concept: 'x', lemma: null, space: false },
+      { text: 'b', concept: 'y', lemma: null, space: true }
     ]);
   });
 
@@ -42,8 +42,8 @@ describe('layoutTokens', () => {
         { t: 'b', c: 'y' }
       ])
     ).toEqual([
-      { text: 'a', concept: 'x', space: false },
-      { text: 'b', concept: 'y', space: true }
+      { text: 'a', concept: 'x', lemma: null, space: false },
+      { text: 'b', concept: 'y', lemma: null, space: true }
     ]);
   });
 
@@ -55,8 +55,8 @@ describe('layoutTokens', () => {
         { t: 'b', c: 'y' }
       ])
     ).toEqual([
-      { text: 'a', concept: 'x', space: false },
-      { text: 'b', concept: 'y', space: true }
+      { text: 'a', concept: 'x', lemma: null, space: false },
+      { text: 'b', concept: 'y', lemma: null, space: true }
     ]);
   });
 });
@@ -166,5 +166,19 @@ describe('buildItems', () => {
 
   it('handles an empty vocabulary', () => {
     expect(buildItems([], lessons).map(i => i.kind)).toEqual(['sentence', 'sentence']);
+  });
+});
+
+describe('layoutTokens gloss override', () => {
+  it('carries a token\'s own lemma when it differs from the concept citation', () => {
+    const out = layoutTokens([{ t: 'estoy', c: 'to be', g: 'estar' }, { t: 'bien', c: 'good' }]);
+    expect(out[0].lemma).toBe('estar');
+    expect(out[0].concept).toBe('to be');
+    expect(out[1].lemma).toBeNull();
+  });
+
+  it('ignores a non-string override rather than passing it through', () => {
+    const bad = { t: 'estoy', c: 'to be', g: 42 } as unknown as SentenceToken;
+    expect(layoutTokens([bad])[0].lemma).toBeNull();
   });
 });

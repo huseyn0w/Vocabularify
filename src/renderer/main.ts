@@ -135,10 +135,13 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
         sentenceTargetEl.append(token.text);
         continue;
       }
+      // A token that inflects from a different lemma than the concept's
+      // citation form says so itself; the translation stays the concept's.
+      const shown = token.lemma ? { t: token.lemma, s: entry.s } : entry;
       const span = document.createElement('span');
       span.className = 'tok';
       span.textContent = token.text;
-      span.addEventListener('mouseenter', () => showGloss(span, entry));
+      span.addEventListener('mouseenter', () => showGloss(span, shown));
       span.addEventListener('mouseleave', hideGloss);
       sentenceTargetEl.append(span);
     }

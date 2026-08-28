@@ -375,3 +375,23 @@ describe('validateCourse coverage', () => {
     );
   });
 });
+
+describe('validateCourse gloss override', () => {
+  it('accepts an override that names a second lemma', () => {
+    const f = fixture();
+    f.sentences[0].text.de[3] = { t: 'bin', c: 'to be', g: 'sein' };
+    expect(validateCourse(f)).toEqual([]);
+  });
+
+  it('rejects an override that repeats the surface form', () => {
+    const f = fixture();
+    f.sentences[0].text.de[3] = { t: 'bin', c: 'to be', g: 'bin' };
+    expect(validateCourse(f).join('\n')).toContain('overrides its gloss with itself');
+  });
+
+  it('rejects an empty override', () => {
+    const f = fixture();
+    f.sentences[0].text.de[3] = { t: 'bin', c: 'to be', g: '  ' };
+    expect(validateCourse(f).join('\n')).toContain('has an empty gloss override');
+  });
+});

@@ -409,6 +409,22 @@ function checkSentence(
           `${sentence.id} [${lang}]: token "${token.t}" claims "${token.c}", which is not in uses`
         );
       }
+      // The lemma override exists for one concept carried by two verbs. It
+      // must name a real second lemma, not repeat the surface form and not
+      // restate what the bank already says.
+      if (token.g !== undefined) {
+        if (typeof token.g !== 'string' || token.g.trim().length === 0) {
+          errors.push(`${sentence.id} [${lang}]: token "${token.t}" has an empty gloss override`);
+        } else if (token.g !== token.g.trim() || /\s\s/.test(token.g)) {
+          errors.push(
+            `${sentence.id} [${lang}]: gloss override "${token.g}" has stray whitespace`
+          );
+        } else if (token.g === token.t) {
+          errors.push(
+            `${sentence.id} [${lang}]: token "${token.t}" overrides its gloss with itself`
+          );
+        }
+      }
     }
     safeTokensByLang.set(lang, safeTokens);
     const text = joinTokens(safeTokens);
