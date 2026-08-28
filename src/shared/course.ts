@@ -103,12 +103,52 @@ function isGlue(token: string, lang: string): boolean {
 export function validateCourse(input: ValidateInput): string[] {
   const { course, sentences, levelConcepts, priorConcepts, languages } = input;
   const errors: string[] = [];
+
+  // Nothing below is checkable without these two being arrays, so report and
+  // stop rather than let a missing/malformed shape crash every pass below.
+  if (!Array.isArray(course.lessons)) {
+    return ['course: "lessons" is missing or not an array'];
+  }
+  if (!Array.isArray(sentences)) {
+    return ['course: the sentence bank is not an array'];
+  }
+
+  // A bank entry that is not an object, or has no id, cannot be matched
+  // against anything a lesson references. Report it once and drop it from
+  // every pass below instead of crashing on `sentence.id`.
+  const bank: SentenceEntry[] = [];
+  for (const entry of sentences) {
+    const id = entry && typeof entry === 'object' ? (entry as SentenceEntry).id : undefined;
+    if (typeof id !== 'string' || id.length === 0) {
+      errors.push('course: a sentence bank entry is missing "id"');
+      continue;
+    }
+    bank.push(entry);
+  }
+
   const levelSet = new Set(levelConcepts);
+
+  // Normalize each lesson's array fields once so every pass below can trust
+  // `.new` and `.sentences` are arrays; report a malformed field once here
+  // instead of at every site that would otherwise crash on it.
+  const lessons = course.lessons.map(lesson => {
+    if (!Array.isArray(lesson.new)) {
+      errors.push(`lesson ${lesson.id}: "new" is missing or not an array`);
+    }
+    if (!Array.isArray(lesson.sentences)) {
+      errors.push(`lesson ${lesson.id}: "sentences" is missing or not an array`);
+    }
+    return {
+      ...lesson,
+      new: Array.isArray(lesson.new) ? lesson.new : [],
+      sentences: Array.isArray(lesson.sentences) ? lesson.sentences : []
+    };
+  });
 
   // Every concept of the level is introduced exactly once, and nothing foreign
   // is introduced.
   const introducedIn = new Map<string, number>();
-  for (const lesson of course.lessons) {
+  for (const lesson of lessons) {
     for (const concept of lesson.new) {
       const first = introducedIn.get(concept);
       if (first !== undefined) {
@@ -128,9 +168,9 @@ export function validateCourse(input: ValidateInput): string[] {
   }
 
   // Lesson size. The last lesson may be short because the level ran out.
-  course.lessons.forEach((lesson, i) => {
+  lessons.forEach((lesson, i) => {
     const size = lesson.new.length;
-    const isLast = i === course.lessons.length - 1;
+    const isLast = i === lessons.length - 1;
     const tooSmall = isLast ? size < 1 : size < MIN_LESSON_SIZE;
     if (tooSmall || size > MAX_LESSON_SIZE) {
       errors.push(
@@ -141,9 +181,9 @@ export function validateCourse(input: ValidateInput): string[] {
   });
 
   // Sentence references resolve, and every sentence is used exactly once.
-  const byId = new Map(sentences.map(s => [s.id, s]));
+  const byId = new Map(bank.map(s => [s.id, s]));
   const usedBy = new Map<string, number>();
-  for (const lesson of course.lessons) {
+  for (const lesson of lessons) {
     for (const id of lesson.sentences) {
       const first = usedBy.get(id);
       if (first !== undefined) {
@@ -156,7 +196,7 @@ export function validateCourse(input: ValidateInput): string[] {
       }
     }
   }
-  for (const sentence of sentences) {
+  for (const sentence of bank) {
     if (!usedBy.has(sentence.id)) {
       errors.push(`sentence "${sentence.id}" is in the bank but no lesson uses it`);
     }
@@ -165,7 +205,7 @@ export function validateCourse(input: ValidateInput): string[] {
   // Walk the course in order so each sentence is checked against the pool of
   // concepts the learner actually has at that point.
   const known = new Set(priorConcepts);
-  for (const lesson of course.lessons) {
+  for (const lesson of lessons) {
     for (const concept of lesson.new) {
       known.add(concept);
     }
@@ -189,14 +229,18 @@ function checkSentence(
   languages: readonly string[]
 ): string[] {
   const errors: string[] = [];
-  const uses = new Set(sentence.uses);
+  if (!Array.isArray(sentence.uses)) {
+    errors.push(`${sentence.id}: "uses" is missing or not an array`);
+  }
+  const usesList = Array.isArray(sentence.uses) ? sentence.uses : [];
+  const uses = new Set(usesList);
 
-  for (const concept of sentence.uses) {
+  for (const concept of usesList) {
     if (!known.has(concept)) {
       errors.push(`${sentence.id}: uses "${concept}", not taught by the end of lesson ${lessonId}`);
     }
   }
-  if (!sentence.uses.some(concept => introduced.has(concept))) {
+  if (!usesList.some(concept => introduced.has(concept))) {
     errors.push(
       `${sentence.id}: uses nothing from lesson ${lessonId}, so it reinforces nothing`
     );
@@ -245,7 +289,7 @@ function checkSentence(
   // A concept listed in `uses` but never rendered means `uses` is overstated,
   // which would make the unlock check pass for a sentence that does not need
   // the concept at all.
-  for (const concept of sentence.uses) {
+  for (const concept of usesList) {
     const appears = languages.some(lang =>
       (sentence.text?.[lang] ?? []).some(
         token => typeof token !== 'string' && token.c === concept
