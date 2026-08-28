@@ -142,13 +142,32 @@
         color: var(--muted);
       }
 
-      #chips { display: none; }
-      #phrase-container.assemble #chips {
-        display: flex;
+      #chips {
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         gap: 6px;
         margin-top: 4px;
+        opacity: 1;
+        max-height: 160px;
+        overflow: hidden;
+        transition: opacity 0.28s var(--ease-out), max-height 0.32s var(--ease-out),
+                    margin-top 0.32s var(--ease-out);
+      }
+      #phrase-container.assemble #chips {
+        display: flex;
+      }
+      /* On completion the card must end up looking like a passive sentence
+         card, so the spent chips fade and their space collapses smoothly
+         rather than leaving a reserved gap the translation-only card never
+         has. The 'assemble' class stays on so #chips keeps display:flex long
+         enough for opacity/max-height to transition; displayPhrase clears
+         both classes on the next card. */
+      #phrase-container.assemble.solved #chips {
+        opacity: 0;
+        max-height: 0;
+        margin-top: 0;
+        pointer-events: none;
       }
       /* While assembling, the answer is what the learner is building, so the
          translation stays and the sentence line shows only what is placed. */
@@ -271,6 +290,8 @@
         #target, #sentence-target, #gloss, #progress-bar-inner, body { transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease; }
         #target.hidden, #sentence-target.hidden { filter: none; transform: none; }
         .chip.wrong { animation: none; border-color: var(--accent); }
+        #chips { transition: none; }
+        #phrase-container.assemble.solved #chips { max-height: 0; opacity: 0; margin-top: 0; }
         @keyframes phrase-fade { from { opacity: 0; } to { opacity: 1; } }
       }
     </style>

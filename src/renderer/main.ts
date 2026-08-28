@@ -229,6 +229,10 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
       sentenceTargetEl.classList.remove('hidden');
       startAssemble(layout, () => {
         vocab.setHold(false);
+        // The card becomes an ordinary sentence card: keep 'assemble' so
+        // #chips stays flex long enough to fade and collapse, then let
+        // displayPhrase clear both classes on the next card.
+        phraseContainer.classList.add('solved');
         renderTokens(layout, item.gloss);
         speak(text, toLocale);
       });
@@ -255,7 +259,7 @@ type LaidOutToken = import('../shared/items').LaidOutToken;
     hideGloss();
     vocab.setHold(false);
     chipsEl.textContent = '';
-    phraseContainer.classList.remove('assemble');
+    phraseContainer.classList.remove('assemble', 'solved');
     updateProgressBar(index, total);
     replayEnterAnimation();
     phraseContainer.classList.toggle('sentence', item.kind === 'sentence');
