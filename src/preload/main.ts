@@ -1,6 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron';
 import { IPC } from '../shared/constants';
-import type { Background, MainVocabApi } from '../shared/types';
+import type { Background, DisplayPhrasePayload, MainVocabApi } from '../shared/types';
 
 // The main process passes the persisted theme as a launch argument
 // (`--vocab-theme=dark|light`) so the renderer can paint the right theme on the
@@ -14,8 +14,8 @@ const initialBackground: Background = themeArg?.split('=')[1] === 'dark' ? 'dark
 const api: MainVocabApi = {
   initialBackground,
   onDisplayPhrase: callback =>
-    ipcRenderer.on(IPC.DISPLAY_PHRASE, (_event, phrase, mode, index, total) =>
-      callback({ phrase, mode, index, total })
+    ipcRenderer.on(IPC.DISPLAY_PHRASE, (_event, payload: DisplayPhrasePayload) =>
+      callback(payload)
     ),
   onSetBackground: callback =>
     ipcRenderer.on(IPC.SET_BACKGROUND, (_event, background) => callback(background)),
@@ -27,6 +27,7 @@ const api: MainVocabApi = {
     ),
   onClearTimeouts: callback => ipcRenderer.on(IPC.CLEAR_TIMEOUTS, () => callback()),
   sendKeyPress: keyEvent => ipcRenderer.send(IPC.KEY_PRESS, keyEvent),
-  setPaused: paused => ipcRenderer.send(IPC.SET_PAUSED, paused)
+  setPaused: paused => ipcRenderer.send(IPC.SET_PAUSED, paused),
+  setHold: hold => ipcRenderer.send(IPC.SET_HOLD, hold)
 };
 contextBridge.exposeInMainWorld('vocab', api);

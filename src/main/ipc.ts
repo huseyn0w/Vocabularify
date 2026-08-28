@@ -13,6 +13,7 @@ export function registerIpcHandlers(handlers: IpcHandlers): void {
     openImport,
     onKeyPress,
     onSetPaused,
+    onSetHold,
     getSettings,
     setLanguagePair,
     setLevel,
@@ -35,4 +36,5 @@ export function registerIpcHandlers(handlers: IpcHandlers): void {
   ipcMain.handle(IPC.SET_SPEED, (_event, ms: number) => setSpeed(ms));
   ipcMain.on(IPC.KEY_PRESS, (_event, keyEvent: KeyEvent) => onKeyPress(keyEvent));
   ipcMain.on(IPC.SET_PAUSED, (_event, paused: boolean) => onSetPaused(paused));
+  ipcMain.on(IPC.SET_HOLD, (_event, hold: boolean) => onSetHold(hold));
 }

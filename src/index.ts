@@ -7,6 +7,7 @@ import {
   SPEED_INTERVALS,
   CUSTOM_LEVEL_PREFIX,
   LANGUAGE_META,
+  PHRASE_SEPARATOR,
 } from "./shared/constants";
 import { getLanguageFilePath, getLocale } from "./shared/languagePaths";
 import {
@@ -15,7 +16,7 @@ import {
   ensureCustomDictsDir,
   listAvailablePairs,
 } from "./main/config";
-import { clampInterval } from "./shared/state";
+import { clampInterval, progressKey } from "./shared/state";
 import { loadState, saveState } from "./main/store";
 import * as dictionaries from "./main/dictionaries";
 import { createPhraseEngine } from "./main/phraseEngine";
@@ -27,6 +28,8 @@ import {
 } from "./main/windows";
 import { createTrayController } from "./main/tray";
 import { registerIpcHandlers } from "./main/ipc";
+import { joinTokens, layoutTokens } from "./shared/items";
+import type { Item } from "./shared/items";
 import type {
   AppState,
   PhraseEngine,
@@ -43,6 +46,7 @@ let mainWindow: BrowserWindow | null = null;
 let engine: PhraseEngine;
 let tray: TrayController;
 let isHoverPaused = false;
+let isExerciseHold = false;
 
 function showError(message: string, error?: unknown) {
   dialog.showErrorBox(
@@ -64,16 +68,40 @@ function sendToWindow(channel: string, ...args: unknown[]) {
   }
 }
 
-// --- Phrase rendering -------------------------------------------------------
+// --- Item rendering ---------------------------------------------------------
 
-// Routes the current phrase to whichever surface the active mode uses:
-// the tray title in Menu Bar mode, the window otherwise.
-function renderPhrase(phrase: string, index: number, total: number) {
+function currentProgressKey(): string {
+  return progressKey(state.currentLanguage, state.currentFromLanguage, state.currentLevel);
+}
+
+// Routes the current item to whichever surface the active mode uses: the tray
+// title in Menu Bar mode, the window otherwise.
+function renderPhrase(item: Item, index: number, total: number) {
   state.currentIndex = index;
+  state.progress[currentProgressKey()] = index;
+
   if (state.currentMode === MODES.MENU_BAR) {
-    tray.setTitle(phrase);
+    // The tray title is a plain string, so a sentence goes in joined and
+    // without its translation. The OS truncates a long one.
+    tray.setTitle(
+      item.kind === "word"
+        ? `${item.source}${PHRASE_SEPARATOR}${item.target}`
+        : joinTokens(item.target),
+    );
   } else {
-    sendToWindow(IPC.DISPLAY_PHRASE, phrase, state.currentMode, index, total);
+    sendToWindow(IPC.DISPLAY_PHRASE, {
+      item,
+      layout: item.kind === "sentence" ? layoutTokens(item.target) : [],
+      mode: state.currentMode,
+      index,
+      total,
+    });
+  }
+
+  // A sentence is a lesson boundary. State is otherwise written only on quit,
+  // so a crash part-way through a course would throw the position away.
+  if (item.kind === "sentence") {
+    saveState(state);
   }
 }
 
@@ -104,10 +132,12 @@ function setBackground(background: Background) {
 }
 
 function switchLanguage(language: string, fromLanguage: string, level: string) {
+  // Remember where we were before the key changes under us.
+  state.progress[currentProgressKey()] = engine.getIndex();
   state.currentLanguage = language;
   state.currentFromLanguage = fromLanguage;
   state.currentLevel = level;
-  loadCurrentDictionary(0); // restart from the first word of the new dictionary
+  loadCurrentDictionary(state.progress[currentProgressKey()] ?? 0);
   sendToWindow(IPC.SET_LANGUAGES, getLocale(fromLanguage), getLocale(language));
   tray.refresh();
 }
@@ -192,20 +222,29 @@ function handleKeyPress(keyEvent: KeyEvent) {
   } else {
     engine.previous();
   }
-  // Don't resume auto-advance if the pointer is still hovering the window.
-  if (!isHoverPaused) {
-    engine.restartTimer();
-  }
+  // Don't resume auto-advance if the pointer is still hovering, or an
+  // unsolved exercise is waiting.
+  updateTimer();
 }
 
-// Pauses auto-advance while the window is hovered; the current word stays put.
-function setHoverPaused(paused: boolean) {
-  isHoverPaused = paused;
-  if (paused) {
+// Auto-advance is off while the pointer is over the window, and while an
+// unsolved assemble card is on screen. Either alone keeps it off.
+function updateTimer() {
+  if (isHoverPaused || isExerciseHold) {
     engine.stop();
   } else {
     engine.restartTimer();
   }
+}
+
+function setHoverPaused(paused: boolean) {
+  isHoverPaused = paused;
+  updateTimer();
+}
+
+function setExerciseHold(hold: boolean) {
+  isExerciseHold = hold;
+  updateTimer();
 }
 
 function registerGlobalShortcuts() {
@@ -244,7 +283,7 @@ function createWiredMainWindow() {
         getLocale(state.currentLanguage),
       );
       win.webContents.send(IPC.SET_BACKGROUND, state.currentBackground);
-      loadCurrentDictionary(state.currentIndex);
+      loadCurrentDictionary(state.progress[currentProgressKey()] ?? state.currentIndex);
       if (state.currentMode === MODES.MENU_BAR) {
         win.hide();
       }
@@ -304,6 +343,7 @@ app.whenReady().then(() => {
     openImport: () => createImportWindow(),
     onKeyPress: handleKeyPress,
     onSetPaused: setHoverPaused,
+    onSetHold: setExerciseHold,
     getSettings,
     setLanguagePair,
     setLevel,

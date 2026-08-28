@@ -1,25 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { toPhrases, splitPhrase, nextIndex, prevIndex, clampIndex } from './phrases';
-
-describe('toPhrases', () => {
-  it('joins vocabulary entries with the separator', () => {
-    expect(toPhrases([{ word_1: 'cat', word_2: 'Katze' }])).toEqual(['cat - Katze']);
-  });
-});
-
-describe('splitPhrase', () => {
-  it('splits into [word, translation]', () => {
-    expect(splitPhrase('cat - Katze')).toEqual(['cat', 'Katze']);
-  });
-
-  it('splits only on the first separator', () => {
-    expect(splitPhrase('a - b - c')).toEqual(['a', 'b - c']);
-  });
-
-  it('returns the whole phrase as one element when no separator', () => {
-    expect(splitPhrase('solo')).toEqual(['solo']);
-  });
-});
+import { nextIndex, prevIndex, clampIndex } from './phrases';
 
 describe('index arithmetic', () => {
   it('nextIndex wraps around', () => {

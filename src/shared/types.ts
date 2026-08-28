@@ -3,7 +3,7 @@
 // stay framework-free (no Electron imports) so it remains unit-testable and
 // safe to `import type` from a browser-context renderer.
 
-import type { Item } from './items';
+import type { Item, LaidOutToken } from './items';
 
 // --- Domain primitives ------------------------------------------------------
 
@@ -13,9 +13,6 @@ export interface VocabEntry {
   word_1: string;
   word_2: string;
 }
-
-/** A displayable "word - translation" string (see PHRASE_SEPARATOR). */
-export type Phrase = string;
 
 export type Background = 'light' | 'dark';
 
@@ -100,9 +97,13 @@ export interface SettingsSnapshot {
 // narrows `window.vocab` to it. Keeping both sides on the same interface is
 // what makes the IPC boundary type-safe.
 
-/** Payload pushed to the main display window for each phrase. */
+/** Payload pushed to the main display window for each item. */
 export interface DisplayPhrasePayload {
-  phrase: Phrase;
+  item: Item;
+  /** Sentence tokens with spacing already resolved. Empty for a word. The
+   *  renderer compiles to a classic script and cannot import the join rule,
+   *  so the main process applies it and sends the result. */
+  layout: LaidOutToken[];
   mode: Mode;
   index: number;
   total: number;
@@ -119,6 +120,9 @@ export interface MainVocabApi {
   onClearTimeouts(callback: () => void): void;
   sendKeyPress(keyEvent: KeyEvent): void;
   setPaused(paused: boolean): void;
+  /** Holds auto-advance while an unsolved exercise is on screen. Separate
+   *  from `setPaused`, which is hover: either one alone keeps the timer off. */
+  setHold(hold: boolean): void;
 }
 
 export interface SettingsVocabApi {
@@ -192,6 +196,7 @@ export interface IpcHandlers {
   openImport: () => void;
   onKeyPress: (keyEvent: KeyEvent) => void;
   onSetPaused: (paused: boolean) => void;
+  onSetHold: (hold: boolean) => void;
   getSettings: () => SettingsSnapshot;
   setLanguagePair: (pair: LanguagePair) => void;
   setLevel: (level: string) => void;

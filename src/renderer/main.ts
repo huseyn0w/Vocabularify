@@ -7,6 +7,8 @@
 // declarations stay file-local (classic scripts share global scope otherwise).
 type MainVocabApi = import('../shared/types').MainVocabApi;
 type DisplayPhrasePayload = import('../shared/types').DisplayPhrasePayload;
+type Item = import('../shared/types').DisplayPhrasePayload['item'];
+type LaidOutToken = import('../shared/items').LaidOutToken;
 
 (() => {
   const vocab = window.vocab as MainVocabApi;
@@ -20,8 +22,6 @@ type DisplayPhrasePayload = import('../shared/types').DisplayPhrasePayload;
   const targetEl = document.getElementById('target') as HTMLElement;
   const progressBarInner = document.getElementById('progress-bar-inner') as HTMLElement;
   const progressLabel = document.getElementById('progress-label') as HTMLElement;
-
-  const PHRASE_SEPARATOR = ' - ';
 
   let isSoundMode = false;
   let fromLocale = 'de-DE';
@@ -41,16 +41,6 @@ type DisplayPhrasePayload = import('../shared/types').DisplayPhrasePayload;
       utterance.lang = locale;
       speechSynthesis.speak(utterance);
     }
-  }
-
-  // Splits "word - translation" on the first separator; the source word is
-  // what the learner already knows, the target is the word being learned.
-  function splitPhrase(phrase: string): [string, string] {
-    const sepIndex = phrase.indexOf(PHRASE_SEPARATOR);
-    if (sepIndex === -1) {
-      return [phrase, ''];
-    }
-    return [phrase.slice(0, sepIndex), phrase.slice(sepIndex + PHRASE_SEPARATOR.length)];
   }
 
   function updateProgressBar(index: number, total: number) {
@@ -80,31 +70,44 @@ type DisplayPhrasePayload = import('../shared/types').DisplayPhrasePayload;
     targetEl.classList.remove('hidden');
   }
 
-  function displayPhrase({ phrase, mode, index, total }: DisplayPhrasePayload) {
-    clearRevealTimeout();
-    updateProgressBar(index, total);
-    replayEnterAnimation();
+  function displayWord(item: Extract<Item, { kind: 'word' }>, mode: string) {
+    sourceEl.textContent = item.source;
+    targetEl.textContent = item.target;
 
-    const [source, target] = splitPhrase(phrase);
-    sourceEl.textContent = source;
-    targetEl.textContent = target;
-
-    if (mode === 'Checkup' && target) {
+    if (mode === 'Checkup') {
       hideTarget();
-      speak(source, fromLocale);
+      speak(item.source, fromLocale);
       revealTimeoutId = setTimeout(() => {
         revealTarget();
-        speak(target, toLocale);
+        speak(item.target, toLocale);
       }, 3000);
       return;
     }
 
     revealTarget();
-    if (target) {
-      speak(source, fromLocale);
-      revealTimeoutId = setTimeout(() => speak(target, toLocale), 2000);
+    speak(item.source, fromLocale);
+    revealTimeoutId = setTimeout(() => speak(item.target, toLocale), 2000);
+  }
+
+  // Unstyled for now: Task 9 gives the sentence its own card.
+  function displaySentence(layout: LaidOutToken[], source: string) {
+    sourceEl.textContent = source;
+    targetEl.textContent = layout
+      .map(token => (token.space ? ` ${token.text}` : token.text))
+      .join('');
+    revealTarget();
+    speak(targetEl.textContent, toLocale);
+  }
+
+  function displayPhrase({ item, layout, mode, index, total }: DisplayPhrasePayload) {
+    clearRevealTimeout();
+    updateProgressBar(index, total);
+    replayEnterAnimation();
+
+    if (item.kind === 'sentence') {
+      displaySentence(layout, item.source);
     } else {
-      speak(source, toLocale);
+      displayWord(item, mode);
     }
   }
 
