@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { joinTokens, layoutTokens } from './items';
+import { joinTokens, layoutTokens, buildItems } from './items';
+import type { LessonSpec } from './items';
+import type { VocabEntry } from './types';
 
 describe('layoutTokens', () => {
   it('marks which tokens take a leading space and carries the concept id', () => {
@@ -52,5 +54,56 @@ describe('joinTokens', () => {
 
   it('returns an empty string for an empty list', () => {
     expect(joinTokens([])).toBe('');
+  });
+});
+
+const words: VocabEntry[] = [
+  { word_1: 'привет', word_2: 'Hallo' },
+  { word_1: 'я', word_2: 'ich' },
+  { word_1: 'быть', word_2: 'sein' },
+  { word_1: 'хорошо', word_2: 'gut' }
+];
+
+const lessons: LessonSpec[] = [
+  { count: 2, sentences: [{ id: 's1', target: [{ t: 'Hallo', c: 'hello' }], source: 'Привет', gloss: {} }] },
+  { count: 2, sentences: [{ id: 's2', target: [{ t: 'ich', c: 'I' }], source: 'я', gloss: {} }] }
+];
+
+describe('buildItems', () => {
+  it('returns a flat word list when there are no lessons', () => {
+    const items = buildItems(words);
+    expect(items).toHaveLength(4);
+    expect(items[0]).toEqual({ kind: 'word', source: 'привет', target: 'Hallo' });
+    expect(items.every(i => i.kind === 'word')).toBe(true);
+  });
+
+  it('interleaves each lesson\'s sentences after its words', () => {
+    expect(buildItems(words, lessons).map(i => i.kind)).toEqual([
+      'word', 'word', 'sentence', 'word', 'word', 'sentence'
+    ]);
+  });
+
+  it('carries the sentence payload through', () => {
+    const item = buildItems(words, lessons)[2];
+    expect(item).toEqual({
+      kind: 'sentence', id: 's1', source: 'Привет',
+      target: [{ t: 'Hallo', c: 'hello' }], gloss: {}
+    });
+  });
+
+  it('appends words the lessons do not cover, so a stale file hides nothing', () => {
+    const short: LessonSpec[] = [{ count: 1, sentences: [] }];
+    expect(buildItems(words, short).map(i => i.kind)).toEqual(['word', 'word', 'word', 'word']);
+  });
+
+  it('clamps a lesson that claims more words than remain', () => {
+    const greedy: LessonSpec[] = [{ count: 99, sentences: [] }, { count: 5, sentences: [] }];
+    const items = buildItems(words, greedy);
+    expect(items).toHaveLength(4);
+    expect(items.every(i => i !== undefined)).toBe(true);
+  });
+
+  it('handles an empty vocabulary', () => {
+    expect(buildItems([], lessons).map(i => i.kind)).toEqual(['sentence', 'sentence']);
   });
 });

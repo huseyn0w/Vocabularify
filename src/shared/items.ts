@@ -48,3 +48,86 @@ export function joinTokens(tokens: SentenceToken[]): string {
     .map(token => (token.space ? ` ${token.text}` : token.text))
     .join('');
 }
+
+import type { VocabEntry } from './types';
+
+/** The citation form of a concept plus its translation, so the renderer can
+ *  show what a conjugated or declined token came from without loading the
+ *  bank: `bin` -> `sein` / `быть`. */
+export interface SentenceGloss {
+  /** Citation form in the language being learned. */
+  t: string;
+  /** Its translation in the known language. */
+  s: string;
+}
+
+export interface SentenceSpec {
+  id: string;
+  /** Tokens in the language being learned. */
+  target: SentenceToken[];
+  /** The whole sentence in the known language, already joined. */
+  source: string;
+  /** Keyed by concept id; only the concepts this sentence uses. */
+  gloss: Record<string, SentenceGloss>;
+}
+
+export interface LessonSpec {
+  /** How many words of the word file belong to this lesson. Per pair: a
+   *  concept can be dropped when its target word collides with an earlier
+   *  one, so this is not simply the number of concepts in the lesson. */
+  count: number;
+  sentences: SentenceSpec[];
+}
+
+export interface LessonsFile {
+  lessons: LessonSpec[];
+}
+
+export type Item =
+  | { kind: 'word'; source: string; target: string }
+  | {
+      kind: 'sentence';
+      id: string;
+      source: string;
+      target: SentenceToken[];
+      gloss: Record<string, SentenceGloss>;
+    };
+
+// Produces the list the engine cycles through. Without `lessons` this is the
+// flat word list the app has always shown, so a level with no course file and
+// an imported custom dictionary both keep working unchanged.
+export function buildItems(vocabulary: VocabEntry[], lessons?: LessonSpec[]): Item[] {
+  const words: Item[] = vocabulary.map(entry => ({
+    kind: 'word',
+    source: entry.word_1,
+    target: entry.word_2
+  }));
+
+  if (!lessons || lessons.length === 0) {
+    return words;
+  }
+
+  const items: Item[] = [];
+  let cursor = 0;
+  for (const lesson of lessons) {
+    const take = Math.max(0, Math.min(lesson.count, words.length - cursor));
+    items.push(...words.slice(cursor, cursor + take));
+    cursor += take;
+    for (const sentence of lesson.sentences) {
+      items.push({
+        kind: 'sentence',
+        id: sentence.id,
+        source: sentence.source,
+        target: sentence.target,
+        gloss: sentence.gloss
+      });
+    }
+  }
+
+  // A lessons file that covers fewer words than the dictionary must never
+  // hide the rest, so the remainder is appended.
+  if (cursor < words.length) {
+    items.push(...words.slice(cursor));
+  }
+  return items;
+}
