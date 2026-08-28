@@ -45,21 +45,41 @@ export const MIN_LESSON_SIZE = 5;
 export const MAX_LESSON_SIZE = 10;
 
 // Words allowed to appear in a sentence without being a taught concept.
-// Articles and their preposition fusions only, because a learner meets those
-// through the citation form of every noun. Everything else - prepositions,
-// adverbs, particles - has to be taught first. Widening this list is a
-// deliberate act: each entry is a word the learner will see without ever
-// having been shown it.
+// Articles and their preposition fusions were the original members, but the
+// real test any entry has to pass is narrower than "is an article": the word
+// is grammatically obligatory, carries no meaning of its own apart from that
+// grammatical role, and there is nothing a learner could be taught about it -
+// no concept card would ever be written for it. Everything else -
+// prepositions, adverbs, particles that DO carry meaning - has to be taught
+// first. Widening this list is a deliberate act: each entry is a word the
+// learner will see without ever having been shown it.
 export const GLUE: Readonly<Record<string, readonly string[]>> = {
   en: ['a', 'an', 'the'],
   de: ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem',
        'einer', 'eines', 'im', 'am', 'zum', 'zur', 'ins', 'vom', 'beim'],
-  fr: ['le', 'la', 'les', "l'", 'un', 'une', 'des', 'du', 'de', "d'", 'au', 'aux'],
-  es: ['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'al', 'del'],
+  // 'ne' / "n'" - the first half of French bipartite negation ("ne ... pas").
+  // 'pas' carries the meaning and is backed by the taught "not" concept; 'ne'
+  // is obligatory in written French and means nothing on its own. Dropping it
+  // is spoken register, wrong for a phrasebook someone reads.
+  fr: ['le', 'la', 'les', "l'", 'un', 'une', 'des', 'du', 'de', "d'", 'au', 'aux',
+       'ne', "n'"],
+  // 'a' here is ONLY the Spanish personal "a" before a human direct object
+  // ("Conozco a ese hombre") - obligatory and meaningless there. Spanish also
+  // has a directional "a" with real meaning ("voy a Madrid"), backed by the
+  // taught "to" concept; that "a" must stay a token, never glue.
+  es: ['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'al', 'del', 'a'],
   it: ['il', 'lo', 'la', 'i', 'gli', 'le', "l'", 'un', 'uno', 'una', "un'",
        'al', 'del', 'nel', 'alla', 'della', 'nella'],
-  tr: ['bir'],
-  ru: []
+  // 'mı' / 'mi' / 'mu' / 'mü' / 'mısın' / 'misin' / 'musun' / 'müsün' - the
+  // yes/no question particle (vowel-harmonised, with or without the 2nd
+  // person singular ending). Turkish cannot ask a yes/no question without it,
+  // and there is nothing to teach: it is the Turkish spelling of the English
+  // inversion/do-support a learner already gets for free.
+  tr: ['bir', 'mı', 'mi', 'mu', 'mü', 'mısın', 'misin', 'musun', 'müsün'],
+  // 'у' - the Russian possessive construction has no verb of its own. In "У
+  // меня есть брат" the verb is "есть" (a form of the taught "to be") and 'у'
+  // is purely structural.
+  ru: ['у']
 };
 
 const PUNCTUATION_ONLY = /^[\p{P}\p{S}]+$/u;
