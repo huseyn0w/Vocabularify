@@ -61,8 +61,9 @@ Side benefit: the learner sees grammar in action rather than a table of it.
 
 ## Data
 
-The concept id is the English string from the bank. That is already the de facto
-key: `utils/generate_pairs.js` dedupes on `norm(row.en)`.
+The concept id is the English string from the bank, trimmed and lowercased.
+That is already the de facto key: `utils/generate_pairs.js` dedupes on
+`norm(row.en)`. So the bank row `{"en": "I", ...}` has the id `"i"`.
 
 ### `languages/_course/<level>.json`
 
@@ -73,7 +74,7 @@ The course order, in lessons.
   "level": "a1",
   "lessons": [
     { "id": 1,
-      "new": ["hello", "I", "to be", "good", "day"],
+      "new": ["hello", "i", "to be", "good", "day"],
       "sentences": ["a1_001", "a1_002"] },
     { "id": 2,
       "new": ["you", "how", "and", "thank you", "yes", "no"],
@@ -92,11 +93,11 @@ The sentence bank. One sentence, all 7 languages, tokenised.
 ```json
 {
   "id": "a1_001",
-  "uses": ["hello", "I", "to be", "good"],
+  "uses": ["hello", "i", "to be", "good"],
   "text": {
-    "de": [{"t":"Hallo","c":"hello"}, ",", {"t":"ich","c":"I"},
+    "de": [{"t":"Hallo","c":"hello"}, ",", {"t":"ich","c":"i"},
            {"t":"bin","c":"to be"}, {"t":"gut","c":"good"}, "."],
-    "ru": [{"t":"Привет","c":"hello"}, ",", {"t":"я","c":"I"},
+    "ru": [{"t":"Привет","c":"hello"}, ",", {"t":"я","c":"i"},
            {"t":"хорошо","c":"good"}, "."]
   }
 }
@@ -112,20 +113,31 @@ There is no separate plain-text field. Joining the tokens is the sentence.
 The join rule is one space between tokens, and no space before `, . ! ? ; :` or
 after an opening bracket or an apostrophe elision such as French `l'`.
 
-The rule has one implementation, `joinTokens` in `src/shared/items.ts`. The
-renderer imports it as usual. `utils/generate_course.js` requires the compiled
-`out/shared/items.js`, so `yarn compile` has to run before the generator. That
-coupling is deliberate: two copies of this rule would drift, and a drifted copy
-produces sentences that lint clean and render wrong.
+The rule has one implementation, in `src/shared/items.ts`. Three places need
+it: the lint, the generator, and the renderer drawing one element per token.
+
+Files under `src/renderer/` compile to classic scripts and cannot import
+anything, so the rule is split rather than copied. `layoutTokens` resolves
+spacing into data - each token gains a `space` flag and its concept id -
+and `joinTokens` is the string form built on top. The main process lays a
+sentence out before sending it, and the renderer only concatenates.
+
+`utils/*.js` require the compiled `out/shared/*.js`, so `yarn compile` runs
+before them. That coupling is deliberate: two copies of this rule would drift,
+and a drifted copy produces sentences that lint clean and render wrong.
 
 The Russian rendering shows the normal case: the present-tense copula does not
 exist, so `to be` simply has no token. `uses` is the union across all 7
 languages. Every language must fit inside `uses` plus the glue whitelist.
 
-### `utils/generate_course.js`
+### `utils/validate_course.js`
 
-Validates the course and projects it onto the language pairs. It doubles as the
-feedback loop for the authoring agents, who run it until it is clean.
+Validates the course. It doubles as the feedback loop for the authoring agents,
+who run it until it is clean. The rules themselves live in `src/shared/course.ts`
+so they are unit-testable; this is a thin CLI over the compiled build.
+
+`--languages en` restricts it to one column, for the pass where the course and
+the English sentences exist and the other six have not been translated yet.
 
 Checks:
 
@@ -144,6 +156,21 @@ Checks:
 - every sentence id referenced by a lesson exists, and every sentence in the
   bank is referenced by exactly one lesson.
 
+### Projection
+
+The per-pair lessons file is written by `utils/generate_pairs.js`, in the same
+pass that writes the word file.
+
+It has to be. That script drops a concept from a pair when its target word
+collides with one already emitted: the bank holds both `she -> sie` and
+`they -> sie`, so for any `de/*` pair one of them never reaches the word file.
+Lesson word counts are therefore per pair, and tallying them anywhere other
+than inside that dedupe would let the lesson boundaries drift.
+
+A sentence may use a concept that was dropped for its pair. That needs no
+handling: the concept was dropped precisely because its target word is identical
+to one already shown as a card.
+
 Output, per pair: `languages/<to>/<from>/<level>.lessons.json`
 
 ```json
@@ -155,9 +182,14 @@ Output, per pair: `languages/<to>/<from>/<level>.lessons.json`
           "source": "Привет, я хорошо." } ] } ] }
 ```
 
-`count` is the number of words in that lesson. Running sums give the lesson
-boundaries inside the word file. `target` holds the tokens of the language being
-learned. `source` is a plain string; the known-language side needs no tokens.
+`count` is the number of words in that lesson, for this pair. Running sums give
+the lesson boundaries inside the word file. `target` holds the tokens of the
+language being learned. `source` is a plain string; the known-language side
+needs no tokens.
+
+Each sentence also carries a `gloss`: the citation form and translation of every
+concept it uses, so the renderer can show what `bin` came from without loading
+the bank.
 
 ### `utils/generate_pairs.js`
 
@@ -218,7 +250,12 @@ sentences will be truncated by the system. Acceptable at A1; recorded as a risk.
 
 ### Assemble mode
 
-A toggle in Settings next to Checkup, off by default.
+A toggle in the Settings Playback panel, next to Sound, off by default.
+
+It sits with Sound rather than with the Mode chips because, like Sound, it
+layers on top of whatever mode is active. Checkup is a Mode chip because Checkup
+and Window are alternatives; assemble and Window are not. Menu Bar mode has no
+interaction surface, so assemble is ignored there.
 
 On a sentence card the concept-backed tokens are shuffled and shown as chips.
 Glue is already in place. Tapping in order builds the sentence. A wrong chip
@@ -248,7 +285,7 @@ loses it. Add a write on lesson boundary.
 
 ## Content
 
-Volume: 1049 concepts, roughly 135 lessons, 2 to 3 sentences each, so about 285
+Volume: 1049 concepts, roughly 140 lessons, 2 to 3 sentences each, so about 285
 sentences across 7 languages, near 2000 renderings.
 
 A1 is authored first, in one pipeline, and proofread by hand. That validates the
