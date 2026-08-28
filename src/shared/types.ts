@@ -164,16 +164,31 @@ export interface PhraseEngine {
   next(): void;
   previous(): void;
   setIntervalMs(ms: number): void;
+  /** Re-evaluates whether the timer should be running: stops it, then arms
+   *  it again only if `canAutoAdvance()` says yes and there is something to
+   *  show. Every path that starts a timer funnels through here, so no
+   *  caller can arm one that bypasses the predicate. */
   restartTimer(): void;
   stop(): void;
   render(): void;
   getIndex(): number;
   getCurrentItem(): Item | undefined;
+  /** Whether `load()` has completed at least once. `getIndex()` is `0` both
+   *  before the first load and legitimately at the first item, so callers
+   *  that persist the index need this to tell "no load yet" apart from
+   *  "loaded, sitting at item 0". */
+  hasLoaded(): boolean;
 }
 
 export interface PhraseEngineOptions {
   intervalMs: number;
   onRender: (item: Item, index: number, total: number) => void;
+  /** Whether the timer is allowed to be running right now. Required, not
+   *  optional: an omitted predicate is exactly the silent-bypass bug this
+   *  type exists to rule out. Consulted at arm time (inside `restartTimer`),
+   *  not captured once, so flipping it and calling `restartTimer()` again
+   *  takes effect immediately. */
+  canAutoAdvance: () => boolean;
 }
 
 export interface TrayActions {

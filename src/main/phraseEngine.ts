@@ -71,7 +71,11 @@ function readLessons(dictionaryPath: string): LessonSpec[] | undefined {
 // Owns the loaded item list, the current position, and the auto-advance
 // timer. It is surface-agnostic: it calls `onRender(item, index, total)`
 // and lets the caller decide where the item is shown (window or tray).
-export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions): PhraseEngine {
+export function createPhraseEngine({
+  intervalMs,
+  onRender,
+  canAutoAdvance
+}: PhraseEngineOptions): PhraseEngine {
   let items: Item[] = [];
   let index = 0;
   let interval = intervalMs;
@@ -82,6 +86,10 @@ export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions
   // alone can't tell that apart from "never started" - by the time either
   // caller checks it, the handle has already fired or hasn't been set yet.
   let running = false;
+  // `getIndex()` returns `0` both before any `load()` and legitimately at
+  // the first item post-load; this is what lets a caller (persisting the
+  // index under a progress key) tell those two apart.
+  let loaded = false;
 
   // Loads a dictionary and (re)starts cycling. `startIndex` lets a restored
   // position survive across dictionary switches; it is clamped to the new
@@ -91,6 +99,7 @@ export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions
     const vocabulary = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     items = buildItems(vocabulary, readLessons(filePath));
     index = clampIndex(startIndex, items.length);
+    loaded = true;
     // Tentatively mark ourselves running before the synchronous render, the
     // same way `restartTimer()` marks itself running before its own eventual
     // render: it is what lets a `stop()` called from inside `onRender` here
@@ -130,9 +139,14 @@ export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions
     return items[index]?.kind === 'sentence' ? interval * SENTENCE_DWELL_MULTIPLIER : interval;
   }
 
+  // "Re-evaluate", not "unconditionally arm": every path that wants a timer
+  // running - `load()`, `setIntervalMs()`, an explicit external call, and
+  // the timeout callback below - funnels through here, so `canAutoAdvance()`
+  // is what decides whether it actually gets armed. A caller cannot bypass
+  // suspension by reaching a different entry point.
   function restartTimer(): void {
     stop();
-    if (items.length > 0) {
+    if (items.length > 0 && canAutoAdvance()) {
       running = true;
       timer = setTimeout(() => {
         next();
@@ -163,6 +177,7 @@ export function createPhraseEngine({ intervalMs, onRender }: PhraseEngineOptions
     stop,
     render,
     getIndex: () => index,
-    getCurrentItem: () => items[index]
+    getCurrentItem: () => items[index],
+    hasLoaded: () => loaded
   };
 }

@@ -132,8 +132,15 @@ function setBackground(background: Background) {
 }
 
 function switchLanguage(language: string, fromLanguage: string, level: string) {
-  // Remember where we were before the key changes under us.
-  state.progress[currentProgressKey()] = engine.getIndex();
+  // Remember where we were before the key changes under us - but only if
+  // the engine has actually loaded something. The tray (and its Settings
+  // action) is live before the main window's first `did-finish-load`, so a
+  // pair/level switch that races ahead of that first `load()` would
+  // otherwise read the engine's uninitialised index (0) and stamp it over
+  // real persisted progress for the old key.
+  if (engine.hasLoaded()) {
+    state.progress[currentProgressKey()] = engine.getIndex();
+  }
   state.currentLanguage = language;
   state.currentFromLanguage = fromLanguage;
   state.currentLevel = level;
@@ -223,28 +230,19 @@ function handleKeyPress(keyEvent: KeyEvent) {
     engine.previous();
   }
   // Don't resume auto-advance if the pointer is still hovering, or an
-  // unsolved exercise is waiting.
-  updateTimer();
-}
-
-// Auto-advance is off while the pointer is over the window, and while an
-// unsolved assemble card is on screen. Either alone keeps it off.
-function updateTimer() {
-  if (isHoverPaused || isExerciseHold) {
-    engine.stop();
-  } else {
-    engine.restartTimer();
-  }
+  // unsolved exercise is waiting - the engine's own `canAutoAdvance`
+  // predicate makes that call, not this call site.
+  engine.restartTimer();
 }
 
 function setHoverPaused(paused: boolean) {
   isHoverPaused = paused;
-  updateTimer();
+  engine.restartTimer();
 }
 
 function setExerciseHold(hold: boolean) {
   isExerciseHold = hold;
-  updateTimer();
+  engine.restartTimer();
 }
 
 function registerGlobalShortcuts() {
@@ -308,6 +306,11 @@ app.whenReady().then(() => {
   engine = createPhraseEngine({
     intervalMs: state.intervalMs,
     onRender: renderPhrase,
+    // Auto-advance is off while the pointer is over the window, and while
+    // an unsolved assemble card is on screen. Either alone keeps it off.
+    // The engine consults this on every path that arms a timer, so no call
+    // site (setSpeed, a dictionary/pair/level switch, ...) can bypass it.
+    canAutoAdvance: () => !isHoverPaused && !isExerciseHold,
   });
 
   tray = createTrayController({

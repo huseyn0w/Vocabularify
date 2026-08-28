@@ -30,11 +30,12 @@ let dictPath: string;
 let lessonsPath: string;
 let rendered: Array<{ item: Item; index: number; total: number }>;
 
-function makeEngine(intervalMs = 1000) {
+function makeEngine(intervalMs = 1000, canAutoAdvance: () => boolean = () => true) {
   rendered = [];
   return createPhraseEngine({
     intervalMs,
-    onRender: (item, index, total) => rendered.push({ item, index, total })
+    onRender: (item, index, total) => rendered.push({ item, index, total }),
+    canAutoAdvance
   });
 }
 
@@ -197,7 +198,8 @@ describe('createPhraseEngine', () => {
         if (index === 0) {
           engine.stop();
         }
-      }
+      },
+      canAutoAdvance: () => true
     });
     // load() renders index 0 synchronously; onRender stops it right there.
     engine.load(dictPath);
@@ -227,7 +229,8 @@ describe('createPhraseEngine', () => {
         if (index === 1) {
           engine.stop();
         }
-      }
+      },
+      canAutoAdvance: () => true
     });
     engine.load(dictPath);
     // The first auto-advance takes index 0 -> 1, whose onRender calls stop().
@@ -256,5 +259,100 @@ describe('createPhraseEngine', () => {
     vi.advanceTimersByTime(4000);
     expect(engine.getIndex()).toBe(1);
     engine.stop();
+  });
+
+  describe('the canAutoAdvance predicate', () => {
+    it('does not arm the timer on load() when the predicate is false', () => {
+      const engine = makeEngine(1000, () => false);
+      engine.load(dictPath);
+      const before = rendered.length;
+      vi.advanceTimersByTime(60000);
+      expect(rendered.length).toBe(before);
+      engine.stop();
+    });
+
+    it('does not arm the timer on setIntervalMs() when the predicate is false', () => {
+      let allowed = true;
+      const engine = makeEngine(1000, () => allowed);
+      engine.load(dictPath);
+      allowed = false;
+      engine.setIntervalMs(500);
+      const before = rendered.length;
+      vi.advanceTimersByTime(60000);
+      expect(rendered.length).toBe(before);
+      engine.stop();
+    });
+
+    it('does not arm the timer on an explicit restartTimer() call when the predicate is false', () => {
+      let allowed = true;
+      const engine = makeEngine(1000, () => allowed);
+      engine.load(dictPath);
+      allowed = false;
+      engine.restartTimer();
+      const before = rendered.length;
+      vi.advanceTimersByTime(60000);
+      expect(rendered.length).toBe(before);
+      engine.stop();
+    });
+
+    it('does not re-arm from the timeout callback once the predicate has flipped false', () => {
+      let allowed = true;
+      const engine = makeEngine(1000, () => allowed);
+      engine.load(dictPath);
+      // The first timer was armed while `allowed` was still true. Flip it
+      // false before that timer fires: the callback's own re-arm attempt
+      // (inside restartTimer(), after next()) must see the new value.
+      allowed = false;
+      vi.advanceTimersByTime(1000);
+      expect(engine.getIndex()).toBe(1);
+      const afterOneTick = rendered.length;
+      vi.advanceTimersByTime(60000);
+      expect(rendered.length).toBe(afterOneTick);
+      engine.stop();
+    });
+
+    it('resumes when the predicate flips from false to true and restartTimer() is called', () => {
+      let allowed = false;
+      const engine = makeEngine(1000, () => allowed);
+      engine.load(dictPath);
+      const before = rendered.length;
+      vi.advanceTimersByTime(5000);
+      expect(rendered.length).toBe(before);
+      allowed = true;
+      engine.restartTimer();
+      vi.advanceTimersByTime(1000);
+      expect(rendered.length).toBe(before + 1);
+      engine.stop();
+    });
+
+    it('is consulted at arm time, not captured once at construction', () => {
+      let allowed = true;
+      const engine = makeEngine(1000, () => allowed);
+      engine.load(dictPath);
+      // Flip after construction/load, before anything re-evaluates: a
+      // predicate captured only once at construction would still see `true`.
+      allowed = false;
+      engine.restartTimer();
+      const before = rendered.length;
+      vi.advanceTimersByTime(60000);
+      expect(rendered.length).toBe(before);
+      // Flip back: a fresh call must see the new value too.
+      allowed = true;
+      engine.restartTimer();
+      vi.advanceTimersByTime(1000);
+      expect(rendered.length).toBe(before + 1);
+      engine.stop();
+    });
+  });
+
+  describe('hasLoaded()', () => {
+    it('reports no meaningful index before the first load(), and a real one after', () => {
+      const engine = makeEngine();
+      expect(engine.hasLoaded()).toBe(false);
+      engine.load(dictPath, 2);
+      expect(engine.hasLoaded()).toBe(true);
+      expect(engine.getIndex()).toBe(2);
+      engine.stop();
+    });
   });
 });
