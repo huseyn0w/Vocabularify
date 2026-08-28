@@ -130,20 +130,28 @@ export function validateCourse(input: ValidateInput): string[] {
 
   // Normalize each lesson's array fields once so every pass below can trust
   // `.new` and `.sentences` are arrays; report a malformed field once here
-  // instead of at every site that would otherwise crash on it.
-  const lessons = course.lessons.map(lesson => {
+  // instead of at every site that would otherwise crash on it. A lesson
+  // element that is not an object cannot be read at all, not even `.id` for
+  // the messages below, so guard it the same way the sentence bank loop
+  // above guards a non-object entry: report it once and drop it.
+  const lessons: CourseLesson[] = [];
+  for (const lesson of course.lessons) {
+    if (!lesson || typeof lesson !== 'object') {
+      errors.push('course: a lesson is not an object');
+      continue;
+    }
     if (!Array.isArray(lesson.new)) {
       errors.push(`lesson ${lesson.id}: "new" is missing or not an array`);
     }
     if (!Array.isArray(lesson.sentences)) {
       errors.push(`lesson ${lesson.id}: "sentences" is missing or not an array`);
     }
-    return {
+    lessons.push({
       ...lesson,
       new: Array.isArray(lesson.new) ? lesson.new : [],
       sentences: Array.isArray(lesson.sentences) ? lesson.sentences : []
-    };
-  });
+    });
+  }
 
   // Every concept of the level is introduced exactly once, and nothing foreign
   // is introduced.
@@ -246,12 +254,20 @@ function checkSentence(
     );
   }
 
+  // Tokens with no readable surface form (null, or an object with no string
+  // `t`) are reported below and then kept out of `safeTokens` - joining or
+  // reading `.c` off one of those would crash, so both the join checks and
+  // the "appears in no language" check after this loop read the filtered
+  // list instead of the raw one.
+  const safeTokensByLang = new Map<string, SentenceToken[]>();
+
   for (const lang of languages) {
     const tokens = sentence.text?.[lang];
     if (!Array.isArray(tokens) || tokens.length === 0) {
       errors.push(`${sentence.id}: missing or empty text for "${lang}"`);
       continue;
     }
+    const safeTokens: SentenceToken[] = [];
     for (const token of tokens) {
       if (typeof token === 'string') {
         if (token.trim().length === 0) {
@@ -262,12 +278,14 @@ function checkSentence(
               'or add it to GLUE deliberately'
           );
         }
+        safeTokens.push(token);
         continue;
       }
       if (!token || typeof token.t !== 'string' || token.t.length === 0) {
         errors.push(`${sentence.id} [${lang}]: a token has no surface form`);
         continue;
       }
+      safeTokens.push(token);
       if (token.t !== token.t.trim() || /\s\s/.test(token.t)) {
         errors.push(`${sentence.id} [${lang}]: token "${token.t}" has stray whitespace`);
       }
@@ -277,7 +295,8 @@ function checkSentence(
         );
       }
     }
-    const text = joinTokens(tokens);
+    safeTokensByLang.set(lang, safeTokens);
+    const text = joinTokens(safeTokens);
     if (text.includes('  ')) {
       errors.push(`${sentence.id} [${lang}]: joins to "${text}" with a double space`);
     }
@@ -291,7 +310,7 @@ function checkSentence(
   // the concept at all.
   for (const concept of usesList) {
     const appears = languages.some(lang =>
-      (sentence.text?.[lang] ?? []).some(
+      (safeTokensByLang.get(lang) ?? []).some(
         token => typeof token !== 'string' && token.c === concept
       )
     );

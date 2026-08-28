@@ -239,4 +239,49 @@ describe('validateCourse', () => {
     f.course.lessons.push({ id: 2, new: ['day'], sentences: [] });
     expect(validateCourse(f).join('\n')).toContain('4 concepts, expected 5-10');
   });
+
+  // --- Fix round 2: guard every malformed shape the lint can meet ---
+
+  it('reports a non-object element in "lessons" instead of throwing', () => {
+    const f = fixture();
+    (f.course.lessons as unknown[]).unshift(null);
+    expect(validateCourse(f).join('\n')).toContain('course: a lesson is not an object');
+  });
+
+  it('reports a token missing "t" entirely instead of throwing', () => {
+    const f = fixture();
+    (f.sentences[0].text.de as unknown[]).push({ c: 'day' });
+    expect(validateCourse(f).join('\n')).toContain('a token has no surface form');
+  });
+
+  it('reports a null token instead of throwing', () => {
+    const f = fixture();
+    (f.sentences[0].text.de as unknown[]).push(null);
+    expect(validateCourse(f).join('\n')).toContain('a token has no surface form');
+  });
+
+  it('reports "lessons" present but not an array', () => {
+    const f = fixture();
+    (f.course as unknown as Record<string, unknown>).lessons = 'oops';
+    expect(validateCourse(f)).toEqual(['course: "lessons" is missing or not an array']);
+  });
+
+  it('reports the sentence bank present but not an array', () => {
+    const f = fixture();
+    (f as unknown as Record<string, unknown>).sentences = {};
+    expect(validateCourse(f)).toEqual(['course: the sentence bank is not an array']);
+  });
+
+  it('reports "new" present but not an array', () => {
+    const f = fixture();
+    (f.course.lessons[0] as unknown as Record<string, unknown>).new = 'oops';
+    expect(validateCourse(f).join('\n')).toContain('lesson 1: "new" is missing or not an array');
+  });
+
+  it('reports a sentence bank entry missing "id"', () => {
+    const f = fixture();
+    const entry = f.sentences[0] as unknown as Record<string, unknown>;
+    delete entry.id;
+    expect(validateCourse(f).join('\n')).toContain('course: a sentence bank entry is missing "id"');
+  });
 });
