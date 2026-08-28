@@ -233,12 +233,18 @@ git commit -m "feat(shared): layoutTokens and joinTokens, one sentence join rule
 
 - [ ] **Step 1: Write the failing test**
 
-Append to `src/shared/items.test.ts`:
+Extend the existing `./items` import at the top of `src/shared/items.test.ts`
+rather than adding a second statement for the same module:
 
 ```ts
-import { buildItems } from './items';
+import { joinTokens, layoutTokens, buildItems } from './items';
 import type { LessonSpec } from './items';
 import type { VocabEntry } from './types';
+```
+
+Then append:
+
+```ts
 
 const words: VocabEntry[] = [
   { word_1: 'привет', word_2: 'Hallo' },
@@ -1264,11 +1270,12 @@ The refactor must not change existing output. With no `_course/` directory prese
 
 ```bash
 yarn compile
-git stash list > /dev/null
-cp -R languages/en/ru /tmp/vocab-before-en-ru
-node utils/generate_pairs.js > /tmp/vocab-gen.log
-diff -r /tmp/vocab-before-en-ru languages/en/ru && echo "IDENTICAL"
+BEFORE=$(mktemp -d)
+cp -R languages/en/ru "$BEFORE/"
+node utils/generate_pairs.js > /dev/null
+diff -r "$BEFORE/ru" languages/en/ru && echo "IDENTICAL"
 git status --short languages | head
+rm -rf "$BEFORE"
 ```
 Expected: `IDENTICAL`, and `git status --short languages` reports no modified files.
 
@@ -2971,7 +2978,7 @@ Six agents, one per language, all working from the same finished English column.
 **Files:**
 - Modify: `languages/_course/a1.sentences.json`, one language column each
 
-Each agent writes only its own key inside each sentence's `text` object. Have them emit their column as a separate JSON file (`/tmp/a1-<lang>.json`, a map of sentence id to token array) and merge afterwards, so six agents never write the same file.
+Each agent writes only its own key inside each sentence's `text` object. Six agents editing one file will clobber each other, so each writes its column to its own scratch file - a map of sentence id to token array - and the columns are merged in one pass afterwards. Give each agent an explicit output path in a scratch directory created for the run; do not let them pick one.
 
 **The brief, per language:**
 
