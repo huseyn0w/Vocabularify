@@ -1,0 +1,2439 @@
+{
+  "level": "a1",
+  "target": "de",
+  "grammarSchedule": [
+    {
+      "id": "de.a1.present-sein-haben",
+      "fromLesson": 1,
+      "why": "sein is taught in lesson 1 and haben in lesson 4, so 'Ich bin gut' is available immediately"
+    },
+    {
+      "id": "de.a1.present-weak-verbs",
+      "fromLesson": 1,
+      "why": "gehen in lesson 1 already takes the regular endings on an unchanged stem (ich gehe, du gehst)"
+    },
+    {
+      "id": "de.a1.present-strong-verbs-vowel-change",
+      "fromLesson": 6,
+      "why": "essen arrives in lesson 6 with Brot and Apfel: du isst, er isst"
+    },
+    {
+      "id": "de.a1.word-order-verb-second",
+      "fromLesson": 3,
+      "why": "hier and dort in lesson 3 give the first element that can be fronted ahead of the verb"
+    },
+    {
+      "id": "de.a1.articles-gender",
+      "fromLesson": 5,
+      "why": "lesson 5 puts das Wasser, der Kaffee and die Milch side by side, the first three-gender contrast"
+    },
+    {
+      "id": "de.a1.noun-plural",
+      "fromLesson": 11,
+      "why": "die Eltern in lesson 11 is the first plural noun form; lesson 16 adds numbers to count Kinder with"
+    },
+    {
+      "id": "de.a1.nominative-accusative",
+      "fromLesson": 5,
+      "why": "trinken plus der Kaffee in lesson 5 gives the masculine der/den switch on a direct object"
+    },
+    {
+      "id": "de.a1.negation-nicht-kein",
+      "fromLesson": 2,
+      "why": "nicht is taught in lesson 2; kein arrives in lesson 24 with the articles it replaces"
+    },
+    {
+      "id": "de.a1.questions-w-and-yes-no",
+      "fromLesson": 1,
+      "why": "wie is in lesson 1 together with gehen and sein"
+    },
+    {
+      "id": "de.a1.possessive-determiners",
+      "fromLesson": 9,
+      "why": "mein arrives in lesson 9 with Haus, Zimmer and Tisch to agree with"
+    },
+    {
+      "id": "de.a1.modal-verbs-present",
+      "fromLesson": 5,
+      "why": "wollen and trinken are both in lesson 5, so the infinitive can already be sent to the end"
+    },
+    {
+      "id": "de.a1.verb-bracket-satzklammer",
+      "fromLesson": 5,
+      "why": "the same wollen plus trinken pair frames the first bracket; separable prefixes widen it from lesson 28"
+    },
+    {
+      "id": "de.a1.separable-prefix-verbs",
+      "fromLesson": 28,
+      "why": "sich vorstellen and kennenlernen in lesson 28 are the first separable verbs; lesson 43 adds aufstehen, anfangen and the rest of the morning routine"
+    },
+    {
+      "id": "de.a1.imperative",
+      "fromLesson": 2,
+      "why": "bitte in lesson 2 with gehen from lesson 1 makes a du-imperative possible"
+    },
+    {
+      "id": "de.a1.dative-case",
+      "fromLesson": 26,
+      "why": "mir, dir and ihm are taught in lesson 26, together with the geben and helfen that were already taught"
+    },
+    {
+      "id": "de.a1.prepositions-fixed-case",
+      "fromLesson": 5,
+      "why": "mit and ohne in lesson 5 take Milch and Zucker; lesson 30 adds fuer, um, von, ab, aus and durch as a set"
+    },
+    {
+      "id": "de.a1.two-way-prepositions-an-in",
+      "fromLesson": 9,
+      "why": "in is taught in lesson 4 but only lesson 9 supplies Haus and Zimmer to be in and to go into; an follows in lesson 77"
+    },
+    {
+      "id": "de.a1.perfekt-haben",
+      "fromLesson": 14,
+      "why": "lernen and kaufen give usable participles from lesson 7, but gestern in lesson 14 is the first point a Perfekt sentence reads as past"
+    },
+    {
+      "id": "de.a1.perfekt-sein",
+      "fromLesson": 14,
+      "why": "gehen and kommen are taught by lesson 13; gestern in lesson 14 makes 'Ich bin gestern gekommen' possible"
+    },
+    {
+      "id": "de.a1.past-participle-formation",
+      "fromLesson": 14,
+      "why": "anchored with the two Perfekt topics it serves; separable participles become showable in lesson 28 and plentiful in lesson 43"
+    },
+    {
+      "id": "de.a1.coordinating-connectors",
+      "fromLesson": 2,
+      "why": "und in lesson 2 joins two clauses built from lesson 1; aber follows in 3, oder and denn in 8 and 42"
+    },
+    {
+      "id": "de.a1.personal-pronouns-case",
+      "fromLesson": 26,
+      "why": "nominative pronouns exist from lesson 1, but lesson 26 is the first place a pronoun can take an accusative or dative form"
+    },
+    {
+      "id": "de.a1.genitive-proper-names",
+      "fromLesson": 56,
+      "why": "the course has no personal names; Berlin and Aachen in lesson 56 arrive next to Zentrum and Stadtplan, so 'Berlins Zentrum' is the first possible genitive"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "new": [
+        "hello",
+        "i",
+        "you",
+        "to be",
+        "good",
+        "how",
+        "thank you",
+        "to go",
+        "it"
+      ],
+      "sentences": [
+        "a1_001",
+        "a1_002"
+      ]
+    },
+    {
+      "id": 2,
+      "new": [
+        "yes",
+        "no",
+        "not",
+        "and",
+        "very",
+        "please",
+        "goodbye"
+      ],
+      "sentences": [
+        "a1_003",
+        "a1_004",
+        "a1_005"
+      ]
+    },
+    {
+      "id": 3,
+      "new": [
+        "he",
+        "she",
+        "we",
+        "they",
+        "where",
+        "here",
+        "there",
+        "but"
+      ],
+      "sentences": [
+        "a1_006",
+        "a1_007",
+        "a1_008"
+      ]
+    },
+    {
+      "id": 4,
+      "new": [
+        "what",
+        "who",
+        "to have",
+        "time",
+        "now",
+        "also",
+        "sorry",
+        "in"
+      ],
+      "sentences": [
+        "a1_009",
+        "a1_010",
+        "a1_011"
+      ]
+    },
+    {
+      "id": 5,
+      "new": [
+        "water",
+        "coffee",
+        "tea",
+        "milk",
+        "with",
+        "without",
+        "to want",
+        "to drink",
+        "more"
+      ],
+      "sentences": [
+        "a1_012",
+        "a1_013",
+        "a1_014"
+      ]
+    },
+    {
+      "id": 6,
+      "new": [
+        "bread",
+        "apple",
+        "egg",
+        "salt",
+        "breakfast",
+        "to eat"
+      ],
+      "sentences": [
+        "a1_015",
+        "a1_016",
+        "a1_017"
+      ]
+    },
+    {
+      "id": 7,
+      "new": [
+        "can",
+        "to speak",
+        "to help",
+        "to understand",
+        "to learn",
+        "slow",
+        "fast",
+        "why",
+        "because"
+      ],
+      "sentences": [
+        "a1_018",
+        "a1_019",
+        "a1_020"
+      ]
+    },
+    {
+      "id": 8,
+      "new": [
+        "meat",
+        "fish",
+        "or",
+        "hot",
+        "cold",
+        "to buy",
+        "money",
+        "how much",
+        "shop"
+      ],
+      "sentences": [
+        "a1_021",
+        "a1_022",
+        "a1_023",
+        "a1_069"
+      ]
+    },
+    {
+      "id": 9,
+      "new": [
+        "this",
+        "my",
+        "house",
+        "room",
+        "door",
+        "window",
+        "table",
+        "chair",
+        "bed",
+        "big"
+      ],
+      "sentences": [
+        "a1_024",
+        "a1_025",
+        "a1_026"
+      ]
+    },
+    {
+      "id": 10,
+      "new": [
+        "that",
+        "small",
+        "new",
+        "old",
+        "beautiful",
+        "to see",
+        "to open",
+        "to close",
+        "book"
+      ],
+      "sentences": [
+        "a1_027",
+        "a1_028",
+        "a1_029"
+      ]
+    },
+    {
+      "id": 11,
+      "new": [
+        "family",
+        "mother",
+        "father",
+        "parents",
+        "son",
+        "daughter",
+        "child",
+        "all"
+      ],
+      "sentences": [
+        "a1_030",
+        "a1_031",
+        "a1_032"
+      ]
+    },
+    {
+      "id": 12,
+      "new": [
+        "brother",
+        "sister",
+        "man",
+        "woman",
+        "friend",
+        "your",
+        "name",
+        "to know",
+        "to live"
+      ],
+      "sentences": [
+        "a1_033",
+        "a1_034",
+        "a1_035",
+        "a1_070"
+      ]
+    },
+    {
+      "id": 13,
+      "new": [
+        "city",
+        "street",
+        "school",
+        "work",
+        "to",
+        "to work",
+        "to come",
+        "car"
+      ],
+      "sentences": [
+        "a1_036",
+        "a1_037",
+        "a1_038"
+      ]
+    },
+    {
+      "id": 14,
+      "new": [
+        "today",
+        "tomorrow",
+        "yesterday",
+        "day",
+        "night",
+        "morning",
+        "evening",
+        "to sleep"
+      ],
+      "sentences": [
+        "a1_039",
+        "a1_040"
+      ]
+    },
+    {
+      "id": 15,
+      "new": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "week"
+      ],
+      "sentences": [
+        "a1_042",
+        "a1_043",
+        "a1_044"
+      ]
+    },
+    {
+      "id": 16,
+      "new": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "hour",
+        "when"
+      ],
+      "sentences": [
+        "a1_045",
+        "a1_046",
+        "a1_047"
+      ]
+    },
+    {
+      "id": 17,
+      "new": [
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "zero",
+        "month",
+        "year",
+        "always"
+      ],
+      "sentences": [
+        "a1_048",
+        "a1_049",
+        "a1_050",
+        "a1_073"
+      ]
+    },
+    {
+      "id": 18,
+      "new": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "never",
+        "sun"
+      ],
+      "sentences": [
+        "a1_051",
+        "a1_052",
+        "a1_053"
+      ]
+    },
+    {
+      "id": 19,
+      "new": [
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
+        "happy"
+      ],
+      "sentences": [
+        "a1_054",
+        "a1_055",
+        "a1_056"
+      ]
+    },
+    {
+      "id": 20,
+      "new": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "phone",
+        "to give"
+      ],
+      "sentences": [
+        "a1_057",
+        "a1_058",
+        "a1_059"
+      ]
+    },
+    {
+      "id": 21,
+      "new": [
+        "brown",
+        "grey",
+        "orange",
+        "pink",
+        "dog",
+        "cat",
+        "to love",
+        "to find"
+      ],
+      "sentences": [
+        "a1_060",
+        "a1_061",
+        "a1_062"
+      ]
+    },
+    {
+      "id": 22,
+      "new": [
+        "head",
+        "hand",
+        "eye",
+        "foot",
+        "long",
+        "short",
+        "to take",
+        "to do"
+      ],
+      "sentences": [
+        "a1_063",
+        "a1_064",
+        "a1_065",
+        "a1_071"
+      ]
+    },
+    {
+      "id": 23,
+      "new": [
+        "to read",
+        "to write",
+        "to say",
+        "easy",
+        "difficult",
+        "expensive",
+        "cheap",
+        "bad"
+      ],
+      "sentences": [
+        "a1_066",
+        "a1_067",
+        "a1_068",
+        "a1_072",
+        "a1_041"
+      ]
+    },
+    {
+      "id": 24,
+      "theme": "articles and how much of something",
+      "new": [
+        "the",
+        "a/an",
+        "not any",
+        "everything",
+        "nothing",
+        "much",
+        "little",
+        "some",
+        "a bit"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 25,
+      "theme": "modal verbs and what you prefer",
+      "new": [
+        "must",
+        "should",
+        "would like",
+        "to be allowed to",
+        "to like",
+        "gladly",
+        "rather",
+        "best of all"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 26,
+      "theme": "pronouns as objects",
+      "new": [
+        "to me",
+        "to you",
+        "you (object)",
+        "us",
+        "y'all",
+        "him",
+        "her",
+        "her/him/him"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 27,
+      "theme": "possessives and the formal you",
+      "new": [
+        "his",
+        "our",
+        "your (plural)",
+        "you (formal)",
+        "your (formal)",
+        "oneself",
+        "one (pronoun)",
+        "to be called"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 28,
+      "theme": "introducing yourself by name",
+      "new": [
+        "to introduce oneself",
+        "to introduce",
+        "first name",
+        "surname",
+        "family name",
+        "to be acquainted with",
+        "to get to know",
+        "welcome"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 29,
+      "theme": "which one, what kind, and how many",
+      "new": [
+        "which",
+        "what kind of",
+        "how come",
+        "from where",
+        "where to",
+        "each",
+        "other",
+        "both"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 30,
+      "theme": "everyday prepositions",
+      "new": [
+        "for (preposition)",
+        "at",
+        "from",
+        "starting from",
+        "since",
+        "by",
+        "per",
+        "through",
+        "out of"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 31,
+      "theme": "numbers eleven to twenty",
+      "new": [
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+        "twenty"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 32,
+      "theme": "the tens up to ninety",
+      "new": [
+        "twenty-one",
+        "thirty",
+        "forty",
+        "fifty",
+        "sixty",
+        "seventy",
+        "eighty",
+        "ninety"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 33,
+      "theme": "hundreds, thousands and totals",
+      "new": [
+        "hundred",
+        "hundred and one",
+        "two hundred",
+        "thousand",
+        "a million",
+        "a billion",
+        "figure",
+        "in total",
+        "at least"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 34,
+      "theme": "telling the time",
+      "new": [
+        "clock",
+        "time of day",
+        "one o'clock",
+        "half",
+        "half past two",
+        "quarter",
+        "a quarter",
+        "quarter to/after two"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 35,
+      "theme": "exact times and minutes",
+      "new": [
+        "minute",
+        "second",
+        "moment",
+        "five minutes to/past one",
+        "seven fifteen",
+        "thirteen seventeen",
+        "midnight three",
+        "midnight"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 36,
+      "theme": "parts of the day",
+      "new": [
+        "noon",
+        "afternoon",
+        "late morning",
+        "in the mornings",
+        "before noon",
+        "at noon",
+        "in the afternoon",
+        "in the evening",
+        "at night"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 37,
+      "theme": "the week and the weekend",
+      "new": [
+        "weekend",
+        "on the weekend",
+        "day of the week",
+        "on saturdays",
+        "public holiday",
+        "workday",
+        "end of workday",
+        "break"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 38,
+      "theme": "dates and years",
+      "new": [
+        "date",
+        "year number",
+        "today is march 1st",
+        "nineteen ninety-nine",
+        "two thousand fourteen",
+        "the day before yesterday",
+        "the day after tomorrow",
+        "calendar"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 39,
+      "theme": "putting things in order",
+      "new": [
+        "first",
+        "2nd",
+        "third",
+        "fourth",
+        "last",
+        "next",
+        "first of all",
+        "after that"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 40,
+      "theme": "sooner and later",
+      "new": [
+        "right away",
+        "immediately",
+        "later",
+        "earlier",
+        "at last",
+        "not until",
+        "once",
+        "once more"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 41,
+      "theme": "how often and how long",
+      "new": [
+        "twice",
+        "three times",
+        "mostly",
+        "regularly",
+        "irregular",
+        "for a long time",
+        "for hours",
+        "to last",
+        "currently"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 42,
+      "theme": "small words that join sentences",
+      "new": [
+        "for",
+        "as",
+        "yet",
+        "just",
+        "now then",
+        "like this",
+        "anyway",
+        "at all"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 43,
+      "theme": "the morning routine",
+      "new": [
+        "to get up",
+        "to shower",
+        "to have breakfast",
+        "to start",
+        "to end",
+        "everyday life",
+        "to wash dishes",
+        "to bathe"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 44,
+      "theme": "verbs you need every day",
+      "new": [
+        "to search",
+        "to look",
+        "to become",
+        "to let",
+        "to act",
+        "to belong",
+        "to please",
+        "to lack"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 45,
+      "theme": "getting dressed",
+      "new": [
+        "to get dressed",
+        "to put on",
+        "to undress",
+        "pants",
+        "dress",
+        "sweater",
+        "t-shirt",
+        "to fit"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 46,
+      "theme": "everyday clothes",
+      "new": [
+        "blouse",
+        "skirt",
+        "coat",
+        "jeans",
+        "sock",
+        "cap",
+        "sports shoe",
+        "tight",
+        "beige",
+        "purple"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 47,
+      "theme": "more clothes and the wardrobe",
+      "new": [
+        "suit",
+        "glove",
+        "scarf",
+        "cardigan",
+        "stocking",
+        "garments",
+        "fashion",
+        "wardrobe"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 48,
+      "theme": "the apartment and its rooms",
+      "new": [
+        "apartment",
+        "living room",
+        "bedroom",
+        "children's room",
+        "bath",
+        "hallway",
+        "toilet",
+        "at home"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 49,
+      "theme": "furniture in the living room",
+      "new": [
+        "sofa",
+        "armchair",
+        "cabinet",
+        "shelf",
+        "carpet",
+        "lamp",
+        "picture",
+        "cozy",
+        "furniture"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 50,
+      "theme": "kitchen appliances",
+      "new": [
+        "stove",
+        "refrigerator",
+        "washing machine",
+        "dishwasher",
+        "television",
+        "to watch tv",
+        "heating",
+        "lighting",
+        "coffee machine"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 51,
+      "theme": "the bathroom and the cleaning",
+      "new": [
+        "shower",
+        "bathtub",
+        "restroom",
+        "to clear",
+        "garbage",
+        "orderliness",
+        "broken",
+        "repair"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 52,
+      "theme": "inside a building",
+      "new": [
+        "building",
+        "storey",
+        "stairs",
+        "elevator",
+        "entrance",
+        "exit",
+        "ground floor",
+        "upper floor"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 53,
+      "theme": "kinds of houses",
+      "new": [
+        "single-family house",
+        "multi-family house",
+        "high-rise",
+        "old building",
+        "cellar",
+        "balcony",
+        "garage",
+        "terrace",
+        "terraced house"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 54,
+      "theme": "renting an apartment",
+      "new": [
+        "rent",
+        "monthly rent",
+        "utility costs",
+        "security deposit",
+        "landlord",
+        "to rent out",
+        "apartment ad",
+        "apartment search"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 55,
+      "theme": "moving house",
+      "new": [
+        "to move",
+        "to move away",
+        "viewing appointment",
+        "square meter",
+        "a square meter",
+        "furnished",
+        "dream apartment",
+        "real estate",
+        "flat"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 56,
+      "theme": "where you live",
+      "new": [
+        "address",
+        "house number",
+        "postal code",
+        "place of residence",
+        "village",
+        "center",
+        "berlin",
+        "aachen"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 57,
+      "theme": "shopping for food",
+      "new": [
+        "supermarket",
+        "groceries",
+        "shopping list",
+        "to shop",
+        "cash register",
+        "till receipt",
+        "cashier",
+        "special offer",
+        "dairy product",
+        "baby food"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 58,
+      "theme": "how much you buy",
+      "new": [
+        "piece",
+        "package",
+        "bottle",
+        "glass",
+        "cup",
+        "plate",
+        "a kilo(gram)",
+        "kilogram",
+        "canister"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 59,
+      "theme": "weights and measures",
+      "new": [
+        "gram",
+        "a gram",
+        "liter",
+        "a liter",
+        "pound",
+        "a pound",
+        "quantity",
+        "a percent"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 60,
+      "theme": "paying for things",
+      "new": [
+        "euro",
+        "cent",
+        "in cash",
+        "offer",
+        "affordable",
+        "to settle up",
+        "to calculate",
+        "to earn",
+        "for that"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 61,
+      "theme": "at the bank",
+      "new": [
+        "bank",
+        "account",
+        "to transfer money",
+        "vending machine",
+        "to exchange",
+        "to switch",
+        "exchange",
+        "to get"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 62,
+      "theme": "shops and markets",
+      "new": [
+        "department store",
+        "store",
+        "bakery",
+        "baker",
+        "butcher",
+        "kiosk",
+        "weekend market",
+        "shopping spree"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 63,
+      "theme": "breakfast on the table",
+      "new": [
+        "roll",
+        "butter",
+        "jam",
+        "honey",
+        "ham",
+        "yogurt",
+        "tasty",
+        "fresh"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 64,
+      "theme": "fruit at the market",
+      "new": [
+        "banana",
+        "pear",
+        "strawberry",
+        "cherry",
+        "lemon",
+        "grape",
+        "melon",
+        "sweet"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 65,
+      "theme": "more fruit and how it tastes",
+      "new": [
+        "raspberry",
+        "blueberry",
+        "mandarin",
+        "mango",
+        "kiwi",
+        "fruit salad",
+        "to taste",
+        "to smell",
+        "bitter"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 66,
+      "theme": "vegetables",
+      "new": [
+        "tomato",
+        "potato",
+        "carrot",
+        "bell pepper",
+        "bean",
+        "pea",
+        "mushroom",
+        "salad",
+        "chickpea"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 67,
+      "theme": "cooking at home",
+      "new": [
+        "flour",
+        "oil",
+        "olive oil",
+        "cream",
+        "noodle",
+        "chicken",
+        "to bake",
+        "to grill"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 68,
+      "theme": "meat and a quick meal",
+      "new": [
+        "beef",
+        "pork",
+        "lamb",
+        "pizza",
+        "french fries",
+        "food",
+        "appetite",
+        "hunger"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 69,
+      "theme": "cake and something sweet",
+      "new": [
+        "cake",
+        "gateau",
+        "chocolate",
+        "chocolate cake",
+        "cookie",
+        "ice cream",
+        "pudding",
+        "to try out"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 70,
+      "theme": "drinks",
+      "new": [
+        "beer",
+        "wine",
+        "juice",
+        "apple juice",
+        "cola",
+        "lemonade",
+        "drink",
+        "thirst"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 71,
+      "theme": "eating out",
+      "new": [
+        "café",
+        "bistro",
+        "eatery",
+        "pizzeria",
+        "canteen",
+        "to serve",
+        "to recommend",
+        "tumbler",
+        "sparkling wine",
+        "to it"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 72,
+      "theme": "what the weather does",
+      "new": [
+        "to rain",
+        "to snow",
+        "to shine",
+        "sunny",
+        "cloudy",
+        "windy",
+        "foggy",
+        "warm"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 73,
+      "theme": "temperature and the forecast",
+      "new": [
+        "to hail",
+        "wet",
+        "dry",
+        "degree",
+        "one degree below zero",
+        "four degrees above zero",
+        "minus",
+        "weather report"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 74,
+      "theme": "outdoors",
+      "new": [
+        "moon",
+        "lake",
+        "island",
+        "beach",
+        "plant",
+        "leaf",
+        "to hike",
+        "to stroll"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 75,
+      "theme": "animals",
+      "new": [
+        "pet",
+        "rabbit",
+        "seal",
+        "turtle",
+        "farm",
+        "ball",
+        "to fetch",
+        "to hold"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 76,
+      "theme": "saying where something is",
+      "new": [
+        "on",
+        "on top of",
+        "under",
+        "behind",
+        "next to",
+        "prior to",
+        "above",
+        "below"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 77,
+      "theme": "front, back and outside",
+      "new": [
+        "in front",
+        "at the back",
+        "outside",
+        "around",
+        "beside",
+        "everywhere",
+        "to stand",
+        "to sit"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 78,
+      "theme": "putting things somewhere",
+      "new": [
+        "to lie",
+        "to lay",
+        "to hang",
+        "to rise",
+        "step",
+        "to press",
+        "to ring",
+        "switch"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 79,
+      "theme": "finding your way around town",
+      "new": [
+        "city map",
+        "road map",
+        "traffic light",
+        "intersection",
+        "park",
+        "town hall",
+        "church",
+        "across from"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 80,
+      "theme": "the four directions",
+      "new": [
+        "north",
+        "south",
+        "east",
+        "west",
+        "cardinal direction",
+        "orientation",
+        "position",
+        "space",
+        "middle"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 81,
+      "theme": "buses and trains in the city",
+      "new": [
+        "railway",
+        "main station",
+        "platform",
+        "track",
+        "tram",
+        "bus stop",
+        "line",
+        "means of transport"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 82,
+      "theme": "buying a ticket",
+      "new": [
+        "single ticket",
+        "day ticket",
+        "short distance",
+        "event ticket",
+        "passenger",
+        "valid",
+        "to get in",
+        "to get out"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 83,
+      "theme": "a train journey",
+      "new": [
+        "departure",
+        "arrival",
+        "arrival time",
+        "to depart",
+        "to transfer",
+        "connection",
+        "punctual",
+        "to delay"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 84,
+      "theme": "announcements at the station",
+      "new": [
+        "announcement",
+        "loudspeaker announcement",
+        "enquiries",
+        "notification",
+        "unscheduled",
+        "replacement bus service",
+        "regional train",
+        "intercity train"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 85,
+      "theme": "cars and the road",
+      "new": [
+        "highway",
+        "parking lot",
+        "parking fee",
+        "driver's license",
+        "driver",
+        "truck",
+        "motor vehicle",
+        "workshop"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 86,
+      "theme": "bikes and taxis",
+      "new": [
+        "bicycle",
+        "to ride a bike",
+        "motorcycle",
+        "taxi",
+        "taxi driver",
+        "on foot",
+        "direct",
+        "two hundred kilometers"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 87,
+      "theme": "flying and crossing a border",
+      "new": [
+        "flight departure",
+        "to fly off",
+        "ship",
+        "customs",
+        "id card",
+        "papers",
+        "suitcase",
+        "backpack"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 88,
+      "theme": "a trip and what you see",
+      "new": [
+        "travel agency",
+        "guide",
+        "excursion",
+        "guided tour",
+        "island tour",
+        "tourist",
+        "sightseeing",
+        "vacation house",
+        "to tour"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 89,
+      "theme": "at the hotel",
+      "new": [
+        "front desk",
+        "double room",
+        "single room",
+        "half board",
+        "to stay overnight",
+        "hall",
+        "bag",
+        "to pack"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 90,
+      "theme": "other countries",
+      "new": [
+        "abroad",
+        "foreign",
+        "foreigner",
+        "international",
+        "homeland",
+        "home country",
+        "map of germany",
+        "west germany"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 91,
+      "theme": "going out in the evening",
+      "new": [
+        "cinema",
+        "disco",
+        "concert",
+        "swimming pool",
+        "library",
+        "city forest",
+        "post office",
+        "stamp",
+        "admission"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 92,
+      "theme": "public offices",
+      "new": [
+        "citizens' office",
+        "registry office",
+        "job center",
+        "police",
+        "registration",
+        "to register",
+        "to sign up",
+        "form"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 93,
+      "theme": "filling in a form",
+      "new": [
+        "to fill out",
+        "to mark",
+        "to sign",
+        "signature",
+        "detail",
+        "to hand in",
+        "to correct",
+        "mistake"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 94,
+      "theme": "work and training",
+      "new": [
+        "workplace",
+        "gig",
+        "dream job",
+        "work-related",
+        "training",
+        "internship",
+        "unemployed",
+        "independent"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 95,
+      "theme": "jobs people do",
+      "new": [
+        "salesperson",
+        "cook",
+        "office clerk",
+        "saleswoman",
+        "car mechanic",
+        "engineer",
+        "technician",
+        "civil servant"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 96,
+      "theme": "more jobs",
+      "new": [
+        "music teacher",
+        "reporter",
+        "pensioner",
+        "pizza delivery person",
+        "househusband/housewife",
+        "househusband",
+        "housewife",
+        "physician"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 97,
+      "theme": "the working day",
+      "new": [
+        "lunch break",
+        "night shift",
+        "casual work",
+        "part-time job",
+        "half-day",
+        "internship supervisor",
+        "stressful",
+        "contact"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 98,
+      "theme": "the german course",
+      "new": [
+        "german",
+        "german course",
+        "course",
+        "course book",
+        "classroom",
+        "course participant",
+        "language school",
+        "adult education center"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 99,
+      "theme": "school and university",
+      "new": [
+        "pupil",
+        "class",
+        "class schedule",
+        "homework",
+        "lesson",
+        "university",
+        "studies",
+        "to study"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 100,
+      "theme": "things in your school bag",
+      "new": [
+        "notebook",
+        "paper",
+        "pencil",
+        "pen",
+        "ballpoint pen",
+        "eraser",
+        "sharpener",
+        "wastepaper basket"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 101,
+      "theme": "in the classroom",
+      "new": [
+        "blackboard",
+        "projector",
+        "exercise book",
+        "exercise",
+        "dictionary",
+        "grammar",
+        "mathematics",
+        "kindergarten"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 102,
+      "theme": "words and letters",
+      "new": [
+        "word",
+        "sentence",
+        "text",
+        "page",
+        "letter (alphabet)",
+        "to spell",
+        "to underline",
+        "example"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 103,
+      "theme": "doing the exercises",
+      "new": [
+        "dialogue",
+        "list",
+        "chart",
+        "shape",
+        "to form",
+        "to arrange",
+        "separable",
+        "to mean",
+        "tricky"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 104,
+      "theme": "tests and talking about them",
+      "new": [
+        "exam",
+        "test",
+        "correct",
+        "to respond to",
+        "to inquire",
+        "to report",
+        "to tell",
+        "to talk",
+        "about that"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 105,
+      "theme": "asking for something",
+      "new": [
+        "to advise",
+        "to request",
+        "request",
+        "tip",
+        "to replace",
+        "help",
+        "to be away",
+        "to come back"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 106,
+      "theme": "on the phone",
+      "new": [
+        "cell phone",
+        "mobile number",
+        "phone number",
+        "area code",
+        "phone call",
+        "answering machine",
+        "to phone",
+        "goodbye (phone)",
+        "farewell"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 107,
+      "theme": "the computer",
+      "new": [
+        "computer",
+        "computer program",
+        "computer game",
+        "computer system",
+        "internet",
+        "online",
+        "printer",
+        "to print"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 108,
+      "theme": "machines and devices",
+      "new": [
+        "to click on",
+        "to install",
+        "to connect",
+        "fax",
+        "device",
+        "electrical device",
+        "machine",
+        "automatic"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 109,
+      "theme": "on, off, open, closed",
+      "new": [
+        "to turn on",
+        "to turn off",
+        "to be on",
+        "to be off",
+        "to be open",
+        "to be closed",
+        "open",
+        "closed",
+        "occupied"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 110,
+      "theme": "writing a letter",
+      "new": [
+        "sender",
+        "recipient",
+        "salutation",
+        "subject line",
+        "greeting",
+        "heartfelt",
+        "esteemed",
+        "dear",
+        "attached"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 111,
+      "theme": "sending messages and notices",
+      "new": [
+        "part of a letter",
+        "apology letter",
+        "apology",
+        "to excuse",
+        "to dispatch",
+        "postcard",
+        "notice",
+        "flyer"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 112,
+      "theme": "inviting people",
+      "new": [
+        "invitation",
+        "guest",
+        "visit",
+        "to visit",
+        "to bring along",
+        "to come along",
+        "to take along",
+        "to join in"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 113,
+      "theme": "a party",
+      "new": [
+        "celebration",
+        "to celebrate",
+        "festival",
+        "birthday",
+        "birthday cake",
+        "garden party",
+        "fun",
+        "balloon"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 114,
+      "theme": "a wedding",
+      "new": [
+        "wedding",
+        "wedding party",
+        "bride",
+        "to marry",
+        "married",
+        "single",
+        "divorced",
+        "widowed"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 115,
+      "theme": "christmas",
+      "new": [
+        "christmas",
+        "christmas tree",
+        "christmas present",
+        "christmas party",
+        "santa claus",
+        "to gift",
+        "to congratulate",
+        "congratulations"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 116,
+      "theme": "easter and other holidays",
+      "new": [
+        "easter",
+        "easter egg",
+        "easter festival",
+        "easter bunny",
+        "oktoberfest",
+        "international women's day",
+        "luck",
+        "lucky day",
+        "unlucky day"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 117,
+      "theme": "good wishes",
+      "new": [
+        "to wish",
+        "to be glad",
+        "to delight",
+        "glad",
+        "unhappy",
+        "pity",
+        "thanks",
+        "to thank",
+        "unfortunately"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 118,
+      "theme": "the face",
+      "new": [
+        "face",
+        "hair",
+        "ear",
+        "nose",
+        "mouth",
+        "teeth",
+        "tongue",
+        "lips"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 119,
+      "theme": "the body",
+      "new": [
+        "throat",
+        "neck",
+        "shoulder",
+        "chest",
+        "knee",
+        "legs",
+        "finger",
+        "toe"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 120,
+      "theme": "more parts of the body",
+      "new": [
+        "elbow",
+        "forehead",
+        "chin",
+        "cheek",
+        "eyebrow",
+        "body part",
+        "movement",
+        "to breathe"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 121,
+      "theme": "being ill",
+      "new": [
+        "common cold",
+        "to catch a cold",
+        "flu",
+        "cough",
+        "runny nose",
+        "headache",
+        "stomach ache",
+        "sore throat"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 122,
+      "theme": "at the doctor",
+      "new": [
+        "family doctor",
+        "practice",
+        "consultation hours",
+        "consulting room",
+        "waiting room",
+        "receptionist",
+        "appointment",
+        "patient (person)"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 123,
+      "theme": "medicine and treatment",
+      "new": [
+        "recipe",
+        "pill",
+        "drops",
+        "cough syrup",
+        "ointment",
+        "plaster",
+        "bandage",
+        "examination"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 124,
+      "theme": "health insurance and papers",
+      "new": [
+        "health insurance",
+        "health card",
+        "sick note",
+        "emergency appointment",
+        "group practice",
+        "orthopedist",
+        "prevention",
+        "care"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 125,
+      "theme": "getting better and getting worse",
+      "new": [
+        "recovery",
+        "to hurt",
+        "severe",
+        "pregnant",
+        "dead",
+        "died",
+        "nursing home",
+        "to take care"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 126,
+      "theme": "people",
+      "new": [
+        "human being",
+        "people",
+        "person",
+        "lady",
+        "mister",
+        "boy",
+        "girl",
+        "baby"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 127,
+      "theme": "growing up",
+      "new": [
+        "teenager",
+        "adult",
+        "age",
+        "young",
+        "to grow up",
+        "to be alive",
+        "life",
+        "born"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 128,
+      "theme": "personal details",
+      "new": [
+        "to be born",
+        "year of birth",
+        "place of birth",
+        "marital status",
+        "male",
+        "female",
+        "partner",
+        "acquaintance"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 129,
+      "theme": "grandparents and siblings",
+      "new": [
+        "grandmother",
+        "grandfather",
+        "grandparents",
+        "grandma",
+        "grandpa",
+        "mom",
+        "dad",
+        "siblings"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 130,
+      "theme": "married into the family",
+      "new": [
+        "husband",
+        "wife",
+        "father-in-law",
+        "daughter-in-law",
+        "sister-in-law",
+        "relative",
+        "neighbor",
+        "jointly"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 131,
+      "theme": "what people are like",
+      "new": [
+        "friendly",
+        "nice",
+        "funny",
+        "boring",
+        "interesting",
+        "creative",
+        "mad",
+        "silly"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 132,
+      "theme": "saying how good something is",
+      "new": [
+        "great",
+        "super",
+        "very good",
+        "cool",
+        "wonderful",
+        "gorgeous",
+        "terrible",
+        "ugly"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 133,
+      "theme": "comparing things",
+      "new": [
+        "better",
+        "best",
+        "most",
+        "just as",
+        "whole",
+        "only",
+        "maximum",
+        "approximately"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 134,
+      "theme": "how a place feels",
+      "new": [
+        "done",
+        "known",
+        "strange",
+        "calm",
+        "peaceful",
+        "comfortable",
+        "uncomfortable",
+        "practical"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 135,
+      "theme": "urgent and agreed",
+      "new": [
+        "urgent",
+        "pressing",
+        "absolutely",
+        "certainly",
+        "agreed",
+        "understood",
+        "attention",
+        "caution"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 136,
+      "theme": "more little adverbs",
+      "new": [
+        "further",
+        "gone by",
+        "backward",
+        "extra",
+        "normal",
+        "positive",
+        "typical",
+        "to cancel"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 137,
+      "theme": "size and weight",
+      "new": [
+        "meter",
+        "a meter",
+        "one meter fifteen",
+        "a centimeter",
+        "weight",
+        "high",
+        "wide",
+        "narrow"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 138,
+      "theme": "free time and sport",
+      "new": [
+        "leisure time",
+        "hobby",
+        "sport",
+        "football",
+        "football player",
+        "tennis",
+        "ski",
+        "to watch"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 139,
+      "theme": "music and photos",
+      "new": [
+        "guitar",
+        "song",
+        "radio",
+        "photo",
+        "family photo",
+        "to photograph",
+        "to draw",
+        "to peek"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 140,
+      "theme": "groups, plans and stories",
+      "new": [
+        "novel",
+        "cultural",
+        "group",
+        "association",
+        "interview",
+        "conversation",
+        "plan",
+        "to plan"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 141,
+      "theme": "shapes, colours and signs",
+      "new": [
+        "color",
+        "upright",
+        "model",
+        "glance",
+        "bow",
+        "sign",
+        "slip of paper",
+        "note slip",
+        "pair",
+        "well-groomed"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 142,
+      "theme": "checking and looking after things",
+      "new": [
+        "control",
+        "forbidden",
+        "information desk",
+        "to pick up",
+        "hunch",
+        "main thing",
+        "matter",
+        "disposal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 143,
+      "theme": "small jobs around the house",
+      "new": [
+        "foyer",
+        "stairwell",
+        "study",
+        "to paint",
+        "fire",
+        "to smoke",
+        "cigarette",
+        "snowman"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 144,
+      "theme": "beginnings, ends and leftovers",
+      "new": [
+        "finish",
+        "end",
+        "part",
+        "miscellaneous",
+        "remaining",
+        "specialty",
+        "mobility",
+        "local group list"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 145,
+      "theme": "bones and the head",
+      "new": [
+        "skull",
+        "jaw",
+        "brain",
+        "cheekbone",
+        "pupils",
+        "adam's apple",
+        "navel",
+        "gut"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 146,
+      "theme": "organs",
+      "new": [
+        "intestine",
+        "kidney",
+        "liver",
+        "lung",
+        "spleen",
+        "to scream",
+        "to blow",
+        "to fear"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 147,
+      "theme": "training the body",
+      "new": [
+        "push-up",
+        "pull-up",
+        "to get upset",
+        "to joke",
+        "treasure",
+        "threads",
+        "winter coat",
+        "anorak",
+        "jogging suit"
+      ],
+      "sentences": []
+    }
+  ]
+}
