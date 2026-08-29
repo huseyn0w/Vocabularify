@@ -43,6 +43,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const bankConcepts = require("./lib/bank_concepts");
 
 const REPO_ROOT = path.join(__dirname, "..");
 const ROOT = path.join(REPO_ROOT, "languages");
@@ -254,14 +255,11 @@ function lintLevel({ label, courseFile, sentenceFile, levelConcepts, priorConcep
   return { checked: true, setupProblem: false, errorCount: errors.length };
 }
 
-function levelConceptsFor(level) {
-  const priorConcepts = [];
-  for (const earlier of LEVELS) {
-    if (earlier === level) break;
-    priorConcepts.push(...banked[earlier].map((row) => conceptId(row.en)));
-  }
-  const levelConcepts = banked[level].map((row) => conceptId(row.en));
-  return { levelConcepts, priorConcepts };
+// See utils/lib/bank_concepts.js: a per-target course's concepts are the
+// bank rows that actually have a word in that target language; the shared
+// course (`target` undefined) is unfiltered, exactly as before.
+function levelConceptsFor(level, target) {
+  return bankConcepts.levelConceptsFor(banked, LEVELS, level, conceptId, target);
 }
 
 function fold(result) {
@@ -341,7 +339,7 @@ for (const target of targetsToCheck) {
 
   for (const level of LEVELS) {
     if (!levelsToCheck.includes(level)) continue;
-    const { levelConcepts, priorConcepts } = levelConceptsFor(level);
+    const { levelConcepts, priorConcepts } = levelConceptsFor(level, target);
 
     const levelTopicIds = Array.isArray(grammarLevels[level])
       ? grammarLevels[level].map((t) => t && t.id).filter((id) => typeof id === "string")
