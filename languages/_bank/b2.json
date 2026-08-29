@@ -1,208 +1,4331 @@
 [
-    {"en": "however", "de": "jedoch", "fr": "cependant", "es": "sin embargo", "it": "tuttavia", "tr": "ancak", "ru": "однако"},
-    {"en": "nevertheless", "de": "dennoch", "fr": "néanmoins", "es": "no obstante", "it": "ciononostante", "tr": "yine de", "ru": "тем не менее"},
-    {"en": "therefore", "de": "deshalb", "fr": "donc", "es": "por lo tanto", "it": "perciò", "tr": "bu yüzden", "ru": "поэтому"},
-    {"en": "consequently", "de": "folglich", "fr": "par conséquent", "es": "en consecuencia", "it": "di conseguenza", "tr": "sonuç olarak", "ru": "следовательно"},
-    {"en": "moreover", "de": "außerdem", "fr": "de plus", "es": "además", "it": "inoltre", "tr": "ayrıca", "ru": "более того"},
-    {"en": "furthermore", "de": "darüber hinaus", "fr": "en outre", "es": "asimismo", "it": "per di più", "tr": "üstelik", "ru": "кроме того"},
-    {"en": "nonetheless", "de": "trotzdem", "fr": "pourtant", "es": "aun así", "it": "nondimeno", "tr": "buna rağmen", "ru": "всё же"},
-    {"en": "although", "de": "obwohl", "fr": "bien que", "es": "aunque", "it": "sebbene", "tr": "her ne kadar", "ru": "хотя"},
-    {"en": "despite", "de": "trotz", "fr": "malgré", "es": "a pesar de", "it": "nonostante", "tr": "rağmen", "ru": "несмотря на"},
-    {"en": "whereas", "de": "wohingegen", "fr": "tandis que", "es": "mientras que", "it": "mentre", "tr": "oysa", "ru": "тогда как"},
-    {"en": "thus", "de": "somit", "fr": "ainsi", "es": "así pues", "it": "quindi", "tr": "böylece", "ru": "таким образом"},
-    {"en": "hence", "de": "daher", "fr": "d'où", "es": "de ahí", "it": "da qui", "tr": "dolayısıyla", "ru": "отсюда"},
-    {"en": "instead", "de": "stattdessen", "fr": "au lieu de cela", "es": "en cambio", "it": "invece", "tr": "bunun yerine", "ru": "вместо этого"},
-    {"en": "otherwise", "de": "andernfalls", "fr": "autrement", "es": "de lo contrario", "it": "altrimenti", "tr": "aksi takdirde", "ru": "иначе"},
-    {"en": "regardless", "de": "ungeachtet", "fr": "indépendamment", "es": "independientemente", "it": "indipendentemente", "tr": "ne olursa olsun", "ru": "независимо"},
-    {"en": "meanwhile", "de": "inzwischen", "fr": "entre-temps", "es": "mientras tanto", "it": "nel frattempo", "tr": "bu arada", "ru": "тем временем"},
-    {"en": "indeed", "de": "in der Tat", "fr": "en effet", "es": "de hecho", "it": "infatti", "tr": "gerçekten de", "ru": "действительно"},
-    {"en": "namely", "de": "nämlich", "fr": "à savoir", "es": "a saber", "it": "ovvero", "tr": "yani", "ru": "а именно"},
-    {"en": "to acknowledge", "de": "anerkennen", "fr": "reconnaître", "es": "reconocer", "it": "riconoscere", "tr": "kabul etmek", "ru": "признавать"},
-    {"en": "to assess", "de": "bewerten", "fr": "évaluer", "es": "evaluar", "it": "valutare", "tr": "değerlendirmek", "ru": "оценивать"},
-    {"en": "to imply", "de": "andeuten", "fr": "impliquer", "es": "implicar", "it": "implicare", "tr": "ima etmek", "ru": "подразумевать"},
-    {"en": "to encompass", "de": "umfassen", "fr": "englober", "es": "abarcar", "it": "comprendere", "tr": "kapsamak", "ru": "охватывать"},
-    {"en": "to argue", "de": "argumentieren", "fr": "soutenir", "es": "argumentar", "it": "sostenere", "tr": "savunmak", "ru": "утверждать"},
-    {"en": "to claim", "de": "behaupten", "fr": "prétendre", "es": "afirmar", "it": "affermare", "tr": "iddia etmek", "ru": "заявлять"},
-    {"en": "to assume", "de": "annehmen", "fr": "supposer", "es": "suponer", "it": "presumere", "tr": "varsaymak", "ru": "предполагать"},
-    {"en": "to emphasize", "de": "betonen", "fr": "souligner", "es": "enfatizar", "it": "enfatizzare", "tr": "vurgulamak", "ru": "подчёркивать"},
-    {"en": "to demonstrate", "de": "demonstrieren", "fr": "démontrer", "es": "demostrar", "it": "dimostrare", "tr": "göstermek", "ru": "демонстрировать"},
-    {"en": "to indicate", "de": "hinweisen", "fr": "indiquer", "es": "indicar", "it": "indicare", "tr": "belirtmek", "ru": "указывать"},
-    {"en": "to interpret", "de": "interpretieren", "fr": "interpréter", "es": "interpretar", "it": "interpretare", "tr": "yorumlamak", "ru": "интерпретировать"},
-    {"en": "to evaluate", "de": "auswerten", "fr": "évaluer", "es": "valorar", "it": "esaminare", "tr": "incelemek", "ru": "анализировать"},
-    {"en": "to justify", "de": "rechtfertigen", "fr": "justifier", "es": "justificar", "it": "giustificare", "tr": "haklı çıkarmak", "ru": "оправдывать"},
-    {"en": "to highlight", "de": "hervorheben", "fr": "mettre en évidence", "es": "destacar", "it": "evidenziare", "tr": "öne çıkarmak", "ru": "выделять"},
-    {"en": "to summarize", "de": "zusammenfassen", "fr": "résumer", "es": "resumir", "it": "riassumere", "tr": "özetlemek", "ru": "резюмировать"},
-    {"en": "to conclude", "de": "schlussfolgern", "fr": "conclure", "es": "concluir", "it": "concludere", "tr": "sonuçlandırmak", "ru": "заключать"},
-    {"en": "to contradict", "de": "widersprechen", "fr": "contredire", "es": "contradecir", "it": "contraddire", "tr": "çelişmek", "ru": "противоречить"},
-    {"en": "to clarify", "de": "klären", "fr": "clarifier", "es": "aclarar", "it": "chiarire", "tr": "açıklığa kavuşturmak", "ru": "прояснять"},
-    {"en": "to illustrate", "de": "veranschaulichen", "fr": "illustrer", "es": "ilustrar", "it": "illustrare", "tr": "örneklemek", "ru": "иллюстрировать"},
-    {"en": "to reveal", "de": "enthüllen", "fr": "révéler", "es": "revelar", "it": "rivelare", "tr": "ortaya çıkarmak", "ru": "раскрывать"},
-    {"en": "to determine", "de": "bestimmen", "fr": "déterminer", "es": "determinar", "it": "determinare", "tr": "belirlemek", "ru": "определять"},
-    {"en": "to distinguish", "de": "unterscheiden", "fr": "distinguer", "es": "distinguir", "it": "distinguere", "tr": "ayırt etmek", "ru": "различать"},
-    {"en": "to estimate", "de": "schätzen", "fr": "estimer", "es": "estimar", "it": "stimare", "tr": "tahmin etmek", "ru": "оценивать приблизительно"},
-    {"en": "to anticipate", "de": "vorhersehen", "fr": "anticiper", "es": "anticipar", "it": "anticipare", "tr": "öngörmek", "ru": "предвидеть"},
-    {"en": "to overcome", "de": "überwinden", "fr": "surmonter", "es": "superar", "it": "superare", "tr": "üstesinden gelmek", "ru": "преодолевать"},
-    {"en": "to achieve", "de": "erreichen", "fr": "atteindre", "es": "lograr", "it": "raggiungere", "tr": "başarmak", "ru": "достигать"},
-    {"en": "to maintain", "de": "aufrechterhalten", "fr": "maintenir", "es": "mantener", "it": "mantenere", "tr": "sürdürmek", "ru": "поддерживать"},
-    {"en": "to enhance", "de": "verbessern", "fr": "améliorer", "es": "mejorar", "it": "migliorare", "tr": "geliştirmek", "ru": "улучшать"},
-    {"en": "to reduce", "de": "verringern", "fr": "réduire", "es": "reducir", "it": "ridurre", "tr": "azaltmak", "ru": "сокращать"},
-    {"en": "to increase", "de": "steigern", "fr": "augmenter", "es": "aumentar", "it": "aumentare", "tr": "artırmak", "ru": "увеличивать"},
-    {"en": "to affect", "de": "beeinflussen", "fr": "affecter", "es": "afectar", "it": "influire", "tr": "etkilemek", "ru": "влиять"},
-    {"en": "to ensure", "de": "sicherstellen", "fr": "garantir", "es": "garantizar", "it": "garantire", "tr": "sağlamak", "ru": "обеспечивать"},
-    {"en": "to involve", "de": "beinhalten", "fr": "impliquer", "es": "implicar", "it": "coinvolgere", "tr": "içermek", "ru": "вовлекать"},
-    {"en": "to obtain", "de": "erhalten", "fr": "obtenir", "es": "obtener", "it": "ottenere", "tr": "elde etmek", "ru": "получать"},
-    {"en": "to require", "de": "erfordern", "fr": "exiger", "es": "requerir", "it": "richiedere", "tr": "gerektirmek", "ru": "требовать"},
-    {"en": "to establish", "de": "etablieren", "fr": "établir", "es": "establecer", "it": "stabilire", "tr": "kurmak", "ru": "устанавливать"},
-    {"en": "to identify", "de": "identifizieren", "fr": "identifier", "es": "identificar", "it": "identificare", "tr": "tanımlamak", "ru": "выявлять"},
-    {"en": "to investigate", "de": "untersuchen", "fr": "enquêter", "es": "investigar", "it": "investigare", "tr": "araştırmak", "ru": "расследовать"},
-    {"en": "to contribute", "de": "beitragen", "fr": "contribuer", "es": "contribuir", "it": "contribuire", "tr": "katkıda bulunmak", "ru": "способствовать"},
-    {"en": "to convince", "de": "überzeugen", "fr": "convaincre", "es": "convencer", "it": "convincere", "tr": "ikna etmek", "ru": "убеждать"},
-    {"en": "to negotiate", "de": "verhandeln", "fr": "négocier", "es": "negociar", "it": "negoziare", "tr": "müzakere etmek", "ru": "вести переговоры"},
-    {"en": "to implement", "de": "umsetzen", "fr": "mettre en œuvre", "es": "implementar", "it": "attuare", "tr": "uygulamak", "ru": "внедрять"},
-    {"en": "to adapt", "de": "anpassen", "fr": "adapter", "es": "adaptar", "it": "adattare", "tr": "uyarlamak", "ru": "адаптировать"},
-    {"en": "to reflect", "de": "reflektieren", "fr": "réfléchir", "es": "reflexionar", "it": "riflettere", "tr": "düşünmek", "ru": "размышлять"},
-    {"en": "to consider", "de": "berücksichtigen", "fr": "considérer", "es": "considerar", "it": "considerare", "tr": "göz önünde bulundurmak", "ru": "учитывать"},
-    {"en": "to suggest", "de": "vorschlagen", "fr": "suggérer", "es": "sugerir", "it": "suggerire", "tr": "önermek", "ru": "предлагать"},
-    {"en": "to propose", "de": "beantragen", "fr": "proposer", "es": "proponer", "it": "proporre", "tr": "teklif etmek", "ru": "выдвигать"},
-    {"en": "to depend", "de": "abhängen", "fr": "dépendre", "es": "depender", "it": "dipendere", "tr": "bağlı olmak", "ru": "зависеть"},
-    {"en": "to participate", "de": "teilnehmen", "fr": "participer", "es": "participar", "it": "partecipare", "tr": "katılmak", "ru": "участвовать"},
-    {"en": "to approve", "de": "genehmigen", "fr": "approuver", "es": "aprobar", "it": "approvare", "tr": "onaylamak", "ru": "одобрять"},
-    {"en": "to refuse", "de": "ablehnen", "fr": "refuser", "es": "rechazar", "it": "rifiutare", "tr": "reddetmek", "ru": "отказывать"},
-    {"en": "to admit", "de": "zugeben", "fr": "admettre", "es": "admitir", "it": "ammettere", "tr": "itiraf etmek", "ru": "допускать"},
-    {"en": "to deny", "de": "leugnen", "fr": "nier", "es": "negar", "it": "negare", "tr": "inkâr etmek", "ru": "отрицать"},
-    {"en": "assumption", "de": "die Annahme", "fr": "la supposition", "es": "la suposición", "it": "il presupposto", "tr": "varsayım", "ru": "предположение"},
-    {"en": "consequence", "de": "die Folge", "fr": "la conséquence", "es": "la consecuencia", "it": "la conseguenza", "tr": "sonuç", "ru": "последствие"},
-    {"en": "prerequisite", "de": "die Voraussetzung", "fr": "la condition préalable", "es": "el requisito previo", "it": "il prerequisito", "tr": "ön koşul", "ru": "предпосылка"},
-    {"en": "distribution", "de": "die Verteilung", "fr": "la distribution", "es": "la distribución", "it": "la distribuzione", "tr": "dağılım", "ru": "распределение"},
-    {"en": "approach", "de": "der Ansatz", "fr": "l'approche", "es": "el enfoque", "it": "l'approccio", "tr": "yaklaşım", "ru": "подход"},
-    {"en": "concept", "de": "das Konzept", "fr": "le concept", "es": "el concepto", "it": "il concetto", "tr": "kavram", "ru": "концепция"},
-    {"en": "evidence", "de": "der Beweis", "fr": "la preuve", "es": "la evidencia", "it": "la prova", "tr": "kanıt", "ru": "доказательство"},
-    {"en": "factor", "de": "der Faktor", "fr": "le facteur", "es": "el factor", "it": "il fattore", "tr": "faktör", "ru": "фактор"},
-    {"en": "framework", "de": "der Rahmen", "fr": "le cadre", "es": "el marco", "it": "il quadro", "tr": "çerçeve", "ru": "рамки"},
-    {"en": "hypothesis", "de": "die Hypothese", "fr": "l'hypothèse", "es": "la hipótesis", "it": "l'ipotesi", "tr": "hipotez", "ru": "гипотеза"},
-    {"en": "criterion", "de": "das Kriterium", "fr": "le critère", "es": "el criterio", "it": "il criterio", "tr": "kriter", "ru": "критерий"},
-    {"en": "tendency", "de": "die Tendenz", "fr": "la tendance", "es": "la tendencia", "it": "la tendenza", "tr": "eğilim", "ru": "тенденция"},
-    {"en": "implication", "de": "die Implikation", "fr": "l'implication", "es": "la implicación", "it": "l'implicazione", "tr": "ima", "ru": "следствие"},
-    {"en": "perspective", "de": "die Perspektive", "fr": "la perspective", "es": "la perspectiva", "it": "la prospettiva", "tr": "bakış açısı", "ru": "перспектива"},
-    {"en": "context", "de": "der Kontext", "fr": "le contexte", "es": "el contexto", "it": "il contesto", "tr": "bağlam", "ru": "контекст"},
-    {"en": "phenomenon", "de": "das Phänomen", "fr": "le phénomène", "es": "el fenómeno", "it": "il fenomeno", "tr": "olgu", "ru": "явление"},
-    {"en": "circumstance", "de": "der Umstand", "fr": "la circonstance", "es": "la circunstancia", "it": "la circostanza", "tr": "durum", "ru": "обстоятельство"},
-    {"en": "outcome", "de": "das Ergebnis", "fr": "le résultat", "es": "el resultado", "it": "l'esito", "tr": "sonuç", "ru": "результат"},
-    {"en": "purpose", "de": "der Zweck", "fr": "le but", "es": "el propósito", "it": "lo scopo", "tr": "amaç", "ru": "цель"},
-    {"en": "principle", "de": "das Prinzip", "fr": "le principe", "es": "el principio", "it": "il principio", "tr": "ilke", "ru": "принцип"},
-    {"en": "aspect", "de": "der Aspekt", "fr": "l'aspect", "es": "el aspecto", "it": "l'aspetto", "tr": "yön", "ru": "аспект"},
-    {"en": "issue", "de": "das Thema", "fr": "la question", "es": "el asunto", "it": "la questione", "tr": "mesele", "ru": "вопрос"},
-    {"en": "argument", "de": "das Argument", "fr": "l'argument", "es": "el argumento", "it": "l'argomento", "tr": "argüman", "ru": "аргумент"},
-    {"en": "statement", "de": "die Aussage", "fr": "la déclaration", "es": "la declaración", "it": "la dichiarazione", "tr": "beyan", "ru": "заявление"},
-    {"en": "conclusion", "de": "die Schlussfolgerung", "fr": "la conclusion", "es": "la conclusión", "it": "la conclusione", "tr": "sonuç çıkarımı", "ru": "вывод"},
-    {"en": "assessment", "de": "die Beurteilung", "fr": "l'évaluation", "es": "la evaluación", "it": "la valutazione", "tr": "değerlendirme", "ru": "оценка"},
-    {"en": "analysis", "de": "die Analyse", "fr": "l'analyse", "es": "el análisis", "it": "l'analisi", "tr": "analiz", "ru": "анализ"},
-    {"en": "comparison", "de": "der Vergleich", "fr": "la comparaison", "es": "la comparación", "it": "il confronto", "tr": "karşılaştırma", "ru": "сравнение"},
-    {"en": "contrast", "de": "der Gegensatz", "fr": "le contraste", "es": "el contraste", "it": "il contrasto", "tr": "zıtlık", "ru": "контраст"},
-    {"en": "definition", "de": "die Definition", "fr": "la définition", "es": "la definición", "it": "la definizione", "tr": "tanım", "ru": "определение"},
-    {"en": "interpretation", "de": "die Interpretation", "fr": "l'interprétation", "es": "la interpretación", "it": "l'interpretazione", "tr": "yorum", "ru": "толкование"},
-    {"en": "majority", "de": "die Mehrheit", "fr": "la majorité", "es": "la mayoría", "it": "la maggioranza", "tr": "çoğunluk", "ru": "большинство"},
-    {"en": "minority", "de": "die Minderheit", "fr": "la minorité", "es": "la minoría", "it": "la minoranza", "tr": "azınlık", "ru": "меньшинство"},
-    {"en": "proportion", "de": "der Anteil", "fr": "la proportion", "es": "la proporción", "it": "la proporzione", "tr": "oran", "ru": "доля"},
-    {"en": "scope", "de": "der Umfang", "fr": "la portée", "es": "el alcance", "it": "la portata", "tr": "kapsam", "ru": "охват"},
-    {"en": "extent", "de": "das Ausmaß", "fr": "l'étendue", "es": "el grado", "it": "la misura", "tr": "derece", "ru": "степень"},
-    {"en": "impact", "de": "die Auswirkung", "fr": "l'impact", "es": "el impacto", "it": "l'impatto", "tr": "etki", "ru": "воздействие"},
-    {"en": "influence", "de": "der Einfluss", "fr": "l'influence", "es": "la influencia", "it": "l'influenza", "tr": "etki", "ru": "влияние"},
-    {"en": "advantage", "de": "der Vorteil", "fr": "l'avantage", "es": "la ventaja", "it": "il vantaggio", "tr": "avantaj", "ru": "преимущество"},
-    {"en": "disadvantage", "de": "der Nachteil", "fr": "l'inconvénient", "es": "la desventaja", "it": "lo svantaggio", "tr": "dezavantaj", "ru": "недостаток"},
-    {"en": "benefit", "de": "der Nutzen", "fr": "le bénéfice", "es": "el beneficio", "it": "il beneficio", "tr": "fayda", "ru": "польза"},
-    {"en": "risk", "de": "das Risiko", "fr": "le risque", "es": "el riesgo", "it": "il rischio", "tr": "risk", "ru": "риск"},
-    {"en": "challenge", "de": "die Herausforderung", "fr": "le défi", "es": "el desafío", "it": "la sfida", "tr": "zorluk", "ru": "вызов"},
-    {"en": "solution", "de": "die Lösung", "fr": "la solution", "es": "la solución", "it": "la soluzione", "tr": "çözüm", "ru": "решение"},
-    {"en": "alternative", "de": "die Alternative", "fr": "l'alternative", "es": "la alternativa", "it": "l'alternativa", "tr": "alternatif", "ru": "альтернатива"},
-    {"en": "priority", "de": "die Priorität", "fr": "la priorité", "es": "la prioridad", "it": "la priorità", "tr": "öncelik", "ru": "приоритет"},
-    {"en": "responsibility", "de": "die Verantwortung", "fr": "la responsabilité", "es": "la responsabilidad", "it": "la responsabilità", "tr": "sorumluluk", "ru": "ответственность"},
-    {"en": "opportunity", "de": "die Gelegenheit", "fr": "l'occasion", "es": "la oportunidad", "it": "l'opportunità", "tr": "fırsat", "ru": "возможность"},
-    {"en": "requirement", "de": "die Anforderung", "fr": "l'exigence", "es": "el requisito", "it": "il requisito", "tr": "gereklilik", "ru": "требование"},
-    {"en": "process", "de": "der Prozess", "fr": "le processus", "es": "el proceso", "it": "il processo", "tr": "süreç", "ru": "процесс"},
-    {"en": "procedure", "de": "das Verfahren", "fr": "la procédure", "es": "el procedimiento", "it": "la procedura", "tr": "prosedür", "ru": "процедура"},
-    {"en": "development", "de": "die Entwicklung", "fr": "le développement", "es": "el desarrollo", "it": "lo sviluppo", "tr": "gelişme", "ru": "развитие"},
-    {"en": "structure", "de": "die Struktur", "fr": "la structure", "es": "la estructura", "it": "la struttura", "tr": "yapı", "ru": "структура"},
-    {"en": "function", "de": "die Funktion", "fr": "la fonction", "es": "la función", "it": "la funzione", "tr": "işlev", "ru": "функция"},
-    {"en": "source", "de": "die Quelle", "fr": "la source", "es": "la fuente", "it": "la fonte", "tr": "kaynak", "ru": "источник"},
-    {"en": "research", "de": "die Forschung", "fr": "la recherche", "es": "la investigación", "it": "la ricerca", "tr": "araştırma", "ru": "исследование"},
-    {"en": "knowledge", "de": "das Wissen", "fr": "la connaissance", "es": "el conocimiento", "it": "la conoscenza", "tr": "bilgi", "ru": "знание"},
-    {"en": "skill", "de": "die Fähigkeit", "fr": "la compétence", "es": "la habilidad", "it": "l'abilità", "tr": "beceri", "ru": "навык"},
-    {"en": "experience", "de": "die Erfahrung", "fr": "l'expérience", "es": "la experiencia", "it": "l'esperienza", "tr": "deneyim", "ru": "опыт"},
-    {"en": "behaviour", "de": "das Verhalten", "fr": "le comportement", "es": "el comportamiento", "it": "il comportamento", "tr": "davranış", "ru": "поведение"},
-    {"en": "attitude", "de": "die Einstellung", "fr": "l'attitude", "es": "la actitud", "it": "l'atteggiamento", "tr": "tutum", "ru": "отношение"},
-    {"en": "awareness", "de": "das Bewusstsein", "fr": "la conscience", "es": "la conciencia", "it": "la consapevolezza", "tr": "farkındalık", "ru": "осознание"},
-    {"en": "society", "de": "die Gesellschaft", "fr": "la société", "es": "la sociedad", "it": "la società", "tr": "toplum", "ru": "общество"},
-    {"en": "government", "de": "die Regierung", "fr": "le gouvernement", "es": "el gobierno", "it": "il governo", "tr": "hükümet", "ru": "правительство"},
-    {"en": "policy", "de": "die Politik", "fr": "la politique", "es": "la política", "it": "la politica", "tr": "politika", "ru": "политика"},
-    {"en": "economy", "de": "die Wirtschaft", "fr": "l'économie", "es": "la economía", "it": "l'economia", "tr": "ekonomi", "ru": "экономика"},
-    {"en": "environment", "de": "die Umwelt", "fr": "l'environnement", "es": "el medio ambiente", "it": "l'ambiente", "tr": "çevre", "ru": "окружающая среда"},
-    {"en": "industry", "de": "die Industrie", "fr": "l'industrie", "es": "la industria", "it": "l'industria", "tr": "sanayi", "ru": "промышленность"},
-    {"en": "community", "de": "die Gemeinschaft", "fr": "la communauté", "es": "la comunidad", "it": "la comunità", "tr": "topluluk", "ru": "сообщество"},
-    {"en": "authority", "de": "die Behörde", "fr": "l'autorité", "es": "la autoridad", "it": "l'autorità", "tr": "yetkili makam", "ru": "власть"},
-    {"en": "citizen", "de": "der Bürger", "fr": "le citoyen", "es": "el ciudadano", "it": "il cittadino", "tr": "vatandaş", "ru": "гражданин"},
-    {"en": "media", "de": "die Medien", "fr": "les médias", "es": "los medios", "it": "i media", "tr": "medya", "ru": "СМИ"},
-    {"en": "advertisement", "de": "die Werbung", "fr": "la publicité", "es": "el anuncio", "it": "la pubblicità", "tr": "reklam", "ru": "реклама"},
-    {"en": "audience", "de": "das Publikum", "fr": "le public", "es": "el público", "it": "il pubblico", "tr": "izleyici", "ru": "аудитория"},
-    {"en": "headline", "de": "die Schlagzeile", "fr": "le titre", "es": "el titular", "it": "il titolo", "tr": "manşet", "ru": "заголовок"},
-    {"en": "broadcast", "de": "die Sendung", "fr": "l'émission", "es": "la emisión", "it": "la trasmissione", "tr": "yayın", "ru": "трансляция"},
-    {"en": "journalist", "de": "der Journalist", "fr": "le journaliste", "es": "el periodista", "it": "il giornalista", "tr": "gazeteci", "ru": "журналист"},
-    {"en": "survey", "de": "die Umfrage", "fr": "le sondage", "es": "la encuesta", "it": "il sondaggio", "tr": "anket", "ru": "опрос"},
-    {"en": "amount", "de": "die Menge", "fr": "la quantité", "es": "la cantidad", "it": "la quantità", "tr": "miktar", "ru": "количество"},
-    {"en": "budget", "de": "das Budget", "fr": "le budget", "es": "el presupuesto", "it": "il budget", "tr": "bütçe", "ru": "бюджет"},
-    {"en": "investment", "de": "die Investition", "fr": "l'investissement", "es": "la inversión", "it": "l'investimento", "tr": "yatırım", "ru": "инвестиция"},
-    {"en": "profit", "de": "der Gewinn", "fr": "le profit", "es": "el beneficio", "it": "il profitto", "tr": "kâr", "ru": "прибыль"},
-    {"en": "agreement", "de": "die Vereinbarung", "fr": "l'accord", "es": "el acuerdo", "it": "l'accordo", "tr": "anlaşma", "ru": "соглашение"},
-    {"en": "contract", "de": "der Vertrag", "fr": "le contrat", "es": "el contrato", "it": "il contratto", "tr": "sözleşme", "ru": "контракт"},
-    {"en": "deadline", "de": "die Frist", "fr": "le délai", "es": "el plazo", "it": "la scadenza", "tr": "son tarih", "ru": "срок"},
-    {"en": "colleague", "de": "der Kollege", "fr": "le collègue", "es": "el colega", "it": "il collega", "tr": "meslektaş", "ru": "коллега"},
-    {"en": "employer", "de": "der Arbeitgeber", "fr": "l'employeur", "es": "el empleador", "it": "il datore di lavoro", "tr": "işveren", "ru": "работодатель"},
-    {"en": "employee", "de": "der Arbeitnehmer", "fr": "l'employé", "es": "el empleado", "it": "il dipendente", "tr": "çalışan", "ru": "сотрудник"},
-    {"en": "significant", "de": "bedeutend", "fr": "significatif", "es": "significativo", "it": "significativo", "tr": "önemli", "ru": "значительный"},
-    {"en": "explicit", "de": "ausdrücklich", "fr": "explicite", "es": "explícito", "it": "esplicito", "tr": "açık", "ru": "явный"},
-    {"en": "tentative", "de": "vorläufig", "fr": "provisoire", "es": "provisional", "it": "provvisorio", "tr": "geçici", "ru": "предварительный"},
-    {"en": "comprehensive", "de": "umfassend", "fr": "complet", "es": "exhaustivo", "it": "esauriente", "tr": "kapsamlı", "ru": "всесторонний"},
-    {"en": "relevant", "de": "relevant", "fr": "pertinent", "es": "relevante", "it": "rilevante", "tr": "ilgili", "ru": "релевантный"},
-    {"en": "appropriate", "de": "angemessen", "fr": "approprié", "es": "apropiado", "it": "appropriato", "tr": "uygun", "ru": "уместный"},
-    {"en": "crucial", "de": "entscheidend", "fr": "crucial", "es": "crucial", "it": "cruciale", "tr": "çok önemli", "ru": "решающий"},
-    {"en": "essential", "de": "wesentlich", "fr": "essentiel", "es": "esencial", "it": "essenziale", "tr": "temel", "ru": "существенный"},
-    {"en": "potential", "de": "potenziell", "fr": "potentiel", "es": "potencial", "it": "potenziale", "tr": "potansiyel", "ru": "потенциальный"},
-    {"en": "substantial", "de": "erheblich", "fr": "substantiel", "es": "sustancial", "it": "sostanziale", "tr": "önemli ölçüde", "ru": "существенный"},
-    {"en": "considerable", "de": "beträchtlich", "fr": "considérable", "es": "considerable", "it": "considerevole", "tr": "kayda değer", "ru": "значительный по объёму"},
-    {"en": "evident", "de": "offensichtlich", "fr": "évident", "es": "evidente", "it": "evidente", "tr": "açıkça görülen", "ru": "очевидный"},
-    {"en": "consistent", "de": "konsequent", "fr": "cohérent", "es": "coherente", "it": "coerente", "tr": "tutarlı", "ru": "последовательный"},
-    {"en": "reliable", "de": "zuverlässig", "fr": "fiable", "es": "fiable", "it": "affidabile", "tr": "güvenilir", "ru": "надёжный"},
-    {"en": "accurate", "de": "genau", "fr": "précis", "es": "preciso", "it": "preciso", "tr": "doğru", "ru": "точный"},
-    {"en": "vague", "de": "vage", "fr": "vague", "es": "vago", "it": "vago", "tr": "belirsiz", "ru": "расплывчатый"},
-    {"en": "ambiguous", "de": "mehrdeutig", "fr": "ambigu", "es": "ambiguo", "it": "ambiguo", "tr": "muğlak", "ru": "двусмысленный"},
-    {"en": "biased", "de": "voreingenommen", "fr": "partial", "es": "sesgado", "it": "parziale", "tr": "ön yargılı", "ru": "предвзятый"},
-    {"en": "objective", "de": "objektiv", "fr": "objectif", "es": "objetivo", "it": "obiettivo", "tr": "nesnel", "ru": "объективный"},
-    {"en": "subjective", "de": "subjektiv", "fr": "subjectif", "es": "subjetivo", "it": "soggettivo", "tr": "öznel", "ru": "субъективный"},
-    {"en": "feasible", "de": "machbar", "fr": "faisable", "es": "factible", "it": "fattibile", "tr": "uygulanabilir", "ru": "осуществимый"},
-    {"en": "inevitable", "de": "unvermeidlich", "fr": "inévitable", "es": "inevitable", "it": "inevitabile", "tr": "kaçınılmaz", "ru": "неизбежный"},
-    {"en": "controversial", "de": "umstritten", "fr": "controversé", "es": "controvertido", "it": "controverso", "tr": "tartışmalı", "ru": "спорный"},
-    {"en": "plausible", "de": "plausibel", "fr": "plausible", "es": "plausible", "it": "plausibile", "tr": "akla yatkın", "ru": "правдоподобный"},
-    {"en": "adequate", "de": "ausreichend", "fr": "adéquat", "es": "adecuado", "it": "adeguato", "tr": "yeterli", "ru": "достаточный"},
-    {"en": "efficient", "de": "effizient", "fr": "efficace", "es": "eficiente", "it": "efficiente", "tr": "verimli", "ru": "эффективный"},
-    {"en": "flexible", "de": "flexibel", "fr": "flexible", "es": "flexible", "it": "flessibile", "tr": "esnek", "ru": "гибкий"},
-    {"en": "sustainable", "de": "nachhaltig", "fr": "durable", "es": "sostenible", "it": "sostenibile", "tr": "sürdürülebilir", "ru": "устойчивый"},
-    {"en": "remarkable", "de": "bemerkenswert", "fr": "remarquable", "es": "notable", "it": "notevole", "tr": "dikkat çekici", "ru": "примечательный"},
-    {"en": "diverse", "de": "vielfältig", "fr": "divers", "es": "diverso", "it": "diverso", "tr": "çeşitli", "ru": "разнообразный"},
-    {"en": "mutual", "de": "gegenseitig", "fr": "mutuel", "es": "mutuo", "it": "reciproco", "tr": "karşılıklı", "ru": "взаимный"},
-    {"en": "deliberate", "de": "absichtlich", "fr": "délibéré", "es": "deliberado", "it": "deliberato", "tr": "kasıtlı", "ru": "преднамеренный"},
-    {"en": "thorough", "de": "gründlich", "fr": "approfondi", "es": "minucioso", "it": "approfondito", "tr": "titiz", "ru": "тщательный"},
-    {"en": "subsequent", "de": "nachfolgend", "fr": "ultérieur", "es": "posterior", "it": "successivo", "tr": "sonraki", "ru": "последующий"},
-    {"en": "widespread", "de": "weitverbreitet", "fr": "répandu", "es": "generalizado", "it": "diffuso", "tr": "yaygın", "ru": "распространённый"},
-    {"en": "particularly", "de": "besonders", "fr": "particulièrement", "es": "particularmente", "it": "particolarmente", "tr": "özellikle", "ru": "особенно"},
-    {"en": "essentially", "de": "im Wesentlichen", "fr": "essentiellement", "es": "esencialmente", "it": "essenzialmente", "tr": "esasen", "ru": "по существу"},
-    {"en": "presumably", "de": "vermutlich", "fr": "vraisemblablement", "es": "presumiblemente", "it": "presumibilmente", "tr": "muhtemelen", "ru": "предположительно"},
-    {"en": "increasingly", "de": "zunehmend", "fr": "de plus en plus", "es": "cada vez más", "it": "sempre più", "tr": "giderek", "ru": "всё более"},
-    {"en": "ultimately", "de": "letztlich", "fr": "finalement", "es": "en última instancia", "it": "in definitiva", "tr": "nihayetinde", "ru": "в конечном счёте"},
-    {"en": "primarily", "de": "in erster Linie", "fr": "principalement", "es": "principalmente", "it": "principalmente", "tr": "öncelikle", "ru": "главным образом"},
-    {"en": "explicitly", "de": "ausdrücklich", "fr": "explicitement", "es": "explícitamente", "it": "esplicitamente", "tr": "açıkça", "ru": "явно"},
-    {"en": "deliberately", "de": "absichtlich", "fr": "délibérément", "es": "deliberadamente", "it": "deliberatamente", "tr": "kasıtlı olarak", "ru": "намеренно"},
-    {"en": "arguably", "de": "wohl", "fr": "sans doute", "es": "posiblemente", "it": "probabilmente", "tr": "tartışmasız", "ru": "пожалуй"},
-    {"en": "thereby", "de": "dadurch", "fr": "ce faisant", "es": "de ese modo", "it": "in tal modo", "tr": "böylelikle", "ru": "тем самым"},
-    {"en": "accordingly", "de": "dementsprechend", "fr": "en conséquence", "es": "en consecuencia", "it": "di conseguenza", "tr": "buna göre", "ru": "соответственно"},
-    {"en": "notably", "de": "vor allem", "fr": "notamment", "es": "en particular", "it": "in particolare", "tr": "özellikle de", "ru": "в частности"}
+  {
+    "en": "however",
+    "de": "jedoch",
+    "fr": "cependant",
+    "es": "sin embargo",
+    "it": "tuttavia",
+    "tr": "ancak",
+    "ru": "однако"
+  },
+  {
+    "en": "nevertheless",
+    "de": "dennoch",
+    "fr": "néanmoins",
+    "es": "no obstante",
+    "it": "ciononostante",
+    "tr": "yine de",
+    "ru": "тем не менее"
+  },
+  {
+    "en": "therefore",
+    "de": "deshalb",
+    "fr": "donc",
+    "es": "por lo tanto",
+    "it": "perciò",
+    "tr": "bu yüzden",
+    "ru": "поэтому"
+  },
+  {
+    "en": "consequently",
+    "de": "folglich",
+    "fr": "par conséquent",
+    "es": "en consecuencia",
+    "it": "di conseguenza",
+    "tr": "sonuç olarak",
+    "ru": "следовательно"
+  },
+  {
+    "en": "moreover",
+    "de": "außerdem",
+    "fr": "de plus",
+    "es": "además",
+    "it": "inoltre",
+    "tr": "ayrıca",
+    "ru": "более того"
+  },
+  {
+    "en": "furthermore",
+    "de": "darüber hinaus",
+    "fr": "en outre",
+    "es": "asimismo",
+    "it": "per di più",
+    "tr": "üstelik",
+    "ru": "кроме того"
+  },
+  {
+    "en": "nonetheless",
+    "de": "trotzdem",
+    "fr": "pourtant",
+    "es": "aun así",
+    "it": "nondimeno",
+    "tr": "buna rağmen",
+    "ru": "всё же"
+  },
+  {
+    "en": "although",
+    "de": "obwohl",
+    "fr": "bien que",
+    "es": "aunque",
+    "it": "sebbene",
+    "tr": "her ne kadar",
+    "ru": "хотя"
+  },
+  {
+    "en": "despite",
+    "de": "trotz",
+    "fr": "malgré",
+    "es": "a pesar de",
+    "it": "nonostante",
+    "tr": "rağmen",
+    "ru": "несмотря на"
+  },
+  {
+    "en": "whereas",
+    "de": "wohingegen",
+    "fr": "tandis que",
+    "es": "mientras que",
+    "it": "mentre",
+    "tr": "oysa",
+    "ru": "тогда как"
+  },
+  {
+    "en": "thus",
+    "de": "somit",
+    "fr": "ainsi",
+    "es": "así pues",
+    "it": "quindi",
+    "tr": "böylece",
+    "ru": "таким образом"
+  },
+  {
+    "en": "hence",
+    "de": "daher",
+    "fr": "d'où",
+    "es": "de ahí",
+    "it": "da qui",
+    "tr": "dolayısıyla",
+    "ru": "отсюда"
+  },
+  {
+    "en": "instead",
+    "de": "stattdessen",
+    "fr": "au lieu de cela",
+    "es": "en cambio",
+    "it": "invece",
+    "tr": "bunun yerine",
+    "ru": "вместо этого"
+  },
+  {
+    "en": "otherwise",
+    "de": "andernfalls",
+    "fr": "autrement",
+    "es": "de lo contrario",
+    "it": "altrimenti",
+    "tr": "aksi takdirde",
+    "ru": "иначе"
+  },
+  {
+    "en": "regardless",
+    "de": "ungeachtet",
+    "fr": "indépendamment",
+    "es": "independientemente",
+    "it": "indipendentemente",
+    "tr": "ne olursa olsun",
+    "ru": "независимо"
+  },
+  {
+    "en": "meanwhile",
+    "de": "inzwischen",
+    "fr": "entre-temps",
+    "es": "mientras tanto",
+    "it": "nel frattempo",
+    "tr": "bu arada",
+    "ru": "тем временем"
+  },
+  {
+    "en": "indeed",
+    "de": "in der Tat",
+    "fr": "en effet",
+    "es": "de hecho",
+    "it": "infatti",
+    "tr": "gerçekten de",
+    "ru": "действительно"
+  },
+  {
+    "en": "namely",
+    "de": "nämlich",
+    "fr": "à savoir",
+    "es": "a saber",
+    "it": "ovvero",
+    "tr": "yani",
+    "ru": "а именно"
+  },
+  {
+    "en": "to acknowledge",
+    "de": "anerkennen",
+    "fr": "reconnaître",
+    "es": "reconocer",
+    "it": "riconoscere",
+    "tr": "kabul etmek",
+    "ru": "признавать"
+  },
+  {
+    "en": "to assess",
+    "de": "bewerten",
+    "fr": "évaluer",
+    "es": "evaluar",
+    "it": "valutare",
+    "tr": "değerlendirmek",
+    "ru": "оценивать"
+  },
+  {
+    "en": "to imply",
+    "de": "andeuten",
+    "fr": "impliquer",
+    "es": "implicar",
+    "it": "implicare",
+    "tr": "ima etmek",
+    "ru": "подразумевать"
+  },
+  {
+    "en": "to encompass",
+    "de": "umfassen",
+    "fr": "englober",
+    "es": "abarcar",
+    "it": "comprendere",
+    "tr": "kapsamak",
+    "ru": "охватывать"
+  },
+  {
+    "en": "to argue",
+    "de": "argumentieren",
+    "fr": "soutenir",
+    "es": "argumentar",
+    "it": "sostenere",
+    "tr": "savunmak",
+    "ru": "утверждать"
+  },
+  {
+    "en": "to claim",
+    "de": "behaupten",
+    "fr": "prétendre",
+    "es": "afirmar",
+    "it": "affermare",
+    "tr": "iddia etmek",
+    "ru": "заявлять"
+  },
+  {
+    "en": "to assume",
+    "de": "annehmen",
+    "fr": "supposer",
+    "es": "suponer",
+    "it": "presumere",
+    "tr": "varsaymak",
+    "ru": "предполагать"
+  },
+  {
+    "en": "to emphasize",
+    "de": "betonen",
+    "fr": "souligner",
+    "es": "enfatizar",
+    "it": "enfatizzare",
+    "tr": "vurgulamak",
+    "ru": "подчёркивать"
+  },
+  {
+    "en": "to demonstrate",
+    "de": "demonstrieren",
+    "fr": "démontrer",
+    "es": "demostrar",
+    "it": "dimostrare",
+    "tr": "göstermek",
+    "ru": "демонстрировать"
+  },
+  {
+    "en": "to indicate",
+    "de": "hinweisen",
+    "fr": "indiquer",
+    "es": "indicar",
+    "it": "indicare",
+    "tr": "belirtmek",
+    "ru": "указывать"
+  },
+  {
+    "en": "to interpret",
+    "de": "interpretieren",
+    "fr": "interpréter",
+    "es": "interpretar",
+    "it": "interpretare",
+    "tr": "yorumlamak",
+    "ru": "интерпретировать"
+  },
+  {
+    "en": "to evaluate",
+    "de": "auswerten",
+    "fr": "évaluer",
+    "es": "valorar",
+    "it": "esaminare",
+    "tr": "incelemek",
+    "ru": "анализировать"
+  },
+  {
+    "en": "to justify",
+    "de": "rechtfertigen",
+    "fr": "justifier",
+    "es": "justificar",
+    "it": "giustificare",
+    "tr": "haklı çıkarmak",
+    "ru": "оправдывать"
+  },
+  {
+    "en": "to highlight",
+    "de": "hervorheben",
+    "fr": "mettre en évidence",
+    "es": "destacar",
+    "it": "evidenziare",
+    "tr": "öne çıkarmak",
+    "ru": "выделять"
+  },
+  {
+    "en": "to summarize",
+    "de": "zusammenfassen",
+    "fr": "résumer",
+    "es": "resumir",
+    "it": "riassumere",
+    "tr": "özetlemek",
+    "ru": "резюмировать"
+  },
+  {
+    "en": "to conclude",
+    "de": "schlussfolgern",
+    "fr": "conclure",
+    "es": "concluir",
+    "it": "concludere",
+    "tr": "sonuçlandırmak",
+    "ru": "заключать"
+  },
+  {
+    "en": "to contradict",
+    "de": "widersprechen",
+    "fr": "contredire",
+    "es": "contradecir",
+    "it": "contraddire",
+    "tr": "çelişmek",
+    "ru": "противоречить"
+  },
+  {
+    "en": "to clarify",
+    "de": "klären",
+    "fr": "clarifier",
+    "es": "aclarar",
+    "it": "chiarire",
+    "tr": "açıklığa kavuşturmak",
+    "ru": "прояснять"
+  },
+  {
+    "en": "to illustrate",
+    "de": "veranschaulichen",
+    "fr": "illustrer",
+    "es": "ilustrar",
+    "it": "illustrare",
+    "tr": "örneklemek",
+    "ru": "иллюстрировать"
+  },
+  {
+    "en": "to reveal",
+    "de": "enthüllen",
+    "fr": "révéler",
+    "es": "revelar",
+    "it": "rivelare",
+    "tr": "ortaya çıkarmak",
+    "ru": "раскрывать"
+  },
+  {
+    "en": "to determine",
+    "de": "bestimmen",
+    "fr": "déterminer",
+    "es": "determinar",
+    "it": "determinare",
+    "tr": "belirlemek",
+    "ru": "определять"
+  },
+  {
+    "en": "to distinguish",
+    "de": "unterscheiden",
+    "fr": "distinguer",
+    "es": "distinguir",
+    "it": "distinguere",
+    "tr": "ayırt etmek",
+    "ru": "различать"
+  },
+  {
+    "en": "to estimate",
+    "de": "schätzen",
+    "fr": "estimer",
+    "es": "estimar",
+    "it": "stimare",
+    "tr": "tahmin etmek",
+    "ru": "оценивать приблизительно"
+  },
+  {
+    "en": "to anticipate",
+    "de": "vorhersehen",
+    "fr": "anticiper",
+    "es": "anticipar",
+    "it": "anticipare",
+    "tr": "öngörmek",
+    "ru": "предвидеть"
+  },
+  {
+    "en": "to overcome",
+    "de": "überwinden",
+    "fr": "surmonter",
+    "es": "superar",
+    "it": "superare",
+    "tr": "üstesinden gelmek",
+    "ru": "преодолевать"
+  },
+  {
+    "en": "to achieve",
+    "de": "erreichen",
+    "fr": "atteindre",
+    "es": "lograr",
+    "it": "raggiungere",
+    "tr": "başarmak",
+    "ru": "достигать"
+  },
+  {
+    "en": "to maintain",
+    "de": "aufrechterhalten",
+    "fr": "maintenir",
+    "es": "mantener",
+    "it": "mantenere",
+    "tr": "sürdürmek",
+    "ru": "поддерживать"
+  },
+  {
+    "en": "to enhance",
+    "de": "verbessern",
+    "fr": "améliorer",
+    "es": "mejorar",
+    "it": "migliorare",
+    "tr": "geliştirmek",
+    "ru": "улучшать"
+  },
+  {
+    "en": "to reduce",
+    "de": "verringern",
+    "fr": "réduire",
+    "es": "reducir",
+    "it": "ridurre",
+    "tr": "azaltmak",
+    "ru": "сокращать"
+  },
+  {
+    "en": "to increase",
+    "de": "steigern",
+    "fr": "augmenter",
+    "es": "aumentar",
+    "it": "aumentare",
+    "tr": "artırmak",
+    "ru": "увеличивать"
+  },
+  {
+    "en": "to affect",
+    "de": "beeinflussen",
+    "fr": "affecter",
+    "es": "afectar",
+    "it": "influire",
+    "tr": "etkilemek",
+    "ru": "влиять"
+  },
+  {
+    "en": "to ensure",
+    "de": "sicherstellen",
+    "fr": "garantir",
+    "es": "garantizar",
+    "it": "garantire",
+    "tr": "sağlamak",
+    "ru": "обеспечивать"
+  },
+  {
+    "en": "to involve",
+    "de": "beinhalten",
+    "fr": "impliquer",
+    "es": "implicar",
+    "it": "coinvolgere",
+    "tr": "içermek",
+    "ru": "вовлекать"
+  },
+  {
+    "en": "to obtain",
+    "de": "erhalten",
+    "fr": "obtenir",
+    "es": "obtener",
+    "it": "ottenere",
+    "tr": "elde etmek",
+    "ru": "получать"
+  },
+  {
+    "en": "to require",
+    "de": "erfordern",
+    "fr": "exiger",
+    "es": "requerir",
+    "it": "richiedere",
+    "tr": "gerektirmek",
+    "ru": "требовать"
+  },
+  {
+    "en": "to establish",
+    "de": "etablieren",
+    "fr": "établir",
+    "es": "establecer",
+    "it": "stabilire",
+    "tr": "kurmak",
+    "ru": "устанавливать"
+  },
+  {
+    "en": "to identify",
+    "de": "identifizieren",
+    "fr": "identifier",
+    "es": "identificar",
+    "it": "identificare",
+    "tr": "tanımlamak",
+    "ru": "выявлять"
+  },
+  {
+    "en": "to investigate",
+    "de": "untersuchen",
+    "fr": "enquêter",
+    "es": "investigar",
+    "it": "investigare",
+    "tr": "araştırmak",
+    "ru": "расследовать"
+  },
+  {
+    "en": "to contribute",
+    "de": "beitragen",
+    "fr": "contribuer",
+    "es": "contribuir",
+    "it": "contribuire",
+    "tr": "katkıda bulunmak",
+    "ru": "способствовать"
+  },
+  {
+    "en": "to convince",
+    "de": "überzeugen",
+    "fr": "convaincre",
+    "es": "convencer",
+    "it": "convincere",
+    "tr": "ikna etmek",
+    "ru": "убеждать"
+  },
+  {
+    "en": "to negotiate",
+    "de": "verhandeln",
+    "fr": "négocier",
+    "es": "negociar",
+    "it": "negoziare",
+    "tr": "müzakere etmek",
+    "ru": "вести переговоры"
+  },
+  {
+    "en": "to implement",
+    "de": "umsetzen",
+    "fr": "mettre en œuvre",
+    "es": "implementar",
+    "it": "attuare",
+    "tr": "uygulamak",
+    "ru": "внедрять"
+  },
+  {
+    "en": "to adapt",
+    "de": "anpassen",
+    "fr": "adapter",
+    "es": "adaptar",
+    "it": "adattare",
+    "tr": "uyarlamak",
+    "ru": "адаптировать"
+  },
+  {
+    "en": "to reflect",
+    "de": "reflektieren",
+    "fr": "réfléchir",
+    "es": "reflexionar",
+    "it": "riflettere",
+    "tr": "düşünmek",
+    "ru": "размышлять"
+  },
+  {
+    "en": "to consider",
+    "de": "berücksichtigen",
+    "fr": "considérer",
+    "es": "considerar",
+    "it": "considerare",
+    "tr": "göz önünde bulundurmak",
+    "ru": "учитывать"
+  },
+  {
+    "en": "to suggest",
+    "de": "vorschlagen",
+    "fr": "suggérer",
+    "es": "sugerir",
+    "it": "suggerire",
+    "tr": "önermek",
+    "ru": "предлагать"
+  },
+  {
+    "en": "to propose",
+    "de": "beantragen",
+    "fr": "proposer",
+    "es": "proponer",
+    "it": "proporre",
+    "tr": "teklif etmek",
+    "ru": "выдвигать"
+  },
+  {
+    "en": "to depend",
+    "de": "abhängen",
+    "fr": "dépendre",
+    "es": "depender",
+    "it": "dipendere",
+    "tr": "bağlı olmak",
+    "ru": "зависеть"
+  },
+  {
+    "en": "to participate",
+    "de": "teilnehmen",
+    "fr": "participer",
+    "es": "participar",
+    "it": "partecipare",
+    "tr": "katılmak",
+    "ru": "участвовать"
+  },
+  {
+    "en": "to approve",
+    "de": "genehmigen",
+    "fr": "approuver",
+    "es": "aprobar",
+    "it": "approvare",
+    "tr": "onaylamak",
+    "ru": "одобрять"
+  },
+  {
+    "en": "to refuse",
+    "de": "ablehnen",
+    "fr": "refuser",
+    "es": "rechazar",
+    "it": "rifiutare",
+    "tr": "reddetmek",
+    "ru": "отказывать"
+  },
+  {
+    "en": "to admit",
+    "de": "zugeben",
+    "fr": "admettre",
+    "es": "admitir",
+    "it": "ammettere",
+    "tr": "itiraf etmek",
+    "ru": "допускать"
+  },
+  {
+    "en": "to deny",
+    "de": "leugnen",
+    "fr": "nier",
+    "es": "negar",
+    "it": "negare",
+    "tr": "inkâr etmek",
+    "ru": "отрицать"
+  },
+  {
+    "en": "assumption",
+    "de": "die Annahme",
+    "fr": "la supposition",
+    "es": "la suposición",
+    "it": "il presupposto",
+    "tr": "varsayım",
+    "ru": "предположение"
+  },
+  {
+    "en": "consequence",
+    "de": "die Folge",
+    "fr": "la conséquence",
+    "es": "la consecuencia",
+    "it": "la conseguenza",
+    "tr": "sonuç",
+    "ru": "последствие"
+  },
+  {
+    "en": "prerequisite",
+    "de": "die Voraussetzung",
+    "fr": "la condition préalable",
+    "es": "el requisito previo",
+    "it": "il prerequisito",
+    "tr": "ön koşul",
+    "ru": "предпосылка"
+  },
+  {
+    "en": "distribution",
+    "de": "die Verteilung",
+    "fr": "la distribution",
+    "es": "la distribución",
+    "it": "la distribuzione",
+    "tr": "dağılım",
+    "ru": "распределение"
+  },
+  {
+    "en": "approach",
+    "de": "der Ansatz",
+    "fr": "l'approche",
+    "es": "el enfoque",
+    "it": "l'approccio",
+    "tr": "yaklaşım",
+    "ru": "подход"
+  },
+  {
+    "en": "concept",
+    "de": "das Konzept",
+    "fr": "le concept",
+    "es": "el concepto",
+    "it": "il concetto",
+    "tr": "kavram",
+    "ru": "концепция"
+  },
+  {
+    "en": "evidence",
+    "de": "der Beweis",
+    "fr": "la preuve",
+    "es": "la evidencia",
+    "it": "la prova",
+    "tr": "kanıt",
+    "ru": "доказательство"
+  },
+  {
+    "en": "factor",
+    "de": "der Faktor",
+    "fr": "le facteur",
+    "es": "el factor",
+    "it": "il fattore",
+    "tr": "faktör",
+    "ru": "фактор"
+  },
+  {
+    "en": "framework",
+    "de": "der Rahmen",
+    "fr": "le cadre",
+    "es": "el marco",
+    "it": "il quadro",
+    "tr": "çerçeve",
+    "ru": "рамки"
+  },
+  {
+    "en": "hypothesis",
+    "de": "die Hypothese",
+    "fr": "l'hypothèse",
+    "es": "la hipótesis",
+    "it": "l'ipotesi",
+    "tr": "hipotez",
+    "ru": "гипотеза"
+  },
+  {
+    "en": "criterion",
+    "de": "das Kriterium",
+    "fr": "le critère",
+    "es": "el criterio",
+    "it": "il criterio",
+    "tr": "kriter",
+    "ru": "критерий"
+  },
+  {
+    "en": "tendency",
+    "de": "die Tendenz",
+    "fr": "la tendance",
+    "es": "la tendencia",
+    "it": "la tendenza",
+    "tr": "eğilim",
+    "ru": "тенденция"
+  },
+  {
+    "en": "implication",
+    "de": "die Implikation",
+    "fr": "l'implication",
+    "es": "la implicación",
+    "it": "l'implicazione",
+    "tr": "ima",
+    "ru": "следствие"
+  },
+  {
+    "en": "perspective",
+    "de": "die Perspektive",
+    "fr": "la perspective",
+    "es": "la perspectiva",
+    "it": "la prospettiva",
+    "tr": "bakış açısı",
+    "ru": "перспектива"
+  },
+  {
+    "en": "context",
+    "de": "der Kontext",
+    "fr": "le contexte",
+    "es": "el contexto",
+    "it": "il contesto",
+    "tr": "bağlam",
+    "ru": "контекст"
+  },
+  {
+    "en": "phenomenon",
+    "de": "das Phänomen",
+    "fr": "le phénomène",
+    "es": "el fenómeno",
+    "it": "il fenomeno",
+    "tr": "olgu",
+    "ru": "явление"
+  },
+  {
+    "en": "circumstance",
+    "de": "der Umstand",
+    "fr": "la circonstance",
+    "es": "la circunstancia",
+    "it": "la circostanza",
+    "tr": "durum",
+    "ru": "обстоятельство"
+  },
+  {
+    "en": "outcome",
+    "de": "das Ergebnis",
+    "fr": "le résultat",
+    "es": "el resultado",
+    "it": "l'esito",
+    "tr": "sonuç",
+    "ru": "результат"
+  },
+  {
+    "en": "purpose",
+    "de": "der Zweck",
+    "fr": "le but",
+    "es": "el propósito",
+    "it": "lo scopo",
+    "tr": "amaç",
+    "ru": "цель"
+  },
+  {
+    "en": "principle",
+    "de": "das Prinzip",
+    "fr": "le principe",
+    "es": "el principio",
+    "it": "il principio",
+    "tr": "ilke",
+    "ru": "принцип"
+  },
+  {
+    "en": "aspect",
+    "de": "der Aspekt",
+    "fr": "l'aspect",
+    "es": "el aspecto",
+    "it": "l'aspetto",
+    "tr": "yön",
+    "ru": "аспект"
+  },
+  {
+    "en": "issue",
+    "de": "das Thema",
+    "fr": "la question",
+    "es": "el asunto",
+    "it": "la questione",
+    "tr": "mesele",
+    "ru": "вопрос"
+  },
+  {
+    "en": "argument",
+    "de": "das Argument",
+    "fr": "l'argument",
+    "es": "el argumento",
+    "it": "l'argomento",
+    "tr": "argüman",
+    "ru": "аргумент"
+  },
+  {
+    "en": "statement",
+    "de": "die Aussage",
+    "fr": "la déclaration",
+    "es": "la declaración",
+    "it": "la dichiarazione",
+    "tr": "beyan",
+    "ru": "заявление"
+  },
+  {
+    "en": "conclusion",
+    "de": "die Schlussfolgerung",
+    "fr": "la conclusion",
+    "es": "la conclusión",
+    "it": "la conclusione",
+    "tr": "sonuç çıkarımı",
+    "ru": "вывод"
+  },
+  {
+    "en": "assessment",
+    "de": "die Beurteilung",
+    "fr": "l'évaluation",
+    "es": "la evaluación",
+    "it": "la valutazione",
+    "tr": "değerlendirme",
+    "ru": "оценка"
+  },
+  {
+    "en": "analysis",
+    "de": "die Analyse",
+    "fr": "l'analyse",
+    "es": "el análisis",
+    "it": "l'analisi",
+    "tr": "analiz",
+    "ru": "анализ"
+  },
+  {
+    "en": "comparison",
+    "de": "der Vergleich",
+    "fr": "la comparaison",
+    "es": "la comparación",
+    "it": "il confronto",
+    "tr": "karşılaştırma",
+    "ru": "сравнение"
+  },
+  {
+    "en": "contrast",
+    "de": "der Gegensatz",
+    "fr": "le contraste",
+    "es": "el contraste",
+    "it": "il contrasto",
+    "tr": "zıtlık",
+    "ru": "контраст"
+  },
+  {
+    "en": "definition",
+    "de": "die Definition",
+    "fr": "la définition",
+    "es": "la definición",
+    "it": "la definizione",
+    "tr": "tanım",
+    "ru": "определение"
+  },
+  {
+    "en": "interpretation",
+    "de": "die Interpretation",
+    "fr": "l'interprétation",
+    "es": "la interpretación",
+    "it": "l'interpretazione",
+    "tr": "yorum",
+    "ru": "толкование"
+  },
+  {
+    "en": "majority",
+    "de": "die Mehrheit",
+    "fr": "la majorité",
+    "es": "la mayoría",
+    "it": "la maggioranza",
+    "tr": "çoğunluk",
+    "ru": "большинство"
+  },
+  {
+    "en": "minority",
+    "de": "die Minderheit",
+    "fr": "la minorité",
+    "es": "la minoría",
+    "it": "la minoranza",
+    "tr": "azınlık",
+    "ru": "меньшинство"
+  },
+  {
+    "en": "proportion",
+    "de": "der Anteil",
+    "fr": "la proportion",
+    "es": "la proporción",
+    "it": "la proporzione",
+    "tr": "oran",
+    "ru": "доля"
+  },
+  {
+    "en": "scope",
+    "de": "der Umfang",
+    "fr": "la portée",
+    "es": "el alcance",
+    "it": "la portata",
+    "tr": "kapsam",
+    "ru": "охват"
+  },
+  {
+    "en": "extent",
+    "de": "das Ausmaß",
+    "fr": "l'étendue",
+    "es": "el grado",
+    "it": "la misura",
+    "tr": "derece",
+    "ru": "степень"
+  },
+  {
+    "en": "impact",
+    "de": "die Auswirkung",
+    "fr": "l'impact",
+    "es": "el impacto",
+    "it": "l'impatto",
+    "tr": "etki",
+    "ru": "воздействие"
+  },
+  {
+    "en": "influence",
+    "de": "der Einfluss",
+    "fr": "l'influence",
+    "es": "la influencia",
+    "it": "l'influenza",
+    "tr": "etki",
+    "ru": "влияние"
+  },
+  {
+    "en": "advantage",
+    "de": "der Vorteil",
+    "fr": "l'avantage",
+    "es": "la ventaja",
+    "it": "il vantaggio",
+    "tr": "avantaj",
+    "ru": "преимущество"
+  },
+  {
+    "en": "disadvantage",
+    "de": "der Nachteil",
+    "fr": "l'inconvénient",
+    "es": "la desventaja",
+    "it": "lo svantaggio",
+    "tr": "dezavantaj",
+    "ru": "недостаток"
+  },
+  {
+    "en": "benefit",
+    "de": "der Nutzen",
+    "fr": "le bénéfice",
+    "es": "el beneficio",
+    "it": "il beneficio",
+    "tr": "fayda",
+    "ru": "польза"
+  },
+  {
+    "en": "risk",
+    "de": "das Risiko",
+    "fr": "le risque",
+    "es": "el riesgo",
+    "it": "il rischio",
+    "tr": "risk",
+    "ru": "риск"
+  },
+  {
+    "en": "challenge",
+    "de": "die Herausforderung",
+    "fr": "le défi",
+    "es": "el desafío",
+    "it": "la sfida",
+    "tr": "zorluk",
+    "ru": "вызов"
+  },
+  {
+    "en": "solution",
+    "de": "die Lösung",
+    "fr": "la solution",
+    "es": "la solución",
+    "it": "la soluzione",
+    "tr": "çözüm",
+    "ru": "решение"
+  },
+  {
+    "en": "alternative",
+    "de": "die Alternative",
+    "fr": "l'alternative",
+    "es": "la alternativa",
+    "it": "l'alternativa",
+    "tr": "alternatif",
+    "ru": "альтернатива"
+  },
+  {
+    "en": "priority",
+    "de": "die Priorität",
+    "fr": "la priorité",
+    "es": "la prioridad",
+    "it": "la priorità",
+    "tr": "öncelik",
+    "ru": "приоритет"
+  },
+  {
+    "en": "responsibility",
+    "de": "die Verantwortung",
+    "fr": "la responsabilité",
+    "es": "la responsabilidad",
+    "it": "la responsabilità",
+    "tr": "sorumluluk",
+    "ru": "ответственность"
+  },
+  {
+    "en": "opportunity",
+    "de": "die Gelegenheit",
+    "fr": "l'occasion",
+    "es": "la oportunidad",
+    "it": "l'opportunità",
+    "tr": "fırsat",
+    "ru": "возможность"
+  },
+  {
+    "en": "requirement",
+    "de": "die Anforderung",
+    "fr": "l'exigence",
+    "es": "el requisito",
+    "it": "il requisito",
+    "tr": "gereklilik",
+    "ru": "требование"
+  },
+  {
+    "en": "process",
+    "de": "der Prozess",
+    "fr": "le processus",
+    "es": "el proceso",
+    "it": "il processo",
+    "tr": "süreç",
+    "ru": "процесс"
+  },
+  {
+    "en": "procedure",
+    "de": "das Verfahren",
+    "fr": "la procédure",
+    "es": "el procedimiento",
+    "it": "la procedura",
+    "tr": "prosedür",
+    "ru": "процедура"
+  },
+  {
+    "en": "development",
+    "de": "die Entwicklung",
+    "fr": "le développement",
+    "es": "el desarrollo",
+    "it": "lo sviluppo",
+    "tr": "gelişme",
+    "ru": "развитие"
+  },
+  {
+    "en": "structure",
+    "de": "die Struktur",
+    "fr": "la structure",
+    "es": "la estructura",
+    "it": "la struttura",
+    "tr": "yapı",
+    "ru": "структура"
+  },
+  {
+    "en": "function",
+    "de": "die Funktion",
+    "fr": "la fonction",
+    "es": "la función",
+    "it": "la funzione",
+    "tr": "işlev",
+    "ru": "функция"
+  },
+  {
+    "en": "source",
+    "de": "die Quelle",
+    "fr": "la source",
+    "es": "la fuente",
+    "it": "la fonte",
+    "tr": "kaynak",
+    "ru": "источник"
+  },
+  {
+    "en": "research",
+    "de": "die Forschung",
+    "fr": "la recherche",
+    "es": "la investigación",
+    "it": "la ricerca",
+    "tr": "araştırma",
+    "ru": "исследование"
+  },
+  {
+    "en": "knowledge",
+    "de": "das Wissen",
+    "fr": "la connaissance",
+    "es": "el conocimiento",
+    "it": "la conoscenza",
+    "tr": "bilgi",
+    "ru": "знание"
+  },
+  {
+    "en": "skill",
+    "de": "die Fähigkeit",
+    "fr": "la compétence",
+    "es": "la habilidad",
+    "it": "l'abilità",
+    "tr": "beceri",
+    "ru": "навык"
+  },
+  {
+    "en": "experience",
+    "de": "die Erfahrung",
+    "fr": "l'expérience",
+    "es": "la experiencia",
+    "it": "l'esperienza",
+    "tr": "deneyim",
+    "ru": "опыт"
+  },
+  {
+    "en": "behaviour",
+    "de": "das Verhalten",
+    "fr": "le comportement",
+    "es": "el comportamiento",
+    "it": "il comportamento",
+    "tr": "davranış",
+    "ru": "поведение"
+  },
+  {
+    "en": "attitude",
+    "de": "die Einstellung",
+    "fr": "l'attitude",
+    "es": "la actitud",
+    "it": "l'atteggiamento",
+    "tr": "tutum",
+    "ru": "отношение"
+  },
+  {
+    "en": "awareness",
+    "de": "das Bewusstsein",
+    "fr": "la conscience",
+    "es": "la conciencia",
+    "it": "la consapevolezza",
+    "tr": "farkındalık",
+    "ru": "осознание"
+  },
+  {
+    "en": "society",
+    "de": "die Gesellschaft",
+    "fr": "la société",
+    "es": "la sociedad",
+    "it": "la società",
+    "tr": "toplum",
+    "ru": "общество"
+  },
+  {
+    "en": "government",
+    "de": "die Regierung",
+    "fr": "le gouvernement",
+    "es": "el gobierno",
+    "it": "il governo",
+    "tr": "hükümet",
+    "ru": "правительство"
+  },
+  {
+    "en": "policy",
+    "de": "die Politik",
+    "fr": "la politique",
+    "es": "la política",
+    "it": "la politica",
+    "tr": "politika",
+    "ru": "политика"
+  },
+  {
+    "en": "economy",
+    "de": "die Wirtschaft",
+    "fr": "l'économie",
+    "es": "la economía",
+    "it": "l'economia",
+    "tr": "ekonomi",
+    "ru": "экономика"
+  },
+  {
+    "en": "environment",
+    "de": "die Umwelt",
+    "fr": "l'environnement",
+    "es": "el medio ambiente",
+    "it": "l'ambiente",
+    "tr": "çevre",
+    "ru": "окружающая среда"
+  },
+  {
+    "en": "industry",
+    "de": "die Industrie",
+    "fr": "l'industrie",
+    "es": "la industria",
+    "it": "l'industria",
+    "tr": "sanayi",
+    "ru": "промышленность"
+  },
+  {
+    "en": "community",
+    "de": "die Gemeinschaft",
+    "fr": "la communauté",
+    "es": "la comunidad",
+    "it": "la comunità",
+    "tr": "topluluk",
+    "ru": "сообщество"
+  },
+  {
+    "en": "authority",
+    "de": "die Behörde",
+    "fr": "l'autorité",
+    "es": "la autoridad",
+    "it": "l'autorità",
+    "tr": "yetkili makam",
+    "ru": "власть"
+  },
+  {
+    "en": "citizen",
+    "de": "der Bürger",
+    "fr": "le citoyen",
+    "es": "el ciudadano",
+    "it": "il cittadino",
+    "tr": "vatandaş",
+    "ru": "гражданин"
+  },
+  {
+    "en": "media",
+    "de": "die Medien",
+    "fr": "les médias",
+    "es": "los medios",
+    "it": "i media",
+    "tr": "medya",
+    "ru": "СМИ"
+  },
+  {
+    "en": "advertisement",
+    "de": "die Werbung",
+    "fr": "la publicité",
+    "es": "el anuncio",
+    "it": "la pubblicità",
+    "tr": "reklam",
+    "ru": "реклама"
+  },
+  {
+    "en": "audience",
+    "de": "das Publikum",
+    "fr": "le public",
+    "es": "el público",
+    "it": "il pubblico",
+    "tr": "izleyici",
+    "ru": "аудитория"
+  },
+  {
+    "en": "headline",
+    "de": "die Schlagzeile",
+    "fr": "le titre",
+    "es": "el titular",
+    "it": "il titolo",
+    "tr": "manşet",
+    "ru": "заголовок"
+  },
+  {
+    "en": "broadcast",
+    "de": "die Sendung",
+    "fr": "l'émission",
+    "es": "la emisión",
+    "it": "la trasmissione",
+    "tr": "yayın",
+    "ru": "трансляция"
+  },
+  {
+    "en": "journalist",
+    "de": "der Journalist",
+    "fr": "le journaliste",
+    "es": "el periodista",
+    "it": "il giornalista",
+    "tr": "gazeteci",
+    "ru": "журналист"
+  },
+  {
+    "en": "survey",
+    "de": "die Umfrage",
+    "fr": "le sondage",
+    "es": "la encuesta",
+    "it": "il sondaggio",
+    "tr": "anket",
+    "ru": "опрос"
+  },
+  {
+    "en": "amount",
+    "de": "die Menge",
+    "fr": "la quantité",
+    "es": "la cantidad",
+    "it": "la quantità",
+    "tr": "miktar",
+    "ru": "количество"
+  },
+  {
+    "en": "budget",
+    "de": "das Budget",
+    "fr": "le budget",
+    "es": "el presupuesto",
+    "it": "il budget",
+    "tr": "bütçe",
+    "ru": "бюджет"
+  },
+  {
+    "en": "investment",
+    "de": "die Investition",
+    "fr": "l'investissement",
+    "es": "la inversión",
+    "it": "l'investimento",
+    "tr": "yatırım",
+    "ru": "инвестиция"
+  },
+  {
+    "en": "profit",
+    "de": "der Gewinn",
+    "fr": "le profit",
+    "es": "el beneficio",
+    "it": "il profitto",
+    "tr": "kâr",
+    "ru": "прибыль"
+  },
+  {
+    "en": "agreement",
+    "de": "die Vereinbarung",
+    "fr": "l'accord",
+    "es": "el acuerdo",
+    "it": "l'accordo",
+    "tr": "anlaşma",
+    "ru": "соглашение"
+  },
+  {
+    "en": "contract",
+    "de": "der Vertrag",
+    "fr": "le contrat",
+    "es": "el contrato",
+    "it": "il contratto",
+    "tr": "sözleşme",
+    "ru": "контракт"
+  },
+  {
+    "en": "deadline",
+    "de": "die Frist",
+    "fr": "le délai",
+    "es": "el plazo",
+    "it": "la scadenza",
+    "tr": "son tarih",
+    "ru": "срок"
+  },
+  {
+    "en": "colleague",
+    "de": "der Kollege",
+    "fr": "le collègue",
+    "es": "el colega",
+    "it": "il collega",
+    "tr": "meslektaş",
+    "ru": "коллега"
+  },
+  {
+    "en": "employer",
+    "de": "der Arbeitgeber",
+    "fr": "l'employeur",
+    "es": "el empleador",
+    "it": "il datore di lavoro",
+    "tr": "işveren",
+    "ru": "работодатель"
+  },
+  {
+    "en": "employee",
+    "de": "der Arbeitnehmer",
+    "fr": "l'employé",
+    "es": "el empleado",
+    "it": "il dipendente",
+    "tr": "çalışan",
+    "ru": "сотрудник"
+  },
+  {
+    "en": "significant",
+    "de": "bedeutend",
+    "fr": "significatif",
+    "es": "significativo",
+    "it": "significativo",
+    "tr": "önemli",
+    "ru": "значительный"
+  },
+  {
+    "en": "explicit",
+    "de": "ausdrücklich",
+    "fr": "explicite",
+    "es": "explícito",
+    "it": "esplicito",
+    "tr": "açık",
+    "ru": "явный"
+  },
+  {
+    "en": "tentative",
+    "de": "vorläufig",
+    "fr": "provisoire",
+    "es": "provisional",
+    "it": "provvisorio",
+    "tr": "geçici",
+    "ru": "предварительный"
+  },
+  {
+    "en": "comprehensive",
+    "de": "umfassend",
+    "fr": "complet",
+    "es": "exhaustivo",
+    "it": "esauriente",
+    "tr": "kapsamlı",
+    "ru": "всесторонний"
+  },
+  {
+    "en": "relevant",
+    "de": "relevant",
+    "fr": "pertinent",
+    "es": "relevante",
+    "it": "rilevante",
+    "tr": "ilgili",
+    "ru": "релевантный"
+  },
+  {
+    "en": "appropriate",
+    "de": "angemessen",
+    "fr": "approprié",
+    "es": "apropiado",
+    "it": "appropriato",
+    "tr": "uygun",
+    "ru": "уместный"
+  },
+  {
+    "en": "crucial",
+    "de": "entscheidend",
+    "fr": "crucial",
+    "es": "crucial",
+    "it": "cruciale",
+    "tr": "çok önemli",
+    "ru": "решающий"
+  },
+  {
+    "en": "essential",
+    "de": "wesentlich",
+    "fr": "essentiel",
+    "es": "esencial",
+    "it": "essenziale",
+    "tr": "temel",
+    "ru": "существенный"
+  },
+  {
+    "en": "potential",
+    "de": "potenziell",
+    "fr": "potentiel",
+    "es": "potencial",
+    "it": "potenziale",
+    "tr": "potansiyel",
+    "ru": "потенциальный"
+  },
+  {
+    "en": "substantial",
+    "de": "erheblich",
+    "fr": "substantiel",
+    "es": "sustancial",
+    "it": "sostanziale",
+    "tr": "önemli ölçüde",
+    "ru": "существенный"
+  },
+  {
+    "en": "considerable",
+    "de": "beträchtlich",
+    "fr": "considérable",
+    "es": "considerable",
+    "it": "considerevole",
+    "tr": "kayda değer",
+    "ru": "значительный по объёму"
+  },
+  {
+    "en": "evident",
+    "de": "offensichtlich",
+    "fr": "évident",
+    "es": "evidente",
+    "it": "evidente",
+    "tr": "açıkça görülen",
+    "ru": "очевидный"
+  },
+  {
+    "en": "consistent",
+    "de": "konsequent",
+    "fr": "cohérent",
+    "es": "coherente",
+    "it": "coerente",
+    "tr": "tutarlı",
+    "ru": "последовательный"
+  },
+  {
+    "en": "reliable",
+    "de": "zuverlässig",
+    "fr": "fiable",
+    "es": "fiable",
+    "it": "affidabile",
+    "tr": "güvenilir",
+    "ru": "надёжный"
+  },
+  {
+    "en": "accurate",
+    "de": "genau",
+    "fr": "précis",
+    "es": "preciso",
+    "it": "preciso",
+    "tr": "doğru",
+    "ru": "точный"
+  },
+  {
+    "en": "vague",
+    "de": "vage",
+    "fr": "vague",
+    "es": "vago",
+    "it": "vago",
+    "tr": "belirsiz",
+    "ru": "расплывчатый"
+  },
+  {
+    "en": "ambiguous",
+    "de": "mehrdeutig",
+    "fr": "ambigu",
+    "es": "ambiguo",
+    "it": "ambiguo",
+    "tr": "muğlak",
+    "ru": "двусмысленный"
+  },
+  {
+    "en": "biased",
+    "de": "voreingenommen",
+    "fr": "partial",
+    "es": "sesgado",
+    "it": "parziale",
+    "tr": "ön yargılı",
+    "ru": "предвзятый"
+  },
+  {
+    "en": "objective",
+    "de": "objektiv",
+    "fr": "objectif",
+    "es": "objetivo",
+    "it": "obiettivo",
+    "tr": "nesnel",
+    "ru": "объективный"
+  },
+  {
+    "en": "subjective",
+    "de": "subjektiv",
+    "fr": "subjectif",
+    "es": "subjetivo",
+    "it": "soggettivo",
+    "tr": "öznel",
+    "ru": "субъективный"
+  },
+  {
+    "en": "feasible",
+    "de": "machbar",
+    "fr": "faisable",
+    "es": "factible",
+    "it": "fattibile",
+    "tr": "uygulanabilir",
+    "ru": "осуществимый"
+  },
+  {
+    "en": "inevitable",
+    "de": "unvermeidlich",
+    "fr": "inévitable",
+    "es": "inevitable",
+    "it": "inevitabile",
+    "tr": "kaçınılmaz",
+    "ru": "неизбежный"
+  },
+  {
+    "en": "controversial",
+    "de": "umstritten",
+    "fr": "controversé",
+    "es": "controvertido",
+    "it": "controverso",
+    "tr": "tartışmalı",
+    "ru": "спорный"
+  },
+  {
+    "en": "plausible",
+    "de": "plausibel",
+    "fr": "plausible",
+    "es": "plausible",
+    "it": "plausibile",
+    "tr": "akla yatkın",
+    "ru": "правдоподобный"
+  },
+  {
+    "en": "adequate",
+    "de": "ausreichend",
+    "fr": "adéquat",
+    "es": "adecuado",
+    "it": "adeguato",
+    "tr": "yeterli",
+    "ru": "достаточный"
+  },
+  {
+    "en": "efficient",
+    "de": "effizient",
+    "fr": "efficace",
+    "es": "eficiente",
+    "it": "efficiente",
+    "tr": "verimli",
+    "ru": "эффективный"
+  },
+  {
+    "en": "flexible",
+    "de": "flexibel",
+    "fr": "flexible",
+    "es": "flexible",
+    "it": "flessibile",
+    "tr": "esnek",
+    "ru": "гибкий"
+  },
+  {
+    "en": "sustainable",
+    "de": "nachhaltig",
+    "fr": "durable",
+    "es": "sostenible",
+    "it": "sostenibile",
+    "tr": "sürdürülebilir",
+    "ru": "устойчивый"
+  },
+  {
+    "en": "remarkable",
+    "de": "bemerkenswert",
+    "fr": "remarquable",
+    "es": "notable",
+    "it": "notevole",
+    "tr": "dikkat çekici",
+    "ru": "примечательный"
+  },
+  {
+    "en": "diverse",
+    "de": "vielfältig",
+    "fr": "divers",
+    "es": "diverso",
+    "it": "diverso",
+    "tr": "çeşitli",
+    "ru": "разнообразный"
+  },
+  {
+    "en": "mutual",
+    "de": "gegenseitig",
+    "fr": "mutuel",
+    "es": "mutuo",
+    "it": "reciproco",
+    "tr": "karşılıklı",
+    "ru": "взаимный"
+  },
+  {
+    "en": "deliberate",
+    "de": "absichtlich",
+    "fr": "délibéré",
+    "es": "deliberado",
+    "it": "deliberato",
+    "tr": "kasıtlı",
+    "ru": "преднамеренный"
+  },
+  {
+    "en": "thorough",
+    "de": "gründlich",
+    "fr": "approfondi",
+    "es": "minucioso",
+    "it": "approfondito",
+    "tr": "titiz",
+    "ru": "тщательный"
+  },
+  {
+    "en": "subsequent",
+    "de": "nachfolgend",
+    "fr": "ultérieur",
+    "es": "posterior",
+    "it": "successivo",
+    "tr": "sonraki",
+    "ru": "последующий"
+  },
+  {
+    "en": "widespread",
+    "de": "weitverbreitet",
+    "fr": "répandu",
+    "es": "generalizado",
+    "it": "diffuso",
+    "tr": "yaygın",
+    "ru": "распространённый"
+  },
+  {
+    "en": "particularly",
+    "de": "besonders",
+    "fr": "particulièrement",
+    "es": "particularmente",
+    "it": "particolarmente",
+    "tr": "özellikle",
+    "ru": "особенно"
+  },
+  {
+    "en": "essentially",
+    "de": "im Wesentlichen",
+    "fr": "essentiellement",
+    "es": "esencialmente",
+    "it": "essenzialmente",
+    "tr": "esasen",
+    "ru": "по существу"
+  },
+  {
+    "en": "presumably",
+    "de": "vermutlich",
+    "fr": "vraisemblablement",
+    "es": "presumiblemente",
+    "it": "presumibilmente",
+    "tr": "muhtemelen",
+    "ru": "предположительно"
+  },
+  {
+    "en": "increasingly",
+    "de": "zunehmend",
+    "fr": "de plus en plus",
+    "es": "cada vez más",
+    "it": "sempre più",
+    "tr": "giderek",
+    "ru": "всё более"
+  },
+  {
+    "en": "ultimately",
+    "de": "letztlich",
+    "fr": "finalement",
+    "es": "en última instancia",
+    "it": "in definitiva",
+    "tr": "nihayetinde",
+    "ru": "в конечном счёте"
+  },
+  {
+    "en": "primarily",
+    "de": "in erster Linie",
+    "fr": "principalement",
+    "es": "principalmente",
+    "it": "principalmente",
+    "tr": "öncelikle",
+    "ru": "главным образом"
+  },
+  {
+    "en": "explicitly",
+    "de": "ausdrücklich",
+    "fr": "explicitement",
+    "es": "explícitamente",
+    "it": "esplicitamente",
+    "tr": "açıkça",
+    "ru": "явно"
+  },
+  {
+    "en": "deliberately",
+    "de": "absichtlich",
+    "fr": "délibérément",
+    "es": "deliberadamente",
+    "it": "deliberatamente",
+    "tr": "kasıtlı olarak",
+    "ru": "намеренно"
+  },
+  {
+    "en": "arguably",
+    "de": "wohl",
+    "fr": "sans doute",
+    "es": "posiblemente",
+    "it": "probabilmente",
+    "tr": "tartışmasız",
+    "ru": "пожалуй"
+  },
+  {
+    "en": "thereby",
+    "de": "dadurch",
+    "fr": "ce faisant",
+    "es": "de ese modo",
+    "it": "in tal modo",
+    "tr": "böylelikle",
+    "ru": "тем самым"
+  },
+  {
+    "en": "accordingly",
+    "de": "dementsprechend",
+    "fr": "en conséquence",
+    "es": "en consecuencia",
+    "it": "di conseguenza",
+    "tr": "buna göre",
+    "ru": "соответственно"
+  },
+  {
+    "en": "notably",
+    "de": "vor allem",
+    "fr": "notamment",
+    "es": "en particular",
+    "it": "in particolare",
+    "tr": "özellikle de",
+    "ru": "в частности"
+  },
+  {
+    "en": "car manufacturer",
+    "de": "der Autoproduzent",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "автопроизводитель"
+  },
+  {
+    "en": "sector",
+    "de": "die Branche",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "отрасль"
+  },
+  {
+    "en": "family business",
+    "de": "der Familienbetrieb",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "семейное предприятие"
+  },
+  {
+    "en": "aid organization",
+    "de": "die Hilfsorganisation",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "гуманитарная организация"
+  },
+  {
+    "en": "international company",
+    "de": "das internationale Unternehmen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "международное предприятие"
+  },
+  {
+    "en": "food industry",
+    "de": "die Lebensmittelbranche",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "пищевая промышленность"
+  },
+  {
+    "en": "painting company",
+    "de": "der Malerbetrieb",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "покраска"
+  },
+  {
+    "en": "social sector",
+    "de": "der soziale Bereich",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "социальная сфера"
+  },
+  {
+    "en": "intellectual",
+    "de": "geistig",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "интеллектуальный"
+  },
+  {
+    "en": "secondary education",
+    "de": "die weiterführende Schule",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "общеобразовательная школа"
+  },
+  {
+    "en": "secondary school leaving certificate",
+    "de": "der Haupt-/Realschulabschluss",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "аттестат об окончании школы/реального училища"
+  },
+  {
+    "en": "intermediate school certificate",
+    "de": "die Mittlere Reife",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "среднее общее образование"
+  },
+  {
+    "en": "vocational qualification",
+    "de": "der Berufsabschluss",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "диплом о профессиональном образовании"
+  },
+  {
+    "en": "master's degree",
+    "de": "der Master",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "магистр"
+  },
+  {
+    "en": "more than",
+    "de": "mehr als",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "больше чем"
+  },
+  {
+    "en": "less than",
+    "de": "weniger als",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "меньше чем"
+  },
+  {
+    "en": "almost all",
+    "de": "(fast) alle",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "(почти) все"
+  },
+  {
+    "en": "to work in administration",
+    "de": "in der Verwaltung arbeiten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "работать в управлении"
+  },
+  {
+    "en": "to become self-employed",
+    "de": "sich selbstständig machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть самозанятым"
+  },
+  {
+    "en": "to be responsible",
+    "de": "zuständig sein",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть компетентным"
+  },
+  {
+    "en": "weakness",
+    "de": "die Schwäche",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "слабая сторона"
+  },
+  {
+    "en": "strong point",
+    "de": "die Stärke",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сильная сторона"
+  },
+  {
+    "en": "resilient",
+    "de": "belastbar",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "стрессоустойчивый"
+  },
+  {
+    "en": "proactive",
+    "de": "eigeninitiativ",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "инициативный"
+  },
+  {
+    "en": "willing to learn",
+    "de": "lernbereit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "обучаемый"
+  },
+  {
+    "en": "disorganized",
+    "de": "(un-)organisiert",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "(не-)организованный"
+  },
+  {
+    "en": "team player",
+    "de": "teamfähig",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "способный работать в команде"
+  },
+  {
+    "en": "conscientious",
+    "de": "verantwortungsbewusst",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ответственный"
+  },
+  {
+    "en": "intermediary",
+    "de": "der/die Vermittler/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "посредник"
+  },
+  {
+    "en": "entry requirement",
+    "de": "die Zugangsvoraussetzung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "условие поступления"
+  },
+  {
+    "en": "to take the master craftsman exam",
+    "de": "die Meisterprüfung machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сдавать экзамен на мастера"
+  },
+  {
+    "en": "to stop by in person",
+    "de": "persönlich vorbeikommen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "зайти лично"
+  },
+  {
+    "en": "to change career direction",
+    "de": "sich beruflich neu orientieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ознакомиться с новой профессией"
+  },
+  {
+    "en": "certified copy",
+    "de": "die beglaubigte Kopie",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "заверенная копия"
+  },
+  {
+    "en": "certified translation",
+    "de": "die beglaubigte Übersetzung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "заверенный перевод"
+  },
+  {
+    "en": "to apply for professional recognition",
+    "de": "die berufliche Anerkennung beantragen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "подавать заявление на признание квалификации"
+  },
+  {
+    "en": "sole proprietor",
+    "de": "der/die Einzelunternehmer/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "индивидуальный предприниматель"
+  },
+  {
+    "en": "business partner",
+    "de": "der/die Geschäftspartner/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "деловой партнер"
+  },
+  {
+    "en": "to start off well or badly",
+    "de": "gut/schlecht anlaufen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "иметь хороший/плохой старт"
+  },
+  {
+    "en": "freelance work",
+    "de": "die freiberufliche Tätigkeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "внештатная работа"
+  },
+  {
+    "en": "to found a company",
+    "de": "ein Unternehmen/eine Firma gründen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "основать предприятие/фирму"
+  },
+  {
+    "en": "business fluent",
+    "de": "verhandlungssicher",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "на уровне свободного ведения переговоров"
+  },
+  {
+    "en": "advertised position",
+    "de": "die ausgeschriebene Stelle",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предложенная вакансия"
+  },
+  {
+    "en": "to write a cover letter",
+    "de": "ein Bewerbungsschreiben verfassen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "составлять сопроводительное письмо к резюме"
+  },
+  {
+    "en": "to be available for questions",
+    "de": "für Fragen zur Verfügung stehen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть готовым отвечать на вопросы"
+  },
+  {
+    "en": "to match the interests and qualifications",
+    "de": "den Interessen und Qualifikationen entsprechen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "соответствовать интересам и квалификации"
+  },
+  {
+    "en": "to make a good impression",
+    "de": "einen guten Eindruck machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "производить хорошее впечатление"
+  },
+  {
+    "en": "to master a difficult situation",
+    "de": "eine schwierige Situation meistern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "справляться со сложной ситуацией"
+  },
+  {
+    "en": "to inquire about the state of affairs",
+    "de": "sich nach dem Stand der Dinge erkundigen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "осведомляться о положении дел"
+  },
+  {
+    "en": "to decide on a candidate",
+    "de": "sich für einen Bewerber entscheiden",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "выбрать определенного кандидата"
+  },
+  {
+    "en": "to start a job",
+    "de": "eine Stelle antreten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "заступить на должность"
+  },
+  {
+    "en": "employment relationship",
+    "de": "das Arbeitsverhältnis",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "условия работы"
+  },
+  {
+    "en": "trade secret",
+    "de": "das Betriebsgeheimnis",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "коммерческая тайна"
+  },
+  {
+    "en": "notice period",
+    "de": "die Kündigungsfrist",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "срок для увольнения"
+  },
+  {
+    "en": "continued pay",
+    "de": "die Lohnfortzahlung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сохранение заработной платы"
+  },
+  {
+    "en": "wholesale",
+    "de": "der Großhandel",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оптовая торговля"
+  },
+  {
+    "en": "retail",
+    "de": "der Einzelhandel",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "розничная торговля"
+  },
+  {
+    "en": "real estate industry",
+    "de": "die Immobilienbranche",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сфера недвижимости"
+  },
+  {
+    "en": "IT industry",
+    "de": "die IT-Branche",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "IT-сфера"
+  },
+  {
+    "en": "metal industry",
+    "de": "die Metallindustrie",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "металлургия"
+  },
+  {
+    "en": "civil service",
+    "de": "der Öffentliche Dienst",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "государственная служба"
+  },
+  {
+    "en": "pharmaceutical industry",
+    "de": "die Pharmaindustrie",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "фармакология"
+  },
+  {
+    "en": "transport and logistics",
+    "de": "Transport und Logistik",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "транспорт и логистика"
+  },
+  {
+    "en": "conservative",
+    "de": "konservativ",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "консервативный"
+  },
+  {
+    "en": "disrespectful",
+    "de": "respektlos",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "непочтительный"
+  },
+  {
+    "en": "to offer to use 'du'",
+    "de": "das Du anbieten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предложить перейти на «ты»"
+  },
+  {
+    "en": "to take the first step",
+    "de": "den ersten Schritt machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сделать первый шаг"
+  },
+  {
+    "en": "to be on formal or informal terms",
+    "de": "per Du/Sie sein",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть на «вы»/на «ты»"
+  },
+  {
+    "en": "to be taboo",
+    "de": "tabu sein",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть под запретом"
+  },
+  {
+    "en": "apprenticeship occupation",
+    "de": "der Ausbildungsberuf",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "квалифицированная работа"
+  },
+  {
+    "en": "pre-vocational year",
+    "de": "das Berufsvorbereitungsjahr",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "годовая подготовка к профессиональному обучению"
+  },
+  {
+    "en": "further training academy",
+    "de": "die Fortbildungsakademie",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "академия повышения квалификации"
+  },
+  {
+    "en": "trade language",
+    "de": "die Handelssprache",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "профессиональный язык"
+  },
+  {
+    "en": "language skills",
+    "de": "die Sprachkenntnisse",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "языковые знания"
+  },
+  {
+    "en": "permanent job",
+    "de": "die feste Arbeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "постоянная работа"
+  },
+  {
+    "en": "around the clock",
+    "de": "rund um die Uhr",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "круглосуточно"
+  },
+  {
+    "en": "plant mechanic",
+    "de": "der/die Anlagenmechaniker/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "механик-монтажник"
+  },
+  {
+    "en": "gardener",
+    "de": "der/die Gärtner/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "садовник"
+  },
+  {
+    "en": "registered nurse",
+    "de": "der/die Gesundheits- und Krankenpfleger/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "специалист по гигиене и уходу за больными"
+  },
+  {
+    "en": "tailor",
+    "de": "der/die Näher/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "портной/швея"
+  },
+  {
+    "en": "service staff",
+    "de": "die Servicekraft",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "персонал по обслуживанию"
+  },
+  {
+    "en": "room service",
+    "de": "der Zimmerservice",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "обслуживание в номерах"
+  },
+  {
+    "en": "promotion opportunities",
+    "de": "die Aufstiegschancen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "возможности для карьерного роста"
+  },
+  {
+    "en": "off-site appointment",
+    "de": "der Außentermin",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "встреча вне офиса"
+  },
+  {
+    "en": "social benefits",
+    "de": "die Sozialleistungen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "социальные пособия"
+  },
+  {
+    "en": "to do someone a favor",
+    "de": "jmdm. einen Gefallen tun",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сделать кому-л. услугу"
+  },
+  {
+    "en": "to negotiate salary",
+    "de": "das Gehalt verhandeln",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оговаривать оклад"
+  },
+  {
+    "en": "to build a career",
+    "de": "Karriere machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "делать карьеру"
+  },
+  {
+    "en": "to take priority",
+    "de": "Priorität haben",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "иметь приоритет"
+  },
+  {
+    "en": "core hours",
+    "de": "die Kernzeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "фиксированный график"
+  },
+  {
+    "en": "rotating shift",
+    "de": "die Wechselschicht",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сменный график"
+  },
+  {
+    "en": "flexible working hours",
+    "de": "flexible Arbeitszeiten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "гибкое рабочее время"
+  },
+  {
+    "en": "fixed working hours",
+    "de": "feste Arbeitszeiten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "фиксированное рабочее время"
+  },
+  {
+    "en": "to work overtime",
+    "de": "Überstunden machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "работать сверхурочно"
+  },
+  {
+    "en": "to agree contractually",
+    "de": "vertraglich vereinbaren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "закрепить в договоре"
+  },
+  {
+    "en": "childcare services",
+    "de": "das Betreuungsangebot",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "услуги по уходу"
+  },
+  {
+    "en": "childminder",
+    "de": "die Tagesmutter",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "приходящая няня"
+  },
+  {
+    "en": "single parent",
+    "de": "alleinerziehend",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "одинокий родитель"
+  },
+  {
+    "en": "family-friendly",
+    "de": "familienfreundlich",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ориентированный на семьи"
+  },
+  {
+    "en": "to be dependent on",
+    "de": "angewiesen sein auf",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть вынужденным"
+  },
+  {
+    "en": "to balance work and family",
+    "de": "Beruf und Familie miteinander vereinbaren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "найти баланс между работой и семьей"
+  },
+  {
+    "en": "arrival and departure",
+    "de": "die An-/Abreise",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "приезд/отъезд"
+  },
+  {
+    "en": "booking confirmation",
+    "de": "die Buchungsbestätigung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "подтверждение бронирования"
+  },
+  {
+    "en": "carpool",
+    "de": "die Fahrgemeinschaft",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "карпулинг"
+  },
+  {
+    "en": "flight connection",
+    "de": "die Flugverbindung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "авиасообщение"
+  },
+  {
+    "en": "to shut down the laptop",
+    "de": "den Laptop herunterfahren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "выключать ноутбук"
+  },
+  {
+    "en": "to do a trial run",
+    "de": "einen Probedurchlauf machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "осуществлять пробный запуск"
+  },
+  {
+    "en": "to make a backup",
+    "de": "eine Sicherungskopie machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "делать резервную копию"
+  },
+  {
+    "en": "to document an activity in writing",
+    "de": "eine Tätigkeit schriftlich dokumentieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "письменно документировать деятельность"
+  },
+  {
+    "en": "to compile documents",
+    "de": "Unterlagen zusammenstellen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "составлять документы"
+  },
+  {
+    "en": "to make preparations",
+    "de": "Vorbereitungen treffen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "совершать приготовления"
+  },
+  {
+    "en": "to ask for something",
+    "de": "um etwas bitten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "попросить о чем-л."
+  },
+  {
+    "en": "to make a counterproposal",
+    "de": "einen Gegenvorschlag machen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "делать контрпредложение"
+  },
+  {
+    "en": "to express one's opinion",
+    "de": "seine Meinung ausdrücken",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "высказывать свое мнение"
+  },
+  {
+    "en": "sticker",
+    "de": "der Aufkleber",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "наклейка"
+  },
+  {
+    "en": "exhibitor",
+    "de": "der Aussteller",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "участник выставки"
+  },
+  {
+    "en": "data sheet",
+    "de": "das Datenblatt",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "технический паспорт"
+  },
+  {
+    "en": "to spend money",
+    "de": "… Euro ausgeben",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "выдавать ... евро"
+  },
+  {
+    "en": "an amount of",
+    "de": "einen Betrag in Höhe von …",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сумма в размере …"
+  },
+  {
+    "en": "to debit an account",
+    "de": "einen Betrag vom Konto abbuchen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "списывать сумму со счета"
+  },
+  {
+    "en": "to pay in cash",
+    "de": "in bar bezahlen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "платить наличными"
+  },
+  {
+    "en": "by direct debit",
+    "de": "per Lastschrift",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "путем прямого дебетования"
+  },
+  {
+    "en": "by bank transfer",
+    "de": "per Überweisung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "денежным переводом"
+  },
+  {
+    "en": "to settle an invoice",
+    "de": "eine Rechnung begleichen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оплатить счет"
+  },
+  {
+    "en": "payment received",
+    "de": "die Zahlung ist eingegangen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "платеж поступил"
+  },
+  {
+    "en": "payment reminder",
+    "de": "die Zahlungserinnerung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "напоминание о платеже"
+  },
+  {
+    "en": "to consider irrelevant",
+    "de": "etw. als gegenstandslos betrachten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "считать что-л. неуместным"
+  },
+  {
+    "en": "comma",
+    "de": "das Komma",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "запятая"
+  },
+  {
+    "en": "eighth",
+    "de": "das Achtel",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "восьмая часть"
+  },
+  {
+    "en": "divided by",
+    "de": "(geteilt) durch",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "(деленное) на"
+  },
+  {
+    "en": "to manage finances well or poorly",
+    "de": "gut/schlecht wirtschaften",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "вести дела хорошо/плохо"
+  },
+  {
+    "en": "to be left over",
+    "de": "übrig sein",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть лишним"
+  },
+  {
+    "en": "evaluation",
+    "de": "die Bewertung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оценка"
+  },
+  {
+    "en": "consequences",
+    "de": "die Konsequenzen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "последствия"
+  },
+  {
+    "en": "dispute",
+    "de": "das Streitgespräch",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "спор"
+  },
+  {
+    "en": "incident",
+    "de": "der Vorfall",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "инцидент"
+  },
+  {
+    "en": "faulty",
+    "de": "fehlerhaft",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ошибочный"
+  },
+  {
+    "en": "unjust",
+    "de": "ungerecht",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "несправедливый"
+  },
+  {
+    "en": "to work to the limit",
+    "de": "bis an die Grenzen arbeiten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "довести до пределов"
+  },
+  {
+    "en": "to generalize",
+    "de": "etw. verallgemeinern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "обобщать что-л."
+  },
+  {
+    "en": "to be forced to",
+    "de": "gezwungen sein, etw. zu tun",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "быть вынужденным что-л. сделать"
+  },
+  {
+    "en": "to not recommend someone",
+    "de": "jmdn. nicht weiterempfehlen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "не рекомендовать кому-л."
+  },
+  {
+    "en": "to not match the specifications",
+    "de": "nicht den Angaben entsprechen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "не соответствовать характеристикам"
+  },
+  {
+    "en": "to be proven right",
+    "de": "recht bekommen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оказаться правым"
+  },
+  {
+    "en": "to feel disturbed",
+    "de": "sich gestört fühlen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "чувствовать обеспокоенность"
+  },
+  {
+    "en": "to respond to complaints",
+    "de": "Beschwerden beantworten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "отвечать на жалобы"
+  },
+  {
+    "en": "constructive argument",
+    "de": "das konstruktive Streitgespräch",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "конструктивный спор"
+  },
+  {
+    "en": "to resolve a one-off incident",
+    "de": "einen einmaligen Vorfall beseitigen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ликвидировать единичный инцидент"
+  },
+  {
+    "en": "to regret",
+    "de": "etw. bedauern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сожалеть о чем-л."
+  },
+  {
+    "en": "to make amends",
+    "de": "etw. wiedergutmachen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "возмещать что-л."
+  },
+  {
+    "en": "it won't happen again",
+    "de": "etwas wird nicht wieder vorkommen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "что-л. больше не повторится"
+  },
+  {
+    "en": "to offer a voucher",
+    "de": "einen Gutschein anbieten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предлагать ваучер"
+  },
+  {
+    "en": "to find a solution",
+    "de": "eine Lösung finden",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "находить решение"
+  },
+  {
+    "en": "to fix an error",
+    "de": "einen Fehler beheben",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "исправлять ошибку"
+  },
+  {
+    "en": "to admit a mistake",
+    "de": "einen Fehler zugeben",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "признавать ошибку"
+  },
+  {
+    "en": "to put oneself in someone else's shoes",
+    "de": "sich in die Situation des anderen versetzen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ставить себя на место другого"
+  },
+  {
+    "en": "to ask for understanding",
+    "de": "um Verständnis bitten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "просить отнестись с пониманием"
+  },
+  {
+    "en": "to show understanding",
+    "de": "Verständnis zeigen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "демонстрировать понимание"
+  },
+  {
+    "en": "norm",
+    "de": "die Norm",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "стандарт"
+  },
+  {
+    "en": "quality management system",
+    "de": "das Qualitätsmanagementsystem",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "система управления качеством"
+  },
+  {
+    "en": "to review working methods",
+    "de": "die Arbeitsweisen überprüfen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "пересмотреть методы работы"
+  },
+  {
+    "en": "to boost motivation",
+    "de": "die Motivation steigern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "повышать мотивацию"
+  },
+  {
+    "en": "to continuously improve products",
+    "de": "die Produkte kontinuierlich verbessern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "постоянно улучшать продукты"
+  },
+  {
+    "en": "to plan individual production steps",
+    "de": "die einzelnen Produktionsschritte planen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "планировать отдельные производственные шаги"
+  },
+  {
+    "en": "to define processes",
+    "de": "Prozesse definieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "определять процессы"
+  },
+  {
+    "en": "to document processes in writing",
+    "de": "Prozesse schriftlich festhalten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "письменно зафиксировать процессы"
+  },
+  {
+    "en": "to ensure quality",
+    "de": "die Qualität sicherstellen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "обеспечить качество"
+  },
+  {
+    "en": "to focus on customer needs",
+    "de": "sich nach den Bedürfnissen der Kunden richten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ориентироваться на потребности клиентов"
+  },
+  {
+    "en": "to improve the economic situation",
+    "de": "die wirtschaftliche Situation verbessern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "улучшать экономическую ситуацию"
+  },
+  {
+    "en": "planner",
+    "de": "die Agenda",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "повестка дня"
+  },
+  {
+    "en": "meeting minutes",
+    "de": "das Besprechungsprotokoll",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "протокол совещания"
+  },
+  {
+    "en": "outcome minutes",
+    "de": "das Ergebnisprotokoll",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "итоговый протокол"
+  },
+  {
+    "en": "staff meeting",
+    "de": "die Mitarbeiterbesprechung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "совещание с персоналом"
+  },
+  {
+    "en": "project presentation",
+    "de": "die Projektvorstellung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "презентация проекта"
+  },
+  {
+    "en": "session",
+    "de": "die Sitzung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "заседание"
+  },
+  {
+    "en": "agenda item",
+    "de": "der Tagesordnungspunkt (TOP)",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "пункт повестки дня"
+  },
+  {
+    "en": "team meeting",
+    "de": "die Teambesprechung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "совещание в команде"
+  },
+  {
+    "en": "process minutes",
+    "de": "das Verlaufsprotokoll",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "протокол процесса"
+  },
+  {
+    "en": "pre-meeting",
+    "de": "die Vorbesprechung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предварительное совещание"
+  },
+  {
+    "en": "to grasp",
+    "de": "nachvollziehen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "отслеживать"
+  },
+  {
+    "en": "to take minutes",
+    "de": "protokollieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "вести протокол"
+  },
+  {
+    "en": "to be of the opinion that",
+    "de": "der Ansicht sein, dass …",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "считать, что …"
+  },
+  {
+    "en": "to hold a meeting",
+    "de": "ein Meeting abhalten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "проводить совещание"
+  },
+  {
+    "en": "to bring forward an appointment",
+    "de": "einen Termin vorziehen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "переносить встречу на более ранний срок"
+  },
+  {
+    "en": "video projector",
+    "de": "der Beamer",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "проектор"
+  },
+  {
+    "en": "meeting documents",
+    "de": "die Besprechungsunterlagen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "документы к совещанию"
+  },
+  {
+    "en": "flip chart",
+    "de": "der Flipchart",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "флипчарт"
+  },
+  {
+    "en": "projector screen",
+    "de": "die Leinwand",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "проекционный экран"
+  },
+  {
+    "en": "facilitation cards",
+    "de": "die Moderationskarten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "карты модератора"
+  },
+  {
+    "en": "facilitation kit",
+    "de": "der Moderationskoffer",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "чемодан модератора"
+  },
+  {
+    "en": "network connection",
+    "de": "der Netzwerkanschluss",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "подключение к сети"
+  },
+  {
+    "en": "pinboard",
+    "de": "die Pinnwand",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "доска для заметок"
+  },
+  {
+    "en": "conference room",
+    "de": "der Tagungsraum",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "конференц-зал"
+  },
+  {
+    "en": "whiteboard",
+    "de": "das Whiteboard",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "белая доска"
+  },
+  {
+    "en": "outlook",
+    "de": "der Ausblick",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "перспектива"
+  },
+  {
+    "en": "controlling",
+    "de": "das Controlling",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "контроллинг"
+  },
+  {
+    "en": "annual balance sheet",
+    "de": "die Jahresbilanz",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "годовой баланс"
+  },
+  {
+    "en": "forecast",
+    "de": "die Prognose",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "прогноз"
+  },
+  {
+    "en": "quarterly report",
+    "de": "die Quartalsaufstellung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "квартальный отчет"
+  },
+  {
+    "en": "quota",
+    "de": "die Quote",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "квота"
+  },
+  {
+    "en": "protective cover",
+    "de": "die Abdeckung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "защитное покрытие"
+  },
+  {
+    "en": "connection contact",
+    "de": "der Anschlusskontakt",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "соединительный контакт"
+  },
+  {
+    "en": "display",
+    "de": "das Display",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "дисплей"
+  },
+  {
+    "en": "arrow",
+    "de": "der Pfeil",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "стрелка"
+  },
+  {
+    "en": "QR code",
+    "de": "der QR-Code",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "QR-код"
+  },
+  {
+    "en": "site",
+    "de": "der Standort",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "местоположение"
+  },
+  {
+    "en": "touchscreen",
+    "de": "der Touchscreen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "сенсорный экран"
+  },
+  {
+    "en": "USB port",
+    "de": "der USB-Anschluss",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "USB-порт"
+  },
+  {
+    "en": "to update",
+    "de": "aktualisieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "обновить"
+  },
+  {
+    "en": "to snap into place",
+    "de": "einrasten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "вставить в пазы"
+  },
+  {
+    "en": "navigate",
+    "de": "navigieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "осуществлять навигацию"
+  },
+  {
+    "en": "to zoom",
+    "de": "zoomen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "изменять масштаб"
+  },
+  {
+    "en": "incapacity to work",
+    "de": "die Arbeitsunfähigkeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "нетрудоспособность"
+  },
+  {
+    "en": "regulations",
+    "de": "die Bestimmungen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предписания"
+  },
+  {
+    "en": "release from work duties",
+    "de": "die Freistellung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "освобождение"
+  },
+  {
+    "en": "time off in lieu",
+    "de": "der Freizeitausgleich",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "отгул"
+  },
+  {
+    "en": "calendar year",
+    "de": "das Kalenderjahr",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "календарный год"
+  },
+  {
+    "en": "operational necessity",
+    "de": "die betriebliche Notwendigkeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "производственная необходимость"
+  },
+  {
+    "en": "safety shoes",
+    "de": "die Arbeitsschutzschuhe",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "защитные рабочие ботинки"
+  },
+  {
+    "en": "occupational group",
+    "de": "die Berufsgruppe",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "группа профессий"
+  },
+  {
+    "en": "bleeding",
+    "de": "die Blutung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "кровотечение"
+  },
+  {
+    "en": "first aider",
+    "de": "der/die Ersthelfer/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "специалист по оказанию первой помощи"
+  },
+  {
+    "en": "evacuation",
+    "de": "die Evakuierung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "эвакуация"
+  },
+  {
+    "en": "escape route",
+    "de": "der Flucht-/Rettungsweg",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "эвакуационный маршрут/запасный выход"
+  },
+  {
+    "en": "hearing protection",
+    "de": "der Gehörschutz",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "средство защиты органов слуха"
+  },
+  {
+    "en": "laceration",
+    "de": "die Platzwunde",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "рваная рана"
+  },
+  {
+    "en": "slipping hazard",
+    "de": "die Rutschgefahr",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "опасность поскальзывания"
+  },
+  {
+    "en": "paramedic",
+    "de": "der/die Sanitäter/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "санитар"
+  },
+  {
+    "en": "protective equipment",
+    "de": "die Schutzausrüstung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "защитное снаряжение"
+  },
+  {
+    "en": "safety goggles",
+    "de": "die Schutzbrille",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "защитные очки"
+  },
+  {
+    "en": "hard hat",
+    "de": "der Schutzhelm",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "защитный шлем"
+  },
+  {
+    "en": "trip hazard",
+    "de": "die Stolper-/Sturzgefahr",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "опасность спотыкания/падения"
+  },
+  {
+    "en": "to lose one's balance",
+    "de": "das Gleichgewicht verlieren",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "терять равновесие"
+  },
+  {
+    "en": "to give first aid",
+    "de": "Erste Hilfe leisten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оказывать первую помощь"
+  },
+  {
+    "en": "to endanger",
+    "de": "in Gefahr bringen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "подвергать опасности"
+  },
+  {
+    "en": "to follow safety regulations",
+    "de": "Sicherheitsvorschriften befolgen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "соблюдать правила техники безопасности"
+  },
+  {
+    "en": "written warning",
+    "de": "die Abmahnung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "предупреждение"
+  },
+  {
+    "en": "special permit",
+    "de": "die Ausnahmegenehmigung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "согласие в порядке исключения"
+  },
+  {
+    "en": "advancement",
+    "de": "die Beförderung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "повышение"
+  },
+  {
+    "en": "leadership skills",
+    "de": "die Führungsqualitäten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "лидерские качества"
+  },
+  {
+    "en": "fee-based work",
+    "de": "die Honorartätigkeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "оплачиваемая работа"
+  },
+  {
+    "en": "mini-job",
+    "de": "der Minijob",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "минимальная занятость"
+  },
+  {
+    "en": "side job",
+    "de": "die Nebentätigkeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "работа по совместительству"
+  },
+  {
+    "en": "blocking period",
+    "de": "die Sperrzeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "время блокировки"
+  },
+  {
+    "en": "contract for work",
+    "de": "der Werkvertrag",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "рабочий договор"
+  },
+  {
+    "en": "temporary work",
+    "de": "die Zeitarbeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "временная занятость"
+  },
+  {
+    "en": "fixed-term",
+    "de": "befristet",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "ограниченный сроком"
+  },
+  {
+    "en": "mutually",
+    "de": "beiderseits",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "взаимный"
+  },
+  {
+    "en": "expiry of the notice period",
+    "de": "der Ablauf der Kündigungsfrist",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "истечение срока для увольнения"
+  },
+  {
+    "en": "crediting of remaining leave",
+    "de": "die Anrechnung des Resturlaubs",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "учет неиспользованного остатка отпуска"
+  },
+  {
+    "en": "medical certificate",
+    "de": "die ärztliche Bescheinigung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "справка от врача"
+  },
+  {
+    "en": "for operational reasons",
+    "de": "aus betrieblichen Gründen",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "по производственным причинам"
+  },
+  {
+    "en": "termination for operational reasons",
+    "de": "die betriebsbedingte Kündigung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "увольнение по производственной необходимости"
+  },
+  {
+    "en": "to require written form",
+    "de": "etwas bedarf der Schriftform",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "необходимость оформления в письменном виде"
+  },
+  {
+    "en": "continued payment of salary",
+    "de": "die Fortzahlung des Gehalts/der Vergütung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "продолжение выплаты оклада/вознаграждения"
+  },
+  {
+    "en": "to work from home",
+    "de": "im Homeoffice arbeiten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "работать из дома"
+  },
+  {
+    "en": "internal matter",
+    "de": "die interne Angelegenheit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "внутреннее дело"
+  },
+  {
+    "en": "regular weekly working hours",
+    "de": "die regelmäßige wöchentliche Arbeitszeit",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "регулярное рабочее время на неделе"
+  },
+  {
+    "en": "to register as a job seeker",
+    "de": "sich arbeitssuchend melden",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "зарегистрироваться как соискатель"
+  },
+  {
+    "en": "to extend the contract",
+    "de": "den Vertrag verlängern",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "продлить договор"
+  },
+  {
+    "en": "unemployment insurance",
+    "de": "die Arbeitslosenversicherung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "страхование по безработице"
+  },
+  {
+    "en": "gross pay",
+    "de": "die Bruttovergütung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "заработная плата брутто"
+  },
+  {
+    "en": "church tax",
+    "de": "die Kirchensteuer",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "церковный налог"
+  },
+  {
+    "en": "denomination",
+    "de": "die Konfession",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "конфессия"
+  },
+  {
+    "en": "wage tax",
+    "de": "die Lohnsteuer",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "подоходный налог"
+  },
+  {
+    "en": "net pay",
+    "de": "der Nettoverdienst",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "чистый заработок"
+  },
+  {
+    "en": "long-term care insurance",
+    "de": "die Pflegeversicherung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "страхование на случай потребности в уходе"
+  },
+  {
+    "en": "pension insurance",
+    "de": "die Rentenversicherung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "пенсионное страхование"
+  },
+  {
+    "en": "solidarity surcharge",
+    "de": "der Solidaritätszuschlag (SoIZ)",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "налог солидарности"
+  },
+  {
+    "en": "tax class",
+    "de": "die Steuerklasse",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "налоговый класс"
+  },
+  {
+    "en": "to withhold",
+    "de": "einbehalten",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "удержать"
+  },
+  {
+    "en": "staff",
+    "de": "die Belegschaft",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "коллектив"
+  },
+  {
+    "en": "equal rights",
+    "de": "die Gleichberechtigung",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "равноправие"
+  },
+  {
+    "en": "successor",
+    "de": "der/die Nachfolger/-in",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "преемник"
+  },
+  {
+    "en": "severely disabled person",
+    "de": "der/die Schwerbehinderte",
+    "fr": "",
+    "es": "",
+    "it": "",
+    "tr": "",
+    "ru": "лицо с тяжелой формой инвалидности"
+  }
 ]
