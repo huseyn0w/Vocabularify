@@ -219,10 +219,17 @@ export function validateCourse(input: ValidateInput): string[] {
       }
     }
   }
-  for (const concept of levelConcepts) {
-    if (!introducedIn.has(concept)) {
-      errors.push(`"${concept}" is in the bank but in no lesson`);
-    }
+  // Restoring the old dictionary put thousands of words into a level whose
+  // course covers a few hundred, so naming each one drowns every other error.
+  // This stays an error - a level's course is meant to teach the level - but
+  // it reports as one line with a count and a sample.
+  const notInALesson = levelConcepts.filter((concept) => !introducedIn.has(concept));
+  if (notInALesson.length === 1) {
+    errors.push(`"${notInALesson[0]}" is in the bank but in no lesson`);
+  } else if (notInALesson.length > 1) {
+    const shown = notInALesson.slice(0, 6).map((c) => `"${c}"`).join(', ');
+    const rest = notInALesson.length > 6 ? `, and ${notInALesson.length - 6} more` : '';
+    errors.push(`${notInALesson.length} concepts are in the bank but in no lesson: ${shown}${rest}`);
   }
 
   // Lesson size. The last lesson may be short because the level ran out.
@@ -276,17 +283,21 @@ export function validateCourse(input: ValidateInput): string[] {
     }
   }
 
-  errors.push(...checkCoverage(levelConcepts, bank, languages));
+  // The concepts a lesson introduces, not every row the bank holds at this
+  // level. A word in no lesson is not taught, and the check above already
+  // named it; running it through coverage too would report it a second time
+  // under a message that says "taught".
+  errors.push(...checkCoverage([...introducedIn.keys()], bank, languages));
 
   return errors;
 }
 
-/** Every concept the level teaches has to be put to work: named in some
+/** Every concept the course teaches has to be put to work: named in some
  *  sentence's `uses`, and actually rendered as a word in every language that
  *  has a word for it. A card the course never uses again is the thing this
  *  rebuild exists to remove. */
 function checkCoverage(
-  levelConcepts: readonly string[],
+  taughtConcepts: readonly string[],
   bank: readonly SentenceEntry[],
   languages: readonly string[]
 ): string[] {
@@ -321,7 +332,7 @@ function checkCoverage(
     }
   }
 
-  for (const concept of levelConcepts) {
+  for (const concept of taughtConcepts) {
     if (!inUses.has(concept)) {
       errors.push(`"${concept}" is taught but used by no sentence`);
     }
@@ -330,7 +341,7 @@ function checkCoverage(
   for (const lang of languages) {
     const seen = rendered.get(lang) ?? new Set<string>();
     const exempt = new Set(NO_FREE_WORD[lang] ?? []);
-    for (const concept of levelConcepts) {
+    for (const concept of taughtConcepts) {
       if (seen.has(concept) || exempt.has(concept)) {
         continue;
       }

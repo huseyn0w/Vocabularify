@@ -86,6 +86,25 @@ describe('validateCourse', () => {
     expect(validateCourse(f).join('\n')).toContain('"water" is in the bank but in no lesson');
   });
 
+  it('collapses many uncoursed bank concepts into one counted error', () => {
+    const f = fixture();
+    const extra = ['water', 'bread', 'milk', 'salt', 'sugar', 'rice', 'tea', 'oil'];
+    f.levelConcepts = [...f.levelConcepts, ...extra];
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain('8 concepts are in the bank but in no lesson');
+    expect(out).toContain('and 2 more');
+    // The whole point is that it does not print one line per concept.
+    expect(out).not.toContain('"rice" is in the bank but in no lesson');
+  });
+
+  it('does not demand sentence coverage for a concept no lesson teaches', () => {
+    const f = fixture();
+    f.levelConcepts = [...f.levelConcepts, 'water'];
+    const out = validateCourse(f).join('\n');
+    expect(out).not.toContain('"water" is taught but used by no sentence');
+    expect(out).not.toContain('"water" is taught but never renders as a word');
+  });
+
   it('reports a concept introduced twice', () => {
     const f = fixture();
     f.course.lessons.push({ id: 2, new: ['hello'], sentences: [] });
