@@ -1,0 +1,566 @@
+{
+  "language": "fr",
+  "sources": [
+    "Référentiels pour le français (Jean-Claude Beacco, Rémy Porquier, Sylvie Lepage, Patrick Riba; CIEP/Didier) — bibliographic and structural information (chapter list, level scope, e.g. Niveau A1, Niveau A2, Niveau B1, Niveau B2) reached via publisher and library listings (Didier FLE, Amazon.fr, Decitre, ResearchGate, WorldCat). The books' own grammar-inventory chapters could not be read in full: no free full text was reachable, and the academia.edu excerpts (including 'Grammaire du Niveau A1 pour le français') returned HTTP 403.",
+    "ressourcesfle.fr grammar-by-level archive pages for A1, A2, B1 and B2 (https://www.ressourcesfle.fr/category/francais-niveau-a1/grammaire-niveau-a1/ and the a2/b1/b2 equivalents) — a French-teaching resource site whose per-level tagging was used as an independent, reachable cross-check on level placement for several topics (e.g. passé composé at A1, imparfait-vs-passé-composé and object/y/en pronouns at A2, subjonctif/gérondif/passive/conditionnel at B1).",
+    "General knowledge of the DELF/DALF exam structure (France Éducation International) and of CECRL-aligned French course sequencing (Alter Ego, Édito and similar, explicitly built to follow the Référentiels), used to place and order topics where the primary sources were not directly reachable. No France Éducation International document was found that lists DELF/DALF grammar content item by item; their public materials describe communicative can-do competencies per level, not a grammar inventory."
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "fr.a1.pronoms-sujets",
+        "name": "Subject pronouns and tu/vous",
+        "note": "French marks person and number with a dedicated subject pronoun before the verb, and distinguishes an informal tu from a formal or plural vous. A learner picks the pronoun that matches the person addressed and the verb form that agrees with it.",
+        "example": "Tu habites à Paris, et vous habitez où ?",
+        "test": "the sentence has a subject pronoun (je, tu, il, elle, on, nous, vous, ils, elles) immediately before a finite verb, with tu or vous chosen to match the level of formality of the sentence's addressee"
+      },
+      {
+        "id": "fr.a1.etre",
+        "name": "The verb être (present)",
+        "note": "Être is the most common irregular verb, used for identity, nationality and description. Its six present-tense forms (suis, es, est, sommes, êtes, sont) do not follow a regular pattern and must be learned as a set.",
+        "example": "Je suis étudiant et elle est professeure.",
+        "test": "the sentence contains a correctly conjugated present-tense form of être (suis, es, est, sommes, êtes, sont) agreeing with its subject"
+      },
+      {
+        "id": "fr.a1.avoir",
+        "name": "The verb avoir (present)",
+        "note": "Avoir expresses possession and appears in fixed expressions like avoir faim or avoir + age; its present tense (ai, as, a, avons, avez, ont) is irregular and, from A1 on, doubles as the auxiliary needed for the passé composé.",
+        "example": "J'ai vingt ans et mes parents ont une maison.",
+        "test": "the sentence contains a correctly conjugated present-tense form of avoir (ai, as, a, avons, avez, ont) agreeing with its subject"
+      },
+      {
+        "id": "fr.a1.genre-nombre-noms",
+        "name": "Noun gender and plural",
+        "note": "Every French noun is grammatically masculine or feminine, a property not predictable from meaning and memorized with the noun; plural is usually formed by adding -s, silent in speech.",
+        "example": "Le livre est sur la table et les cahiers sont sur les chaises.",
+        "test": "the sentence uses at least one noun with a determiner matching its grammatical gender (le/un for masculine, la/une for feminine), and forms the plural with -s where the noun is plural"
+      },
+      {
+        "id": "fr.a1.articles-def-indef",
+        "name": "Definite and indefinite articles",
+        "note": "French uses le/la/les for something specific or already known and un/une/des for something unspecified, and contracts à or de with le/les into au, aux, du, des rather than placing them side by side.",
+        "example": "Je vais au cinéma avec un ami.",
+        "test": "the sentence uses a definite article (le, la, les) or indefinite article (un, une, des) matched to the noun's gender and number, and uses a contracted form (au, aux, du, des) instead of \"à le/à les/de le/de les\" where one is required"
+      },
+      {
+        "id": "fr.a1.negation-ne-pas",
+        "name": "Negation with ne...pas",
+        "note": "French negates a verb by wrapping it in two particles, ne before and pas after; ne is often dropped in speech, but a learner is expected to produce both parts.",
+        "example": "Je ne parle pas anglais.",
+        "test": "the sentence places ne (or n') immediately before the conjugated verb and pas immediately after it"
+      },
+      {
+        "id": "fr.a1.verbes-er-present",
+        "name": "Present tense of -er verbs",
+        "note": "Regular -er verbs are the largest verb group in French; the six present-tense endings (-e, -es, -e, -ons, -ez, -ent) attach to the stem, and four of the six are pronounced identically.",
+        "example": "Nous parlons français et ils habitent à Lyon.",
+        "test": "the sentence contains a regular -er verb conjugated in the present tense with the ending matching its subject (-e, -es, -e, -ons, -ez, -ent)"
+      },
+      {
+        "id": "fr.a1.verbes-ir-re-present",
+        "name": "Present tense of -ir and -re verbs",
+        "note": "The second and third verb groups (finir-type -ir verbs, and -re verbs like vendre) take a different set of present-tense endings from -er verbs, and the -ir group additionally inserts -iss- in the plural.",
+        "example": "Je finis mon travail et nous vendons la voiture.",
+        "test": "the sentence contains a regular -ir or -re verb conjugated in the present tense with the ending matching its group (-is/-is/-it/-issons/-issez/-issent for -ir; -s/-s/nothing/-ons/-ez/-ent for -re)"
+      },
+      {
+        "id": "fr.a1.verbes-irreguliers-frequents",
+        "name": "Common irregular verbs (aller, faire, prendre, pouvoir, vouloir, devoir)",
+        "note": "A handful of very frequent verbs follow their own present-tense pattern rather than one of the three regular groups, and are learned individually from the start.",
+        "example": "Je veux prendre le bus, mais je dois faire les courses.",
+        "test": "the sentence contains a correctly conjugated present-tense form of one of aller, faire, prendre, pouvoir, vouloir, or devoir, matching its subject"
+      },
+      {
+        "id": "fr.a1.verbes-pronominaux-present",
+        "name": "Pronominal verbs (present)",
+        "note": "Some French verbs always pair with a reflexive pronoun that changes with the subject, such as s'appeler or se lever; the pronoun sits between the subject and the verb.",
+        "example": "Comment tu t'appelles ? Je m'appelle Marie.",
+        "test": "the sentence contains a pronominal verb with its reflexive pronoun (me/te/se/nous/vous/se) directly before the conjugated verb and agreeing with the subject"
+      },
+      {
+        "id": "fr.a1.futur-proche",
+        "name": "Futur proche (aller + infinitive)",
+        "note": "French expresses a near or planned future with the present tense of aller followed directly by an infinitive, not with a separate future ending.",
+        "example": "Demain, je vais visiter le musée.",
+        "test": "the sentence has a present-tense form of aller immediately followed by a verb in the infinitive, referring to a future event"
+      },
+      {
+        "id": "fr.a1.adjectifs-accord-place",
+        "name": "Adjective agreement and position",
+        "note": "Adjectives agree in gender and number with the noun they describe, usually by adding -e for feminine and -s for plural; most adjectives follow the noun, but a short set of common ones (grand, petit, bon, beau, joli, jeune, vieux, nouveau) come before it.",
+        "example": "J'ai une petite voiture rouge.",
+        "test": "the sentence has at least one adjective agreeing in gender and number with its noun, with a common short adjective (from grand, petit, bon, beau, joli, jeune, vieux, nouveau) placed before the noun and a descriptive adjective such as a color placed after it"
+      },
+      {
+        "id": "fr.a1.determinants-possessifs",
+        "name": "Possessive determiners",
+        "note": "Mon, ma, mes and their equivalents agree with the gender and number of the noun possessed, not with the possessor; mon replaces ma before a feminine noun starting with a vowel sound.",
+        "example": "Mon frère et ma sœur habitent avec mes parents.",
+        "test": "the sentence uses a possessive determiner (mon/ma/mes, ton/ta/tes, son/sa/ses, notre/nos, votre/vos, leur/leurs) agreeing in gender and number with the noun it precedes, not with the possessor"
+      },
+      {
+        "id": "fr.a1.determinants-demonstratifs",
+        "name": "Demonstrative determiners",
+        "note": "Ce, cette and ces point to a specific noun already visible or mentioned, with cet used before a masculine noun starting with a vowel sound.",
+        "example": "Cette robe est belle, mais ce manteau est trop grand.",
+        "test": "the sentence uses a demonstrative determiner (ce, cet, cette, ces) that agrees in gender and number with the noun it precedes"
+      },
+      {
+        "id": "fr.a1.interrogation",
+        "name": "Yes/no questions (est-ce que, intonation)",
+        "note": "French can turn a statement into a question just by raising the pitch at the end, or more formally by placing est-ce que at the front of the sentence.",
+        "example": "Est-ce que tu aimes le café ?",
+        "test": "the sentence is a yes/no question formed either with \"est-ce que\" at the start, or by rising-question punctuation on an otherwise declarative word order"
+      },
+      {
+        "id": "fr.a1.mots-interrogatifs",
+        "name": "Question words (qui, où, quand, comment, pourquoi, combien, quel)",
+        "note": "These words open an information question and each targets a different piece of missing information: person, place, time, manner, reason, quantity, or choice.",
+        "example": "Où habites-tu, et quel âge as-tu ?",
+        "test": "the sentence is a question opened by one of qui, où, quand, comment, pourquoi, combien, or a form of quel agreeing with its noun"
+      },
+      {
+        "id": "fr.a1.prepositions-lieu",
+        "name": "Prepositions of place and contractions",
+        "note": "À, dans, sur, sous and chez each locate something differently (at/to, inside, on top, underneath, at someone's place), and à and de contract with le and les into au, aux, du, des.",
+        "example": "Le chat est sous la table, et je vais chez mon oncle.",
+        "test": "the sentence uses a place preposition (à, dans, sur, sous, chez) matched to the relationship it describes, contracting à+le/les or de+le/les into au, aux, du, or des where required"
+      },
+      {
+        "id": "fr.a1.articles-partitifs",
+        "name": "Partitive articles (du, de la, des) and de after negation",
+        "note": "French marks an unspecified quantity of something uncountable or plural with du, de la, or des; after a negated verb, all three collapse to a bare de.",
+        "example": "Je mange du pain, mais je ne mange pas de viande.",
+        "test": "the sentence uses a partitive article (du, de la, de l', des) before a mass or plural noun in an affirmative clause, and reduces it to a bare de after a negated verb"
+      },
+      {
+        "id": "fr.a1.il-y-a",
+        "name": "Il y a (there is/are)",
+        "note": "French uses the fixed, invariable expression il y a to state that something exists or is present, unchanged whether one or several things are meant.",
+        "example": "Il y a deux fenêtres dans la chambre.",
+        "test": "the sentence uses \"il y a\" (unchanged whether the following noun is singular or plural) to introduce the existence of something"
+      },
+      {
+        "id": "fr.a1.nombres-cardinaux",
+        "name": "Cardinal numbers",
+        "note": "Numbers are needed from the first lesson for age, price, phone numbers and quantities, and French has irregular spellings past 16 (dix-sept, vingt, soixante-dix).",
+        "example": "J'ai deux frères et vingt et un ans.",
+        "test": "the sentence contains a cardinal number spelled out in French, used to count or quantify a noun"
+      },
+      {
+        "id": "fr.a1.passe-compose-avoir",
+        "name": "Passé composé with avoir",
+        "note": "Most verbs form the passé composé, French's everyday past tense for completed events, with a present-tense form of avoir plus a past participle; regular participles end in -é, -i, or -u depending on the verb group.",
+        "example": "Hier, j'ai regardé un film et j'ai fini mes devoirs.",
+        "test": "the sentence contains a present-tense form of avoir immediately followed by a past participle, together describing a completed past action"
+      },
+      {
+        "id": "fr.a1.c-est-il-est",
+        "name": "c'est vs il/elle est",
+        "note": "French uses c'est before a noun or a name (c'est un médecin, c'est Paul) and il/elle est before a bare adjective or an unmodified profession (il est médecin), a distinction with no direct English equivalent.",
+        "example": "C'est mon frère ; il est médecin.",
+        "test": "the sentence uses \"c'est\" before a noun phrase (with an article) and \"il est\" or \"elle est\" before a bare adjective or unmodified profession noun"
+      },
+      {
+        "id": "fr.a1.adverbes-frequence-quantite",
+        "name": "Adverbs of frequency and quantity",
+        "note": "Words like très, beaucoup, un peu, souvent, toujours and jamais scale a verb or adjective, and jamais pairs with ne the way pas does.",
+        "example": "Je fais toujours mes devoirs, mais je ne sors jamais le soir.",
+        "test": "the sentence uses an adverb of frequency or quantity (très, beaucoup, un peu, souvent, toujours, jamais) placed right after the conjugated verb, with jamais paired with ne"
+      }
+    ],
+    "a2": [
+      {
+        "id": "fr.a2.passe-compose-etre",
+        "name": "Passé composé with être and participle agreement",
+        "note": "A closed set of verbs of movement or change of state (aller, venir, partir, arriver, naître, mourir, monter, descendre and others) and all pronominal verbs take être instead of avoir in the passé composé, and their past participle then agrees in gender and number with the subject.",
+        "example": "Elle est partie tôt, mais ses frères sont restés.",
+        "test": "the sentence uses a present-tense form of être with a past participle from the être-taking verb list (or a pronominal verb), and the participle's ending agrees in gender and number with the subject"
+      },
+      {
+        "id": "fr.a2.imparfait",
+        "name": "Imparfait: formation and use",
+        "note": "The imparfait describes an ongoing state, a habit, or the background of a past story, built from the nous-form stem of the present plus a fixed set of endings (-ais, -ais, -ait, -ions, -iez, -aient).",
+        "example": "Quand j'étais petit, j'habitais à la campagne.",
+        "test": "the sentence contains a verb conjugated in the imparfait (stem + -ais/-ais/-ait/-ions/-iez/-aient) describing a habitual or ongoing past state"
+      },
+      {
+        "id": "fr.a2.imparfait-vs-passe-compose",
+        "name": "Imparfait vs passé composé",
+        "note": "The two past tenses are not interchangeable: the passé composé reports a completed event that moves a story forward, while the imparfait sets the scene or describes what was already going on; a past narration typically needs both.",
+        "example": "Il pleuvait quand je suis sorti.",
+        "test": "the sentence combines an imparfait verb describing an ongoing background state with a passé composé verb reporting the event that interrupted or occurred within it"
+      },
+      {
+        "id": "fr.a2.pronoms-cod",
+        "name": "Direct object pronouns (COD)",
+        "note": "Le, la, l' and les replace a direct object noun already mentioned and, unlike in English, sit before the conjugated verb rather than after it.",
+        "example": "Tu vois ce livre ? Je le lis maintenant.",
+        "test": "the sentence replaces a direct object noun with the matching direct object pronoun (me, te, le, la, l', nous, vous, les) placed immediately before the conjugated verb"
+      },
+      {
+        "id": "fr.a2.pronoms-coi",
+        "name": "Indirect object pronouns (COI)",
+        "note": "Lui and leur replace a person introduced by à after certain verbs (parler à, téléphoner à, donner à), distinct from the direct object forms le/la/les — a distinction English does not mark in the third person.",
+        "example": "Je téléphone à ma mère. Je lui téléphone tous les soirs.",
+        "test": "the sentence replaces an \"à + person\" complement with the matching indirect object pronoun (me, te, lui, nous, vous, leur) placed immediately before the conjugated verb, using lui/leur rather than le/la/les"
+      },
+      {
+        "id": "fr.a2.pronom-y",
+        "name": "The pronoun y",
+        "note": "Y replaces a place already named, or a thing introduced by à, and is placed like the object pronouns, right before the verb.",
+        "example": "Tu vas à la piscine ? Oui, j'y vais.",
+        "test": "the sentence uses \"y\" immediately before the conjugated verb to replace a location or an \"à + thing\" complement mentioned earlier"
+      },
+      {
+        "id": "fr.a2.pronom-en",
+        "name": "The pronoun en",
+        "note": "En replaces a noun introduced by de, a partitive article, or a quantity expression, standing in for \"of it/them\" or \"some\" with no separate English word to translate it.",
+        "example": "Des pommes ? Oui, j'en ai trois.",
+        "test": "the sentence uses \"en\" immediately before the conjugated verb to replace a noun introduced by de, a partitive article, or a number/quantity expression"
+      },
+      {
+        "id": "fr.a2.comparatifs",
+        "name": "Comparatives",
+        "note": "French compares with plus/moins/aussi before the adjective or adverb and que after it, and has one irregular comparative, meilleur, for bon.",
+        "example": "Ce restaurant est plus cher que l'autre, mais la cuisine est meilleure.",
+        "test": "the sentence uses plus, moins, or aussi before an adjective or adverb and que after it to compare two things, using meilleur(e)(s) rather than \"plus bon\" when comparing with bon"
+      },
+      {
+        "id": "fr.a2.superlatifs",
+        "name": "Superlatives",
+        "note": "The superlative adds a definite article to the comparative form (le/la/les plus, le/la/les moins) to single out an extreme within a group.",
+        "example": "C'est le plus grand bâtiment de la ville.",
+        "test": "the sentence uses a definite article plus \"plus\" or \"moins\" before an adjective to mark a superlative, followed by \"de\" introducing the group compared"
+      },
+      {
+        "id": "fr.a2.futur-simple",
+        "name": "Futur simple",
+        "note": "The futur simple states what will happen, built by adding a fixed set of endings (-ai, -as, -a, -ons, -ez, -ont) to the infinitive, or to an irregular future stem for verbs like être, avoir, aller, faire.",
+        "example": "Demain, je finirai ce livre et nous irons au parc.",
+        "test": "the sentence contains a verb conjugated in the futur simple with the ending -ai/-as/-a/-ons/-ez/-ont attached to the infinitive or an irregular future stem"
+      },
+      {
+        "id": "fr.a2.conditionnel-politesse",
+        "name": "Conditionnel présent for polite requests",
+        "note": "The conditionnel présent softens a request or suggestion into something politer than the plain present, especially with vouloir and pouvoir (je voudrais, pourriez-vous).",
+        "example": "Je voudrais un café, s'il vous plaît.",
+        "test": "the sentence uses a conditionnel présent form of vouloir or pouvoir (voudrais, voudrait, pourriez, etc.) to make a request or offer polite rather than blunt"
+      },
+      {
+        "id": "fr.a2.pronoms-relatifs-simples",
+        "name": "Simple relative pronouns (qui, que, où)",
+        "note": "Qui replaces the subject of the relative clause, que replaces its direct object, and où replaces a place or time, letting a learner join two short sentences into one.",
+        "example": "J'ai un ami qui parle trois langues et que j'admire beaucoup.",
+        "test": "the sentence contains a relative clause introduced by qui (with no following subject, since qui is itself the subject), que (followed by its own subject, since que is the object), or où (referring to a place or time)"
+      },
+      {
+        "id": "fr.a2.imperatif",
+        "name": "Imperative mood",
+        "note": "The imperative drops the subject pronoun and uses the tu/nous/vous present-tense forms directly, and for -er verbs drops the final -s from the tu form.",
+        "example": "Ferme la porte et écoute-moi.",
+        "test": "the sentence gives a command with a verb in imperative form (no subject pronoun, tu-form -er verbs without a final -s) matching tu, nous, or vous"
+      },
+      {
+        "id": "fr.a2.duree-depuis-pendant-il-y-a",
+        "name": "Duration: depuis, pendant, il y a",
+        "note": "The three time expressions are not interchangeable: depuis marks a state continuing up to now, pendant a bounded duration, and il y a how long ago something happened.",
+        "example": "J'habite ici depuis trois ans ; j'ai voyagé pendant deux semaines, il y a un mois.",
+        "test": "the sentence uses depuis with a present-tense verb for an ongoing state, or pendant for a closed duration, or il y a (time) to mark how long ago a past event happened, matching the meaning intended"
+      },
+      {
+        "id": "fr.a2.prepositions-pays",
+        "name": "Prepositions with countries (en, au, aux)",
+        "note": "Going to or being in a country takes en before a feminine country name, au before a masculine one, and aux before a plural one, tracking that country name's own gender and number.",
+        "example": "Je vais en France, puis au Portugal et aux États-Unis.",
+        "test": "the sentence uses en before a feminine country name, au before a masculine singular country name, or aux before a plural country name, matching that country's grammatical gender/number"
+      },
+      {
+        "id": "fr.a2.venir-de",
+        "name": "Venir de + infinitive (recent past)",
+        "note": "A present-tense form of venir followed by de and an infinitive states that something has just happened, paralleling aller + infinitive for the near future.",
+        "example": "Je viens de finir mon repas.",
+        "test": "the sentence has a present-tense form of venir followed by \"de\" and a verb in the infinitive, referring to an event that just happened"
+      },
+      {
+        "id": "fr.a2.negation-etendue",
+        "name": "Extended negation (ne...plus, ne...jamais, ne...rien, ne...personne)",
+        "note": "Beyond ne...pas, French has a family of two-part negations that each cancel a different kind of word: plus (no longer), jamais (never), rien (nothing), personne (nobody).",
+        "example": "Je ne mange plus de viande et je ne vois personne le dimanche.",
+        "test": "the sentence uses ne with plus, jamais, rien, or personne wrapped around the conjugated verb, matching the intended meaning (no longer/never/nothing/nobody)"
+      },
+      {
+        "id": "fr.a2.adverbes-en-ment",
+        "name": "Adverbs formed with -ment",
+        "note": "Most French manner adverbs are built by adding -ment to the feminine form of an adjective (lente → lentement), a regular derivation with a handful of spelling exceptions.",
+        "example": "Elle conduit lentement mais elle répond rapidement.",
+        "test": "the sentence contains an adverb formed by adding -ment to an adjective's feminine stem, used to describe how an action is done"
+      },
+      {
+        "id": "fr.a2.si-condition-reelle",
+        "name": "Si + présent (real condition)",
+        "note": "A condition still open to happening pairs si with the present tense in the if-clause and either the present or the futur simple in the result clause.",
+        "example": "Si tu as le temps, on ira au cinéma.",
+        "test": "the sentence has a clause starting with \"si\" followed by a present-tense verb, paired with a result clause in the present or futur simple"
+      },
+      {
+        "id": "fr.a2.expression-obligation-il-faut",
+        "name": "Obligation with il faut",
+        "note": "Il faut is an impersonal, invariable expression for stating a general obligation or necessity, followed directly by an infinitive.",
+        "example": "Il faut réserver une table avant huit heures.",
+        "test": "the sentence uses the fixed impersonal expression \"il faut\" (unchanged for person or number) followed directly by a verb in the infinitive"
+      }
+    ],
+    "b1": [
+      {
+        "id": "fr.b1.subjonctif-present",
+        "name": "Subjonctif présent and its triggers",
+        "note": "The subjonctif is a mood, not a tense, required after a fixed set of triggers expressing obligation, will, emotion, or doubt (il faut que, vouloir que, être content que, douter que) rather than plain fact.",
+        "example": "Il faut que tu finisses ton travail avant ce soir.",
+        "test": "the sentence has a subordinate clause introduced by \"que\" following a recognized subjonctif trigger (il faut que, vouloir que, être content/triste/surpris que, douter que, or similar), with the verb in that clause conjugated in the subjonctif présent rather than the indicative"
+      },
+      {
+        "id": "fr.b1.plus-que-parfait",
+        "name": "Plus-que-parfait",
+        "note": "The plus-que-parfait, built from the imparfait of avoir/être plus a past participle, marks an event that had already happened before another past event being told.",
+        "example": "Quand je suis arrivé, il était déjà parti.",
+        "test": "the sentence contains a verb formed from the imparfait of avoir or être plus a past participle, describing an event that preceded another past event named in the same sentence"
+      },
+      {
+        "id": "fr.b1.hypothese-imparfait-conditionnel",
+        "name": "Hypothesis: si + imparfait + conditionnel présent",
+        "note": "An unreal or unlikely present condition pairs si with the imparfait in the if-clause and the conditionnel présent in the result clause, distinct from the real-condition pattern learned at A2.",
+        "example": "Si j'avais plus de temps, je voyagerais davantage.",
+        "test": "the sentence has a clause starting with \"si\" followed by a verb in the imparfait, paired with a result clause whose verb is in the conditionnel présent"
+      },
+      {
+        "id": "fr.b1.double-pronoms-objet",
+        "name": "Order of two object pronouns together",
+        "note": "When a direct and an indirect object pronoun both precede the same verb, they follow a fixed order (me/te/se/nous/vous, then le/la/les, then lui/leur), not the order the full nouns would have had.",
+        "example": "Ce livre, je le lui donne demain.",
+        "test": "the sentence has two object pronouns together before the verb, ordered me/te/se/nous/vous, then le/la/les, then lui/leur (or, in a positive imperative, le/la/les before moi/lui/leur placed after the verb)"
+      },
+      {
+        "id": "fr.b1.accord-participe-pronominal",
+        "name": "Past participle agreement with pronominal verbs",
+        "note": "In the passé composé of a pronominal verb, the past participle agrees with the reflexive pronoun only when that pronoun is the direct object; it stays unchanged when the reflexive pronoun is indirect, as in se parler or se téléphoner.",
+        "example": "Elle s'est lavée, mais ils se sont parlé.",
+        "test": "the sentence has a pronominal verb in the passé composé whose participle takes a gender/number ending when the reflexive pronoun is the direct object, and stays in its bare masculine-singular form when the verb (like se parler, se téléphoner, se plaire) takes an indirect object instead"
+      },
+      {
+        "id": "fr.b1.gerondif",
+        "name": "Le gérondif (en + present participle)",
+        "note": "The gérondif, formed with en plus the present participle, expresses that two actions happen at the same time or that one is the means for the other, and always refers back to the sentence's main subject.",
+        "example": "Elle a appris le français en regardant des films.",
+        "test": "the sentence uses \"en\" immediately followed by a present participle (verb stem + -ant) to show that its action happens at the same time as, or as the means of, the main verb's action, both done by the same subject"
+      },
+      {
+        "id": "fr.b1.infinitif-passe",
+        "name": "Infinitif passé",
+        "note": "Avoir or être plus a past participle in infinitive position marks that an action was completed before another one, most often after après.",
+        "example": "Après avoir mangé, nous sommes sortis.",
+        "test": "the sentence uses \"après\" followed by an infinitive form of avoir or être plus a past participle, marking that this action finished before the main clause's action"
+      },
+      {
+        "id": "fr.b1.voix-passive",
+        "name": "Passive voice",
+        "note": "The passive turns the object of an active sentence into its subject, using être plus a past participle that agrees with that subject, with the original doer optionally introduced by par.",
+        "example": "Le pont a été construit par des ingénieurs français.",
+        "test": "the sentence has a form of être followed by a past participle agreeing with the subject, where that subject is the recipient rather than the doer of the action, optionally with the doer introduced by \"par\""
+      },
+      {
+        "id": "fr.b1.pronoms-relatifs-dont-lequel",
+        "name": "Relative pronouns dont and lequel",
+        "note": "Dont replaces a complement introduced by de (a verb's fixed preposition, or possession), while lequel/laquelle/lesquels/lesquelles replaces a complement introduced by another preposition and agrees with the noun it stands for.",
+        "example": "Le livre dont je parle est sur la table sur laquelle tu as posé tes clés.",
+        "test": "the sentence uses dont to replace a \"de + noun\" complement, or a form of lequel matching the gender/number of the noun it replaces after a preposition other than de"
+      },
+      {
+        "id": "fr.b1.cause-consequence",
+        "name": "Expressing cause and consequence",
+        "note": "Parce que, car and puisque each introduce a reason with a slightly different nuance (a new fact, a written justification, a reason already known), while donc, alors and c'est pourquoi each introduce the resulting consequence.",
+        "example": "Il pleuvait, donc nous sommes restés chez nous parce que la route était dangereuse.",
+        "test": "the sentence links two clauses with a cause connector (parce que, car, puisque) or a consequence connector (donc, alors, c'est pourquoi), matching the direction of the reasoning to the connector used"
+      },
+      {
+        "id": "fr.b1.concession-bien-que",
+        "name": "Concession with bien que + subjonctif",
+        "note": "Bien que introduces a fact that goes against what the main clause would lead you to expect, and unlike most cause/consequence connectors it forces the verb that follows into the subjonctif.",
+        "example": "Bien qu'il soit fatigué, il continue à travailler.",
+        "test": "the sentence has a clause introduced by \"bien que\" (or \"quoique\") whose verb is conjugated in the subjonctif, contrasted with a main clause stating an unexpected fact"
+      },
+      {
+        "id": "fr.b1.restriction-ne-que",
+        "name": "Restriction with ne...que",
+        "note": "Ne...que does not negate the verb; it restricts the sentence to a single item, meaning \"only\", and que sits directly before the word being restricted rather than after the verb like pas.",
+        "example": "Je n'ai que deux euros sur moi.",
+        "test": "the sentence wraps the conjugated verb in ne...que, with que placed directly before the specific word or phrase being restricted, and the meaning is \"only\", not a plain negation"
+      },
+      {
+        "id": "fr.b1.faire-causatif",
+        "name": "Faire causatif (faire + infinitive)",
+        "note": "Faire followed directly by an infinitive expresses that the subject has someone else carry out the action, rather than doing it themselves.",
+        "example": "Elle fait réparer sa voiture.",
+        "test": "the sentence has a conjugated form of faire immediately followed by a verb in the infinitive, meaning the subject causes or has that action done rather than performing it directly"
+      },
+      {
+        "id": "fr.b1.futur-apres-quand",
+        "name": "Futur simple after quand/lorsque/dès que for future time",
+        "note": "When a clause introduced by quand, lorsque or dès que refers to the future, French puts its verb in the futur simple, where English would use the present (\"when I arrive\").",
+        "example": "Quand j'arriverai, je t'appellerai.",
+        "test": "the sentence has a clause introduced by quand, lorsque, or dès que referring to a future event, with its verb in the futur simple rather than the present"
+      },
+      {
+        "id": "fr.b1.discours-indirect-present",
+        "name": "Reported speech (discours indirect) at present tense",
+        "note": "Reporting what someone said with dire que, demander si, or a question word turns direct speech into a subordinate clause and requires the same pronoun and possessive changes as English reported speech, without a tense shift when the reporting verb is in the present.",
+        "example": "Il dit qu'il est fatigué et il demande si tu viens.",
+        "test": "the sentence reports someone's words as a subordinate clause introduced by que (statement) or si/a question word (question), with pronouns and possessives adjusted to the reporting speaker's point of view"
+      },
+      {
+        "id": "fr.b1.indefinis-chaque-quelques-plusieurs",
+        "name": "Indefinite adjectives (chaque, quelques, plusieurs, tout)",
+        "note": "These words quantify a noun without stating an exact number: chaque takes a singular noun even though it implies a group, quelques and plusieurs take a plural, and tout/tous/toute/toutes agrees with the noun's gender and number.",
+        "example": "Chaque élève a plusieurs livres, mais tous les livres sont vieux.",
+        "test": "the sentence uses chaque with a singular noun, or quelques/plusieurs with a plural noun, or a form of tout agreeing in gender and number with the noun it quantifies"
+      },
+      {
+        "id": "fr.b1.pronoms-possessifs",
+        "name": "Possessive pronouns (le mien, le tien...)",
+        "note": "Unlike possessive determiners, which precede a noun, possessive pronouns (le mien, la tienne, les nôtres) stand in for a \"possessor + noun\" phrase already mentioned and carry their own article agreeing with the thing possessed.",
+        "example": "J'ai oublié mon parapluie ; tu peux me prêter le tien ?",
+        "test": "the sentence uses a possessive pronoun (le mien/la mienne/les miens, le tien/la tienne, le sien/la sienne, le/la nôtre, le/la vôtre, le/la leur, or their plurals) in place of a noun already named, agreeing in gender and number with that noun"
+      }
+    ],
+    "b2": [
+      {
+        "id": "fr.b2.subjonctif-passe",
+        "name": "Subjonctif passé",
+        "note": "The subjonctif passé, formed with the subjonctif of avoir/être plus a past participle, marks that the subjunctive event happened before the time of the main clause.",
+        "example": "Je suis content qu'elle ait réussi son examen.",
+        "test": "the sentence has a subjonctif trigger followed by a \"que\" clause whose verb is the subjonctif of avoir or être plus a past participle, marking that event as prior to the main clause"
+      },
+      {
+        "id": "fr.b2.hypothese-passe",
+        "name": "Unreal past hypothesis: si + plus-que-parfait + conditionnel",
+        "note": "A condition that did not happen in the past pairs si with the plus-que-parfait in the if-clause and either the conditionnel passé (past result) or the conditionnel présent (present result of a past condition) in the result clause.",
+        "example": "Si j'avais su, je ne serais pas venu.",
+        "test": "the sentence has a clause starting with \"si\" followed by a verb in the plus-que-parfait, paired with a result clause whose verb is in the conditionnel passé or conditionnel présent"
+      },
+      {
+        "id": "fr.b2.futur-anterieur",
+        "name": "Futur antérieur",
+        "note": "The futur antérieur, built from the futur simple of avoir/être plus a past participle, marks that one future event will already be complete before another future event.",
+        "example": "Quand tu arriveras, j'aurai fini le repas.",
+        "test": "the sentence contains a verb formed from the futur simple of avoir or être plus a past participle, describing an action that will be complete before another future event named in the sentence"
+      },
+      {
+        "id": "fr.b2.concordance-temps-discours-rapporte",
+        "name": "Sequence of tenses in reported speech (past reporting verb)",
+        "note": "When the reporting verb (dire, demander, expliquer) is itself in a past tense, the reported clause's tense shifts back one step: present becomes imparfait, passé composé becomes plus-que-parfait, and futur simple becomes conditionnel présent.",
+        "example": "Il a dit qu'il était fatigué et qu'il viendrait plus tard.",
+        "test": "the sentence reports speech with a past-tense reporting verb (a form like \"a dit\", \"a expliqué\"), and the reported clause shows the corresponding tense shift: imparfait for what was said in the present, plus-que-parfait for what was said in the passé composé, or conditionnel présent for what was said in the futur simple"
+      },
+      {
+        "id": "fr.b2.passe-simple-recognition",
+        "name": "Recognizing the passé simple in written narrative",
+        "note": "The passé simple is a literary past tense no longer used in speech but standard in novels, tales and historical writing; a B2 learner needs to recognize its third-person forms (il alla, elle fit, ils vinrent) as equivalent to the passé composé, without producing them.",
+        "example": "Il alla au marché et fit ses courses en silence.",
+        "test": "the sentence contains a verb in a third-person passé simple form (a recognizable irregular form, or an -a/-it/-ut type ending), used in a written narrative to report a completed past action"
+      },
+      {
+        "id": "fr.b2.concession-avancee",
+        "name": "Advanced concession and opposition connectors",
+        "note": "Beyond bien que, B2 adds a wider set of contrast connectors: quoique and même si (concession), alors que and tandis que (opposition between two facts), each with its own mood requirement (subjonctif after quoique, indicatif after même si/alors que/tandis que).",
+        "example": "Alors que ses parents détestent le froid, elle adore l'hiver.",
+        "test": "the sentence links two contrasting clauses with quoique (verb in subjonctif), or with même si, alors que, or tandis que (verb in indicatif), matching the mood to the connector"
+      },
+      {
+        "id": "fr.b2.subjonctif-apres-superlatif",
+        "name": "Subjonctif after superlatives and restrictive expressions",
+        "note": "A relative clause following a superlative (le seul, le premier, le plus/moins) or a restrictive expression takes the subjonctif because the claim is presented as the speaker's judgment rather than an established fact.",
+        "example": "C'est le meilleur film que j'aie jamais vu.",
+        "test": "the sentence has a relative clause following a superlative or a \"le seul/le premier\" phrase, with the relative clause's verb conjugated in the subjonctif"
+      },
+      {
+        "id": "fr.b2.nominalisation",
+        "name": "Nominalization for formal register",
+        "note": "Formal written French favors turning a verb or adjective into a noun (réduire → la réduction, difficile → la difficulté) rather than keeping a full clause, a stylistic shift English marks less consistently.",
+        "example": "La réduction des coûts a permis l'amélioration du service.",
+        "test": "the sentence uses at least one noun derived from a verb or adjective (via a suffix such as -tion, -ment, -ité, -age) in place of a clause that could have named the same action or quality with a finite verb"
+      },
+      {
+        "id": "fr.b2.mise-en-relief",
+        "name": "Emphatic structures (c'est...qui/que)",
+        "note": "French isolates the element it wants to stress by framing it with c'est...qui (for a subject) or c'est...que (for anything else), where English would just rely on stress or word order.",
+        "example": "C'est Marie qui a organisé la fête, et c'est ce projet que je préfère.",
+        "test": "the sentence frames the stressed element between \"c'est\" and \"qui\" (when that element is the subject of the following clause) or \"c'est\" and \"que\" (for any other role)"
+      },
+      {
+        "id": "fr.b2.voix-passive-se-faire",
+        "name": "Se faire + infinitive (passive with personal involvement)",
+        "note": "Se faire plus an infinitive presents the subject as undergoing an action, often one that affects them personally or unfortunately, an alternative to the plain passive that keeps a sense of the subject's involvement.",
+        "example": "Il s'est fait voler son téléphone dans le métro.",
+        "test": "the sentence has a pronominal form of faire (se faire) conjugated to agree with its subject, immediately followed by a verb in the infinitive, presenting that subject as undergoing the infinitive's action"
+      },
+      {
+        "id": "fr.b2.connecteurs-logiques-nuances",
+        "name": "Nuanced logical connectors (cependant, néanmoins, de sorte que)",
+        "note": "B2 argumentative writing needs finer contrast and consequence connectors than donc/mais, including cependant and néanmoins (contrast, more formal than mais) and de sorte que/de manière que (consequence, taking the indicatif for a real result or the subjonctif for an intended one).",
+        "example": "Elle a mal préparé son dossier, de sorte qu'il a été refusé.",
+        "test": "the sentence uses a formal contrast connector (cependant, néanmoins, en revanche) or a consequence connector (de sorte que, de manière que) with the mood of its verb matching whether the outcome is stated as a real result (indicatif) or an intended goal (subjonctif)"
+      },
+      {
+        "id": "fr.b2.interrogation-indirecte",
+        "name": "Indirect questions",
+        "note": "Reporting a question inside another sentence drops the question mark and the inversion, replacing est-ce que with si for yes/no questions and qu'est-ce que with ce que for \"what\" questions.",
+        "example": "Je me demande si elle viendra et ce qu'elle pense de ce projet.",
+        "test": "the sentence embeds a question as a subordinate clause introduced by si (for a yes/no question) or ce que/ce qui (replacing \"qu'est-ce que/qu'est-ce qui\"), with no question mark and no subject-verb inversion inside that clause"
+      }
+    ],
+    "c1": [
+      {
+        "id": "fr.c1.subjonctif-imparfait-plus-que-parfait-litteraire",
+        "name": "Literary subjonctif imparfait and plus-que-parfait",
+        "note": "In formal written or literary register, a subjonctif triggered by a past-tense main clause can appear in the imparfait or plus-que-parfait du subjonctif instead of the everyday présent/passé forms; a C1 learner recognizes these and understands why current usage mostly replaces them.",
+        "example": "Il fallait qu'elle partît avant la nuit.",
+        "test": "the sentence contains a verb in the imparfait du subjonctif or plus-que-parfait du subjonctif (recognizable by its distinctive endings, e.g. -ât/-ît/-ût forms) in a formal or literary register, following a past-tense subjonctif trigger"
+      },
+      {
+        "id": "fr.c1.passe-simple-production",
+        "name": "Passé simple across all persons",
+        "note": "Where B2 only needs to recognize third-person passé simple in reading, C1 asks for comfortable reading of the full paradigm, including the less obvious first- and second-person forms, and occasional formal written use.",
+        "example": "Nous arrivâmes à l'aube et vîmes la ville pour la première fois.",
+        "test": "the sentence contains a first- or second-person passé simple form (endings such as -âmes, -âtes, -îmes, -îtes) used in formal written narration"
+      },
+      {
+        "id": "fr.c1.inversion-registre-soutenu",
+        "name": "Subject-verb inversion in formal register",
+        "note": "Formal French inverts the subject and verb after certain sentence-initial adverbs (peut-être, aussi meaning \"therefore\", ainsi, sans doute) and in formal questions, a construction avoided in everyday speech.",
+        "example": "Peut-être trouverez-vous une solution plus tard.",
+        "test": "the sentence begins with peut-être, aussi (meaning \"therefore/thus\"), ainsi, or sans doute, immediately followed by inverted subject-verb order (verb before its pronoun subject, joined with a hyphen)"
+      },
+      {
+        "id": "fr.c1.nuances-subjonctif-indicatif-jugement",
+        "name": "Subjonctif/indicatif choice as a marker of speaker stance",
+        "note": "With verbs like penser, croire or espérer, the choice between indicatif and subjonctif in the following clause signals the speaker's own certainty, most visibly when the main verb is negated or questioned (je pense qu'il vient vs je ne pense pas qu'il vienne).",
+        "example": "Je ne pense pas qu'il vienne, mais je pense qu'il viendra si on l'invite.",
+        "test": "the sentence has two \"que\" clauses following penser, croire, or espérer, one negated or questioned with its verb in the subjonctif, the other affirmed with its verb in the indicatif, matching the speaker's asserted certainty"
+      },
+      {
+        "id": "fr.c1.dislocation-emphase",
+        "name": "Left/right dislocation for topic and focus",
+        "note": "Spoken and informal written French routinely restates a noun as a pronoun and moves it to the edge of the sentence (Moi, je pense que..., or Il est sympa, ce prof) to mark what the sentence is about, or to add it as an afterthought.",
+        "example": "Ce professeur, je le trouve vraiment compétent.",
+        "test": "the sentence names a noun phrase at the very start or very end of the sentence and restates it with a matching pronoun inside the core clause (a dislocated topic or afterthought), rather than folding the noun directly into normal clause position"
+      },
+      {
+        "id": "fr.c1.connecteurs-argumentatifs-registre",
+        "name": "Register-marked argumentative connectors",
+        "note": "At C1, contrast and concession connectors carry register information as much as logical meaning: en effet/de fait (confirming, formal) versus du coup (informal consequence), or quand bien même plus conditionnel for a strong hypothetical concession.",
+        "example": "Quand bien même il pleuvrait, la course aurait lieu.",
+        "test": "the sentence uses quand bien même followed by a verb in the conditionnel to state a strong hypothetical concession, or uses en effet/de fait/du coup matched to the formal or informal register of the surrounding text"
+      }
+    ]
+  }
+}

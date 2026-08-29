@@ -1,0 +1,645 @@
+{
+  "language": "ru",
+  "sources": [
+    "Государственный стандарт по русскому языку как иностранному. Элементарный уровень (2-е изд., «Златоуст», full text read directly from https://kpfu.ru/portal/docs/F_1236094414/Gosudarstvennyj.standart.elementarnui.uroven.pdf)",
+    "Государственный стандарт по русскому языку как иностранному. Базовый уровень (2-е изд., «Златоуст», 2001; full text read directly from https://test.irlc.msu.ru/wp-content/uploads/2024/08/A2_standart.pdf)",
+    "Государственный образовательный стандарт по русскому языку как иностранному. Первый уровень. Общее владение («Златоуст», 1999; full text read directly from https://kpfu.ru/portal/docs/F_189607702/Gosudarstvennyj.standart.Uroven.1.pdf)",
+    "Государственный образовательный стандарт по русскому языку как иностранному. Второй уровень. Общее владение («Златоуст», 1999; full text read directly from https://test.irlc.msu.ru/wp-content/uploads/2024/08/B2_standart.pdf)",
+    "Государственный образовательный стандарт по русскому языку как иностранному. Третий уровень. Общее владение («Златоуст», 1999; full text read directly from a copy of https://test.tsu.ru/sites/default/files/files/exams/C1_standart.pdf) — sections 2.2.3 through 2.2.8 (adjective, pronoun, verb, numeral, adverb, function words) did not extract from this copy and were not used; see report."
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "ru.a1.noun-gender-number",
+        "name": "Noun gender and number",
+        "note": "Every Russian noun has one of three genders and a singular/plural number, and this shows up on any adjective or past-tense verb that agrees with it, not on the noun's own ending alone.",
+        "example": "Моя сестра работает.",
+        "test": "The sentence has a noun whose gender or number is visible on an agreeing adjective, possessive, or past-tense verb."
+      },
+      {
+        "id": "ru.a1.case-nominative",
+        "name": "Nominative case",
+        "note": "The nominative names the subject of a sentence, a person being addressed, or what something is called; it is the dictionary form.",
+        "example": "Это Андрей. Вот книга.",
+        "test": "A nominative noun functions as the sentence's subject, a direct address, or a bare naming of a person/thing."
+      },
+      {
+        "id": "ru.a1.zero-copula-present",
+        "name": "Zero copula in the present tense",
+        "note": "Russian has no present-tense verb 'to be': a noun or adjective predicate stands directly after its subject, often separated by a dash in writing.",
+        "example": "Брат — врач.",
+        "test": "A present-time sentence links a subject to a noun or adjective predicate with no verb between them."
+      },
+      {
+        "id": "ru.a1.case-genitive-basic",
+        "name": "Genitive: possession and absence",
+        "note": "The genitive without a preposition marks whose something is, and, with нет, marks that something is absent (in the present tense at this level); it also follows 2, 3, 4 and the number in a date.",
+        "example": "У меня нет брата.",
+        "test": "A genitive noun follows another noun to show possession, follows нет to show absence, or follows a number 2–4 or a date."
+      },
+      {
+        "id": "ru.a1.case-genitive-source",
+        "name": "Genitive: source of motion and possessor with у",
+        "note": "Из and с plus the genitive name where a movement started; у plus the genitive names who owns something in a У + genitive + есть sentence.",
+        "example": "Мы пришли с концерта. У Андрея есть машина.",
+        "test": "A genitive noun follows из or с naming a starting point, or follows у naming a possessor in an есть-sentence."
+      },
+      {
+        "id": "ru.a1.case-dative-basic",
+        "name": "Dative: addressee and age",
+        "note": "The dative without a preposition marks who receives an action, and, with a personal pronoun, whose age is being stated.",
+        "example": "Каждый вечер я звоню отцу.",
+        "test": "A dative noun/pronoun names who an action is directed at, or appears in an age sentence (dative + number + лет/год)."
+      },
+      {
+        "id": "ru.a1.case-dative-goal",
+        "name": "Dative with к: goal of motion",
+        "note": "К plus the dative names the person someone is heading toward.",
+        "example": "Вечером мы пойдём к Нине.",
+        "test": "A dative noun follows к and names the person that motion is directed toward."
+      },
+      {
+        "id": "ru.a1.case-accusative-object",
+        "name": "Accusative: direct object, звать, and duration",
+        "note": "The accusative without a preposition marks the direct object of a transitive verb, the person named in a Х зовут construction, and how long something lasted.",
+        "example": "Андрей купил журнал. Меня зовут Лена.",
+        "test": "An accusative noun/pronoun is a verb's direct object, or is the logical subject of зовут, or states a duration."
+      },
+      {
+        "id": "ru.a1.case-accusative-animate",
+        "name": "Animacy in the accusative",
+        "note": "A masculine noun naming a person or animal takes an accusative form identical to its genitive, not its nominative; this does not happen with feminine or neuter nouns or with things.",
+        "example": "Я знаю Андрея.",
+        "test": "A masculine singular noun naming a person/animal is a direct object and its ending matches its genitive rather than its nominative."
+      },
+      {
+        "id": "ru.a1.case-accusative-direction-time",
+        "name": "Accusative with в/на: direction and clock time",
+        "note": "В and на plus the accusative name the destination of motion, and в plus the accusative names an hour or a day of the week.",
+        "example": "Утром я иду в институт. В среду была экскурсия.",
+        "test": "An accusative noun follows в or на naming a destination, or follows в naming an hour or a weekday."
+      },
+      {
+        "id": "ru.a1.case-instrumental-basic",
+        "name": "Instrumental without a preposition: заниматься and profession",
+        "note": "The instrumental without a preposition follows заниматься/увлекаться-type verbs, and names a profession after быть.",
+        "example": "Брат занимается спортом.",
+        "test": "An instrumental noun follows заниматься/увлекаться, or names a profession after быть."
+      },
+      {
+        "id": "ru.a1.case-instrumental-with",
+        "name": "Instrumental with с: accompaniment",
+        "note": "С plus the instrumental names who or what accompanies something.",
+        "example": "Я люблю чай с молоком.",
+        "test": "An instrumental noun follows с and names something that accompanies another thing."
+      },
+      {
+        "id": "ru.a1.case-prepositional",
+        "name": "Prepositional case: topic, place, and vehicle",
+        "note": "The prepositional case, which only ever appears with a preposition, marks the topic of speech or thought after о, location after в/на, and the vehicle used after на.",
+        "example": "Мы были в театре. Я думаю о семье.",
+        "test": "A prepositional-case noun follows о naming a topic, or follows в/на naming a place or a vehicle."
+      },
+      {
+        "id": "ru.a1.pronouns-personal-declension",
+        "name": "Personal pronouns in oblique cases",
+        "note": "Personal pronouns (я, ты, он, она, мы, вы, они) change form completely outside the nominative and must match the case their position requires.",
+        "example": "Дай мне книгу, пожалуйста.",
+        "test": "A personal pronoun appears in a non-nominative form (меня, тебе, его, ей, нас, etc.) matching what its case requires."
+      },
+      {
+        "id": "ru.a1.pronouns-other",
+        "name": "Question, possessive, demonstrative, and negative pronouns",
+        "note": "Какой/чей/сколько ask about a noun's properties, мой/твой mark possession, этот points something out, and никто/ничто negate.",
+        "example": "Это мой друг.",
+        "test": "The sentence uses a question, possessive, demonstrative, or negative pronoun agreeing with its noun where relevant."
+      },
+      {
+        "id": "ru.a1.adjective-agreement",
+        "name": "Full adjective agreement",
+        "note": "A full adjective agrees with its noun in gender and number, and, in the nominative, in case as well.",
+        "example": "Это интересная книга.",
+        "test": "A full adjective directly modifies a noun and its ending matches that noun's gender and number."
+      },
+      {
+        "id": "ru.a1.adjective-short-form",
+        "name": "Short adjectives: рад, занят, должен, болен",
+        "note": "This small closed set of adjectives is used only in its short predicate form, agreeing with the subject in gender and number, never as a modifier before a noun.",
+        "example": "Я рада вас видеть.",
+        "test": "рад/занят/должен/болен appears as the predicate, agreeing in gender/number with its subject."
+      },
+      {
+        "id": "ru.a1.verb-aspect-basic",
+        "name": "Verbal aspect: imperfective vs. perfective",
+        "note": "Most Russian verbs come in pairs: the imperfective names an ongoing or repeated action, the perfective names one completed event. Choosing the wrong member of the pair changes what the sentence means, not just its style.",
+        "example": "Вчера я читал книгу весь вечер. Вчера я прочитал книгу.",
+        "test": "The verb's aspect (imperfective for process/repetition, perfective for a single completed event) matches what the sentence describes."
+      },
+      {
+        "id": "ru.a1.verb-tense",
+        "name": "Present, past, and future tense",
+        "note": "Present tense exists only for imperfective verbs; the future is буду + imperfective infinitive for an ongoing future action, or the simple present-tense-looking form of a perfective verb for a single future event.",
+        "example": "Я буду читать. Я прочитаю.",
+        "test": "A finite verb is correctly marked for present, past, or future, and its future form matches its aspect (буду+infinitive for imperfective, simple form for perfective)."
+      },
+      {
+        "id": "ru.a1.verb-conjugation-classes",
+        "name": "First and second conjugation",
+        "note": "Present/future verb endings fall into two conjugation patterns, plus a handful of individually memorized irregular verbs.",
+        "example": "Она говорит по-русски.",
+        "test": "A present/future-tense verb form matches the ending pattern of its conjugation class."
+      },
+      {
+        "id": "ru.a1.verb-imperative",
+        "name": "Imperative",
+        "note": "The imperative addresses ты or вы directly and has its own ending, distinct from the present tense.",
+        "example": "Читайте, пожалуйста!",
+        "test": "The sentence contains an imperative verb form directed at ты or вы."
+      },
+      {
+        "id": "ru.a1.verb-transitivity-government",
+        "name": "Verb government and transitivity",
+        "note": "Each verb fixes the case (or preposition) of the noun that follows it; a transitive verb takes a plain accusative object, while its intransitive counterpart, if any, needs a preposition instead.",
+        "example": "Я встретил брата. Я встретился с братом.",
+        "test": "A verb is followed by exactly the case or preposition it is known to govern."
+      },
+      {
+        "id": "ru.a1.motion-verbs-unprefixed",
+        "name": "Verbs of motion: идти/ходить and ехать/ездить",
+        "note": "Unprefixed motion verbs split into a one-directional member for a single trip now under way and a multidirectional member for habitual, repeated, or round trips.",
+        "example": "Я иду в магазин. Я хожу в бассейн по средам.",
+        "test": "идти/ехать is used for one trip currently happening in one direction, or ходить/ездить is used for a repeated or round trip."
+      },
+      {
+        "id": "ru.a1.motion-verbs-prefixed-basic",
+        "name": "Motion verbs with по- and при-",
+        "note": "По- added to a motion verb marks setting off; при- marks arriving.",
+        "example": "Он пошёл домой. Она пришла в шесть.",
+        "test": "A motion verb carries по- with a setting-off meaning or при- with an arrival meaning."
+      },
+      {
+        "id": "ru.a1.numerals-agreement",
+        "name": "Numerals один–пять and the noun's case",
+        "note": "The noun after один stays nominative singular, after два/три/четыре it takes genitive singular, and after пять and up it takes genitive plural.",
+        "example": "У меня два брата. Билет стоит пять рублей.",
+        "test": "A cardinal numeral is followed by a noun in the case its value requires (nominative/genitive singular/genitive plural)."
+      },
+      {
+        "id": "ru.a1.numerals-ordinal",
+        "name": "Ordinal numerals",
+        "note": "Ordinal numerals agree with their noun like adjectives and are used for dates and rank.",
+        "example": "Сегодня первое января.",
+        "test": "An ordinal numeral agrees with its noun in gender/number/case, often in a date."
+      },
+      {
+        "id": "ru.a1.adverbs-basic",
+        "name": "Adverbs and можно/нужно/нельзя",
+        "note": "Adverbs of place, time, manner, and degree modify verbs or adjectives; можно/нужно/нельзя combine with an infinitive to express permission, necessity, or prohibition, with no subject required.",
+        "example": "Здесь нельзя курить.",
+        "test": "An adverb modifies a verb/adjective, or можно/нужно/нельзя is followed by an infinitive."
+      },
+      {
+        "id": "ru.a1.sentence-types",
+        "name": "Statement, question, and command sentences",
+        "note": "A sentence is marked as a statement, a question, or a command by its word order, question word, or verb form, independent of the words used.",
+        "example": "Куда ты идёшь?",
+        "test": "The sentence is clearly a statement, a question, or a command by its structure and punctuation."
+      },
+      {
+        "id": "ru.a1.compound-sentence-basic",
+        "name": "Compound sentences with и, а, но, или",
+        "note": "Two independent clauses are joined by one of these coordinating conjunctions to add, contrast, or offer an alternative.",
+        "example": "Я читаю, а брат смотрит телевизор.",
+        "test": "Two independent clauses are joined by и, а, но, or или."
+      },
+      {
+        "id": "ru.a1.complex-sentence-basic",
+        "name": "Subordinate clauses with что, чтобы, когда, потому что",
+        "note": "A main clause takes a subordinate clause that reports content (что/чтобы), gives a time (когда), or gives a reason (потому что).",
+        "example": "Я знаю, что ты занят.",
+        "test": "A main clause is followed by a subordinate clause introduced by что, чтобы, когда, or потому что."
+      },
+      {
+        "id": "ru.a1.word-order-neutral",
+        "name": "Neutral word order",
+        "note": "In a plain statement the subject precedes the predicate, a modifying adjective precedes its noun, and a place/time phrase that opens the sentence is followed first by the predicate, then the subject.",
+        "example": "В городе есть театр.",
+        "test": "The sentence follows this neutral ordering rather than an unusual or emphatic one."
+      }
+    ],
+    "a2": [
+      {
+        "id": "ru.a2.case-genitive-extended",
+        "name": "Genitive: absence in the past, part of a whole, and a full date",
+        "note": "Absence with нет now also covers the past tense (не было), the genitive marks a part taken from a whole, много/мало/несколько take a genitive noun, and a full date adds the year.",
+        "example": "В городе не было театра. Выпейте чашку чая.",
+        "test": "A genitive noun marks past-tense absence with не было, a part of a whole, a quantity after много/мало/несколько, or a year in a full date."
+      },
+      {
+        "id": "ru.a2.case-genitive-location-extended",
+        "name": "Genitive with от, до, у, and time prepositions",
+        "note": "От and до mark the start and end of a route; у marks being at someone's place; после/во время/до mark when something happened relative to another event.",
+        "example": "Я был у врача. Как доехать до парка?",
+        "test": "A genitive noun follows от/до marking a route's endpoints, у marking whose place someone is at, or после/во время/до marking relative time."
+      },
+      {
+        "id": "ru.a2.case-dative-experiencer",
+        "name": "Dative experiencer with a nominative stimulus",
+        "note": "Verbs like нравиться and impersonal states put the person who feels something in the dative while the thing felt or liked stands in the nominative as the grammatical subject; this also covers age for any noun, not only pronouns.",
+        "example": "Андрею нравится футбол. Моему другу двадцать лет.",
+        "test": "A dative noun/pronoun names an experiencer while a nominative noun is the grammatical subject of the liking/state verb, or a dative noun states an age."
+      },
+      {
+        "id": "ru.a2.case-dative-po",
+        "name": "Dative with по: route, medium, and subject label",
+        "note": "По plus the dative names the surface someone moves along, the medium something is seen/heard through, and, before a subject name, what a book or lesson is about.",
+        "example": "Я иду по улице. Это учебник по математике.",
+        "test": "A dative noun follows по in the sense of a route, a medium (radio/TV), or a subject label."
+      },
+      {
+        "id": "ru.a2.case-instrumental-location",
+        "name": "Instrumental with над/под/рядом с",
+        "note": "These prepositions plus the instrumental locate something above, below, or next to a landmark.",
+        "example": "Рядом с домом есть аптека.",
+        "test": "An instrumental noun follows над, под, or рядом с and locates something relative to it."
+      },
+      {
+        "id": "ru.a2.case-prepositional-time",
+        "name": "Prepositional case for time",
+        "note": "В plus a month, and на plus an ordinal-marked week, place a point in time in the prepositional case, extending the case beyond its A1 uses of topic/place/vehicle.",
+        "example": "Друг приехал в сентябре, на прошлой неделе.",
+        "test": "A prepositional-case noun follows в or на naming when something happened."
+      },
+      {
+        "id": "ru.a2.case-accusative-animate-plural",
+        "name": "Animacy in the accusative: plural of every gender",
+        "note": "The rule that an animate direct object copies the genitive rather than the nominative now applies to plural nouns regardless of gender, not only to masculine singular ones.",
+        "example": "Я видел студентов на экскурсии.",
+        "test": "A plural noun naming people/animals is a direct object and its ending matches the genitive plural."
+      },
+      {
+        "id": "ru.a2.adjective-full-declension",
+        "name": "Adjective declension through all cases",
+        "note": "A full adjective now changes for every case its noun takes, not just the nominative it was limited to at the previous level.",
+        "example": "Я разговариваю с интересным человеком.",
+        "test": "A full adjective agrees with its noun in a non-nominative case."
+      },
+      {
+        "id": "ru.a2.adjective-comparative-irregular",
+        "name": "Irregular comparative adjectives",
+        "note": "A handful of common adjectives form their comparative irregularly rather than with a regular suffix.",
+        "example": "Эта книга лучше.",
+        "test": "An adjective appears in one of its irregular comparative forms (лучше, хуже, больше, меньше)."
+      },
+      {
+        "id": "ru.a2.word-formation-suffixes",
+        "name": "Wider noun and adjective word-formation suffixes",
+        "note": "New productive suffixes build agent nouns (-чик/-щик and more), abstract nouns (-ство, -ость, -ация), and adjectives (-ов-, -еньк-).",
+        "example": "Это очень маленький щенок.",
+        "test": "The sentence contains a noun or adjective built from a known root with one of these newly taught suffixes."
+      },
+      {
+        "id": "ru.a2.motion-verbs-more-prefixes",
+        "name": "Motion verbs: more base pairs and more prefixes",
+        "note": "У-, вы-, and в- join по-/при- as directional prefixes, and лететь/летать, нести/носить, and везти/возить join идти/ходить and ехать/ездить as base motion-verb pairs.",
+        "example": "Он вышел из дома. Она принесла цветы.",
+        "test": "A motion verb from one of the five base pairs carries one of по-/при-/у-/вы-/в- with the matching direction."
+      },
+      {
+        "id": "ru.a2.word-order-actual-division",
+        "name": "Word order and information structure",
+        "note": "Moving a phrase to the front of the sentence shifts what question the sentence is understood to answer, because Russian marks new information by position rather than by stress alone.",
+        "example": "Поздно вечером вернулся Игорь.",
+        "test": "The sentence's word order departs from the plain subject-first order to foreground a particular piece of information."
+      },
+      {
+        "id": "ru.a2.complex-sentence-extended",
+        "name": "Subordinate clauses with который, если, чтобы",
+        "note": "Relative clauses with который, conditional clauses with если, and purpose clauses with чтобы widen the range of subordination available.",
+        "example": "Если у меня будет время, я приду.",
+        "test": "The sentence has a subordinate clause introduced by который, если, or чтобы."
+      },
+      {
+        "id": "ru.a2.reported-speech",
+        "name": "Reported speech",
+        "note": "A question or statement is folded into a reported clause with что or a question word, dropping the quotation marks and adjusting pronouns.",
+        "example": "Он спросил, где Петя. Я сказал, что Петя в театре.",
+        "test": "A verb of saying/asking is followed by a reported clause introduced by что or a question word, without direct quotation."
+      }
+    ],
+    "b1": [
+      {
+        "id": "ru.b1.case-genitive-object-comparison",
+        "name": "Genitive as verb object and standard of comparison",
+        "note": "Certain verbs like желать take a genitive object rather than an accusative one, and a comparative adjective's standard of comparison, when expressed without чем, stands in the genitive.",
+        "example": "Желаю вам счастья. Самолёт быстрее поезда.",
+        "test": "A genitive noun is the object of a verb like желать, or is the unmarked standard after a comparative adjective."
+      },
+      {
+        "id": "ru.b1.case-genitive-location-more",
+        "name": "Genitive with a wider set of location prepositions",
+        "note": "Около, вокруг, (не)далеко от, справа от, and слева от all govern the genitive to place something relative to a landmark.",
+        "example": "Аптека находится справа от дома.",
+        "test": "A genitive noun follows около/вокруг/(не)далеко от/справа от/слева от."
+      },
+      {
+        "id": "ru.b1.case-instrumental-means-agent",
+        "name": "Instrumental: means and the passive agent",
+        "note": "The instrumental without a preposition can name the tool or means used for an action, or, together with a passive participle, the person who performed it.",
+        "example": "Статья переведена студентом.",
+        "test": "An instrumental noun names either the instrument of an action or, with a passive participle, its agent."
+      },
+      {
+        "id": "ru.b1.case-instrumental-with-extended",
+        "name": "Instrumental with перед and descriptive с",
+        "note": "Перед plus the instrumental gives a point in time just before an event; с plus the instrumental after a noun describes a feature that helps identify it.",
+        "example": "Перед экзаменом я всегда волнуюсь. Дом с большими окнами.",
+        "test": "An instrumental noun follows перед marking time-before, or follows a noun + с marking a defining feature."
+      },
+      {
+        "id": "ru.b1.pronoun-reflexive-sebya",
+        "name": "Reflexive pronoun себя",
+        "note": "Себя has no nominative form and always refers back to the subject of its own clause, whoever that subject is.",
+        "example": "Он купил себе новую куртку.",
+        "test": "себя/себе/собой refers back to the subject of the clause it stands in."
+      },
+      {
+        "id": "ru.b1.adjective-degrees-comparison",
+        "name": "Regular comparative and superlative adjectives",
+        "note": "Beyond the irregular forms learned earlier, adjectives now form a regular comparative and a superlative, analytically or with a suffix.",
+        "example": "Это самая трудная задача.",
+        "test": "An adjective appears in a regularly formed comparative or superlative."
+      },
+      {
+        "id": "ru.b1.adverb-degrees-comparison",
+        "name": "Comparative adverbs",
+        "note": "Adverbs, like adjectives, form a comparative degree of their own.",
+        "example": "Она поёт лучше, чем раньше.",
+        "test": "An adverb appears in its comparative form."
+      },
+      {
+        "id": "ru.b1.numeral-adjective-agreement",
+        "name": "Numeral + adjective + noun agreement",
+        "note": "When an adjective comes between a numeral and its noun, the adjective's case and number follow the same rule that governs the noun after that numeral.",
+        "example": "У меня два интересных вопроса.",
+        "test": "A numeral, an adjective, and a noun combine, and the adjective's form follows the numeral's agreement rule."
+      },
+      {
+        "id": "ru.b1.reflexive-verbs",
+        "name": "Reflexive -ся verbs (non-passive)",
+        "note": "Some verbs add -ся to mean an action turned back on the subject or shared between subjects, with no passive sense at all.",
+        "example": "Мы встретились в парке.",
+        "test": "A -ся verb is used reflexively or reciprocally, not to mark a passive."
+      },
+      {
+        "id": "ru.b1.voice-passive-basic",
+        "name": "Passive voice",
+        "note": "A short passive participle, or a -ся verb used passively, promotes the action's target to the grammatical subject.",
+        "example": "План составлен Игорем. Дом строится рабочими.",
+        "test": "The sentence has a short passive participle or a passive -ся verb, with the logical object as its nominative subject."
+      },
+      {
+        "id": "ru.b1.predicate-instrumental-become",
+        "name": "Predicate noun in the instrumental after стать/быть in the future",
+        "note": "A predicate noun after стать, or after быть in the future tense, stands in the instrumental rather than the nominative.",
+        "example": "Скоро студенты станут специалистами.",
+        "test": "A predicate noun after станет/будет/стать is in the instrumental case."
+      },
+      {
+        "id": "ru.b1.predicate-adjective-infinitive",
+        "name": "Short adjective + infinitive",
+        "note": "A predicative short adjective can take an infinitive to express what the subject is glad, ready, or obliged to do.",
+        "example": "Я рад вас видеть.",
+        "test": "A short adjective (рад, готов, должен, etc.) is followed by an infinitive it governs."
+      },
+      {
+        "id": "ru.b1.participle-concept",
+        "name": "Participles (причастие)",
+        "note": "A participle is an adjective built from a verb, active or passive, and it agrees with its noun exactly as any adjective does.",
+        "example": "Студент, читающий газету, живёт рядом.",
+        "test": "The sentence contains a participle (an -щий/-вший/-нный/-тый-type form) agreeing with the noun it modifies."
+      },
+      {
+        "id": "ru.b1.participle-short-passive",
+        "name": "Short-form passive participle",
+        "note": "The short passive participle drops the long ending and agrees only in gender and number, functioning as a predicate rather than a modifier.",
+        "example": "Книга уже прочитана.",
+        "test": "A short passive participle (-н/-на/-но/-ны or -т/-та/-то/-ты) is used as the sentence's predicate."
+      },
+      {
+        "id": "ru.b1.gerund-concept",
+        "name": "Gerunds (деепричастие)",
+        "note": "A gerund is an unchanging verb form describing an action carried out by the same subject alongside the main action.",
+        "example": "Читая книгу, он делал заметки.",
+        "test": "The sentence contains a gerund (-я/-а for imperfective, -в/-вши for perfective) whose implied subject is the main clause's subject."
+      },
+      {
+        "id": "ru.b1.motion-verbs-full-prefix-set",
+        "name": "Motion verbs with пере-, про-, о-, за-, до-, от-",
+        "note": "These prefixes add crossing, passing, going around, starting to go, reaching a point, and moving away as distinct spatial meanings to the motion-verb system.",
+        "example": "Мы перешли улицу. Он дошёл до вокзала.",
+        "test": "A motion verb carries one of пере-/про-/о-/за-/до-/от- with its matching spatial meaning."
+      },
+      {
+        "id": "ru.b1.complex-sentence-concessive-degree",
+        "name": "Concessive and degree clauses",
+        "note": "Хотя and несмотря на то что introduce a fact that doesn't stop the main clause from being true; чем...тем links two things that grow or shrink together.",
+        "example": "Хотя было холодно, мы пошли гулять.",
+        "test": "The sentence has a хотя/несмотря на то что concessive clause, or a чем...тем correlative pair."
+      },
+      {
+        "id": "ru.b1.complex-sentence-causal-manner",
+        "name": "Clauses of cause (так как) and manner (как)",
+        "note": "Так как gives a reason, placed either before or after the result it explains; как introduces how something is or was done.",
+        "example": "Так как шёл дождь, мы остались дома.",
+        "test": "The sentence contains a так как causal clause or a как-clause of manner."
+      }
+    ],
+    "b2": [
+      {
+        "id": "ru.b2.case-genitive-verbal-object",
+        "name": "Genitive as the object of deverbal nouns and ждать-type verbs",
+        "note": "A noun built from a verb, and a small class of verbs like ждать, take a genitive object or a genitive 'subject' rather than an accusative one.",
+        "example": "Я жду помощи от вас. Замечания коллег мне интересны.",
+        "test": "A genitive noun is the object of a ждать-type verb or of a deverbal noun, or is the logical subject of a deverbal noun."
+      },
+      {
+        "id": "ru.b2.case-genitive-purpose-cause",
+        "name": "Genitive with от for purpose and cause",
+        "note": "От plus the genitive names what a remedy is for, or, with из/от/из-за, the emotional or external cause of something.",
+        "example": "Надо купить лекарство от гриппа. Мы не гуляли из-за дождя.",
+        "test": "A genitive noun follows от naming what something counters, or follows из/от/из-за naming a cause."
+      },
+      {
+        "id": "ru.b2.case-dative-impersonal-subject",
+        "name": "Dative as the logical subject of an impersonal predicate",
+        "note": "An infinitive-based impersonal predicate (necessity, possibility, or its negation) puts the person concerned in the dative rather than the nominative.",
+        "example": "Тане надо спросить друзей об этом. Автобусу здесь не проехать.",
+        "test": "A dative noun/pronoun is the logical subject of an infinitive-based impersonal predicate."
+      },
+      {
+        "id": "ru.b2.case-dative-regular-time",
+        "name": "Dative with по for a recurring day",
+        "note": "По plus a plural dative day name marks when something happens on a regular basis.",
+        "example": "Мы занимаемся музыкой по средам.",
+        "test": "A dative noun follows по and names a day/time that recurs regularly."
+      },
+      {
+        "id": "ru.b2.case-accusative-experiencer",
+        "name": "Accusative experiencer with no nominative subject",
+        "note": "A closed set of verbs describing a bodily or emotional state take their experiencer in the accusative and have no nominative subject at all.",
+        "example": "Сестру в самолёте укачивает.",
+        "test": "An accusative noun/pronoun is the sole argument of a subjectless verb of bodily or emotional state."
+      },
+      {
+        "id": "ru.b2.case-accusative-time-extended",
+        "name": "Accusative with за, на, and через for time",
+        "note": "За marks how long a completed action took, на marks how long something is borrowed or planned for, and через marks how soon something will happen.",
+        "example": "Я выучил язык за год. Соревнования будут через месяц.",
+        "test": "An accusative noun follows за, на, or через in one of these three time senses."
+      },
+      {
+        "id": "ru.b2.case-instrumental-object-manner",
+        "name": "Instrumental as the object of руководить/восхищаться, and manner/time",
+        "note": "A closed set of verbs like руководить and восхищаться take a plain instrumental object, and the instrumental alone can also mark the manner of an action or a recurring time of day.",
+        "example": "Профессор руководит кафедрой. Вечерами я люблю читать.",
+        "test": "An instrumental noun is the object of a verb that specifically governs it, or names manner or a recurring time of day."
+      },
+      {
+        "id": "ru.b2.case-instrumental-copartner",
+        "name": "Instrumental with с for a co-participant and manner",
+        "note": "С plus the instrumental names someone who did something together with the subject, or describes how something was said or done.",
+        "example": "Мы с руководителем обсудили результаты. Он говорил с улыбкой.",
+        "test": "An instrumental noun follows с naming who acted together with the subject, or describing manner."
+      },
+      {
+        "id": "ru.b2.aspect-across-moods",
+        "name": "Aspect choice in the imperative, negation, and conditional",
+        "note": "Perfective and imperfective carry different nuances outside the indicative too: a perfective imperative is a one-off instruction, an imperfective one a standing rule; a negated verb's aspect shifts between forbidding an event and warning against a habit.",
+        "example": "Не забудь позвонить! Не звони поздно вечером.",
+        "test": "An imperative or a negated verb uses the aspect appropriate to its nuance (single event vs. general rule/habit)."
+      },
+      {
+        "id": "ru.b2.mood-subjunctive",
+        "name": "Conditional/subjunctive mood with бы",
+        "note": "A past-tense verb form plus бы expresses a wish, a polite request, or a hypothetical condition, detached from any real time reference.",
+        "example": "Я бы хотел поехать в Москву. Если бы у меня было время, я бы пришёл.",
+        "test": "The sentence has a past-tense verb followed by бы, expressing a wish, politeness, or a hypothetical."
+      },
+      {
+        "id": "ru.b2.participle-full-forms",
+        "name": "Full active and passive participle phrases",
+        "note": "A long participle, active or passive, can carry its own dependents and head a phrase that modifies a noun much like a relative clause.",
+        "example": "Студент, читающий газету, живёт рядом. Прочитанная всеми книга стала бестселлером.",
+        "test": "A long participle heads a phrase (with its own dependents) modifying a noun."
+      },
+      {
+        "id": "ru.b2.gerund-phrase",
+        "name": "Gerund phrases",
+        "note": "A gerund can take its own object or adverbial, forming a full phrase that explains when, how, or why the main action happens.",
+        "example": "Изучая теорию, надо помнить о практике.",
+        "test": "A gerund heads a phrase with its own dependent, attached to the main clause."
+      },
+      {
+        "id": "ru.b2.word-formation-verb-prefixes",
+        "name": "Lexical verb prefixes beyond motion",
+        "note": "The same prefixes used on motion verbs also attach to ordinary verbs to change their meaning outright — finishing, redoing, writing down — not just their aspect or direction.",
+        "example": "Я дописал письмо. Она переписала текст.",
+        "test": "A verb carries a prefix (в-, вы-, за-, до-, из-, на-, о-, от-, пере-, при-, про-, под-, раз-, с-, у-) that changes its base meaning, on a non-motion verb."
+      },
+      {
+        "id": "ru.b2.complex-sentence-temporal-nuanced",
+        "name": "Finer temporal subordinators",
+        "note": "Пока, пока не, после того как, до того как, прежде чем, and по мере того как sequence or overlap two events more precisely than когда alone.",
+        "example": "Позвони мне, прежде чем идти. Подожди, пока я не вернусь.",
+        "test": "The sentence has a subordinate clause introduced by пока, пока не, после того как, до того как, прежде чем, or по мере того как."
+      },
+      {
+        "id": "ru.b2.style-nominal-predicate",
+        "name": "Nominalized predicate in formal register",
+        "note": "In an official or news-style register, a plain verb is often replaced by a light verb plus a noun built from it, which is how formal Russian tends to phrase an action.",
+        "example": "Президент прибыл с визитом в Африку.",
+        "test": "The sentence's predicate is a light verb plus a deverbal or descriptive noun phrase, in place of a single plain verb, in a formal register."
+      }
+    ],
+    "c1": [
+      {
+        "id": "ru.c1.case-genitive-material-origin",
+        "name": "Genitive with из/от/для for material, origin, and purpose",
+        "note": "Из names what something is made of, от names where it came from, and для names who or what it is intended for.",
+        "example": "Костюм из шерсти очень красив. Мне надо купить альбом для рисунков.",
+        "test": "A genitive noun follows из, от, or для in a material, origin, or purpose sense."
+      },
+      {
+        "id": "ru.c1.case-genitive-experiencer-cause",
+        "name": "Genitive experiencer and emotional cause",
+        "note": "У plus the genitive names who feels a bodily sensation, and со/от plus the genitive names the emotion behind a reaction.",
+        "example": "У мальчика колет в боку. Я бы умер со стыда.",
+        "test": "A genitive noun follows у naming who feels a bodily sensation, or follows со/от naming an emotional cause."
+      },
+      {
+        "id": "ru.c1.case-genitive-place-prepositions",
+        "name": "Genitive with мимо, вдоль, напротив, из-за, из-под",
+        "note": "This wider set of place prepositions, alongside накануне/до/после/с...до.../около for time, all govern the genitive.",
+        "example": "Автобус идёт мимо музея. Из-под стола вылез котёнок.",
+        "test": "A genitive noun follows мимо, вдоль, напротив, из-за, или из-под, or one of the finer time prepositions (накануне, с...до..., около)."
+      },
+      {
+        "id": "ru.c1.case-dative-object-extended",
+        "name": "Dative object of мешать/радоваться/принадлежать-type verbs",
+        "note": "A further set of verbs — hindering, rejoicing at, belonging to — governs a plain dative object.",
+        "example": "Ты мешаешь брату заниматься. Леса в стране принадлежат государству.",
+        "test": "A dative noun is the object of a verb from this set (мешать, радоваться, принадлежать, and similar)."
+      },
+      {
+        "id": "ru.c1.case-accusative-quantity-purpose",
+        "name": "Accusative for time-filled, approximate amount, goal, and topic",
+        "note": "The accusative marks how much of a period an action filled, an approximate quantity with с, a goal with за, and a topic with про.",
+        "example": "Мы разговаривали всю дорогу. Надо бороться за счастье.",
+        "test": "An accusative noun expresses the extent of a time period, an approximate quantity after с, a goal after за, or a topic after про."
+      },
+      {
+        "id": "ru.c1.case-instrumental-characterization",
+        "name": "Instrumental with считаться/обладать/следить за and similar",
+        "note": "A further set of verbs — being regarded as, possessing, keeping track of, competing with — governs the instrumental, with or without a preposition.",
+        "example": "Писатель отличается знанием современной жизни. Я слежу за событиями в мире.",
+        "test": "An instrumental noun (with or without a preposition) is governed by считаться, обладать, отличаться, следить за, соревноваться с, or a similar verb."
+      },
+      {
+        "id": "ru.c1.case-instrumental-appositive-feature",
+        "name": "Instrumental with с naming a defining feature",
+        "note": "С plus the instrumental, right after a noun, names a feature that helps identify or describe it.",
+        "example": "На площади стоит дом с колоннами.",
+        "test": "A noun is followed by с + instrumental naming a physical or personal feature that identifies it."
+      },
+      {
+        "id": "ru.c1.case-prepositional-condition-appearance",
+        "name": "Prepositional with при for condition, and for appearance",
+        "note": "При plus the prepositional gives the circumstance under which something happens, and the prepositional also names a garment or feature that identifies a person.",
+        "example": "При свете луны читать трудно. Девушка в светлом платье вбежала в комнату.",
+        "test": "A prepositional-case noun follows при naming a circumstance, or names a garment/feature identifying a person."
+      },
+      {
+        "id": "ru.c1.word-order-inversion",
+        "name": "Inversion for emphasis",
+        "note": "Word order can deliberately depart from the neutral subject-first pattern to give a word rhetorical weight, while staying fully grammatical.",
+        "example": "Тревога есть тревога, сигнал есть сигнал.",
+        "test": "The sentence's word order departs from the neutral pattern for emphasis, and remains grammatical."
+      },
+      {
+        "id": "ru.c1.reflexive-prefixed-verbs",
+        "name": "Prefixed reflexive verbs with a resultative meaning",
+        "note": "A directional or completive prefix combined with -ся forms a verb whose meaning is neither the plain prefixed verb nor a simple reflexive, but its own resultative sense.",
+        "example": "Ребёнок наигрался и заснул. Мы договорились встретиться завтра.",
+        "test": "A verb combines a prefix with -ся carrying the resultative/completive meaning specific to that combination, not a literal reflexive or passive reading."
+      },
+      {
+        "id": "ru.c1.substantivized-adjectives",
+        "name": "Substantivized adjectives",
+        "note": "An adjective can function as the noun of its phrase in its own right, while still declining exactly like an adjective.",
+        "example": "В столовой сегодня вкусно кормят.",
+        "test": "An adjective-form word is the head noun of its phrase (no noun follows it) and declines as an adjective would."
+      }
+    ]
+  }
+}

@@ -1,0 +1,882 @@
+{
+  "language": "tr",
+  "sources": [
+    "Türkiye Maarif Vakfı, Türkçenin Yabancı Dil Olarak Öğretimi Programı — section 7, 'Seviyelere Göre Dil Yapıları Listesi' (pp. 79-81). PDF: https://kutuphane.turkiyemaarif.org/uploads/Turkcenin_Yabanci_Dil_Olarak_Ogretimi_Programi1-q2nrq.pdf (read in full). This is the CEFR-based official programme and the only source reached that gives an explicit A1-C1 grammar list.",
+    "Erdil, M. & Açık, F. (2021). 'Türkiye Maarif Vakfı Türkçenin Yabancı Dil Olarak Öğretimi Programı ile Türkçe Öğretim Setlerinde Dil Bilgisi İçeriklerinin İncelenmesi', International Journal of Languages' Education and Teaching 9(4), 130-158. https://dergipark.org.tr/tr/download/article-file/3699834 (read in full). Tables 1-7 reproduce, level by level, the grammar syllabus of: Yunus Emre Enstitüsü Yedi İklim Türkçe; Yeni Hitit (Ankara Üniversitesi TÖMER); Gazi Üniversitesi Yabancılar İçin Türkçe Dil Bilgisi; İstanbul Yabancılar İçin Türkçe. Used as the proxy for the YEE and TÖMER syllabi, whose own PDFs are not public.",
+    "MEB Hayat Boyu Öğrenme Genel Müdürlüğü (2017). Yabancı Diller Türkçe A1 Seviyesi Kurs Programı. https://ookgm.meb.gov.tr/meb_iys_dosyalar/2021_01/05115713_YabancY_Diller_YabancY_Diller_Turkce__A1_Seviyesi.pdf (read in full). Theme/can-do based, not a grammar list; used only to check which structures surface in A1 example language.",
+    "Diller İçin Avrupa Ortak Başvuru Metni (the Turkish CEFR adaptation) — consulted conceptually only. Like the CEFR itself it gives level descriptors, not a grammar inventory, so it contributes no topic here; see tr-report.md."
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "tr.a1.alphabet-i-dotless",
+        "name": "Turkish alphabet and the ı / i pair",
+        "note": "The Turkish alphabet has 29 letters and is close to one-letter-one-sound. Dotless ı and dotted i are two different letters (capitals I and İ), and the difference decides which vowel a suffix takes.",
+        "example": "Kızım iyi bir öğrenci.",
+        "test": "The sentence contains at least one word spelled with ı and at least one word spelled with i, so the two letters are contrasted in the same sentence."
+      },
+      {
+        "id": "tr.a1.vowel-harmony-twofold",
+        "name": "Vowel harmony, two-fold suffixes (A → a / e)",
+        "note": "Suffixes written with A have two shapes: -a after a back vowel (a, ı, o, u), -e after a front vowel (e, i, ö, ü). The plural -lAr, the dative -A and the locative/ablative vowels all work this way.",
+        "example": "Masalar ve sandalyeler burada.",
+        "test": "The sentence contains at least two words carrying the same two-fold suffix (e.g. -lAr, -A, -DA, -DAn) in both of its shapes, one after a back-vowel stem and one after a front-vowel stem."
+      },
+      {
+        "id": "tr.a1.vowel-harmony-fourfold",
+        "name": "Vowel harmony, four-fold suffixes (I → ı / i / u / ü)",
+        "note": "Suffixes written with I have four shapes. The vowel copies the frontness and the rounding of the stem's last vowel: a/ı→ı, e/i→i, o/u→u, ö/ü→ü. The accusative -I, the genitive -In, the possessives and the copular endings are all four-fold.",
+        "example": "Onun gözü mavi, benim kitabım eski.",
+        "test": "The sentence contains at least one four-fold suffix (accusative -I, genitive -In, possessive -Im/-In/-(s)I, copular -(y)Im) whose vowel is ı, i, u or ü as required by the stem's last vowel."
+      },
+      {
+        "id": "tr.a1.consonant-assimilation",
+        "name": "Consonant assimilation (ünsüz benzeşmesi): D → t, C → ç",
+        "note": "After a voiceless consonant (p, ç, t, k, f, h, s, ş) a suffix beginning with d hardens to t and one beginning with c hardens to ç: -DA → -ta/-te, -DAn → -tan/-ten, -DI → -tı/-ti.",
+        "example": "Kitap masada, ekmek markette.",
+        "test": "The sentence contains a suffix of the D-class (-DA, -DAn, -DI, -DIk) written with t because the stem ends in a voiceless consonant — e.g. markette, kitaptan, çıktı."
+      },
+      {
+        "id": "tr.a1.consonant-softening",
+        "name": "Consonant softening (ünsüz yumuşaması): p, ç, t, k → b, c, d, ğ",
+        "note": "A stem-final p, ç, t or k becomes b, c, d or ğ when a vowel-initial suffix follows: kitap → kitabı, ağaç → ağacı, git- → gidiyor, ekmek → ekmeği. Learners must spell the changed stem, not the dictionary form.",
+        "example": "Kitabı okuyorum, ekmeği alıyorum.",
+        "test": "The sentence contains a word whose stem-final p/ç/t/k is written as b/c/d/ğ before a vowel-initial suffix (kitabı, ağacı, gideceğim, ekmeği)."
+      },
+      {
+        "id": "tr.a1.sov-word-order",
+        "name": "Verb-final word order and dropped subject pronouns",
+        "note": "The finite verb or predicate comes last; modifiers precede what they modify. Because the predicate carries a person ending, the subject pronoun is normally left out.",
+        "example": "Ben her sabah kahve içiyorum.",
+        "test": "The last word of the sentence is the finite predicate (a verb, or a noun/adjective with a copular ending, var/yok, or değil)."
+      },
+      {
+        "id": "tr.a1.plural-lAr",
+        "name": "Plural suffix -lAr",
+        "note": "Plural is marked by -lar/-ler. A plural non-human subject normally takes a singular verb, and a noun after a numeral stays singular.",
+        "example": "Çocuklar okulda, kitaplar evde.",
+        "test": "The sentence contains a noun ending in -lar or -ler used as a plural."
+      },
+      {
+        "id": "tr.a1.numbers-singular-noun",
+        "name": "Numerals and the singular noun after them",
+        "note": "Cardinal numbers precede the noun and the noun stays singular: iki kitap, not iki kitaplar. 'bir' also does duty as the indefinite article.",
+        "example": "Masada üç kitap var.",
+        "test": "The sentence contains a numeral (or bir) directly before a noun, and that noun carries no -lAr."
+      },
+      {
+        "id": "tr.a1.demonstratives",
+        "name": "Demonstratives bu / şu / o and burası / şurası / orası",
+        "note": "Three-way distance: bu (here), şu (there, just pointed at), o (yonder / already known). The place forms burası, şurası, orası are used as nouns.",
+        "example": "Bu kitap yeni, şu masa eski.",
+        "test": "The sentence contains bu, şu or o used as a demonstrative before a noun, or burası/şurası/orası used as a place noun."
+      },
+      {
+        "id": "tr.a1.personal-pronouns",
+        "name": "Personal pronouns ben, sen, o, biz, siz, onlar",
+        "note": "One set of pronouns for all genders: o is he, she and it. siz is both plural and polite. The pronoun is used mainly for contrast, since the ending already marks person.",
+        "example": "Ben buradayım, o evde.",
+        "test": "The sentence contains at least one of ben, sen, o, biz, siz, onlar used as a pronoun."
+      },
+      {
+        "id": "tr.a1.copula-present",
+        "name": "Copular endings (ek fiil geniş zaman) — no separate verb 'to be'",
+        "note": "There is no verb 'to be'. Person is suffixed straight onto the noun or adjective: -(y)Im, -sIn, -(dIr), -(y)Iz, -sInIz, -(lAr). The third person usually has no ending at all.",
+        "example": "Ben mutluyum, sen iyisin.",
+        "test": "The predicate is a noun or adjective carrying a copular person ending (-(y)Im, -sIn, -(y)Iz, -sInIz, -DIr), or a bare third-person nominal predicate."
+      },
+      {
+        "id": "tr.a1.negation-degil",
+        "name": "Nominal negation with değil",
+        "note": "Nouns and adjectives are negated by the separate word değil after the predicate, never by the verbal -mA. değil itself takes the person ending: değilim, değilsin.",
+        "example": "Bu ev büyük değil.",
+        "test": "The sentence contains değil as a separate word after a noun or adjective predicate."
+      },
+      {
+        "id": "tr.a1.question-particle-mi",
+        "name": "Question particle mI as a separate word",
+        "note": "Yes/no questions add mı / mi / mu / mü, written as a separate word after the questioned element but harmonising with it. Person endings attach to the particle: geliyor musun, öğrenci misin.",
+        "example": "Bu kitap yeni mi?",
+        "test": "The sentence contains mı, mi, mu or mü written as a separate word (optionally with a person ending attached to it, e.g. misin, musunuz), and its vowel harmonises with the preceding word."
+      },
+      {
+        "id": "tr.a1.var-yok",
+        "name": "Existence and possession: var / yok",
+        "note": "There is no verb 'to have'. Existence is var (there is) and yok (there is not); possession is expressed as possessor + possessed with a possessive suffix + var/yok: Benim arabam var.",
+        "example": "Evde su var ama ekmek yok.",
+        "test": "The sentence ends in var or yok as the predicate."
+      },
+      {
+        "id": "tr.a1.locative-dA",
+        "name": "Locative case -DA (in / on / at)",
+        "note": "-da / -de / -ta / -te marks location and, with var/yok, the place where something is. Also used for times: saat üçte.",
+        "example": "Kitap masada.",
+        "test": "The sentence contains a noun ending in -da, -de, -ta or -te expressing location or time."
+      },
+      {
+        "id": "tr.a1.attributive-adjectives",
+        "name": "Adjectives before the noun, with no agreement",
+        "note": "An adjective stands directly before its noun and never changes for number or case: büyük ev, büyük evler, büyük evde.",
+        "example": "Küçük ev çok güzel.",
+        "test": "The sentence contains an adjective immediately before a noun, carrying no suffix of its own."
+      },
+      {
+        "id": "tr.a1.possessive-suffixes",
+        "name": "Possessive suffixes -Im, -In, -(s)I, -ImIz, -InIz, -lArI",
+        "note": "The owner is marked on the thing owned: ev → evim (my house), evin, evi, evimiz, eviniz, evleri. After a vowel the third person adds the buffer s: araba → arabası.",
+        "example": "Benim evim küçük, senin evin büyük.",
+        "test": "The sentence contains a noun carrying a possessive suffix (-Im, -In, -(s)I, -ImIz, -InIz, -lArI)."
+      },
+      {
+        "id": "tr.a1.genitive-izafet",
+        "name": "Genitive -(n)In and the possessive construction (isim tamlaması)",
+        "note": "A possessor takes the genitive -(n)In and the possessed takes the third-person possessive: çocuğun kitabı. When the first noun is generic the genitive is dropped: okul kitabı (a schoolbook).",
+        "example": "Çocuğun kitabı masada.",
+        "test": "The sentence contains a two-noun phrase in which the second noun carries -(s)I/-lArI, with the first noun either in the genitive (-(n)In) or bare in the generic type."
+      },
+      {
+        "id": "tr.a1.pronominal-n",
+        "name": "The buffer n before a case suffix (zamir n'si)",
+        "note": "After a third-person possessive, or after bu/şu/o, an n appears before any case ending: evi → evinde, bu → bunda, onu → onunla. Learners regularly leave it out.",
+        "example": "Onun evinde çay içiyoruz.",
+        "test": "The sentence contains a word in which n stands between a third-person possessive (or bu/şu/o) and a case suffix — evinde, evinden, bunda, onunla."
+      },
+      {
+        "id": "tr.a1.dative-A",
+        "name": "Dative case -(y)A (to / towards)",
+        "note": "-a / -e marks the goal of motion and the indirect object; after a vowel the buffer y appears: okula, eve, arabaya. Many verbs govern it: gitmek, gelmek, bakmak, başlamak.",
+        "example": "Her gün okula gidiyorum.",
+        "test": "The sentence contains a noun ending in -a, -e, -ya or -ye expressing a goal or an indirect object."
+      },
+      {
+        "id": "tr.a1.ablative-dAn",
+        "name": "Ablative case -DAn (from / out of)",
+        "note": "-dan / -den / -tan / -ten marks the source, the starting point, and the standard in comparison.",
+        "example": "Şimdi evden geliyorum.",
+        "test": "The sentence contains a noun ending in -dan, -den, -tan or -ten expressing a source or starting point."
+      },
+      {
+        "id": "tr.a1.accusative-I",
+        "name": "Accusative case -(y)I, only on definite objects",
+        "note": "A direct object takes -ı/-i/-u/-ü only when it is definite or specific: Kitabı okuyorum (the book) against Kitap okuyorum (I read books). Turkish makes a split here that English does not.",
+        "example": "Kitabı okuyorum.",
+        "test": "The sentence contains a direct object carrying -ı, -i, -u, -ü (or -yı/-yi/-yu/-yü after a vowel), and that object is definite."
+      },
+      {
+        "id": "tr.a1.present-Iyor",
+        "name": "Present continuous -Iyor and vowel narrowing",
+        "note": "-ıyor / -iyor / -uyor / -üyor covers what is happening now and, in beginner Turkish, what happens habitually. A stem-final a or e narrows before it: başla- → başlıyor, ye- → yiyor.",
+        "example": "Şimdi kahve içiyoruz.",
+        "test": "The sentence contains a finite verb ending in -ıyor/-iyor/-uyor/-üyor plus a person ending."
+      },
+      {
+        "id": "tr.a1.verb-negation-mA",
+        "name": "Verbal negation -mA",
+        "note": "Verbs are negated by -ma/-me placed between the stem and the tense suffix: gitmedim, gitmiyorum, gitmeyeceğim. Note the narrowing in gitmiyorum.",
+        "example": "Bugün okula gitmiyorum.",
+        "test": "The sentence contains a finite verb with -ma/-me (or its narrowed -mı-/-mi-/-mu-/-mü- before -yor) between the stem and the tense suffix."
+      },
+      {
+        "id": "tr.a1.infinitive-mAk",
+        "name": "Infinitive -mAk and -mAk istemek",
+        "note": "-mak/-mek is the dictionary form and the complement of verbs like istemek and sevmek: Su içmek istiyorum. With sevmek it usually appears as -mAyI: yüzmeyi sevmek.",
+        "example": "Su içmek istiyorum.",
+        "test": "The sentence contains a verb in -mak/-mek serving as the complement of another verb (istemek, sevmek, başlamak…)."
+      },
+      {
+        "id": "tr.a1.imperative",
+        "name": "Imperative",
+        "note": "The bare stem is the singular imperative (gel!, aç!); -(y)In / -(y)InIz is the plural and polite form (gelin, geliniz). Negative: gelme, gelmeyin.",
+        "example": "Lütfen kapıyı aç.",
+        "test": "The predicate is a bare verb stem, or a verb with -(y)In/-(y)InIz, used as a command."
+      },
+      {
+        "id": "tr.a1.past-DI",
+        "name": "Witnessed past -DI",
+        "note": "-dı / -di / -du / -dü (-tı/-ti/-tu/-tü after a voiceless consonant) reports something the speaker saw, did or knows first hand. Person endings: geldim, geldin, geldi, geldik.",
+        "example": "Dün eve geldim.",
+        "test": "The sentence contains a finite verb in -DI plus a person ending (geldim, gitti, okuduk), used for an event the speaker vouches for."
+      },
+      {
+        "id": "tr.a1.copula-past-ydI",
+        "name": "Past copula -(y)DI on nouns and adjectives",
+        "note": "The past of a nominal predicate is -(y)dı/-(y)di/-(y)du/-(y)dü plus a person ending: hastaydım, evdeydi, öğrenciydik. There is still no verb 'to be'.",
+        "example": "Dün çok mutluydum.",
+        "test": "The predicate is a noun or adjective carrying -(y)DI plus a person ending (mutluydum, evdeydi, öğrenciydik)."
+      },
+      {
+        "id": "tr.a1.future-AcAk",
+        "name": "Future -(y)AcAk",
+        "note": "-acak / -ecek marks the future. The k softens to ğ before the first-person endings: gideceğim, geleceğiz.",
+        "example": "Yarın okula gideceğim.",
+        "test": "The sentence contains a finite verb in -acak/-ecek (or -eceğ-/-acağ- before a vowel) plus a person ending."
+      },
+      {
+        "id": "tr.a1.dAn-once-sonra",
+        "name": "-DAn önce / -DAn sonra",
+        "note": "önce (before) and sonra (after) follow a noun in the ablative: dersten sonra, yemekten önce.",
+        "example": "Yemekten sonra kahve içiyoruz.",
+        "test": "The sentence contains a noun in the ablative (-DAn) immediately followed by önce or sonra."
+      },
+      {
+        "id": "tr.a1.ile",
+        "name": "ile / -(y)lA — 'with' and 'and'",
+        "note": "ile joins two nouns and also means 'with, by means of'. It is usually written as the suffix -(y)la/-(y)le: arkadaşımla, otobüsle. With pronouns the genitive is used: benimle.",
+        "example": "Arkadaşımla okula gidiyorum.",
+        "test": "The sentence contains ile as a separate word or -la/-le/-yla/-yle suffixed to a noun or pronoun."
+      },
+      {
+        "id": "tr.a1.lI-sIz",
+        "name": "Derivation -lI (with) and -sIz (without)",
+        "note": "-lı/-li/-lu/-lü makes 'having X' and also 'from place X' (Ankaralı); -sız/-siz/-suz/-süz makes 'without X'.",
+        "example": "Sütlü kahve içiyorum, sütsüz çay istemiyorum.",
+        "test": "The sentence contains a word formed with -lI or -sIz from a noun."
+      },
+      {
+        "id": "tr.a1.dAki",
+        "name": "-DAki (the one in / on / at)",
+        "note": "-ki attached to a locative turns a place phrase into a modifier: masadaki kitap, evdeki telefon. It does not obey vowel harmony.",
+        "example": "Masadaki kitap yeni.",
+        "test": "The sentence contains a noun ending in -daki/-deki/-taki/-teki used to modify a following noun or standing alone as a pronoun."
+      },
+      {
+        "id": "tr.a1.comparison",
+        "name": "Comparison with -DAn daha and the superlative en",
+        "note": "The standard of comparison takes the ablative and daha is optional: Bu ev şu evden (daha) büyük. The superlative is en before the adjective: en güzel.",
+        "example": "Bu ev şu evden daha büyük.",
+        "test": "The sentence contains a noun in the ablative before an adjective (with or without daha), or the word en before an adjective."
+      },
+      {
+        "id": "tr.a1.da-clitic",
+        "name": "The clitic dA ('also, too'), written separately",
+        "note": "de / da meaning 'also, too' is a separate word and harmonises only for backness: Ben de geliyorum. It must not be confused with the locative suffix -DA, which is written joined: Bende para var.",
+        "example": "Ben de geliyorum.",
+        "test": "The sentence contains de or da standing as a separate word meaning 'also/too' (not a locative suffix attached to a noun)."
+      },
+      {
+        "id": "tr.a1.conjunctions",
+        "name": "Basic conjunctions ve, ama, çünkü, veya",
+        "note": "The first sentence connectors: ve (and), ama (but), çünkü (because), veya (or). ve joins words and clauses; çünkü opens the reason clause after the main clause.",
+        "example": "Ev küçük ama güzel.",
+        "test": "The sentence contains ve, ama, çünkü or veya joining two words or two clauses."
+      }
+    ],
+    "a2": [
+      {
+        "id": "tr.a2.evidential-mIş",
+        "name": "Reported / inferred past -mIş against witnessed -DI",
+        "note": "-mış / -miş / -muş / -müş reports something the speaker did not witness: hearsay, inference, or surprise at a result. It contrasts directly with -DI, which claims first-hand knowledge. Turkish forces this choice on every past-tense sentence.",
+        "example": "Ali dün gelmiş, ben görmedim.",
+        "test": "The sentence contains a finite verb in -mIş plus a person ending, used for an unwitnessed, reported or inferred event — ideally alongside or against a -DI form."
+      },
+      {
+        "id": "tr.a2.copula-evidential-ymIs",
+        "name": "Reported copula -(y)mIş on nouns and adjectives",
+        "note": "The nominal predicate gets the same evidential marking: hastaymış (apparently he was ill), öğretmenmiş. Formed with -(y)mIş plus the person ending.",
+        "example": "Dün çok hastaymış.",
+        "test": "The predicate is a noun or adjective carrying -(y)mIş (hastaymış, evdeymiş, öğretmenmiş)."
+      },
+      {
+        "id": "tr.a2.aorist-Ir",
+        "name": "Aorist -Ir against the present continuous -Iyor",
+        "note": "-r / -ır / -er / -ar states habits, general truths, willingness and offers: Her sabah çay içerim; Su 100 derecede kaynar; Yardım ederim. -Iyor reports what is going on now. The negative is irregular: -mAm, -mAzsIn, -mAz.",
+        "example": "Her sabah çay içerim.",
+        "test": "The sentence contains a finite verb in the aorist (-r, -ar, -er, -ır/-ir/-ur/-ür) or its negative (-mAm, -mAz), used for a habit, a general truth or willingness rather than an event in progress."
+      },
+      {
+        "id": "tr.a2.ability-Abil",
+        "name": "Ability and permission -(y)Abil, negative -(y)AmA",
+        "note": "-(y)abil- / -(y)ebil- inserted before the tense marks 'can, may': gelebilirim, gidebilir misin. The negative drops bil: gelemem, gidemedim.",
+        "example": "Yarın gelebilirim.",
+        "test": "The sentence contains a verb with -(y)Abil- before its tense ending, or the negative -(y)AmA- form (gelemem, yapamadı)."
+      },
+      {
+        "id": "tr.a2.necessity-mAlI",
+        "name": "Necessity -mAlI and the zorunda / gerek / lazım set",
+        "note": "-malı / -meli marks obligation: gitmeliyim. Alternatives: -mAk zorundayım (I have to), -mAm gerek / lazım (I need to).",
+        "example": "Şimdi gitmeliyim.",
+        "test": "The sentence contains a verb in -mAlI plus a person ending, or the pattern -mAk zorunda / -mAsI gerek / -mAsI lazım."
+      },
+      {
+        "id": "tr.a2.optative-AlIm",
+        "name": "Optative -(y)A, above all the 'let's' form -(y)AlIm",
+        "note": "-(y)ayım / -(y)alım makes suggestions: Gidelim (let's go), Ben bakayım (let me look). It is the ordinary way to propose something.",
+        "example": "Hadi eve gidelim.",
+        "test": "The sentence contains a verb ending in -(y)AlIm or -(y)AyIm used as a suggestion."
+      },
+      {
+        "id": "tr.a2.converb-ArAk",
+        "name": "Converb -(y)ArAk (by doing, while doing)",
+        "note": "-arak / -erek says how the main action is carried out: Koşarak geldim (I came running). Both verbs share one subject.",
+        "example": "Koşarak eve geldim.",
+        "test": "The sentence contains a non-finite verb in -arak/-erek modifying the main verb."
+      },
+      {
+        "id": "tr.a2.converb-Ip",
+        "name": "Converb -(y)Ip (and then)",
+        "note": "-ıp / -ip / -up / -üp chains two actions of the same subject and lets the tense and person be stated only once, on the last verb: Eve gidip uyudum.",
+        "example": "Eve gidip uyudum.",
+        "test": "The sentence contains a verb ending in -ıp/-ip/-up/-üp followed later by a finite verb sharing its subject."
+      },
+      {
+        "id": "tr.a2.converb-mAdAn",
+        "name": "Converb -mAdAn (without doing)",
+        "note": "-madan / -meden means 'without doing': Kahvaltı yapmadan çıktım. Note that it is not itself a negative clause with a person ending.",
+        "example": "Kahvaltı yapmadan çıktım.",
+        "test": "The sentence contains a non-finite verb ending in -madan/-meden meaning 'without doing'."
+      },
+      {
+        "id": "tr.a2.before-after-clause",
+        "name": "-mAdAn önce and -DIktAn sonra",
+        "note": "These build time clauses: yemek yemeden önce (before eating), ders bittikten sonra (after the lesson ended). They replace the noun in the A1 -DAn önce / -DAn sonra pattern with a verb.",
+        "example": "Yemek yemeden önce ellerimi yıkarım.",
+        "test": "The sentence contains a verb in -mAdAn immediately followed by önce, or a verb in -DIktAn immediately followed by sonra."
+      },
+      {
+        "id": "tr.a2.participle-An",
+        "name": "Subject participle -(y)An",
+        "note": "-an / -en makes a relative clause whose head is the subject of the clause: burada çalışan adam (the man who works here). It does the work of English 'who / which' + verb.",
+        "example": "Burada çalışan adam benim babam.",
+        "test": "The sentence contains a verb in -an/-en modifying a following noun that is the subject of that verb."
+      },
+      {
+        "id": "tr.a2.verbal-nouns",
+        "name": "Verbal nouns -mA, -mAk, -(y)Iş",
+        "note": "Verbs become nouns with -ma/-me (the act), -mak/-mek (the infinitive) or -(y)ış/-(y)iş (the manner). They then take case and possessive endings: yüzmeyi seviyorum, gelişi hoşuma gitti.",
+        "example": "Yüzmeyi seviyorum.",
+        "test": "The sentence contains a verb nominalised with -mA, -mAk or -(y)Iş and carrying a case or possessive ending."
+      },
+      {
+        "id": "tr.a2.purpose-mAk-icin",
+        "name": "Purpose: -mAk için, -mAsI için, -mAk üzere",
+        "note": "-mak için gives the purpose when both clauses share a subject; -mAsI için when the subjects differ: Ekmek almak için çıktım / Gelmesi için aradım.",
+        "example": "Ekmek almak için markete gittim.",
+        "test": "The sentence contains -mAk için or -mAsI için (or -mAk üzere) expressing purpose."
+      },
+      {
+        "id": "tr.a2.gibi-kadar",
+        "name": "gibi and kadar (like, as … as)",
+        "note": "gibi compares kind ('like'), kadar compares degree ('as … as'): buz gibi soğuk, benim kadar uzun. With pronouns they take the genitive: benim gibi.",
+        "example": "Kardeşim benim kadar uzun.",
+        "test": "The sentence contains gibi or kadar as a postposition after a noun or pronoun."
+      },
+      {
+        "id": "tr.a2.cA-gore",
+        "name": "-CA and -A göre",
+        "note": "-ca / -ce makes an adverb or 'according to' ('bence' = in my opinion, 'kolayca' = easily); -A göre means 'according to, compared with': bana göre, ona göre.",
+        "example": "Bana göre bu film çok güzel.",
+        "test": "The sentence contains a word in -CA used adverbially, or a noun/pronoun in the dative followed by göre."
+      },
+      {
+        "id": "tr.a2.diye-direct-speech",
+        "name": "Direct speech with demek and diye",
+        "note": "Quoted words are followed by dedi, or by diye plus a verb of speaking or asking: 'Nerelisin?' diye sordu. Turkish quotes directly far more than English does.",
+        "example": "Bana 'Nerelisin?' diye sordu.",
+        "test": "The sentence contains quoted words followed by de- (dedi, diyor) or by diye plus a speech verb."
+      },
+      {
+        "id": "tr.a2.paired-conjunctions",
+        "name": "Paired conjunctions hem…hem, ne…ne, ya…ya, ister…ister",
+        "note": "hem … hem (both … and), ya … ya (either … or), ister … ister (whether … or), and ne … ne (neither … nor), which — unlike English — keeps the verb positive: Ne çay ne kahve içerim.",
+        "example": "Hem çalışıyor hem okuyor.",
+        "test": "The sentence contains one of the paired sets hem…hem, ya…ya, ister…ister, ne…ne with both halves present."
+      },
+      {
+        "id": "tr.a2.kendi",
+        "name": "Reflexive kendi",
+        "note": "kendi means 'own' and, with possessive and case endings, 'myself, yourself…': kendi odam, kendimi, kendine. It also intensifies: Bunu kendim yaptım.",
+        "example": "Kendi odamda çalışıyorum.",
+        "test": "The sentence contains kendi, alone or with a possessive/case ending (kendim, kendimi, kendine, kendi + noun)."
+      },
+      {
+        "id": "tr.a2.negative-concord",
+        "name": "hiç, kimse, hiçbir with a negative verb",
+        "note": "Negative words need the verb to be negative as well: Hiç kimse gelmedi, Hiçbir şey söylemedim. A positive verb after them is wrong.",
+        "example": "Hiç kimse gelmedi.",
+        "test": "The sentence contains hiç, kimse, hiçbir or hiçbir şey together with a verb carrying the negative -mA (or a değil / yok predicate)."
+      },
+      {
+        "id": "tr.a2.ikileme",
+        "name": "Reduplication (ikileme)",
+        "note": "Doubling a word makes an adverb or intensifies it: yavaş yavaş (slowly, bit by bit), tek tek, zaman zaman, ev ev. Very frequent in everyday Turkish.",
+        "example": "Yavaş yavaş yürüdük.",
+        "test": "The sentence contains the same word written twice in a row as one adverbial expression."
+      },
+      {
+        "id": "tr.a2.converb-A-A",
+        "name": "Converb -A … -A (doing and doing)",
+        "note": "The same verb doubled in -a/-e describes a manner going on throughout the main action: güle güle (laughing), koşa koşa (at a run).",
+        "example": "Çocuklar koşa koşa geldi.",
+        "test": "The sentence contains the same verb stem repeated twice with -a/-e (güle güle, koşa koşa, baka baka)."
+      },
+      {
+        "id": "tr.a2.pekistirme",
+        "name": "Intensified adjectives (pekiştirme)",
+        "note": "Colours and some adjectives intensify by copying the first syllable plus m, p, r or s: masmavi, bembeyaz, kapkara, sımsıcak. The forms are fixed and must be learned.",
+        "example": "Deniz masmavi.",
+        "test": "The sentence contains an intensified adjective of the masmavi / bembeyaz / kapkara / sımsıcak type."
+      },
+      {
+        "id": "tr.a2.bu-yuzden",
+        "name": "Result connectors bu yüzden, bu sebeple, onun için",
+        "note": "These open the result clause after the reason has been given, the mirror image of A1's çünkü: Hastaydım, bu yüzden gelmedim.",
+        "example": "Hastaydım, bu yüzden gelmedim.",
+        "test": "The sentence contains bu yüzden, bu sebeple, bu nedenle or onun için introducing a result clause."
+      }
+    ],
+    "b1": [
+      {
+        "id": "tr.b1.past-continuous-Iyordu",
+        "name": "Past continuous -Iyordu (şimdiki zamanın hikâyesi)",
+        "note": "-ıyordu / -iyordu sets the background of a past story: what was going on when something else happened. It is the first of the compound tenses.",
+        "example": "Dün akşam kitap okuyordum.",
+        "test": "The sentence contains a finite verb in -Iyordu plus a person ending."
+      },
+      {
+        "id": "tr.b1.pluperfect-mIstI",
+        "name": "Compound past tenses with -(y)DI: -mIştI, -AcAktI, -Irdı",
+        "note": "Any tense can be pushed into the past by adding -(y)DI: gelmişti (had come), gelecekti (was going to come), gelirdi (used to come). Turkish calls these hikâye birleşik zaman.",
+        "example": "Ben gelmeden önce o gitmişti.",
+        "test": "The sentence contains a verb carrying a tense suffix followed by -(y)DI — gitmişti, gelecekti, okurdu, gidiyordu."
+      },
+      {
+        "id": "tr.b1.compound-evidential-ymIs",
+        "name": "Compound reported tenses with -(y)mIş: -Iyormuş, -AcAkmIş, -Irmış",
+        "note": "The same stacking with -(y)mIş marks the whole statement as hearsay: geliyormuş (they say he is coming), gelecekmiş, gelirmiş. Turkish calls these rivayet birleşik zaman.",
+        "example": "Yarın gelecekmiş.",
+        "test": "The sentence contains a verb carrying a tense suffix followed by -(y)mIş — gelecekmiş, geliyormuş, gelirmiş."
+      },
+      {
+        "id": "tr.b1.conditional-sA",
+        "name": "Real conditional -(y)sA",
+        "note": "-sa / -se attached after a tense gives a real condition: Zamanın varsa gel; Yarın yağmur yağarsa gitmeyiz. The main clause usually stands in the aorist or the future.",
+        "example": "Zamanın varsa bana gel.",
+        "test": "The sentence contains a subordinate clause whose verb or predicate ends in -sA / -(y)sA and a main clause depending on it."
+      },
+      {
+        "id": "tr.b1.compound-conditional",
+        "name": "Conditional on each tense: -Iyorsa, -DIysA, -mIşsA, -AcAksA, -Irsa",
+        "note": "The condition marker is added after the tense, so the condition itself is anchored in time: geldiyse (if he came), geliyorsa, gelecekse.",
+        "example": "Ali geldiyse bana haber ver.",
+        "test": "The sentence contains a verb with a tense suffix followed by -(y)sA — geldiyse, geliyorsa, gelecekse, gelmişse."
+      },
+      {
+        "id": "tr.b1.wish-sAydI",
+        "name": "Wishes and unreal conditions: keşke … -sAydI",
+        "note": "-saydı / -seydi with keşke expresses a regret or an unreal condition: Keşke burada olsaydın. The main clause then takes -AcAktI or -Irdı.",
+        "example": "Keşke burada olsaydın.",
+        "test": "The sentence contains a verb in -sAydI, usually after keşke or eğer."
+      },
+      {
+        "id": "tr.b1.converb-IncA",
+        "name": "Converb -(y)IncA (when, as soon as)",
+        "note": "-ınca / -ince builds a time clause without a person ending; the subject is read from the possessive-free context: Eve gelince beni ara.",
+        "example": "Eve gelince beni ara.",
+        "test": "The sentence contains a non-finite verb ending in -ınca/-ince/-unca/-ünce introducing a time clause."
+      },
+      {
+        "id": "tr.b1.converb-IncAyA-kadar",
+        "name": "-(y)IncAyA kadar / -(y)AnA kadar (until)",
+        "note": "Marks the end point of the main action: Sen gelinceye kadar bekledim.",
+        "example": "Sen gelinceye kadar bekledim.",
+        "test": "The sentence contains a verb in -(y)IncAyA or -(y)AnA followed by kadar (or dek / değin)."
+      },
+      {
+        "id": "tr.b1.converb-Ir-mAz",
+        "name": "-Ir … -mAz (as soon as)",
+        "note": "The same verb in the positive aorist and then the negative aorist means 'the moment that': Eve gelir gelmez uyudu.",
+        "example": "Eve gelir gelmez uyudu.",
+        "test": "The sentence contains the same verb stem twice, first in the aorist and then in -mAz (gelir gelmez, görür görmez)."
+      },
+      {
+        "id": "tr.b1.converb-ken",
+        "name": "-(y)ken (while, when)",
+        "note": "-(y)ken attaches to a tense or to a nominal to mean 'while': yemek yerken, çocukken, evdeyken. It never harmonises — it is always -ken.",
+        "example": "Yemek yerken telefon çaldı.",
+        "test": "The sentence contains a word ending in -ken (yerken, gelirken, çocukken, evdeyken)."
+      },
+      {
+        "id": "tr.b1.converb-DIkcA",
+        "name": "-DIkçA (as, the more … the more)",
+        "note": "-dıkça / -dikçe expresses a proportion or a repeated condition: Onu gördükçe mutlu oluyorum; Yağmur yağdıkça hava soğudu.",
+        "example": "Onu gördükçe mutlu oluyorum.",
+        "test": "The sentence contains a verb ending in -dıkça/-dikçe/-dukça/-dükçe (or -tıkça after a voiceless stem)."
+      },
+      {
+        "id": "tr.b1.converb-AlI",
+        "name": "-(y)AlI and -DIğIndAn beri (since)",
+        "note": "Both mark a starting point in time: Buraya geleli üç yıl oldu; Geldiğinden beri hiç aramadı.",
+        "example": "Buraya geleli üç yıl oldu.",
+        "test": "The sentence contains a verb in -(y)AlI, or a verb in -DIğIndAn followed by beri."
+      },
+      {
+        "id": "tr.b1.participle-DIk",
+        "name": "Object participle -DIk + possessive",
+        "note": "-dık / -dik plus a possessive suffix makes the relative clause whose head is not the subject: okuduğum kitap (the book I read), oturduğumuz ev. The possessive marks who did it.",
+        "example": "Okuduğum kitap çok güzel.",
+        "test": "The sentence contains a verb in -DIk carrying a possessive suffix and modifying a following noun (okuduğum kitap, gittiğin şehir)."
+      },
+      {
+        "id": "tr.b1.participle-AcAk",
+        "name": "Future participle -(y)AcAk + possessive",
+        "note": "The same construction for events still to come: yarın gideceğim şehir, alacağımız ev.",
+        "example": "Yarın gideceğim şehir uzak.",
+        "test": "The sentence contains a verb in -(y)AcAk carrying a possessive suffix and modifying a following noun."
+      },
+      {
+        "id": "tr.b1.nominalization-DIgInI",
+        "name": "Reported statements: -DIğInI / -AcAğInI + verb of knowing or saying",
+        "note": "Turkish has no 'that' clause. The subordinate verb is nominalised and takes case: Geleceğini biliyorum (I know he will come); Hasta olduğunu duydum.",
+        "example": "Onun geleceğini biliyorum.",
+        "test": "The sentence contains a verb in -DIğI or -(y)AcAğI carrying a possessive plus a case ending, serving as the object of bilmek, duymak, söylemek, düşünmek and the like."
+      },
+      {
+        "id": "tr.b1.nominalization-mAsInI",
+        "name": "Wanted actions: -mAsInI istemek, -mAsInA izin vermek",
+        "note": "When the two subjects differ, the wanted action is nominalised with -mA + possessive + case: Gelmeni istiyorum (I want you to come).",
+        "example": "Senin gelmeni istiyorum.",
+        "test": "The sentence contains a verb in -mA carrying a possessive plus a case ending as the complement of istemek, izin vermek, söylemek and similar verbs."
+      },
+      {
+        "id": "tr.b1.cause-DIgI-icin",
+        "name": "Cause clauses: -DIğI için, -DIğIndAn, -DIğIndAn dolayı",
+        "note": "The reason clause is nominalised, not introduced by a conjunction: Hasta olduğum için gelmedim.",
+        "example": "Hasta olduğum için gelmedim.",
+        "test": "The sentence contains a verb in -DIğI (or -(y)AcAğI) with a possessive, followed by için, or ending in -DIğIndAn (+ dolayı)."
+      },
+      {
+        "id": "tr.b1.time-DIgI-zaman",
+        "name": "Time clauses: -DIğI zaman, -DIğIndA, -DIğI sırada",
+        "note": "The same nominalised clause with zaman / -(n)DA gives 'when': Eve geldiğim zaman herkes uyuyordu.",
+        "example": "Eve geldiğim zaman herkes uyuyordu.",
+        "test": "The sentence contains a verb in -DIğI with a possessive, followed by zaman / sırada, or carrying -(n)DA (geldiğimde)."
+      },
+      {
+        "id": "tr.b1.passive",
+        "name": "Passive voice -Il- / -In-",
+        "note": "-ıl/-il after a consonant, -n after a vowel or an l: yazıldı, açıldı, okundu, bulundu. The agent, if named at all, takes tarafından.",
+        "example": "Bu kitap geçen yıl yazıldı.",
+        "test": "The sentence contains a verb carrying the passive -Il- or -(I)n- before its tense suffix."
+      },
+      {
+        "id": "tr.b1.causative",
+        "name": "Causative voice -DIr-, -t-, -Ir-, -Ar-",
+        "note": "Turkish marks 'have someone do it' on the verb: kestirdim (I had it cut), okuttu, yaptırdı, güldürdü. Which suffix a verb takes has to be learned.",
+        "example": "Saçımı kestirdim.",
+        "test": "The sentence contains a verb carrying a causative suffix (-DIr-, -t-, -Ir-, -Ar-) before its tense suffix."
+      },
+      {
+        "id": "tr.b1.reflexive-In",
+        "name": "Reflexive voice -(I)n-",
+        "note": "-(ı)n- turns the action back on the subject: yıkanmak (to wash oneself), giyinmek, hazırlanmak.",
+        "example": "Her sabah yıkanıp giyiniyorum.",
+        "test": "The sentence contains a verb with the reflexive -(I)n- (yıkandı, giyindi, hazırlandım)."
+      },
+      {
+        "id": "tr.b1.reciprocal-Is",
+        "name": "Reciprocal voice -(I)ş-",
+        "note": "-(ı)ş- means the parties do it to each other: görüşmek, tanışmak, mektuplaşmak, bakışmak.",
+        "example": "Dün arkadaşımla mektuplaştık.",
+        "test": "The sentence contains a verb with the reciprocal -(I)ş- (görüştük, tanıştılar, mektuplaştık)."
+      },
+      {
+        "id": "tr.b1.concession",
+        "name": "Concession: -mAsInA rağmen, -A rağmen, -sA bile",
+        "note": "Turkish builds 'although' out of a nominalised clause plus rağmen / karşın, or out of the conditional plus bile / de: Yağmur yağmasına rağmen çıktık; Yorgun olsam bile geleceğim.",
+        "example": "Yağmur yağmasına rağmen dışarı çıktık.",
+        "test": "The sentence contains -mAsInA / -DIğInA followed by rağmen or karşın, or a conditional verb followed by bile or dA."
+      },
+      {
+        "id": "tr.b1.preference-mAktAnsA",
+        "name": "Preference: -mAktAnsA … -mAyI tercih etmek",
+        "note": "States a choice between two actions: Otobüse binmektense yürümeyi tercih ederim.",
+        "example": "Otobüse binmektense yürümeyi tercih ederim.",
+        "test": "The sentence contains a verb in -mAktAnsA (or -mAk yerine) set against a second nominalised verb."
+      },
+      {
+        "id": "tr.b1.necessity-past-mAlIydI",
+        "name": "Past necessity -mAlIydI",
+        "note": "-malıydı / -meliydi says what should have been done: Dün bana haber vermeliydin.",
+        "example": "Dün bana haber vermeliydin.",
+        "test": "The sentence contains a verb in -mAlI followed by -(y)DI plus a person ending."
+      },
+      {
+        "id": "tr.b1.postposition-government",
+        "name": "Postpositions and the case they govern",
+        "note": "Postpositions follow their noun and each fixes a case: -A göre / karşı / doğru / rağmen, -DAn dolayı / başka / beri / önce, and için / gibi / kadar / ile, which take the genitive on pronouns: benim için, benimle, benim gibi.",
+        "example": "Benim için bir şey yapabilir misin?",
+        "test": "The sentence contains a postposition (için, gibi, kadar, göre, doğru, karşı, rağmen, dolayı, başka, beri, ile) with its noun or pronoun in the case that postposition requires."
+      }
+    ],
+    "b2": [
+      {
+        "id": "tr.b2.compound-tenses-full",
+        "name": "The full compound-tense system (hikâye, rivayet, şart on every mood)",
+        "note": "Every tense and mood can carry -(y)DI, -(y)mIş or -(y)sA, including the moods: gelmeliydi, gelseydi, gelmeliymiş, gelecekmişse. B2 completes the grid begun at B1.",
+        "example": "Bu saatte çoktan gelmiş olmalıydı.",
+        "test": "The sentence contains a mood suffix (-mAlI, -sA, -(y)A) carrying a further -(y)DI, -(y)mIş or -(y)sA."
+      },
+      {
+        "id": "tr.b2.participle-mIs",
+        "name": "-mIş as an adjective (resultant state)",
+        "note": "-mIş before a noun describes the state left by an action: pişmiş yemek, kırılmış cam, yorulmuş insanlar.",
+        "example": "Pişmiş yemek masada duruyor.",
+        "test": "The sentence contains a verb in -mIş standing before a noun as its modifier, not as a finite predicate."
+      },
+      {
+        "id": "tr.b2.participle-lexical",
+        "name": "Lexicalised participles -(A/I)r and -mAz",
+        "note": "The aorist and negative aorist form fixed modifiers and compounds: çıkmaz sokak, akar su, inanılmaz, okuryazar, tükenmez kalem.",
+        "example": "Burası çıkmaz bir sokak.",
+        "test": "The sentence contains a verb in the aorist or in -mAz used as a modifier or as part of a fixed compound."
+      },
+      {
+        "id": "tr.b2.participle-AsI",
+        "name": "-(y)AsI participle",
+        "note": "A wish or desirability participle, mostly in fixed expressions: görülesi yerler, öpülesi eller, kahrolası. Rare, and worth teaching mainly for recognition.",
+        "example": "Burası görülesi bir yer.",
+        "test": "The sentence contains a verb in -(y)AsI used as a modifier."
+      },
+      {
+        "id": "tr.b2.converb-cAsInA",
+        "name": "-cAsInA and -mIş gibi (as if)",
+        "note": "Expresses pretence or comparison of manner: Her şeyi biliyormuş gibi konuştu; Beni tanımıyormuşçasına baktı.",
+        "example": "Her şeyi biliyormuş gibi konuştu.",
+        "test": "The sentence contains a verb in -cAsInA, or a verb in -mIş / -Iyormuş followed by gibi."
+      },
+      {
+        "id": "tr.b2.converb-mAksIzIn",
+        "name": "-mAksIzIn (without, formal)",
+        "note": "The written-register counterpart of -mAdAn: Hiç durmaksızın çalıştı.",
+        "example": "Hiç durmaksızın çalıştı.",
+        "test": "The sentence contains a verb ending in -maksızın/-meksizin."
+      },
+      {
+        "id": "tr.b2.converb-DIgI-surece",
+        "name": "-DIğI sürece, -DIğI boyunca, -DIğI süresince (as long as)",
+        "note": "Sets the span over which the main clause holds: Sen yanımda olduğun sürece mutluyum.",
+        "example": "Sen yanımda olduğun sürece mutluyum.",
+        "test": "The sentence contains a verb in -DIğI with a possessive, followed by sürece, süresince or boyunca."
+      },
+      {
+        "id": "tr.b2.converb-DIgI-takdirde",
+        "name": "-DIğI takdirde and -mAsI durumunda (in the event that)",
+        "note": "The formal conditional of contracts and notices: Yağmur yağdığı takdirde maç ertelenir.",
+        "example": "Yağmur yağdığı takdirde maç ertelenir.",
+        "test": "The sentence contains -DIğI takdirde or -mAsI durumunda / hâlinde."
+      },
+      {
+        "id": "tr.b2.converb-AcAgI-sirada",
+        "name": "-(y)AcAğI zaman / sırada (just as, when about to)",
+        "note": "Places the main event at the moment before another: Tam çıkacağı sırada telefon çaldı.",
+        "example": "Tam çıkacağı sırada telefon çaldı.",
+        "test": "The sentence contains a verb in -(y)AcAğI with a possessive, followed by zaman or sırada."
+      },
+      {
+        "id": "tr.b2.reported-speech-full",
+        "name": "Reported speech across all sentence types",
+        "note": "B2 extends B1's -DIğInI to questions and commands: yes/no questions become -Ip -mAdIğInI sormak, and orders become -mAsInI söylemek. Tense inside the clause is kept, not shifted as in English.",
+        "example": "Bana gelip gelmeyeceğimi sordu.",
+        "test": "The sentence reports a question with -Ip -mA…-DIğInI / -(y)AcAğInI + sormak, or an order with -mAsInI + söylemek / istemek."
+      },
+      {
+        "id": "tr.b2.modal-compound-verbs",
+        "name": "Descriptive compound verbs -(y)Iver-, -(y)Adur-, -(y)Agel-, -(y)Ayaz-",
+        "note": "A second verb adds aspect to the first: açıver (just open it, quickly), bakadur (keep looking), süregelmek, düşeyazdı (nearly fell).",
+        "example": "Kapıyı açıver.",
+        "test": "The sentence contains a verb in -(y)A/-(y)I followed by a bound ver-, dur-, gel-, kal- or yaz- (açıverdi, bakakaldı, süregelmiş)."
+      },
+      {
+        "id": "tr.b2.lexical-compound-verbs",
+        "name": "Compound verbs with etmek, olmak, yapmak and fused forms",
+        "note": "Noun + helper verb makes most of the abstract vocabulary: yardım etmek, mutlu olmak, telefon etmek. Some compounds are fused and govern a case: vazgeçmek (-DAn), başvurmak (-A).",
+        "example": "Bu fikirden vazgeçtim.",
+        "test": "The sentence contains a compound verb of the noun + etmek/olmak/yapmak type, or a fused compound such as vazgeçmek, başvurmak, hoşlanmak."
+      },
+      {
+        "id": "tr.b2.voice-stacking",
+        "name": "Stacking voice suffixes",
+        "note": "Causative, reciprocal and passive can be piled on one stem in a fixed order: yaptırıldı (was had made), görüştürüldü, öldürüldü. Reading these apart is the B2 skill.",
+        "example": "Ev geçen yıl yaptırıldı.",
+        "test": "The sentence contains a verb carrying two or more voice suffixes in sequence (e.g. -DIr- + -Il-, -(I)ş- + -DIr-)."
+      },
+      {
+        "id": "tr.b2.mAktA",
+        "name": "-mAktA(dIr), the formal present",
+        "note": "The register of reports, news and academic prose: Çalışmalar devam etmektedir. It states an ongoing fact without the immediacy of -Iyor.",
+        "example": "Çalışmalar hâlâ devam etmektedir.",
+        "test": "The sentence contains a verb in -makta/-mekte, usually with -dIr."
+      },
+      {
+        "id": "tr.b2.dIr-modal",
+        "name": "-DIr as assumption and as formality",
+        "note": "Beyond the copula, -dır marks a confident guess (Şu an evdedir — he must be home now) and the impersonal register of notices (Sigara içmek yasaktır).",
+        "example": "Ali şu an evdedir.",
+        "test": "The sentence's predicate ends in -dır/-dir/-dur/-dür/-tır… expressing an assumption or a formal statement, not a plain identification."
+      },
+      {
+        "id": "tr.b2.negation-degil-verbal",
+        "name": "değil after a participle: gidecek değilim, gelmiş değil",
+        "note": "değil can negate a verb form as well, denying an intention or a claim: Ben oraya gidecek değilim (I have no intention of going).",
+        "example": "Ben oraya gidecek değilim.",
+        "test": "The sentence contains a verb in -(y)AcAk or -mIş followed by değil plus a person ending."
+      },
+      {
+        "id": "tr.b2.olmak-periphrasis",
+        "name": "-mIş ol- and -(y)AcAk ol- (perfect and prospective)",
+        "note": "ol- carries the tense while the first verb carries the aspect: bitirmiş olacağım (I will have finished), gidecek oldum (I was about to go).",
+        "example": "Yarın sınavı bitirmiş olacağım.",
+        "test": "The sentence contains a verb in -mIş, -(y)AcAk or -Iyor followed by a finite form of olmak."
+      },
+      {
+        "id": "tr.b2.ability-compound",
+        "name": "-(y)Abil in the compound tenses",
+        "note": "The ability suffix takes further tense and mood: gelebilirdim (I could have come), yapabilseydim, gidebilmiş.",
+        "example": "Dün gelebilirdim ama gelmedim.",
+        "test": "The sentence contains -(y)Abil- followed by a compound tense or mood ending (-Irdı, -sAydI, -mIş, -mAlI)."
+      },
+      {
+        "id": "tr.b2.derivation",
+        "name": "Word formation: derivational suffixes",
+        "note": "-lIk, -CI, -CIk, -sEl from nouns; -Im, -gI, -gIç, -(y)IcI from verbs. Recognising them is what lets a B2 reader guess an unknown word: öğretmenlik, gözlükçü, toplumsal, bilgi, alıcı.",
+        "example": "Öğretmenlik zor bir meslektir.",
+        "test": "The sentence contains a word visibly derived by a productive suffix such as -lIk, -CI, -CIk, -sEl, -gI, -Im or -(y)IcI."
+      },
+      {
+        "id": "tr.b2.sound-changes-advanced",
+        "name": "Consonant doubling and vowel dropping in borrowed stems",
+        "note": "Arabic-origin stems restore a doubled consonant or a long vowel before a vowel: af → affetmek, his → hissetmek, hak → hakkı; and some native stems drop their middle vowel: burun → burnu, şehir → şehri.",
+        "example": "Beni affettiği için şehrin en mutlu insanıyım.",
+        "test": "The sentence contains a stem showing a doubled consonant (affetti, hissetti, hakkında) or a dropped middle vowel (burnu, şehri, oğlu) before a suffix."
+      },
+      {
+        "id": "tr.b2.contrast-connectors",
+        "name": "Contrast and comment connectors: oysa(ki), hâlbuki, meğer(se), mademki, ne var ki",
+        "note": "The written-language connectors of argument: oysaki and hâlbuki mark a contrast with what was just said, meğerse a discovery, mademki a premise, ne var ki a drawback.",
+        "example": "Erken çıktım, oysaki yine geç kaldım.",
+        "test": "The sentence contains one of oysa(ki), hâlbuki, meğer(se), mademki, ne var ki, üstelik, bilakis, yeter ki joining two clauses."
+      }
+    ],
+    "c1": [
+      {
+        "id": "tr.c1.ki-clause",
+        "name": "The conjunction ki and its fixed patterns",
+        "note": "Borrowed from Persian, ki opens a clause after the main one, against the normal verb-final order: O kadar yorgundum ki hemen uyudum. Fixed pairs: demek ki, yeter ki, öyle ki, o kadar … ki. It is not the same as the suffix -ki.",
+        "example": "O kadar yorgundum ki hemen uyudum.",
+        "test": "The sentence contains ki as a separate word joining two clauses (not the suffix -ki in evdeki / benimki)."
+      },
+      {
+        "id": "tr.c1.converb-mAklA",
+        "name": "-mAklA and -mAklA beraber / kalmayıp",
+        "note": "-makla states the means or the act itself: Gelmekle iyi ettin. -mAklA beraber concedes, -mAklA kalmayıp adds: Gelmekle kalmayıp yardım da etti.",
+        "example": "Gelmekle çok iyi ettin.",
+        "test": "The sentence contains a verb in -makla/-mekle, alone or followed by beraber, birlikte or kalmayıp."
+      },
+      {
+        "id": "tr.c1.condition-formal",
+        "name": "Formal conditions: -mAsI şartıyla / koşuluyla, -DIğI takdirde",
+        "note": "The register of agreements and rules: Erken gelmen şartıyla seni bekleriz.",
+        "example": "Erken gelmen şartıyla seni bekleriz.",
+        "test": "The sentence contains -mAsI şartıyla / koşuluyla, or another formal conditional phrase built on a nominalised verb."
+      },
+      {
+        "id": "tr.c1.academic-passive",
+        "name": "Impersonal academic register: -Il-mAktAdIr, -DIğI görülmektedir",
+        "note": "Written Turkish reports findings without an agent, stacking the passive on -mAktAdIr: Bu konu ayrıntılı olarak incelenmektedir; Sonuçların tutarlı olduğu görülmektedir.",
+        "example": "Bu konu ayrıntılı olarak incelenmektedir.",
+        "test": "The sentence's predicate combines a passive suffix with -mAktA(dIr), or is a -DIğI clause followed by görülmektedir / anlaşılmaktadır / belirtilmektedir."
+      },
+      {
+        "id": "tr.c1.experiential-mIslIk",
+        "name": "Experiential nominalisations: -mIşlIğI var / yok, -DIğI olur",
+        "note": "Says whether something has ever happened or happens from time to time: Hiç uçağa binmişliğim yok; Bazen geç kaldığı olur.",
+        "example": "Hiç uçağa binmişliğim yok.",
+        "test": "The sentence contains -mIşlIk with a possessive plus var/yok/ol-, or -DIğI followed by olur/oluyor in this sense."
+      },
+      {
+        "id": "tr.c1.sentence-focus",
+        "name": "Sentence elements and the pre-verbal focus position",
+        "note": "Turkish word order is free, and the slot immediately before the verb carries the focus: Bu kitabı ben aldım answers who, Ben bu kitabı aldım answers what. Moving a constituent changes the emphasis, not the grammar.",
+        "example": "Bu kitabı dün ben aldım.",
+        "test": "The sentence departs from the neutral subject-object-verb order so that a marked constituent stands immediately before the verb."
+      },
+      {
+        "id": "tr.c1.inverted-sentence",
+        "name": "Inverted sentences (devrik cümle)",
+        "note": "In speech, poetry and headlines the verb leaves the final position: Bilmiyorum ben bunu; Geldi sonunda o gün.",
+        "example": "Bilmiyorum ben bunu.",
+        "test": "The finite verb is not the last word of the sentence."
+      },
+      {
+        "id": "tr.c1.compound-sentences",
+        "name": "Compound sentence types: sıralı, bağlı, birleşik",
+        "note": "Two or more clauses joined by a comma (sıralı), by a conjunction (bağlı), or embedded one in the other (birleşik). C1 is where learners build and punctuate these deliberately.",
+        "example": "Yağmur yağıyordu, biz de evde kaldık.",
+        "test": "The sentence contains two finite clauses joined by a comma or by a conjunction, or a subordinate clause embedded in a main clause."
+      },
+      {
+        "id": "tr.c1.tense-shift",
+        "name": "Tense shift for effect (anlam/zaman kayması)",
+        "note": "A tense used outside its own time: the present continuous for a fixed future (Yarın gidiyorum), the aorist for a promise, the present for a past narrative.",
+        "example": "Yarın sabah İstanbul'a gidiyorum.",
+        "test": "The sentence uses a tense suffix for a time other than its basic one, with a time adverb making the mismatch visible (yarın + -Iyor, and so on)."
+      },
+      {
+        "id": "tr.c1.formal-idioms",
+        "name": "Formal and academic set phrases",
+        "note": "The connectives of formal prose: söz konusu, bu bağlamda, buna ek olarak, dolayısıyla, itibaren, -DIğI göz önünde bulundurulduğunda.",
+        "example": "Söz konusu çalışma, konuyu ayrıntılı biçimde ele almaktadır.",
+        "test": "The sentence contains a set formal phrase such as söz konusu, bu bağlamda, buna ek olarak, dolayısıyla, bu doğrultuda."
+      },
+      {
+        "id": "tr.c1.idioms",
+        "name": "Idioms and figurative meaning (deyimler, mecaz)",
+        "note": "Fixed expressions whose meaning is not the sum of their words: işin altından kalkmak, göz atmak, kafa yormak, eli sıkı.",
+        "example": "Bu işin altından kalkamayız.",
+        "test": "The sentence contains a recognised Turkish idiom used with its figurative meaning."
+      },
+      {
+        "id": "tr.c1.adverb-nuance",
+        "name": "Fine-grained adverbs: henüz, daha, artık, zaten, şimdilik, ancak",
+        "note": "These separate meanings English blurs: artık (from now on, no longer), zaten (anyway, in any case), henüz / daha (not yet), ancak (only, but).",
+        "example": "Artık burada çalışmıyorum, zaten hiç sevmiyordum.",
+        "test": "The sentence contains at least one of artık, zaten, henüz, daha (in the 'yet' sense), şimdilik, ancak, yalnızca used with its distinct meaning."
+      },
+      {
+        "id": "tr.c1.case-secondary",
+        "name": "Secondary functions of the case suffixes",
+        "note": "Beyond place and goal: price and manner in the dative (ucuza aldık, boşuna), time span in the locative (bir saatte), cause in the ablative (korkudan, sevinçten).",
+        "example": "Bu evi çok ucuza aldık.",
+        "test": "The sentence contains -A, -DA or -DAn used for price, manner, duration or cause rather than for place, goal or source."
+      },
+      {
+        "id": "tr.c1.voice-agreement",
+        "name": "Voice and subject agreement across coordinated clauses",
+        "note": "A C1 writer keeps the voice consistent when clauses are joined, and keeps subject and verb agreeing: Kapılar kilitlendi ve ışıklar söndürüldü, not a mix of active and passive with one subject.",
+        "example": "Kapılar kilitlendi ve ışıklar söndürüldü.",
+        "test": "The sentence has two or more coordinated clauses whose verbs agree in voice (both active or both passive) and whose subjects agree with their verbs."
+      },
+      {
+        "id": "tr.c1.advanced-postpositions",
+        "name": "Advanced postpositions and connectives: dışında, yanı sıra, itibaren, nazaran, karşın",
+        "note": "The written-register set: bunun yanı sıra (besides this), -DAn itibaren (as of), -A nazaran (compared with), -A karşın (despite), -In dışında (apart from).",
+        "example": "Bunun yanı sıra yeni bir öneri sundu.",
+        "test": "The sentence contains one of dışında, yanı sıra, itibaren, nazaran, karşın, doğrultusunda with its noun in the case it requires."
+      },
+      {
+        "id": "tr.c1.mI-emphasis",
+        "name": "mI in emphatic repetition and rhetorical questions",
+        "note": "The question particle also intensifies (Ev güzel mi güzel — the house is beautiful indeed) and forms rhetorical or insinuating questions (Gelmez mi hiç?).",
+        "example": "Ev güzel mi güzel.",
+        "test": "The sentence repeats a word around mI for emphasis, or uses mI in a question that is not asking for an answer."
+      },
+      {
+        "id": "tr.c1.nominalized-adjective",
+        "name": "Adjectives used as nouns with a possessive: mavisini, küçüğü",
+        "note": "An adjective plus a possessive (and case) stands for the noun: Mavisini beğendim; Büyüğünü aldık.",
+        "example": "Mavisini beğendim.",
+        "test": "The sentence contains an adjective carrying a possessive suffix (plus a case ending) and standing in place of a noun."
+      }
+    ]
+  }
+}

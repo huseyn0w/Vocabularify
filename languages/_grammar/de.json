@@ -1,0 +1,562 @@
+{
+  "language": "de",
+  "sources": [
+    "Goethe-Institut, 'Start Deutsch 1 (Goethe-Zertifikat A1): Prüfungsziele, Testbeschreibung' (goethe.de/pro/relaunch/prf/de/Pruefungsziele_Testbeschreibung_A1_SD1.pdf) — Kapitel 5/6 'Inventare: Grammatik' (pp. 100-107 of the PDF), read in full. This is the official itemized A1 grammar inventory (Syntax, Verb, Nomen, Artikelwörter/Pronomen, Adjektiv, Präposition, Wortbildung), each item illustrated with an example sentence.",
+    "Goethe-Institut, 'Start Deutsch 2 (Goethe-Zertifikat A2): Prüfungsziele, Testbeschreibung' (goethe.de/pro/relaunch/prf/de/Pruefungsziele_Testbeschreibung_A2_SD2.pdf) — Kapitel 6 'Inventare: Grammatik' (pp. 192-201 of the PDF), read in full. This document reprints the Start Deutsch 1 (A1) grammar list and marks every item added for A2 with an asterisk, which is the primary evidence used here for what German-language teaching adds specifically at A2 (e.g. the four extra two-way prepositions, attributive adjective endings, Konjunktiv II of haben/können, Passiv, Reflexivpronomen, interrogative welch-).",
+    "Goethe-Institut / BAMF, 'Deutsch-Test für Zuwanderer (DTZ): Prüfungshandbuch' (goethe.de/resources/files/pdf209/dtz_pruefungshandbuch.pdf) — Kapitel 8.4 'Strukturen' (pp. 96-100 of the PDF), read in full. DTZ tests the A2-B1 span and its structure list explicitly footnotes the entries that apply only at B1 (Plusquamperfekt passive, Futur I, Konjunktiv II full paradigm, Passiv with a modal verb, Genitiv/n-Deklination, Relativsätze, Infinitivsatz, Doppelkonjunktionen, an extended set of subordinators, adjective endings with no article, Verbvalenz with fixed prepositions). This is the primary source for the b1 list.",
+    "Manuela Glaboniat, Martin Müller, Paul Rusch, Helen Schmitz, Lukas Wertenschlag, 'Profile Deutsch: Lernzielbestimmungen, Kannbeschreibungen, kommunikative Mittel für die Niveaustufen A1, A2, B1 und B2' (Langenscheidt, 2002/2005) — identified as the underlying framework cited by all three Goethe/DTZ handbooks above and by secondary academic descriptions of its structure; its own printed 'Grammatik'-by-level tables could not be read directly (no full public-domain text found; the book is sold in print/CD-ROM form). Used at one remove, through the handbooks that build on it and through secondary descriptions of its content (see report).",
+    "Goethe-Institut, 'Goethe-Zertifikat B2: Handbuch' and 'Goethe-Zertifikat C1: Handbuch' (goethe.de/pro/relaunch/prf/de/Pruefungsziele_Testbeschreibung_B2.pdf and .../Pruefungsziele_Testbeschreibung_C1.pdf), read in full for their grammar-relevant sections. Confirmed that from B1/B2 onward the Goethe-Institut's own exam handbooks describe 'grammatisches Wissen' only as a scored competence, not as an itemized structure list — consistent with Profile Deutsch's stated design that itemized grammar inventories stop making sense once a level assumes near-complete command of the forms and shifts to functional/stylistic use.",
+    "Cross-checked (not used as a primary source) against 'Themen und Grammatik B2-Deutschkurs' (Deutscher Volkshochschul-Verband, 2019, vhs-lernportal.de) — a job-oriented B2 coursebook's per-lesson grammar list — and against general, widely reproduced descriptions of Profile Deutsch's B1-C1 content (Konjunktiv I indirect speech, Nominalisierung, Funktionsverbgefüge, Rektion, Partizipialkonstruktionen at B2-C1) found via web search. See the report for exactly which b2/c1 topics rest on this weaker, secondary basis rather than an item read directly in an official document."
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "de.a1.present-sein-haben",
+        "name": "Present tense of sein and haben",
+        "note": "Sein (to be) and haben (to have) are irregular in the present tense and appear in almost every early sentence, so learners memorize their forms before regular conjugation.",
+        "example": "Ich bin müde, aber du hast Zeit.",
+        "test": "a finite present-tense form of sein or haben (bin, bist, ist, sind, seid; habe, hast, hat, haben, habt) agreeing with its subject"
+      },
+      {
+        "id": "de.a1.present-weak-verbs",
+        "name": "Present tense of weak (regular) verbs",
+        "note": "Weak verbs add the regular personal endings (-e, -st, -t, -en, -t, -en) to an unchanged stem, the first conjugation pattern taught.",
+        "example": "Ich lerne Deutsch, und du lernst Englisch.",
+        "test": "a finite present-tense form of a weak verb built by adding a regular personal ending to an unchanged stem"
+      },
+      {
+        "id": "de.a1.present-strong-verbs-vowel-change",
+        "name": "Present tense of strong verbs with stem-vowel change",
+        "note": "Some common strong verbs change their stem vowel in the du- and er/sie/es-forms (a→ä, e→i, e→ie), a pattern that has to be learned verb by verb rather than derived from a rule.",
+        "example": "Er fährt nach Berlin, aber ich fahre nach Bremen.",
+        "test": "a 2nd- or 3rd-person-singular present-tense form of a strong verb showing the stem-vowel change (e.g. fährt, isst, siehst, läuft)"
+      },
+      {
+        "id": "de.a1.word-order-verb-second",
+        "name": "Verb-second word order in main clauses",
+        "note": "In a German main clause the finite verb always occupies the second position, so the subject moves after the verb whenever something else (a time expression, an object) is placed first.",
+        "example": "Heute lerne ich Deutsch.",
+        "test": "a declarative main clause where the finite verb is the second element and the subject follows it whenever something other than the subject opens the sentence"
+      },
+      {
+        "id": "de.a1.articles-gender",
+        "name": "Definite and indefinite articles by grammatical gender",
+        "note": "Every German noun has a grammatical gender (der/die/das) that is not predictable from meaning, and the indefinite article (ein/eine/ein) follows the same three-way split.",
+        "example": "Der Tisch ist neu, die Lampe ist alt und das Buch ist rot.",
+        "test": "a definite or indefinite article correctly matched to the grammatical gender of the noun it introduces"
+      },
+      {
+        "id": "de.a1.noun-plural",
+        "name": "Noun plural formation",
+        "note": "Plural is marked on the noun itself with one of several endings (or none, or with an umlaut), a form that has to be learned with each noun rather than derived by rule.",
+        "example": "Ein Kind, zwei Kinder.",
+        "test": "a plural noun form with its correct ending or umlaut, used with a number greater than one or with a plural article"
+      },
+      {
+        "id": "de.a1.nominative-accusative",
+        "name": "Nominative vs accusative case",
+        "note": "German marks the subject (nominative) and the direct object (accusative) differently on the article, most visibly on the masculine form (der→den, ein→einen).",
+        "example": "Der Mann sieht den Hund.",
+        "test": "a masculine definite or indefinite article switched to its accusative form (den/einen) for a direct object, contrasted with the nominative form used for the subject"
+      },
+      {
+        "id": "de.a1.negation-nicht-kein",
+        "name": "Negation with nicht and kein",
+        "note": "German has two negators: kein negates a noun phrase that would otherwise take ein or no article, while nicht negates verbs, adjectives, and everything else.",
+        "example": "Ich habe kein Auto, und ich fahre nicht gern Bus.",
+        "test": "a clause negated with kein before a noun phrase, or with nicht before a verb, adjective, or adverb, chosen correctly for what is being negated"
+      },
+      {
+        "id": "de.a1.questions-w-and-yes-no",
+        "name": "W-questions and yes/no questions",
+        "note": "A question word (wer, was, wo, wann, wie, warum) takes first position and is followed directly by the finite verb; a yes/no question instead puts the finite verb first with no question word.",
+        "example": "Wann kommst du? Kommst du heute?",
+        "test": "a question that either opens with a question word immediately followed by the finite verb, or opens with the finite verb itself and no question word"
+      },
+      {
+        "id": "de.a1.possessive-determiners",
+        "name": "Possessive determiners",
+        "note": "Possessive determiners (mein, dein, sein, ihr, unser, euer, Ihr) take the same case and gender endings as the indefinite article ein.",
+        "example": "Das ist mein Buch und das ist meine Tasche.",
+        "test": "a possessive determiner agreeing in gender and case with the noun it modifies, using ein-type endings"
+      },
+      {
+        "id": "de.a1.modal-verbs-present",
+        "name": "Modal verbs in the present tense",
+        "note": "The modal verbs (können, müssen, wollen, sollen, dürfen, möchten) have irregular singular forms and send the dependent main verb to the end of the clause as a bare infinitive.",
+        "example": "Ich kann heute nicht kommen.",
+        "test": "a modal verb conjugated in the present tense with a dependent infinitive placed at the end of the clause"
+      },
+      {
+        "id": "de.a1.verb-bracket-satzklammer",
+        "name": "The verbal bracket (Satzklammer)",
+        "note": "When a clause has two verbal parts (a modal plus infinitive, or a separable prefix), the finite part stays in second position and the second part moves to the very end, framing everything else between them.",
+        "example": "Ich rufe meine Mutter heute Abend an.",
+        "test": "a clause where a finite verb in second position and a separable prefix or infinitive at the very end frame the material in between"
+      },
+      {
+        "id": "de.a1.separable-prefix-verbs",
+        "name": "Separable-prefix verbs",
+        "note": "Verbs with a separable prefix (an-, auf-, mit-, ein-, aus-, etc.) split in a main clause: the prefix goes to the end of the clause while the base verb is conjugated in second position.",
+        "example": "Ich stehe um sieben Uhr auf.",
+        "test": "a finite verb in second position whose separable prefix is detached and placed at the end of the same clause"
+      },
+      {
+        "id": "de.a1.imperative",
+        "name": "Imperative for du, ihr and Sie",
+        "note": "German has three imperative forms depending on who is addressed: the du-form usually drops the ending, the ihr-form matches the present tense, and the Sie-form keeps verb-subject order.",
+        "example": "Mach die Tür zu! Kommt bitte mit! Nehmen Sie Platz!",
+        "test": "a command using the du-imperative (bare or -e stem with no pronoun), the ihr-imperative (present-tense ihr-form with no pronoun), or the Sie-imperative (infinitive-like form followed by Sie)"
+      },
+      {
+        "id": "de.a1.dative-case",
+        "name": "Dative case for the indirect object",
+        "note": "The dative marks the indirect object and the object of certain fixed verbs (helfen, danken, gehören), with its own article and pronoun forms distinct from nominative and accusative.",
+        "example": "Ich gebe meiner Schwester das Buch. Ich helfe dir.",
+        "test": "a dative article, possessive, or pronoun (dem/der/den, mir/dir/ihm/ihr) marking an indirect object or the object of a dative verb"
+      },
+      {
+        "id": "de.a1.prepositions-fixed-case",
+        "name": "Prepositions with a fixed case",
+        "note": "Some prepositions always take the same case regardless of meaning: für, ohne, um take accusative; mit, von, bei, nach, aus, zu take dative.",
+        "example": "Ich komme mit dem Bus und fahre ohne meinen Bruder.",
+        "test": "a preposition from the fixed-accusative group (für, ohne, um) or fixed-dative group (mit, von, bei, nach, aus, zu) followed by a noun phrase in the case that preposition always requires"
+      },
+      {
+        "id": "de.a1.two-way-prepositions-an-in",
+        "name": "Two-way prepositions an and in",
+        "note": "An and in take the accusative when they answer 'where to' (motion into a place) and the dative when they answer 'where' (a fixed location); this is the first exposure to the two-way preposition system that German splits and English does not.",
+        "example": "Ich gehe in die Küche. Ich bin in der Küche.",
+        "test": "the preposition an or in followed by an accusative noun phrase for movement toward a location, or by a dative noun phrase for a static location"
+      },
+      {
+        "id": "de.a1.perfekt-haben",
+        "name": "Perfekt with haben",
+        "note": "Most verbs form the spoken past (Perfekt) with a present-tense form of haben plus a past participle at the end of the clause.",
+        "example": "Ich habe gestern Deutsch gelernt.",
+        "test": "a clause with a conjugated form of haben in second position and a past participle at the end, describing a completed action"
+      },
+      {
+        "id": "de.a1.perfekt-sein",
+        "name": "Perfekt with sein",
+        "note": "Verbs of motion or change of state (fahren, gehen, kommen, passieren) form the Perfekt with sein instead of haben, a choice tied to the verb's meaning rather than free variation.",
+        "example": "Ich bin gestern nach Berlin gefahren.",
+        "test": "a clause with a conjugated form of sein in second position and a past participle of a motion or change-of-state verb at the end"
+      },
+      {
+        "id": "de.a1.past-participle-formation",
+        "name": "Past participle formation",
+        "note": "Weak verbs form the participle as ge- + stem + -t, strong verbs as ge- + (often changed) stem + -en, and separable-prefix verbs insert ge- between the prefix and the base verb.",
+        "example": "Ich habe gelernt. Ich bin aufgestanden.",
+        "test": "a past participle correctly built with ge- and -t (weak) or -en (strong), with ge- placed after a separable prefix where one exists"
+      },
+      {
+        "id": "de.a1.coordinating-connectors",
+        "name": "Coordinating connectors (und, oder, aber, denn)",
+        "note": "Und, oder, aber, and denn join two main clauses without affecting word order, since they sit outside the clause rather than counting as its first element.",
+        "example": "Ich koche, und du deckst den Tisch.",
+        "test": "two clauses joined by und, oder, aber, or denn, each clause keeping its own verb-second word order after the connector"
+      },
+      {
+        "id": "de.a1.personal-pronouns-case",
+        "name": "Personal pronouns in nominative, accusative and dative",
+        "note": "German personal pronouns change form by case (ich/mich/mir, du/dich/dir, er/ihn/ihm, sie/sie/ihr, es/es/ihm, wir/uns/uns, ihr/euch/euch, sie/sie/ihnen, Sie/Sie/Ihnen) when they replace a noun already established in the sentence.",
+        "example": "Ich sehe ihn, und er sieht mich.",
+        "test": "a personal pronoun in the case required by its role in the clause (subject, accusative object, or dative object)"
+      },
+      {
+        "id": "de.a1.genitive-proper-names",
+        "name": "Genitive -s with proper names",
+        "note": "To show possession with a person's name, German adds -s directly to the name with no apostrophe and no article, placing the possessor before the noun.",
+        "example": "Karls Auto ist neu.",
+        "test": "a proper name with an -s ending placed directly before the noun it possesses, without an apostrophe"
+      }
+    ],
+    "a2": [
+      {
+        "id": "de.a2.simple-past-haben-sein-modals",
+        "name": "Präteritum of haben, sein and modal verbs",
+        "note": "Even after Perfekt is learned, haben, sein and the modal verbs are commonly used in the simple past (Präteritum) rather than the compound past, especially for background description.",
+        "example": "Ich hatte gestern keine Zeit, aber ich wollte kommen.",
+        "test": "a Präteritum form of haben, sein, or a modal verb (hatte, war, wollte, musste, konnte, durfte, sollte) used instead of a Perfekt construction"
+      },
+      {
+        "id": "de.a2.subordinate-clauses-weil-dass",
+        "name": "Verb-final word order in subordinate clauses with weil and dass",
+        "note": "A clause introduced by weil or dass sends its finite verb to the very end, the first clear case of verb-final order contrasting with the verb-second order of main clauses.",
+        "example": "Ich bleibe zu Hause, weil ich krank bin.",
+        "test": "a subordinate clause introduced by weil or dass with its finite verb placed at the very end of that clause"
+      },
+      {
+        "id": "de.a2.subordinate-clause-wenn",
+        "name": "Conditional and temporal clauses with wenn",
+        "note": "Wenn introduces both a real condition and a repeated or future point in time, and like weil/dass it sends the finite verb to the end of its clause.",
+        "example": "Wenn es regnet, bleibe ich zu Hause.",
+        "test": "a subordinate clause introduced by wenn with its finite verb at the end, expressing a condition or a repeatable/future time"
+      },
+      {
+        "id": "de.a2.separable-verbs-in-subordinate-clause",
+        "name": "Separable prefixes rejoin the verb in subordinate clauses",
+        "note": "Inside a weil- or dass-clause the verb moves to the end, and a separable prefix that would otherwise split off in a main clause reunites with it as one word.",
+        "example": "Ich bin froh, weil ich heute früh aufstehe.",
+        "test": "a subordinate clause where a separable-prefix verb appears as a single word at the end of the clause instead of splitting"
+      },
+      {
+        "id": "de.a2.reflexive-verbs",
+        "name": "Reflexive verbs with accusative reflexive pronouns",
+        "note": "Some verbs (sich waschen, sich freuen, sich interessieren) require a reflexive pronoun that refers back to the subject and changes with person.",
+        "example": "Ich freue mich, und du freust dich auch.",
+        "test": "a reflexive verb accompanied by the accusative reflexive pronoun matching its subject's person (mich, dich, sich, uns, euch, sich)"
+      },
+      {
+        "id": "de.a2.adjective-endings-definite-indefinite",
+        "name": "Attributive adjective endings after definite and indefinite articles",
+        "note": "An adjective placed before a noun takes an ending that depends on the noun's gender, case, and number, with slightly different endings depending on whether a definite or an indefinite article precedes it.",
+        "example": "Der neue Kollege kauft einen neuen Computer.",
+        "test": "an attributive adjective directly before a noun carrying the ending required by a preceding definite or indefinite article, matched to that noun's case, gender and number"
+      },
+      {
+        "id": "de.a2.comparison-adjectives",
+        "name": "Comparative and superlative of adjectives and adverbs",
+        "note": "Adjectives and adverbs form the comparative with -er and the superlative with am -sten, with a closed set of irregular forms (gut/besser/am besten, gern/lieber/am liebsten, viel/mehr/am meisten) learned separately.",
+        "example": "Der Zug ist schneller als der Bus, aber das Flugzeug ist am schnellsten.",
+        "test": "a comparative form with -er (or an irregular comparative) or a superlative with am -sten (or an irregular superlative) used to compare two or more things"
+      },
+      {
+        "id": "de.a2.two-way-prepositions-full-set",
+        "name": "The full set of two-way prepositions",
+        "note": "Beyond an and in, auf, hinter, neben, über, unter, vor, and zwischen also switch between accusative (direction) and dative (location), completing the two-way preposition system.",
+        "example": "Die Katze springt auf den Tisch. Die Katze sitzt auf dem Tisch.",
+        "test": "one of auf, hinter, neben, über, unter, vor, zwischen followed by an accusative phrase for direction or a dative phrase for location"
+      },
+      {
+        "id": "de.a2.konjunktiv-ii-politeness",
+        "name": "Konjunktiv II for polite requests",
+        "note": "Hätte, könnte, and würde + infinitive soften a request or wish into a polite, indirect form, extending the single memorized möchte from A1 into a small productive paradigm.",
+        "example": "Könnten Sie mir bitte helfen? Ich hätte gern einen Kaffee.",
+        "test": "a clause using hätte, könnte, or würde + infinitive to express a polite request or wish, rather than a plain present-tense statement"
+      },
+      {
+        "id": "de.a2.passive-present",
+        "name": "Passiv in the present tense",
+        "note": "The Vorgangspassiv shifts focus from the agent to the action's target, formed with a present-tense form of werden plus the past participle; the person doing the action is dropped or moved into a von-phrase.",
+        "example": "Das Auto wird repariert.",
+        "test": "a clause with a present-tense form of werden and a past participle, where the grammatical subject undergoes the action rather than performing it"
+      },
+      {
+        "id": "de.a2.indefinite-pronouns-jemand-niemand",
+        "name": "Indefinite pronouns jemand and niemand",
+        "note": "Jemand (someone) and niemand (no one) refer to an unspecified or absent person, filling a subject or object slot without naming anyone.",
+        "example": "Hat jemand angerufen? Nein, niemand.",
+        "test": "the indefinite pronoun jemand or niemand used to refer to an unspecified or absent person"
+      }
+    ],
+    "b1": [
+      {
+        "id": "de.b1.genitive-and-n-declension",
+        "name": "Genitive case and weak noun declension (n-Deklination)",
+        "note": "The genitive marks possession on common nouns, not just names, via -s/-es on masculine and neuter nouns, and a small class of masculine nouns (der Junge, der Mensch) take -n or -en in every case but the nominative.",
+        "example": "Das ist das Auto des Lehrers. Ich habe den Jungen gesehen.",
+        "test": "a genitive noun phrase with -s/-es marking possession, or a weak (n-declension) masculine noun with -n/-en outside the nominative"
+      },
+      {
+        "id": "de.b1.futur-i",
+        "name": "Futur I for predictions, promises and assumptions",
+        "note": "Werden + infinitive expresses a prediction, promise, or assumption about the future, alongside the more common present tense used with a time expression.",
+        "example": "Es wird morgen regnen.",
+        "test": "a clause with a present-tense form of werden plus an infinitive at the end, expressing a prediction, promise, or assumption"
+      },
+      {
+        "id": "de.b1.plusquamperfekt",
+        "name": "Plusquamperfekt for the earlier of two past events",
+        "note": "The Plusquamperfekt (hatte/war + participle) marks an event that had already happened before another past event, usually paired with nachdem.",
+        "example": "Nachdem ich gegessen hatte, ging ich spazieren.",
+        "test": "a clause with hatte or war plus a past participle, describing an event completed before another past-tense event in the same sentence"
+      },
+      {
+        "id": "de.b1.passive-past-perfect-tenses",
+        "name": "Passiv in the Präteritum and Perfekt",
+        "note": "The Vorgangspassiv extends beyond the present tense into the simple past (wurde + participle) and the compound past (ist + participle + worden).",
+        "example": "Das Auto wurde repariert. Das Auto ist repariert worden.",
+        "test": "a passive clause using wurde + past participle (Präteritum) or ist + past participle + worden (Perfekt)"
+      },
+      {
+        "id": "de.b1.passive-with-modal-verb",
+        "name": "Passive with a modal verb",
+        "note": "A modal verb combines with the passive infinitive (past participle + werden) to express what must, can, or should be done to something.",
+        "example": "Die Wohnung muss geputzt werden.",
+        "test": "a clause with a modal verb and, at the end of the clause, a past participle followed by werden"
+      },
+      {
+        "id": "de.b1.zustandspassiv",
+        "name": "Zustandspassiv (state passive with sein)",
+        "note": "Sein plus a past participle describes the resulting state after an action, contrasting with werden plus participle, which describes the action itself happening.",
+        "example": "Die Tür ist geöffnet.",
+        "test": "a clause with a form of sein plus a past participle describing a resulting state, as distinct from a werden-passive describing the action in progress"
+      },
+      {
+        "id": "de.b1.konjunktiv-ii-irreal",
+        "name": "Konjunktiv II for hypothetical and counterfactual statements",
+        "note": "Beyond polite requests, Konjunktiv II (mostly würde + infinitive, plus wäre and hätte) expresses wishes and conditions contrary to fact.",
+        "example": "Wenn ich Zeit hätte, würde ich dich besuchen.",
+        "test": "a wenn-clause with a Konjunktiv II verb form paired with a main clause using würde + infinitive (or wäre/hätte), expressing something hypothetical or untrue"
+      },
+      {
+        "id": "de.b1.relative-clauses-core-cases",
+        "name": "Relative clauses with der/die/das",
+        "note": "A relative pronoun agrees in gender and number with the noun it refers back to, but its case depends on its own role inside the relative clause, and the finite verb goes to the end.",
+        "example": "Das ist die Frau, die dort steht. Das ist der Mann, den ich kenne.",
+        "test": "a relative clause introduced by a form of der/die/das with its verb at the end, the pronoun's case matching its grammatical role inside that clause and not the case of the noun it refers to"
+      },
+      {
+        "id": "de.b1.relative-clauses-preposition-wo",
+        "name": "Relative clauses with a preposition or wo",
+        "note": "When the relative pronoun is the object of a preposition, the preposition precedes it inside the clause; for places, wo can replace preposition + relative pronoun.",
+        "example": "Das Restaurant, in dem wir waren, war teuer. Die Stadt, wo ich geboren bin, ist klein.",
+        "test": "a relative clause where a preposition precedes the relative pronoun, or wo is used in place of a locative preposition + pronoun"
+      },
+      {
+        "id": "de.b1.infinitive-clauses-zu",
+        "name": "Infinitive clauses with zu",
+        "note": "A dependent infinitive clause is marked with zu directly before the verb (or between a separable prefix and the verb), used after certain verbs, adjectives, and nouns instead of a full dass-clause.",
+        "example": "Ich habe keine Zeit, dir zu helfen.",
+        "test": "a dependent clause consisting of zu plus an infinitive (or prefix + zu + verb) with no separate subject, attached to a main clause"
+      },
+      {
+        "id": "de.b1.paired-connectors",
+        "name": "Two-part connectors (entweder...oder, weder...noch, sowohl...als auch, je...desto)",
+        "note": "These connectors work as a matched pair rather than a single word, and je...desto additionally forces verb-final order in both of its clauses.",
+        "example": "Je mehr du übst, desto besser wird dein Deutsch.",
+        "test": "a sentence using one of the paired connectors (entweder...oder, weder...noch, sowohl...als auch, nicht nur...sondern auch, je...desto) with both parts present"
+      },
+      {
+        "id": "de.b1.subordinators-extended",
+        "name": "Extended subordinating conjunctions (obwohl, während, bevor, seitdem, damit, sodass)",
+        "note": "Beyond weil, dass and wenn, a wider set of subordinators marks contrast (obwohl), simultaneity (während), sequence (bevor, nachdem), purpose (damit) and result (sodass), all sending the verb to the end.",
+        "example": "Obwohl es regnet, gehen wir spazieren.",
+        "test": "a subordinate clause introduced by obwohl, während, bevor, seitdem, damit, or sodass, with its finite verb at the end"
+      },
+      {
+        "id": "de.b1.adjective-endings-no-article",
+        "name": "Attributive adjective endings with no article",
+        "note": "When no article precedes the noun, the adjective itself takes the ending an article would otherwise carry, using a distinct set of strong endings.",
+        "example": "Ich trinke gern kalten Kaffee.",
+        "test": "an attributive adjective with no preceding article carrying a strong ending that marks the noun's case, gender, and number"
+      },
+      {
+        "id": "de.b1.verbs-with-fixed-preposition",
+        "name": "Verbs with a fixed preposition",
+        "note": "Many verbs pair with a specific preposition whose case is fixed and often unrelated to the verb's meaning (warten auf +Akk, sich freuen über +Akk, denken an +Akk), and the object can be replaced by a da(r)-pronoun or a wo(r)-question word.",
+        "example": "Ich warte auf den Bus. Worauf wartest du?",
+        "test": "a verb combined with its fixed preposition and the case that pairing requires for that verb, or a da(r)-/wo(r)-pronoun replacing that prepositional object"
+      },
+      {
+        "id": "de.b1.pronoun-word-order-middle-field",
+        "name": "Word order of pronoun objects in the middle field",
+        "note": "When a clause has both a dative and an accusative object, pronoun objects precede noun objects, and between two pronouns the accusative comes before the dative.",
+        "example": "Ich gebe es ihm. Ich gebe ihm das Buch.",
+        "test": "a clause with two objects where a pronoun object is placed before a noun object, or where an accusative pronoun precedes a dative pronoun"
+      },
+      {
+        "id": "de.b1.genitive-prepositions",
+        "name": "Prepositions with the genitive (wegen, trotz, während, außerhalb)",
+        "note": "A small set of prepositions govern the genitive case, though in casual spoken usage wegen and trotz are often heard with the dative instead.",
+        "example": "Wegen des Wetters bleiben wir zu Hause.",
+        "test": "a preposition from the genitive group (wegen, trotz, während, außerhalb) followed by a genitive noun phrase"
+      },
+      {
+        "id": "de.b1.comparative-clauses-als-wie",
+        "name": "Comparative clauses with als and wie",
+        "note": "Als compares unequal things, wie compares equal things, and confusing the two is a common German-specific error point since English 'as/than' does not mark this distinction the same way.",
+        "example": "Er ist größer als ich, aber nicht so groß wie mein Bruder.",
+        "test": "a comparison using als for inequality or wie for equality, matched correctly to which relation is being expressed"
+      },
+      {
+        "id": "de.b1.subordinator-als-single-past-event",
+        "name": "The subordinator als for a single event in the past",
+        "note": "Als (not wenn) introduces a subordinate clause describing one specific completed event in the past, completing the three-way wenn/als/wann distinction that English collapses into 'when'.",
+        "example": "Als ich acht Jahre alt war, sind wir umgezogen.",
+        "test": "a subordinate clause introduced by als referring to one specific, completed past event, as distinct from wenn used for repeated or future events"
+      }
+    ],
+    "b2": [
+      {
+        "id": "de.b2.konjunktiv-i-reported-speech",
+        "name": "Konjunktiv I for indirect (reported) speech",
+        "note": "In formal registers, especially written reports of what someone said, German uses Konjunktiv I (sei, habe, könne, werde) to mark reported speech without needing a verb of saying in every clause.",
+        "example": "Er sagte, er sei krank und könne nicht kommen.",
+        "test": "a reported-speech clause using a Konjunktiv I form (distinct from the present indicative, e.g. sei, habe, könne, werde) instead of the indicative or Konjunktiv II"
+      },
+      {
+        "id": "de.b2.konjunktiv-i-substitute-form",
+        "name": "Konjunktiv II as a substitute when Konjunktiv I is not distinct",
+        "note": "When a verb's Konjunktiv I form is identical to its indicative (as with most weak verbs and all plural forms), speakers switch to Konjunktiv II so the reported-speech marking stays visible.",
+        "example": "Sie sagten, sie kämen morgen.",
+        "test": "a reported-speech clause using a Konjunktiv II form specifically in place of a Konjunktiv I form that would be indistinguishable from the indicative"
+      },
+      {
+        "id": "de.b2.passive-alternatives",
+        "name": "Passive alternatives: sich lassen + infinitive, sein...zu, and -bar",
+        "note": "German has several ways to express a passive meaning without werden: sich lassen + infinitive, sein + zu + infinitive, and adjectives ending in -bar, each stressing possibility rather than the plain action.",
+        "example": "Das Problem lässt sich lösen. Die Tür ist zu öffnen. Das Problem ist lösbar.",
+        "test": "a clause using sich lassen + infinitive, sein + zu + infinitive, or a -bar adjective to express that something can be done, in place of a werden-passive"
+      },
+      {
+        "id": "de.b2.nominalization",
+        "name": "Nominalization (turning a verb or clause into a noun phrase)",
+        "note": "Formal and written German often repackages a verb or a whole clause as a noun phrase with a genitive or von-phrase, a compact style favored in reports and essays.",
+        "example": "Nach der Ankunft des Zuges verließen die Fahrgäste den Bahnsteig.",
+        "test": "a noun phrase built from a verb stem (often with -ung, -heit, -keit, or a nominalized infinitive) used in place of what could also be expressed as a full clause"
+      },
+      {
+        "id": "de.b2.support-verb-constructions",
+        "name": "Funktionsverbgefüge (support-verb constructions)",
+        "note": "A semantically light verb (bringen, stehen, kommen, ziehen) combines with a noun to express what a single verb could also say, a construction typical of formal and bureaucratic registers.",
+        "example": "Das Projekt kommt zum Abschluss.",
+        "test": "a fixed noun-plus-light-verb combination (e.g. zum Abschluss kommen, in Frage stellen, Anwendung finden) used in place of the plain verb it corresponds to"
+      },
+      {
+        "id": "de.b2.participle-i-as-adjective",
+        "name": "Partizip I as an attributive adjective",
+        "note": "The present participle (infinitive + d) can modify a noun like an adjective, describing an ongoing or characteristic action, and takes regular adjective endings.",
+        "example": "das spielende Kind, ein überraschendes Ergebnis",
+        "test": "a present participle (verb stem + -d + adjective ending) placed before a noun to describe an ongoing or characteristic action"
+      },
+      {
+        "id": "de.b2.extended-participial-attribute",
+        "name": "Extended participial attributes",
+        "note": "A participle can carry its own modifiers (objects, adverbs), all placed between the article and the participle itself, packing a relative clause's content into a single noun phrase.",
+        "example": "der von der Firma vor drei Jahren entwickelte Motor",
+        "test": "a noun phrase where a participle carrying its own preceding modifiers sits directly before the noun, in place of what could also be a relative clause"
+      },
+      {
+        "id": "de.b2.concessive-clauses",
+        "name": "Concessive clauses and connectors (obwohl, trotzdem, dennoch)",
+        "note": "German marks a concession either with a subordinating conjunction (obwohl, verb-final) or with a coordinating adverb (trotzdem, dennoch, verb-second), and mixing the two word orders is a common error.",
+        "example": "Obwohl es regnet, gehen wir. Es regnet, trotzdem gehen wir.",
+        "test": "a concession expressed either with obwohl in a verb-final subordinate clause, or with trotzdem/dennoch in a verb-second main clause, using the word order that construction requires"
+      },
+      {
+        "id": "de.b2.irreal-comparison-als-ob",
+        "name": "Irreal comparative clauses with als ob / als wenn",
+        "note": "Als ob or als wenn introduce a comparison presented as untrue or merely apparent, and require a Konjunktiv II verb form inside the clause.",
+        "example": "Er tut, als ob er nichts wüsste.",
+        "test": "a clause introduced by als ob, als wenn, or als alone with inverted word order, using a Konjunktiv II verb form to express an unreal comparison"
+      },
+      {
+        "id": "de.b2.free-relative-clauses",
+        "name": "Free relative clauses with wer, was, wo",
+        "note": "A free relative clause has no noun antecedent at all: wer/was/wo stand in for 'the one who / that which / the place where' and function as the subject or object of the main clause.",
+        "example": "Wer zu spät kommt, verpasst den Zug.",
+        "test": "a clause beginning with wer, was, or wo that itself serves as the subject or object of the main clause, without referring back to a stated noun"
+      },
+      {
+        "id": "de.b2.fixed-prepositions-adjectives-nouns",
+        "name": "Fixed prepositions after adjectives and nouns",
+        "note": "Beyond verbs, many adjectives (stolz auf, interessiert an) and nouns (die Angst vor, der Grund für) also pair with one specific, non-obvious preposition.",
+        "example": "Ich bin stolz auf meine Tochter.",
+        "test": "an adjective or noun combined with its fixed preposition and the case that pairing requires, not a preposition chosen for its literal meaning"
+      },
+      {
+        "id": "de.b2.temporal-connectors-extended",
+        "name": "Extended temporal and instrumental connectors (sobald, solange, indem)",
+        "note": "Sobald marks immediate sequence, solange marks a matching duration, and indem states the means by which something is done, extending the connector set beyond B1.",
+        "example": "Er lernte Deutsch, indem er jeden Tag las.",
+        "test": "a subordinate clause introduced by sobald, solange, or indem with its verb at the end, expressing immediate sequence, matching duration, or means"
+      },
+      {
+        "id": "de.b2.modal-particles",
+        "name": "Modal particles (doch, ja, eben, halt, mal)",
+        "note": "Unstressed particles like doch, ja, eben, halt, and mal do not change the propositional content of a sentence but signal the speaker's attitude (surprise, insistence, casualness), with no direct one-word English equivalent.",
+        "example": "Das ist doch klar! Komm mal her.",
+        "test": "a modal particle (doch, ja, eben, halt, mal, denn, schon) inserted into a clause to color the speaker's attitude rather than add factual content"
+      }
+    ],
+    "c1": [
+      {
+        "id": "de.c1.konjunktiv-i-full-tense-system",
+        "name": "Konjunktiv I across all tenses of reported speech",
+        "note": "At C1, reported speech extends Konjunktiv I into the past (er habe gesagt, er sei gegangen) and future (er werde kommen), reporting the original speaker's tense rather than collapsing everything into the present.",
+        "example": "Er behauptete, er habe das Geld schon zurückgegeben.",
+        "test": "a reported-speech clause using a Konjunktiv I perfect (habe/sei + participle) or future (werde + infinitive) form that matches the tense of the original statement"
+      },
+      {
+        "id": "de.c1.konjunktiv-ii-past-complex",
+        "name": "Konjunktiv II Perfekt in complex counterfactuals",
+        "note": "Wäre/hätte + participle expresses what would have happened under a past condition that did not occur, often nested inside longer conditional or concessive sentences, including inverted conditionals with no wenn.",
+        "example": "Hätte ich das gewusst, hätte ich anders gehandelt.",
+        "test": "a counterfactual clause using hätte or wäre plus a past participle to describe what would have happened under an unfulfilled past condition, including an inverted (verbless-wenn) conditional"
+      },
+      {
+        "id": "de.c1.gerundive-zu-partizip-i",
+        "name": "The gerundive (zu + Partizip I as an attribute)",
+        "note": "Zu inserted before a Partizip I attribute adds a sense of necessity or possibility to the noun it modifies, a compact and formal alternative to a modal-verb relative clause.",
+        "example": "das zu lösende Problem",
+        "test": "a noun phrase with zu placed between the article and a Partizip I attribute, expressing that the noun must or can undergo the action"
+      },
+      {
+        "id": "de.c1.sustained-nominal-style",
+        "name": "Sustained nominal style in formal and academic register",
+        "note": "At C1 a writer chooses nominal style deliberately across a whole passage, chaining genitive attributes and prepositional phrases instead of clauses, a register choice rather than a single one-off construction.",
+        "example": "Die Umsetzung der im Bericht vorgeschlagenen Maßnahmen erfordert eine Anpassung der bestehenden Strukturen.",
+        "test": "a sentence built primarily from chained noun phrases (genitive and prepositional attributes) where a less formal register would use one or more finite clauses"
+      },
+      {
+        "id": "de.c1.marked-word-order-emphasis",
+        "name": "Marked word order for emphasis (non-subject in first position)",
+        "note": "Placing something other than the subject in the position before the finite verb (an object, a subordinate clause, a whole prepositional phrase) foregrounds it for emphasis or textual cohesion, while the verb-second rule still holds.",
+        "example": "Diesen Fehler hätte ich nie erwartet.",
+        "test": "a main clause where the position before the finite verb is filled by an object, adverbial, or subordinate clause chosen for emphasis rather than the subject, with the subject moved after the verb"
+      },
+      {
+        "id": "de.c1.passive-register-choice",
+        "name": "Choosing between Vorgangspassiv, Zustandspassiv and passive alternatives for register",
+        "note": "At C1 the choice among werden-passive, sein-passive, and constructions like sich lassen or -bar is a deliberate stylistic decision about focus and formality, not just a rule applied by default.",
+        "example": "Die Maßnahme wurde beschlossen. Die Maßnahme ist beschlossen. Die Maßnahme lässt sich noch ändern.",
+        "test": "a sentence or short passage where the choice among a werden-passive, a sein-passive, and a passive alternative (sich lassen, -bar) is motivated by whether the action, the resulting state, or a possibility is meant"
+      },
+      {
+        "id": "de.c1.multiple-embedded-clauses",
+        "name": "Multiply embedded subordinate clauses",
+        "note": "C1 sentences regularly nest a subordinate clause inside another subordinate clause, requiring the verb-final rule to apply correctly at each level of embedding.",
+        "example": "Ich glaube, dass er sagte, dass er kommen werde, wenn er Zeit hätte.",
+        "test": "a sentence containing at least two subordinate clauses nested one inside another, each with its own verb correctly placed at the end of its own clause"
+      },
+      {
+        "id": "de.c1.combined-modal-particles",
+        "name": "Combined and nuanced modal particles",
+        "note": "At C1, modal particles combine (ja doch, eben mal, schon noch) to layer several shades of attitude at once, with the precise nuance depending on intonation and context rather than a fixed meaning.",
+        "example": "Das wird schon noch klappen. Das ist ja eben das Problem.",
+        "test": "two or more modal particles combined in one clause to layer distinct shades of speaker attitude, used appropriately to context rather than as filler"
+      },
+      {
+        "id": "de.c1.formal-written-connectors",
+        "name": "Formal written connectors (mithin, zumal, gleichwohl, insofern)",
+        "note": "Formal registers use a set of connectors rarely heard in speech (mithin 'therefore', zumal 'especially since', gleichwohl 'nevertheless', insofern 'in that respect') to mark logical relations precisely.",
+        "example": "Er war müde, zumal er die ganze Nacht gearbeitet hatte.",
+        "test": "a formal-register connector (mithin, zumal, gleichwohl, insofern) used to mark a precise logical relation between clauses, in place of its everyday equivalent"
+      },
+      {
+        "id": "de.c1.extended-support-verb-constructions",
+        "name": "Productive command of a wide range of Funktionsverbgefüge",
+        "note": "C1 speakers actively deploy a broad, register-specific set of support-verb constructions (Kritik üben, Rücksicht nehmen, zur Verfügung stehen) rather than the handful learned at B2.",
+        "example": "Die Regierung übt Kritik an dem Vorschlag und nimmt Rücksicht auf die Bedenken der Bevölkerung.",
+        "test": "two or more distinct Funktionsverbgefüge used correctly and idiomatically within the same passage, appropriate to a formal register"
+      },
+      {
+        "id": "de.c1.pronominal-adverbs-cohesion",
+        "name": "Pronominal adverbs (dabei, dadurch, demzufolge) for text cohesion",
+        "note": "Da(r)-compounds and related forms (dabei, dadurch, demzufolge, folglich) point back to a whole preceding clause or idea rather than a single noun, holding a written argument together across sentences.",
+        "example": "Er hatte keine Ausbildung. Dadurch fiel es ihm schwer, eine Stelle zu finden.",
+        "test": "a pronominal adverb (dabei, dadurch, demzufolge, folglich, hierbei) at the start of a sentence referring back to an entire preceding clause or idea, not a single noun"
+      },
+      {
+        "id": "de.c1.konjunktiv-i-fixed-formulas",
+        "name": "Konjunktiv I for formal instructions and wishes",
+        "note": "A small set of fixed, formal expressions use Konjunktiv I directly as an instruction or wish, a fossilized use surviving in recipes, legal text, and set phrases.",
+        "example": "Man nehme zwei Eier und rühre sie glatt. Es lebe die Freiheit!",
+        "test": "a Konjunktiv I form (man nehme, es lebe) used directly as an instruction or wish rather than as reported speech"
+      }
+    ]
+  }
+}

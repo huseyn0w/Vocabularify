@@ -1,0 +1,757 @@
+{
+  "language": "it",
+  "sources": [
+    "Profilo della lingua italiana (Spinelli & Parizzi) - official online inventory at https://www.unistrapg.it/profilo_lingua_italiana/site/ - grammar pages fetched directly for: gram_verbi_a1/a2/b1/b2, gram_nome_a1/b1, gram_pronomi_a1/a2/b1/b2, gram_aggettivi_a1/b1, gram_avverbi_a1/a2, gram_costruz_a1/a2/b2, gram_frasesemplice_b1, gram_frasecomplessa_b1/b2",
+    "Profilo della lingua italiana - additional pages reached only through search-result snippets, not a full page fetch (used with lower confidence): gram_articoli_a1/a2/b1, gram_nome_a2, gram_preposizioni_a1/a2/b1/b2",
+    "PLIDA (Società Dante Alighieri) syllabus commentary on C1: 'a livello C1 tutte le strutture della lingua italiana sono considerate acquisite' (via secondary summaries of the PLIDA Sillabo, e.g. dante-limoges.fr/images/stories/pdf/Sillabo.pdf) - used to justify a shorter, consolidation-focused C1 list",
+    "CILS (Università per Stranieri di Siena) certification descriptions - used only as general confirmation that grammar at C1 is assessed through production rather than a graded structure list, not as a source of specific C1 structures",
+    "Secondary general-reference confirmation for C1-only structures not covered by Profilo (which stops at B2): andare + participio passato (passivante) and discorso indiretto tense correlation, cross-checked against grammatica.impariamoitaliano.com, it.bab.la/grammatica, and the University of Iowa 'D'accordo' Italian course chapter on correlazione dei tempi (pressbooks.uiowa.edu)"
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "it.a1.essere-stare",
+        "name": "Essere and stare ('to be')",
+        "note": "Italian splits English 'to be' into two verbs: essere for identity, description, and fixed location, and stare for health, temporary physical/emotional state, and the location of a person right now. This app teaches both under one 'to be' concept card, so the verb form used is the only reliable signal of which one a given sentence drills.",
+        "example": "Sono italiano, ma oggi sto a casa perché sto male.",
+        "test": "The sentence has a finite essere form (sono/sei/è/siamo/siete/sono) used for identity, description, or fixed location, or a finite stare form (sto/stai/sta/stiamo/state/stanno) used for health, temporary state, or where someone currently is. Check which paradigm the verb form belongs to and whether the context matches that verb's normal use - a nationality/profession/description needs essere; a wellbeing or 'right now' location needs stare. A sentence using one paradigm's form in the other's typical context does not exercise this topic correctly."
+      },
+      {
+        "id": "it.a1.present-indicative-regular",
+        "name": "Present indicative (3 singular + noi)",
+        "note": "Present indicative of regular -are/-ere/-ire verbs and of avere, produced only in io/tu/lui-lei and noi at this stage; voi and loro come later.",
+        "example": "Io parlo italiano, tu abiti a Roma e noi studiamo insieme.",
+        "test": "The sentence has a present-indicative form of a regular verb (or avere) in 1st/2nd/3rd person singular or 1st person plural, agreeing with its subject."
+      },
+      {
+        "id": "it.a1.avere-expressions",
+        "name": "Avere for age and physical states",
+        "note": "Avere, not essere, is used for age and a set of fixed states: ho ... anni, ho fame, ho sete, ho freddo, ho caldo, ho paura, ho sonno - all cases where English says 'is'/'am'.",
+        "example": "Ho vent'anni e ora ho fame.",
+        "test": "The sentence has a form of avere plus anni, or one of the fixed avere-idioms (fame, sete, freddo, caldo, paura, sonno, fretta), used the way Italian requires."
+      },
+      {
+        "id": "it.a1.nouns-gender-number",
+        "name": "Regular noun gender and number",
+        "note": "Regular nouns mark gender and number by their ending: -o (masc. sg) / -i (masc. pl), -a (fem. sg) / -e (fem. pl), -e (either gender, sg) / -i (pl).",
+        "example": "Il libro è sul tavolo, le sedie sono vecchie.",
+        "test": "The sentence has at least one regular -o/-a/-e noun with its ending correctly matched to its number, and agreeing gender/number on any article or adjective attached to it."
+      },
+      {
+        "id": "it.a1.nouns-irregular-invariable",
+        "name": "Irregular and invariable nouns",
+        "note": "A working set of high-frequency nouns break the regular pattern: invariable nouns (il caffè/i caffè, la città/le città), unchanged foreign loanwords (il bar/i bar, lo sport/gli sport), plural-only nouns (gli occhiali, i pantaloni), and a few irregular plurals (l'uomo/gli uomini).",
+        "example": "Ho comprato due paia di pantaloni e un caffè al bar.",
+        "test": "The sentence uses one of these irregular/invariable nouns in its correct singular or plural form, not a regularized form a learner might guess."
+      },
+      {
+        "id": "it.a1.articles",
+        "name": "Definite and indefinite articles",
+        "note": "The definite article (il/lo/la/i/gli/le) and indefinite article (un/uno/una) mark a noun as specific or generic. Italian also uses the definite article for clock time (sono le otto), drops it before a demonstrative or indefinite adjective, and keeps it before a possessive adjective (la mia sedia).",
+        "example": "Sono le otto: prendo un caffè con la mia amica.",
+        "test": "The sentence has a definite or indefinite article agreeing in gender/number with its noun, in one of the taught patterns: telling time, an ordinary noun phrase, no article before questo/molti-type adjectives, or an article kept before a possessive adjective."
+      },
+      {
+        "id": "it.a1.prepositions-simple-articulated",
+        "name": "Simple and articulated prepositions",
+        "note": "Simple prepositions (di, a, da, in, con, su, per, tra/fra) fuse with a following definite article into a single word (di+il=del, a+la=alla, in+i=nei, and the rest of the table), used mainly for origin, destination/location, and company at this level.",
+        "example": "Vengo dalla Spagna e vado all'università con il mio amico.",
+        "test": "The sentence uses a simple preposition, or a preposition fused with a definite article (del, dello, della, dei, degli, delle, al, allo, alla, ai, agli, alle, dal, nel, sul, etc.), correctly for origin, destination/location, or company."
+      },
+      {
+        "id": "it.a1.demonstrative-adjectives",
+        "name": "Questo and quello",
+        "note": "Questo (near) and quello (far) agree with the noun they modify; quello also changes shape like the definite article (quel libro, quello studente, quella casa, quell'amico).",
+        "example": "Questo libro è mio, quella penna è tua.",
+        "test": "The sentence has questo or quello, in an agreeing form, directly modifying a noun - with quello showing the article-like alternation before s+consonant, z, or a vowel."
+      },
+      {
+        "id": "it.a1.quantifiers-basic",
+        "name": "Poco, molto, tanto as adjectives",
+        "note": "Poco, molto, and tanto work as adjectives directly before a noun and agree with it in gender and number.",
+        "example": "Ho molti amici ma poco tempo.",
+        "test": "The sentence has poco/molto/tanto, in an agreeing form, directly modifying a noun."
+      },
+      {
+        "id": "it.a1.numerals",
+        "name": "Cardinal and ordinal numerals",
+        "note": "Cardinal numbers 1-100, and ordinal numbers 1st-10th (primo...decimo), which agree in gender/number like adjectives.",
+        "example": "Abito al terzo piano, numero quarantadue.",
+        "test": "The sentence has a cardinal number word (uno...cento) or an ordinal (primo...decimo), with an ordinal agreeing in gender/number with its noun."
+      },
+      {
+        "id": "it.a1.pronouns-3sg-subject-object",
+        "name": "Third-person singular personal pronouns",
+        "note": "At this stage only the third-person singular pronouns are worked with directly: subject (lui/lei), tonic object after a preposition (per lui/per lei), and atonic direct object (lo/la).",
+        "example": "Lui è simpatico; lo conosco bene.",
+        "test": "The sentence uses lui/lei as subject, lo/la as a direct object, or per lui/per lei/con lei after a preposition - third-person singular only."
+      },
+      {
+        "id": "it.a1.reflexive-verbs-fixed",
+        "name": "Reflexive verbs as fixed chunks",
+        "note": "Reflexive verbs are learned first as unanalyzed formulas, above all the self-introduction pattern mi chiamo.",
+        "example": "Mi chiamo Marco e mi alzo alle sette.",
+        "test": "The sentence uses a reflexive verb in the mi chiamo pattern - a reflexive pronoun immediately before the finite verb, matching the subject."
+      },
+      {
+        "id": "it.a1.interrogative-indefinite-pronouns",
+        "name": "Chi, che, quanto, quale; nessuno, niente",
+        "note": "Question pronouns chi, che (cosa), quanto, quale; indefinite pronouns nessuno and niente, which need non when they follow the verb.",
+        "example": "Chi è? Non c'è nessuno.",
+        "test": "The sentence has chi/che cosa/quanto/quale as a genuine question word, or nessuno/niente as a pronoun (with non if it follows the verb)."
+      },
+      {
+        "id": "it.a1.modal-verbs",
+        "name": "Potere, volere, dovere + infinitive",
+        "note": "Potere, volere, and dovere plus an infinitive express ability, desire, and obligation.",
+        "example": "Non posso venire, devo studiare.",
+        "test": "The sentence has a finite form of potere/volere/dovere directly followed by an infinitive."
+      },
+      {
+        "id": "it.a1.vorrei-polite",
+        "name": "Vorrei for polite requests",
+        "note": "Vorrei, the first-person present conditional of volere, softens a request - the only conditional form taught this early, and only in this one person.",
+        "example": "Vorrei un caffè, per favore.",
+        "test": "The sentence uses vorrei (not voglio) to make a polite request."
+      },
+      {
+        "id": "it.a1.imperative-basic",
+        "name": "Formal courtesy imperative and inviting noi-imperative",
+        "note": "The formal imperative shows up in fixed courtesy formulas (scusi), and the first-person-plural imperative doubles as an invitation to do something together (andiamo!, prendiamo un caffè).",
+        "example": "Scusi, dov'è la stazione? Prendiamo un caffè insieme!",
+        "test": "The sentence has scusi (formal courtesy) or a first-person-plural imperative form proposing a joint action."
+      },
+      {
+        "id": "it.a1.ce-ci-sono",
+        "name": "C'e / ci sono",
+        "note": "C'è and ci sono (ci + essere) state that something exists or is present, matching the number of what follows.",
+        "example": "C'è un bar qui vicino; ci sono due bagni.",
+        "test": "The sentence has c'è or ci sono, matching the number of the noun that follows it."
+      },
+      {
+        "id": "it.a1.infinitive-purpose",
+        "name": "Per + infinitive for purpose",
+        "note": "Per + infinitive expresses purpose when both clauses share the same subject, with no separate conjunction needed.",
+        "example": "Vado in biblioteca per studiare.",
+        "test": "The sentence has per followed directly by an infinitive giving the reason for the main action, with both clauses sharing the same subject."
+      },
+      {
+        "id": "it.a1.adverbs-basic",
+        "name": "Core adverbs (place, time, manner, quantity, judgment, question)",
+        "note": "A closed set of high-frequency adverbs: place (qui, là, dentro, fuori...), time (ora, oggi, sempre, mai...), manner (bene, male), quantity (molto, poco), judgment (sì, no, certo), and the interrogatives come/dove/quando/perché.",
+        "example": "Sto bene, vengo sempre qui e non vado mai là.",
+        "test": "The sentence contains one of these A1 adverbs used in its listed function (place, time, manner, quantity, judgment, or question)."
+      },
+      {
+        "id": "it.a1.word-order-subject-drop",
+        "name": "SVO order with subject drop",
+        "note": "Basic word order is subject-verb-object, but the subject pronoun is normally dropped because the verb ending already shows who is acting (Sono americano, not Io sono americano).",
+        "example": "Sono americano e lavoro a Milano.",
+        "test": "The sentence has an unexpressed subject pronoun recoverable only from the verb ending, or an explicit subject stated for contrast/emphasis in otherwise plain SVO order."
+      },
+      {
+        "id": "it.a1.question-inversion",
+        "name": "Subject-verb inversion in wh-questions",
+        "note": "In a question introduced by a question word, the subject can follow the verb: Dove va Luca? rather than Dove Luca va?",
+        "example": "Quando parte il treno?",
+        "test": "The sentence is a question introduced by a question word (dove/quando/come/perché/chi...) with the subject placed after the verb."
+      }
+    ],
+    "a2": [
+      {
+        "id": "it.a2.present-indicative-full",
+        "name": "Present indicative, all six persons",
+        "note": "The present indicative now extends to voi and loro, and covers common irregular verbs (andare, fare, uscire, venire, dire...), completing the paradigm started at A1.",
+        "example": "Voi andate al cinema, loro escono più tardi.",
+        "test": "The sentence has a present-indicative verb in the voi or loro form, or a common irregular verb (andare, fare, venire, uscire, dire, etc.) correctly conjugated in any person."
+      },
+      {
+        "id": "it.a2.reflexive-reciprocal-full",
+        "name": "Reflexive and reciprocal verbs, all persons",
+        "note": "Reflexive verbs now take all six persons, and the same pronouns give a reciprocal 'each other' reading (ci vediamo domani).",
+        "example": "Ci vediamo domani, vi svegliate sempre presto.",
+        "test": "The sentence has a reflexive/reciprocal verb in a person beyond 1st/3rd singular (noi/voi/loro), or a reciprocal reading where ci/vi means 'each other'."
+      },
+      {
+        "id": "it.a2.passato-prossimo",
+        "name": "Passato prossimo: auxiliary choice and agreement",
+        "note": "The passato prossimo reports a single completed past event. It needs avere for most transitive verbs and essere for most intransitive/motion/reflexive verbs; with essere, the past participle agrees in gender and number with the subject (è partita, sono partiti).",
+        "example": "Ieri ho mangiato la pizza e poi sono uscita con le amiche.",
+        "test": "The sentence has a passato prossimo (avere/essere + past participle). If the auxiliary is essere, the participle ending must agree with the subject's gender/number; if avere, it stays in the default masculine singular unless a preceding direct-object clitic requires otherwise (a later, B1 topic)."
+      },
+      {
+        "id": "it.a2.imperfetto",
+        "name": "Imperfetto for description and habit",
+        "note": "The imperfetto describes an ongoing state, a habitual action, or a background scene in the past, first with essere/avere (era piccolo, avevo dieci anni) and then with regular verbs.",
+        "example": "Quando ero piccolo, abitavo in campagna.",
+        "test": "The sentence has an imperfetto form used for a description, a habitual past action, or a background circumstance - not a single completed event."
+      },
+      {
+        "id": "it.a2.imperfetto-vs-passato-prossimo",
+        "name": "Imperfetto vs. passato prossimo",
+        "note": "The two past tenses are not interchangeable: passato prossimo reports what happened as a bounded event, imperfetto sets the scene or describes what was ongoing when it happened. This contrast is the hardest single point in Italian past narration for learners, and textbooks introduce it as its own lesson once both tenses exist.",
+        "example": "Mentre guardavo la TV, è arrivato Marco.",
+        "test": "The sentence pairs the two tenses in one narration - an imperfetto for the ongoing background action and a passato prossimo for the event that interrupted or occurred within it (or an equivalent pairing where swapping the two tenses would change the meaning)."
+      },
+      {
+        "id": "it.a2.futuro-semplice",
+        "name": "Futuro semplice",
+        "note": "The simple future states what will happen, using endings shared, unusually, by -are and -ere verbs.",
+        "example": "Domani pioverà e non usciremo.",
+        "test": "The sentence has a futuro semplice form referring to a future event."
+      },
+      {
+        "id": "it.a2.imperative-full",
+        "name": "Imperative: tu, noi, voi",
+        "note": "The imperative now covers tu, noi, and voi, affirmative and negative; the negative tu form uses non + infinitive (non aprire!) instead of the normal imperative ending.",
+        "example": "Aprite la finestra, ma non uscite senza ombrello!",
+        "test": "The sentence has an imperative in tu/noi/voi, affirmative or negative - with the negative tu form built as non + infinitive."
+      },
+      {
+        "id": "it.a2.modal-verbs-pragmatic",
+        "name": "Modal verbs as softened requests",
+        "note": "Beyond their literal meaning, potere/volere/dovere in a question now function as a softened request or piece of advice (Potresti aiutarmi? / Dovresti riposare), not a literal question about capability.",
+        "example": "Potresti chiudere la porta?",
+        "test": "The sentence has potere/volere/dovere used as an indirect request or advice rather than a literal question about ability or desire."
+      },
+      {
+        "id": "it.a2.impersonal-weather-verbs",
+        "name": "Impersonal weather verbs",
+        "note": "Weather verbs like piovere and nevicare have no subject and exist only in the third person.",
+        "example": "Ieri ha piovuto tutto il giorno.",
+        "test": "The sentence has an impersonal weather verb (piove/nevica or a past form of one) with no subject expressed."
+      },
+      {
+        "id": "it.a2.stare-gerundio",
+        "name": "Stare + gerundio (progressive)",
+        "note": "Stare + gerundio (sto parlando, sta leggendo) is the Italian progressive, marking an action happening right now.",
+        "example": "Sto leggendo un libro in questo momento.",
+        "test": "The sentence has a finite stare form directly followed by a gerund, describing an action in progress."
+      },
+      {
+        "id": "it.a2.nouns-ista-tore-trice",
+        "name": "Nouns in -ista and -tore/-trice",
+        "note": "Nouns ending in -ista are the same for both genders, with gender shown only on the article (il/la giornalista, i/le giornaliste); the pair -tore/-trice marks a male/female agent (direttore/direttrice).",
+        "example": "La giornalista intervista il direttore.",
+        "test": "The sentence has an -ista noun with gender shown only by its article, or a -tore/-trice pair used for the correct gender."
+      },
+      {
+        "id": "it.a2.articles-geographic-names",
+        "name": "Articles with geographic names",
+        "note": "Cities take no article (Roma è bella), while most country names take the definite article (vengo dagli Stati Uniti, l'Italia e grande).",
+        "example": "Roma è la capitale d'Italia; vengo dagli Stati Uniti.",
+        "test": "The sentence has a city name with no article, or a country name correctly taking the definite article."
+      },
+      {
+        "id": "it.a2.subject-pronouns-full",
+        "name": "Subject pronouns for contrast",
+        "note": "The full six-person subject pronoun set (io, tu, lui/lei, noi, voi, loro) is used, not dropped, when needed for contrast or clarity.",
+        "example": "Io studio matematica, lui invece studia storia.",
+        "test": "The sentence has an explicit subject pronoun (any of the six) used for contrast, clarity, or emphasis rather than left out."
+      },
+      {
+        "id": "it.a2.tonic-object-pronouns",
+        "name": "Tonic pronouns after a preposition",
+        "note": "Tonic (stressed) pronouns follow a preposition: per me, con te, da lui.",
+        "example": "Questo regalo e per te.",
+        "test": "The sentence has a tonic pronoun (me/te/lui/lei/noi/voi/loro) directly after a preposition."
+      },
+      {
+        "id": "it.a2.atonic-object-pronouns-1st-2nd",
+        "name": "Atonic object pronouns (1st/2nd person)",
+        "note": "Unstressed direct and indirect object pronouns, mainly the 1st/2nd person forms (mi, ti, ci, vi), attach right before the finite verb.",
+        "example": "Mi chiami stasera? Vi aspetto alle otto.",
+        "test": "The sentence has an atonic object pronoun (mi/ti/ci/vi) placed immediately before a finite verb as its direct or indirect object."
+      },
+      {
+        "id": "it.a2.possessive-pronouns",
+        "name": "Possessive pronouns",
+        "note": "Possessive pronouns (il mio, la tua, i suoi...) stand in for a noun instead of modifying one.",
+        "example": "La mia macchina è rossa, la tua è nera.",
+        "test": "The sentence has a possessive form (mio/tuo/suo... with its article) used without a following noun, standing for one already mentioned."
+      },
+      {
+        "id": "it.a2.demonstrative-pronouns",
+        "name": "Questo/quello as pronouns",
+        "note": "Questo and quello now also stand alone as pronouns, with no noun following.",
+        "example": "Preferisco questo, non quello.",
+        "test": "The sentence has questo or quello used alone, with no noun immediately after it."
+      },
+      {
+        "id": "it.a2.indefinite-pronouns-basic",
+        "name": "Altro, qualcuno, qualcosa",
+        "note": "Altro and qualcuno/qualcosa function as pronouns.",
+        "example": "Vuoi qualcos'altro? Ho visto qualcuno alla porta.",
+        "test": "The sentence has altro, qualcuno, or qualcosa used as a pronoun rather than modifying a following noun."
+      },
+      {
+        "id": "it.a2.relative-che",
+        "name": "Relative pronoun che",
+        "note": "Che introduces a relative clause, standing for the subject or object of that clause.",
+        "example": "Ho un amico che abita a Roma.",
+        "test": "The sentence has che introducing a relative clause, referring back to a noun in the main clause as that clause's subject or object."
+      },
+      {
+        "id": "it.a2.ci-locative",
+        "name": "Locative ci",
+        "note": "Ci replaces a place already mentioned (Vado a Roma domani -> Ci vado domani).",
+        "example": "Vai al mercato? Sì, ci vado ora.",
+        "test": "The sentence has ci standing for a place mentioned earlier or understood from context, placed directly before the verb."
+      },
+      {
+        "id": "it.a2.word-order-possessive",
+        "name": "Possessive adjective before the noun",
+        "note": "Possessive adjectives normally come before the noun as the default, unmarked order: la tua macchina, not macchina tua.",
+        "example": "Ho preso il mio motorino, non la tua macchina.",
+        "test": "The sentence has a possessive adjective placed before its noun in the default order."
+      },
+      {
+        "id": "it.a2.adverbs-extended",
+        "name": "Extended adverb set",
+        "note": "A further layer of adverbs: manner (di solito, insieme, così), place (a destra/sinistra, dritto), time (appena, già, subito, non...ancora, non...mai), quantity (abbastanza, troppo), judgment (probabilmente, forse), and the discourse adverb allora.",
+        "example": "Di solito arrivo presto, ma oggi sono già in ritardo.",
+        "test": "The sentence contains one of these A2 adverbs used in its listed function."
+      }
+    ],
+    "b1": [
+      {
+        "id": "it.b1.passato-prossimo-verb-classes",
+        "name": "Passato prossimo across verb classes",
+        "note": "Reviews auxiliary choice across three classes: intransitive/unaccusative verbs with essere (sono corso a casa), transitive verbs with avere (ho iniziato il corso), and reflexive verbs with essere (ci siamo svegliati).",
+        "example": "Ho corso per un'ora, poi sono corso a casa e mi sono svegliato tardi il giorno dopo.",
+        "test": "The sentence has a passato prossimo whose auxiliary matches its verb class (avere for a transitive verb, essere for an intransitive/unaccusative or reflexive verb), with participle agreement wherever essere is the auxiliary."
+      },
+      {
+        "id": "it.b1.trapassato-prossimo",
+        "name": "Trapassato prossimo",
+        "note": "The pluperfect (imperfetto of avere/essere + participle) places one past event before another already-past event.",
+        "example": "Quando sono arrivato, il film era già iniziato.",
+        "test": "The sentence has a trapassato prossimo describing an event that happened earlier than another past-tense event named in the same sentence."
+      },
+      {
+        "id": "it.b1.futuro-semplice-modale",
+        "name": "Futuro semplice for present supposition",
+        "note": "The simple future can express a guess about the present rather than a future fact (Saranno le otto = 'It must be about eight').",
+        "example": "Che ore sono? Non lo so, saranno le otto.",
+        "test": "The sentence has a futuro semplice expressing a present-time guess or supposition, not a genuinely future event."
+      },
+      {
+        "id": "it.b1.futuro-anteriore-temporale",
+        "name": "Futuro anteriore: prior future event",
+        "note": "The future perfect marks a future event completed before another future event (Dopo che mi sarò laureato, viaggerò).",
+        "example": "Dopo che avrò finito il lavoro, ti chiamerò.",
+        "test": "The sentence has a futuro anteriore (future of avere/essere + participle) for an event completed before another future action named in the same sentence."
+      },
+      {
+        "id": "it.b1.futuro-anteriore-modale",
+        "name": "Futuro anteriore for past supposition",
+        "note": "The future perfect can also guess about a past event (Sarà partito verso le nove = 'He probably left around nine').",
+        "example": "Non risponde al telefono: sarà uscito.",
+        "test": "The sentence has a futuro anteriore expressing a supposition about a past event, not a genuinely future one."
+      },
+      {
+        "id": "it.b1.imperfetto-attenuativo",
+        "name": "Imperfetto to soften a request",
+        "note": "Beyond describing the past, the imperfetto (typically of volere) can soften a present request or wish (Volevo chiederti un favore).",
+        "example": "Volevo chiederti un favore.",
+        "test": "The sentence has an imperfetto used to soften a present-time request or wish rather than to describe an actual past state."
+      },
+      {
+        "id": "it.b1.condizionale-presente",
+        "name": "Condizionale presente",
+        "note": "The present conditional expresses a hypothetical wish, a polite suggestion, or, with a modal verb, a piece of advice (Potremmo andare al cinema; Dovresti riposare).",
+        "example": "Mi piacerebbe visitare il Giappone; dovresti venire con me.",
+        "test": "The sentence has a present conditional expressing a wish, a suggestion, or advice given with a modal verb."
+      },
+      {
+        "id": "it.b1.si-impersonale",
+        "name": "Si impersonale",
+        "note": "Si + third-person verb makes a statement about people in general with no specific subject (Si mangia bene qui), including with a modal verb (si può, si deve).",
+        "example": "In Italia si mangia bene e si può bere un buon caffè ovunque.",
+        "test": "The sentence has si + a third-person verb (plain or with a modal) describing what people in general do, with no specific subject named."
+      },
+      {
+        "id": "it.b1.congiuntivo-presente-esortativo",
+        "name": "Congiuntivo presente as formal imperative",
+        "note": "The present subjunctive supplies the missing third-person imperative, used to give an instruction to Lei (Vada dritto e giri a destra).",
+        "example": "Signora, vada dritto e poi giri a destra.",
+        "test": "The sentence has a present subjunctive form used as a direct third-person command, not inside a subordinate che-clause."
+      },
+      {
+        "id": "it.b1.congiuntivo-oggettive-soggettive",
+        "name": "Congiuntivo after opinion/feeling verbs",
+        "note": "Verbs and expressions of opinion, hope, feeling, or doubt (penso che, spero che, mi sembra che) and impersonal expressions (bisogna che, è importante che) require the subjunctive in the che-clause they introduce.",
+        "example": "Penso che questo film sia molto interessante.",
+        "test": "The sentence has che introducing a clause with a subjunctive verb, triggered by a main clause of opinion/hope/feeling/doubt or by an impersonal expression like bisogna/è importante/è necessario."
+      },
+      {
+        "id": "it.b1.infinito-oggettive-soggettive",
+        "name": "Infinitive instead of subordinate clause (same subject)",
+        "note": "When both clauses share a subject, Italian uses an infinitive instead of a finite clause: di + infinitive after a verb of feeling/opinion (sono contento di essere qui), a bare infinitive after an impersonal expression (pare avere pochi anni), and senza + infinitive for 'without doing'.",
+        "example": "Sono contento di essere qui e non voglio partire senza salutare tutti.",
+        "test": "The sentence has di + infinitive after a verb of feeling/opinion sharing its subject with the main clause, a bare infinitive after an impersonal expression, or senza + infinitive."
+      },
+      {
+        "id": "it.b1.periodo-ipotetico-realta",
+        "name": "Periodo ipotetico della realta",
+        "note": "The first conditional links a realistic condition to its consequence with se + present or future indicative in both clauses.",
+        "example": "Se vieni con me, ti diverti.",
+        "test": "The sentence is a se-clause pairing present or future indicative in both the condition and the consequence, describing a realistic or likely situation."
+      },
+      {
+        "id": "it.b1.object-pronouns-all-persons",
+        "name": "Atonic object pronouns, all persons",
+        "note": "Atonic direct and indirect object pronouns now cover the third person too (lo/la/li/le/gli), not just 1st/2nd.",
+        "example": "Lo vedo spesso, le scrivo ogni settimana, li conosco bene.",
+        "test": "The sentence has an atonic direct or indirect object pronoun in the 3rd person (lo/la/li/le/gli), matching the gender/number of what it replaces."
+      },
+      {
+        "id": "it.b1.participle-agreement-clitic",
+        "name": "Participle agreement with a preceding direct-object clitic",
+        "note": "In a compound tense, when a direct-object clitic (lo/la/li/le) comes before the verb, the past participle must agree with it in gender and number, even though the auxiliary is avere (Li ho comprati, not ho comprato).",
+        "example": "Le chiavi? Le ho perse ieri.",
+        "test": "The sentence has a compound tense preceded by a direct-object clitic (lo/la/li/le), with the participle's ending changed to agree with that clitic's gender/number instead of staying in the default masculine singular."
+      },
+      {
+        "id": "it.b1.ci-idiomatico",
+        "name": "Idiomatic ci",
+        "note": "Ci also appears in fixed pronominal verbs (volerci, metterci, non vederci/sentirci) and idioms (non ci credo, non ci penso, ce l'ho), unrelated to its locative sense.",
+        "example": "Non ci credo! Quanto tempo ci vuole per arrivare?",
+        "test": "The sentence has ci in a pronominal-verb idiom (volerci, metterci, vederci, sentirci) or a fixed expression (non ci credo/penso, ce l'ho), not standing for a place."
+      },
+      {
+        "id": "it.b1.ne-partitivo",
+        "name": "Partitive and idiomatic ne",
+        "note": "Ne stands for 'of it/of them' as a partitive quantity (Ne prendo due), or appears in fixed expressions (ne ho bisogno/voglia, che ne pensi?).",
+        "example": "Vuoi delle mele? Sì, ne prendo due.",
+        "test": "The sentence has ne referring back to a quantity of something already mentioned, or used in a fixed expression like averne bisogno/voglia or pensarne qualcosa."
+      },
+      {
+        "id": "it.b1.combined-pronouns",
+        "name": "Combined pronouns (glielo, me lo, te lo)",
+        "note": "An indirect object pronoun and a direct object pronoun fuse into one word before the verb (mi+lo=me lo, gli/le+lo=glielo), including in compound tenses (te l'ha portato? gliel'hai detto?).",
+        "example": "Il libro? Te lo presto volentieri; gliel'ho già dato ieri.",
+        "test": "The sentence has a combined pronoun form (me lo/te lo/glielo/ce lo/ve lo/gliene, etc.) standing for both an indirect and a direct object at once."
+      },
+      {
+        "id": "it.b1.pronoun-position",
+        "name": "Enclitic and proclitic pronoun position",
+        "note": "Object pronouns attach to the end of an infinitive or an informal imperative (vado a trovarlo, ascoltami!); with a modal verb they can go either before the modal or attached to the infinitive (non lo posso fare / non posso farlo).",
+        "example": "Vado a trovarlo domani; non lo posso vedere oggi.",
+        "test": "The sentence has an object pronoun attached to the end of an infinitive or an informal imperative, or shows a modal-verb sentence where the pronoun is placed either before the modal or attached to its infinitive."
+      },
+      {
+        "id": "it.b1.relative-cui",
+        "name": "Relative pronoun cui after a preposition",
+        "note": "Cui is the invariable relative pronoun used after a preposition (per cui, con cui, a cui), where che cannot be used.",
+        "example": "E la ragazza con cui esco spesso.",
+        "test": "The sentence has a preposition + cui introducing a relative clause."
+      },
+      {
+        "id": "it.b1.comparativi",
+        "name": "Comparatives and relative superlative",
+        "note": "Comparisons of superiority/inferiority use più/meno...di (between two nouns) or più/meno...che (between two qualities); equality uses (tanto)...quanto or (così)...come; the relative superlative uses il più/meno...di. A handful of adjectives have irregular forms (migliore, peggiore, maggiore, minore, ottimo).",
+        "example": "Mario è più alto di Luca, ma è il migliore della classe.",
+        "test": "The sentence has a comparative (più/meno...di or ...che, or tanto/così...quanto/come) or a relative superlative (il più/meno...di), possibly with an irregular form like migliore/peggiore/maggiore/minore."
+      },
+      {
+        "id": "it.b1.bello-buono-prenominal",
+        "name": "Bello and buono before the noun",
+        "note": "Bello and buono change shape like the definite article/uno when placed before the noun (un bel quadro, un buon modello), unlike their regular form after the noun.",
+        "example": "È un bel quadro e un buon modello di scrittura.",
+        "test": "The sentence has bello or buono in its article-like short form, placed directly before the noun it modifies."
+      },
+      {
+        "id": "it.b1.diminutivi",
+        "name": "Diminutive suffix -ino",
+        "note": "The suffix -ino/-ina makes an adjective or noun affectionately small (piccolino, un mercatino).",
+        "example": "Praga è piccolina, ma ha un bel mercatino.",
+        "test": "The sentence has a word altered with the diminutive suffix -ino/-ina/-etto/-etta carrying that diminutive meaning."
+      },
+      {
+        "id": "it.b1.indefiniti-estesi",
+        "name": "Nessuno, qualsiasi, diverso as adjectives",
+        "note": "Nessuno (with obligatory non if postverbal), qualsiasi (invariable, before the noun), and diverso/parecchio used as plural indefinite adjectives meaning 'several'.",
+        "example": "Non ho incontrato nessun professore, ma ho visitato diversi musei.",
+        "test": "The sentence has nessuno (with non if the verb precedes it), qualsiasi directly before a noun, or diverso/parecchio used as a plural indefinite adjective meaning 'several'."
+      },
+      {
+        "id": "it.b1.plurali-estesi",
+        "name": "Extended plural patterns",
+        "note": "Further plural patterns: -ista/-a nouns distinguish gender only by article, sovrabbondanti nouns have two plurals of different gender (il braccio -> le braccia), and altered nouns (mercatino, valigiona) keep the base noun's gender.",
+        "example": "Le braccia mi fanno male dopo aver portato quella valigiona.",
+        "test": "The sentence has a noun with an irregular double plural (braccio/braccia, lenzuolo/lenzuola, etc.) or an altered noun with an augmentative/diminutive suffix keeping the base noun's gender."
+      },
+      {
+        "id": "it.b1.coordinanti",
+        "name": "Coordinating connectives",
+        "note": "Connectives link two clauses: adversative (però, tuttavia, comunque, invece), conclusive (quindi, dunque, perciò), explicative (infatti, cioè), correlative (né...né, sia...sia), and disjunctive (oppure, sennò).",
+        "example": "Non ho tempo, però verrò lo stesso; sono stanco, quindi vado a dormire.",
+        "test": "The sentence has two clauses joined by one of these connectives, used with its listed meaning (contrast, conclusion, explanation, correlation, or alternative)."
+      },
+      {
+        "id": "it.b1.subordinate-causali-temporali",
+        "name": "Causal and temporal subordinate clauses",
+        "note": "Explicit causal clauses (siccome, dato che, visto che) and temporal clauses for simultaneity (mentre), anteriority (prima di + infinitive), and posteriority (dopo che, quando, appena + indicative).",
+        "example": "Siccome pioveva, siamo rimasti a casa; usciremo appena smetterà di piovere.",
+        "test": "The sentence has a clause introduced by siccome/dato che/visto che (causal), mentre (simultaneity), prima di + infinitive (anteriority), or dopo che/quando/appena + indicative (posteriority)."
+      },
+      {
+        "id": "it.b1.concessiva-anche-se",
+        "name": "Concessive anche se",
+        "note": "Anche se introduces a concessive clause with the indicative - a fact that doesn't stop the main clause from being true.",
+        "example": "Anche se pioveva, siamo usciti lo stesso.",
+        "test": "The sentence has anche se followed by an indicative verb, introducing a concessive clause."
+      }
+    ],
+    "b2": [
+      {
+        "id": "it.b2.passato-remoto",
+        "name": "Passato remoto",
+        "note": "The passato remoto reports a completed past event with no felt link to the present, the way passato prossimo often implies. In everyday spoken Italian it survives mainly in the South and in oral storytelling; in the North, and in most spoken registers nationwide, passato prossimo replaces it even for distant events. It stays the norm in written narrative, literary, and historical texts.",
+        "example": "Dante nacque a Firenze e morì a Ravenna nel 1321.",
+        "test": "The sentence has a passato remoto form (nacque, morì, disse, andò, fu, etc.) reporting a completed, presence-detached past event, appropriate to narrative or historical register rather than everyday spoken description."
+      },
+      {
+        "id": "it.b2.presente-storico",
+        "name": "Presente storico",
+        "note": "The present indicative can narrate a past event as if it were happening now, for narrative vividness.",
+        "example": "Nel 1492 Colombo arriva in America.",
+        "test": "The sentence uses a present-tense verb to narrate an event explicitly located in the past by a date or time expression, rather than describing something happening now."
+      },
+      {
+        "id": "it.b2.congiuntivo-passato",
+        "name": "Congiuntivo passato",
+        "note": "The past subjunctive marks a subordinate event as prior to a present-tense verb of opinion, hope, feeling, or doubt.",
+        "example": "Penso che abbia già finito il lavoro.",
+        "test": "The sentence has a congiuntivo passato (present subjunctive of avere/essere + participle) in a che-clause depending on a present-tense verb of opinion/feeling/doubt, marking anteriority."
+      },
+      {
+        "id": "it.b2.congiuntivo-imperfetto",
+        "name": "Congiuntivo imperfetto",
+        "note": "The imperfect subjunctive expresses a wish, or marks simultaneity/anteriority in a clause depending on a past-tense main verb.",
+        "example": "Mi piacerebbe che venisse anche lui; pensavo che fosse già partito.",
+        "test": "The sentence has a congiuntivo imperfetto in a che-clause, either after a conditional-tense wish or depending on a past-tense main verb."
+      },
+      {
+        "id": "it.b2.congiuntivo-trapassato",
+        "name": "Congiuntivo trapassato",
+        "note": "The pluperfect subjunctive marks a subordinate event as prior to a past-tense main verb.",
+        "example": "Pensavo che non avesse funzionato.",
+        "test": "The sentence has a congiuntivo trapassato (imperfect subjunctive of avere/essere + participle) in a che-clause depending on a past-tense main verb, marking anteriority."
+      },
+      {
+        "id": "it.b2.concordanza-tempi-congiuntivo",
+        "name": "Sequence of tenses across the subjunctive",
+        "note": "Which subjunctive tense a che-clause takes is governed by the tense of the main verb and the time relation between the two clauses, spanning all four subjunctive tenses.",
+        "example": "Credo che venga; credevo che venisse; credo che sia venuto; credevo che fosse venuto.",
+        "test": "Given the main clause's tense (present or past) and the intended time relation (simultaneous or prior), the subjunctive tense used in the che-clause is the one the sequence-of-tenses rule predicts."
+      },
+      {
+        "id": "it.b2.congiuntivo-congiunzioni",
+        "name": "Subjunctive after purché, benché, affinché",
+        "note": "A closed set of subordinating conjunctions always take the subjunctive: purché/a condizione che (condition), perché/affinché (purpose), sebbene/benché/nonostante (concession), a meno che non (exception).",
+        "example": "Vengo, purché tu mi accompagni; usciamo, sebbene faccia freddo.",
+        "test": "The sentence has purché, affinché, sebbene/benché/nonostante, or a meno che (non) introducing a clause with a subjunctive verb."
+      },
+      {
+        "id": "it.b2.condizionale-passato",
+        "name": "Condizionale passato",
+        "note": "The past conditional expresses an unfulfilled wish or plan (Avrei voluto venire) or reports, from a past-tense verb, an action that was future relative to that past moment (ha detto che sarebbe venuto).",
+        "example": "Avrei voluto venire alla festa; mi ha detto che sarebbe venuto.",
+        "test": "The sentence has a past conditional expressing an unfulfilled wish, or reporting from a past-tense main verb an action that was future relative to that past moment."
+      },
+      {
+        "id": "it.b2.periodo-ipotetico-possibilita",
+        "name": "Periodo ipotetico della possibilita",
+        "note": "The second conditional links a hypothetical, unlikely-but-possible condition (se + imperfect subjunctive) to a present-conditional consequence.",
+        "example": "Se venissi, sarei contento.",
+        "test": "The sentence is a se-clause with congiuntivo imperfetto in the condition and condizionale presente in the consequence."
+      },
+      {
+        "id": "it.b2.periodo-ipotetico-irrealta",
+        "name": "Periodo ipotetico dell'irrealta",
+        "note": "The third conditional states a condition contrary to what actually happened, with se + pluperfect subjunctive and a past-conditional consequence.",
+        "example": "Se avessi saputo, ti avrei chiamato.",
+        "test": "The sentence is a se-clause with congiuntivo trapassato in the condition and condizionale passato in the consequence, describing something that did not in fact happen."
+      },
+      {
+        "id": "it.b2.gerundio-presente",
+        "name": "Gerundio presente (implicit clause)",
+        "note": "The present gerund attaches a temporal, causal, or modal circumstance to the main clause with no conjunction (Uscendo ho chiuso la porta = 'as I went out').",
+        "example": "Uscendo di casa, ho chiuso la porta a chiave.",
+        "test": "The sentence has a present-gerund clause giving the time, cause, or manner of the main action, with no subordinating conjunction."
+      },
+      {
+        "id": "it.b2.gerundio-passato",
+        "name": "Gerundio passato",
+        "note": "The past gerund (avendo fatto, essendo uscito) marks that the gerund's action happened before the main clause's, usually with a causal flavor.",
+        "example": "Avendo rifatto l'esercizio, ho capito l'errore.",
+        "test": "The sentence has a past gerund (avendo/essendo + participle) whose action is complete before the main clause's action."
+      },
+      {
+        "id": "it.b2.infinito-nominale-causativo",
+        "name": "Infinitive as noun; fare/lasciare + infinitive",
+        "note": "The infinitive can act as a noun (fumare fa male) or serve as the complement of a causative verb (fare/lasciare + infinitive: mi ha fatto ridere, lo lascio parlare).",
+        "example": "Fumare fa male; mi ha fatto ridere tutta la sera.",
+        "test": "The sentence has an infinitive functioning as a noun-phrase subject or object, or fare/lasciare directly followed by an infinitive whose implied subject is a different person (causative construction)."
+      },
+      {
+        "id": "it.b2.infinito-passato-temporale",
+        "name": "Infinito passato after dopo/prima di",
+        "note": "The past infinitive (aver salutato, essere partito) marks an action completed before another, after dopo or prima di.",
+        "example": "Sono partita dopo aver salutato tutti.",
+        "test": "The sentence has dopo or prima di followed by a past infinitive (avere/essere + participle) marking an action completed relative to the main clause."
+      },
+      {
+        "id": "it.b2.participio-passato-adjectival",
+        "name": "Past participle as adjective / reduced clause",
+        "note": "A past participle can stand alone with an adjectival or reduced-temporal-clause function, agreeing with the noun it describes (la porta chiusa; finita la lezione = 'once the lesson had finished').",
+        "example": "Ho trovato la porta chiusa; finita la lezione, siamo usciti.",
+        "test": "The sentence has a past participle used as an adjective agreeing with its noun, or opening a reduced clause standing in for an earlier temporal clause."
+      },
+      {
+        "id": "it.b2.passivo-essere-venire",
+        "name": "Passive with essere and venire",
+        "note": "The passive voice with essere or venire (venire only in simple tenses) turns the object of an active sentence into its subject, and the participle agrees with that subject.",
+        "example": "La lettera è stata scritta ieri; il pane viene fatto ogni mattina.",
+        "test": "The sentence has essere or venire + past participle forming a passive, with the participle agreeing with the grammatical subject."
+      },
+      {
+        "id": "it.b2.pronomi-tonici-estesi",
+        "name": "Sé, i suoi, stesso, ciò",
+        "note": "Sé is the tonic reflexive pronoun for third person (ha portato con sé); possessive pronouns can mean 'one's family' as a set noun (i suoi); demonstrative pronouns extend to stesso ('the same') and ciò ('this/that', abstract).",
+        "example": "Ha portato con sé anche i suoi; volevo andare lontano da tutto ciò.",
+        "test": "The sentence has sé as a third-person tonic reflexive, i suoi/i miei meaning 'my/his family', or stesso/ciò used as a demonstrative pronoun."
+      },
+      {
+        "id": "it.b2.pronomi-indefiniti-relativi-estesi",
+        "name": "Ciascuno, chiunque, il quale, chi/quanto",
+        "note": "Further indefinite pronouns (ciascuno, ognuno, uno, chiunque), the relative il quale (agreeing, usable after any preposition), and double relatives chi ('the one who') and quanto ('as much as').",
+        "example": "Chiunque può partecipare; è la persona per la quale lavoro; aiuto chi ha bisogno.",
+        "test": "The sentence has ciascuno/ognuno/uno/chiunque as an indefinite pronoun, il/la quale as a relative, or chi/quanto used as a headless (double) relative pronoun."
+      },
+      {
+        "id": "it.b2.pronomi-verbi-composti",
+        "name": "Lexicalized clitic verbs",
+        "note": "A handful of verbs are lexicalized with a fixed clitic that no longer means anything on its own: cavarsela, farcela, andarsene, prendersela.",
+        "example": "Non ce la faccio più; me ne vado.",
+        "test": "The sentence has one of these fixed clitic verbs (cavarsela, farcela, andarsene, prendersela, mettercela) conjugated as a unit, with the clitic not standing for anything else in the sentence."
+      },
+      {
+        "id": "it.b2.si-passivante",
+        "name": "Si passivante vs. impersonale",
+        "note": "Si + a third-person verb can form a passive (si passivante) when the logical object controls the verb's number (si mangiano i frutti di mare = 'seafood is eaten'), distinct from the impersonal si that always takes a singular verb; a clitic can combine with impersonal si too (ci si deve mettere l'olio).",
+        "example": "In quel ristorante si mangiano ottimi frutti di mare; ci si deve prenotare in anticipo.",
+        "test": "The sentence has si + a verb agreeing in number with the following noun phrase (si passivante), or ci si + verb combining impersonal si with another clitic."
+      },
+      {
+        "id": "it.b2.dislocazione-frase-scissa",
+        "name": "Left dislocation and cleft sentences",
+        "note": "Left dislocation moves an object to the front, resumed by a matching clitic (Il vino l'ha finito Mario); cleft sentences isolate one element with è/sono...che for focus (È lei che non ha voluto vedermi).",
+        "example": "Il vino rosso l'ha finito Mario; è lei che non ha voluto vedermi.",
+        "test": "The sentence has an object moved to sentence-initial position and resumed by a matching clitic pronoun later in the clause, or an è/sono...che cleft construction isolating one element for focus."
+      },
+      {
+        "id": "it.b2.posizione-aggettivo",
+        "name": "Adjective position and meaning shift",
+        "note": "Some adjectives change meaning depending on position (un buon amico = a good/close friend; un amico buono = a morally good friend).",
+        "example": "E un buon amico, non semplicemente un amico buono.",
+        "test": "The sentence places an adjective to convey the meaning that position carries (figurative/evaluative before the noun vs. literal/descriptive after it), using one of the adjectives where position genuinely changes the meaning (buono, grande, povero, vecchio, caro, and similar)."
+      },
+      {
+        "id": "it.b2.congiunzioni-avanzate",
+        "name": "Poiché, finché, prima che, nemmeno",
+        "note": "Poiché (causal, usable mid-sentence unlike siccome), finché (non) for 'until', prima che + subjunctive for 'before' with a different subject, and nemmeno for negative coordination.",
+        "example": "Non è venuto Marco e nemmeno Luca, poiché avevano un altro impegno; resteremo finché non smetterà di piovere.",
+        "test": "The sentence has poiché (causal), finché (non) meaning 'until', prima che + subjunctive, or nemmeno coordinating a second negative element."
+      },
+      {
+        "id": "it.b2.interrogativa-indiretta",
+        "name": "Indirect yes/no questions with se",
+        "note": "An indirect yes/no question is introduced by se, not che (Volevo sapere se venivate anche voi).",
+        "example": "Volevo sapere se venivate anche voi.",
+        "test": "The sentence has se introducing an embedded yes/no question after a verb like sapere/chiedere/domandare."
+      },
+      {
+        "id": "it.b2.frase-modale-come-se",
+        "name": "Come se + congiuntivo",
+        "note": "Come se ('as if') always takes the subjunctive, describing a manner that isn't real.",
+        "example": "Mi parlava come se fosse il mio direttore.",
+        "test": "The sentence has come se followed by a subjunctive verb, describing an as-if manner."
+      }
+    ],
+    "c1": [
+      {
+        "id": "it.c1.discorso-indiretto-concordanza",
+        "name": "Discorso indiretto: sequence of tenses",
+        "note": "Reporting someone's words shifts the tense back (present -> imperfect, passato prossimo -> trapassato, futuro -> condizionale passato) and swaps deictic words (oggi -> quel giorno, qui -> li) - the fully general version of the sequence-of-tenses rule used in everyday narration and formal writing alike.",
+        "example": "Ha detto che sarebbe arrivato il giorno dopo e che quella decisione l'aveva già presa.",
+        "test": "The sentence reports someone's earlier statement with the expected tense backshift (e.g., a future becomes condizionale passato, a present becomes imperfetto) and, where relevant, a shifted time/place word (quel giorno, li) rather than the original deictic (domani, qui)."
+      },
+      {
+        "id": "it.c1.participio-assoluto",
+        "name": "Participio assoluto",
+        "note": "An absolute participial clause opens a sentence with a past participle whose implicit subject differs from the main clause's, standing for a temporal or causal clause (Finita la lezione, uscimmo = 'once the lesson was over').",
+        "example": "Finita la lezione, gli studenti uscirono in cortile.",
+        "test": "The sentence opens with a past participle (agreeing with its own noun) forming a temporal/causal clause, standing in for a subordinate clause like 'una volta finita...' or 'dopo che...'."
+      },
+      {
+        "id": "it.c1.gerundio-assoluto-formale",
+        "name": "Fronted gerund for causal/concessive nuance",
+        "note": "In formal or written register, a fronted gerund clause can carry a causal, concessive, or hypothetical nuance that spoken Italian would spell out with a conjunction (Pur avendo studiato, non ha superato l'esame = 'even though he had studied').",
+        "example": "Pur avendo studiato molto, non ha superato l'esame.",
+        "test": "The sentence has a fronted gerund clause (optionally with pur for concessive force) carrying a causal, concessive, or hypothetical meaning that a spoken register would instead express with a conjunction."
+      },
+      {
+        "id": "it.c1.passivante-andare-obbligo",
+        "name": "Andare + participio for obligation",
+        "note": "Andare + past participle expresses necessity or obligation, not motion (Il modulo va compilato = 'The form must be filled in'), common in instructions and formal writing.",
+        "example": "Il modulo va compilato in ogni sua parte e va consegnato entro venerdì.",
+        "test": "The sentence has andare + past participle expressing that something must or should be done, agreeing with its subject - not a literal sense of 'going'."
+      },
+      {
+        "id": "it.c1.congiuntivo-relative-indefinite",
+        "name": "Subjunctive with chiunque, qualunque, per quanto",
+        "note": "The subjunctive appears in indefinite relative and concessive-conditional clauses built on chiunque, qualunque/qualsiasi cosa, and per quanto, meaning 'whoever/whatever/however much'.",
+        "example": "Chiunque tu sia, per quanto tu insista, non cambierò idea.",
+        "test": "The sentence has chiunque, qualunque cosa/qualsiasi cosa, or per quanto introducing a clause with a subjunctive verb, with a 'no matter who/what/how much' meaning."
+      },
+      {
+        "id": "it.c1.causativo-riflessivo",
+        "name": "Farsi + infinitive (reflexive causative)",
+        "note": "Farsi + infinitive is the reflexive causative: the subject has something done to or for them by someone else (Mi sono fatto tagliare i capelli = 'I had my hair cut').",
+        "example": "Mi sono fatto tagliare i capelli ieri.",
+        "test": "The sentence has farsi + infinitive where the subject is having the action performed by someone else rather than doing it themselves."
+      },
+      {
+        "id": "it.c1.nominalizzazione-formale",
+        "name": "Nominalization in formal register",
+        "note": "Formal written Italian often replaces a verb clause with a noun derived from it (la realizzazione del progetto rather than realizzare il progetto), a hallmark of bureaucratic and academic register.",
+        "example": "La realizzazione del progetto ha richiesto due anni di lavoro.",
+        "test": "The sentence uses a deverbal noun (ending in -zione/-mento/-aggio, etc.) as the grammatical subject or object in place of a finite or infinitive clause built on the same verb."
+      },
+      {
+        "id": "it.c1.periodo-ipotetico-registro",
+        "name": "Informal-register hypothetical (indicative for indicative)",
+        "note": "Spoken/informal Italian often replaces the subjunctive-plus-conditional of the standard hypothetical periods with the indicative in both clauses (Se sapevo, non venivo) - a register variant a C1 learner needs to recognize even while producing the standard written form.",
+        "example": "Se lo sapevo, non venivo di sicuro.",
+        "test": "The sentence is a se-clause using imperfetto indicativo in both the condition and the consequence, where the standard written norm would require congiuntivo + condizionale, marking it as an informal/spoken-register hypothetical."
+      },
+      {
+        "id": "it.c1.connettivi-testuali-argomentativi",
+        "name": "Argumentative text connectives",
+        "note": "Written argumentative Italian uses a further layer of connectives to organize a text - pertanto, di conseguenza, in tal modo, ciò nonostante - beyond the sentence-level conjunctions already known.",
+        "example": "Le prove erano insufficienti; di conseguenza, il progetto è stato sospeso. Ciò nonostante, il team resta ottimista.",
+        "test": "The sentence uses a text-organizing connective (pertanto, di conseguenza, in tal modo, ciò nonostante, or similar) linking it to the argument of a preceding sentence, rather than a basic conjunction like quindi/però already taught at B1."
+      },
+      {
+        "id": "it.c1.registro-formale-lei-loro",
+        "name": "Consistent formal register",
+        "note": "Formal written and bureaucratic register keeps Lei/Loro address consistently and favors passive or impersonal phrasing to avoid naming the addressee directly - a register choice rather than a new structure.",
+        "example": "La preghiamo di voler compilare il modulo allegato e di restituirlo entro la scadenza indicata.",
+        "test": "The sentence maintains formal Lei/Loro address, or an impersonal/passive phrasing that avoids a direct tu/voi, in a register appropriate to an official letter or notice."
+      }
+    ]
+  }
+}

@@ -1,0 +1,903 @@
+{
+  "language": "es",
+  "sources": [
+    "Instituto Cervantes, Plan curricular del Instituto Cervantes. Niveles de referencia para el espanol -- Gramatica. Inventario A1-A2: https://cvc.cervantes.es/ENSENANZA/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_a1-a2.htm",
+    "Instituto Cervantes, Plan curricular del Instituto Cervantes -- Gramatica. Inventario B1-B2: https://cvc.cervantes.es/ENSENANZA/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_b1-b2.htm",
+    "Instituto Cervantes, Plan curricular del Instituto Cervantes -- Gramatica. Inventario C1-C2 (C1 column only used here): https://cvc.cervantes.es/ENSENANZA/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_c1-c2.htm",
+    "Instituto Cervantes, Plan curricular del Instituto Cervantes -- indice general: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/indice.htm"
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "es.a1.noun-gender-number",
+        "name": "Noun gender and number",
+        "note": "Spanish nouns are inherently masculine or feminine (usually visible in the article and the -o/-a ending) and pluralize by adding -s after a vowel or -es after a consonant.",
+        "example": "El libro es nuevo. Las casas son grandes.",
+        "test": "The sentence contains a noun whose article or adjective shows the correct gender, and whose ending shows the correct number (-s after a vowel, -es after a consonant) if the noun is plural."
+      },
+      {
+        "id": "es.a1.definite-article",
+        "name": "Definite article",
+        "note": "el/la/los/las mark a noun as specific or already known; el contracts with de and a to del and al.",
+        "example": "La profesora habla con el director del colegio.",
+        "test": "The sentence contains el, la, los, las, del, or al, agreeing in gender and number with the noun it introduces, and that noun is presented as specific or already identified."
+      },
+      {
+        "id": "es.a1.indefinite-article",
+        "name": "Indefinite article",
+        "note": "un/una/unos/unas introduce a noun for the first time or present it as one among several, not a specific known one.",
+        "example": "Tengo un hermano y una hermana.",
+        "test": "The sentence contains un, una, unos, or unas agreeing in gender and number with a noun being introduced for the first time (not previously mentioned)."
+      },
+      {
+        "id": "es.a1.adjective-agreement-position",
+        "name": "Adjective agreement and position",
+        "note": "A descriptive adjective agrees in gender and number with its noun and, by default, follows it.",
+        "example": "Tengo un coche rojo y dos bicicletas rojas.",
+        "test": "The sentence contains a descriptive adjective placed after its noun, matching that noun's gender and number."
+      },
+      {
+        "id": "es.a1.demonstratives",
+        "name": "Demonstratives",
+        "note": "este/ese/aquel (and their forms) mark three degrees of distance from the speaker; esto/eso/aquello are the neuter forms used for an unnamed thing or idea.",
+        "example": "Este libro es mío, ese es tuyo y aquel es de Marta.",
+        "test": "The sentence contains a demonstrative (este/esta/estos/estas, ese/esa/esos/esas, aquel/aquella/aquellos/aquellas) placed before the noun it points to, or one of the neuter forms esto/eso/aquello standing alone for an unnamed thing."
+      },
+      {
+        "id": "es.a1.possessives-unstressed",
+        "name": "Unstressed possessives",
+        "note": "mi/tu/su/nuestro/vuestro go before the noun and agree with the thing possessed, not with the possessor; nuestro/vuestro also mark gender.",
+        "example": "Mi hermano vive con nuestros padres.",
+        "test": "The sentence contains an unstressed possessive (mi, tu, su, nuestro/a, vuestro/a, sus...) placed directly before its noun and matching that noun's number, and gender in the case of nuestro/vuestro."
+      },
+      {
+        "id": "es.a1.cardinal-numbers",
+        "name": "Cardinal numbers",
+        "note": "Cardinal numbers count; from two hundred up, the hundreds word agrees in gender with the noun it counts (doscientos euros, doscientas personas).",
+        "example": "Tengo veinte años y doscientos euros.",
+        "test": "The sentence contains a cardinal number counting a noun, and if that number is a multiple of one hundred above one hundred, it agrees in gender with the noun it counts."
+      },
+      {
+        "id": "es.a1.subject-pronoun-optional",
+        "name": "Subject pronoun presence and absence",
+        "note": "The verb ending already shows the grammatical person, so Spanish normally drops the subject pronoun; yo/tú/él... appear mainly to contrast one subject with another.",
+        "example": "Soy española. / Yo soy española y tú eres italiano.",
+        "test": "Either the sentence has a finite verb with no subject pronoun before it, or a subject pronoun (yo, tú, él...) is present specifically to contrast it with a different subject named nearby."
+      },
+      {
+        "id": "es.a1.tu-vs-usted",
+        "name": "Tú versus usted",
+        "note": "tú is the informal second person; usted is the formal second person but is grammatically third person, so it takes third-person verb endings.",
+        "example": "¿Tú de dónde eres? ¿Y usted, de dónde es?",
+        "test": "Usted or ustedes is followed by a verb conjugated in the third person (not a tú-form), or tú is followed by a second-person-singular verb form."
+      },
+      {
+        "id": "es.a1.present-regular",
+        "name": "Regular present indicative",
+        "note": "-ar, -er and -ir verbs take a fixed set of present-tense endings for each grammatical person.",
+        "example": "Estudio español y trabajo por la tarde.",
+        "test": "The sentence contains a finite present-tense form of a regular -ar/-er/-ir verb, correctly ended for its subject's person and number."
+      },
+      {
+        "id": "es.a1.present-irregular-core",
+        "name": "Core irregular presents: ser, estar, tener, ir, hacer",
+        "note": "These high-frequency verbs do not take the regular endings on an unchanged stem; their present-tense forms have to be learned individually.",
+        "example": "Voy a casa, tengo hambre y hago la cena.",
+        "test": "The sentence contains a finite present-tense form of ser, estar, tener, ir, or hacer that is not simply the regular ending added unchanged to the infinitive stem (soy, eres, es, estoy, tengo, voy, hago...)."
+      },
+      {
+        "id": "es.a1.ser-identity",
+        "name": "Ser without an adjective: identity, origin, profession, time",
+        "note": "ser links the subject to what it fundamentally is: a name, a nationality or origin, a profession or category, or the day/date/time. It never states location or a temporary condition.",
+        "example": "Soy Elena. Soy española y soy profesora. Hoy es lunes.",
+        "test": "The sentence has a finite form of ser (soy, eres, es, somos, sois, son) whose complement either identifies the subject (a name or pronoun), states its origin/nationality, states a profession or category it belongs to, or gives the day/date/time — and never a place or a physical/emotional condition."
+      },
+      {
+        "id": "es.a1.estar-location",
+        "name": "Estar without an adjective: location",
+        "note": "estar (not ser) states where someone or something is. This is one of the two things 'to be' splits into in Spanish, and using ser here instead is the classic learner error.",
+        "example": "Ana está en la escuela. El libro está aquí.",
+        "test": "The sentence has a finite form of estar (estoy, estás, está, estamos, estáis, están) followed by a place phrase (en/a/con + place, or a locative adverb like aquí/allí) telling where the subject is located — not identity, origin, profession, or time."
+      },
+      {
+        "id": "es.a1.hay-vs-estar-location",
+        "name": "Hay versus estar for existence and location",
+        "note": "hay (one invariable form) announces that something indefinite exists; estar locates something the listener can already identify. 'Hay una mesa' introduces a table; 'la mesa está aquí' locates the table already mentioned.",
+        "example": "En la sala hay tres sillas. La silla roja está al lado de la ventana.",
+        "test": "hay is followed by an indefinite noun phrase (no definite article) announcing that something exists, or a form of estar with a place phrase locates a noun that already has a definite article or possessive — the sentence must not use hay with a definite noun (*hay la mesa) nor use estar with a bare indefinite noun to announce existence."
+      },
+      {
+        "id": "es.a1.gustar-dative",
+        "name": "Gustar with a dative experiencer",
+        "note": "With gustar, the person who likes something is marked by a dative pronoun (me/te/le/nos/os/les), not by a subject pronoun; the verb instead agrees with the thing liked.",
+        "example": "Me gusta el chocolate. ¿Te gustan los deportes?",
+        "test": "The sentence contains me/te/le/nos/os/les followed by gusta (when what follows is singular or an infinitive) or gustan (when what follows is plural), with the person who likes it expressed only by that dative pronoun, never by yo/tú/él as a grammatical subject."
+      },
+      {
+        "id": "es.a1.relative-que",
+        "name": "Relative que",
+        "note": "que introduces a clause that says which person or thing is meant, placed right after the noun it describes; it never changes form for gender or number.",
+        "example": "Tengo un amigo que vive en Madrid.",
+        "test": "que follows a noun and introduces a clause with its own conjugated present-tense verb that further identifies that noun (a restrictive relative clause), with que itself unchanged for gender or number."
+      },
+      {
+        "id": "es.a1.interrogatives",
+        "name": "Question words: qué, quién, cuándo, dónde, cómo, cuánto",
+        "note": "These interrogatives carry a written accent and normally open the question, asking directly for the missing piece of information.",
+        "example": "¿Dónde vives? ¿Cuántos hermanos tienes?",
+        "test": "The sentence opens with an accented question word (qué, quién/quiénes, cuándo, dónde, cómo, or cuánto/a/os/as) that names what the question is actually asking for, and is punctuated with ¿...?"
+      },
+      {
+        "id": "es.a1.negation-no",
+        "name": "Negation with no",
+        "note": "no goes directly before the finite verb (or before any pronoun attached to it) to negate the whole predicate.",
+        "example": "No tengo hermanos. No lo entiendo.",
+        "test": "no immediately precedes the finite verb, with nothing but an object pronoun allowed between them."
+      },
+      {
+        "id": "es.a1.intensifier-muy",
+        "name": "Intensification with muy",
+        "note": "muy is invariable and goes directly before an adjective or adverb to intensify it; it cannot go directly before a noun.",
+        "example": "Este libro es muy interesante.",
+        "test": "muy directly precedes an adjective or adverb (never a noun) and is itself unchanged for gender or number."
+      },
+      {
+        "id": "es.a1.infinitive-as-complement",
+        "name": "Infinitive as the complement of another verb",
+        "note": "An infinitive can be the thing wanted after querer or the thing liked after gustar, with no conjugated verb or connector between the two verbs.",
+        "example": "Quiero ir a España. Me gusta estudiar español.",
+        "test": "An infinitive immediately follows a conjugated verb like querer, or follows gusta/gustan, functioning as what is wanted or liked, with no que and no second conjugated verb in between."
+      },
+      {
+        "id": "es.a1.participle-as-adjective",
+        "name": "Past participle as an adjective after estar",
+        "note": "A past participle after estar describes the subject's resulting state and agrees with it in gender and number, rather than forming a compound tense.",
+        "example": "Estoy cansado. La puerta está cerrada.",
+        "test": "A past participle (ending in -ado/-ido, or an irregular form like abierto/roto) follows a finite form of estar and agrees in gender and number with the subject, describing a state rather than being part of a haber + participle tense."
+      },
+      {
+        "id": "es.a1.causal-porque",
+        "name": "Cause with porque",
+        "note": "porque introduces the reason for what was just said and is always followed by a conjugated verb, never a noun phrase alone.",
+        "example": "Estudio español porque mi novio es de España.",
+        "test": "porque introduces a clause with a conjugated verb that gives the reason for the main clause's action."
+      },
+      {
+        "id": "es.a1.purpose-para-infinitive",
+        "name": "Purpose with para + infinitive",
+        "note": "para + infinitive states what something is for or why an action is done, used when the same person is understood as doing both actions.",
+        "example": "Tengo un libro para aprender español.",
+        "test": "para is directly followed by an infinitive expressing the goal or use of what precedes, with the same subject understood for both verbs."
+      },
+      {
+        "id": "es.a1.coordination-basic",
+        "name": "Basic coordination: y, o, pero, ni",
+        "note": "y joins two elements, o offers an alternative, pero contrasts them, and ni adds a second negated element after a negative.",
+        "example": "Soy alemán, pero vivo en España. No me gusta el frío ni la lluvia.",
+        "test": "The sentence uses y to add one clause or element to another, o to offer an alternative, pero to contrast two clauses, or ni to add a second negated element after a clause with no."
+      }
+    ],
+    "a2": [
+      {
+        "id": "es.a2.possessives-stressed",
+        "name": "Stressed possessives",
+        "note": "mío/tuyo/suyo/nuestro/vuestro follow the noun or stand alone (with the article) to identify whose it is, contrasting with the unstressed forms that go before the noun.",
+        "example": "Este bolso es mío. El tuyo está allí.",
+        "test": "A stressed possessive (mío/a/os/as, tuyo/a/os/as, suyo/a/os/as, nuestro/a/os/as, vuestro/a/os/as) either follows its noun directly or stands alone after the article (el mío) or after ser, agreeing in gender and number with the thing possessed."
+      },
+      {
+        "id": "es.a2.indefinite-quantifiers",
+        "name": "Indefinite quantifiers: todo, otro, demasiado, nada, nadie",
+        "note": "todo and otro agree in gender and number with the noun they quantify; nada and nadie can stand alone as a full answer to a question.",
+        "example": "Todos los días trabajo. ¿Quieres otro café? No hace demasiado frío.",
+        "test": "The sentence contains todo/a/os/as, otro/a/os/as, or demasiado/a agreeing with the noun it quantifies, or contains nada/nadie used alone or together with no to negate."
+      },
+      {
+        "id": "es.a2.comparative-degree",
+        "name": "Comparatives of superiority, equality and inferiority",
+        "note": "más...que, tan...como and menos...que compare two things; mejor, peor, mayor and menor are irregular comparatives that replace más bueno/malo/grande/pequeño.",
+        "example": "Juan es más alto que yo, pero yo soy tan rápido como él.",
+        "test": "The sentence contains más...que, tan...como, menos...que, or mejor/peor/mayor/menor que, comparing two people or things named on either side of the connector."
+      },
+      {
+        "id": "es.a2.direct-object-pronouns",
+        "name": "Direct object pronouns",
+        "note": "lo/la/los/las replace a direct object already mentioned and agree with it in gender and number; the invariable neuter lo can also stand for a whole idea rather than a specific noun.",
+        "example": "¿Tienes el libro? Sí, lo tengo. No lo entiendo [= la situación].",
+        "test": "The sentence contains lo, la, los, or las standing in for a direct object mentioned earlier, agreeing in gender and number with that object, or lo used invariably to refer back to an idea rather than a specific noun."
+      },
+      {
+        "id": "es.a2.indirect-object-pronouns-le-se",
+        "name": "Indirect object pronouns and le-to-se",
+        "note": "me/te/le/nos/os/les mark the indirect object; le or les must change to se whenever a direct object pronoun starting with l- (lo/la/los/las) follows in the same clause.",
+        "example": "Le doy el libro a Juan. Se lo doy.",
+        "test": "Either the sentence has le or les alone as an indirect object with no lo/la/los/las beside it, or, when both an indirect and a direct object pronoun appear together, the indirect one appears as se (never as le or les) placed immediately before lo/la/los/las."
+      },
+      {
+        "id": "es.a2.prepositional-pronouns",
+        "name": "Tonic pronouns after a preposition",
+        "note": "After most prepositions Spanish uses mí and ti (not yo, tú); con fuses with them into conmigo and contigo. These can be doubled with the clitic pronoun for emphasis.",
+        "example": "A mí me gusta el azul. ¿Vienes conmigo?",
+        "test": "The sentence contains mí or ti after a preposition (not yo/tú), or the fused forms conmigo/contigo, optionally doubled with a clitic pronoun of the same person for emphasis (a mí me...)."
+      },
+      {
+        "id": "es.a2.personal-a",
+        "name": "Personal a",
+        "note": "A direct object that names a specific person (or a pet treated like one) takes a before it; a direct object that is a thing does not.",
+        "example": "Vi a Juan en el parque. Vi el parque desde lejos.",
+        "test": "a immediately precedes a direct object that is a specific person (a proper name, a definite person, or alguien/nadie), and no a appears before a direct object that is a thing."
+      },
+      {
+        "id": "es.a2.gustar-type-extended",
+        "name": "Gustar-type verbs beyond gustar",
+        "note": "encantar, interesar and doler work exactly like gustar: a dative experiencer, and the verb agreeing with what is liked, of interest, or hurting; a mí, a ti... can be added before the pronoun for emphasis or contrast.",
+        "example": "A mí me encanta el cine, pero a ella le interesa más el teatro.",
+        "test": "The sentence contains encantar, interesar, or doler agreeing in number with a following noun or infinitive, with the experiencer marked by a dative pronoun (me/te/le...), optionally reinforced by a + mí/ti/él... placed before it."
+      },
+      {
+        "id": "es.a2.ir-a-infinitive",
+        "name": "Ir a + infinitive for the near future",
+        "note": "ir a + infinitive states a plan or a prediction based on the present situation, the everyday way to talk about the future.",
+        "example": "Mañana voy a ver una película.",
+        "test": "A finite form of ir (voy, vas, va, vamos, vais, van) is directly followed by a and an infinitive, expressing something planned or about to happen."
+      },
+      {
+        "id": "es.a2.aspectual-periphrases",
+        "name": "Aspectual periphrases: acabar de, empezar a, volver a",
+        "note": "acabar de + infinitive marks something just finished, empezar a + infinitive marks the start of an action, and volver a + infinitive marks its repetition.",
+        "example": "Acabo de llegar. Ha empezado a llover. Volvió a llamar.",
+        "test": "The sentence contains acabar de, empezar a, or volver a directly followed by an infinitive, with the meaning matching that periphrasis (just finished, starting, or repeated)."
+      },
+      {
+        "id": "es.a2.imperative-affirmative",
+        "name": "Affirmative imperative with enclitic pronouns",
+        "note": "The affirmative command form is used for instructions and direct orders; any object pronoun attaches to the end of it as a single written word.",
+        "example": "Cómpralo. Dale el libro. Sigue todo recto.",
+        "test": "The sentence contains a verb in the affirmative imperative form (matching tú, vosotros, or usted as addressee), with any object pronoun attached after it as one word rather than placed before it."
+      },
+      {
+        "id": "es.a2.preterite-indefinido",
+        "name": "Pretérito indefinido (simple past)",
+        "note": "The indefinido narrates a completed action anchored to a specific past moment; ser and ir share one irregular paradigm, and several common verbs change their stem (tuve, hice, estuve).",
+        "example": "Ayer fui a su casa y hablé con ella.",
+        "test": "The sentence contains a finite pretérito indefinido form (fui, hice, estuve, hablé, comió...) reporting an action presented as completed at a specific point in the past."
+      },
+      {
+        "id": "es.a2.imperfect-descriptive",
+        "name": "Pretérito imperfecto for description and habit",
+        "note": "The imperfecto describes how things were (people, places, time) or what used to happen repeatedly, with no defined endpoint in the sentence.",
+        "example": "Mi madre era alta y tenía el pelo largo. Iba al colegio todos los días.",
+        "test": "The sentence contains a finite pretérito imperfecto form (era, tenía, iba...) describing a background state, an ongoing situation, or a repeated/habitual past action, not a single completed event."
+      },
+      {
+        "id": "es.a2.preterite-vs-imperfect",
+        "name": "Indefinido versus imperfecto in the same passage",
+        "note": "The two past tenses answer different questions about the same stretch of time: indefinido reports what happened next, imperfecto sets the scene it happened in. The classic pattern pairs an imperfecto background with an indefinido event that interrupts it.",
+        "example": "Llovía mucho cuando salí de casa.",
+        "test": "The sentence combines an imperfecto clause describing an ongoing background situation with an indefinido clause reporting a single event that occurred during or interrupted it (typically linked by cuando or mientras) — using indefinido for the background, or imperfecto for the interrupting event, fails the test."
+      },
+      {
+        "id": "es.a2.present-perfect",
+        "name": "Pretérito perfecto compuesto",
+        "note": "haber (present) + participle reports a past action still relevant now, usually paired with a time marker that includes the present moment (hoy, ya, todavía no, esta semana).",
+        "example": "Hoy he comido paella. Todavía no he terminado.",
+        "test": "The sentence contains a present-tense form of haber (he/has/ha/hemos/habéis/han) immediately followed by a past participle, typically with a time expression that reaches into the present (hoy, ya, esta semana, todavía no)."
+      },
+      {
+        "id": "es.a2.estar-gerundio-progressive",
+        "name": "Estar + gerund for an action in progress",
+        "note": "estar + gerund frames an action as happening right now, rather than as a habit or a completed fact.",
+        "example": "Está escuchando música. Estamos aprendiendo español.",
+        "test": "A finite form of estar is directly followed by a gerund (-ando/-iendo), presenting the action as in progress at the moment referred to."
+      },
+      {
+        "id": "es.a2.obligation-tener-que-hay-que",
+        "name": "Obligation: tener que and hay que",
+        "note": "tener que + infinitive states an obligation for a specific subject; hay que + infinitive states a general, impersonal obligation with no subject named.",
+        "example": "Tengo que estudiar. Hay que trabajar mucho para aprender un idioma.",
+        "test": "The sentence contains tener que + infinitive with a specific conjugated subject, or the invariable hay que + infinitive with no subject at all — using hay que with an expressed subject, or tener que with none, fails the test."
+      },
+      {
+        "id": "es.a2.ser-estar-extended",
+        "name": "Ser and estar beyond the basics",
+        "note": "ser now also covers possession, quantities/prices and cause (with por); estar now also covers dates/seasons and fluctuating weather or prices (with a). Both still follow ser's identity logic and estar's location logic, just extended to new contexts.",
+        "example": "Es mi libro. Somos tres. Estamos a tres grados. Estamos en verano.",
+        "test": "A ser clause states possession (es de.../es mi...), a quantity or price (somos + number, es + price), or a cause with por; or an estar clause gives a date/season with en, or a fluctuating measurement with a (estamos a...) — not location and not a plain descriptive adjective."
+      },
+      {
+        "id": "es.a2.ser-estar-exclusive-adjectives",
+        "name": "Adjectives that take only ser or only estar",
+        "note": "Some adjectives describe an inherent trait and only ever appear with ser (sincero, inteligente); others describe a resulting condition and only appear with estar (contento, roto, vacío). The other copula with that same adjective would be ungrammatical, not just a different meaning.",
+        "example": "Luis es sincero. Ana está contenta.",
+        "test": "An adjective known to occur only with ser (an inherent trait, e.g. sincero, americano, alto) follows a form of ser, or an adjective known to occur only with estar (a resulting condition, e.g. contento, roto, vacío) follows a form of estar."
+      },
+      {
+        "id": "es.a2.por-vs-para",
+        "name": "Por versus para",
+        "note": "por gives the cause or reason behind something, looking back to what motivated it; para gives its purpose, goal, or destination, looking forward to what it is for. They are not interchangeable even when both could be translated as 'for'.",
+        "example": "Estoy en España por trabajo. Estudio para trabajar en España.",
+        "test": "por introduces the cause, reason, or motive behind the action (answers 'because of what?'), while para introduces its purpose, goal, or recipient (answers 'for what? / for whom?') — a sentence exercises por only if it names a cause, and para only if it names a goal."
+      },
+      {
+        "id": "es.a2.reflexive-verbs",
+        "name": "Reflexive verbs",
+        "note": "A reflexive verb marks that the subject does the action to itself, shown by a pronoun (me/te/se/nos/os) that matches the subject in person and number.",
+        "example": "Me levanto a las siete y me visto rápido.",
+        "test": "The sentence contains a reflexive pronoun (me/te/se/nos/os) matching the subject's person and number, placed with a verb whose action the subject performs on itself."
+      },
+      {
+        "id": "es.a2.exclamative-que",
+        "name": "Exclamative qué",
+        "note": "¡Qué + adjective/adverb/noun! expresses a reaction or evaluation, framed by inverted and closing exclamation marks.",
+        "example": "¡Qué bonito! ¡Qué bien hablas español!",
+        "test": "The sentence is framed by ¡...! and opens with qué directly followed by an adjective, adverb, or noun that is being reacted to."
+      },
+      {
+        "id": "es.a2.temporal-desde-hasta",
+        "name": "Temporal boundaries: desde and hasta",
+        "note": "desde marks the starting point of a period and hasta its endpoint; desde que introduces a whole clause as that starting point.",
+        "example": "Vivo aquí desde 2020. Trabajo hasta las seis. Desde que llegué, no he salido.",
+        "test": "The sentence contains desde (or desde que + clause) marking when something started, or hasta marking when it ends or ended."
+      },
+      {
+        "id": "es.a2.definite-article-discourse-uses",
+        "name": "Definite article for anaphoric and generic reference",
+        "note": "Beyond marking a known noun, the definite article can refer back to something already mentioned (segunda mención), make a general statement about a whole category, or replace a possessive with a part of the body.",
+        "example": "Compré una falda. La falda es azul. Me duele la cabeza.",
+        "test": "The definite article introduces a noun already mentioned earlier in the same passage (anaphoric use), makes a generic statement about the whole category the noun names, or stands in for a possessive with a body part — not the first mention of a specific new thing."
+      },
+      {
+        "id": "es.a2.relative-que-with-past",
+        "name": "Relative que with past and future tenses",
+        "note": "At A1, the relative que was limited to clauses with a present-tense verb; at this level the verb inside the que-clause can be in a past or future tense as well.",
+        "example": "Tengo un amigo que vivió en Madrid dos años.",
+        "test": "que introduces a restrictive relative clause whose verb is in a past or future tense, identifying the noun que follows."
+      },
+      {
+        "id": "es.a2.indirect-object-doubling",
+        "name": "Indirect object doubling",
+        "note": "Even when the indirect object is already named as a full noun phrase, Spanish usually still adds the clitic pronoun le/les alongside it.",
+        "example": "Le regalé un libro a mi hermano.",
+        "test": "A clitic indirect object pronoun (le/les) appears together with a full noun phrase indirect object introduced by a, both referring to the same recipient."
+      }
+    ],
+    "b1": [
+      {
+        "id": "es.b1.subjunctive-present-form",
+        "name": "Present subjunctive: form",
+        "note": "The subjunctive is a different set of endings, not a different tense on the calendar; regular verbs swap their theme vowel (habl-e vs habl-a), and ser/estar/dar/ir/saber have their own irregular subjunctive stems.",
+        "example": "Que tengas suerte. Espero que estés bien.",
+        "test": "The sentence contains a finite present subjunctive form (hable, coma, viva, tenga, esté, sea, dé, vaya, sepa...) that is distinguishable from the present indicative form of the same verb."
+      },
+      {
+        "id": "es.b1.subjunctive-desiderative",
+        "name": "Subjunctive after desire: querer que, ojalá",
+        "note": "When the main clause expresses a wish about someone or something else, the verb naming that wish goes in the subjunctive; ojalá triggers it on its own, with or without que.",
+        "example": "Quiero que vengas. Ojalá tengas suerte.",
+        "test": "querer/desear + que, or ojalá (with or without que), is followed by a verb in the present subjunctive naming what is wished for."
+      },
+      {
+        "id": "es.b1.subjunctive-doubt",
+        "name": "Subjunctive after doubt: quizá, tal vez, no creer que",
+        "note": "An adverb of doubt (quizá, tal vez) or a negated verb of belief (no creo que) presents the following event as uncertain, marked by the subjunctive; the affirmative creo que instead takes the indicative.",
+        "example": "Quizá venga mañana. No creo que esté en casa.",
+        "test": "quizá or tal vez, or no creer/no pensar + que, is followed by a verb in the present subjunctive presenting the event as uncertain."
+      },
+      {
+        "id": "es.b1.subjunctive-valoration",
+        "name": "Subjunctive after an impersonal value judgment",
+        "note": "An impersonal expression that judges or evaluates a fact (es bueno que, es una pena que) puts the fact itself in the subjunctive.",
+        "example": "Es bueno que estudies. Es una pena que no vengan.",
+        "test": "An impersonal expression of value or judgment (es bueno/malo/una pena/necesario que...) is followed by a verb in the present subjunctive naming the fact being judged."
+      },
+      {
+        "id": "es.b1.imperative-negative",
+        "name": "Negative imperative",
+        "note": "There is no separate negative-command form; no + the present subjunctive does the job instead of the affirmative imperative.",
+        "example": "No te vayas. No lo hagas.",
+        "test": "no is directly followed by a present subjunctive form addressed as a command to tú, vosotros, or usted, in a context where the affirmative counterpart would use the imperative instead."
+      },
+      {
+        "id": "es.b1.imperative-clitic-combination",
+        "name": "Clitic pronouns with the imperative",
+        "note": "In the affirmative imperative, object pronouns attach after the verb, indirect before direct if both are present (díselo); in the negative imperative they instead go in front, in the same order.",
+        "example": "Díselo. Cómpramelas. No se lo digas.",
+        "test": "An affirmative imperative has its object pronoun(s) attached after it, indirect before direct if both are present (díselo, dámelo), or a negative imperative has them placed before it in the same order (no se lo digas)."
+      },
+      {
+        "id": "es.b1.future-imperfect",
+        "name": "Future imperfect: predictions and probability",
+        "note": "Beyond stating what will happen, the future can guess about the present: será can mean 'it probably is' as much as 'it will be'.",
+        "example": "Iré mañana. Serán las once [= probablemente son las once].",
+        "test": "The sentence contains a future-tense form either stating what will happen later, or guessing/estimating something about the present (a probability reading, often with a time or quantity expression)."
+      },
+      {
+        "id": "es.b1.conditional-simple",
+        "name": "Conditional simple: courtesy and advice",
+        "note": "The conditional softens a request (¿podrías...?) or turns deber/poder into gentle advice, without stating the result of a real hypothesis.",
+        "example": "¿Podrías ayudarme? Deberías descansar más.",
+        "test": "The sentence contains a conditional-tense form of poder or deber (podría, deberías...) used to soften a request or give advice, not to state the hypothetical result of a stated condition."
+      },
+      {
+        "id": "es.b1.pluperfect",
+        "name": "Pretérito pluscuamperfecto",
+        "note": "había + participle marks an action that had already happened before another past action or moment.",
+        "example": "Cuando llegamos, ya se había ido.",
+        "test": "A form of había/habías/había/habíamos/habíais/habían is immediately followed by a past participle, describing something already completed before another point in the past."
+      },
+      {
+        "id": "es.b1.conditional-real-si",
+        "name": "Real conditional with si",
+        "note": "si + present states a condition treated as real or open; the result clause goes in the present, the future, or the imperative — never the future after si itself.",
+        "example": "Si tienes tiempo, ven. Si llueve, no saldremos.",
+        "test": "si is directly followed by a present-indicative verb (never a future), with the result clause in the present, future, or imperative."
+      },
+      {
+        "id": "es.b1.consecutive-connectors",
+        "name": "Consequence connectors: entonces, por eso, así que, o sea que",
+        "note": "These link a fact already stated to its consequence, in an independent clause of its own, without needing a subordinating conjunction.",
+        "example": "No había entradas, así que no fuimos. Está enfermo, por eso no ha venido.",
+        "test": "entonces, por eso, así que, or o sea que joins a stated fact to a consequence that follows from it, introducing an independent clause of its own."
+      },
+      {
+        "id": "es.b1.superlative-relative",
+        "name": "Relative superlative: el más/menos... de",
+        "note": "This picks out the top or bottom member of a named group, introduced by de.",
+        "example": "Es el amigo más fiel de todos.",
+        "test": "el/la/los/las + más or menos + adjective is followed by de + the group being compared, singling out one member as the extreme of that group."
+      },
+      {
+        "id": "es.b1.superlative-isimo",
+        "name": "Absolute superlative with -ísimo",
+        "note": "Adding -ísimo/a to an adjective intensifies it about as strongly as muy would, without comparing it to any specific group.",
+        "example": "Esta película es buenísima.",
+        "test": "An adjective carries the suffix -ísimo/a/os/as, intensifying its quality without comparing it to any specific group."
+      },
+      {
+        "id": "es.b1.concessive-aunque-indicative",
+        "name": "Concessive aunque with the indicative (known fact)",
+        "note": "aunque + indicative presents the obstacle as a fact the speaker already knows to be true, and the main clause still holds despite it.",
+        "example": "Aunque me encuentro mal, voy al trabajo.",
+        "test": "aunque introduces a clause with a verb in the indicative, presenting the obstacle as something the speaker states as a known fact, while the main clause still holds despite it."
+      },
+      {
+        "id": "es.b1.relative-que-vs-quien",
+        "name": "Que versus quien after a preposition",
+        "note": "With a human antecedent, a relative clause after a preposition uses quien (or el que); bare que does not normally follow a preposition.",
+        "example": "El chico a quien saludaste es mi vecino.",
+        "test": "A preposition + quien(es) introduces a relative clause referring back to a person, in a context where bare que directly after that preposition would not be used."
+      },
+      {
+        "id": "es.b1.interrogative-que-vs-cual",
+        "name": "Qué versus cuál",
+        "note": "qué asks what something is or names a category; cuál asks to pick one item out of a known or implied set, and is not directly followed by a noun.",
+        "example": "¿Qué es esto? ¿Cuál prefieres, el rojo o el azul?",
+        "test": "qué asks what something is or names a category, or cuál/cuáles selects one option from a set and is not directly followed by a noun (¿cuál libro? is wrong; ¿cuál de los libros? or bare ¿cuál? is right)."
+      },
+      {
+        "id": "es.b1.clitic-combination-oi-od",
+        "name": "Combining indirect and direct object clitics",
+        "note": "When both an indirect and a direct object pronoun appear together, the indirect one always comes first (te las di, not *las te di), and the two stay together as a fixed pair.",
+        "example": "Te las di ayer. Voy a decírselo.",
+        "test": "The sentence contains two clitic pronouns together, with the indirect-object one (me/te/se/nos/os) placed immediately before the direct-object one (lo/la/los/las), never in the reverse order."
+      },
+      {
+        "id": "es.b1.se-impersonal-passive",
+        "name": "Impersonal and passive se",
+        "note": "se + a third-person verb states that something is done without naming who does it — either with no following noun (impersonal: se come bien aquí) or with a following noun the verb agrees with in number (passive: se venden pisos).",
+        "example": "En este restaurante se come muy bien. Se venden pisos.",
+        "test": "se precedes a third-person verb with no expressed agent, either with an invariable singular verb and no following noun (impersonal use), or with the verb agreeing in number with a following noun naming what is being acted upon (se vende piso / se venden pisos)."
+      },
+      {
+        "id": "es.b1.gerund-manner",
+        "name": "Gerund as a manner adverbial",
+        "note": "Placed after the main verb, a gerund can say how the action is done, roughly like 'by ...ing'.",
+        "example": "Aprende leyendo. Se ganó la vida cantando.",
+        "test": "A gerund follows the main verb and answers how the action is or was carried out, paraphrasable with 'by + -ing'."
+      },
+      {
+        "id": "es.b1.ser-impersonal-time",
+        "name": "Ser in impersonal time expressions",
+        "note": "A subjectless es/son states the time or describes the moment of day, and es can also introduce a value judgment commenting on a following clause.",
+        "example": "Es tarde. Es de noche. Es una pena que no vengan.",
+        "test": "A subjectless es/son states the time, day, or moment of day (es tarde, es de noche, son las tres), or es introduces an evaluative noun (es una pena/una suerte) followed by a clause it comments on."
+      },
+      {
+        "id": "es.b1.estar-eventual-role-fluctuating",
+        "name": "Estar for a temporary role or a fluctuating value",
+        "note": "estar de + a job name marks a role held temporarily rather than as a permanent identity (which would take ser); estar a + a number marks a price or measurement that currently fluctuates.",
+        "example": "Está de camarero este verano. El dólar está a 0,90 euros.",
+        "test": "estar de is followed by a job or role name presented as temporary, or estar a is followed by a number stating a currently fluctuating price, rate, or measurement."
+      },
+      {
+        "id": "es.b1.aspectual-periphrases-b1",
+        "name": "More aspectual periphrases: soler, dejar de, ponerse a, estar a punto de",
+        "note": "soler + infinitive states a habit, dejar de + infinitive marks stopping something, ponerse a + infinitive marks starting it abruptly, and estar a punto de + infinitive marks its imminence.",
+        "example": "Suelo levantarme temprano. Dejé de fumar. Se puso a llorar. Está a punto de llegar.",
+        "test": "The sentence contains soler, dejar de, ponerse a, or estar a punto de directly followed by an infinitive, matching that periphrasis's meaning (habit, cessation, sudden start, or imminence)."
+      },
+      {
+        "id": "es.b1.indefinite-pronouns-alguien-alguno-ninguno",
+        "name": "Alguien/alguno versus nadie/ninguno",
+        "note": "alguien/nadie refer to an unspecified person in general; alguno/ninguno refer back to one member of a group already mentioned, and agree in gender and number.",
+        "example": "¿Ha llamado alguien? Ninguno de mis amigos vino.",
+        "test": "alguien or nadie is used with no specific group referred to, while alguno/a or ninguno/a (agreeing in gender/number) refers back to one member of a specific group already named, typically with de + the group."
+      },
+      {
+        "id": "es.b1.quantifier-cada-cualquiera",
+        "name": "Cada and cualquiera",
+        "note": "cada is invariable and takes each member of a group one by one; cualquiera means 'no matter which one' and drops its final -a right before a singular noun (cualquier).",
+        "example": "Cada alumno tiene un libro. Cualquier persona puede venir.",
+        "test": "cada precedes a singular noun, treating each member of a group individually, or cualquier(a) expresses that any one member of a set would do, with cualquier (not cualquiera) used directly before a noun."
+      },
+      {
+        "id": "es.b1.partitive-mayoria-de",
+        "name": "Partitive structures with de",
+        "note": "la mayoría de, un montón de and similar expressions name a portion of a larger group, introduced by de.",
+        "example": "La mayoría de los alumnos prefiere la mañana.",
+        "test": "A quantity expression (la mayoría, un montón, la mitad...) is followed by de + a definite plural or mass noun, naming a portion of that whole."
+      },
+      {
+        "id": "es.b1.adjective-position-meaning-change",
+        "name": "Adjective position changes its meaning",
+        "note": "A handful of adjectives mean something different depending on whether they come before or after the noun.",
+        "example": "Es un viejo amigo [de mucho tiempo]. Es un amigo viejo [de edad avanzada].",
+        "test": "An adjective known to shift meaning by position (viejo, único, grande, pobre...) appears either before the noun with its figurative or emphatic sense, or after it with its literal sense, and the sentence's meaning matches that position."
+      },
+      {
+        "id": "es.b1.demonstrative-anaphoric-discourse",
+        "name": "Demonstrative referring to a previous statement",
+        "note": "eso (and other demonstratives) can point back to a whole idea or sentence just said, not only to a physical object.",
+        "example": "Dice que soy perezoso. No pienso eso de él.",
+        "test": "A demonstrative (usually neuter eso/esto) refers back to an entire statement or idea expressed in a previous sentence, rather than to a physical object present in the situation."
+      },
+      {
+        "id": "es.b1.subjunctive-temporal-future",
+        "name": "Subjunctive in future-time adverbial clauses",
+        "note": "cuando, antes de que, después de que and similar connectors take the subjunctive whenever they refer to an event that has not happened yet from the speaker's viewpoint.",
+        "example": "Te llamaré cuando llegue. Me voy antes de que llueva.",
+        "test": "cuando, antes de que, or después de que introduces a clause with a present-subjunctive verb referring to an event that is future relative to the main clause (not a habitual or already-completed one, which would take the indicative)."
+      },
+      {
+        "id": "es.b1.subjunctive-purpose-para-que",
+        "name": "Purpose clauses with para que",
+        "note": "When the person acting for the purpose is different from the person benefiting, para que + subjunctive replaces the para + infinitive construction.",
+        "example": "Te lo doy para que lo uses.",
+        "test": "para que introduces a clause with a present-subjunctive verb naming the purpose of the main clause, used specifically when its subject differs from the main clause's subject."
+      },
+      {
+        "id": "es.b1.relative-clause-subjunctive-unknown",
+        "name": "Subjunctive in a relative clause with an unknown antecedent",
+        "note": "When the relative clause describes something whose existence or identity is not confirmed, its verb goes in the subjunctive instead of the indicative.",
+        "example": "Busco un libro que sea divertido.",
+        "test": "A relative clause modifies a noun presented as not yet found or identified (often after buscar, or with an indefinite article), and its verb is in the subjunctive rather than the indicative."
+      }
+    ],
+    "b2": [
+      {
+        "id": "es.b2.subjunctive-imperfect-form",
+        "name": "Imperfect subjunctive: form",
+        "note": "Built from the indefinido 'ellos' stem, the imperfect subjunctive has two equivalent endings, -ra and -se; -ra is the more common of the two in everyday speech.",
+        "example": "Quería que vinieras. Ojalá tuviera más tiempo.",
+        "test": "The sentence contains a finite imperfect-subjunctive form (viniera/viniese, tuviera/tuviese, fuera/fuese...), built on the pretérito indefinido stem with a -ra or -se ending."
+      },
+      {
+        "id": "es.b2.subjunctive-sequence-of-tenses-past",
+        "name": "Subjunctive after a past-tense main verb",
+        "note": "When the main clause is in a past tense, a subjunctive clause depending on it shifts from present to imperfect subjunctive (consecutio temporum).",
+        "example": "Quiero que vengas. Quería que vinieras.",
+        "test": "A main verb in a past tense (imperfecto, indefinido, or condicional) governs a subordinate clause whose verb is in the imperfect subjunctive, matching the same kind of trigger (desire, doubt, valoration...) that would take the present subjunctive after a present-tense main verb."
+      },
+      {
+        "id": "es.b2.conditional-irreal-past",
+        "name": "Irreal conditional referring to the present or future",
+        "note": "si + imperfect subjunctive states a condition presented as unreal or unlikely, with its result in the conditional simple.",
+        "example": "Si tuviera tiempo, iría.",
+        "test": "si is directly followed by an imperfect-subjunctive verb, with the result clause in the conditional simple, presenting the condition as contrary to fact or unlikely — not si + present."
+      },
+      {
+        "id": "es.b2.conditional-irreal-pluperfect",
+        "name": "Irreal conditional referring to the past",
+        "note": "si + pluperfect subjunctive states a condition that did not happen in the past, with its result in the compound conditional.",
+        "example": "Si hubieras venido, todo se habría arreglado.",
+        "test": "si is directly followed by a pluperfect-subjunctive verb (hubiera/hubiese + participle), with the result clause in the compound conditional (habría + participle), presenting a past condition that was not met."
+      },
+      {
+        "id": "es.b2.subjunctive-perfect",
+        "name": "Pretérito perfecto de subjuntivo",
+        "note": "haya + participle is the subjunctive counterpart of the present perfect, used when the trigger calls for the subjunctive but the event is already completed.",
+        "example": "No creo que haya llegado todavía.",
+        "test": "A present-subjunctive form of haber (haya/hayas/haya/hayamos/hayáis/hayan) is immediately followed by a past participle, inside a clause whose trigger (doubt, denial, emotion...) requires the subjunctive."
+      },
+      {
+        "id": "es.b2.subjunctive-pluperfect",
+        "name": "Pretérito pluscuamperfecto de subjuntivo",
+        "note": "hubiera/hubiese + participle is the subjunctive counterpart of the pluperfect, marking anteriority within a subjunctive context set in the past.",
+        "example": "Dudaba que hubiera terminado.",
+        "test": "A pluperfect-subjunctive form of haber (hubiera/hubiese, hubieras/hubieses...) is immediately followed by a past participle, inside a clause set in the past whose trigger requires the subjunctive."
+      },
+      {
+        "id": "es.b2.conditional-compound",
+        "name": "Conditional compound",
+        "note": "habría + participle states what would have happened, the result half of a past irreal condition, or a guess about a completed past action.",
+        "example": "Habría ido, pero no tenía coche. Habrían salido ya.",
+        "test": "A form of habría/habrías/habría/habríamos/habríais/habrían is immediately followed by a past participle, stating either the unfulfilled result of a past condition or a guess about a completed past event."
+      },
+      {
+        "id": "es.b2.concessive-aunque-subjunctive",
+        "name": "Concessive aunque with the subjunctive (hypothetical or dismissed)",
+        "note": "aunque + subjunctive presents the obstacle as hypothetical, unconfirmed, or something the speaker is deliberately setting aside as irrelevant to the outcome.",
+        "example": "Aunque me lo pidieras de rodillas, no lo haría.",
+        "test": "aunque introduces a clause with a verb in the subjunctive, presenting the obstacle as hypothetical or as something the speaker treats as not going to change the outcome, in contrast with aunque + indicative for a known fact."
+      },
+      {
+        "id": "es.b2.passive-ser-participio",
+        "name": "Passive voice with ser + participle",
+        "note": "ser + participle turns the object of an action into its grammatical subject; the participle agrees with that subject, and a named agent follows por.",
+        "example": "Las puertas fueron abiertas por el conserje a las diez.",
+        "test": "A finite form of ser is followed by a past participle agreeing in gender/number with the subject, that subject being what receives the action rather than who performs it; an agent, if present, is introduced by por."
+      },
+      {
+        "id": "es.b2.leismo-persona",
+        "name": "Leísmo for a male person",
+        "note": "In standard Peninsular usage, a masculine human direct object can be replaced by le instead of lo; a feminine human direct object still takes la, not le.",
+        "example": "Vimos a Luis. Le vimos. Vimos a Luisa. La vimos.",
+        "test": "A direct object pronoun replacing a specific male person is le (not lo), while a direct object pronoun replacing a female person or a thing of either gender is la or lo as usual — the sentence must not use le for a thing or for a female referent."
+      },
+      {
+        "id": "es.b2.lo-neuter-predicate",
+        "name": "Neuter lo standing for an attribute",
+        "note": "The invariable lo can replace an adjective or noun already used as an attribute with ser or estar, regardless of the gender or number of what it stands for.",
+        "example": "¿Eres española? Sí, lo soy. ¿Está cansada? Sí, lo está.",
+        "test": "The unchanging lo follows a form of ser or estar and stands for an attribute (adjective or noun) already mentioned in a previous question or clause, regardless of that attribute's own gender or number."
+      },
+      {
+        "id": "es.b2.se-reflexive-vs-inherent-motion",
+        "name": "Se with verbs of motion: source versus goal",
+        "note": "Adding se to certain motion verbs shifts the focus to leaving the point of origin (irse), instead of heading toward the point of reference (ir).",
+        "example": "Me voy de aquí. Voy a tu casa.",
+        "test": "irse (with se) is used to focus on departing from a place named or implied, while the plain verb without se focuses on heading toward the destination — the two forms are not freely interchangeable in the same context."
+      },
+      {
+        "id": "es.b2.relative-el-que-lo-que",
+        "name": "El que / el cual / lo que after a preposition",
+        "note": "When a relative clause follows a preposition and has no expressed antecedent, or the antecedent is far from the relative pronoun, el que/el cual (agreeing) or the neuter lo que is used instead of bare que.",
+        "example": "La chica de la que te hablé. Lo que dijo me sorprendió.",
+        "test": "A preposition is followed by el que/la que/los que/las que (agreeing with its antecedent) or by the invariable lo que (referring to an idea, not a specific noun), introducing a relative clause."
+      },
+      {
+        "id": "es.b2.ser-estar-adjective-meaning-change",
+        "name": "Ser versus estar with the same adjective: meaning change",
+        "note": "A small set of adjectives (listo, rico, verde, aburrido, malo, despierto...) keep the same form with both copulas but change meaning: ser + adjective states an inherent trait, estar + adjective states a resulting or perceived condition.",
+        "example": "Juan es muy listo [inteligente]. Juan está listo [preparado].",
+        "test": "The adjective belongs to the small ser/estar meaning-change set (listo, rico, malo, verde, aburrido, despierto, católico...); the sentence exercises ser if the copula is ser and the meaning is the inherent-trait reading (e.g. listo = inteligente), or estar if the copula is estar and the meaning is the state/perception reading (e.g. listo = preparado) — the wrong copula-meaning pairing, or an adjective outside this set, does not count."
+      },
+      {
+        "id": "es.b2.gerund-simultaneity-anteriority",
+        "name": "Gerund of simultaneity and immediate anteriority",
+        "note": "A gerund clause can mark that its action happens at the same time as the main verb, or, less often, immediately before it.",
+        "example": "Me lo confesó yendo por la calle [= mientras íbamos].",
+        "test": "A gerund clause states that its action happens at the same time as (or, less commonly, immediately before) the main clause's action, and can be reworded with mientras without changing the meaning."
+      },
+      {
+        "id": "es.b2.consecutive-tan-tanto-que",
+        "name": "Consecutive clauses with tan/tanto...que",
+        "note": "tan + adjective/adverb + que and tanto/a/os/as + noun + que state a degree so high that it causes the result named in the second clause.",
+        "example": "Es tan alto que no cabe por la puerta. Tiene tantos libros que no caben en la estantería.",
+        "test": "tan (before an adjective or adverb) or tanto/a/os/as (agreeing with a noun) is followed later in the sentence by que introducing the consequence of that degree."
+      },
+      {
+        "id": "es.b2.comparative-superlative-lexical",
+        "name": "Lexical (Latin) comparatives and superlatives",
+        "note": "A handful of adjectives have a learned comparative or superlative form borrowed straight from Latin instead of using más/menos: superior, inferior, óptimo, pésimo.",
+        "example": "La calidad es superior a la del año pasado.",
+        "test": "The sentence contains one of the lexical comparatives (superior, inferior, anterior, posterior + a) or superlatives (óptimo, pésimo, máximo, mínimo) used in place of a más/menos construction."
+      },
+      {
+        "id": "es.b2.discourse-anaphora-elliptical-noun",
+        "name": "Ellipsis of a repeated noun",
+        "note": "Once a noun has been said, a following mention can drop it and keep just the article or demonstrative plus an adjective or a de-phrase.",
+        "example": "Mi libro y el de Juan. Este de la derecha.",
+        "test": "A noun already mentioned is dropped in a later noun phrase, leaving only the article or demonstrative plus a modifier (de-phrase, adjective, or relative clause) standing in for it."
+      },
+      {
+        "id": "es.b2.quantifier-concordancia-partitivo",
+        "name": "Agreement with partitive quantifiers",
+        "note": "A subject like la mayoría de + plural noun can take its verb in the singular (agreeing with mayoría) or, informally, in the plural (agreeing ad sensum with the plural noun).",
+        "example": "La mayoría de los alumnos prefiere / prefieren la mañana.",
+        "test": "The verb after a partitive subject (la mayoría de, el resto de + plural noun) agrees either with the singular quantifier or, informally, with the plural noun that follows de — the verb must clearly agree with one of the two, not with neither."
+      },
+      {
+        "id": "es.b2.impersonal-hacer-time",
+        "name": "Impersonal hacer for elapsed time",
+        "note": "hace + a time expression states how long ago something happened or how long a situation has lasted, always in the invariable third-person singular.",
+        "example": "Hace dos años que vivo aquí. Llegó hace una hora.",
+        "test": "An invariable hace is followed by a time expression, either stating how long ago a past action happened or, with que + present, how long a present situation has lasted."
+      },
+      {
+        "id": "es.b2.indirect-speech-tense-shift",
+        "name": "Tense shift in indirect speech",
+        "note": "Reporting what someone said with a past-tense verb of speech shifts the original tense back one step: present becomes imperfecto, indefinido/perfecto becomes pluscuamperfecto, futuro becomes condicional.",
+        "example": "\"Tengo sueño\" -> Dijo que tenía sueño. \"Vendré\" -> Dijo que vendría.",
+        "test": "A past-tense verb of speech (dijo, contó...) introduces a que-clause whose verb tense is shifted back one step from what the speaker's original words would have been (present becomes imperfecto, future becomes condicional, and so on)."
+      },
+      {
+        "id": "es.b2.futuro-perfecto",
+        "name": "Futuro perfecto",
+        "note": "habrá + participle marks something that will already be finished by a future point, or guesses about something already completed.",
+        "example": "Cuando llegues, ya se habrá ido. Habrá tenido problemas.",
+        "test": "A form of habrá/habrás/habrá/habremos/habréis/habrán is immediately followed by a past participle, stating that an action will be complete before another future moment, or guessing about a completed action."
+      },
+      {
+        "id": "es.b2.perception-verb-plus-gerund-infinitive",
+        "name": "Verb of perception + object + infinitive/gerund",
+        "note": "ver/oír + a person or thing + infinitive reports the whole action witnessed; the same verb + gerund reports catching it mid-action.",
+        "example": "La vi bajar del autobús. La vi bajando del autobús.",
+        "test": "A verb of perception (ver, oír...) is followed by a direct object and then either an infinitive (reporting the complete action witnessed) or a gerund (reporting the action as caught in progress)."
+      },
+      {
+        "id": "es.b2.dative-of-interest",
+        "name": "Dative of interest",
+        "note": "An extra me/te/se/nos/os on an otherwise complete sentence marks that the subject did the action for their own benefit or with personal involvement, and forces the direct object to be a specific, delimited one.",
+        "example": "Me comí un pollo entero. [Comí pollo.]",
+        "test": "An optional dative pronoun (me/te/se/nos/os) is added to a transitive clause to mark the subject's personal involvement or benefit, and the direct object it goes with is a specific, delimited one, not a bare mass or plural noun."
+      },
+      {
+        "id": "es.b2.estar-por-para-idioms",
+        "name": "Estar por and estar para",
+        "note": "estar para + infinitive says an action is imminent; estar por + infinitive marks an action still pending, or the subject's inclination toward it.",
+        "example": "El tren está para salir. Estoy por creerte.",
+        "test": "estar para + infinitive marks that the action is about to happen, or estar por (+ infinitive or + noun) marks that the action is still pending, or that the subject is inclined toward something."
+      },
+      {
+        "id": "es.b2.adjective-color-compound",
+        "name": "Compound color adjectives",
+        "note": "A two-word color adjective (verde botella, azul marino) stays invariable in number, unlike an ordinary adjective.",
+        "example": "Dos trajes azul marino.",
+        "test": "A compound color expression (a noun or adjective added to a basic color) stays unchanged in the plural, rather than taking a plural ending."
+      },
+      {
+        "id": "es.b2.reciprocal-se",
+        "name": "Reciprocal se",
+        "note": "se on a plural subject can mean 'each other' instead of 'themselves'; el uno al otro can be added to make the reciprocal reading explicit.",
+        "example": "Se quieren [el uno al otro]. Se escriben cartas.",
+        "test": "se accompanies a plural subject with a meaning of mutual action between its members ('each other'), optionally confirmed by adding el uno al otro, rather than each member doing the action to themselves."
+      },
+      {
+        "id": "es.b2.exclamative-que-clause",
+        "name": "Exclamative qué with a following clause",
+        "note": "¡Qué + noun/adjective + que...! adds a second clause commenting on or intensifying the exclamation.",
+        "example": "¡Qué bien que estés aquí!",
+        "test": "An exclamation opens with qué + adjective or noun and is followed by que + a second clause commenting on the same thing being exclaimed about."
+      }
+    ],
+    "c1": [
+      {
+        "id": "es.c1.preterite-anterior",
+        "name": "Pretérito anterior",
+        "note": "hubo + participle marks an action completed immediately before another past action, mostly in literary or very formal narration; in speech, indefinido or pluscuamperfecto replace it.",
+        "example": "En cuanto hubo saludado a todos, se sentó.",
+        "test": "A form of hubo/hubiste/hubo/hubimos/hubisteis/hubieron is immediately followed by a past participle in a clause introduced by an immediacy marker like en cuanto or no bien, marking that action as completed a moment before the main clause's action."
+      },
+      {
+        "id": "es.c1.subjunctive-perception-verbs-negated",
+        "name": "Mood choice with negated verbs of perception",
+        "note": "A negated verb of perception or mental judgment (no veo que) takes the subjunctive when it questions an opinion, but the indicative when it only denies witnessing a plain fact.",
+        "example": "No veo que tengas motivos. No ve que hay un letrero ahí.",
+        "test": "no + a verb of perception or judgment (ver, notar...) is followed by que and a subjunctive verb when the point being denied is an opinion or inference, versus the indicative when it is a plain fact the speaker says was not physically noticed — the sentence must make clear which of the two readings is meant."
+      },
+      {
+        "id": "es.c1.causal-porque-negation-scope",
+        "name": "Negation scope with causal porque",
+        "note": "When the main clause is negated, porque + indicative denies the main action itself (for some unrelated reason), while porque + subjunctive denies specifically that this is the reason.",
+        "example": "No se marcha porque está cansado. No se marcha porque esté cansado.",
+        "test": "A negated main clause is followed by porque; the sentence exercises the indicative reading if it denies the main action while the cause itself is presented as true, and the subjunctive reading if it accepts the main clause's fact but denies that the porque-clause is the true cause."
+      },
+      {
+        "id": "es.c1.ser-estar-episodic-evaluative",
+        "name": "Ser and estar with an episodic evaluative adjective",
+        "note": "An evaluative adjective describing behavior (amable, generoso, cruel) normally takes ser for a lasting trait, but switches to estar, or to haber sido for a single occasion, when the quality is attributed to one specific occasion rather than to the person's character.",
+        "example": "Es muy amable. Ayer estuvo muy amable. Ha sido muy amable al invitarme.",
+        "test": "An evaluative behavior adjective (amable, generoso, cruel, atento...) with ser states a lasting character trait, while the same adjective with estar, or with haber sido referring to one occasion, attributes the quality to a single delimited occasion rather than to the subject's character in general."
+      },
+      {
+        "id": "es.c1.estar-por-para-c1-idioms",
+        "name": "Estar por and estar para: further idiomatic values",
+        "note": "Beyond marking something pending, estar por + noun can mean being in favor of it, and estar por + infinitive can mean being tempted or inclined to do it.",
+        "example": "Estoy por tu moción. Estoy por darte una torta.",
+        "test": "estar por is followed by a noun expressing support or favor toward it, or by an infinitive expressing the subject's temptation or inclination to do it — a reading beyond simple 'still pending'."
+      },
+      {
+        "id": "es.c1.relative-cuyo",
+        "name": "Relative possessive adjective cuyo",
+        "note": "cuyo agrees with the thing possessed, not with the antecedent, and sits directly before its noun, linking two clauses by ownership.",
+        "example": "La chica cuyos padres viven al lado es mi amiga.",
+        "test": "cuyo/cuya/cuyos/cuyas directly precedes a noun and agrees in gender and number with that noun, the thing possessed, not with the person or thing named just before it."
+      },
+      {
+        "id": "es.c1.subjunctive-verb-meaning-shift",
+        "name": "Verbs that change meaning by mood",
+        "note": "A handful of verbs (entender, temerse, sentir) mean something different depending on whether the que-clause after them is in the indicative or the subjunctive.",
+        "example": "Entiendo que lo lógico es marcharse. Entiendo que te hayas marchado.",
+        "test": "A verb from the meaning-shift set (entender, sentir, temerse...) governs a que-clause whose mood (indicative for a stated opinion, subjunctive for an emotional reaction to an accepted fact) matches the intended reading, and the surrounding context makes that reading unambiguous."
+      },
+      {
+        "id": "es.c1.exclamative-quien-imperfect-subjunctive",
+        "name": "Exclamative quién + imperfect subjunctive",
+        "note": "¡Quién + imperfect subjunctive! expresses an impossible or unattainable wish for oneself, always in the third-person-singular form regardless of who is speaking.",
+        "example": "¡Quién tuviera tus años!",
+        "test": "An exclamation opens with quién followed directly by a third-person-singular imperfect-subjunctive verb, expressing a wish the speaker knows cannot be fulfilled."
+      },
+      {
+        "id": "es.c1.imperfect-subjunctive-courtesy-quisiera",
+        "name": "Imperfect subjunctive of courtesy",
+        "note": "quisiera (and a few other -ra forms) softens a request or statement more than the conditional does, common in formal or polite registers.",
+        "example": "Quisiera ver ese abrigo, por favor.",
+        "test": "An imperfect-subjunctive form of querer (quisiera) or a similar verb is used to make a polite request, in a context where the plain present (quiero) would sound more abrupt."
+      },
+      {
+        "id": "es.c1.passive-restrictions-agent",
+        "name": "Restrictions on the passive agent",
+        "note": "The agent phrase with por is only natural with a pasiva de acción (an event); it does not combine with a pasiva de resultado (a state described with estar + participle).",
+        "example": "Las puertas fueron abiertas por el portero.",
+        "test": "A por-agent phrase accompanies a ser + participle passive describing an event, and the sentence avoids attaching a por-agent to an estar + participle construction describing a resulting state."
+      },
+      {
+        "id": "es.c1.perfect-subjunctive-replacing-future-perfect",
+        "name": "Perfect subjunctive replacing the future perfect of probability",
+        "note": "After a negated verb of belief, the pretérito perfecto de subjuntivo can stand in for the future perfect's guessing use.",
+        "example": "No pienso que se haya quedado dormido.",
+        "test": "A negated verb of belief (no pienso/no creo que) is followed by a pretérito perfecto de subjuntivo, expressing a guess about a completed action that would be a futuro perfecto in an affirmative equivalent."
+      },
+      {
+        "id": "es.c1.adjective-relational-vs-qualifying",
+        "name": "The same adjective as relational or qualifying",
+        "note": "Some adjectives can be purely classifying (relational, no comparison possible) in one use and purely descriptive (qualifying, gradable) in another, depending on what they modify.",
+        "example": "Una empresa familiar. Una cara familiar.",
+        "test": "An adjective that can function either way (familiar, personal, popular...) is used in a context that makes clear whether it classifies the noun into a category (relational, cannot take muy) or describes a gradable quality (qualifying, can take muy)."
+      },
+      {
+        "id": "es.c1.perifrasis-inceptivas-c1",
+        "name": "Further aspectual periphrases: echar a, romper a, llegar a, acabar por",
+        "note": "echar a and romper a + infinitive mark a sudden start, often with verbs of motion or emotion, while llegar a and acabar por + infinitive mark reaching a final point after a process.",
+        "example": "Rompió a llorar. Echó a correr. Llegó a ser director. Acabó por confesar.",
+        "test": "The sentence contains echar a or romper a + infinitive marking a sudden onset, or llegar a or acabar por + infinitive/noun marking the eventual outcome of a process."
+      },
+      {
+        "id": "es.c1.perifrasis-tener-llevar-participio",
+        "name": "Tener/llevar + participle",
+        "note": "tener/llevar + participle, agreeing with the object, frames an accumulated result up to now, distinct from the plain perfect with haber.",
+        "example": "Llevo leídas cien páginas. Tengo hechos los deberes.",
+        "test": "A form of tener or llevar is followed by a past participle agreeing in gender and number with the direct object, framing that object's state as an accumulated result rather than using haber + an invariable participle."
+      },
+      {
+        "id": "es.c1.dequeismo-recognition",
+        "name": "Recognizing dequeísmo and queísmo as nonstandard",
+        "note": "Adding de before que where the verb takes no preposition (dequeísmo, pienso de que) or dropping a required de (queísmo, me alegro que) are both departures from the standard; the standard keeps de exactly where the governing verb requires it and nowhere else.",
+        "example": "Pienso que vendrá. Me alegro de que vengas.",
+        "test": "The sentence follows the standard: que with no de after a verb that takes no preposition (pienso que, dijo que), and de que after a verb or expression that requires it (alegrarse de que, darse cuenta de que) — an inserted or dropped de against that verb's actual requirement fails the test rather than exercising it."
+      },
+      {
+        "id": "es.c1.laismo-loismo-recognition",
+        "name": "Recognizing laísmo and loísmo as regional nonstandard usage",
+        "note": "Some Spanish-speaking regions substitute la for a female indirect object (laísmo) or lo for a male indirect object (loísmo); the general standard keeps le for indirect objects of either gender, reserving lo/la for direct objects.",
+        "example": "Le dije que viniera.",
+        "test": "An indirect object pronoun is le (or les) regardless of the referent's gender, while lo/la mark only direct objects — the sentence should not substitute la or lo for an indirect object."
+      },
+      {
+        "id": "es.c1.subordinate-clause-predicative-complement",
+        "name": "A subordinate clause as a predicative complement",
+        "note": "A clause introduced by an infinitive, a gerund, or (with verbs of perception) a relative que can function as the predicative complement of the object, describing it as caught in that state or action.",
+        "example": "La vi bajar del autobús. El corredor llegó a la meta aclamado por el público.",
+        "test": "A clause (infinitive, gerund, or participle) functions as a predicative complement describing the state or action of the object or subject at the moment of the main verb, agreeing with it where the form allows it (participle) or left invariable (infinitive/gerund)."
+      },
+      {
+        "id": "es.c1.future-subjunctive-fixed-expressions",
+        "name": "Future subjunctive in fixed legal or proverbial expressions",
+        "note": "The future subjunctive has died out in ordinary use but survives in legal/administrative wording and a few fixed proverbs.",
+        "example": "Sea como fuere. A quien corresponda.",
+        "test": "The sentence contains a future-subjunctive form (corresponsiere, fuere...) inside a recognized fixed legal or proverbial expression, not used productively elsewhere."
+      }
+    ]
+  }
+}

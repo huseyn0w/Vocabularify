@@ -1,0 +1,1119 @@
+{
+  "language": "en",
+  "sources": [
+    "English Grammar Profile Online (Cambridge/English Profile), corpus-derived level tags for ~1240 grammatical structures, retrieved via the community-maintained mirror at github.com/ninja33/EGP (asset/egpo.xlsx)",
+    "English Vocabulary Profile (Cambridge/English Profile) for countable/uncountable noun ranges and quantifier vocabulary by level",
+    "Council of Europe, Common European Framework of Reference for Languages (CEFR), for level descriptors used to sanity-check corpus placements"
+  ],
+  "levels": {
+    "a1": [
+      {
+        "id": "en.a1.be-present",
+        "name": "Verb be: present tense",
+        "note": "Be (am/is/are) works as the main linking verb and as an auxiliary; learners produce affirmative, negative, and yes/no question forms in the present.",
+        "example": "She is a teacher and she is not tired.",
+        "test": "Contains am/is/are, correctly matched to its subject, in an affirmative statement, a negative statement, or a yes/no question (e.g. Is she...?)."
+      },
+      {
+        "id": "en.a1.subject-pronouns-word-order",
+        "name": "Subject pronouns and basic word order",
+        "note": "English marks grammatical roles by position, not case endings, so a statement needs a subject pronoun (I/you/he/she/it/we/they) in first position immediately followed by its verb.",
+        "example": "He works in a shop every day.",
+        "test": "A subject pronoun sits in first position immediately followed by its verb, with no inversion."
+      },
+      {
+        "id": "en.a1.object-pronouns",
+        "name": "Object pronouns",
+        "note": "Pronouns change form when they are the object of a verb or preposition: me, you, him, her, it, us, them.",
+        "example": "I can see him, but he can't see me.",
+        "test": "An object pronoun (me/you/him/her/it/us/them) appears after a verb or preposition, distinct from its subject form."
+      },
+      {
+        "id": "en.a1.possessive-determiners",
+        "name": "Possessive determiners",
+        "note": "My, your, his, her, its, our, their sit directly before a noun to show ownership; they never take -'s themselves.",
+        "example": "This is my bag and that is her coat.",
+        "test": "A possessive determiner (my/your/his/her/its/our/their) directly precedes a noun."
+      },
+      {
+        "id": "en.a1.demonstratives",
+        "name": "Demonstratives: this, that, these, those",
+        "note": "This/these point to something near the speaker, that/those to something farther away, and the form must agree in number with the noun.",
+        "example": "This book is mine, but those pens are yours.",
+        "test": "This/that/these/those is used before a noun (or alone) and agrees in number with a nearby or distant referent."
+      },
+      {
+        "id": "en.a1.plural-nouns",
+        "name": "Regular plural nouns",
+        "note": "Most countable nouns add -s (or -es) to show there is more than one.",
+        "example": "I have two brothers and three sisters.",
+        "test": "A countable noun referring to more than one item takes a plural -s/-es ending."
+      },
+      {
+        "id": "en.a1.articles",
+        "name": "Articles a/an, the, and zero article",
+        "note": "A/an introduces something not yet identified; the marks something the listener can already identify; no article at all is correct before a plural or uncountable noun used in general.",
+        "example": "I saw a dog. The dog was black. Dogs are friendly.",
+        "test": "A/an is used for a first, unidentified mention; the for something already known; and no article for a general plural or uncountable noun."
+      },
+      {
+        "id": "en.a1.there-is-are",
+        "name": "There is / there are",
+        "note": "There introduces something into the conversation for the first time; is agrees with a singular or uncountable noun, are with a plural noun.",
+        "example": "There is a park near my house. There are two schools in my town.",
+        "test": "There is/there's is followed by a singular or uncountable noun, or there are by a plural noun, introducing something new."
+      },
+      {
+        "id": "en.a1.present-simple",
+        "name": "Present simple: habits and facts",
+        "note": "The present simple states habits, routines, and general facts; third-person singular subjects add -s, and negatives use don't/doesn't.",
+        "example": "She works every day, but she doesn't work on Sunday.",
+        "test": "A present-simple verb (with -s on third-person singular, or don't/doesn't in the negative) describes a habit or general fact. Do-support questions belong to A2."
+      },
+      {
+        "id": "en.a1.present-continuous",
+        "name": "Present continuous: now",
+        "note": "Am/is/are + verb-ing describes an action happening at the moment of speaking.",
+        "example": "Look, it's raining now.",
+        "test": "A form of be + verb-ing describes an action in progress right now, usually with a time word like now or look."
+      },
+      {
+        "id": "en.a1.prepositions-place-time",
+        "name": "Basic prepositions of place and time",
+        "note": "A small set of prepositions (in, on, at, from, to, with) locates things in space or time in fixed, often unpredictable combinations.",
+        "example": "I live in London. The meeting is at 9 o'clock on Monday.",
+        "test": "A common preposition of place or time (in/on/at/from/to/with) is used correctly with its usual noun phrase."
+      },
+      {
+        "id": "en.a1.adjective-position",
+        "name": "Adjective position",
+        "note": "Adjectives sit before the noun they describe (a big house) or after be (the house is big); they never take a plural -s.",
+        "example": "I have a big house. My house is big.",
+        "test": "An adjective appears directly before a noun or after be, without adding a plural ending."
+      },
+      {
+        "id": "en.a1.adjectives-with-very",
+        "name": "Modifying adjectives with very",
+        "note": "Very intensifies an adjective and sits directly before it.",
+        "example": "The film was very good.",
+        "test": "Very appears immediately before an adjective to strengthen it."
+      },
+      {
+        "id": "en.a1.adjectives-combining-and",
+        "name": "Combining two adjectives with and",
+        "note": "Two common adjectives can be joined with and, usually after be or before a noun.",
+        "example": "The room is big and comfortable.",
+        "test": "Two adjectives describing the same noun are joined with and."
+      },
+      {
+        "id": "en.a1.superlative-my-best",
+        "name": "Formulaic superlative: my best",
+        "note": "Before the general superlative rule is learned, my best/your best appears as a fixed formula (possessive + best), usually with friend.",
+        "example": "He is my best friend.",
+        "test": "The fixed phrase possessive + best + noun (e.g. my best friend) is used, without needing the general superlative rule."
+      },
+      {
+        "id": "en.a1.adverbs-position",
+        "name": "Adverbs of time, place, and frequency: basic position",
+        "note": "Time and place adverbs usually go at the end of a clause (today, here); frequency adverbs go before the main verb but after be (always, never, sometimes).",
+        "example": "I always go to school by bus. I go home today.",
+        "test": "A time or place adverb appears at the end of the clause, or a frequency adverb appears before the main verb (after be)."
+      },
+      {
+        "id": "en.a1.can",
+        "name": "Can: ability, possibility, offers, requests",
+        "note": "Can is one modal verb with several everyday functions at this level: physical or learned ability, general possibility, offering to do something, and asking someone to do something.",
+        "example": "I can swim. Can you help me, please?",
+        "test": "Can/can't + base verb expresses ability, possibility, an offer, or a request, with no -s and no to before the following verb."
+      },
+      {
+        "id": "en.a1.would-like",
+        "name": "Would like for wants and invitations",
+        "note": "Would like softens a want or an invitation and is followed by a noun phrase or a to-infinitive.",
+        "example": "I would like a coffee. Would you like to come with us?",
+        "test": "Would like (or 'd like) is followed by a noun phrase or a to-infinitive, expressing a polite want or invitation."
+      },
+      {
+        "id": "en.a1.verb-patterns-to-infinitive",
+        "name": "Verb + to-infinitive (want, like)",
+        "note": "Verbs such as want and like are commonly followed by a to-infinitive; like alone can also be followed by -ing with little change in meaning.",
+        "example": "I want to go home. I like to swim. I like swimming.",
+        "test": "Want or like is directly followed by a to-infinitive (or, for like, optionally by an -ing form)."
+      },
+      {
+        "id": "en.a1.will-future",
+        "name": "Will for on-the-spot decisions and plans",
+        "note": "Will + base verb states a decision made at the moment of speaking or a simple future plan.",
+        "example": "I'll call you tomorrow.",
+        "test": "Will (or 'll) + base verb states a plan or a spontaneous decision about the future."
+      },
+      {
+        "id": "en.a1.past-simple-affirmative",
+        "name": "Past simple: affirmative",
+        "note": "The affirmative past simple (regular -ed, or a frequent irregular form) reports a finished event or state; negative and question forms with did belong to A2.",
+        "example": "I visited my grandmother last week.",
+        "test": "An affirmative past-simple verb (regular -ed or a common irregular form) reports a completed past event or state."
+      },
+      {
+        "id": "en.a1.quantifiers-basic",
+        "name": "Basic quantifiers: some, a lot of, every, a",
+        "note": "A small set of quantifying determiners combines with plural nouns (some, a lot of, lots of, numbers) or singular nouns (a, every).",
+        "example": "There are some apples on the table. I go swimming every day.",
+        "test": "Some/a lot of/lots of/a number precedes a plural noun, or a/every precedes a singular noun, to show quantity."
+      },
+      {
+        "id": "en.a1.conjunctions-coordinating",
+        "name": "Coordinating conjunctions: and, but, or",
+        "note": "And, but, and or join words, phrases, clauses, or whole sentences: and lists, but contrasts, or offers an alternative.",
+        "example": "I like tea and coffee, but I don't like milk.",
+        "test": "And/but/or joins two words, phrases, or clauses of the same grammatical type."
+      },
+      {
+        "id": "en.a1.because-reason",
+        "name": "Because for reasons",
+        "note": "Because introduces a clause that gives the reason for the main clause.",
+        "example": "I stayed home because I was ill.",
+        "test": "Because introduces a clause that answers why the main clause happened."
+      },
+      {
+        "id": "en.a1.noun-phrase-basic",
+        "name": "Basic noun phrase order",
+        "note": "A noun phrase orders its parts as determiner + adjective + noun; two nouns can also combine, the first describing the second (bus stop).",
+        "example": "She bought a new car. Where is the bus stop?",
+        "test": "A noun phrase follows determiner + (adjective +) noun order, or two nouns combine with the first describing the second."
+      },
+      {
+        "id": "en.a1.verb-preposition-collocation",
+        "name": "Verb + preposition + object",
+        "note": "Some common verbs are always followed by a fixed preposition before their object (look at, listen to, wait for).",
+        "example": "Listen to me and look at the picture.",
+        "test": "A verb is followed by its fixed preposition and then an object (e.g. look at, listen to, wait for)."
+      }
+    ],
+    "a2": [
+      {
+        "id": "en.a2.past-simple-negative-question",
+        "name": "Past simple: negative and questions",
+        "note": "Didn't + base verb forms the negative, and did + subject + base verb forms yes/no and wh- questions, completing the past-simple paradigm begun at A1.",
+        "example": "I didn't see him yesterday. Did you go to the party?",
+        "test": "Didn't + base verb (negative) or did + subject + base verb (question) is used with a past-simple main verb."
+      },
+      {
+        "id": "en.a2.past-continuous",
+        "name": "Past continuous",
+        "note": "Was/were + verb-ing describes an action in progress at a past moment, often as background to another event told in the past simple.",
+        "example": "I was watching TV when she called.",
+        "test": "Was/were + verb-ing describes an action in progress at a stated past time, often alongside a past-simple interrupting event."
+      },
+      {
+        "id": "en.a2.present-perfect-simple",
+        "name": "Present perfect simple: experience and unfinished time",
+        "note": "Have/has + past participle reports a life experience or something true up to now with no specific past time given; a specific finished time (yesterday, in 2019) instead requires the past simple, and this split is the key thing a learner must control.",
+        "example": "I have visited Paris twice. I visited Paris last year.",
+        "test": "Have/has + past participle is used for an experience or a period continuing to now (often with ever, never, yet, for), never combined with a specific past-time expression like yesterday or last year."
+      },
+      {
+        "id": "en.a2.wh-questions",
+        "name": "Wh- questions",
+        "note": "What, where, when, who, why, and how combine with be, do/does, have, or a modal verb to ask for specific information, in the order wh-word + auxiliary + subject.",
+        "example": "Where do you live? What is your name?",
+        "test": "A wh-word begins the question, followed by the correct auxiliary (be/do/have/modal) and then the subject."
+      },
+      {
+        "id": "en.a2.yn-questions-do-support",
+        "name": "Yes/no questions with do-support (lexical verbs)",
+        "note": "A yes/no question with an ordinary (non-be, non-modal) verb needs do/does before the subject, since English cannot invert subject and verb the way it can with be.",
+        "example": "Do you like pizza? Does she work here?",
+        "test": "A yes/no question with a lexical main verb begins with do/does before the subject, and the main verb stays in its base form."
+      },
+      {
+        "id": "en.a2.question-tags-basic",
+        "name": "Question tags",
+        "note": "A short tag (isn't it?, don't you?) is added to a statement to check information or invite agreement; its auxiliary matches the statement's verb, and its polarity is usually the opposite.",
+        "example": "It's cold today, isn't it?",
+        "test": "A short tag with the matching auxiliary and pronoun, of opposite polarity to the main clause, is added at the end of the sentence."
+      },
+      {
+        "id": "en.a2.indirect-questions-do-you-know",
+        "name": "Indirect questions with Do you know...?",
+        "note": "Do you know is followed directly by a wh-word and a clause in ordinary statement word order, without a second do, as a softer way to ask for information.",
+        "example": "Do you know how to get to the station?",
+        "test": "Do you know is followed by a wh-word and a clause in normal statement word order (no auxiliary inverted before the subject)."
+      },
+      {
+        "id": "en.a2.imperatives",
+        "name": "Imperatives",
+        "note": "The base form of the verb alone gives an instruction or invitation; don't + base verb makes it negative, and let's + base verb makes a suggestion that includes the speaker.",
+        "example": "Close the door, please. Don't be late. Let's go.",
+        "test": "A clause begins with the base form of a verb (or don't/let's + base verb) with no stated subject, giving an instruction, invitation, or suggestion."
+      },
+      {
+        "id": "en.a2.could-ability-request-suggestion",
+        "name": "Could: past ability, polite requests, suggestions",
+        "note": "Could is the past-tense form of can for general past ability, and it also softens requests and suggestions in the present, making them more polite than can.",
+        "example": "When I was young, I could run fast. Could you help me? We could go to the cinema.",
+        "test": "Could + base verb reports past general ability, or makes a request or suggestion more polite than can/will."
+      },
+      {
+        "id": "en.a2.must-mustnt",
+        "name": "Must and mustn't: obligation and prohibition",
+        "note": "Must states a strong obligation the speaker imposes, and mustn't forbids something; don't have to (not mustn't) says something is unnecessary.",
+        "example": "You must wear a seatbelt. You mustn't smoke here.",
+        "test": "Must + base verb states an obligation, or mustn't + base verb forbids an action."
+      },
+      {
+        "id": "en.a2.have-to",
+        "name": "Have to: external obligation",
+        "note": "Have to/has to expresses an obligation that comes from outside the speaker (a rule or circumstance) and forms negatives and questions with do/does, like an ordinary verb.",
+        "example": "I have to work on Saturday. Do you have to leave now?",
+        "test": "Have to/has to + base verb states an obligation coming from a rule or situation, with do-support in negatives and questions."
+      },
+      {
+        "id": "en.a2.should-advice",
+        "name": "Should: advice and suggestions",
+        "note": "Should + base verb gives advice or a recommended suggestion; shouldn't gives the opposite advice.",
+        "example": "You should see a doctor. You shouldn't work so much.",
+        "test": "Should/shouldn't + base verb gives advice or a recommendation."
+      },
+      {
+        "id": "en.a2.may-might-possibility",
+        "name": "May and might: possibility",
+        "note": "May and might + base verb state that something is possible without saying how likely; they never change form for person.",
+        "example": "It may rain later. She might be at home.",
+        "test": "May/might + base verb states a possible fact or event, not a certainty."
+      },
+      {
+        "id": "en.a2.shall-offers-suggestions",
+        "name": "Shall: offers and suggestions (I/we)",
+        "note": "Shall I/we...? offers to do something or suggests an activity; unlike other modals it is used mainly with I and we.",
+        "example": "Shall I open the window? Shall we go now?",
+        "test": "Shall I/we + base verb makes an offer or suggestion, in question form."
+      },
+      {
+        "id": "en.a2.can-permission",
+        "name": "Can for permission",
+        "note": "Beyond ability and requests learned at A1, can also grants or asks for permission to do something.",
+        "example": "Can I use your phone?",
+        "test": "Can/can't + base verb asks for or gives permission, distinct from ability or a request for help."
+      },
+      {
+        "id": "en.a2.going-to-future",
+        "name": "Going to: intentions and predictions",
+        "note": "Be going to + base verb states a plan already decided before the moment of speaking, or a prediction based on present evidence.",
+        "example": "I'm going to visit my parents this weekend. Look at those clouds — it's going to rain.",
+        "test": "A form of be + going to + base verb expresses a prior intention or a prediction based on visible present evidence."
+      },
+      {
+        "id": "en.a2.present-continuous-future",
+        "name": "Present continuous for future arrangements",
+        "note": "Am/is/are + verb-ing can describe a fixed future arrangement, not just an action happening now, usually with a future time expression.",
+        "example": "I'm meeting Sarah at six tomorrow.",
+        "test": "A present-continuous form refers to a definite future arrangement, marked by a future time expression rather than now."
+      },
+      {
+        "id": "en.a2.future-will-shall-extended",
+        "name": "Will and shall: negatives, questions, offers, willingness",
+        "note": "Beyond the plain affirmative learned at A1, will forms negatives and questions and expresses willingness or a spontaneous offer (I'll help you), while shall forms offers and suggestions.",
+        "example": "I won't be late. Will you come with us? I'll carry that for you.",
+        "test": "Won't or will you...? is used, or will expresses a spontaneous offer or willingness to help."
+      },
+      {
+        "id": "en.a2.future-continuous-affirmative",
+        "name": "Future continuous: affirmative",
+        "note": "Will be + verb-ing describes an action that will already be in progress at a specific future time.",
+        "example": "I'll be waiting for you at the station.",
+        "test": "Will be + verb-ing describes an action already in progress at a stated future time."
+      },
+      {
+        "id": "en.a2.conditional-zero-real",
+        "name": "Zero and real conditionals",
+        "note": "If + present simple, paired with present simple or an imperative in the main clause, states a general truth or a real, likely present/future situation.",
+        "example": "If you heat water, it boils. If you need help, call me.",
+        "test": "If + present simple is paired with present simple or an imperative in the main clause, describing a general truth or a real, likely situation."
+      },
+      {
+        "id": "en.a2.passive-present-past-simple",
+        "name": "Passive voice: present and past simple",
+        "note": "The passive (be + past participle) puts the receiver of an action in subject position, used when the doer is unknown, unimportant, or added afterward with by.",
+        "example": "The letter was sent yesterday. English is spoken here.",
+        "test": "A form of be + past participle (present or past simple) is used with the affected thing as the subject."
+      },
+      {
+        "id": "en.a2.reported-speech-statements",
+        "name": "Reported speech: statements with pronoun shift",
+        "note": "Say and tell report someone's words, and the pronouns must shift to match the new speaker's viewpoint, though the verb tense does not yet need to shift at this level.",
+        "example": "She said (that) she was tired. He told me he liked the film.",
+        "test": "Say or tell introduces a reported statement whose pronouns are shifted to match the reporting speaker's perspective."
+      },
+      {
+        "id": "en.a2.relative-clauses-defining",
+        "name": "Defining relative clauses",
+        "note": "Who, which, and that introduce a clause identifying which person or thing is meant; the pronoun can be dropped when it is the object of the relative clause.",
+        "example": "The man who lives next door is a doctor. The book (that) I read was great.",
+        "test": "A relative clause with who/which/that (or no pronoun, if it is the object) identifies which noun is meant, without commas."
+      },
+      {
+        "id": "en.a2.comparative-adjectives",
+        "name": "Comparative adjectives",
+        "note": "Short adjectives add -er (or -ier after consonant + y), longer adjectives use more, and than introduces the second thing compared.",
+        "example": "This bag is bigger than that one. This film is more interesting than the last one.",
+        "test": "An adjective takes -er/-ier or is preceded by more, followed by than and the second item being compared."
+      },
+      {
+        "id": "en.a2.superlative-adjectives",
+        "name": "Superlative adjectives",
+        "note": "Short adjectives add -est (with the), longer adjectives use the most, to single out one thing from a group.",
+        "example": "This is the biggest city in the country. That was the most exciting match of the season.",
+        "test": "The + adjective-est or the most + adjective singles out one item as extreme within a group, often followed by in/of + a group."
+      },
+      {
+        "id": "en.a2.uncountable-nouns",
+        "name": "Uncountable nouns",
+        "note": "Nouns like water, music, and homework have no plural and take a singular verb; the marks a specific instance, and some/any/a lot of/more show quantity.",
+        "example": "The music was too loud. I need some information.",
+        "test": "An uncountable noun (no plural -s, singular verb agreement) is used with the, or with some/any/a lot of/more to show quantity."
+      },
+      {
+        "id": "en.a2.quantifiers-extended",
+        "name": "Quantifiers: extended range",
+        "note": "All, both, a few widen the range for plural nouns; each, an, one for singular nouns; much/many appear in negative statements, with so/too many for excess.",
+        "example": "I don't have much money, and not many people came.",
+        "test": "Much/many is used in a negative statement (not much/not many), or all/both/a few/each is used to quantify a noun."
+      },
+      {
+        "id": "en.a2.demonstratives-reference",
+        "name": "Demonstratives for reference: already mentioned",
+        "note": "This/that/these/those can point back to something already said, not only to something physically near or far.",
+        "example": "I lost my phone. That was really annoying.",
+        "test": "This/that/these/those refers back to an idea or thing already mentioned in the previous sentence, rather than pointing at something physically present."
+      },
+      {
+        "id": "en.a2.possessive-s",
+        "name": "Possessive 's with nouns",
+        "note": "Add 's to a singular noun (or an irregular plural) to show possession; a regular plural noun takes only an apostrophe.",
+        "example": "This is Anna's book. The students' books are on the table.",
+        "test": "A noun takes 's (singular, or irregular plural) or s' (regular plural) to show that it possesses the following noun."
+      },
+      {
+        "id": "en.a2.phrasal-verbs-basic",
+        "name": "Phrasal verbs: basic separable and intransitive",
+        "note": "Some verbs combine with a particle to form a new meaning; with a noun object the particle can go before or after it, but a pronoun object must go between verb and particle (turn it off, not turn off it).",
+        "example": "Please turn off the light. Please turn it off. What time do you wake up?",
+        "test": "A verb + particle combination (phrasal verb) is used, and if the object is a pronoun, it appears between the verb and the particle."
+      },
+      {
+        "id": "en.a2.verb-patterns-ing-extended",
+        "name": "Verb patterns: extended -ing and to-infinitive",
+        "note": "Enjoy and a growing set of verbs take -ing, while would love adds a to-infinitive, extending the pattern begun at A1.",
+        "example": "I enjoy swimming. I would love to visit Japan.",
+        "test": "Enjoy is followed by -ing, or would love is followed by a to-infinitive."
+      },
+      {
+        "id": "en.a2.reflexive-pronouns-singular",
+        "name": "Reflexive pronouns: singular",
+        "note": "Myself, yourself, himself, herself, itself are used when the subject and object of a verb are the same person or thing.",
+        "example": "She hurt herself while cooking.",
+        "test": "A singular reflexive pronoun (myself/yourself/himself/herself/itself) refers back to the subject as the object of the same clause."
+      },
+      {
+        "id": "en.a2.indefinite-pronouns-negation",
+        "name": "Indefinite pronouns and single negation",
+        "note": "Someone/something/anyone/anything/no one/nothing combine with not or stand alone; English never carries two negative words in the same clause (not nothing is wrong; use not anything or nothing alone).",
+        "example": "I don't want anything. Nobody called me today.",
+        "test": "An any-compound follows not (not...anything), or a no-compound (nobody/nothing/no one) stands alone without another negative word in the same clause."
+      },
+      {
+        "id": "en.a2.exclamations-what-a",
+        "name": "Exclamations with What a...!",
+        "note": "What a + (adjective +) noun makes an exclamation about something notable.",
+        "example": "What a beautiful day!",
+        "test": "What a + (adjective +) noun forms an exclamation, with no verb required."
+      },
+      {
+        "id": "en.a2.discourse-markers-informal",
+        "name": "Informal discourse markers",
+        "note": "So and as you know organize spoken or informal written text, summarizing a point or flagging shared knowledge.",
+        "example": "So, what do you want to do this weekend?",
+        "test": "So (summarizing) or as you know (flagging shared information) is used to organize an informal spoken or written text."
+      }
+    ],
+    "b1": [
+      {
+        "id": "en.b1.present-perfect-extended",
+        "name": "Present perfect simple: extended uses",
+        "note": "Beyond simple experience, the present perfect now covers duration with since, an already-completed point with already, a very recent event, an unfinished period, and modification by a superlative (the best I've ever seen).",
+        "example": "I've lived here since 2015. I've already finished my homework. That's the best film I've ever seen.",
+        "test": "Have/has + past participle is combined with since (duration from a point), already, or a superlative, extending the experience/unfinished-time use learned at A2."
+      },
+      {
+        "id": "en.b1.present-perfect-continuous",
+        "name": "Present perfect continuous",
+        "note": "Have/has been + verb-ing highlights the duration or repetition of an activity continuing up to now, focusing on the activity itself rather than its result.",
+        "example": "I've been studying English for three years. She's been calling you all day.",
+        "test": "Have/has been + verb-ing describes an activity continuing (or repeating) up to now, usually with for/since or emphasis on duration."
+      },
+      {
+        "id": "en.b1.past-perfect-simple",
+        "name": "Past perfect simple",
+        "note": "Had + past participle marks an event as happening before another past event already mentioned, putting two past events in the right order.",
+        "example": "When I arrived, the film had already started.",
+        "test": "Had + past participle refers to an event completed before another past-time point or event named in the same passage."
+      },
+      {
+        "id": "en.b1.past-perfect-continuous",
+        "name": "Past perfect continuous",
+        "note": "Had been + verb-ing shows an activity that was in progress up to a past point, often explaining or giving background for what happened next.",
+        "example": "She was tired because she had been working all night.",
+        "test": "Had been + verb-ing describes an activity in progress up to a stated past point, usually explaining a following past event."
+      },
+      {
+        "id": "en.b1.conditional-first",
+        "name": "First conditional",
+        "note": "If + present simple, with will (or a modal) in the main clause, predicts a likely future result of a real possible condition.",
+        "example": "If it rains tomorrow, we will stay home.",
+        "test": "If + present simple is paired with will/won't (or a modal) in the main clause, predicting a likely future result."
+      },
+      {
+        "id": "en.b1.conditional-second",
+        "name": "Second conditional",
+        "note": "If + past simple, with would in the main clause, imagines an unreal or unlikely present/future situation and its result.",
+        "example": "If I had more money, I would travel the world.",
+        "test": "If + past simple is paired with would (or could/might) in the main clause, imagining an unreal or unlikely present/future situation."
+      },
+      {
+        "id": "en.b1.conditional-third",
+        "name": "Third conditional",
+        "note": "If + past perfect, with would have + past participle in the main clause, imagines a different past and how it would have changed the outcome.",
+        "example": "If I had studied harder, I would have passed the exam.",
+        "test": "If + past perfect is paired with would have + past participle in the main clause, imagining a changed past event and its unreal result."
+      },
+      {
+        "id": "en.b1.conditional-unless-ellipsis",
+        "name": "Unless, and ellipted if not / if so",
+        "note": "Unless introduces an exception meaning if...not; if not and if so can stand alone, referring back to a question or condition just mentioned.",
+        "example": "We'll go for a walk unless it rains. Are you coming? If so, let me know.",
+        "test": "Unless replaces if...not as an exception, or if not/if so is used alone to refer back to a previous yes/no question or condition."
+      },
+      {
+        "id": "en.b1.passive-tense-range",
+        "name": "Passive voice: wider tense range",
+        "note": "The passive now extends across past continuous, present continuous, and past perfect, and can be used with the infinitive.",
+        "example": "The bridge was being repaired all last month. The report has to be finished by Friday.",
+        "test": "A passive form (be + past participle) is used correctly in past continuous, present continuous, past perfect, or as an infinitive after another verb."
+      },
+      {
+        "id": "en.b1.passive-modals-infinitive",
+        "name": "Passive with modal verbs",
+        "note": "Modal + be + past participle expresses possibility, necessity, or permission about an action from the point of view of the thing affected.",
+        "example": "The homework must be finished by Monday. This problem can be solved.",
+        "test": "A modal verb is followed by be + past participle, expressing possibility, necessity, or permission from the affected thing's point of view."
+      },
+      {
+        "id": "en.b1.get-passive",
+        "name": "Get-passive",
+        "note": "Get + past participle is an informal alternative to be + past participle, often for something that happens suddenly or unexpectedly.",
+        "example": "My phone got stolen on the bus.",
+        "test": "Get + past participle is used informally as a passive, typically for a sudden or unplanned event."
+      },
+      {
+        "id": "en.b1.reported-statements-backshift",
+        "name": "Reported speech: statements with full tense shift",
+        "note": "Reporting a statement now shifts both pronouns and tense one step back into the past (present becomes past, past becomes past perfect), not just pronouns as at A2.",
+        "example": "She said (that) she was tired. He said he had finished the report.",
+        "test": "A reported statement shifts its verb one tense back from the original (present to past, past to past perfect) as well as shifting pronouns."
+      },
+      {
+        "id": "en.b1.reported-questions-commands",
+        "name": "Reported questions, requests, and commands",
+        "note": "Reported yes/no questions use if/whether, reported wh-questions keep the wh-word but drop the question word order, and reported requests/commands use told/asked + object + to-infinitive.",
+        "example": "She asked if I was coming. He asked me what time it was. She told him to close the door.",
+        "test": "A reported yes/no question uses if/whether + statement word order, a reported wh-question uses the wh-word + statement word order, or a reported command uses told/asked + object + to-infinitive."
+      },
+      {
+        "id": "en.b1.would-imagined-past",
+        "name": "Would: imagined situations and willingness in the past",
+        "note": "Would + base verb reports an imagined past situation, past willingness, or a habitual past action, and forms negatives and questions of its own.",
+        "example": "I wouldn't have said that. He wouldn't help me at all.",
+        "test": "Would/wouldn't + base verb reports an imagined situation, refusal, or willingness viewed from the past."
+      },
+      {
+        "id": "en.b1.should-have-regret",
+        "name": "Should have / shouldn't have: past regret",
+        "note": "Should have + past participle criticizes or regrets a past action that did not happen as it should have.",
+        "example": "You should have called me earlier. I shouldn't have eaten so much.",
+        "test": "Should have/shouldn't have + past participle expresses regret or criticism about a past action or its absence."
+      },
+      {
+        "id": "en.b1.could-permission-possibility",
+        "name": "Could: permission and general possibility",
+        "note": "Beyond the past-ability and polite-request uses learned at A2, could now also grants permission and states a general (not only past) possibility.",
+        "example": "Could I leave early today? It could rain later.",
+        "test": "Could + base verb asks for or gives permission, or states a general possibility, beyond its A2 uses of past ability and polite requests."
+      },
+      {
+        "id": "en.b1.must-deduction",
+        "name": "Must: logical deduction",
+        "note": "Must + base verb draws a confident conclusion from evidence, a distinct function from the obligation use learned at A2.",
+        "example": "She isn't answering; she must be asleep.",
+        "test": "Must + base verb states a confident logical conclusion drawn from evidence, not an obligation."
+      },
+      {
+        "id": "en.b1.neednt",
+        "name": "Needn't / don't need to: lack of obligation",
+        "note": "Needn't (or don't need to) says something is not necessary, distinct from mustn't, which forbids.",
+        "example": "You needn't bring anything; we have everything we need.",
+        "test": "Needn't or don't need to + base verb states that an action is unnecessary, not forbidden."
+      },
+      {
+        "id": "en.b1.used-to",
+        "name": "Used to for past habits and states",
+        "note": "Used to + base verb describes a past habit or state that is no longer true.",
+        "example": "I used to live in Paris, but I don't anymore.",
+        "test": "Used to + base verb describes a repeated past action or state that has since stopped, with a present contrast implied or stated."
+      },
+      {
+        "id": "en.b1.ought-to-advice",
+        "name": "Ought to: advice",
+        "note": "Ought to + base verb gives advice, close in meaning to should but less common.",
+        "example": "You ought to see a doctor about that cough.",
+        "test": "Ought to + base verb gives advice or a recommendation, equivalent to should."
+      },
+      {
+        "id": "en.b1.relative-clauses-non-defining",
+        "name": "Non-defining relative clauses",
+        "note": "A relative clause set off by commas adds extra, non-essential information about a noun already identified; who/which (never that) introduces it.",
+        "example": "My brother, who lives in Rome, is visiting next week.",
+        "test": "A relative clause set off by commas adds non-essential extra information, introduced by who/which and never that."
+      },
+      {
+        "id": "en.b1.relative-whose-where-when",
+        "name": "Relative clauses with whose, where, when",
+        "note": "Whose shows possession inside a relative clause, where refers to a place, and when refers to a time.",
+        "example": "That's the house where I grew up. Do you remember the day when we met?",
+        "test": "A relative clause uses whose (possession), where (place), or when (time) to connect back to its noun."
+      },
+      {
+        "id": "en.b1.comparative-clause-patterns",
+        "name": "Comparative clause patterns",
+        "note": "As...as compares equal things, so...that shows a result, and rather than introduces a preferred alternative.",
+        "example": "She's as tall as her brother. It was so cold that we stayed inside. I'd rather walk than drive.",
+        "test": "As...as, so + adjective + that, or rather than links a comparison or its result to a following clause or phrase."
+      },
+      {
+        "id": "en.b1.comparative-modifiers-repetition",
+        "name": "Comparative modifiers and repeated comparatives",
+        "note": "Much, a (little) bit, and even strengthen a comparative, and repeating the comparative with and shows continuous change.",
+        "example": "This one is much better. It's getting colder and colder.",
+        "test": "A comparative adjective is strengthened with much/a bit/even, or repeated with and to show continuous change."
+      },
+      {
+        "id": "en.b1.noun-phrases-complex",
+        "name": "Complex noun phrases",
+        "note": "A noun phrase can be extended with a relative clause, a possessive 's without a following noun, or the pattern the thing/problem is that...",
+        "example": "The car that I bought last year is already broken. This bike is Anna's. The problem is that we're out of time.",
+        "test": "A noun phrase is extended by a relative clause, a stand-alone possessive 's, or a the thing/point is that... construction."
+      },
+      {
+        "id": "en.b1.quantifiers-uncountable-extended",
+        "name": "Quantifiers with uncountable nouns: extended range",
+        "note": "Much/many now appear in questions, so much/too much modifies uncountable nouns, a little/a bit of adds an informal option, and most/enough/plenty of/loads of/half of/none of widen the range further.",
+        "example": "How much time do you have? I don't have enough time, and there's too much traffic.",
+        "test": "Much/many is used in a question, or a wider quantifier (a little, enough, plenty of, most, half of, none of) modifies an uncountable or plural noun."
+      },
+      {
+        "id": "en.b1.phrasal-verbs-object-placement",
+        "name": "Phrasal verbs with noun and pronoun objects",
+        "note": "A separable phrasal verb can place a noun object before or after the particle, but a pronoun object must go between the verb and the particle, extending the rule learned at A2 to a wider range of verbs.",
+        "example": "She picked up the book. She picked it up.",
+        "test": "A separable phrasal verb places a pronoun object between the verb and the particle, and a noun object either before or after it."
+      },
+      {
+        "id": "en.b1.phrasal-prepositional-verbs",
+        "name": "Phrasal-prepositional verbs",
+        "note": "Some verbs combine with both a particle and a preposition before their object (look forward to, put up with, get away with).",
+        "example": "I'm looking forward to the weekend. I can't put up with this noise.",
+        "test": "A three-part verb + particle + preposition + object combination (e.g. look forward to, put up with) is used as a single unit."
+      },
+      {
+        "id": "en.b1.verb-object-to-infinitive",
+        "name": "Verb + object + to-infinitive",
+        "note": "Verbs like want, tell, ask, and expect take a direct object followed by a to-infinitive, where the object is the one who does the infinitive's action.",
+        "example": "I want you to help me. She told him to wait outside.",
+        "test": "A verb (want/tell/ask/expect) is followed by an object and then a to-infinitive, with the object as the doer of that infinitive."
+      },
+      {
+        "id": "en.b1.causative-make-let-help",
+        "name": "Causative make, let, help",
+        "note": "Make and let take an object plus a bare infinitive (no to); help can take either a bare infinitive or a to-infinitive.",
+        "example": "My parents let me stay out late. She helped me (to) fix my bike.",
+        "test": "Make or let is followed by an object and a bare infinitive, or help is followed by an object and a bare or to-infinitive."
+      },
+      {
+        "id": "en.b1.subordinate-reason-purpose-contrast",
+        "name": "Subordinate clauses: reason, purpose, contrast",
+        "note": "Since/as add a reason like because, so that/in order to state a purpose, and although/even though introduce a contrast.",
+        "example": "Since it was raining, we stayed in. I saved money in order to buy a car. Although it was cold, we went out.",
+        "test": "Since/as (reason), so that/in order to (purpose), or although/even though (contrast) introduces a subordinate clause with the matching relationship to the main clause."
+      },
+      {
+        "id": "en.b1.non-finite-ing-clauses",
+        "name": "Non-finite -ing clauses",
+        "note": "An -ing clause with no stated subject of its own can replace a subordinate clause, usually sharing the subject of the main clause.",
+        "example": "Feeling tired, she went to bed early.",
+        "test": "An -ing clause with no subject of its own opens or attaches to a sentence, sharing the main clause's subject."
+      },
+      {
+        "id": "en.b1.discourse-markers-formal",
+        "name": "Discourse markers: sequencing, contrast, addition",
+        "note": "Firstly/secondly sequence points, on the other hand contrasts them, and in addition adds another point, organizing a piece of writing.",
+        "example": "Firstly, it's cheaper. On the other hand, it takes longer.",
+        "test": "A sequencing (firstly), contrasting (on the other hand), or adding (in addition) discourse marker organizes points across sentences."
+      },
+      {
+        "id": "en.b1.question-tags-extended",
+        "name": "Question tags: full pattern",
+        "note": "A negative statement takes an affirmative tag and an affirmative statement takes a negative tag, matching the auxiliary exactly, including with imperatives and informal right.",
+        "example": "You haven't met her, have you? Close the door, will you?",
+        "test": "A question tag correctly reverses polarity against its statement (negative statement, affirmative tag, or the reverse) and matches its auxiliary."
+      },
+      {
+        "id": "en.b1.indefinite-pronouns-focus",
+        "name": "Indefinite pronouns with relative clauses and vague expressions",
+        "note": "Someone/something can be followed by a relative clause to add focus, or used loosely in vague expressions like or something.",
+        "example": "There's someone who wants to speak to you. Let's get a coffee or something.",
+        "test": "Someone/something/anything is followed by a relative clause for focus, or used in a vague expression such as or something."
+      },
+      {
+        "id": "en.b1.generic-one",
+        "name": "Generic one",
+        "note": "One is used formally to mean people in general, including the speaker.",
+        "example": "One should always be polite to strangers.",
+        "test": "One is used as a formal generic subject or object pronoun meaning people in general."
+      },
+      {
+        "id": "en.b1.reflexive-plural-emphatic",
+        "name": "Reflexive pronouns: plural and emphatic use",
+        "note": "Ourselves, yourselves, themselves follow the same rule as the singular reflexives, and any reflexive pronoun can be added after a noun for emphasis (I did it myself).",
+        "example": "They enjoyed themselves at the party. I fixed it myself.",
+        "test": "A plural reflexive pronoun (ourselves/yourselves/themselves) is the object of its own subject, or a reflexive pronoun is added after a noun phrase for emphasis."
+      },
+      {
+        "id": "en.b1.zero-article-idioms",
+        "name": "Zero article in fixed expressions",
+        "note": "A wider set of fixed expressions (by car, another, the other) uses no article, or another/the other rather than a/the with a following noun.",
+        "example": "We went by car. I don't like this one; show me another.",
+        "test": "A fixed expression uses no article (by car, at home) or another/the other before a noun, beyond the small set learned at A1."
+      },
+      {
+        "id": "en.b1.future-continuous-negative",
+        "name": "Future continuous: negative",
+        "note": "Won't be + verb-ing states that an action will not be in progress at a stated future time, completing the paradigm begun at A2.",
+        "example": "Don't call at 9 — I won't be working then.",
+        "test": "Won't be + verb-ing states that an action will not be happening at a specified future time."
+      },
+      {
+        "id": "en.b1.going-to-past-reporting",
+        "name": "Was/were going to: past intentions and future in the past",
+        "note": "Was/were going to + base verb reports a plan or prediction made from a point in the past, often one that did not happen.",
+        "example": "I was going to call you, but I forgot.",
+        "test": "Was/were going to + base verb reports an intention or prediction held at a past moment, often left unfulfilled."
+      },
+      {
+        "id": "en.b1.it-cleft",
+        "name": "It-cleft sentences",
+        "note": "It + be + the focused element + that-clause singles out one part of a sentence for emphasis.",
+        "example": "It was Anna who called, not Tom.",
+        "test": "It + be + a focused word or phrase + that (or who) puts special emphasis on that one element of the sentence."
+      }
+    ],
+    "b2": [
+      {
+        "id": "en.b2.present-perfect-full-range",
+        "name": "Present perfect: still, negative questions",
+        "note": "Still can extend into the present perfect (hasn't happened still), and negative questions with the present perfect check an assumption.",
+        "example": "Haven't you finished yet? He still hasn't called.",
+        "test": "The present perfect is used with still in a negative statement, or in a negative question checking an assumption."
+      },
+      {
+        "id": "en.b2.future-perfect-simple",
+        "name": "Future perfect simple",
+        "note": "Will have + past participle looks back from a future point to say something will be completed by then.",
+        "example": "By next year, I will have finished my degree.",
+        "test": "Will have + past participle states that an action will be complete before or by a stated future time."
+      },
+      {
+        "id": "en.b2.future-perfect-continuous",
+        "name": "Future perfect continuous",
+        "note": "Will have been + verb-ing looks back from a future point at the duration of an activity continuing up to it.",
+        "example": "By June, I will have been working here for ten years.",
+        "test": "Will have been + verb-ing states the duration of an activity that will still be continuing at a stated future point."
+      },
+      {
+        "id": "en.b2.future-continuous-questions-politeness",
+        "name": "Future continuous: questions and polite use",
+        "note": "Will you be + verb-ing? asks about someone's future plans in a way that sounds less like a direct request.",
+        "example": "Will you be using the car this evening?",
+        "test": "Will you be + verb-ing? asks politely about a planned future action, softer than a direct request."
+      },
+      {
+        "id": "en.b2.future-expressions-be",
+        "name": "Future expressions with be: about to, due to, to",
+        "note": "Be about to marks the immediate future, be due to marks a scheduled future, and be to states an official arrangement or instruction.",
+        "example": "The film is about to start. The train is due to arrive at 6. You are to report to reception on arrival.",
+        "test": "Be about to (immediate future), be due to (schedule), or be to (official arrangement) is used with a base verb to talk about the future."
+      },
+      {
+        "id": "en.b2.passive-full-tense-range",
+        "name": "Passive voice: full tense and modal range",
+        "note": "The passive now extends across the present perfect, past perfect, and modal perfect (must have been done), and can follow another verb as an infinitive.",
+        "example": "The work has been finished. It must have been stolen last night.",
+        "test": "A passive form (be + past participle) is used correctly in the present perfect, past perfect, or after a modal perfect (must/might have been + past participle)."
+      },
+      {
+        "id": "en.b2.passive-ditransitive",
+        "name": "Passive with two-object verbs",
+        "note": "Verbs like give, offer, and sell take two objects, and either one can become the subject of a passive sentence, with the other placed after a preposition if needed.",
+        "example": "She was given a prize. A prize was given to her.",
+        "test": "A verb that normally takes two objects (give/offer/sell) is passivized with either object as subject, the other following a preposition where needed."
+      },
+      {
+        "id": "en.b2.causative-get-have",
+        "name": "Causative get and have something done",
+        "note": "Have/get + object + past participle says that someone else performs a service for the subject, and get + object + to-infinitive says the subject persuades someone to do something.",
+        "example": "I had my hair cut yesterday. I got him to fix my computer.",
+        "test": "Have/get + object + past participle reports a service done for the subject, or get + object + to-infinitive reports persuading someone to act."
+      },
+      {
+        "id": "en.b2.wish-if-only",
+        "name": "Wish and if only",
+        "note": "Wish/if only + past simple expresses a present regret or a wish for a different current state; + past perfect expresses regret about the past.",
+        "example": "I wish I had more time. If only I hadn't said that.",
+        "test": "Wish or if only is followed by a past-simple verb (present regret) or a past-perfect verb (past regret), not a present tense."
+      },
+      {
+        "id": "en.b2.past-perfect-explanatory",
+        "name": "Past perfect: explanations and dramatic inversion",
+        "note": "Because clauses can explain a past perfect event, and never before/no sooner...than can invert subject and auxiliary for dramatic effect.",
+        "example": "She was upset because she had failed the test. No sooner had I sat down than the phone rang.",
+        "test": "A past-perfect clause is introduced by because to explain an earlier event, or fronted with never/no sooner, triggering subject-auxiliary inversion."
+      },
+      {
+        "id": "en.b2.inversion-negative-adverbials",
+        "name": "Inversion after negative adverbials",
+        "note": "Fronting a negative or restrictive adverbial (never, not only) for emphasis forces subject-auxiliary inversion, as if the clause were a question.",
+        "example": "Never have I seen such a mess. Not only did she win, but she also broke the record.",
+        "test": "A negative or restrictive adverbial (never, not only, rarely) is fronted at the start of the clause, and the subject and auxiliary are inverted."
+      },
+      {
+        "id": "en.b2.relative-whose-preposition",
+        "name": "Relative clauses: preposition + relative pronoun",
+        "note": "A preposition can move to just before the relative pronoun (to whom, in which) in a more formal style, instead of staying stranded at the end.",
+        "example": "This is the woman to whom I spoke.",
+        "test": "A preposition is placed immediately before a relative pronoun (whom/which), rather than left stranded at the end of the clause."
+      },
+      {
+        "id": "en.b2.cleft-pseudo",
+        "name": "Pseudo-cleft sentences",
+        "note": "The thing/reason/problem is that... and what-clauses as subject put special focus on one idea by turning it into the sentence's main topic.",
+        "example": "The problem is that we don't have enough time. What I need is a holiday.",
+        "test": "The thing/reason/problem is that... or a what-clause as subject is used to give special focus to the following information."
+      },
+      {
+        "id": "en.b2.comparative-superlative-formal",
+        "name": "Comparative and superlative: formal patterns",
+        "note": "By far strengthens a superlative, ellipsis drops a repeated noun after the (the cheapest, not the cheapest one), and enough + to-infinitive states a sufficient degree for a result.",
+        "example": "This is by far the best option. She's old enough to vote.",
+        "test": "By far strengthens a superlative, the stands alone after an ellipted noun, or a comparative/enough is followed by a to-infinitive stating a resulting action."
+      },
+      {
+        "id": "en.b2.little-few",
+        "name": "Little and few: near-negative quantity",
+        "note": "Little (uncountable) and few (countable), without a, mean almost none, a stronger and more formal negative than not much/not many.",
+        "example": "We have little time left. Few people came to the meeting.",
+        "test": "Little (uncountable noun) or few (plural noun), used without a, states that there is almost none of something."
+      },
+      {
+        "id": "en.b2.uncountable-no-article-generic",
+        "name": "Uncountable nouns without an article: generic reference",
+        "note": "An uncountable noun with no article at all refers to the general, abstract concept rather than one specific instance.",
+        "example": "Music is important to me. Television has changed a lot.",
+        "test": "An uncountable noun with no article refers to the concept in general, not a specific instance introduced earlier."
+      },
+      {
+        "id": "en.b2.verb-patterns-meaning-change",
+        "name": "Verbs where to-infinitive and -ing change the meaning",
+        "note": "A small set of verbs (remember, stop, try, regret) mean something different depending on whether they are followed by a to-infinitive or an -ing form.",
+        "example": "I stopped to smoke. I stopped smoking. Remember to lock the door. I remember locking the door.",
+        "test": "Remember/stop/try/regret is followed by both a to-infinitive and an -ing form with different, contrasting meanings."
+      },
+      {
+        "id": "en.b2.verb-ing-own-subject",
+        "name": "-ing clause with its own subject",
+        "note": "An -ing clause can carry its own subject, different from the main clause's subject, usually after verbs like mind, imagine, or a possessive.",
+        "example": "I don't mind him staying here. Do you mind my asking a question?",
+        "test": "An -ing clause has a subject of its own (an object pronoun or possessive) that differs from the main clause's subject."
+      },
+      {
+        "id": "en.b2.sense-verb-object-ing",
+        "name": "Sense verb + object + -ing",
+        "note": "See, hear, watch, and other sense verbs take an object followed by an -ing form to show an action was in progress and partly observed.",
+        "example": "I saw him crossing the street.",
+        "test": "A sense verb (see/hear/watch/notice) is followed by an object and an -ing form, showing a partly observed ongoing action."
+      },
+      {
+        "id": "en.b2.modal-expressions-be-likely-supposed",
+        "name": "Modal expressions with be: likely to, supposed to, bound to",
+        "note": "Be likely to states probability, be supposed to states an expectation or rule (sometimes not followed), and be bound to states near-certainty.",
+        "example": "It's likely to rain later. You're supposed to wear a helmet. He's bound to be late again.",
+        "test": "Be likely to (probability), be supposed to (expectation/rule), or be bound to (certainty) is followed by a base verb."
+      },
+      {
+        "id": "en.b2.must-obligation-rules-concession",
+        "name": "Must: rules, emphasis, and concession",
+        "note": "Must can state an official rule, add emphasis to a recommendation, or appear in a concessive clause (though I must admit).",
+        "example": "Passengers must fasten their seatbelts. I must say, that was delicious.",
+        "test": "Must states an official rule, adds emphasis to a statement, or appears in a fixed concessive phrase."
+      },
+      {
+        "id": "en.b2.need-full-modal",
+        "name": "Need as an ordinary verb and semi-modal",
+        "note": "Need behaves like an ordinary verb (need to, needs to, doesn't need to) in most uses, but can also act as a bare modal in negative questions in more formal style.",
+        "example": "Need I say more? You don't need to worry.",
+        "test": "Need is used as an ordinary verb with to (need to/needs to), or as a bare modal without to in a formal negative or question."
+      },
+      {
+        "id": "en.b2.dare",
+        "name": "Dare: semi-modal use",
+        "note": "Dare can behave like an ordinary verb (dare to) or like a modal (bare infinitive, no do-support), especially in negative or emphatic statements.",
+        "example": "He didn't dare (to) speak. How dare you say that!",
+        "test": "Dare is followed by a bare infinitive or a to-infinitive, in a negative, question, or emphatic exclamation (how dare...)."
+      },
+      {
+        "id": "en.b2.reported-speech-word-order",
+        "name": "Reported speech: reporting clause position and citation",
+        "note": "The reporting clause (she said) can move to the middle or end of the quotation, sometimes with inverted subject and verb, and the present simple can cite something as still true.",
+        "example": "\"I'm tired,\" said Anna. The report states that the economy is improving.",
+        "test": "A reporting clause is placed mid- or end-position (with optional subject-verb inversion), or the present simple cites information as currently valid."
+      },
+      {
+        "id": "en.b2.discourse-markers-formal-writing",
+        "name": "Discourse markers: comparing, formal opening and closing",
+        "note": "Compared with/similarly compares ideas, and to conclude/in conclusion formally opens or closes a piece of writing.",
+        "example": "Compared with last year, sales have improved. To conclude, the plan should go ahead.",
+        "test": "A comparing (compared with, similarly) or formal opening/closing (to conclude, in summary) discourse marker organizes formal writing."
+      },
+      {
+        "id": "en.b2.neither-nor-not-only-clauses",
+        "name": "Neither...nor and not only...but also with clauses",
+        "note": "Neither...nor links two negative alternatives, and not only...but also links two clauses or phrases for emphasis.",
+        "example": "She neither called nor texted. Not only was it expensive, but it was also useless.",
+        "test": "Neither...nor or not only...but also links two clauses or phrases, with correct negative or emphatic meaning."
+      },
+      {
+        "id": "en.b2.reciprocal-one-another",
+        "name": "Reciprocal pronouns: one another",
+        "note": "One another is a more formal alternative to each other for a mutual action between more than two people.",
+        "example": "The team members supported one another throughout the project.",
+        "test": "One another is used, typically among more than two people, for a mutual action, as a formal alternative to each other."
+      },
+      {
+        "id": "en.b2.reflexive-intensifying",
+        "name": "Reflexive pronouns for intensifying",
+        "note": "Itself/in itself after a noun or clause adds emphasis, singling out that thing alone, apart from anything else.",
+        "example": "The idea itself isn't bad, but the timing is wrong.",
+        "test": "A reflexive pronoun (itself, in itself) is added after a noun or idea to emphasize it in isolation from anything else."
+      },
+      {
+        "id": "en.b2.negation-emphasis-fronting",
+        "name": "Negation for emphasis and fronting",
+        "note": "Not can be stressed for strong emphasis, and never can be fronted to the start of a clause for dramatic effect (with inversion, covered separately).",
+        "example": "That is simply not true. Not everyone agreed.",
+        "test": "Not is used for strong emphasis on a following word or phrase, or combined with all/every to make a partial (not total) negation."
+      },
+      {
+        "id": "en.b2.phrasal-prepositional-stranding",
+        "name": "Preposition stranding in relative and wh-clauses",
+        "note": "In relative clauses, wh-questions, and passives, a preposition from a verb phrase is usually left at the end of the clause rather than moved to the front.",
+        "example": "Who did you talk to? This is the book I told you about.",
+        "test": "A preposition belonging to a verb (talk to, tell about) is left stranded at the end of a relative or wh-clause, rather than fronted."
+      },
+      {
+        "id": "en.b2.possessive-double",
+        "name": "Double possessive: a friend of mine",
+        "note": "A noun + of + possessive pronoun combines an indefinite article with possession, avoiding the awkward a my friend.",
+        "example": "He's a friend of mine. That's a habit of hers.",
+        "test": "A noun phrase uses the pattern a/an/this + noun + of + possessive pronoun (a friend of mine) to combine indefiniteness with possession."
+      },
+      {
+        "id": "en.b2.quantifier-pronouns-each-several-neither",
+        "name": "Quantifier pronouns: each, several, neither, enough",
+        "note": "Each, several, neither, and enough function as pronouns on their own, standing in for a noun already mentioned, often with of + a determiner.",
+        "example": "Neither of us wanted to leave. Several of the guests had already gone.",
+        "test": "Each/several/neither/enough stands alone as a pronoun (often with of + determiner), without a following noun."
+      },
+      {
+        "id": "en.b2.article-the-more-the-more",
+        "name": "The + comparative...the + comparative",
+        "note": "This paired comparative structure links two things that change together in proportion.",
+        "example": "The more you practice, the better you get.",
+        "test": "The + comparative..., the + comparative... links two proportionally changing things in a single sentence."
+      }
+    ],
+    "c1": [
+      {
+        "id": "en.c1.conditional-mixed-modal-regret",
+        "name": "Mixed conditional with a modal other than would",
+        "note": "If + past perfect can pair with a modal other than would (might have, could have) in the main clause, adding a degree of uncertainty to the imagined past result.",
+        "example": "If she had left earlier, she might have caught the train.",
+        "test": "If + past perfect is paired with might have/could have (rather than would have) in the main clause, expressing an uncertain imagined past result."
+      },
+      {
+        "id": "en.c1.conditional-formal-inversion",
+        "name": "Formal conditionals: inversion and should",
+        "note": "In a formal register, if can be dropped and replaced by inverting the subject and had/were/should (had I known, were I you, should you need).",
+        "example": "Had I known, I would have come earlier. Should you need help, call this number.",
+        "test": "A conditional clause drops if and inverts the subject with had/were/should, in a formal written register."
+      },
+      {
+        "id": "en.c1.conditional-elliptical-if-clause",
+        "name": "Ellipted conditional clauses",
+        "note": "An if-clause can be reduced to a phrase without its own subject and verb, when the meaning is recoverable from context.",
+        "example": "If necessary, we can reschedule the meeting.",
+        "test": "An if-clause is reduced to if + adjective/past participle, omitting its subject and verb."
+      },
+      {
+        "id": "en.c1.passive-nonfinite-summarizing",
+        "name": "Passive: non-finite and summarizing uses",
+        "note": "A passive -ing or -ed clause can replace a full clause, and it + passive verb + that-clause reports something as generally said or believed.",
+        "example": "Having been warned twice, he was finally fired. It is widely believed that the plan will fail.",
+        "test": "A non-finite passive clause (having been + past participle) is used, or it + be + past participle + that-clause reports a general belief or claim."
+      },
+      {
+        "id": "en.c1.future-perfect-nuance",
+        "name": "Future perfect: adverbs, assumptions, and politeness",
+        "note": "The future perfect can be modified by an adverb, used to make a confident assumption about the present, or softened for politeness.",
+        "example": "You will probably have heard the news by now. That will have been Tom at the door.",
+        "test": "Will have + past participle is modified by an adverb, or used to state a confident present assumption rather than a strict future fact."
+      },
+      {
+        "id": "en.c1.future-continuous-tentative",
+        "name": "Future continuous with might/may: tentative expectation",
+        "note": "Might/may + be + verb-ing softens a prediction about what is probably happening or will be happening, more tentative than will be doing.",
+        "example": "She might be arriving around six.",
+        "test": "Might/may + be + verb-ing expresses a tentative expectation about a present or future action in progress, softer than will be + verb-ing."
+      },
+      {
+        "id": "en.c1.modal-hedging-emphasis",
+        "name": "Modal + adverb: hedging and emphasis",
+        "note": "A stance adverb combined with a modal verb (may well, really ought to) either softens or strengthens the degree of certainty or obligation.",
+        "example": "It may well rain later. You really ought to apologise.",
+        "test": "A modal verb is combined with a stance adverb (well, really, possibly) to soften or strengthen its degree of certainty or obligation."
+      },
+      {
+        "id": "en.c1.modal-past-nuance",
+        "name": "Past modals for consoling, justifying, and polite criticism",
+        "note": "Might have and could have, beyond stating past possibility, can console, justify a past decision, or criticize someone politely for not doing something.",
+        "example": "You might have told me you were coming! At least you could have called.",
+        "test": "Might have/could have + past participle is used to console, justify, or politely criticize, rather than simply report past possibility."
+      },
+      {
+        "id": "en.c1.inversion-formal-focus",
+        "name": "Inversion for formal focus",
+        "note": "Beyond the negative-adverbial inversion learned at B2, a wider range of restrictive or emphatic elements (only when, little, such) can be fronted with inversion in a formal register.",
+        "example": "Only when the results came in did we realise the mistake. Little did she know what awaited her.",
+        "test": "A restrictive or emphatic element (only when, little, such) is fronted at the start of a formal clause, triggering subject-auxiliary inversion."
+      },
+      {
+        "id": "en.c1.cleft-wh-what",
+        "name": "Wh-cleft and what-cleft sentences",
+        "note": "A what-clause, or another wh-clause used as a title or heading, puts the whole rest of the sentence into focus as the answer.",
+        "example": "What surprised me most was his reaction. Why she left is still a mystery.",
+        "test": "A what- or wh-clause functions as the subject (or title) of the sentence, with the rest of the sentence as its complement, for focus."
+      },
+      {
+        "id": "en.c1.nominalisation-formality",
+        "name": "Nominalisation for formal register",
+        "note": "Turning a verb or adjective into an abstract noun (decide -> decision, aware -> awareness) raises the formality of a sentence, common in academic and official writing.",
+        "example": "The committee's decision was announced yesterday.",
+        "test": "A verb or adjective is expressed instead as an abstract noun, raising the formality of the sentence."
+      },
+      {
+        "id": "en.c1.non-finite-clauses-focus",
+        "name": "Non-finite clauses for focus and formal subordination",
+        "note": "A non-finite -ed clause, or a non-finite clause after if, can front background information for focus in formal writing.",
+        "example": "Faced with such criticism, the minister resigned. If elected, she will cut taxes.",
+        "test": "A non-finite -ed clause (faced with...) or a non-finite if-clause (if elected...) fronts background information without its own subject."
+      },
+      {
+        "id": "en.c1.negation-formal-emphatic",
+        "name": "Negation: formal and emphatic patterns",
+        "note": "Not all/not every make a partial rather than total negation, whatsoever strengthens a negative for emphasis, and a stance adverb after not softens a claim.",
+        "example": "Not all students passed. There's no doubt whatsoever. Not surprisingly, she refused.",
+        "test": "Not all/not every states a partial negation, whatsoever emphasizes a negative, or not + stance adverb hedges a following claim."
+      },
+      {
+        "id": "en.c1.discourse-markers-textual-reference",
+        "name": "Discourse markers: textual reference",
+        "note": "Expressions like the former/the latter or as mentioned above refer back to earlier parts of a formal text without repeating them.",
+        "example": "Both plans have merit; the former is cheaper, the latter faster.",
+        "test": "A textual-reference marker (the former, the latter, as mentioned above) points back to something already stated in the text, avoiding repetition."
+      },
+      {
+        "id": "en.c1.sense-verb-object-infinitive",
+        "name": "Sense verb + object + bare infinitive",
+        "note": "See, hear, and similar sense verbs can take a bare infinitive instead of -ing when the whole action, not just part of it, was observed.",
+        "example": "I saw him leave the building.",
+        "test": "A sense verb (see/hear/watch) is followed by an object and a bare infinitive, describing a complete observed action rather than one in progress."
+      },
+      {
+        "id": "en.c1.quantifier-either-neither-hyperbole",
+        "name": "Either, neither, and hyperbolic quantifiers",
+        "note": "Either and neither combine with singular nouns or with of + plural nouns/pronouns, and quantifiers like millions of or loads of are used for deliberate exaggeration.",
+        "example": "Neither of the options is ideal. I've told you a million times.",
+        "test": "Either/neither is used with a singular noun or of + plural noun/pronoun, or a quantifier (millions of, loads of) is used for deliberate exaggeration rather than a literal amount."
+      },
+      {
+        "id": "en.c1.past-simple-emphatic-did",
+        "name": "Past simple: emphatic did",
+        "note": "Did + base verb, stressed, contradicts a doubt or contrasts with a previous negative statement, instead of the ordinary past-simple form.",
+        "example": "I didn't call yesterday, but I did call this morning.",
+        "test": "Did + base verb is used for emphasis or contrast, instead of the ordinary past-simple ending, to stress that an action really happened."
+      },
+      {
+        "id": "en.c1.present-tense-rhetorical-persuasive",
+        "name": "Present tense in rhetorical and persuasive questions",
+        "note": "A present-tense question can be used rhetorically, expecting no real answer, or as a negative question expressing a strong opinion to persuade.",
+        "example": "Why do we even bother? Isn't it obvious that this won't work?",
+        "test": "A present-tense question is used rhetorically (expecting no answer) or as a negative question pushing a strong opinion, rather than genuinely requesting information."
+      },
+      {
+        "id": "en.c1.superlative-postmodifier",
+        "name": "Superlatives with a postmodifying phrase",
+        "note": "A superlative noun phrase can be extended by a postmodifying phrase or clause after the noun, in more complex formal writing.",
+        "example": "It's the best solution available at the moment.",
+        "test": "A superlative noun phrase is followed by a postmodifying phrase or clause that further specifies it."
+      },
+      {
+        "id": "en.c1.would-adverb-stance",
+        "name": "Would with a stance adverb",
+        "note": "A stance adverb combined with would (would probably, would certainly) signals the speaker's degree of confidence about a hypothetical or habitual claim.",
+        "example": "I would probably have said the same thing.",
+        "test": "Would is combined with a stance adverb (probably, certainly, obviously) to mark the speaker's confidence about the following claim."
+      },
+      {
+        "id": "en.c1.article-preposition-formal-register",
+        "name": "Formal prepositions and article omission",
+        "note": "Certain formal or fixed prepositional phrases, more common in written or official English, drop the article that an everyday equivalent would keep.",
+        "example": "The proposal was rejected on account of cost. He acted in accordance with the rules.",
+        "test": "A formal, fixed prepositional phrase (on account of, in accordance with) is used correctly, without the article an everyday equivalent would take."
+      },
+      {
+        "id": "en.c1.exclamation-formal-pointing",
+        "name": "Formal pointing and fixed focusing expressions",
+        "note": "In formal or written contexts, a small set of fixed expressions front an element for focus without the everyday cleft pattern.",
+        "example": "Herein lies the problem.",
+        "test": "A fixed, formal focusing expression fronts an element of the sentence in a way not available in everyday spoken English."
+      }
+    ]
+  }
+}
