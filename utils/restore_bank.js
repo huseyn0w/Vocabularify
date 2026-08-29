@@ -12,9 +12,13 @@
  *   node utils/restore_bank.js --dry-run
  *   node utils/restore_bank.js
  *
- * Inputs, all produced by the restore pass and living outside languages/:
- *   .git/sdd/restore/de-ru.json     every old de/ru word with its level
- *   .git/sdd/restore/english.json   English for the rows de/en could not supply
+ * Input, produced by the restore pass and living outside languages/:
+ *   .git/sdd/restore/de-ru.collected.json
+ *
+ * That file is written by collect_restore.js, which folds the agent passes
+ * onto the raw dump and drops what it cannot key. The checks below are kept
+ * as a second gate rather than trusted away: this script writes the bank, so
+ * it verifies its own input rather than assuming the collector was run.
  *
  * A word already in the bank is left alone: the bank's version has seven
  * languages and a reviewed course behind it, and the old file's version has
@@ -51,7 +55,12 @@ for (const level of LEVELS) {
   }
 }
 
-const incoming = readJson(path.join(RESTORE, "de-ru.json"));
+const COLLECTED = path.join(RESTORE, "de-ru.collected.json");
+if (!fs.existsSync(COLLECTED)) {
+  console.error("de-ru.collected.json is missing. Run `node utils/collect_restore.js` first.");
+  process.exit(2);
+}
+const incoming = readJson(COLLECTED);
 const added = { a1: 0, a2: 0, b1: 0, b2: 0, c1: 0 };
 const skipped = [];
 
