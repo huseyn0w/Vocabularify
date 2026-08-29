@@ -38,7 +38,7 @@ if (!fs.existsSync(COMPILED)) {
   console.error("out/shared/course.js is missing. Run `yarn compile` first.");
   process.exit(2);
 }
-const { validateCourse, dedupeBank, conceptId } = require(COMPILED);
+const { validateCourse, dedupeBank, conceptId, NO_FREE_WORD } = require(COMPILED);
 
 
 function readJson(file) {
@@ -97,6 +97,40 @@ let totalErrors = 0;
 let checked = 0;
 let setupProblems = 0;
 
+// A concept can satisfy the coverage check while never actually appearing as
+// itself: a token tagged with the concept but carrying a `g` override is
+// openly saying it is a different word. Turkish teaches `yıl` for "year" and
+// only ever shows `yaşında`, because an age cannot be said any other way.
+//
+// This is reported, never an error, because only a person can tell the two
+// cases apart. Turkish `year` is a real gap and wants its own sentence.
+// Spanish `to love` renders only as `querer` because a native reviewer ruled
+// `amar` wrong for a pet, and Russian `to have` only as `есть` because
+// `иметь` is textbook register - forcing either into a sentence would be
+// worse than not showing it.
+function conceptsOnlyShownAsAnotherWord(levelConcepts, sentences, languages, noFreeWord) {
+  const out = [];
+  for (const lang of languages) {
+    const plain = new Set();
+    const overridden = new Set();
+    for (const entry of Array.isArray(sentences) ? sentences : []) {
+      const tokens = entry && entry.text ? entry.text[lang] : undefined;
+      for (const token of Array.isArray(tokens) ? tokens : []) {
+        if (token && typeof token === "object" && typeof token.c === "string") {
+          (typeof token.g === "string" && token.g ? overridden : plain).add(conceptId(token.c));
+        }
+      }
+    }
+    const exempt = new Set((noFreeWord && noFreeWord[lang]) || []);
+    for (const concept of levelConcepts) {
+      if (!plain.has(concept) && overridden.has(concept) && !exempt.has(concept)) {
+        out.push(`[${lang}]: "${concept}" only ever appears as another word`);
+      }
+    }
+  }
+  return out;
+}
+
 for (const level of LEVELS) {
   const courseFile = path.join(COURSE, `${level}.json`);
   const sentenceFile = path.join(COURSE, `${level}.sentences.json`);
@@ -145,6 +179,16 @@ for (const level of LEVELS) {
   });
 
   checked++;
+  const softened = conceptsOnlyShownAsAnotherWord(
+    levelConcepts,
+    sentenceResult.value,
+    languages,
+    NO_FREE_WORD,
+  );
+  for (const note of softened) {
+    console.log(`${level}: ${note} (not an error)`);
+  }
+
   if (errors.length === 0) {
     console.log(`${level}: clean`);
   } else {
