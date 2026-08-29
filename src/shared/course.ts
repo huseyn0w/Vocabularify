@@ -27,6 +27,11 @@ export interface SentenceEntry {
   id: string;
   /** Every concept the sentence leans on, unioned across all languages. */
   uses: string[];
+  /** Topic ids from the target's grammar syllabus this sentence
+   *  demonstrates. Required (1-3 ids) only in a per-target course - the tag
+   *  is the author's claim, checked against the topic's `test` field by a
+   *  human reviewer, never detected from the tokens. */
+  grammar?: string[];
   /** Tokens per language code. */
   text: Record<string, SentenceToken[]>;
 }
@@ -39,6 +44,20 @@ export interface ValidateInput {
   /** Concept ids from every earlier level. Known before this level starts. */
   priorConcepts: string[];
   languages: readonly string[];
+  /** Set only for a per-target course: the target language's code. Turns on
+   *  the target-specific completeness and coverage rules below - a source
+   *  language becomes optional, and render coverage is judged only in this
+   *  language. */
+  target?: string;
+  /** Set only for a per-target course: the grammar topics available at this
+   *  level. Turns on the per-sentence tag rules and per-topic coverage rules
+   *  below. */
+  grammar?: {
+    /** Topics this level teaches. */
+    levelTopicIds: string[];
+    /** Topics every earlier level taught. */
+    priorTopicIds: string[];
+  };
 }
 
 /** The course is authored in seven languages. Checks that judge a sentence
@@ -47,6 +66,18 @@ export const ALL_LANGUAGES = 7;
 
 export const MIN_LESSON_SIZE = 5;
 export const MAX_LESSON_SIZE = 10;
+
+// A per-target sentence claims 1 to 3 grammar topics. One tag was tried and
+// proved too loose to say anything; more than 3 stops being a tag and starts
+// being a syllabus.
+export const MIN_TAGS_PER_SENTENCE = 1;
+export const MAX_TAGS_PER_SENTENCE = 3;
+
+// A topic is "covered" only once several sentences carry it in several
+// lessons. One sentence per topic was tried and proved too weak - a topic
+// got credited five times by sentences that all showed the same half of it.
+export const MIN_SENTENCES_PER_TOPIC = 3;
+export const MIN_LESSONS_PER_TOPIC = 3;
 
 // Words allowed to appear in a sentence without being a taught concept.
 // Articles and their preposition fusions were the original members, but the
@@ -151,7 +182,7 @@ function isGlue(token: string, lang: string): boolean {
 }
 
 export function validateCourse(input: ValidateInput): string[] {
-  const { course, sentences, levelConcepts, priorConcepts, languages } = input;
+  const { course, sentences, levelConcepts, priorConcepts, languages, target, grammar } = input;
   const errors: string[] = [];
 
   // Nothing below is checkable without these two being arrays, so report and
@@ -278,7 +309,7 @@ export function validateCourse(input: ValidateInput): string[] {
     for (const id of lesson.sentences) {
       const sentence = byId.get(id);
       if (sentence) {
-        errors.push(...checkSentence(sentence, lesson.id, known, introduced, languages));
+        errors.push(...checkSentence(sentence, lesson.id, known, introduced, languages, target, grammar));
       }
     }
   }
@@ -287,7 +318,14 @@ export function validateCourse(input: ValidateInput): string[] {
   // level. A word in no lesson is not taught, and the check above already
   // named it; running it through coverage too would report it a second time
   // under a message that says "taught".
-  errors.push(...checkCoverage([...introducedIn.keys()], bank, languages));
+  errors.push(...checkCoverage([...introducedIn.keys()], bank, languages, target));
+
+  // Grammar topic coverage draws on which lesson each sentence landed in,
+  // which `usedBy` above already worked out while checking that every
+  // sentence is used exactly once.
+  if (grammar) {
+    errors.push(...checkGrammarCoverage(grammar.levelTopicIds, bank, usedBy));
+  }
 
   return errors;
 }
@@ -295,16 +333,25 @@ export function validateCourse(input: ValidateInput): string[] {
 /** Every concept the course teaches has to be put to work: named in some
  *  sentence's `uses`, and actually rendered as a word in every language that
  *  has a word for it. A card the course never uses again is the thing this
- *  rebuild exists to remove. */
+ *  rebuild exists to remove.
+ *
+ *  When `target` is set (a per-target course), the "named in `uses`" half
+ *  still holds for the whole course, but the "renders as a word" half is
+ *  judged only in the target language - a source column may not be
+ *  translated yet, and that is not a coverage gap. */
 function checkCoverage(
   taughtConcepts: readonly string[],
   bank: readonly SentenceEntry[],
-  languages: readonly string[]
+  languages: readonly string[],
+  target?: string
 ): string[] {
   const errors: string[] = [];
   const inUses = new Set<string>();
   const rendered = new Map<string, Set<string>>();
-  for (const lang of languages) {
+  // Track every checked language plus the target, even if the target was
+  // somehow left out of `languages`, so its render set is never missing.
+  const trackedLanguages = target && !languages.includes(target) ? [...languages, target] : languages;
+  for (const lang of trackedLanguages) {
     rendered.set(lang, new Set());
   }
 
@@ -318,7 +365,7 @@ function checkCoverage(
       }
     }
     const text = sentence.text && typeof sentence.text === 'object' ? sentence.text : {};
-    for (const lang of languages) {
+    for (const lang of trackedLanguages) {
       const seen = rendered.get(lang);
       const tokens = (text as Record<string, unknown>)[lang];
       if (!seen || !Array.isArray(tokens)) {
@@ -338,7 +385,11 @@ function checkCoverage(
     }
   }
 
-  for (const lang of languages) {
+  // A per-target course only demands this half in the target language: a
+  // source column not rendering a concept yet is a translation gap, not a
+  // coverage failure.
+  const renderLanguages = target ? [target] : languages;
+  for (const lang of renderLanguages) {
     const seen = rendered.get(lang) ?? new Set<string>();
     const exempt = new Set(NO_FREE_WORD[lang] ?? []);
     for (const concept of taughtConcepts) {
@@ -359,12 +410,77 @@ function checkCoverage(
   return errors;
 }
 
+/** Every grammar topic taught this level has to actually be demonstrated:
+ *  tagged on at least `MIN_SENTENCES_PER_TOPIC` sentences, sitting in at
+ *  least `MIN_LESSONS_PER_TOPIC` different lessons. One sentence tagging a
+ *  topic five times in one lesson can show only one half of it; several
+ *  lessons is what forces different sentences, and different examples. Only
+ *  a sentence a lesson actually uses counts - an unused bank entry is
+ *  already reported elsewhere, and counting it here would let an orphaned
+ *  sentence launder a topic's coverage. */
+function checkGrammarCoverage(
+  levelTopicIds: readonly string[],
+  bank: readonly SentenceEntry[],
+  usedBy: ReadonlyMap<string, number>
+): string[] {
+  const sentencesByTopic = new Map<string, Set<string>>();
+  const lessonsByTopic = new Map<string, Set<number>>();
+
+  for (const sentence of bank) {
+    const lessonId = usedBy.get(sentence.id);
+    if (lessonId === undefined) {
+      continue;
+    }
+    const tags = Array.isArray(sentence.grammar) ? sentence.grammar : [];
+    for (const tag of tags) {
+      if (typeof tag !== 'string') {
+        continue;
+      }
+      if (!sentencesByTopic.has(tag)) {
+        sentencesByTopic.set(tag, new Set());
+        lessonsByTopic.set(tag, new Set());
+      }
+      sentencesByTopic.get(tag)?.add(sentence.id);
+      lessonsByTopic.get(tag)?.add(lessonId);
+    }
+  }
+
+  const underCovered: { id: string; sentenceCount: number; lessonCount: number }[] = [];
+  for (const id of levelTopicIds) {
+    const sentenceCount = sentencesByTopic.get(id)?.size ?? 0;
+    const lessonCount = lessonsByTopic.get(id)?.size ?? 0;
+    if (sentenceCount < MIN_SENTENCES_PER_TOPIC || lessonCount < MIN_LESSONS_PER_TOPIC) {
+      underCovered.push({ id, sentenceCount, lessonCount });
+    }
+  }
+
+  const describe = (t: { id: string; sentenceCount: number; lessonCount: number }) =>
+    `"${t.id}" tagged by ${t.sentenceCount} sentence(s) in ${t.lessonCount} lesson(s)`;
+
+  const errors: string[] = [];
+  if (underCovered.length === 1) {
+    errors.push(
+      `${describe(underCovered[0])}, expected at least ${MIN_SENTENCES_PER_TOPIC} sentences in ${MIN_LESSONS_PER_TOPIC} lessons`
+    );
+  } else if (underCovered.length > 1) {
+    const shown = underCovered.slice(0, 6).map(describe).join('; ');
+    const rest = underCovered.length > 6 ? `, and ${underCovered.length - 6} more` : '';
+    errors.push(
+      `${underCovered.length} grammar topics are under-covered, expected at least ` +
+        `${MIN_SENTENCES_PER_TOPIC} sentences in ${MIN_LESSONS_PER_TOPIC} lessons: ${shown}${rest}`
+    );
+  }
+  return errors;
+}
+
 function checkSentence(
   sentence: SentenceEntry,
   lessonId: number,
   known: ReadonlySet<string>,
   introduced: ReadonlySet<string>,
-  languages: readonly string[]
+  languages: readonly string[],
+  target?: string,
+  grammar?: { levelTopicIds: string[]; priorTopicIds: string[] }
 ): string[] {
   const errors: string[] = [];
   if (!Array.isArray(sentence.uses)) {
@@ -384,6 +500,35 @@ function checkSentence(
     );
   }
 
+  // A per-target course requires 1 to 3 grammar tags, each naming a real
+  // topic. Which topic is true is the author's claim, checked by a human
+  // against the topic's `test` field - never inferred from the tokens here.
+  if (grammar) {
+    const tags = Array.isArray(sentence.grammar) ? sentence.grammar : [];
+    if (tags.length < MIN_TAGS_PER_SENTENCE || tags.length > MAX_TAGS_PER_SENTENCE) {
+      errors.push(
+        `${sentence.id}: ${tags.length} grammar tag(s), expected ${MIN_TAGS_PER_SENTENCE}-${MAX_TAGS_PER_SENTENCE}`
+      );
+    }
+    const allowedTopics = new Set([...grammar.levelTopicIds, ...grammar.priorTopicIds]);
+    const seenTags = new Set<string>();
+    for (const tag of tags) {
+      if (typeof tag !== 'string') {
+        continue;
+      }
+      if (seenTags.has(tag)) {
+        errors.push(`${sentence.id}: grammar tag "${tag}" is duplicated`);
+        continue;
+      }
+      seenTags.add(tag);
+      // A tag naming a topic from a later level cannot be told apart from a
+      // typo here, so both report as unknown.
+      if (!allowedTopics.has(tag)) {
+        errors.push(`${sentence.id}: grammar tag "${tag}" is not a known topic`);
+      }
+    }
+  }
+
   // Tokens with no readable surface form (null, or an object with no string
   // `t`) are reported below and then kept out of `safeTokens` - joining or
   // reading `.c` off one of those would crash, so both the join checks and
@@ -394,7 +539,11 @@ function checkSentence(
   for (const lang of languages) {
     const tokens = sentence.text?.[lang];
     if (!Array.isArray(tokens) || tokens.length === 0) {
-      errors.push(`${sentence.id}: missing or empty text for "${lang}"`);
+      // In a per-target course a source language may not be translated yet;
+      // only the target is required to be there.
+      if (!target || lang === target) {
+        errors.push(`${sentence.id}: missing or empty text for "${lang}"`);
+      }
       continue;
     }
     const safeTokens: SentenceToken[] = [];
@@ -455,14 +604,31 @@ function checkSentence(
   // which would make the unlock check pass for a sentence that does not need
   // the concept at all.
   //
-  // `uses` is the union across all seven languages, so this can only be judged
-  // when all seven are being linted. During a single-column authoring pass it
-  // would demand one language carry the whole union, which no language does:
-  // running it against Turkish alone reported 114 errors, every one of them a
-  // concept another column renders.
-  if (languages.length >= ALL_LANGUAGES) {
+  // In the shared course `uses` is the union across all seven languages, so
+  // this can only be judged when all seven are being linted. During a
+  // single-column authoring pass it would demand one language carry the
+  // whole union, which no language does: running it against Turkish alone
+  // reported 114 errors, every one of them a concept another column renders.
+  //
+  // In a per-target course `uses` is the union over whichever languages this
+  // sentence actually has - a source column can be absent. So the check runs
+  // instead whenever every language this sentence's `text` actually has is
+  // one being linted; the domain to search is then those present languages,
+  // not the full `languages` list (which may include other sentences'
+  // untranslated sources).
+  let shouldCheckUnion = languages.length >= ALL_LANGUAGES;
+  let unionDomain: readonly string[] = languages;
+  if (target) {
+    const presentLangs = Object.keys(GLUE).filter(lang => {
+      const tokens = sentence.text?.[lang];
+      return Array.isArray(tokens) && tokens.length > 0;
+    });
+    shouldCheckUnion = presentLangs.length > 0 && presentLangs.every(lang => languages.includes(lang));
+    unionDomain = presentLangs;
+  }
+  if (shouldCheckUnion) {
     for (const concept of usesList) {
-      const appears = languages.some(lang =>
+      const appears = unionDomain.some(lang =>
         (safeTokensByLang.get(lang) ?? []).some(
           token => typeof token !== 'string' && token.c === concept
         )

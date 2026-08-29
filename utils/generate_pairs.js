@@ -13,6 +13,16 @@
  * Run `node utils/validate_course.js` before this - the generator trusts its
  * input and only reports what it had to skip.
  *
+ * Per-target course (optional): languages/_course/<target>/<level>.json and
+ * its sibling .sentences.json fully replace the shared course above, but
+ * only for pairs where "to" (the learned language) is that target - every
+ * other pair still reads the shared course exactly as before. A per-target
+ * sentence's source column (the "from" language) is allowed to be missing:
+ * that sentence is simply left out of that one <to>/<from>/<level>.lessons.json
+ * (a lesson with none of its sentences translated yet gets an empty
+ * "sentences" array, which the app already handles), and the run output
+ * reports how many of the target's sentences made it into each pair.
+ *
  * Output per ordered pair (to != from) and level:
  *   languages/<to>/<from>/<level>.json        { word_1: known, word_2: learned }
  *   languages/<to>/<from>/<level>.lessons.json  when the level has a course
@@ -130,26 +140,27 @@ console.log(`Bank concepts (deduped): ${bankTotal}`);
 
 // --- Courses ----------------------------------------------------------------
 
-// level -> { course: { lessons }, sentenceById, lessonOfConcept, orderedRows } or null
-const courses = {};
 const skipped = [];
-for (const level of LEVELS) {
-  const courseFile = path.join(COURSE_DIR, `${level}.json`);
-  const sentenceFile = path.join(COURSE_DIR, `${level}.sentences.json`);
+
+// Loads one level's course + sentence bank, shared or per-target - the shape
+// on disk is identical either way, only the path differs. Returns
+// { course: { lessons }, sentenceById, lessonOfConcept, orderedRows } or null
+// when there is no course file at all. `label` prefixes every reported
+// message (a bare level for the shared course, "<target>/<level>" for a
+// per-target one) so a skip is traceable to which course produced it.
+function loadCourse(courseFile, sentenceFile, level, label) {
   if (!fs.existsSync(courseFile)) {
-    courses[level] = null;
-    continue;
+    return null;
   }
   const course = readJson(courseFile);
   if (!course || typeof course !== "object" || !Array.isArray(course.lessons)) {
-    skipped.push(`${level}: course "lessons" is missing or not an array, level skipped`);
-    courses[level] = null;
-    continue;
+    skipped.push(`${label}: course "lessons" is missing or not an array, level skipped`);
+    return null;
   }
 
   const rawSentences = fs.existsSync(sentenceFile) ? readJson(sentenceFile) : [];
   if (!Array.isArray(rawSentences)) {
-    skipped.push(`${level}: sentence bank is not an array, treated as empty`);
+    skipped.push(`${label}: sentence bank is not an array, treated as empty`);
   }
 
   // A bank entry with no string "id" can never be matched against anything a
@@ -159,7 +170,7 @@ for (const level of LEVELS) {
   (Array.isArray(rawSentences) ? rawSentences : []).forEach((entry, index) => {
     const id = entry && typeof entry === "object" ? entry.id : undefined;
     if (typeof id !== "string" || id.length === 0) {
-      skipped.push(`${level}: sentence bank entry ${index} is missing "id"`);
+      skipped.push(`${label}: sentence bank entry ${index} is missing "id"`);
       return;
     }
     sentences.push(entry);
@@ -174,19 +185,19 @@ for (const level of LEVELS) {
   const lessons = [];
   course.lessons.forEach((lesson, index) => {
     if (!lesson || typeof lesson !== "object") {
-      skipped.push(`${level}: lesson ${index} is not an object`);
+      skipped.push(`${label}: lesson ${index} is not an object`);
       return;
     }
     const hasId = lesson.id !== undefined && lesson.id !== null;
     const id = hasId ? lesson.id : `#${index}`;
     if (!hasId) {
-      skipped.push(`${level} lesson ${id}: "id" is missing, using its index`);
+      skipped.push(`${label} lesson ${id}: "id" is missing, using its index`);
     }
     if (!Array.isArray(lesson.new)) {
-      skipped.push(`${level} lesson ${id}: "new" is missing or not an array`);
+      skipped.push(`${label} lesson ${id}: "new" is missing or not an array`);
     }
     if (!Array.isArray(lesson.sentences)) {
-      skipped.push(`${level} lesson ${id}: "sentences" is missing or not an array`);
+      skipped.push(`${label} lesson ${id}: "sentences" is missing or not an array`);
     }
     lessons.push({
       id,
@@ -213,7 +224,7 @@ for (const level of LEVELS) {
         orderedRows.push(row);
         byConcept.delete(concept);
       } else {
-        skipped.push(`${level} lesson ${lesson.id}: no bank row for "${concept}"`);
+        skipped.push(`${label} lesson ${lesson.id}: no bank row for "${concept}"`);
       }
     }
   }
@@ -230,12 +241,48 @@ for (const level of LEVELS) {
     const shown = uncoursed.slice(0, 8).map((c) => `"${c}"`).join(", ");
     const rest = uncoursed.length > 8 ? ` and ${uncoursed.length - 8} more` : "";
     skipped.push(
-      `${level}: ${uncoursed.length} concepts are in no lesson, appended at the end: ${shown}${rest}`
+      `${label}: ${uncoursed.length} concepts are in no lesson, appended at the end: ${shown}${rest}`
     );
   }
 
-  courses[level] = { course: { lessons }, sentenceById, lessonOfConcept, orderedRows };
-  console.log(`${level}: course with ${lessons.length} lessons, ${sentences.length} sentences`);
+  console.log(`${label}: course with ${lessons.length} lessons, ${sentences.length} sentences`);
+  return { course: { lessons }, sentenceById, lessonOfConcept, orderedRows };
+}
+
+// level -> loaded course or null, for the shared course.
+const courses = {};
+for (const level of LEVELS) {
+  courses[level] = loadCourse(
+    path.join(COURSE_DIR, `${level}.json`),
+    path.join(COURSE_DIR, `${level}.sentences.json`),
+    level,
+    level,
+  );
+}
+
+// Any directory under languages/_course/ named after one of the seven
+// language codes is a per-target course - only "de" is expected to exist for
+// now, discovered the same way once the others do. target -> level -> loaded
+// course or null. Where a level has no per-target file, the pairs loop below
+// falls back to the shared course above, exactly as before.
+const targetCourses = {};
+if (fs.existsSync(COURSE_DIR)) {
+  const targetDirs = fs
+    .readdirSync(COURSE_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && LANGS.includes(entry.name))
+    .map((entry) => entry.name);
+  for (const target of targetDirs) {
+    const dir = path.join(COURSE_DIR, target);
+    targetCourses[target] = {};
+    for (const level of LEVELS) {
+      targetCourses[target][level] = loadCourse(
+        path.join(dir, `${level}.json`),
+        path.join(dir, `${level}.sentences.json`),
+        level,
+        `${target}/${level}`,
+      );
+    }
+  }
 }
 
 function glossFor(sentence, to, from, level, lessonId) {
@@ -258,12 +305,18 @@ function glossFor(sentence, to, from, level, lessonId) {
 let pairFiles = 0;
 let lessonFiles = 0;
 const summary = [];
+// Per pair, only for a target with its own per-target course: how many of
+// its sentences made it into that pair's lessons file, so a half-translated
+// target is visible in the run output rather than silent.
+const targetSentenceReport = [];
 
 for (const to of LANGS) {
   for (const from of LANGS) {
     if (to === from) continue;
     const dir = path.join(ROOT, to, from);
     let pairTotal = 0;
+    let sentencesWritten = 0;
+    let sentencesConsidered = 0;
     // A target word appears once per pair: if two concepts collapse to the
     // same target word, only the lowest-level one survives. This set is
     // shared across all five levels, so within a level it is the first
@@ -275,7 +328,9 @@ for (const to of LANGS) {
     const seenW2 = new Set();
 
     for (const level of LEVELS) {
-      const loaded = courses[level];
+      // Prefer this target's own course over the shared one; fall back to
+      // the shared course for any level the target has not authored yet.
+      const loaded = (targetCourses[to] && targetCourses[to][level]) || courses[level];
       const rows = loaded ? loaded.orderedRows : banked[level];
       const counts = loaded ? new Array(loaded.course.lessons.length).fill(0) : null;
       const out = [];
@@ -295,6 +350,62 @@ for (const to of LANGS) {
       }
       pairTotal += out.length;
 
+      // Build the lessons file's content (and tally how many sentences made
+      // it in) regardless of --dry-run, so a preview run reports the same
+      // translation-completeness numbers a real run would write - only the
+      // actual file writes below are gated on DRY_RUN.
+      let lessons = null;
+      if (loaded) {
+        lessons = [];
+        for (const [index, lesson] of loaded.course.lessons.entries()) {
+          const sentenceItems = [];
+          for (const id of lesson.sentences) {
+            sentencesConsidered++;
+            const sentence = loaded.sentenceById.get(id);
+            if (!sentence) {
+              skipped.push(`${level} lesson ${lesson.id}: sentence "${id}" is not in the bank`);
+              continue;
+            }
+            if (!sentence.text || typeof sentence.text !== "object") {
+              skipped.push(`${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing "text"`);
+              continue;
+            }
+            const targetTokens = sentence.text[to];
+            const sourceTokens = sentence.text[from];
+            let ok = true;
+            if (!Array.isArray(targetTokens)) {
+              skipped.push(
+                `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${to}" column (target)`,
+              );
+              ok = false;
+            }
+            if (!Array.isArray(sourceTokens)) {
+              // Expected for a per-target course whose sentences are
+              // authored one source language at a time - not logged as a
+              // skip, since the run-wide sentence report below already
+              // covers it and a skip line per untranslated sentence would
+              // drown everything else the first time a target has five
+              // source languages to go.
+              if (!targetCourses[to]) {
+                skipped.push(
+                  `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${from}" column (source)`,
+                );
+              }
+              ok = false;
+            }
+            if (!ok) continue;
+            sentencesWritten++;
+            sentenceItems.push({
+              id: sentence.id,
+              target: targetTokens,
+              source: joinTokens(sourceTokens),
+              gloss: glossFor(sentence, to, from, level, lesson.id),
+            });
+          }
+          lessons.push({ count: counts[index], sentences: sentenceItems });
+        }
+      }
+
       if (DRY_RUN) continue;
 
       fs.mkdirSync(dir, { recursive: true });
@@ -308,53 +419,21 @@ for (const to of LANGS) {
         if (fs.existsSync(lessonsPath)) fs.unlinkSync(lessonsPath);
         continue;
       }
-
-      const lessons = [];
-      for (const [index, lesson] of loaded.course.lessons.entries()) {
-        const sentenceItems = [];
-        for (const id of lesson.sentences) {
-          const sentence = loaded.sentenceById.get(id);
-          if (!sentence) {
-            skipped.push(`${level} lesson ${lesson.id}: sentence "${id}" is not in the bank`);
-            continue;
-          }
-          if (!sentence.text || typeof sentence.text !== "object") {
-            skipped.push(`${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing "text"`);
-            continue;
-          }
-          const targetTokens = sentence.text[to];
-          const sourceTokens = sentence.text[from];
-          let ok = true;
-          if (!Array.isArray(targetTokens)) {
-            skipped.push(
-              `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${to}" column (target)`,
-            );
-            ok = false;
-          }
-          if (!Array.isArray(sourceTokens)) {
-            skipped.push(
-              `${level} lesson ${lesson.id}: sentence "${sentence.id}" is missing its "${from}" column (source)`,
-            );
-            ok = false;
-          }
-          if (!ok) continue;
-          sentenceItems.push({
-            id: sentence.id,
-            target: targetTokens,
-            source: joinTokens(sourceTokens),
-            gloss: glossFor(sentence, to, from, level, lesson.id),
-          });
-        }
-        lessons.push({ count: counts[index], sentences: sentenceItems });
-      }
       fs.writeFileSync(lessonsPath, `${JSON.stringify({ lessons }, null, 2)}\n`);
       lessonFiles++;
     }
     summary.push(`${to}/${from}: ${pairTotal}`);
+    if (targetCourses[to]) {
+      targetSentenceReport.push(`${to}/${from}: ${sentencesWritten}/${sentencesConsidered} sentences written`);
+    }
   }
 }
 
 console.log(summary.join("\n"));
+if (targetSentenceReport.length > 0) {
+  console.log(`\nper-target sentence completeness:`);
+  for (const line of targetSentenceReport) console.log(`  ${line}`);
+}
 if (collisions.length > 0) {
   // Separate from "skipped": a collision is a data warning about the bank
   // itself, not something this run had to skip while assembling the course.

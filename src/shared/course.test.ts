@@ -431,3 +431,194 @@ describe('validateCourse gloss override', () => {
     expect(validateCourse(f).join('\n')).toContain('has an empty gloss override');
   });
 });
+
+// A per-target course: `target` is the language code being learned, and a
+// source language's translation may be absent (it arrives later). Built from
+// the same two-sentence, five-concept level as `fixture()`, but "de" is the
+// target and "ru" is the only source, and "ru" is missing from the second
+// sentence on purpose - that is the case the new rules exist for.
+function targetFixture() {
+  return {
+    course: {
+      level: 'a1',
+      lessons: [{ id: 1, new: ['hello', 'i', 'to be', 'good', 'day'], sentences: ['de_a1_001', 'de_a1_002'] }]
+    } as CourseFile,
+    sentences: [
+      {
+        id: 'de_a1_001',
+        uses: ['hello', 'i', 'to be', 'good'],
+        text: {
+          de: [{ t: 'Hallo', c: 'hello' }, ',', { t: 'ich', c: 'i' }, { t: 'bin', c: 'to be' }, { t: 'gut', c: 'good' }, '.'],
+          ru: [{ t: 'Привет', c: 'hello' }, ',', { t: 'я', c: 'i' }, { t: 'хорошо', c: 'good' }, '.']
+        }
+      },
+      {
+        id: 'de_a1_002',
+        uses: ['day', 'to be', 'good'],
+        text: {
+          // "ru" deliberately absent: this target's Russian source has not
+          // been authored for this sentence yet.
+          de: ['Der', { t: 'Tag', c: 'day' }, { t: 'war', c: 'to be' }, { t: 'gut', c: 'good' }, '.']
+        }
+      }
+    ] as SentenceEntry[],
+    levelConcepts: ['hello', 'i', 'to be', 'good', 'day'],
+    priorConcepts: [] as string[],
+    languages: ['de', 'ru'],
+    target: 'de'
+  };
+}
+
+describe('validateCourse with a per-target course', () => {
+  it('accepts a well-formed per-target course, source translation missing and all', () => {
+    expect(validateCourse(targetFixture())).toEqual([]);
+  });
+
+  it('requires text[target], non-empty', () => {
+    const f = targetFixture();
+    delete (f.sentences[0].text as Record<string, unknown>).de;
+    expect(validateCourse(f).join('\n')).toContain('missing or empty text for "de"');
+  });
+
+  it('does not demand a source language be present at all', () => {
+    const f = targetFixture();
+    const out = validateCourse(f).join('\n');
+    expect(out).not.toContain('missing or empty text for "ru"');
+  });
+
+  it('still checks a source language exactly as before when it is present', () => {
+    const f = targetFixture();
+    f.sentences[0].text.ru.splice(2, 0, 'сильно');
+    expect(validateCourse(f).join('\n')).toContain('"сильно" is loose glue');
+  });
+
+  it('demands render coverage only in the target language, not a source language', () => {
+    const f = targetFixture();
+    // "i" never renders in Russian, but it does in German (the target).
+    f.sentences[0].text.ru = (f.sentences[0].text.ru as SentenceToken[]).filter(
+      (t) => typeof t === 'string' || t.c !== 'i'
+    );
+    const out = validateCourse(f).join('\n');
+    expect(out).not.toContain('[ru]');
+  });
+
+  it('still reports a concept taught but used by no sentence, target set', () => {
+    const f = targetFixture();
+    f.course.lessons[0].new.push('water');
+    f.levelConcepts.push('water');
+    expect(validateCourse(f).join('\n')).toContain('"water" is taught but used by no sentence');
+  });
+
+  it('does not flag a stale NO_FREE_WORD exemption in a source language', () => {
+    const f = targetFixture();
+    const g = { ...f, languages: ['de', 'tr'] };
+    g.course.lessons[0].new.push('can');
+    g.levelConcepts.push('can');
+    g.sentences[0].uses.push('can');
+    // Turkish is exempt from rendering "can" (it is a suffix there), so
+    // rendering it anyway is normally a stale-exemption error - but not when
+    // "tr" is only a source column of a per-target course.
+    (g.sentences[0].text as Record<string, SentenceToken[]>).tr = [
+      { t: 'yapabilirsin', c: 'can' }
+    ];
+    (g.sentences[0].text.de as SentenceToken[]).push({ t: 'kannst', c: 'can' });
+    const out = validateCourse(g).join('\n');
+    expect(out).not.toContain('[tr]');
+  });
+
+  it('runs the uses-union check over the languages present in the sentence', () => {
+    const f = targetFixture();
+    // Both "de" and "ru" are present on this sentence, and both are linted.
+    f.sentences[0].uses.push('day');
+    expect(validateCourse(f).join('\n')).toContain('"day" is in uses but appears in no language');
+  });
+
+  it('skips the uses-union check when a present language is not being linted', () => {
+    const f = targetFixture();
+    const g = { ...f, languages: ['de'] };
+    // "ru" is present on this sentence but not in the linted set, so the
+    // union cannot be judged and must stay quiet.
+    g.sentences[0].uses.push('day');
+    expect(validateCourse(g).join('\n')).not.toContain('appears in no language');
+  });
+});
+
+describe('validateCourse grammar tags', () => {
+  it('reports a sentence with no grammar tags', () => {
+    const f = fixture();
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain('0 grammar tag(s), expected 1-3');
+  });
+
+  it('reports a sentence with more than 3 grammar tags', () => {
+    const f = fixture();
+    f.sentences[0].grammar = ['g1', 'g2', 'g3', 'g4'];
+    f.sentences[1].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1', 'g2', 'g3', 'g4'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain('4 grammar tag(s), expected 1-3');
+  });
+
+  it('reports a duplicate grammar tag', () => {
+    const f = fixture();
+    f.sentences[0].grammar = ['g1', 'g1'];
+    f.sentences[1].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain('grammar tag "g1" is duplicated');
+  });
+
+  it('reports a grammar tag that names no known topic', () => {
+    const f = fixture();
+    f.sentences[0].grammar = ['bogus'];
+    f.sentences[1].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain('grammar tag "bogus" is not a known topic');
+  });
+
+  it('accepts a grammar tag from an earlier level', () => {
+    const f = fixture();
+    f.sentences[0].grammar = ['p1'];
+    f.sentences[1].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: ['p1'] } };
+    expect(validateCourse(input).join('\n')).not.toContain('is not a known topic');
+  });
+});
+
+describe('validateCourse grammar topic coverage', () => {
+  it('reports a topic tagged by too few sentences and too few lessons', () => {
+    const f = fixture();
+    f.sentences[0].grammar = ['g1'];
+    f.sentences[1].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain(
+      '"g1" tagged by 2 sentence(s) in 1 lesson(s)'
+    );
+  });
+
+  it('reports a topic tagged by enough sentences but too few lessons', () => {
+    const f = fixture();
+    f.sentences.push({ ...f.sentences[0], id: 'a1_003' });
+    f.course.lessons[0].sentences.push('a1_003');
+    f.sentences[0].grammar = ['g1'];
+    f.sentences[1].grammar = ['g1'];
+    f.sentences[2].grammar = ['g1'];
+    const input = { ...f, grammar: { levelTopicIds: ['g1'], priorTopicIds: [] } };
+    expect(validateCourse(input).join('\n')).toContain(
+      '"g1" tagged by 3 sentence(s) in 1 lesson(s)'
+    );
+  });
+
+  it('collapses many under-covered grammar topics into one counted error', () => {
+    const f = fixture();
+    // Neither sentence tags any of these eight topics, so all eight are
+    // under-covered at 0 sentences in 0 lessons.
+    f.sentences[0].grammar = ['zzz'];
+    f.sentences[1].grammar = ['zzz'];
+    const topics = ['g1', 'g2', 'g3', 'g4', 'g5', 'g6', 'g7', 'g8'];
+    const input = { ...f, grammar: { levelTopicIds: topics, priorTopicIds: [] } };
+    const out = validateCourse(input).join('\n');
+    expect(out).toContain('8 grammar topics are under-covered');
+    expect(out).toContain('and 2 more');
+    // The whole point is that it does not print one line per topic.
+    expect(out).not.toContain('"g7" tagged by');
+  });
+});
