@@ -23,7 +23,7 @@
  * the same pass as that dedupe or the lesson boundaries drift.
  *
  * Requires a compiled build:
- *   yarn compile && node utils/generate_pairs.js   (DRY_RUN=1 to preview)
+ *   yarn compile && node utils/generate_pairs.js   (--dry-run to preview)
  */
 const fs = require("fs");
 const path = require("path");
@@ -36,7 +36,16 @@ const OUT = path.join(REPO_ROOT, "out", "shared");
 
 const LANGS = ["en", "de", "fr", "es", "it", "tr", "ru"];
 const LEVELS = ["a1", "a2", "b1", "b2", "c1"];
-const DRY_RUN = process.env.DRY_RUN === "1";
+// An unrecognised argument used to be ignored, so a mistyped preview flag ran
+// live and rewrote all 210 files. Refuse anything not on the list instead.
+const ARGS = process.argv.slice(2);
+const UNKNOWN = ARGS.filter((a) => a !== "--dry-run");
+if (UNKNOWN.length > 0) {
+  console.error(`unknown argument: ${UNKNOWN.join(" ")}`);
+  console.error("usage: node utils/generate_pairs.js [--dry-run]");
+  process.exit(2);
+}
+const DRY_RUN = ARGS.includes("--dry-run") || process.env.DRY_RUN === "1";
 
 for (const file of ["course.js", "items.js"]) {
   if (!fs.existsSync(path.join(OUT, file))) {
@@ -208,11 +217,21 @@ for (const level of LEVELS) {
       }
     }
   }
+  // Words restored to the bank outnumber the coursed ones, so naming every
+  // one of them would bury the genuine skips. Name a few, then count.
+  const uncoursed = [];
   for (const row of banked[level]) {
     if (byConcept.has(conceptId(row.en))) {
       orderedRows.push(row);
-      skipped.push(`${level}: "${conceptId(row.en)}" is in no lesson, appended at the end`);
+      uncoursed.push(conceptId(row.en));
     }
+  }
+  if (uncoursed.length > 0) {
+    const shown = uncoursed.slice(0, 8).map((c) => `"${c}"`).join(", ");
+    const rest = uncoursed.length > 8 ? ` and ${uncoursed.length - 8} more` : "";
+    skipped.push(
+      `${level}: ${uncoursed.length} concepts are in no lesson, appended at the end: ${shown}${rest}`
+    );
   }
 
   courses[level] = { course: { lessons }, sentenceById, lessonOfConcept, orderedRows };
