@@ -60,7 +60,8 @@
             },
             {
               "t": "bene",
-              "c": "good"
+              "c": "good",
+              "g": "bene"
             },
             ",",
             {
@@ -121,7 +122,8 @@
             },
             {
               "t": "bene",
-              "c": "good"
+              "c": "good",
+              "g": "bene"
             },
             ",",
             {
@@ -185,7 +187,8 @@
             },
             {
               "t": "bene",
-              "c": "good"
+              "c": "good",
+              "g": "bene"
             },
             "."
           ],
@@ -362,6 +365,10 @@
               "t": "e",
               "s": "et"
             },
+            "but": {
+              "t": "ma",
+              "s": "mais"
+            },
             "he": {
               "t": "lui",
               "s": "il"
@@ -424,6 +431,10 @@
               "t": "e",
               "s": "et"
             },
+            "but": {
+              "t": "ma",
+              "s": "mais"
+            },
             "here": {
               "t": "qui",
               "s": "ici"
@@ -449,7 +460,7 @@
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_009",
@@ -568,11 +579,11 @@
               "c": "also"
             },
             {
-              "t": "lei",
-              "c": "she"
+              "t": "noi",
+              "c": "we"
             },
             {
-              "t": "è",
+              "t": "siamo",
               "c": "to be"
             },
             {
@@ -581,7 +592,7 @@
             },
             "."
           ],
-          "source": "Il est ici, et elle est aussi ici.",
+          "source": "Il est ici, et nous sommes aussi ici.",
           "gloss": {
             "also": {
               "t": "anche",
@@ -599,13 +610,13 @@
               "t": "qui",
               "s": "ici"
             },
-            "she": {
-              "t": "lei",
-              "s": "elle"
-            },
             "to be": {
               "t": "essere",
               "s": "être"
+            },
+            "we": {
+              "t": "noi",
+              "s": "nous"
             }
           }
         }
@@ -744,6 +755,10 @@
             "and": {
               "t": "e",
               "s": "et"
+            },
+            "but": {
+              "t": "ma",
+              "s": "mais"
             },
             "i": {
               "t": "io",
@@ -1022,6 +1037,10 @@
               "c": "to speak"
             },
             {
+              "t": "più",
+              "c": "more"
+            },
+            {
               "t": "lentamente",
               "c": "slow"
             },
@@ -1041,6 +1060,10 @@
             "i": {
               "t": "io",
               "s": "je"
+            },
+            "more": {
+              "t": "più",
+              "s": "plus"
             },
             "not": {
               "t": "non",
@@ -1527,6 +1550,10 @@
               "t": "la sedia",
               "s": "la chaise"
             },
+            "in": {
+              "t": "in",
+              "s": "dans"
+            },
             "room": {
               "t": "la stanza",
               "s": "la chambre"
@@ -1765,7 +1792,10 @@
               "t": "piccola",
               "c": "small"
             },
-            ",",
+            {
+              "t": "e",
+              "c": "and"
+            },
             {
               "t": "bella",
               "c": "beautiful"
@@ -1778,6 +1808,10 @@
           ],
           "source": "Je peux voir une belle petite maison.",
           "gloss": {
+            "and": {
+              "t": "e",
+              "s": "et"
+            },
             "beautiful": {
               "t": "bello",
               "s": "beau"
@@ -2212,7 +2246,8 @@
             "!",
             {
               "t": "Qual",
-              "c": "what"
+              "c": "what",
+              "g": "quale"
             },
             {
               "t": "è",
@@ -2239,13 +2274,13 @@
               "t": "come",
               "s": "comment"
             },
-            "it": {
-              "t": "esso",
-              "s": "il"
-            },
             "name": {
               "t": "il nome",
               "s": "le nom"
+            },
+            "this": {
+              "t": "questo",
+              "s": "ce"
             },
             "to be": {
               "t": "essere",
@@ -2264,7 +2299,7 @@
       ]
     },
     {
-      "count": 9,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_036",
@@ -2672,85 +2707,6 @@
               "s": "aujourd'hui"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Ieri",
-              "c": "yesterday"
-            },
-            {
-              "t": "sera",
-              "c": "evening"
-            },
-            {
-              "t": "era",
-              "c": "to be"
-            },
-            {
-              "t": "fredda",
-              "c": "cold"
-            },
-            ",",
-            {
-              "t": "ma",
-              "c": "but"
-            },
-            {
-              "t": "domani",
-              "c": "tomorrow"
-            },
-            {
-              "t": "è",
-              "c": "to be"
-            },
-            "un",
-            {
-              "t": "nuovo",
-              "c": "new"
-            },
-            {
-              "t": "giorno",
-              "c": "day"
-            },
-            "."
-          ],
-          "source": "Hier, le soir était froid, mais demain est un nouveau jour.",
-          "gloss": {
-            "but": {
-              "t": "ma",
-              "s": "mais"
-            },
-            "cold": {
-              "t": "freddo",
-              "s": "froid"
-            },
-            "day": {
-              "t": "il giorno",
-              "s": "le jour"
-            },
-            "evening": {
-              "t": "la sera",
-              "s": "le soir"
-            },
-            "new": {
-              "t": "nuovo",
-              "s": "nouveau"
-            },
-            "to be": {
-              "t": "essere",
-              "s": "être"
-            },
-            "tomorrow": {
-              "t": "domani",
-              "s": "demain"
-            },
-            "yesterday": {
-              "t": "ieri",
-              "s": "hier"
-            }
-          }
         }
       ]
     },
@@ -2797,13 +2753,13 @@
               "t": "e",
               "s": "et"
             },
-            "it": {
-              "t": "esso",
-              "s": "il"
-            },
             "monday": {
               "t": "il lunedì",
               "s": "le lundi"
+            },
+            "this": {
+              "t": "questo",
+              "s": "ce"
             },
             "to be": {
               "t": "essere",
@@ -2859,13 +2815,13 @@
               "t": "il venerdì",
               "s": "le vendredi"
             },
-            "it": {
-              "t": "esso",
-              "s": "il"
-            },
             "or": {
               "t": "o",
               "s": "ou"
+            },
+            "this": {
+              "t": "questo",
+              "s": "ce"
             },
             "thursday": {
               "t": "il giovedì",
@@ -3047,12 +3003,12 @@
             },
             "?",
             {
-              "t": "Ho",
-              "c": "to have"
+              "t": "Lavoro",
+              "c": "to work"
             },
             {
-              "t": "tre",
-              "c": "three"
+              "t": "cinque",
+              "c": "five"
             },
             {
               "t": "ore",
@@ -3064,11 +3020,15 @@
             },
             "."
           ],
-          "source": "Tu peux venir quand ? J'ai trois heures aujourd'hui.",
+          "source": "Tu peux venir quand ? Je travaille cinq heures aujourd'hui.",
           "gloss": {
             "can": {
               "t": "potere",
               "s": "pouvoir"
+            },
+            "five": {
+              "t": "cinque",
+              "s": "cinq"
             },
             "hour": {
               "t": "l'ora",
@@ -3078,17 +3038,13 @@
               "t": "io",
               "s": "je"
             },
-            "three": {
-              "t": "tre",
-              "s": "trois"
-            },
             "to come": {
               "t": "venire",
               "s": "venir"
             },
-            "to have": {
-              "t": "avere",
-              "s": "avoir"
+            "to work": {
+              "t": "lavorare",
+              "s": "travailler"
             },
             "today": {
               "t": "oggi",
@@ -3419,6 +3375,10 @@
               "t": "lui",
               "s": "il"
             },
+            "it": {
+              "t": "esso",
+              "s": "il"
+            },
             "old": {
               "t": "vecchio",
               "s": "vieux"
@@ -3701,18 +3661,22 @@
         {
           "id": "a1_053",
           "target": [
-            {
-              "t": "Mai",
-              "c": "never"
-            },
-            "l'",
+            "L'",
             {
               "t": "acqua",
               "c": "water"
             },
             {
+              "t": "non",
+              "c": "not"
+            },
+            {
               "t": "è",
               "c": "to be"
+            },
+            {
+              "t": "mai",
+              "c": "never"
             },
             {
               "t": "fredda",
@@ -4294,6 +4258,10 @@
               "t": "e",
               "s": "et"
             },
+            "but": {
+              "t": "ma",
+              "s": "mais"
+            },
             "cat": {
               "t": "il gatto",
               "s": "le chat"
@@ -4500,7 +4468,8 @@
             },
             {
               "t": "breve",
-              "c": "short"
+              "c": "short",
+              "g": "breve"
             },
             "."
           ],
@@ -5068,6 +5037,10 @@
               "t": "non",
               "s": "ne... pas"
             },
+            "this": {
+              "t": "questo",
+              "s": "ce"
+            },
             "to be": {
               "t": "essere",
               "s": "être"
@@ -5091,6 +5064,85 @@
             "you": {
               "t": "tu",
               "s": "tu"
+            }
+          }
+        },
+        {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Ieri",
+              "c": "yesterday"
+            },
+            {
+              "t": "sera",
+              "c": "evening"
+            },
+            {
+              "t": "era",
+              "c": "to be"
+            },
+            {
+              "t": "difficile",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "ma",
+              "c": "but"
+            },
+            {
+              "t": "domani",
+              "c": "tomorrow"
+            },
+            {
+              "t": "è",
+              "c": "to be"
+            },
+            "un",
+            {
+              "t": "nuovo",
+              "c": "new"
+            },
+            {
+              "t": "giorno",
+              "c": "day"
+            },
+            "."
+          ],
+          "source": "Hier, le soir était difficile, mais demain est un nouveau jour.",
+          "gloss": {
+            "but": {
+              "t": "ma",
+              "s": "mais"
+            },
+            "day": {
+              "t": "il giorno",
+              "s": "le jour"
+            },
+            "difficult": {
+              "t": "difficile",
+              "s": "difficile"
+            },
+            "evening": {
+              "t": "la sera",
+              "s": "le soir"
+            },
+            "new": {
+              "t": "nuovo",
+              "s": "nouveau"
+            },
+            "to be": {
+              "t": "essere",
+              "s": "être"
+            },
+            "tomorrow": {
+              "t": "domani",
+              "s": "demain"
+            },
+            "yesterday": {
+              "t": "ieri",
+              "s": "hier"
             }
           }
         }

@@ -398,6 +398,10 @@
               "t": "und",
               "s": "y"
             },
+            "but": {
+              "t": "aber",
+              "s": "pero"
+            },
             "he": {
               "t": "er",
               "s": "él"
@@ -460,6 +464,10 @@
               "t": "und",
               "s": "y"
             },
+            "but": {
+              "t": "aber",
+              "s": "pero"
+            },
             "here": {
               "t": "hier",
               "s": "aquí"
@@ -485,7 +493,7 @@
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_009",
@@ -608,11 +616,11 @@
               "c": "and"
             },
             {
-              "t": "sie",
-              "c": "she"
+              "t": "wir",
+              "c": "we"
             },
             {
-              "t": "ist",
+              "t": "sind",
               "c": "to be"
             },
             {
@@ -625,7 +633,7 @@
             },
             "."
           ],
-          "source": "Él está aquí, y ella también está aquí.",
+          "source": "Él está aquí, y nosotros también estamos aquí.",
           "gloss": {
             "also": {
               "t": "auch",
@@ -643,13 +651,13 @@
               "t": "hier",
               "s": "aquí"
             },
-            "she": {
-              "t": "sie",
-              "s": "ella"
-            },
             "to be": {
               "t": "sein",
               "s": "ser"
+            },
+            "we": {
+              "t": "wir",
+              "s": "nosotros"
             }
           }
         }
@@ -789,6 +797,10 @@
               "t": "und",
               "s": "y"
             },
+            "but": {
+              "t": "aber",
+              "s": "pero"
+            },
             "i": {
               "t": "ich",
               "s": "yo"
@@ -894,10 +906,6 @@
             {
               "t": "will",
               "c": "to want"
-            },
-            {
-              "t": "bitte",
-              "c": "please"
             },
             {
               "t": "mehr",
@@ -1113,6 +1121,10 @@
             "i": {
               "t": "ich",
               "s": "yo"
+            },
+            "more": {
+              "t": "mehr",
+              "s": "más"
             },
             "not": {
               "t": "nicht",
@@ -1627,6 +1639,10 @@
               "t": "der Stuhl",
               "s": "la silla"
             },
+            "in": {
+              "t": "in",
+              "s": "en"
+            },
             "room": {
               "t": "das Zimmer",
               "s": "la habitación"
@@ -1880,8 +1896,12 @@
             },
             "."
           ],
-          "source": "Puedo ver una casa pequeña, hermosa.",
+          "source": "Puedo ver una casa pequeña y hermosa.",
           "gloss": {
+            "and": {
+              "t": "und",
+              "s": "y"
+            },
             "beautiful": {
               "t": "schön",
               "s": "hermoso"
@@ -2244,10 +2264,7 @@
               "c": "to live"
             },
             ".",
-            {
-              "t": "Der",
-              "c": "that"
-            },
+            "Der",
             {
               "t": "Mann",
               "c": "man"
@@ -2319,8 +2336,8 @@
             },
             "!",
             {
-              "t": "Was",
-              "c": "what"
+              "t": "Wie",
+              "c": "how"
             },
             {
               "t": "ist",
@@ -2346,13 +2363,13 @@
               "t": "wie",
               "s": "cómo"
             },
-            "it": {
-              "t": "es",
-              "s": "ello"
-            },
             "name": {
               "t": "der Name",
               "s": "el nombre"
+            },
+            "this": {
+              "t": "dieser",
+              "s": "este"
             },
             "to be": {
               "t": "sein",
@@ -2371,7 +2388,7 @@
       ]
     },
     {
-      "count": 9,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_036",
@@ -2381,8 +2398,9 @@
               "c": "to come"
             },
             {
-              "t": "hier",
-              "c": "here"
+              "t": "her",
+              "c": "here",
+              "g": "her"
             },
             ",",
             {
@@ -2810,86 +2828,6 @@
               "s": "hoy"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Gestern",
-              "c": "yesterday"
-            },
-            {
-              "t": "war",
-              "c": "to be"
-            },
-            "der",
-            {
-              "t": "Abend",
-              "c": "evening"
-            },
-            {
-              "t": "kalt",
-              "c": "cold"
-            },
-            ",",
-            {
-              "t": "aber",
-              "c": "but"
-            },
-            {
-              "t": "morgen",
-              "c": "tomorrow"
-            },
-            {
-              "t": "ist",
-              "c": "to be"
-            },
-            "ein",
-            {
-              "t": "neuer",
-              "c": "new"
-            },
-            {
-              "t": "Tag",
-              "c": "day"
-            },
-            "."
-          ],
-          "source": "Ayer la tarde estaba fría, pero mañana es un día nuevo.",
-          "gloss": {
-            "but": {
-              "t": "aber",
-              "s": "pero"
-            },
-            "cold": {
-              "t": "kalt",
-              "s": "frío"
-            },
-            "day": {
-              "t": "der Tag",
-              "s": "el día"
-            },
-            "evening": {
-              "t": "der Abend",
-              "s": "la tarde"
-            },
-            "new": {
-              "t": "neu",
-              "s": "nuevo"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "ser"
-            },
-            "tomorrow": {
-              "t": "morgen",
-              "s": "mañana"
-            },
-            "yesterday": {
-              "t": "gestern",
-              "s": "ayer"
-            }
-          }
         }
       ]
     },
@@ -2936,13 +2874,13 @@
               "t": "und",
               "s": "y"
             },
-            "it": {
-              "t": "es",
-              "s": "ello"
-            },
             "monday": {
               "t": "der Montag",
               "s": "el lunes"
+            },
+            "this": {
+              "t": "dieser",
+              "s": "este"
             },
             "to be": {
               "t": "sein",
@@ -2998,13 +2936,13 @@
               "t": "der Freitag",
               "s": "el viernes"
             },
-            "it": {
-              "t": "es",
-              "s": "ello"
-            },
             "or": {
               "t": "oder",
               "s": "o"
+            },
+            "this": {
+              "t": "dieser",
+              "s": "este"
             },
             "thursday": {
               "t": "der Donnerstag",
@@ -3203,16 +3141,16 @@
               "c": "i"
             },
             {
-              "t": "habe",
-              "c": "to have"
+              "t": "arbeite",
+              "c": "to work"
             },
             {
               "t": "heute",
               "c": "today"
             },
             {
-              "t": "drei",
-              "c": "three"
+              "t": "fünf",
+              "c": "five"
             },
             {
               "t": "Stunden",
@@ -3220,11 +3158,15 @@
             },
             "."
           ],
-          "source": "¿Cuándo puedes venir? Tengo tres horas hoy.",
+          "source": "¿Cuándo puedes venir? Trabajo cinco horas hoy.",
           "gloss": {
             "can": {
               "t": "können",
               "s": "poder"
+            },
+            "five": {
+              "t": "fünf",
+              "s": "cinco"
             },
             "hour": {
               "t": "die Stunde",
@@ -3234,17 +3176,13 @@
               "t": "ich",
               "s": "yo"
             },
-            "three": {
-              "t": "drei",
-              "s": "tres"
-            },
             "to come": {
               "t": "kommen",
               "s": "venir"
             },
-            "to have": {
-              "t": "haben",
-              "s": "tener"
+            "to work": {
+              "t": "arbeiten",
+              "s": "trabajar"
             },
             "today": {
               "t": "heute",
@@ -3447,10 +3385,6 @@
               "c": "to want"
             },
             {
-              "t": "bitte",
-              "c": "please"
-            },
-            {
               "t": "zehn",
               "c": "ten"
             },
@@ -3555,8 +3489,8 @@
               "c": "and"
             },
             {
-              "t": "er",
-              "c": "he"
+              "t": "es",
+              "c": "it"
             },
             {
               "t": "will",
@@ -3589,6 +3523,10 @@
             "he": {
               "t": "er",
               "s": "él"
+            },
+            "it": {
+              "t": "es",
+              "s": "ello"
             },
             "old": {
               "t": "alt",
@@ -3917,7 +3855,7 @@
             },
             "."
           ],
-          "source": "El agua nunca está fría aquí, porque el sol siempre es caliente.",
+          "source": "El agua nunca está fría aquí, porque el sol siempre es caluroso.",
           "gloss": {
             "always": {
               "t": "immer",
@@ -4469,6 +4407,10 @@
             "and": {
               "t": "und",
               "s": "y"
+            },
+            "but": {
+              "t": "aber",
+              "s": "pero"
             },
             "cat": {
               "t": "die Katze",
@@ -5085,7 +5027,8 @@
             },
             {
               "t": "günstig",
-              "c": "cheap"
+              "c": "cheap",
+              "g": "günstig"
             },
             "."
           ],
@@ -5280,6 +5223,10 @@
               "t": "nicht",
               "s": "no"
             },
+            "this": {
+              "t": "dieser",
+              "s": "este"
+            },
             "to be": {
               "t": "sein",
               "s": "ser"
@@ -5303,6 +5250,86 @@
             "you": {
               "t": "du",
               "s": "tú"
+            }
+          }
+        },
+        {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Gestern",
+              "c": "yesterday"
+            },
+            {
+              "t": "war",
+              "c": "to be"
+            },
+            "der",
+            {
+              "t": "Abend",
+              "c": "evening"
+            },
+            {
+              "t": "schwierig",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "aber",
+              "c": "but"
+            },
+            {
+              "t": "morgen",
+              "c": "tomorrow"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
+            },
+            "ein",
+            {
+              "t": "neuer",
+              "c": "new"
+            },
+            {
+              "t": "Tag",
+              "c": "day"
+            },
+            "."
+          ],
+          "source": "Ayer la tarde fue difícil, pero mañana es un día nuevo.",
+          "gloss": {
+            "but": {
+              "t": "aber",
+              "s": "pero"
+            },
+            "day": {
+              "t": "der Tag",
+              "s": "el día"
+            },
+            "difficult": {
+              "t": "schwierig",
+              "s": "difícil"
+            },
+            "evening": {
+              "t": "der Abend",
+              "s": "la tarde"
+            },
+            "new": {
+              "t": "neu",
+              "s": "nuevo"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "ser"
+            },
+            "tomorrow": {
+              "t": "morgen",
+              "s": "mañana"
+            },
+            "yesterday": {
+              "t": "gestern",
+              "s": "ayer"
             }
           }
         }

@@ -66,7 +66,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             ",",
             {
@@ -130,7 +131,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             ",",
             {
@@ -198,7 +200,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             "."
           ],
@@ -383,6 +386,10 @@
               "t": "et",
               "s": "ve"
             },
+            "but": {
+              "t": "mais",
+              "s": "ama"
+            },
             "he": {
               "t": "il",
               "s": "o"
@@ -445,6 +452,10 @@
               "t": "et",
               "s": "ve"
             },
+            "but": {
+              "t": "mais",
+              "s": "ama"
+            },
             "here": {
               "t": "ici",
               "s": "burada"
@@ -470,7 +481,7 @@
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_009",
@@ -594,11 +605,11 @@
               "c": "and"
             },
             {
-              "t": "elle",
-              "c": "she"
+              "t": "nous",
+              "c": "we"
             },
             {
-              "t": "est",
+              "t": "sommes",
               "c": "to be"
             },
             {
@@ -611,7 +622,7 @@
             },
             "."
           ],
-          "source": "O burada ve o da burada.",
+          "source": "O burada ve biz de buradayız.",
           "gloss": {
             "also": {
               "t": "aussi",
@@ -629,13 +640,13 @@
               "t": "ici",
               "s": "burada"
             },
-            "she": {
-              "t": "elle",
-              "s": "o"
-            },
             "to be": {
               "t": "être",
               "s": "olmak"
+            },
+            "we": {
+              "t": "nous",
+              "s": "biz"
             }
           }
         }
@@ -668,7 +679,7 @@
             },
             " !"
           ],
-          "source": "Süt ile kahve, lütfen!",
+          "source": "Sütlü kahve, lütfen!",
           "gloss": {
             "coffee": {
               "t": "le café",
@@ -780,6 +791,10 @@
             "and": {
               "t": "et",
               "s": "ve"
+            },
+            "but": {
+              "t": "mais",
+              "s": "ama"
             },
             "i": {
               "t": "je",
@@ -1112,6 +1127,10 @@
             "i": {
               "t": "je",
               "s": "ben"
+            },
+            "more": {
+              "t": "plus",
+              "s": "daha"
             },
             "not": {
               "t": "ne... pas",
@@ -1529,7 +1548,8 @@
             },
             {
               "t": "elle",
-              "c": "it"
+              "c": "it",
+              "g": "elle"
             },
             {
               "t": "est",
@@ -1628,6 +1648,10 @@
             "chair": {
               "t": "la chaise",
               "s": "sandalye"
+            },
+            "in": {
+              "t": "dans",
+              "s": "-de"
             },
             "room": {
               "t": "la chambre",
@@ -1799,7 +1823,8 @@
             },
             {
               "t": "ce",
-              "c": "that"
+              "c": "that",
+              "g": "ce"
             },
             {
               "t": "livre-là",
@@ -1883,6 +1908,10 @@
           ],
           "source": "Güzel, küçük bir ev görüyorum.",
           "gloss": {
+            "and": {
+              "t": "et",
+              "s": "ve"
+            },
             "beautiful": {
               "t": "beau",
               "s": "güzel"
@@ -2256,7 +2285,8 @@
             ".",
             {
               "t": "Cet",
-              "c": "that"
+              "c": "that",
+              "g": "ce"
             },
             {
               "t": "homme",
@@ -2330,8 +2360,7 @@
             " !",
             {
               "t": "C'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2352,7 +2381,7 @@
             },
             " ?"
           ],
-          "source": "Merhaba! Senin ismin ne?",
+          "source": "Merhaba! İsmin ne?",
           "gloss": {
             "hello": {
               "t": "bonjour",
@@ -2362,13 +2391,13 @@
               "t": "comment",
               "s": "nasıl"
             },
-            "it": {
-              "t": "il",
-              "s": "o"
-            },
             "name": {
               "t": "le nom",
               "s": "isim"
+            },
+            "this": {
+              "t": "ce",
+              "s": "bu"
             },
             "to be": {
               "t": "être",
@@ -2387,7 +2416,7 @@
       ]
     },
     {
-      "count": 9,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_036",
@@ -2763,7 +2792,8 @@
             "la",
             {
               "t": "journée",
-              "c": "day"
+              "c": "day",
+              "g": "journée"
             },
             ",",
             {
@@ -2824,87 +2854,6 @@
               "s": "bugün"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Hier",
-              "c": "yesterday"
-            },
-            ",",
-            "le",
-            {
-              "t": "soir",
-              "c": "evening"
-            },
-            {
-              "t": "était",
-              "c": "to be"
-            },
-            {
-              "t": "froid",
-              "c": "cold"
-            },
-            ",",
-            {
-              "t": "mais",
-              "c": "but"
-            },
-            {
-              "t": "demain",
-              "c": "tomorrow"
-            },
-            {
-              "t": "est",
-              "c": "to be"
-            },
-            "un",
-            {
-              "t": "nouveau",
-              "c": "new"
-            },
-            {
-              "t": "jour",
-              "c": "day"
-            },
-            "."
-          ],
-          "source": "Dün akşam soğuktu ama yarın yeni bir gün.",
-          "gloss": {
-            "but": {
-              "t": "mais",
-              "s": "ama"
-            },
-            "cold": {
-              "t": "froid",
-              "s": "soğuk"
-            },
-            "day": {
-              "t": "le jour",
-              "s": "gün"
-            },
-            "evening": {
-              "t": "le soir",
-              "s": "akşam"
-            },
-            "new": {
-              "t": "nouveau",
-              "s": "yeni"
-            },
-            "to be": {
-              "t": "être",
-              "s": "olmak"
-            },
-            "tomorrow": {
-              "t": "demain",
-              "s": "yarın"
-            },
-            "yesterday": {
-              "t": "hier",
-              "s": "dün"
-            }
-          }
         }
       ]
     },
@@ -2921,8 +2870,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2944,8 +2892,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2963,13 +2910,13 @@
               "t": "et",
               "s": "ve"
             },
-            "it": {
-              "t": "il",
-              "s": "o"
-            },
             "monday": {
               "t": "le lundi",
               "s": "pazartesi"
+            },
+            "this": {
+              "t": "ce",
+              "s": "bu"
             },
             "to be": {
               "t": "être",
@@ -2999,8 +2946,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -3031,13 +2977,13 @@
               "t": "le vendredi",
               "s": "cuma"
             },
-            "it": {
-              "t": "il",
-              "s": "o"
-            },
             "or": {
               "t": "ou",
               "s": "veya"
+            },
+            "this": {
+              "t": "ce",
+              "s": "bu"
             },
             "thursday": {
               "t": "le jeudi",
@@ -3096,7 +3042,8 @@
             "la",
             {
               "t": "journée",
-              "c": "day"
+              "c": "day",
+              "g": "journée"
             },
             "."
           ],
@@ -3231,16 +3178,16 @@
             },
             " ?",
             {
-              "t": "J'",
+              "t": "Je",
               "c": "i"
             },
             {
-              "t": "ai",
-              "c": "to have"
+              "t": "travaille",
+              "c": "to work"
             },
             {
-              "t": "trois",
-              "c": "three"
+              "t": "cinq",
+              "c": "five"
             },
             {
               "t": "heures",
@@ -3252,11 +3199,15 @@
             },
             "."
           ],
-          "source": "Ne zaman gelebilirsin? Bugün üç saatim var.",
+          "source": "Ne zaman gelebilirsin? Bugün beş saat çalışıyorum.",
           "gloss": {
             "can": {
               "t": "pouvoir",
               "s": "-ebilmek"
+            },
+            "five": {
+              "t": "cinq",
+              "s": "beş"
             },
             "hour": {
               "t": "l'heure",
@@ -3266,17 +3217,13 @@
               "t": "je",
               "s": "ben"
             },
-            "three": {
-              "t": "trois",
-              "s": "üç"
-            },
             "to come": {
               "t": "venir",
               "s": "gelmek"
             },
-            "to have": {
-              "t": "avoir",
-              "s": "var"
+            "to work": {
+              "t": "travailler",
+              "s": "çalışmak"
             },
             "today": {
               "t": "aujourd'hui",
@@ -3576,7 +3523,8 @@
             },
             {
               "t": "ans",
-              "c": "year"
+              "c": "year",
+              "g": "an"
             },
             ",",
             {
@@ -3616,6 +3564,10 @@
               "s": "çocuk"
             },
             "he": {
+              "t": "il",
+              "s": "o"
+            },
+            "it": {
               "t": "il",
               "s": "o"
             },
@@ -4501,6 +4453,10 @@
               "t": "et",
               "s": "ve"
             },
+            "but": {
+              "t": "mais",
+              "s": "ama"
+            },
             "cat": {
               "t": "le chat",
               "s": "kedi"
@@ -5285,7 +5241,7 @@
             " !",
             {
               "t": "Ce",
-              "c": "it"
+              "c": "this"
             },
             "n'",
             {
@@ -5320,6 +5276,10 @@
               "t": "ne... pas",
               "s": "değil"
             },
+            "this": {
+              "t": "ce",
+              "s": "bu"
+            },
             "to be": {
               "t": "être",
               "s": "olmak"
@@ -5343,6 +5303,87 @@
             "you": {
               "t": "tu",
               "s": "sen"
+            }
+          }
+        },
+        {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Hier",
+              "c": "yesterday"
+            },
+            ",",
+            "le",
+            {
+              "t": "soir",
+              "c": "evening"
+            },
+            {
+              "t": "était",
+              "c": "to be"
+            },
+            {
+              "t": "difficile",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "mais",
+              "c": "but"
+            },
+            {
+              "t": "demain",
+              "c": "tomorrow"
+            },
+            {
+              "t": "est",
+              "c": "to be"
+            },
+            "un",
+            {
+              "t": "nouveau",
+              "c": "new"
+            },
+            {
+              "t": "jour",
+              "c": "day"
+            },
+            "."
+          ],
+          "source": "Dün akşam zordu ama yarın yeni bir gün.",
+          "gloss": {
+            "but": {
+              "t": "mais",
+              "s": "ama"
+            },
+            "day": {
+              "t": "le jour",
+              "s": "gün"
+            },
+            "difficult": {
+              "t": "difficile",
+              "s": "zor"
+            },
+            "evening": {
+              "t": "le soir",
+              "s": "akşam"
+            },
+            "new": {
+              "t": "nouveau",
+              "s": "yeni"
+            },
+            "to be": {
+              "t": "être",
+              "s": "olmak"
+            },
+            "tomorrow": {
+              "t": "demain",
+              "s": "yarın"
+            },
+            "yesterday": {
+              "t": "hier",
+              "s": "dün"
             }
           }
         }

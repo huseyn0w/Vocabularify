@@ -374,6 +374,10 @@
               "t": "y",
               "s": "e"
             },
+            "but": {
+              "t": "pero",
+              "s": "ma"
+            },
             "he": {
               "t": "él",
               "s": "lui"
@@ -438,6 +442,10 @@
               "t": "y",
               "s": "e"
             },
+            "but": {
+              "t": "pero",
+              "s": "ma"
+            },
             "here": {
               "t": "aquí",
               "s": "qui"
@@ -463,7 +471,7 @@
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_009",
@@ -582,15 +590,15 @@
               "c": "and"
             },
             {
-              "t": "ella",
-              "c": "she"
+              "t": "nosotros",
+              "c": "we"
             },
             {
               "t": "también",
               "c": "also"
             },
             {
-              "t": "está",
+              "t": "estamos",
               "c": "to be",
               "g": "estar"
             },
@@ -600,7 +608,7 @@
             },
             "."
           ],
-          "source": "Lui è qui, e anche lei è qui.",
+          "source": "Lui è qui, e anche noi siamo qui.",
           "gloss": {
             "also": {
               "t": "también",
@@ -618,13 +626,13 @@
               "t": "aquí",
               "s": "qui"
             },
-            "she": {
-              "t": "ella",
-              "s": "lei"
-            },
             "to be": {
               "t": "ser",
               "s": "essere"
+            },
+            "we": {
+              "t": "nosotros",
+              "s": "noi"
             }
           }
         }
@@ -760,6 +768,10 @@
             "and": {
               "t": "y",
               "s": "e"
+            },
+            "but": {
+              "t": "pero",
+              "s": "ma"
             },
             "i": {
               "t": "yo",
@@ -1044,7 +1056,8 @@
             },
             {
               "t": "despacio",
-              "c": "slow"
+              "c": "slow",
+              "g": "despacio"
             },
             ",",
             {
@@ -1053,7 +1066,7 @@
             },
             "?"
           ],
-          "source": "Scusa, non ti capisco. Puoi parlare lentamente, per favore?",
+          "source": "Scusa, non ti capisco. Puoi parlare più lentamente, per favore?",
           "gloss": {
             "can": {
               "t": "poder",
@@ -1062,6 +1075,10 @@
             "i": {
               "t": "yo",
               "s": "io"
+            },
+            "more": {
+              "t": "más",
+              "s": "più"
             },
             "not": {
               "t": "no",
@@ -1556,6 +1573,10 @@
               "t": "la silla",
               "s": "la sedia"
             },
+            "in": {
+              "t": "en",
+              "s": "in"
+            },
             "room": {
               "t": "la habitación",
               "s": "la stanza"
@@ -1802,15 +1823,22 @@
               "t": "pequeña",
               "c": "small"
             },
-            ",",
+            {
+              "t": "y",
+              "c": "and"
+            },
             {
               "t": "hermosa",
               "c": "beautiful"
             },
             "."
           ],
-          "source": "Posso vedere una piccola, bella casa.",
+          "source": "Posso vedere una piccola e bella casa.",
           "gloss": {
+            "and": {
+              "t": "y",
+              "s": "e"
+            },
             "beautiful": {
               "t": "hermoso",
               "s": "bello"
@@ -2277,13 +2305,13 @@
               "t": "cómo",
               "s": "come"
             },
-            "it": {
-              "t": "ello",
-              "s": "esso"
-            },
             "name": {
               "t": "el nombre",
               "s": "il nome"
+            },
+            "this": {
+              "t": "este",
+              "s": "questo"
             },
             "to be": {
               "t": "ser",
@@ -2302,7 +2330,7 @@
       ]
     },
     {
-      "count": 9,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_036",
@@ -2716,87 +2744,6 @@
               "s": "oggi"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Ayer",
-              "c": "yesterday"
-            },
-            "la",
-            {
-              "t": "tarde",
-              "c": "evening"
-            },
-            {
-              "t": "estaba",
-              "c": "to be",
-              "g": "estar"
-            },
-            {
-              "t": "fría",
-              "c": "cold"
-            },
-            ",",
-            {
-              "t": "pero",
-              "c": "but"
-            },
-            {
-              "t": "mañana",
-              "c": "tomorrow"
-            },
-            {
-              "t": "es",
-              "c": "to be"
-            },
-            "un",
-            {
-              "t": "día",
-              "c": "day"
-            },
-            {
-              "t": "nuevo",
-              "c": "new"
-            },
-            "."
-          ],
-          "source": "Ieri sera era fredda, ma domani è un nuovo giorno.",
-          "gloss": {
-            "but": {
-              "t": "pero",
-              "s": "ma"
-            },
-            "cold": {
-              "t": "frío",
-              "s": "freddo"
-            },
-            "day": {
-              "t": "el día",
-              "s": "il giorno"
-            },
-            "evening": {
-              "t": "la tarde",
-              "s": "la sera"
-            },
-            "new": {
-              "t": "nuevo",
-              "s": "nuovo"
-            },
-            "to be": {
-              "t": "ser",
-              "s": "essere"
-            },
-            "tomorrow": {
-              "t": "mañana",
-              "s": "domani"
-            },
-            "yesterday": {
-              "t": "ayer",
-              "s": "ieri"
-            }
-          }
         }
       ]
     },
@@ -2843,13 +2790,13 @@
               "t": "y",
               "s": "e"
             },
-            "it": {
-              "t": "ello",
-              "s": "esso"
-            },
             "monday": {
               "t": "el lunes",
               "s": "il lunedì"
+            },
+            "this": {
+              "t": "este",
+              "s": "questo"
             },
             "to be": {
               "t": "ser",
@@ -2906,13 +2853,13 @@
               "t": "el viernes",
               "s": "il venerdì"
             },
-            "it": {
-              "t": "ello",
-              "s": "esso"
-            },
             "or": {
               "t": "o",
               "s": "o"
+            },
+            "this": {
+              "t": "este",
+              "s": "questo"
             },
             "thursday": {
               "t": "el jueves",
@@ -3097,12 +3044,12 @@
             },
             "?",
             {
-              "t": "Tengo",
-              "c": "to have"
+              "t": "Trabajo",
+              "c": "to work"
             },
             {
-              "t": "tres",
-              "c": "three"
+              "t": "cinco",
+              "c": "five"
             },
             {
               "t": "horas",
@@ -3114,11 +3061,15 @@
             },
             "."
           ],
-          "source": "Quando puoi venire? Ho tre ore oggi.",
+          "source": "Quando puoi venire? Lavoro cinque ore oggi.",
           "gloss": {
             "can": {
               "t": "poder",
               "s": "potere"
+            },
+            "five": {
+              "t": "cinco",
+              "s": "cinque"
             },
             "hour": {
               "t": "la hora",
@@ -3128,17 +3079,13 @@
               "t": "yo",
               "s": "io"
             },
-            "three": {
-              "t": "tres",
-              "s": "tre"
-            },
             "to come": {
               "t": "venir",
               "s": "venire"
             },
-            "to have": {
-              "t": "tener",
-              "s": "avere"
+            "to work": {
+              "t": "trabajar",
+              "s": "lavorare"
             },
             "today": {
               "t": "hoy",
@@ -3473,6 +3420,10 @@
               "t": "él",
               "s": "lui"
             },
+            "it": {
+              "t": "ello",
+              "s": "esso"
+            },
             "old": {
               "t": "viejo",
               "s": "vecchio"
@@ -3631,7 +3582,8 @@
             },
             {
               "t": "caluroso",
-              "c": "hot"
+              "c": "hot",
+              "g": "caluroso"
             },
             "."
           ],
@@ -3797,12 +3749,13 @@
               "c": "to be"
             },
             {
-              "t": "caliente",
-              "c": "hot"
+              "t": "caluroso",
+              "c": "hot",
+              "g": "caluroso"
             },
             "."
           ],
-          "source": "Mai l'acqua è fredda qui, perché il sole è sempre caldo.",
+          "source": "L'acqua non è mai fredda qui, perché il sole è sempre caldo.",
           "gloss": {
             "always": {
               "t": "siempre",
@@ -4351,6 +4304,10 @@
             "and": {
               "t": "y",
               "s": "e"
+            },
+            "but": {
+              "t": "pero",
+              "s": "ma"
             },
             "cat": {
               "t": "el gato",
@@ -5128,6 +5085,10 @@
               "t": "no",
               "s": "non"
             },
+            "this": {
+              "t": "este",
+              "s": "questo"
+            },
             "to be": {
               "t": "ser",
               "s": "essere"
@@ -5151,6 +5112,86 @@
             "you": {
               "t": "tú",
               "s": "tu"
+            }
+          }
+        },
+        {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Ayer",
+              "c": "yesterday"
+            },
+            "la",
+            {
+              "t": "tarde",
+              "c": "evening"
+            },
+            {
+              "t": "fue",
+              "c": "to be"
+            },
+            {
+              "t": "difícil",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "pero",
+              "c": "but"
+            },
+            {
+              "t": "mañana",
+              "c": "tomorrow"
+            },
+            {
+              "t": "es",
+              "c": "to be"
+            },
+            "un",
+            {
+              "t": "día",
+              "c": "day"
+            },
+            {
+              "t": "nuevo",
+              "c": "new"
+            },
+            "."
+          ],
+          "source": "Ieri sera era difficile, ma domani è un nuovo giorno.",
+          "gloss": {
+            "but": {
+              "t": "pero",
+              "s": "ma"
+            },
+            "day": {
+              "t": "el día",
+              "s": "il giorno"
+            },
+            "difficult": {
+              "t": "difícil",
+              "s": "difficile"
+            },
+            "evening": {
+              "t": "la tarde",
+              "s": "la sera"
+            },
+            "new": {
+              "t": "nuevo",
+              "s": "nuovo"
+            },
+            "to be": {
+              "t": "ser",
+              "s": "essere"
+            },
+            "tomorrow": {
+              "t": "mañana",
+              "s": "domani"
+            },
+            "yesterday": {
+              "t": "ayer",
+              "s": "ieri"
             }
           }
         }

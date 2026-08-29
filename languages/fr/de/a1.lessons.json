@@ -66,7 +66,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             ",",
             {
@@ -130,7 +131,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             ",",
             {
@@ -198,7 +200,8 @@
             },
             {
               "t": "bien",
-              "c": "good"
+              "c": "good",
+              "g": "bien"
             },
             "."
           ],
@@ -383,6 +386,10 @@
               "t": "et",
               "s": "und"
             },
+            "but": {
+              "t": "mais",
+              "s": "aber"
+            },
             "he": {
               "t": "il",
               "s": "er"
@@ -445,6 +452,10 @@
               "t": "et",
               "s": "und"
             },
+            "but": {
+              "t": "mais",
+              "s": "aber"
+            },
             "here": {
               "t": "ici",
               "s": "hier"
@@ -470,7 +481,7 @@
       ]
     },
     {
-      "count": 7,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_009",
@@ -594,11 +605,11 @@
               "c": "and"
             },
             {
-              "t": "elle",
-              "c": "she"
+              "t": "nous",
+              "c": "we"
             },
             {
-              "t": "est",
+              "t": "sommes",
               "c": "to be"
             },
             {
@@ -611,7 +622,7 @@
             },
             "."
           ],
-          "source": "Er ist hier, und sie ist auch hier.",
+          "source": "Er ist hier, und wir sind auch hier.",
           "gloss": {
             "also": {
               "t": "aussi",
@@ -629,13 +640,13 @@
               "t": "ici",
               "s": "hier"
             },
-            "she": {
-              "t": "elle",
-              "s": "sie"
-            },
             "to be": {
               "t": "être",
               "s": "sein"
+            },
+            "we": {
+              "t": "nous",
+              "s": "wir"
             }
           }
         }
@@ -781,6 +792,10 @@
               "t": "et",
               "s": "und"
             },
+            "but": {
+              "t": "mais",
+              "s": "aber"
+            },
             "i": {
               "t": "je",
               "s": "ich"
@@ -904,7 +919,7 @@
             },
             "."
           ],
-          "source": "Das Frühstück ist gut, aber ich will bitte mehr Brot.",
+          "source": "Das Frühstück ist gut, aber ich will mehr Brot.",
           "gloss": {
             "bread": {
               "t": "le pain",
@@ -1112,6 +1127,10 @@
             "i": {
               "t": "je",
               "s": "ich"
+            },
+            "more": {
+              "t": "plus",
+              "s": "mehr"
             },
             "not": {
               "t": "ne... pas",
@@ -1529,7 +1548,8 @@
             },
             {
               "t": "elle",
-              "c": "it"
+              "c": "it",
+              "g": "elle"
             },
             {
               "t": "est",
@@ -1628,6 +1648,10 @@
             "chair": {
               "t": "la chaise",
               "s": "der Stuhl"
+            },
+            "in": {
+              "t": "dans",
+              "s": "in"
             },
             "room": {
               "t": "la chambre",
@@ -1799,7 +1823,8 @@
             },
             {
               "t": "ce",
-              "c": "that"
+              "c": "that",
+              "g": "ce"
             },
             {
               "t": "livre-là",
@@ -1883,6 +1908,10 @@
           ],
           "source": "Ich kann ein kleines, schönes Haus sehen.",
           "gloss": {
+            "and": {
+              "t": "et",
+              "s": "und"
+            },
             "beautiful": {
               "t": "beau",
               "s": "schön"
@@ -2256,7 +2285,8 @@
             ".",
             {
               "t": "Cet",
-              "c": "that"
+              "c": "that",
+              "g": "ce"
             },
             {
               "t": "homme",
@@ -2330,8 +2360,7 @@
             " !",
             {
               "t": "C'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2352,7 +2381,7 @@
             },
             " ?"
           ],
-          "source": "Hallo! Was ist dein Name?",
+          "source": "Hallo! Wie ist dein Name?",
           "gloss": {
             "hello": {
               "t": "bonjour",
@@ -2362,13 +2391,13 @@
               "t": "comment",
               "s": "wie"
             },
-            "it": {
-              "t": "il",
-              "s": "es"
-            },
             "name": {
               "t": "le nom",
               "s": "der Name"
+            },
+            "this": {
+              "t": "ce",
+              "s": "dieser"
             },
             "to be": {
               "t": "être",
@@ -2387,7 +2416,7 @@
       ]
     },
     {
-      "count": 9,
+      "count": 8,
       "sentences": [
         {
           "id": "a1_036",
@@ -2442,7 +2471,7 @@
             },
             "."
           ],
-          "source": "Komm hier, bitte! Diese Straße ist groß, und die Schule ist hier.",
+          "source": "Komm her, bitte! Diese Straße ist groß, und die Schule ist hier.",
           "gloss": {
             "and": {
               "t": "et",
@@ -2763,7 +2792,8 @@
             "la",
             {
               "t": "journée",
-              "c": "day"
+              "c": "day",
+              "g": "journée"
             },
             ",",
             {
@@ -2824,87 +2854,6 @@
               "s": "heute"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Hier",
-              "c": "yesterday"
-            },
-            ",",
-            "le",
-            {
-              "t": "soir",
-              "c": "evening"
-            },
-            {
-              "t": "était",
-              "c": "to be"
-            },
-            {
-              "t": "froid",
-              "c": "cold"
-            },
-            ",",
-            {
-              "t": "mais",
-              "c": "but"
-            },
-            {
-              "t": "demain",
-              "c": "tomorrow"
-            },
-            {
-              "t": "est",
-              "c": "to be"
-            },
-            "un",
-            {
-              "t": "nouveau",
-              "c": "new"
-            },
-            {
-              "t": "jour",
-              "c": "day"
-            },
-            "."
-          ],
-          "source": "Gestern war der Abend kalt, aber morgen ist ein neuer Tag.",
-          "gloss": {
-            "but": {
-              "t": "mais",
-              "s": "aber"
-            },
-            "cold": {
-              "t": "froid",
-              "s": "kalt"
-            },
-            "day": {
-              "t": "le jour",
-              "s": "der Tag"
-            },
-            "evening": {
-              "t": "le soir",
-              "s": "der Abend"
-            },
-            "new": {
-              "t": "nouveau",
-              "s": "neu"
-            },
-            "to be": {
-              "t": "être",
-              "s": "sein"
-            },
-            "tomorrow": {
-              "t": "demain",
-              "s": "morgen"
-            },
-            "yesterday": {
-              "t": "hier",
-              "s": "gestern"
-            }
-          }
         }
       ]
     },
@@ -2921,8 +2870,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2944,8 +2892,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -2963,13 +2910,13 @@
               "t": "et",
               "s": "und"
             },
-            "it": {
-              "t": "il",
-              "s": "es"
-            },
             "monday": {
               "t": "le lundi",
               "s": "der Montag"
+            },
+            "this": {
+              "t": "ce",
+              "s": "dieser"
             },
             "to be": {
               "t": "être",
@@ -2999,8 +2946,7 @@
             ",",
             {
               "t": "c'",
-              "c": "it",
-              "g": "ce"
+              "c": "this"
             },
             {
               "t": "est",
@@ -3031,13 +2977,13 @@
               "t": "le vendredi",
               "s": "der Freitag"
             },
-            "it": {
-              "t": "il",
-              "s": "es"
-            },
             "or": {
               "t": "ou",
               "s": "oder"
+            },
+            "this": {
+              "t": "ce",
+              "s": "dieser"
             },
             "thursday": {
               "t": "le jeudi",
@@ -3096,7 +3042,8 @@
             "la",
             {
               "t": "journée",
-              "c": "day"
+              "c": "day",
+              "g": "journée"
             },
             "."
           ],
@@ -3231,16 +3178,16 @@
             },
             " ?",
             {
-              "t": "J'",
+              "t": "Je",
               "c": "i"
             },
             {
-              "t": "ai",
-              "c": "to have"
+              "t": "travaille",
+              "c": "to work"
             },
             {
-              "t": "trois",
-              "c": "three"
+              "t": "cinq",
+              "c": "five"
             },
             {
               "t": "heures",
@@ -3252,11 +3199,15 @@
             },
             "."
           ],
-          "source": "Wann kannst du kommen? Ich habe heute drei Stunden.",
+          "source": "Wann kannst du kommen? Ich arbeite heute fünf Stunden.",
           "gloss": {
             "can": {
               "t": "pouvoir",
               "s": "können"
+            },
+            "five": {
+              "t": "cinq",
+              "s": "fünf"
             },
             "hour": {
               "t": "l'heure",
@@ -3266,17 +3217,13 @@
               "t": "je",
               "s": "ich"
             },
-            "three": {
-              "t": "trois",
-              "s": "drei"
-            },
             "to come": {
               "t": "venir",
               "s": "kommen"
             },
-            "to have": {
-              "t": "avoir",
-              "s": "haben"
+            "to work": {
+              "t": "travailler",
+              "s": "arbeiten"
             },
             "today": {
               "t": "aujourd'hui",
@@ -3514,7 +3461,7 @@
             },
             "."
           ],
-          "source": "Ich will bitte zehn Äpfel, neun Eier und acht Fische.",
+          "source": "Ich will zehn Äpfel, neun Eier und acht Fische.",
           "gloss": {
             "and": {
               "t": "et",
@@ -3576,7 +3523,8 @@
             },
             {
               "t": "ans",
-              "c": "year"
+              "c": "year",
+              "g": "an"
             },
             ",",
             {
@@ -3601,7 +3549,7 @@
             },
             "."
           ],
-          "source": "Das Kind ist zehn Jahre alt, und er will immer lernen.",
+          "source": "Das Kind ist zehn Jahre alt, und es will immer lernen.",
           "gloss": {
             "always": {
               "t": "toujours",
@@ -3618,6 +3566,10 @@
             "he": {
               "t": "il",
               "s": "er"
+            },
+            "it": {
+              "t": "il",
+              "s": "es"
             },
             "old": {
               "t": "vieux",
@@ -4501,6 +4453,10 @@
               "t": "et",
               "s": "und"
             },
+            "but": {
+              "t": "mais",
+              "s": "aber"
+            },
             "cat": {
               "t": "le chat",
               "s": "die Katze"
@@ -5285,7 +5241,7 @@
             " !",
             {
               "t": "Ce",
-              "c": "it"
+              "c": "this"
             },
             "n'",
             {
@@ -5320,6 +5276,10 @@
               "t": "ne... pas",
               "s": "nicht"
             },
+            "this": {
+              "t": "ce",
+              "s": "dieser"
+            },
             "to be": {
               "t": "être",
               "s": "sein"
@@ -5343,6 +5303,87 @@
             "you": {
               "t": "tu",
               "s": "du"
+            }
+          }
+        },
+        {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Hier",
+              "c": "yesterday"
+            },
+            ",",
+            "le",
+            {
+              "t": "soir",
+              "c": "evening"
+            },
+            {
+              "t": "était",
+              "c": "to be"
+            },
+            {
+              "t": "difficile",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "mais",
+              "c": "but"
+            },
+            {
+              "t": "demain",
+              "c": "tomorrow"
+            },
+            {
+              "t": "est",
+              "c": "to be"
+            },
+            "un",
+            {
+              "t": "nouveau",
+              "c": "new"
+            },
+            {
+              "t": "jour",
+              "c": "day"
+            },
+            "."
+          ],
+          "source": "Gestern war der Abend schwierig, aber morgen ist ein neuer Tag.",
+          "gloss": {
+            "but": {
+              "t": "mais",
+              "s": "aber"
+            },
+            "day": {
+              "t": "le jour",
+              "s": "der Tag"
+            },
+            "difficult": {
+              "t": "difficile",
+              "s": "schwierig"
+            },
+            "evening": {
+              "t": "le soir",
+              "s": "der Abend"
+            },
+            "new": {
+              "t": "nouveau",
+              "s": "neu"
+            },
+            "to be": {
+              "t": "être",
+              "s": "sein"
+            },
+            "tomorrow": {
+              "t": "demain",
+              "s": "morgen"
+            },
+            "yesterday": {
+              "t": "hier",
+              "s": "gestern"
             }
           }
         }
