@@ -598,6 +598,15 @@ function checkSentence(
     if (text !== text.trim()) {
       errors.push(`${sentence.id} [${lang}]: joins to text with a leading or trailing space`);
     }
+    // A sentence that opens on a glue token opens in lower case, because glue
+    // is written as a bare string and nothing capitalises it. Russian "У меня"
+    // came out "у меня" for exactly this reason. Only flag a first character
+    // that HAS a case and is in the lower one, so a numeral, a quotation mark
+    // or a script without case never trips it.
+    const first = text.trim()[0] ?? '';
+    if (first.toLowerCase() !== first.toUpperCase() && first === first.toLowerCase()) {
+      errors.push(`${sentence.id} [${lang}]: starts lower case, "${text.slice(0, 24)}"`);
+    }
   }
 
   // A concept listed in `uses` but never rendered means `uses` is overstated,

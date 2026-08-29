@@ -86,6 +86,22 @@ describe('validateCourse', () => {
     expect(validateCourse(f).join('\n')).toContain('"water" is in the bank but in no lesson');
   });
 
+  it('catches a sentence that opens on a lower-case glue token', () => {
+    const f = fixture();
+    // 'у' is Russian glue, so nothing capitalises it and the sentence renders
+    // as "у меня ...". This is what shipped before the check existed.
+    f.sentences[0].text.ru = ['у', { t: 'меня', c: 'i' }, '.'];
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain('starts lower case');
+  });
+
+  it('does not flag a sentence that opens on a character with no case', () => {
+    const f = fixture();
+    f.sentences[0].text.ru = ['«', { t: 'Я', c: 'i' }, '»', '.'];
+    const out = validateCourse(f).join('\n');
+    expect(out).not.toContain('starts lower case');
+  });
+
   it('collapses many uncoursed bank concepts into one counted error', () => {
     const f = fixture();
     const extra = ['water', 'bread', 'milk', 'salt', 'sugar', 'rice', 'tea', 'oil'];
@@ -519,7 +535,7 @@ describe('validateCourse with a per-target course', () => {
     // rendering it anyway is normally a stale-exemption error - but not when
     // "tr" is only a source column of a per-target course.
     (g.sentences[0].text as Record<string, SentenceToken[]>).tr = [
-      { t: 'yapabilirsin', c: 'can' }
+      { t: 'Yapabilirsin', c: 'can' }
     ];
     (g.sentences[0].text.de as SentenceToken[]).push({ t: 'kannst', c: 'can' });
     const out = validateCourse(g).join('\n');

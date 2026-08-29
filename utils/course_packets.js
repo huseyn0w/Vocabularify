@@ -103,9 +103,15 @@ for (const [index, lessons] of slices.entries()) {
   const first = lessons[0];
   const last = lessons[lessons.length - 1];
   const pool = poolBefore.get(first.id);
+  // A topic anchored inside the slice is not available to every lesson in it,
+  // so each one carries its anchor rather than the whole list being described
+  // by the slice's last lesson.
   const available = schedule
     .filter((s) => s.fromLesson <= last.id)
-    .map((s) => topicById.get(s.id))
+    .map((s) => {
+      const topic = topicById.get(s.id);
+      return topic ? { ...topic, fromLesson: s.fromLesson } : null;
+    })
     .filter(Boolean);
 
   let md = `# ${TARGET} ${LEVEL}: sentences for lessons ${first.id}-${last.id}\n\n`;
@@ -127,7 +133,8 @@ for (const [index, lessons] of slices.entries()) {
 
   md += `## Grammar available by lesson ${last.id}\n\n`;
   for (const topic of available) {
-    md += `### \`${topic.id}\`${topic.level !== LEVEL ? ` (${topic.level})` : ""} ${topic.name}\n\n`;
+    const from = topic.fromLesson > first.id ? ` - not before lesson ${topic.fromLesson}` : "";
+    md += `### \`${topic.id}\`${topic.level !== LEVEL ? ` (${topic.level})` : ""} ${topic.name}${from}\n\n`;
     md += `${topic.note}\n\nExample: ${topic.example}\n\nTest: ${topic.test}\n\n`;
   }
 
