@@ -36,7 +36,12 @@ if (!LANGS.includes(TARGET) || !LEVELS.includes(LEVEL)) {
   process.exit(2);
 }
 
-const IN = path.join(REPO, ".git", "sdd", `${TARGET}-course`, "sentences");
+// A1's sentences were written into sentences/ before a second level existed.
+// Every level after it gets its own sentences-<level>/ directory, so a rerun
+// cannot see another level's files and reject every one of them as a bad id.
+const SDD = path.join(REPO, ".git", "sdd", `${TARGET}-course`);
+const LEVEL_DIR = path.join(SDD, `sentences-${LEVEL}`);
+const IN = fs.existsSync(LEVEL_DIR) ? LEVEL_DIR : path.join(SDD, "sentences");
 const COURSE_FILE = path.join(REPO, "languages", "_course", TARGET, `${LEVEL}.json`);
 const SENT_FILE = path.join(REPO, "languages", "_course", TARGET, `${LEVEL}.sentences.json`);
 
