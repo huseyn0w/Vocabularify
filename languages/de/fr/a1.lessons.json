@@ -1190,20 +1190,21 @@
             },
             ",",
             {
-              "t": "weil",
-              "c": "because"
+              "t": "denn",
+              "c": "because",
+              "g": "denn"
             },
             {
               "t": "ich",
               "c": "i"
             },
             {
-              "t": "lernen",
-              "c": "to learn"
-            },
-            {
               "t": "will",
               "c": "to want"
+            },
+            {
+              "t": "lernen",
+              "c": "to learn"
             },
             "."
           ],
@@ -3833,13 +3834,18 @@
             },
             ",",
             {
-              "t": "weil",
-              "c": "because"
+              "t": "denn",
+              "c": "because",
+              "g": "denn"
             },
             "die",
             {
               "t": "Sonne",
               "c": "sun"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
             },
             {
               "t": "immer",
@@ -3848,10 +3854,6 @@
             {
               "t": "heiß",
               "c": "hot"
-            },
-            {
-              "t": "ist",
-              "c": "to be"
             },
             "."
           ],
@@ -4920,6 +4922,86 @@
       "count": 8,
       "sentences": [
         {
+          "id": "a1_041",
+          "target": [
+            {
+              "t": "Gestern",
+              "c": "yesterday"
+            },
+            {
+              "t": "war",
+              "c": "to be"
+            },
+            "der",
+            {
+              "t": "Abend",
+              "c": "evening"
+            },
+            {
+              "t": "schwierig",
+              "c": "difficult"
+            },
+            ",",
+            {
+              "t": "aber",
+              "c": "but"
+            },
+            {
+              "t": "morgen",
+              "c": "tomorrow"
+            },
+            {
+              "t": "ist",
+              "c": "to be"
+            },
+            "ein",
+            {
+              "t": "neuer",
+              "c": "new"
+            },
+            {
+              "t": "Tag",
+              "c": "day"
+            },
+            "."
+          ],
+          "source": "Hier, le soir était difficile, mais demain est un nouveau jour.",
+          "gloss": {
+            "but": {
+              "t": "aber",
+              "s": "mais"
+            },
+            "day": {
+              "t": "der Tag",
+              "s": "le jour"
+            },
+            "difficult": {
+              "t": "schwierig",
+              "s": "difficile"
+            },
+            "evening": {
+              "t": "der Abend",
+              "s": "le soir"
+            },
+            "new": {
+              "t": "neu",
+              "s": "nouveau"
+            },
+            "to be": {
+              "t": "sein",
+              "s": "être"
+            },
+            "tomorrow": {
+              "t": "morgen",
+              "s": "demain"
+            },
+            "yesterday": {
+              "t": "gestern",
+              "s": "hier"
+            }
+          }
+        },
+        {
           "id": "a1_066",
           "target": [
             "Die",
@@ -5252,88 +5334,504 @@
               "s": "tu"
             }
           }
-        },
-        {
-          "id": "a1_041",
-          "target": [
-            {
-              "t": "Gestern",
-              "c": "yesterday"
-            },
-            {
-              "t": "war",
-              "c": "to be"
-            },
-            "der",
-            {
-              "t": "Abend",
-              "c": "evening"
-            },
-            {
-              "t": "schwierig",
-              "c": "difficult"
-            },
-            ",",
-            {
-              "t": "aber",
-              "c": "but"
-            },
-            {
-              "t": "morgen",
-              "c": "tomorrow"
-            },
-            {
-              "t": "ist",
-              "c": "to be"
-            },
-            "ein",
-            {
-              "t": "neuer",
-              "c": "new"
-            },
-            {
-              "t": "Tag",
-              "c": "day"
-            },
-            "."
-          ],
-          "source": "Hier, le soir était difficile, mais demain est un nouveau jour.",
-          "gloss": {
-            "but": {
-              "t": "aber",
-              "s": "mais"
-            },
-            "day": {
-              "t": "der Tag",
-              "s": "le jour"
-            },
-            "difficult": {
-              "t": "schwierig",
-              "s": "difficile"
-            },
-            "evening": {
-              "t": "der Abend",
-              "s": "le soir"
-            },
-            "new": {
-              "t": "neu",
-              "s": "nouveau"
-            },
-            "to be": {
-              "t": "sein",
-              "s": "être"
-            },
-            "tomorrow": {
-              "t": "morgen",
-              "s": "demain"
-            },
-            "yesterday": {
-              "t": "gestern",
-              "s": "hier"
-            }
-          }
         }
       ]
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 6,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 6,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 5,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 4,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 3,
+      "sentences": []
+    },
+    {
+      "count": 2,
+      "sentences": []
+    },
+    {
+      "count": 0,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
+    },
+    {
+      "count": 1,
+      "sentences": []
     }
   ]
 }
