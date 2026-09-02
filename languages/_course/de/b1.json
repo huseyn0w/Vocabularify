@@ -1,0 +1,3516 @@
+{
+  "level": "b1",
+  "target": "de",
+  "grammarSchedule": [
+    {
+      "id": "de.b1.genitive-and-n-declension",
+      "fromLesson": 1,
+      "why": "a genitive needs two nouns and nothing else, and A1 leaves 1214 of them behind; die Meinung des Kindes is writable in lesson 1. The weak nouns the topic also covers - der Mensch, der Junge, der Kollege - are A1 and A2 words, so both halves are reachable at once"
+    },
+    {
+      "id": "de.b1.futur-i",
+      "fromLesson": 2,
+      "why": "werden is an A1 verb and the infinitive can be any verb already taught, so this topic costs no vocabulary at all. Lesson 2 supplies wahrscheinlich and vielleicht, which is what a prediction is usually hedged with"
+    },
+    {
+      "id": "de.b1.plusquamperfekt",
+      "fromLesson": 42,
+      "why": "nachdem is the conjunction that makes the earlier-of-two-past-events reading unambiguous, and no level of the bank carried it until lesson 42 adds it. hatte and war are A2"
+    },
+    {
+      "id": "de.b1.passive-past-perfect-tenses",
+      "fromLesson": 12,
+      "why": "a passive needs a transitive verb whose object is worth promoting; lesson 12 brings verbessern, verändern and entwickeln, whose objects are exactly what a report talks about"
+    },
+    {
+      "id": "de.b1.passive-with-modal-verb",
+      "fromLesson": 31,
+      "why": "the construction says what must or may be done to something, so it needs the vocabulary of obligation: erlauben, verbieten and gestattet arrive together in lesson 31"
+    },
+    {
+      "id": "de.b1.zustandspassiv",
+      "fromLesson": 18,
+      "why": "the contrast with the werden-passive only shows on a verb with a visible result state. lösen in lesson 18 gives the cleanest pair: das Problem wird gelöst against das Problem ist gelöst"
+    },
+    {
+      "id": "de.b1.konjunktiv-ii-irreal",
+      "fromLesson": 19,
+      "why": "wäre, hätte and würde need no new words, but a counterfactual needs something to be counter to. Lesson 19 supplies Gelegenheit, Chance, Fall and falls, which is where the hypothetical sentences live"
+    },
+    {
+      "id": "de.b1.relative-clauses-core-cases",
+      "fromLesson": 1,
+      "why": "the relative pronoun is the definite article the learner already has, and any noun can be its antecedent. Lesson 1's Meinung, Gedanke and Rat are all nouns a sentence wants to qualify"
+    },
+    {
+      "id": "de.b1.relative-clauses-preposition-wo",
+      "fromLesson": 52,
+      "why": "the wo variant needs a place worth naming twice. Lesson 52 brings Büroraum and Büroalltag, so das Büro, wo ich arbeite is writable without leaning on A1's Stadt for every example"
+    },
+    {
+      "id": "de.b1.infinitive-clauses-zu",
+      "fromLesson": 13,
+      "why": "a zu-clause needs a governing verb that takes one. erwarten and annehmen arrive in lesson 13, alongside A2's hoffen, versuchen and entscheiden"
+    },
+    {
+      "id": "de.b1.paired-connectors",
+      "fromLesson": 42,
+      "why": "the topic is its connectors. entweder...oder lands in lesson 41 and weder...noch and sowohl...als auch in lesson 42, which is also where je...desto becomes writable against umso"
+    },
+    {
+      "id": "de.b1.subordinators-extended",
+      "fromLesson": 42,
+      "why": "obwohl, während, bevor and damit are A2, but sodass was missing from every level until lesson 42 adds it. seitdem, the sixth of the set, does not arrive until lesson 240"
+    },
+    {
+      "id": "de.b1.adjective-endings-no-article",
+      "fromLesson": 8,
+      "why": "A2 taught the endings that follow an article; the bare form needs adjectives that sit naturally in front of an uncountable or plural noun. Lesson 8's verschieden, allgemein, natürlich and sozial are all of that kind"
+    },
+    {
+      "id": "de.b1.verbs-with-fixed-preposition",
+      "fromLesson": 5,
+      "why": "the topic is the verb, not the preposition. abhängen von and konkurrieren mit arrive in lesson 5, sich beschweren über in lesson 4, and each one is useless without its preposition"
+    },
+    {
+      "id": "de.b1.pronoun-word-order-middle-field",
+      "fromLesson": 5,
+      "why": "two pronoun objects need a verb that takes two objects. anbieten in lesson 5 is the first B1 one, and A1's geben and schicken carry the rest"
+    },
+    {
+      "id": "de.b1.genitive-prepositions",
+      "fromLesson": 39,
+      "why": "trotz arrives in lesson 39 and wegen in lesson 42; während and außerhalb are A2. Lesson 39 is where the first of the four becomes writable"
+    },
+    {
+      "id": "de.b1.comparative-clauses-als-wie",
+      "fromLesson": 20,
+      "why": "als and wie are A1 words, but a comparison needs two things worth comparing. Lesson 20 is built on exactly that: Unterschied, vergleichen, vergleichbar, gleich"
+    },
+    {
+      "id": "de.b1.subordinator-als-single-past-event",
+      "fromLesson": 36,
+      "why": "als for a single past event needs a past to point at. Lesson 36 supplies Vergangenheit, Jahrhundert, Jahrzehnt and neulich, and the Präteritum itself is A2"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "theme": "what you think",
+      "new": [
+        "opinion",
+        "thought",
+        "mind",
+        "memory",
+        "dream",
+        "attitude",
+        "advice"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 2,
+      "theme": "how sure you are",
+      "new": [
+        "probably",
+        "perhaps",
+        "actually",
+        "in fact",
+        "for example",
+        "according to",
+        "clear"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 3,
+      "theme": "good sides and bad sides",
+      "new": [
+        "advantage",
+        "disadvantage",
+        "situation",
+        "success",
+        "failure",
+        "successful",
+        "pride"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 4,
+      "theme": "convincing people",
+      "new": [
+        "to influence",
+        "to convince",
+        "to accept",
+        "to recognize",
+        "to notice",
+        "to realize",
+        "to complain"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 5,
+      "theme": "more and less",
+      "new": [
+        "to reduce",
+        "to increase",
+        "to avoid",
+        "to depend",
+        "to compete",
+        "to continue",
+        "to offer"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 6,
+      "theme": "organizing things",
+      "new": [
+        "to organize",
+        "to participate",
+        "to create",
+        "to control",
+        "to lead",
+        "project",
+        "service"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 7,
+      "theme": "what is needed",
+      "new": [
+        "necessary",
+        "impossible",
+        "useful",
+        "serious",
+        "common",
+        "rare",
+        "otherwise"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 8,
+      "theme": "kinds of things",
+      "new": [
+        "various",
+        "general",
+        "special",
+        "natural",
+        "social",
+        "private",
+        "similar"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 9,
+      "theme": "old and new",
+      "new": [
+        "modern",
+        "traditional",
+        "interested",
+        "disappointed",
+        "famous",
+        "complicated",
+        "finally"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 10,
+      "theme": "big words",
+      "new": [
+        "technology",
+        "information",
+        "communication",
+        "culture",
+        "religion",
+        "freedom",
+        "career"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 11,
+      "theme": "real or not",
+      "new": [
+        "real",
+        "false",
+        "surprise",
+        "stress",
+        "especially"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 12,
+      "theme": "change and development",
+      "new": [
+        "to develop",
+        "development",
+        "change",
+        "to transform",
+        "to improve",
+        "improvement",
+        "growth"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 13,
+      "theme": "expecting and supposing",
+      "new": [
+        "to expect",
+        "expectation",
+        "to assume",
+        "to suspect",
+        "suspicion",
+        "to doubt",
+        "possibly"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 14,
+      "theme": "reasons and results",
+      "new": [
+        "reason",
+        "cause",
+        "to cause",
+        "result",
+        "for what reason",
+        "therefore",
+        "correlation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 15,
+      "theme": "deciding",
+      "new": [
+        "decision",
+        "to consider",
+        "to ponder",
+        "choice",
+        "to sort out",
+        "determined",
+        "final"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 16,
+      "theme": "saying what you mean",
+      "new": [
+        "to describe",
+        "description",
+        "to mention",
+        "to express",
+        "expression",
+        "meaning",
+        "to notify"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 17,
+      "theme": "agreeing and refusing",
+      "new": [
+        "to reach an agreement",
+        "to consent",
+        "to refuse",
+        "to admit",
+        "to suggest",
+        "to demand",
+        "counterproposal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 18,
+      "theme": "problems and solutions",
+      "new": [
+        "to solve",
+        "solution",
+        "task",
+        "to achieve",
+        "to complete",
+        "supplement",
+        "without problems"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 19,
+      "theme": "chance and opportunity",
+      "new": [
+        "opportunity",
+        "chance",
+        "case",
+        "in case",
+        "coincidence",
+        "accidentally",
+        "possible",
+        "possibility"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 20,
+      "theme": "differences and comparisons",
+      "new": [
+        "difference",
+        "varying",
+        "to compare",
+        "comparable",
+        "the same",
+        "equal",
+        "likewise"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 21,
+      "theme": "importance and value",
+      "new": [
+        "value",
+        "valuable",
+        "worthless",
+        "unimportant",
+        "meaningful",
+        "senseless",
+        "sense"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 22,
+      "theme": "support and help",
+      "new": [
+        "to support",
+        "support",
+        "helpful",
+        "to look after",
+        "to care for",
+        "supervisor",
+        "supervision"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 23,
+      "theme": "trust and honesty",
+      "new": [
+        "trust",
+        "honest",
+        "loyal",
+        "conscience",
+        "secret",
+        "confident",
+        "reliability"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 24,
+      "theme": "anger and annoyance",
+      "new": [
+        "anger",
+        "annoying",
+        "annoyed",
+        "very angry",
+        "to get angry",
+        "wrath",
+        "trouble"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 25,
+      "theme": "joy and sadness",
+      "new": [
+        "joy",
+        "cheerful",
+        "overjoyed",
+        "sadness",
+        "lonely",
+        "boredom",
+        "disappointment"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 26,
+      "theme": "fear and courage",
+      "new": [
+        "fear",
+        "to be afraid of",
+        "courage",
+        "courageous",
+        "brave",
+        "fright",
+        "distress"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 27,
+      "theme": "patience and effort",
+      "new": [
+        "patience",
+        "patient",
+        "impatient",
+        "effort",
+        "to make an effort",
+        "to try hard",
+        "toil"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 28,
+      "theme": "duty and responsibility",
+      "new": [
+        "responsible",
+        "responsibility",
+        "to pledge",
+        "commitment",
+        "to stipulate",
+        "provision",
+        "condition"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 29,
+      "theme": "guilt and blame",
+      "new": [
+        "guilt",
+        "guilty",
+        "accusation",
+        "to insult",
+        "insult",
+        "to swear at",
+        "verbal abuse"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 30,
+      "theme": "apologizing",
+      "new": [
+        "to apologize",
+        "forgiveness",
+        "to explain oneself",
+        "to tolerate",
+        "consideration",
+        "to soothe",
+        "polite"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 31,
+      "theme": "rules and permission",
+      "new": [
+        "to permit",
+        "permitted",
+        "to forbid",
+        "prohibition",
+        "entitled",
+        "legal",
+        "regulation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 32,
+      "theme": "running things",
+      "new": [
+        "to manage",
+        "to direct",
+        "leader",
+        "managing director",
+        "management",
+        "executive board",
+        "chairperson"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 33,
+      "theme": "tasks and orders",
+      "new": [
+        "commission",
+        "to assign",
+        "to take action",
+        "handling",
+        "to handle",
+        "to carry out",
+        "performance-based"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 34,
+      "theme": "planning ahead",
+      "new": [
+        "undertaking",
+        "to prepare",
+        "strategy",
+        "goal",
+        "purpose",
+        "in order to",
+        "if possible"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 35,
+      "theme": "time and deadlines",
+      "new": [
+        "point in time",
+        "period",
+        "lack of time",
+        "within the deadline",
+        "on time",
+        "promptly",
+        "temporal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 36,
+      "theme": "the past and the future",
+      "new": [
+        "past",
+        "future",
+        "century",
+        "decade",
+        "for years",
+        "the other day",
+        "long since"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 37,
+      "theme": "how often, how long",
+      "new": [
+        "several times",
+        "every time",
+        "frequently",
+        "constant",
+        "continuous",
+        "simultaneous",
+        "long-term"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 38,
+      "theme": "in the meantime",
+      "new": [
+        "meanwhile",
+        "in the meantime",
+        "later on",
+        "just now",
+        "coming soon",
+        "sooner",
+        "by now"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 39,
+      "theme": "saying however",
+      "new": [
+        "however",
+        "admittedly",
+        "nevertheless",
+        "despite",
+        "on the one hand",
+        "on the other hand",
+        "in addition"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 40,
+      "theme": "besides and moreover",
+      "new": [
+        "besides",
+        "moreover",
+        "additionally",
+        "exclusively",
+        "including",
+        "in lieu of",
+        "instead"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 41,
+      "theme": "either or, as soon as",
+      "new": [
+        "either ... or",
+        "as soon as",
+        "as long as",
+        "as far as",
+        "as if",
+        "by (conjunction)",
+        "the more"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 42,
+      "theme": "pairs of connectors",
+      "new": [
+        "neither ... nor",
+        "both ... and",
+        "after (conjunction)",
+        "so that (result)",
+        "because of"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 43,
+      "theme": "telling a story",
+      "new": [
+        "history",
+        "narration",
+        "plot",
+        "episode",
+        "to go through",
+        "experience",
+        "scene"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 44,
+      "theme": "knowledge and science",
+      "new": [
+        "knowledge",
+        "science",
+        "scientist",
+        "research",
+        "investigation",
+        "research study",
+        "theoretical"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 45,
+      "theme": "education and learning",
+      "new": [
+        "education",
+        "skill",
+        "qualification",
+        "additional qualification",
+        "talent",
+        "intelligence",
+        "method"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 46,
+      "theme": "professional training",
+      "new": [
+        "professional training",
+        "apprenticeship",
+        "retraining",
+        "intensive course",
+        "seminar",
+        "course leader",
+        "institute"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 47,
+      "theme": "applying for a job",
+      "new": [
+        "job advertisement",
+        "cover letter",
+        "hiring",
+        "to hire",
+        "probation period",
+        "entry date",
+        "candidate"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 48,
+      "theme": "the job itself",
+      "new": [
+        "profession",
+        "position (job)",
+        "job title",
+        "work experience",
+        "professional life",
+        "employment",
+        "occupation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 49,
+      "theme": "what you earn",
+      "new": [
+        "wages",
+        "salary expectation",
+        "earnings",
+        "compensation",
+        "income",
+        "surcharge",
+        "tax"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 50,
+      "theme": "working conditions",
+      "new": [
+        "working hours",
+        "overtime",
+        "working day",
+        "permanent employment",
+        "without notice",
+        "termination",
+        "vacation day"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 51,
+      "theme": "the workforce",
+      "new": [
+        "employer",
+        "employee",
+        "worker",
+        "workforce",
+        "works council",
+        "union",
+        "unemployment"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 52,
+      "theme": "offices and teams",
+      "new": [
+        "office routine",
+        "office assistant",
+        "office space",
+        "office hours",
+        "office supplies",
+        "teamwork",
+        "communication skills"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 53,
+      "theme": "meetings",
+      "new": [
+        "conference",
+        "meeting room",
+        "discussion",
+        "to discuss",
+        "to interview",
+        "to have a say",
+        "moderation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 54,
+      "theme": "documents and paperwork",
+      "new": [
+        "correspondence",
+        "folder",
+        "copy",
+        "copier",
+        "photocopy",
+        "imprint",
+        "edition"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 55,
+      "theme": "forms and certificates",
+      "new": [
+        "to certify",
+        "certification",
+        "to authenticate",
+        "confirmation",
+        "proof of purchase",
+        "receipt",
+        "health certificate"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 56,
+      "theme": "writing to a company",
+      "new": [
+        "to submit",
+        "to send off",
+        "to file away",
+        "registered letter",
+        "envelope",
+        "writing paper",
+        "postage"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 57,
+      "theme": "the post office",
+      "new": [
+        "parcel service",
+        "parcel carrier",
+        "postman",
+        "mail carrier",
+        "cash on delivery",
+        "postage costs",
+        "postage free"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 58,
+      "theme": "phones and messages",
+      "new": [
+        "contact number",
+        "private number",
+        "phone line",
+        "mobile voicemail",
+        "contact details",
+        "to let someone know",
+        "to inform"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 59,
+      "theme": "computers and files",
+      "new": [
+        "monitor",
+        "keyboard",
+        "drive",
+        "installation",
+        "click",
+        "inbox",
+        "digital"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 60,
+      "theme": "the internet and the press",
+      "new": [
+        "network",
+        "net",
+        "press",
+        "newspaper ad",
+        "classified ad",
+        "commercial",
+        "promotion"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 61,
+      "theme": "buying online",
+      "new": [
+        "purchase",
+        "purchase confirmation",
+        "buyer",
+        "order hotline",
+        "shopping cart",
+        "in stock",
+        "discount"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 62,
+      "theme": "delivery",
+      "new": [
+        "delivery",
+        "delivery terms",
+        "shipping",
+        "shipping costs",
+        "free shipping",
+        "flat rate for shipping",
+        "to ship"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 63,
+      "theme": "sending it back",
+      "new": [
+        "product return",
+        "return slip",
+        "return shipment",
+        "to send back",
+        "right of withdrawal",
+        "customer complaint",
+        "to package"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 64,
+      "theme": "customer service",
+      "new": [
+        "customer",
+        "after-sales service",
+        "customer survey",
+        "customer-friendly",
+        "amenity",
+        "service (restaurant)",
+        "to supply"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 65,
+      "theme": "paying",
+      "new": [
+        "payment",
+        "transaction",
+        "direct debit",
+        "cash machine",
+        "billfold",
+        "purse",
+        "voucher"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 66,
+      "theme": "money and debts",
+      "new": [
+        "sum",
+        "aggregate",
+        "debts",
+        "interest rate",
+        "capital",
+        "economical",
+        "complimentary"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 67,
+      "theme": "costs and prices",
+      "new": [
+        "cost",
+        "extra costs",
+        "energy costs",
+        "heating costs",
+        "electricity costs",
+        "overall",
+        "average"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 68,
+      "theme": "the economy",
+      "new": [
+        "economy",
+        "industry",
+        "industrial",
+        "trade",
+        "dealer",
+        "provider",
+        "enterprise"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 69,
+      "theme": "business administration",
+      "new": [
+        "business administration",
+        "accountant",
+        "tax advisor",
+        "tax advisor's office",
+        "clerk",
+        "statistics",
+        "graph"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 70,
+      "theme": "products and production",
+      "new": [
+        "product",
+        "production",
+        "to produce",
+        "manufacturer",
+        "manufacturing",
+        "factory",
+        "goods"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 71,
+      "theme": "quality and standards",
+      "new": [
+        "quality",
+        "standard",
+        "proper",
+        "entire",
+        "complete",
+        "perfect",
+        "fix"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 72,
+      "theme": "contracts",
+      "new": [
+        "contract",
+        "contract number",
+        "end of contract",
+        "rental agreement",
+        "cleaning contract",
+        "non-binding",
+        "formality"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 73,
+      "theme": "law and courts",
+      "new": [
+        "law",
+        "right (entitlement)",
+        "injustice",
+        "judge",
+        "judgment",
+        "lawyer",
+        "to condemn"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 74,
+      "theme": "crime",
+      "new": [
+        "criminal",
+        "theft",
+        "burglary",
+        "burglar",
+        "to break in",
+        "murder",
+        "victim"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 75,
+      "theme": "the police",
+      "new": [
+        "police inspector",
+        "criminal police",
+        "policewoman",
+        "officer",
+        "to place under arrest",
+        "to punish",
+        "to protect"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 76,
+      "theme": "accidents and damage",
+      "new": [
+        "damage",
+        "case of damage",
+        "material damage",
+        "personal injury",
+        "risk of accident",
+        "to harm",
+        "to impair"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 77,
+      "theme": "insurance",
+      "new": [
+        "insurance advisor",
+        "insurance coverage",
+        "supplementary insurance",
+        "liability",
+        "liability insurance",
+        "guarantee",
+        "to guarantee"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 78,
+      "theme": "car insurance",
+      "new": [
+        "car insurance",
+        "comprehensive insurance",
+        "partial coverage",
+        "partial coverage insurance",
+        "full coverage",
+        "full coverage insurance",
+        "to insure"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 79,
+      "theme": "cars",
+      "new": [
+        "car brand",
+        "car part",
+        "used car",
+        "new car",
+        "electric car",
+        "sports car",
+        "veteran"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 80,
+      "theme": "under the hood",
+      "new": [
+        "hood",
+        "trunk",
+        "bumper",
+        "tail light",
+        "rear window",
+        "windshield",
+        "side mirror"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 81,
+      "theme": "driving",
+      "new": [
+        "motorist",
+        "driving permit",
+        "to brake",
+        "to steer",
+        "to shift",
+        "turn signal",
+        "headlight"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 82,
+      "theme": "parking",
+      "new": [
+        "to parallel park",
+        "parking gap",
+        "to exit a parking space",
+        "storage spot",
+        "lane",
+        "off-ramp",
+        "roadside"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 83,
+      "theme": "the road",
+      "new": [
+        "road traffic",
+        "one-way street",
+        "pedestrian",
+        "pedestrian zone",
+        "sidewalk",
+        "curve",
+        "distance"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 84,
+      "theme": "lorries and bikes",
+      "new": [
+        "lorry",
+        "freight container",
+        "transport",
+        "to transport",
+        "bike",
+        "cyclist",
+        "female cyclist"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 85,
+      "theme": "travelling by air",
+      "new": [
+        "airline",
+        "air passenger",
+        "flight attendant",
+        "boarding pass",
+        "boarding time",
+        "gate",
+        "passport control"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 86,
+      "theme": "luggage",
+      "new": [
+        "hand luggage",
+        "baggage claim",
+        "luggage carousel",
+        "lost and found office",
+        "cabin",
+        "wing",
+        "pilot strike"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 87,
+      "theme": "crossing borders",
+      "new": [
+        "border",
+        "visa",
+        "customs declaration",
+        "customs check",
+        "embassy",
+        "consulate",
+        "asylum"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 88,
+      "theme": "holidays",
+      "new": [
+        "travel plan",
+        "travel planning",
+        "overnight stay",
+        "bed and breakfast",
+        "hostel",
+        "campsite",
+        "camper"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 89,
+      "theme": "camping and hiking",
+      "new": [
+        "tent",
+        "campfire",
+        "camp",
+        "hiker",
+        "hike",
+        "hiking tour",
+        "flashlight"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 90,
+      "theme": "the mountains",
+      "new": [
+        "mountains",
+        "summit",
+        "hill",
+        "hut",
+        "forest",
+        "forester",
+        "lawn"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 91,
+      "theme": "the sea",
+      "new": [
+        "ocean",
+        "sea view",
+        "ferry",
+        "port",
+        "boat",
+        "wave",
+        "sunset"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 92,
+      "theme": "sun and warmth",
+      "new": [
+        "sunshine",
+        "sun umbrella",
+        "sun terrace",
+        "warmth",
+        "heat",
+        "to heat",
+        "indoor pool"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 93,
+      "theme": "bad weather",
+      "new": [
+        "fog",
+        "hail",
+        "lightning",
+        "to flash",
+        "thunder",
+        "to thunder",
+        "severe weather"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 94,
+      "theme": "natural disasters",
+      "new": [
+        "natural disaster",
+        "earthquake",
+        "flood",
+        "high water",
+        "hurricane",
+        "tsunami",
+        "catastrophe"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 95,
+      "theme": "climate",
+      "new": [
+        "climate",
+        "climate change",
+        "global warming",
+        "earth",
+        "planet",
+        "universe",
+        "nature"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 96,
+      "theme": "the environment",
+      "new": [
+        "environment",
+        "environmentally friendly",
+        "environmental protection",
+        "environmental pollution",
+        "to pollute",
+        "pollution",
+        "pollutant"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 97,
+      "theme": "waste",
+      "new": [
+        "waste",
+        "trash can",
+        "garbage can",
+        "waste separation",
+        "paper waste",
+        "waste paper",
+        "bulky waste"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 98,
+      "theme": "recycling",
+      "new": [
+        "to recycle",
+        "recyclable material",
+        "collection point",
+        "hazardous waste",
+        "used oil",
+        "cardboard",
+        "carton"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 99,
+      "theme": "energy",
+      "new": [
+        "energy",
+        "solar energy",
+        "electricity",
+        "electricity supplier",
+        "power plant",
+        "energy-saving lamp",
+        "energy-efficient house"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 100,
+      "theme": "wasting things",
+      "new": [
+        "to waste",
+        "wastefulness",
+        "waste of energy",
+        "waste of time",
+        "to use up",
+        "usage",
+        "supply"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 101,
+      "theme": "water",
+      "new": [
+        "drinking water",
+        "wastewater",
+        "faucet",
+        "liquid",
+        "waterproof",
+        "air permeable",
+        "permeable"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 102,
+      "theme": "air and gases",
+      "new": [
+        "air",
+        "to ventilate",
+        "exhaust",
+        "exhaust gases",
+        "chemical",
+        "metal",
+        "synthetic material"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 103,
+      "theme": "renting a flat",
+      "new": [
+        "rent increase",
+        "rent index",
+        "living space",
+        "housing complex",
+        "decor",
+        "furnishings",
+        "resident"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 104,
+      "theme": "around the house",
+      "new": [
+        "roof",
+        "lid",
+        "brick wall",
+        "balcony railing",
+        "corridor",
+        "passageway",
+        "tier"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 105,
+      "theme": "furniture and things",
+      "new": [
+        "couch",
+        "mattress",
+        "double bed",
+        "fauteuil",
+        "box",
+        "sack",
+        "pouch"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 106,
+      "theme": "cleaning",
+      "new": [
+        "cleanliness",
+        "cleaning company",
+        "to cleanse",
+        "to clean up",
+        "to toss out",
+        "to put out",
+        "grime"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 107,
+      "theme": "dirt and tidiness",
+      "new": [
+        "dirt",
+        "tidy",
+        "to sort",
+        "scratch",
+        "hole",
+        "loose",
+        "crooked"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 108,
+      "theme": "tools",
+      "new": [
+        "tool",
+        "hammer",
+        "to hammer",
+        "needle",
+        "nail",
+        "to drill",
+        "to glue"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 109,
+      "theme": "repairs at home",
+      "new": [
+        "to paint a wall",
+        "to screw shut",
+        "to turn up",
+        "to cut off",
+        "to switch on",
+        "to switch off",
+        "to stick fast"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 110,
+      "theme": "washing and the bathroom",
+      "new": [
+        "laundry room",
+        "washcloth",
+        "toothbrush",
+        "toothpaste",
+        "comb",
+        "brush",
+        "diaper"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 111,
+      "theme": "hair and looks",
+      "new": [
+        "hairstyle",
+        "hairstylist (male)",
+        "hairstylist (female)",
+        "hairdryer",
+        "to shave",
+        "to put on makeup",
+        "garment"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 112,
+      "theme": "clothes and shopping",
+      "new": [
+        "denim",
+        "leather",
+        "costume",
+        "fitting",
+        "to try on",
+        "leisure shopping",
+        "salon"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 113,
+      "theme": "food shopping",
+      "new": [
+        "greengrocer",
+        "snack bar",
+        "bookstore",
+        "buffet",
+        "catering",
+        "pastry",
+        "preserves"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 114,
+      "theme": "cooking",
+      "new": [
+        "cookbook",
+        "dough",
+        "to mix",
+        "to blend",
+        "cooked",
+        "meal",
+        "set meal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 115,
+      "theme": "ingredients",
+      "new": [
+        "spice",
+        "pepper",
+        "vinegar",
+        "fat",
+        "protein",
+        "grain",
+        "durum wheat"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 116,
+      "theme": "fruit and vegetables",
+      "new": [
+        "fruit (botanical)",
+        "fruits",
+        "apricot",
+        "plum",
+        "hazelnut",
+        "nut",
+        "legume"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 117,
+      "theme": "meat and dairy",
+      "new": [
+        "minced meat",
+        "ground meat",
+        "sausage",
+        "meatless",
+        "milk carton",
+        "lactose",
+        "lactose-free"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 118,
+      "theme": "organic food",
+      "new": [
+        "organic product",
+        "natural product",
+        "biological",
+        "plant-based",
+        "vegan",
+        "gluten-free",
+        "additive"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 119,
+      "theme": "how food tastes",
+      "new": [
+        "taste",
+        "salty",
+        "lean",
+        "culinary",
+        "ready meal",
+        "frozen pizza",
+        "eating"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 120,
+      "theme": "food and health",
+      "new": [
+        "nutrition",
+        "to nourish",
+        "nutrient",
+        "foodstuff",
+        "unhealthy",
+        "diet",
+        "to nibble"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 121,
+      "theme": "eating out",
+      "new": [
+        "fare",
+        "dining hall",
+        "headwaiter",
+        "tavern",
+        "guesthouse",
+        "beer garden",
+        "discotheque"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 122,
+      "theme": "austrian and swiss words",
+      "new": [
+        "chicken (austrian)",
+        "chicken (swiss)",
+        "afternoon snack",
+        "bap",
+        "carrot (swiss)",
+        "ice cream (swiss)",
+        "cream (austrian)"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 123,
+      "theme": "more regional words",
+      "new": [
+        "cream (swiss)",
+        "quark",
+        "döner kebab",
+        "coffee filter",
+        "biro",
+        "lad",
+        "perron"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 124,
+      "theme": "the body",
+      "new": [
+        "body",
+        "physical",
+        "figure (body)",
+        "lip",
+        "blood",
+        "to bleed",
+        "wound"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 125,
+      "theme": "breathing and sleeping",
+      "new": [
+        "breath",
+        "breathing",
+        "breathable",
+        "sleep",
+        "to suffer",
+        "painful",
+        "deep"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 126,
+      "theme": "illness and allergies",
+      "new": [
+        "allergy",
+        "allergic",
+        "infection",
+        "contagious",
+        "diabetic",
+        "pregnancy",
+        "medical science"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 127,
+      "theme": "at the doctor",
+      "new": [
+        "clinical",
+        "treatment",
+        "to treat (a person)",
+        "operation",
+        "to operate on",
+        "pain medication",
+        "invalid"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 128,
+      "theme": "hospital and care",
+      "new": [
+        "male nurse",
+        "caregiver",
+        "care worker",
+        "care assistant",
+        "patient transport",
+        "emergency room",
+        "crib"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 129,
+      "theme": "emergencies",
+      "new": [
+        "emergency",
+        "emergency call",
+        "emergency service",
+        "emergency exit",
+        "emergency shelter",
+        "fire brigade",
+        "to rescue"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 130,
+      "theme": "danger and safety",
+      "new": [
+        "danger",
+        "poison",
+        "poisonous",
+        "safe",
+        "to secure",
+        "visible",
+        "hygienic"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 131,
+      "theme": "old age",
+      "new": [
+        "retirement home",
+        "old people's home",
+        "senior residence",
+        "seniors",
+        "elderly care worker",
+        "retired",
+        "retiree"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 132,
+      "theme": "life and death",
+      "new": [
+        "death",
+        "deadly",
+        "the deceased",
+        "human",
+        "generation",
+        "childhood",
+        "youth"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 133,
+      "theme": "family and friends",
+      "new": [
+        "marriage",
+        "relationship",
+        "circle of friends",
+        "friendship",
+        "companion",
+        "aunt",
+        "cousin"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 134,
+      "theme": "love and separation",
+      "new": [
+        "love",
+        "liking",
+        "favorite activity",
+        "to long for",
+        "to split up",
+        "separation",
+        "to worry"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 135,
+      "theme": "people and character",
+      "new": [
+        "character",
+        "kind",
+        "type",
+        "manner",
+        "peculiar",
+        "odd",
+        "wise"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 136,
+      "theme": "good and bad habits",
+      "new": [
+        "habit",
+        "to get used to",
+        "used to",
+        "to get into the habit of",
+        "typically",
+        "daily routine",
+        "daily"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 137,
+      "theme": "how people behave",
+      "new": [
+        "behavior",
+        "to behave",
+        "to grumble",
+        "thoughtful",
+        "attentive",
+        "curious",
+        "pleasant"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 138,
+      "theme": "moods",
+      "new": [
+        "mood",
+        "emotion",
+        "emotional",
+        "excited",
+        "exhausted",
+        "relaxing",
+        "satisfied"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 139,
+      "theme": "optimism",
+      "new": [
+        "optimism",
+        "optimistic",
+        "hope",
+        "realistic",
+        "reality",
+        "frustration",
+        "frustrated"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 140,
+      "theme": "self and confidence",
+      "new": [
+        "to imagine",
+        "to develop oneself",
+        "self-employed person",
+        "autonomous",
+        "personalized",
+        "motivated",
+        "hardworking"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 141,
+      "theme": "society",
+      "new": [
+        "society",
+        "community",
+        "commonality",
+        "coexistence",
+        "population",
+        "populace",
+        "public"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 142,
+      "theme": "politics",
+      "new": [
+        "politics",
+        "politician",
+        "political",
+        "government",
+        "democracy",
+        "democratic",
+        "republic"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 143,
+      "theme": "the state",
+      "new": [
+        "state",
+        "state foundation",
+        "nation",
+        "official",
+        "governmental",
+        "official language",
+        "institution"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 144,
+      "theme": "power and protest",
+      "new": [
+        "power",
+        "violence",
+        "demonstration",
+        "protest",
+        "to protest",
+        "conflict",
+        "opponent"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 145,
+      "theme": "war and peace",
+      "new": [
+        "war",
+        "end of the war",
+        "civil war",
+        "peace",
+        "nonviolent",
+        "corps",
+        "fortress"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 146,
+      "theme": "germany divided",
+      "new": [
+        "frg",
+        "gdr",
+        "construction of the wall",
+        "fall of the wall",
+        "occupation zone",
+        "postwar era",
+        "reunification"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 147,
+      "theme": "after reunification",
+      "new": [
+        "to reunify",
+        "monument",
+        "chancellor",
+        "federal republic",
+        "russian germans",
+        "migration",
+        "migrant"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 148,
+      "theme": "moving countries",
+      "new": [
+        "immigration",
+        "emigration",
+        "emigrant",
+        "escape",
+        "refugee",
+        "origin",
+        "country of origin"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 149,
+      "theme": "languages",
+      "new": [
+        "foreign language",
+        "mother tongue",
+        "language certificate",
+        "dialect",
+        "accent",
+        "pronunciation",
+        "intonation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 150,
+      "theme": "words and writing",
+      "new": [
+        "handwriting",
+        "writer",
+        "female writer",
+        "literature",
+        "lexicon",
+        "suffix",
+        "line of text"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 151,
+      "theme": "translating",
+      "new": [
+        "translator",
+        "female translator",
+        "translation agency",
+        "oral",
+        "ceremonious",
+        "fluent",
+        "formulation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 152,
+      "theme": "the media",
+      "new": [
+        "transmitter",
+        "listener",
+        "viewer",
+        "bulletin",
+        "news",
+        "newspaper report",
+        "reportage"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 153,
+      "theme": "film and television",
+      "new": [
+        "documentary",
+        "documentation",
+        "feature film",
+        "animated film",
+        "horror film",
+        "soap opera",
+        "quiz show"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 154,
+      "theme": "series and stories",
+      "new": [
+        "series",
+        "detective story",
+        "comedy",
+        "fantasy",
+        "dramatic",
+        "entertainment",
+        "trend"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 155,
+      "theme": "theatre and stage",
+      "new": [
+        "to perform",
+        "staging",
+        "stage",
+        "stage performance",
+        "actress",
+        "gallery",
+        "ballet"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 156,
+      "theme": "art and music",
+      "new": [
+        "artist",
+        "musician",
+        "musical",
+        "flute",
+        "drawing",
+        "photography",
+        "depiction"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 157,
+      "theme": "reviews",
+      "new": [
+        "criticism",
+        "critic",
+        "critical",
+        "to criticize",
+        "to praise",
+        "to judge",
+        "commentator"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 158,
+      "theme": "records and stars",
+      "new": [
+        "record",
+        "ranking list",
+        "star",
+        "champion",
+        "hero",
+        "miss",
+        "king"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 159,
+      "theme": "kings and history",
+      "new": [
+        "monarch",
+        "jew",
+        "allied",
+        "historical",
+        "civilization",
+        "tradition",
+        "rich in tradition"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 160,
+      "theme": "sport",
+      "new": [
+        "professional athlete",
+        "football club",
+        "handball",
+        "ice hockey",
+        "figure skating",
+        "track and field",
+        "skiing"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 161,
+      "theme": "at the match",
+      "new": [
+        "stadium",
+        "referee",
+        "goalkeeper",
+        "midfield",
+        "lap",
+        "singles",
+        "draw"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 162,
+      "theme": "winning and losing",
+      "new": [
+        "to be victorious",
+        "winner",
+        "female winner",
+        "defeat",
+        "loser",
+        "rivalry",
+        "world cup"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 163,
+      "theme": "games and hobbies",
+      "new": [
+        "player",
+        "participant",
+        "picnic",
+        "boxing",
+        "golf",
+        "inline skating",
+        "bicycle race"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 164,
+      "theme": "things you play with",
+      "new": [
+        "pool",
+        "racket",
+        "disc",
+        "leash",
+        "doll",
+        "matchstick",
+        "pocket knife"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 165,
+      "theme": "animals and plants",
+      "new": [
+        "guinea pig",
+        "animal protection",
+        "animalistic",
+        "factory farming",
+        "to plant",
+        "flower pot",
+        "grass"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 166,
+      "theme": "the land",
+      "new": [
+        "field",
+        "stone",
+        "wood",
+        "harvest",
+        "farmer",
+        "cultivation",
+        "region"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 167,
+      "theme": "town and country",
+      "new": [
+        "metropolis",
+        "vicinity",
+        "surroundings",
+        "location",
+        "circle",
+        "edge",
+        "surface area"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 168,
+      "theme": "buildings",
+      "new": [
+        "palace",
+        "tower",
+        "gateway",
+        "laboratory",
+        "facility",
+        "construction",
+        "construction site"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 169,
+      "theme": "seeing the sights",
+      "new": [
+        "lighthouse",
+        "sightseeing drive",
+        "overview",
+        "paradise",
+        "adventure",
+        "season (activity)",
+        "carnival"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 170,
+      "theme": "festivals",
+      "new": [
+        "fasnacht",
+        "felicitations",
+        "grand opening",
+        "opening",
+        "occasion",
+        "this time",
+        "reception"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 171,
+      "theme": "size and shape",
+      "new": [
+        "height",
+        "depth",
+        "length",
+        "half (noun)",
+        "double",
+        "pointed",
+        "dense"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 172,
+      "theme": "up and down",
+      "new": [
+        "upwards",
+        "downwards",
+        "backwards",
+        "vertical",
+        "upper",
+        "inner",
+        "on the inside"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 173,
+      "theme": "here and there",
+      "new": [
+        "to there",
+        "to that place",
+        "over here",
+        "in there",
+        "apart",
+        "across",
+        "within"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 174,
+      "theme": "measuring",
+      "new": [
+        "measurement",
+        "kilometer",
+        "speed",
+        "pace",
+        "ratio",
+        "on average",
+        "minimal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 175,
+      "theme": "numbers and amounts",
+      "new": [
+        "million",
+        "millionaire",
+        "a few",
+        "numerous",
+        "each and every",
+        "quite",
+        "at most"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 176,
+      "theme": "how much of it",
+      "new": [
+        "merely",
+        "nearly",
+        "completely",
+        "slight",
+        "huge",
+        "massive",
+        "low"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 177,
+      "theme": "people at work",
+      "new": [
+        "department head",
+        "janitor",
+        "manager",
+        "assistant",
+        "intern",
+        "female intern",
+        "social worker"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 178,
+      "theme": "more jobs",
+      "new": [
+        "architect",
+        "astronaut",
+        "author",
+        "director",
+        "professor",
+        "welder",
+        "craftsman"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 179,
+      "theme": "crafts and trades",
+      "new": [
+        "tradesperson",
+        "specialist",
+        "mechanical engineering",
+        "technique",
+        "technical",
+        "system",
+        "component"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 180,
+      "theme": "getting things moving",
+      "new": [
+        "main reason",
+        "impetus",
+        "appeal",
+        "demand",
+        "to call upon",
+        "to coordinate",
+        "to settle on"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 181,
+      "theme": "processing an order",
+      "new": [
+        "processing",
+        "review",
+        "article number",
+        "job number",
+        "catalog",
+        "selection",
+        "exception"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 182,
+      "theme": "instructions",
+      "new": [
+        "manual",
+        "user manual",
+        "directions for use",
+        "content",
+        "detail view",
+        "particular",
+        "pointer"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 183,
+      "theme": "conflict",
+      "new": [
+        "to be against",
+        "to defeat",
+        "to fight",
+        "struggle",
+        "to strike",
+        "to interrupt",
+        "to displace"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 184,
+      "theme": "working together",
+      "new": [
+        "to unite",
+        "to collaborate",
+        "collaboration",
+        "to deal with",
+        "with each other",
+        "to meet halfway",
+        "compatible"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 185,
+      "theme": "saying it out loud",
+      "new": [
+        "to announce",
+        "to disclose",
+        "to display",
+        "remark",
+        "emphasis",
+        "to publish",
+        "to record"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 186,
+      "theme": "checking and testing",
+      "new": [
+        "to test",
+        "to look up",
+        "to check on",
+        "to watch closely",
+        "to observe",
+        "to analyze",
+        "analyst"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 187,
+      "theme": "finding out",
+      "new": [
+        "to uncover",
+        "to make inquiries",
+        "to become aware",
+        "to master",
+        "to think along",
+        "to experience together",
+        "logic"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 188,
+      "theme": "greeting and thanking",
+      "new": [
+        "to greet someone",
+        "to express thanks",
+        "grateful",
+        "to escort",
+        "to encounter",
+        "to meet again",
+        "you too"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 189,
+      "theme": "making things",
+      "new": [
+        "to found",
+        "founder",
+        "to set up",
+        "to draw up",
+        "creation",
+        "to decorate",
+        "to dissolve"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 190,
+      "theme": "changing things",
+      "new": [
+        "to adjust",
+        "to align",
+        "to remove",
+        "to divide",
+        "division",
+        "to enlarge",
+        "to bring down"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 191,
+      "theme": "attaching things",
+      "new": [
+        "to attach",
+        "to enclose",
+        "to paste",
+        "to put in",
+        "to cover",
+        "container",
+        "to drop off"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 192,
+      "theme": "movement",
+      "new": [
+        "to rush",
+        "to draw near",
+        "to climb",
+        "to slide",
+        "to fall over",
+        "to turn around",
+        "to run over"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 193,
+      "theme": "more movement",
+      "new": [
+        "to pull away",
+        "to come up",
+        "to come from",
+        "to wake up",
+        "to land",
+        "to flow",
+        "to freeze"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 194,
+      "theme": "breaking things",
+      "new": [
+        "to crash",
+        "to smash",
+        "to demolish",
+        "destruction",
+        "to burn oneself",
+        "to bite",
+        "to shake"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 195,
+      "theme": "small actions",
+      "new": [
+        "to take hold of",
+        "to grab",
+        "to tilt",
+        "to swing",
+        "to throw down",
+        "to drip",
+        "to squeak"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 196,
+      "theme": "everyday verbs",
+      "new": [
+        "to wash up",
+        "to dye",
+        "colored",
+        "to cuddle",
+        "to laze around",
+        "to zap",
+        "to conjure"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 197,
+      "theme": "hiring and firing",
+      "new": [
+        "to employ",
+        "to dismiss",
+        "dismissal",
+        "to appoint",
+        "to occupy (a place)",
+        "to limit",
+        "limited"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 198,
+      "theme": "rules and violations",
+      "new": [
+        "to violate",
+        "violation",
+        "to revoke",
+        "to regulate",
+        "to prevent",
+        "to exclude",
+        "illegal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 199,
+      "theme": "money verbs",
+      "new": [
+        "to finance",
+        "financing",
+        "financial",
+        "loss",
+        "sale",
+        "to get hold of",
+        "to make use of"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 200,
+      "theme": "using things up",
+      "new": [
+        "to utilize",
+        "consumption",
+        "to consume",
+        "consumer",
+        "currency exchange",
+        "due",
+        "obtainable"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 201,
+      "theme": "what is coming",
+      "new": [
+        "expected",
+        "prediction",
+        "to forecast",
+        "to carry on",
+        "to be enough",
+        "brisk",
+        "permanent"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 202,
+      "theme": "abbreviations",
+      "new": [
+        "dz",
+        "eu",
+        "ez",
+        "hp",
+        "suv",
+        "dvd",
+        "pc",
+        "nato"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 203,
+      "theme": "warnings and claims",
+      "new": [
+        "alarm",
+        "hint",
+        "claim",
+        "display board",
+        "contradiction",
+        "misunderstanding",
+        "explanation"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 204,
+      "theme": "subscriptions",
+      "new": [
+        "subscription",
+        "to subscribe",
+        "cancellation",
+        "canceled",
+        "terms and conditions",
+        "section",
+        "intention"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 205,
+      "theme": "pages and paperwork",
+      "new": [
+        "illustration",
+        "extract",
+        "preamble",
+        "main clause",
+        "cover page",
+        "to transcribe",
+        "borrowing"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 206,
+      "theme": "shops and goods",
+      "new": [
+        "shopping",
+        "drugstore",
+        "magazine",
+        "chips",
+        "muesli",
+        "dessert course",
+        "tin can"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 207,
+      "theme": "packaging",
+      "new": [
+        "egg carton",
+        "eggshell",
+        "fruit peel",
+        "plastic",
+        "aluminum",
+        "battery",
+        "gasoline"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 208,
+      "theme": "back to the car",
+      "new": [
+        "license plate",
+        "driver's side",
+        "tank",
+        "gas station",
+        "to refuel",
+        "motorcyclist",
+        "car race"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 209,
+      "theme": "on the move again",
+      "new": [
+        "traveler",
+        "landing",
+        "business trip",
+        "caravan",
+        "cloakroom",
+        "waiting hall",
+        "lift"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 210,
+      "theme": "getting on board",
+      "new": [
+        "to check in",
+        "to buckle up",
+        "queue",
+        "air conditioning",
+        "speaker",
+        "transmission",
+        "admittance"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 211,
+      "theme": "house rules",
+      "new": [
+        "quiet time",
+        "room volume",
+        "common room",
+        "care home",
+        "property",
+        "maintenance",
+        "modernization"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 212,
+      "theme": "papers and data",
+      "new": [
+        "data",
+        "data protection",
+        "personal data",
+        "civil status",
+        "certificate of conduct",
+        "organization",
+        "member"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 213,
+      "theme": "money in and out",
+      "new": [
+        "deposit",
+        "intake",
+        "receiving",
+        "need",
+        "market demand",
+        "export",
+        "import"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 214,
+      "theme": "company words",
+      "new": [
+        "finance",
+        "personnel",
+        "committee",
+        "posting",
+        "representative",
+        "representation",
+        "chief"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 215,
+      "theme": "abstract nouns",
+      "new": [
+        "object",
+        "item",
+        "fact",
+        "point",
+        "core",
+        "sphere",
+        "status"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 216,
+      "theme": "more abstract nouns",
+      "new": [
+        "variety",
+        "lack",
+        "collection",
+        "formula",
+        "coefficient",
+        "organism",
+        "stream"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 217,
+      "theme": "mind and memory",
+      "new": [
+        "recall",
+        "understanding",
+        "impression",
+        "brainwave",
+        "inspiration",
+        "humor",
+        "mentality"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 218,
+      "theme": "feelings again",
+      "new": [
+        "excitement",
+        "relief",
+        "worry",
+        "homesickness",
+        "nerve",
+        "pressure",
+        "burden"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 219,
+      "theme": "starting and returning",
+      "new": [
+        "start",
+        "return",
+        "phase",
+        "occurrence",
+        "instant",
+        "alteration",
+        "replacement"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 220,
+      "theme": "work and art again",
+      "new": [
+        "opus",
+        "style",
+        "pursuit",
+        "realization",
+        "reinforcement",
+        "partition",
+        "forwarding"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 221,
+      "theme": "people and roles",
+      "new": [
+        "german (person)",
+        "european",
+        "expert",
+        "agent",
+        "bachelor",
+        "volunteer",
+        "guest worker"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 222,
+      "theme": "more people",
+      "new": [
+        "smoker",
+        "female smoker",
+        "non-smoker",
+        "eater",
+        "pro",
+        "offspring",
+        "seat"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 223,
+      "theme": "health and habits",
+      "new": [
+        "drug",
+        "contraceptive pill",
+        "alcohol",
+        "telecommunications",
+        "alphabet",
+        "cross",
+        "crisis"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 224,
+      "theme": "bringing something in",
+      "new": [
+        "introduction",
+        "introduction of the euro",
+        "to introduce (a system)",
+        "recognition",
+        "to acquire",
+        "to count toward",
+        "post"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 225,
+      "theme": "things around you",
+      "new": [
+        "hat",
+        "smell",
+        "noise",
+        "shadow",
+        "harmony",
+        "deed",
+        "to rot"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 226,
+      "theme": "verbs of showing",
+      "new": [
+        "to look at",
+        "to exhibit",
+        "to portray",
+        "to function as",
+        "to raise",
+        "to hand off",
+        "to astonish"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 227,
+      "theme": "verbs of feeling",
+      "new": [
+        "to inspire",
+        "inspired",
+        "to disappoint",
+        "to detest",
+        "to wonder",
+        "to feel good",
+        "to have fun"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 228,
+      "theme": "verbs of caring",
+      "new": [
+        "to feed",
+        "to raise a child",
+        "upbringing",
+        "to burden",
+        "to ease",
+        "to warrant",
+        "to be useful"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 229,
+      "theme": "verbs of study",
+      "new": [
+        "to graduate",
+        "to enroll",
+        "to pay attention",
+        "to specialize",
+        "to test out",
+        "to count up",
+        "to vote"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 230,
+      "theme": "verbs of trouble",
+      "new": [
+        "to damage",
+        "damaged",
+        "to escalate",
+        "to collide",
+        "to err",
+        "to chase",
+        "to lock up"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 231,
+      "theme": "verbs of arranging",
+      "new": [
+        "to make an appointment",
+        "appointment calendar",
+        "to extend",
+        "to power down",
+        "to honk",
+        "to be located",
+        "to resign"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 232,
+      "theme": "manners",
+      "new": [
+        "to use the informal you",
+        "secretly",
+        "embarrassing",
+        "dumb",
+        "tolerant",
+        "communicative",
+        "lively"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 233,
+      "theme": "describing people",
+      "new": [
+        "disabled",
+        "blind",
+        "drunk",
+        "conscious",
+        "present",
+        "absent",
+        "trained"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 234,
+      "theme": "more descriptions",
+      "new": [
+        "popular",
+        "honored",
+        "suitable",
+        "balanced",
+        "varied",
+        "exhausting",
+        "questionable"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 235,
+      "theme": "states and conditions",
+      "new": [
+        "freed",
+        "connected",
+        "suspicious",
+        "dependent",
+        "unilateral",
+        "unambiguous",
+        "durable"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 236,
+      "theme": "quality words",
+      "new": [
+        "ideal",
+        "genuine",
+        "original",
+        "artificial",
+        "pure",
+        "moist",
+        "weatherproof"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 237,
+      "theme": "more quality words",
+      "new": [
+        "extreme",
+        "intensive",
+        "exotic",
+        "wild",
+        "gloomy",
+        "dreamlike",
+        "plush"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 238,
+      "theme": "opinions about things",
+      "new": [
+        "reasonable",
+        "moral",
+        "earnest",
+        "fair",
+        "negative",
+        "passive",
+        "unnecessary"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 239,
+      "theme": "how things seem",
+      "new": [
+        "apparently",
+        "so-called",
+        "of course",
+        "incredible",
+        "relatively",
+        "absolute",
+        "eternal"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 240,
+      "theme": "saying when",
+      "new": [
+        "initially",
+        "recently",
+        "today's",
+        "ever since",
+        "ever",
+        "up next",
+        "in the middle"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 241,
+      "theme": "saying how",
+      "new": [
+        "simply",
+        "incidentally",
+        "fundamentally",
+        "inclusive",
+        "insofar",
+        "for this reason",
+        "alternate"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 242,
+      "theme": "everyday adverbs",
+      "new": [
+        "up",
+        "out",
+        "homeward",
+        "mixed up",
+        "such",
+        "everyday",
+        "small and medium-sized"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 243,
+      "theme": "the last of them",
+      "new": [
+        "internal",
+        "external",
+        "english-speaking",
+        "former",
+        "trendy",
+        "to bloom",
+        "to be worth it",
+        "enjoyment",
+        "work method",
+        "reaction"
+      ],
+      "sentences": []
+    },
+    {
+      "id": 244,
+      "theme": "odds and ends",
+      "new": [
+        "shot",
+        "range",
+        "cigarette butt",
+        "lodgings",
+        "stuff",
+        "repetition",
+        "negotiation",
+        "availability"
+      ],
+      "sentences": []
+    }
+  ]
+}

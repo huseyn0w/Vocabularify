@@ -182,7 +182,26 @@ const REPAIR = {
   "Show": { ru: "отображать" },             // anzeigen displays, «сообщать» is nachricht territory
   "special": { de: "speziell" },            // besonders is the adverb on the row below it
   "denim": { de: "die Jeans" },             // the noun, with its article and capital
+  "terms and conditions": { ru: "общие условия" }, // «УСЛОВИЯ» is not an acronym
+  "Ever": { ru: "когда-либо" },             // je is "ever", «никогда» is never
+  // A French-only placeholder that the genitive-preposition topic needs in
+  // German. Filling it beats adding a second row under a padded key.
+  "because of": { de: "wegen", ru: "из-за", es: "a causa de", it: "a causa di", tr: "yüzünden" },
 };
+
+// Function words no level of the bank carries, and without which four of the
+// eighteen B1 grammar topics have no vehicle: a Plusquamperfekt sentence
+// needs nachdem, and the paired-connector topic is the connectors.
+const ADD = [
+  { en: "after (conjunction)", de: "nachdem", fr: "après que", es: "después de que",
+    it: "dopo che", tr: "-dikten sonra", ru: "после того как" },
+  { en: "so that (result)", de: "sodass", fr: "de sorte que", es: "de modo que",
+    it: "così che", tr: "öyle ki", ru: "так что" },
+  { en: "neither ... nor", de: "weder ... noch", fr: "ni ... ni", es: "ni ... ni",
+    it: "né ... né", tr: "ne ... ne", ru: "ни ... ни" },
+  { en: "both ... and", de: "sowohl ... als auch", fr: "aussi bien ... que",
+    es: "tanto ... como", it: "sia ... sia", tr: "hem ... hem de", ru: "как ... так и" },
+];
 
 // A French-only placeholder row and a German row for the same concept, both
 // already at B1. Filling the placeholder and dropping the German row merges
@@ -208,6 +227,9 @@ const rows = banks.b1;
 const byKey = new Map(rows.map((r) => [r.en, r]));
 
 const problems = [];
+for (const row of ADD) {
+  if (byKey.has(row.en)) problems.push(`"${row.en}" is already in the B1 bank`);
+}
 for (const key of [...DROP, ...Object.keys(REKEY), ...Object.keys(REPAIR), ...Object.values(MERGE)]) {
   if (!byKey.has(key)) problems.push(`no B1 row keyed "${key}"`);
 }
@@ -242,7 +264,7 @@ if (exactDupes.length !== EXPECTED_EXACT_DUPES) {
 const dropKeys = new Set([...DROP, ...Object.values(MERGE), ...exactDupes.map((r) => r.en)]);
 
 const out = [];
-const counts = { dropped: 0, merged: 0, rekeyed: 0, repaired: 0, lowercased: 0 };
+const counts = { dropped: 0, merged: 0, rekeyed: 0, repaired: 0, lowercased: 0, lowercasedRu: 0 };
 for (const row of rows) {
   const original = row.en;
   if (dropKeys.has(original) && !Object.keys(REKEY).includes(original)) {
@@ -266,11 +288,22 @@ for (const row of rows) {
     counts.rekeyed += 1;
   } else if (next.en[0] && next.en[0] !== next.en[0].toLowerCase() && !KEEP_CAPITALISED.has(next.en)) {
     next.en = lower(next.en);
-    next.ru = lower(next.ru);
     counts.lowercased += 1;
+  }
+  // The Russian carries the same stray capital, and on 259 rows it carries it
+  // without the English key doing so. An all-capital gloss is an acronym.
+  if (
+    next.ru &&
+    next.ru[0] !== next.ru[0].toLowerCase() &&
+    next.ru !== next.ru.toUpperCase() &&
+    !KEEP_CAPITALISED.has(original)
+  ) {
+    next.ru = lower(next.ru);
+    counts.lowercasedRu += 1;
   }
   out.push(next);
 }
+out.push(...ADD);
 
 // Nothing may collide with a concept an earlier level owns, or the row
 // disappears from every pair file without a word of warning.
@@ -301,7 +334,8 @@ console.log(
   `  merged    ${counts.merged}\n` +
   `  rekeyed   ${counts.rekeyed}\n` +
   `  repaired  ${counts.repaired}\n` +
-  `  lowercased ${counts.lowercased}`
+  `  lowercased ${counts.lowercased} English keys, ${counts.lowercasedRu} Russian glosses\n` +
+  `  added     ${ADD.length}`
 );
 const usable = out.filter((r) => r.de && r.ru).length;
 console.log(`  usable (German and Russian both filled): ${usable}`);
