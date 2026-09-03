@@ -65,6 +65,17 @@ const REPAIR = {
   "to compensate": { de: "entschädigen" },    // not B2 kompensieren
 };
 
+// The formal-connector topic has no vehicle: mithin, zumal, gleichwohl and
+// gleichwohl appear in no level of the bank (insofern is already B1), and demzufolge is the pronominal
+// adverb the cohesion topic turns on. Four rows, and two topics become
+// writable.
+const ADD = [
+  { en: "thus (formal)", de: "mithin", fr: "donc", es: "por consiguiente", it: "quindi", tr: "dolayısıyla", ru: "стало быть" },
+  { en: "especially since", de: "zumal", fr: "d'autant que", es: "sobre todo porque", it: "tanto più che", tr: "hele ki", ru: "особенно потому что" },
+  { en: "all the same", de: "gleichwohl", fr: "néanmoins", es: "aun así", it: "ciononostante", tr: "yine de", ru: "и всё же" },
+  { en: "consequently (formal)", de: "demzufolge", fr: "par conséquent", es: "en consecuencia", it: "di conseguenza", tr: "buna göre", ru: "согласно этому" },
+];
+
 const FILL = require("./c1_fill.json");
 
 const banks = Object.fromEntries(
@@ -88,6 +99,7 @@ for (const row of rows) {
   }
   out.push(next);
 }
+out.push(...ADD);
 for (const [name, keys] of [["fill", Object.keys(FILL)], ["drop", [...DROP]], ["rekey", Object.keys(REKEY)], ["repair", Object.keys(REPAIR)]]) {
   for (const key of keys) {
     if (!rows.some((r) => r.en === key)) problems.push(`${name} names "${key}", which is not a C1 row`);
@@ -134,6 +146,7 @@ console.log(
   `c1: ${rows.length} rows -> ${out.length}\n` +
   `  dropped  ${counts.dropped}\n  rekeyed  ${counts.rekeyed}\n` +
   `  repaired ${counts.repaired}\n  filled   ${counts.filled}\n` +
+  `  added    ${ADD.length}\n` +
   `  usable (German and Russian both filled): ${usable}`,
 );
 if (warnings.length) console.log(`\n${warnings.length} shared Russian glosses, tolerated`);
