@@ -89,7 +89,14 @@ export const MIN_LESSONS_PER_TOPIC = 3;
 // first. Widening this list is a deliberate act: each entry is a word the
 // learner will see without ever having been shown it.
 export const GLUE: Readonly<Record<string, readonly string[]>> = {
-  en: ['a', 'an', 'the'],
+  // 'do' / 'does' / 'did' are English's dummy auxiliary: obligatory in a
+  // negation or a question and carrying no meaning of their own, so no
+  // concept backs them. The same holds for the infinitive marker 'to' - the
+  // concept id already reads "to help" - and for 'of', which stands in for
+  // the German genitive and the bank has no usable row for.
+  // "'s" is the possessive marker, which stands where German puts a
+  // genitive ending and carries no concept of its own.
+  en: ['a', 'an', 'the', 'do', 'does', 'did', 'to', 'of', "'s"],
   de: ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem',
        'einer', 'eines', 'im', 'am', 'zum', 'zur', 'ins', 'vom', 'beim'],
   // 'ne' / "n'" - the first half of French bipartite negation ("ne ... pas").
