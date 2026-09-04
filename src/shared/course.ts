@@ -21,6 +21,13 @@ export interface CourseLesson {
 export interface CourseFile {
   level: string;
   lessons: CourseLesson[];
+  /** Concept ids this level's bank holds that this course deliberately does
+   *  not teach. The bank is shared by every target, so a word can exist for
+   *  one target's gloss without belonging to another target's syllabus - the
+   *  English course needs a German word for ~500 concepts the German course
+   *  never teaches. Listing them here keeps "a bank concept in no lesson" an
+   *  error for everything else, so a genuinely forgotten word still fails. */
+  untaught?: string[];
 }
 
 export interface SentenceEntry {
@@ -261,7 +268,18 @@ export function validateCourse(input: ValidateInput): string[] {
   // course covers a few hundred, so naming each one drowns every other error.
   // This stays an error - a level's course is meant to teach the level - but
   // it reports as one line with a count and a sample.
-  const notInALesson = levelConcepts.filter((concept) => !introducedIn.has(concept));
+  const untaught = Array.isArray(course.untaught) ? course.untaught : [];
+  const untaughtSet = new Set(untaught);
+  for (const concept of untaught) {
+    if (introducedIn.has(concept)) {
+      errors.push(`"${concept}" is listed as untaught but lesson ${introducedIn.get(concept)} teaches it`);
+    } else if (!levelSet.has(concept)) {
+      errors.push(`"${concept}" is listed as untaught but is not in this level's bank`);
+    }
+  }
+  const notInALesson = levelConcepts.filter(
+    (concept) => !introducedIn.has(concept) && !untaughtSet.has(concept)
+  );
   if (notInALesson.length === 1) {
     errors.push(`"${notInALesson[0]}" is in the bank but in no lesson`);
   } else if (notInALesson.length > 1) {

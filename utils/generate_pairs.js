@@ -237,11 +237,18 @@ function loadCourse(courseFile, sentenceFile, level, label) {
       uncoursed.push(conceptId(row.en));
     }
   }
+  // A per-target course owns its syllabus and the pair loop drops what it does
+  // not teach; the shared course still appends the remainder. Say which
+  // happened, so "292 concepts" does not read as 292 words nobody will see
+  // when the course file already lists them under "untaught".
   if (uncoursed.length > 0) {
     const shown = uncoursed.slice(0, 8).map((c) => `"${c}"`).join(", ");
     const rest = uncoursed.length > 8 ? ` and ${uncoursed.length - 8} more` : "";
+    // A per-target course is labelled "<target>/<level>"; the shared one is
+    // just "<level>".
+    const fate = label.includes("/") ? "left out of the word list" : "appended at the end";
     skipped.push(
-      `${label}: ${uncoursed.length} concepts are in no lesson, appended at the end: ${shown}${rest}`
+      `${label}: ${uncoursed.length} concepts are in no lesson, ${fate}: ${shown}${rest}`
     );
   }
 
@@ -283,6 +290,29 @@ if (fs.existsSync(COURSE_DIR)) {
       );
     }
   }
+}
+
+// A per-target course is only useful to a source language it has actually
+// been translated into. English was authored German-first, so en/ru and the
+// other four sources would otherwise get its lesson boundaries with no
+// sentences at all - strictly worse than the shared course they had. Ask
+// whether the target course carries this source before preferring it.
+const targetCourseSourceCache = new Map();
+function targetCourseCovers(to, level, from) {
+  const key = `${to}/${level}/${from}`;
+  if (targetCourseSourceCache.has(key)) return targetCourseSourceCache.get(key);
+  const loaded = targetCourses[to] && targetCourses[to][level];
+  let covers = false;
+  if (loaded) {
+    for (const sentence of loaded.sentenceById.values()) {
+      if (sentence.text && Array.isArray(sentence.text[from])) {
+        covers = true;
+        break;
+      }
+    }
+  }
+  targetCourseSourceCache.set(key, covers);
+  return covers;
 }
 
 function glossFor(sentence, to, from, level, lessonId) {
@@ -330,7 +360,10 @@ for (const to of LANGS) {
     for (const level of LEVELS) {
       // Prefer this target's own course over the shared one; fall back to
       // the shared course for any level the target has not authored yet.
-      const loaded = (targetCourses[to] && targetCourses[to][level]) || courses[level];
+      const ownCourse = targetCourseCovers(to, level, from)
+        ? targetCourses[to][level]
+        : null;
+      const loaded = ownCourse || courses[level];
       const rows = loaded ? loaded.orderedRows : banked[level];
       const counts = loaded ? new Array(loaded.course.lessons.length).fill(0) : null;
       const out = [];
@@ -339,6 +372,12 @@ for (const to of LANGS) {
         const w1 = row[from];
         const w2 = row[to];
         if (!w1 || !w2) continue;
+        // A target that authored its own course owns its syllabus: a bank
+        // concept that course does not teach is not silently appended to the
+        // end of the word list. Filling a bank column for a gloss (the
+        // English course needs German for ~500 rows the German course never
+        // teaches) must not grow the German dictionary as a side effect.
+        if (ownCourse && !ownCourse.lessonOfConcept.has(conceptId(row.en))) continue;
         const key = norm(w2);
         if (seenW2.has(key)) continue;
         seenW2.add(key);

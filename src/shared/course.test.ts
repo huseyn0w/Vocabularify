@@ -113,6 +113,37 @@ describe('validateCourse', () => {
     expect(out).not.toContain('"rice" is in the bank but in no lesson');
   });
 
+  it('accepts a bank concept the course lists as untaught', () => {
+    const f = fixture();
+    f.levelConcepts = [...f.levelConcepts, 'water', 'bread'];
+    f.course.untaught = ['water', 'bread'];
+    const out = validateCourse(f).join('\n');
+    expect(out).not.toContain('in the bank but in no lesson');
+  });
+
+  it('still reports a bank concept the untaught list forgot', () => {
+    const f = fixture();
+    f.levelConcepts = [...f.levelConcepts, 'water', 'bread'];
+    f.course.untaught = ['water'];
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain('"bread" is in the bank but in no lesson');
+  });
+
+  it('rejects an untaught entry that a lesson actually teaches', () => {
+    const f = fixture();
+    const taught = f.course.lessons[0].new[0];
+    f.course.untaught = [taught];
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain(`"${taught}" is listed as untaught but lesson`);
+  });
+
+  it('rejects an untaught entry that is not in the level bank', () => {
+    const f = fixture();
+    f.course.untaught = ['zzz-not-a-concept'];
+    const out = validateCourse(f).join('\n');
+    expect(out).toContain('"zzz-not-a-concept" is listed as untaught but is not in this level\'s bank');
+  });
+
   it('does not demand sentence coverage for a concept no lesson teaches', () => {
     const f = fixture();
     f.levelConcepts = [...f.levelConcepts, 'water'];
