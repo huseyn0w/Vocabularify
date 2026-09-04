@@ -1,0 +1,3894 @@
+{
+  "level": "a1",
+  "target": "en",
+  "grammarSchedule": [
+    {
+      "id": "en.a1.be-present",
+      "fromLesson": 1,
+      "why": "lesson 1 is `i you he she it we they`, `to be` and `not`, so `He is not ...` is writable from the first lesson"
+    },
+    {
+      "id": "en.a1.subject-pronouns-word-order",
+      "fromLesson": 5,
+      "why": "pronouns are in lesson 1, `to have` and `a/an` plus `house/car/book` in lesson 5, so `I have a house` gives a pronoun in first position followed by its verb"
+    },
+    {
+      "id": "en.a1.object-pronouns",
+      "fromLesson": 11,
+      "why": "lesson 11 teaches `to me`, `you (object)`, `him`, `her`, `us`, `them`, `to you`; verbs to hang them on come from lesson 8"
+    },
+    {
+      "id": "en.a1.possessive-determiners",
+      "fromLesson": 4,
+      "why": "`my` and `your` sit with `name`, `friend`, `man`, `woman` in lesson 4; `his our their your (plural)` follow in lesson 12"
+    },
+    {
+      "id": "en.a1.demonstratives",
+      "fromLesson": 6,
+      "why": "lesson 6 teaches `this that these those` together, and nouns to point at exist from lesson 5"
+    },
+    {
+      "id": "en.a1.plural-nouns",
+      "fromLesson": 10,
+      "why": "countable nouns arrive in lessons 4-5 and the numbers `two`/`three` in lesson 10, so `two books` is writable"
+    },
+    {
+      "id": "en.a1.articles",
+      "fromLesson": 5,
+      "why": "`a/an` and `the` are both in lesson 5 with the first countable nouns"
+    },
+    {
+      "id": "en.a1.there-is-are",
+      "fromLesson": 6,
+      "why": "`there` is in lesson 6, `to be` in lesson 1 and `a/an` plus a noun in lesson 5, so `There is a house` works"
+    },
+    {
+      "id": "en.a1.present-simple",
+      "fromLesson": 8,
+      "why": "lesson 8 adds the first lexical verbs (`to go to come to do to say to see to know`) to the pronouns of lesson 1; `not` for don't/doesn't is in lesson 1"
+    },
+    {
+      "id": "en.a1.present-continuous",
+      "fromLesson": 18,
+      "why": "`now` and `today` arrive in lesson 18; be + verb-ing needs a verb (lesson 8) and the time word that makes the tense readable"
+    },
+    {
+      "id": "en.a1.prepositions-place-time",
+      "fromLesson": 9,
+      "why": "lesson 9 is the preposition set itself: `in on at to from with without for`"
+    },
+    {
+      "id": "en.a1.adjective-position",
+      "fromLesson": 13,
+      "why": "lesson 13 is the first adjectives (`big small good bad new old`); nouns and `to be` are already there"
+    },
+    {
+      "id": "en.a1.adjectives-with-very",
+      "fromLesson": 13,
+      "why": "`very` is in lesson 2 but has nothing to modify until the adjectives of lesson 13"
+    },
+    {
+      "id": "en.a1.adjectives-combining-and",
+      "fromLesson": 13,
+      "why": "`and` is in lesson 2; two adjectives to join first exist in lesson 13"
+    },
+    {
+      "id": "en.a1.superlative-my-best",
+      "fromLesson": 41,
+      "why": "`best` is in lesson 41; `my` (lesson 4) and `friend` (lesson 4) complete the fixed phrase `my best friend`"
+    },
+    {
+      "id": "en.a1.adverbs-position",
+      "fromLesson": 18,
+      "why": "`here`/`there` are in lesson 6 and `today`/`now` in lesson 18, so an end-of-clause time or place adverb is writable; the frequency adverbs `always`/`never` follow in lesson 24"
+    },
+    {
+      "id": "en.a1.can",
+      "fromLesson": 14,
+      "why": "`can` is in lesson 14 next to `to want`, and base verbs to follow it come from lesson 8"
+    },
+    {
+      "id": "en.a1.would-like",
+      "fromLesson": 14,
+      "why": "`would like` is in lesson 14; noun phrases (lesson 5) and to-infinitives (lesson 8 verbs plus `to` from lesson 9) are both available"
+    },
+    {
+      "id": "en.a1.verb-patterns-to-infinitive",
+      "fromLesson": 14,
+      "why": "`to want` and `to like` are both in lesson 14, and `to go`/`to come` from lesson 8 supply the to-infinitive"
+    },
+    {
+      "id": "en.a1.will-future",
+      "fromLesson": 19,
+      "why": "`will` is in lesson 19 together with `later` and `next`; `tomorrow` is in lesson 18"
+    },
+    {
+      "id": "en.a1.past-simple-affirmative",
+      "fromLesson": 18,
+      "why": "`yesterday` is in lesson 18; the verbs that take a past form (`to go to see to buy to work`) are in lessons 8 and 32, and `last` follows in lesson 19"
+    },
+    {
+      "id": "en.a1.quantifiers-basic",
+      "fromLesson": 17,
+      "why": "lesson 17 is `some many much little all a lot each any`; `a/an` came in lesson 5 and the numbers in lesson 10"
+    },
+    {
+      "id": "en.a1.conjunctions-coordinating",
+      "fromLesson": 2,
+      "why": "`and but or` are all in lesson 2, and lesson 1 already supplies two clauses to join"
+    },
+    {
+      "id": "en.a1.because-reason",
+      "fromLesson": 20,
+      "why": "`because` is in lesson 20; two clauses to link exist from lesson 8 onward"
+    },
+    {
+      "id": "en.a1.noun-phrase-basic",
+      "fromLesson": 13,
+      "why": "determiner (lesson 5) plus adjective (lesson 13) plus noun (lesson 5) completes the order; the noun+noun pattern `bus stop` arrives in lesson 90"
+    },
+    {
+      "id": "en.a1.verb-preposition-collocation",
+      "fromLesson": 42,
+      "why": "lesson 42 is the fixed verb+preposition set the bank actually has: `to look for`, `to belong to`, `to respond to`; the bank has no `to listen` or `to wait`"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "theme": "pronouns and to be",
+      "new": [
+        "i",
+        "you",
+        "he",
+        "she",
+        "it",
+        "we",
+        "they",
+        "to be",
+        "not"
+      ],
+      "sentences": [
+        "a1_L001_1",
+        "a1_L001_2",
+        "a1_L001_3"
+      ]
+    },
+    {
+      "id": 2,
+      "theme": "yes and no",
+      "new": [
+        "yes",
+        "no",
+        "and",
+        "but",
+        "or",
+        "also",
+        "very"
+      ],
+      "sentences": [
+        "a1_L002_1",
+        "a1_L002_2",
+        "a1_L002_3"
+      ]
+    },
+    {
+      "id": 3,
+      "theme": "greetings",
+      "new": [
+        "hello",
+        "goodbye",
+        "please",
+        "thank you",
+        "sorry",
+        "hi",
+        "good evening"
+      ],
+      "sentences": [
+        "a1_L003_1",
+        "a1_L003_2",
+        "a1_L003_3"
+      ]
+    },
+    {
+      "id": 4,
+      "theme": "names and people",
+      "new": [
+        "name",
+        "my",
+        "your",
+        "friend",
+        "man",
+        "woman",
+        "person"
+      ],
+      "sentences": [
+        "a1_L004_1",
+        "a1_L004_2",
+        "a1_L004_3"
+      ]
+    },
+    {
+      "id": 5,
+      "theme": "to have and things",
+      "new": [
+        "to have",
+        "a/an",
+        "the",
+        "house",
+        "car",
+        "book",
+        "money"
+      ],
+      "sentences": [
+        "a1_L005_1",
+        "a1_L005_2",
+        "a1_L005_3"
+      ]
+    },
+    {
+      "id": 6,
+      "theme": "this and that",
+      "new": [
+        "this",
+        "that",
+        "these",
+        "those",
+        "here",
+        "there"
+      ],
+      "sentences": [
+        "a1_L006_1",
+        "a1_L006_2",
+        "a1_L006_3"
+      ]
+    },
+    {
+      "id": 7,
+      "theme": "question words",
+      "new": [
+        "what",
+        "who",
+        "where",
+        "when",
+        "why",
+        "how"
+      ],
+      "sentences": [
+        "a1_L007_1",
+        "a1_L007_2",
+        "a1_L007_3"
+      ]
+    },
+    {
+      "id": 8,
+      "theme": "everyday verbs",
+      "new": [
+        "to go",
+        "to come",
+        "to do",
+        "to say",
+        "to see",
+        "to know",
+        "to make"
+      ],
+      "sentences": [
+        "a1_L008_1",
+        "a1_L008_2",
+        "a1_L008_3"
+      ]
+    },
+    {
+      "id": 9,
+      "theme": "basic prepositions",
+      "new": [
+        "in",
+        "on",
+        "at",
+        "to",
+        "from",
+        "with",
+        "without",
+        "for (preposition)"
+      ],
+      "sentences": [
+        "a1_L009_1",
+        "a1_L009_2",
+        "a1_L009_3"
+      ]
+    },
+    {
+      "id": 10,
+      "theme": "numbers zero to nine",
+      "new": [
+        "zero",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine"
+      ],
+      "sentences": [
+        "a1_L010_1",
+        "a1_L010_2",
+        "a1_L010_3"
+      ]
+    },
+    {
+      "id": 11,
+      "theme": "object pronouns",
+      "new": [
+        "to me",
+        "you (object)",
+        "him",
+        "her",
+        "us",
+        "them",
+        "to you"
+      ],
+      "sentences": [
+        "a1_L011_1",
+        "a1_L011_2",
+        "a1_L011_3"
+      ]
+    },
+    {
+      "id": 12,
+      "theme": "possessives and oneself",
+      "new": [
+        "his",
+        "our",
+        "their",
+        "your (plural)",
+        "oneself",
+        "one (pronoun)"
+      ],
+      "sentences": [
+        "a1_L012_1",
+        "a1_L012_2",
+        "a1_L012_3"
+      ]
+    },
+    {
+      "id": 13,
+      "theme": "big and small",
+      "new": [
+        "big",
+        "small",
+        "good",
+        "bad",
+        "new",
+        "old"
+      ],
+      "sentences": [
+        "a1_L013_1",
+        "a1_L013_2",
+        "a1_L013_3"
+      ]
+    },
+    {
+      "id": 14,
+      "theme": "wanting and being able",
+      "new": [
+        "to want",
+        "can",
+        "would like",
+        "to like",
+        "must",
+        "to have to"
+      ],
+      "sentences": [
+        "a1_L014_1",
+        "a1_L014_2",
+        "a1_L014_3"
+      ]
+    },
+    {
+      "id": 15,
+      "theme": "eating and drinking",
+      "new": [
+        "to eat",
+        "to drink",
+        "water",
+        "bread",
+        "milk",
+        "coffee"
+      ],
+      "sentences": [
+        "a1_L015_1",
+        "a1_L015_2",
+        "a1_L015_3"
+      ]
+    },
+    {
+      "id": 16,
+      "theme": "more food",
+      "new": [
+        "tea",
+        "apple",
+        "egg",
+        "meat",
+        "fish",
+        "salt",
+        "breakfast"
+      ],
+      "sentences": [
+        "a1_L016_1",
+        "a1_L016_2",
+        "a1_L016_3"
+      ]
+    },
+    {
+      "id": 17,
+      "theme": "how much and how many",
+      "new": [
+        "some",
+        "many",
+        "much",
+        "little",
+        "all",
+        "a lot",
+        "each",
+        "any"
+      ],
+      "sentences": [
+        "a1_L017_1",
+        "a1_L017_2",
+        "a1_L017_3"
+      ]
+    },
+    {
+      "id": 18,
+      "theme": "today and tomorrow",
+      "new": [
+        "now",
+        "today",
+        "tomorrow",
+        "yesterday",
+        "time",
+        "day"
+      ],
+      "sentences": [
+        "a1_L018_1",
+        "a1_L018_2",
+        "a1_L018_3"
+      ]
+    },
+    {
+      "id": 19,
+      "theme": "the days ahead",
+      "new": [
+        "will",
+        "later",
+        "next",
+        "last",
+        "the day after tomorrow",
+        "the day before yesterday"
+      ],
+      "sentences": [
+        "a1_L019_1",
+        "a1_L019_2",
+        "a1_L019_3"
+      ]
+    },
+    {
+      "id": 20,
+      "theme": "because and other question words",
+      "new": [
+        "because",
+        "which",
+        "how much",
+        "what kind of",
+        "how come",
+        "from where",
+        "where to"
+      ],
+      "sentences": [
+        "a1_L020_1",
+        "a1_L020_2",
+        "a1_L020_3"
+      ]
+    },
+    {
+      "id": 21,
+      "theme": "hot and cold",
+      "new": [
+        "hot",
+        "cold",
+        "long",
+        "short",
+        "fast",
+        "slow"
+      ],
+      "sentences": [
+        "a1_L021_1",
+        "a1_L021_2",
+        "a1_L021_3"
+      ]
+    },
+    {
+      "id": 22,
+      "theme": "easy and hard",
+      "new": [
+        "easy",
+        "difficult",
+        "beautiful",
+        "happy",
+        "expensive",
+        "cheap"
+      ],
+      "sentences": [
+        "a1_L022_1",
+        "a1_L022_2",
+        "a1_L022_3"
+      ]
+    },
+    {
+      "id": 23,
+      "theme": "days of the week",
+      "new": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ],
+      "sentences": [
+        "a1_L023_1",
+        "a1_L023_2",
+        "a1_L023_3"
+      ]
+    },
+    {
+      "id": 24,
+      "theme": "how often",
+      "new": [
+        "always",
+        "never",
+        "mostly",
+        "once",
+        "twice",
+        "three times",
+        "regularly"
+      ],
+      "sentences": [
+        "a1_L024_1",
+        "a1_L024_2",
+        "a1_L024_3"
+      ]
+    },
+    {
+      "id": 25,
+      "theme": "parts of the day",
+      "new": [
+        "morning",
+        "evening",
+        "night",
+        "noon",
+        "afternoon",
+        "hour",
+        "minute"
+      ],
+      "sentences": [
+        "a1_L025_1",
+        "a1_L025_2",
+        "a1_L025_3"
+      ]
+    },
+    {
+      "id": 26,
+      "theme": "weeks, months, years",
+      "new": [
+        "week",
+        "month",
+        "year",
+        "date",
+        "calendar",
+        "second"
+      ],
+      "sentences": [
+        "a1_L026_1",
+        "a1_L026_2",
+        "a1_L026_3"
+      ]
+    },
+    {
+      "id": 27,
+      "theme": "the family",
+      "new": [
+        "family",
+        "mother",
+        "father",
+        "parents",
+        "child",
+        "son",
+        "daughter"
+      ],
+      "sentences": [
+        "a1_L027_1",
+        "a1_L027_2",
+        "a1_L027_3"
+      ]
+    },
+    {
+      "id": 28,
+      "theme": "brothers and sisters",
+      "new": [
+        "brother",
+        "sister",
+        "siblings",
+        "baby",
+        "girl",
+        "boy"
+      ],
+      "sentences": [
+        "a1_L028_1",
+        "a1_L028_2",
+        "a1_L028_3"
+      ]
+    },
+    {
+      "id": 29,
+      "theme": "the house",
+      "new": [
+        "room",
+        "door",
+        "window",
+        "table",
+        "chair",
+        "bed"
+      ],
+      "sentences": [
+        "a1_L029_1",
+        "a1_L029_2",
+        "a1_L029_3"
+      ]
+    },
+    {
+      "id": 30,
+      "theme": "in the city",
+      "new": [
+        "city",
+        "street",
+        "school",
+        "shop",
+        "work",
+        "sun"
+      ],
+      "sentences": [
+        "a1_L030_1",
+        "a1_L030_2",
+        "a1_L030_3"
+      ]
+    },
+    {
+      "id": 31,
+      "theme": "reading and writing",
+      "new": [
+        "to speak",
+        "to read",
+        "to write",
+        "to learn",
+        "to understand",
+        "word"
+      ],
+      "sentences": [
+        "a1_L031_1",
+        "a1_L031_2",
+        "a1_L031_3"
+      ]
+    },
+    {
+      "id": 32,
+      "theme": "things people do",
+      "new": [
+        "to give",
+        "to buy",
+        "to live",
+        "to work",
+        "to sleep",
+        "to love"
+      ],
+      "sentences": [
+        "a1_L032_1",
+        "a1_L032_2",
+        "a1_L032_3"
+      ]
+    },
+    {
+      "id": 33,
+      "theme": "opening and closing",
+      "new": [
+        "to find",
+        "to open",
+        "to close",
+        "to take",
+        "to help",
+        "to get"
+      ],
+      "sentences": [
+        "a1_L033_1",
+        "a1_L033_2",
+        "a1_L033_3"
+      ]
+    },
+    {
+      "id": 34,
+      "theme": "colors",
+      "new": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white"
+      ],
+      "sentences": [
+        "a1_L034_1",
+        "a1_L034_2",
+        "a1_L034_3"
+      ]
+    },
+    {
+      "id": 35,
+      "theme": "more colors",
+      "new": [
+        "brown",
+        "grey",
+        "orange",
+        "pink",
+        "purple",
+        "beige"
+      ],
+      "sentences": [
+        "a1_L035_1",
+        "a1_L035_2",
+        "a1_L035_3"
+      ]
+    },
+    {
+      "id": 36,
+      "theme": "the body",
+      "new": [
+        "head",
+        "hand",
+        "eye",
+        "foot",
+        "hair",
+        "face"
+      ],
+      "sentences": [
+        "a1_L036_1",
+        "a1_L036_2",
+        "a1_L036_3"
+      ]
+    },
+    {
+      "id": 37,
+      "theme": "animals",
+      "new": [
+        "dog",
+        "cat",
+        "pet",
+        "rabbit",
+        "turtle",
+        "seal"
+      ],
+      "sentences": [
+        "a1_L037_1",
+        "a1_L037_2",
+        "a1_L037_3"
+      ]
+    },
+    {
+      "id": 38,
+      "theme": "phone and computer",
+      "new": [
+        "phone",
+        "cell phone",
+        "phone number",
+        "internet",
+        "computer",
+        "to phone"
+      ],
+      "sentences": [
+        "a1_L038_1",
+        "a1_L038_2",
+        "a1_L038_3"
+      ]
+    },
+    {
+      "id": 39,
+      "theme": "the first six months",
+      "new": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june"
+      ],
+      "sentences": [
+        "a1_L039_1",
+        "a1_L039_2",
+        "a1_L039_3"
+      ]
+    },
+    {
+      "id": 40,
+      "theme": "the last six months",
+      "new": [
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "sentences": [
+        "a1_L040_1",
+        "a1_L040_2",
+        "a1_L040_3"
+      ]
+    },
+    {
+      "id": 41,
+      "theme": "better and best",
+      "new": [
+        "best",
+        "better",
+        "more",
+        "most",
+        "less",
+        "worse"
+      ],
+      "sentences": [
+        "a1_L041_1",
+        "a1_L041_2",
+        "a1_L041_3"
+      ]
+    },
+    {
+      "id": 42,
+      "theme": "looking and searching",
+      "new": [
+        "to look for",
+        "to belong to",
+        "to respond to",
+        "to look",
+        "to search",
+        "to watch"
+      ],
+      "sentences": [
+        "a1_L042_1",
+        "a1_L042_2",
+        "a1_L042_3"
+      ]
+    },
+    {
+      "id": 43,
+      "theme": "numbers ten to nineteen",
+      "new": [
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen"
+      ],
+      "sentences": [
+        "a1_L043_1",
+        "a1_L043_2",
+        "a1_L043_3"
+      ]
+    },
+    {
+      "id": 44,
+      "theme": "round numbers",
+      "new": [
+        "twenty",
+        "thirty",
+        "forty",
+        "fifty",
+        "sixty",
+        "seventy",
+        "eighty",
+        "ninety",
+        "hundred",
+        "thousand"
+      ],
+      "sentences": [
+        "a1_L044_1",
+        "a1_L044_2",
+        "a1_L044_3"
+      ]
+    },
+    {
+      "id": 45,
+      "theme": "bigger numbers",
+      "new": [
+        "twenty-one",
+        "hundred and one",
+        "two hundred",
+        "a million",
+        "a billion",
+        "nineteen ninety-nine",
+        "two thousand fourteen"
+      ],
+      "sentences": [
+        "a1_L045_1",
+        "a1_L045_2",
+        "a1_L045_3"
+      ]
+    },
+    {
+      "id": 46,
+      "theme": "first, second, third",
+      "new": [
+        "first",
+        "2nd",
+        "third",
+        "fourth",
+        "pair",
+        "figure",
+        "year number"
+      ],
+      "sentences": [
+        "a1_L046_1",
+        "a1_L046_2",
+        "a1_L046_3"
+      ]
+    },
+    {
+      "id": 47,
+      "theme": "telling the time",
+      "new": [
+        "clock",
+        "time of day",
+        "one o'clock",
+        "half past two",
+        "quarter",
+        "quarter to/after two"
+      ],
+      "sentences": [
+        "a1_L047_1",
+        "a1_L047_2",
+        "a1_L047_3"
+      ]
+    },
+    {
+      "id": 48,
+      "theme": "more clock times",
+      "new": [
+        "five minutes to/past one",
+        "seven fifteen",
+        "thirteen seventeen",
+        "midnight three",
+        "midnight",
+        "half"
+      ],
+      "sentences": [
+        "a1_L048_1",
+        "a1_L048_2",
+        "a1_L048_3"
+      ]
+    },
+    {
+      "id": 49,
+      "theme": "weights and measures",
+      "new": [
+        "gram",
+        "kilogram",
+        "liter",
+        "meter",
+        "pound",
+        "degree",
+        "square meter"
+      ],
+      "sentences": [
+        "a1_L049_1",
+        "a1_L049_2",
+        "a1_L049_3"
+      ]
+    },
+    {
+      "id": 50,
+      "theme": "saying an amount",
+      "new": [
+        "a gram",
+        "a kilo(gram)",
+        "a liter",
+        "a meter",
+        "a pound",
+        "a percent",
+        "a quarter",
+        "a centimeter",
+        "one meter fifteen",
+        "two hundred kilometers"
+      ],
+      "sentences": [
+        "a1_L050_1",
+        "a1_L050_2",
+        "a1_L050_3"
+      ]
+    },
+    {
+      "id": 51,
+      "theme": "money",
+      "new": [
+        "euro",
+        "cent",
+        "account",
+        "bank",
+        "in cash",
+        "to settle up",
+        "to transfer money"
+      ],
+      "sentences": [
+        "a1_L051_1",
+        "a1_L051_2",
+        "a1_L051_3"
+      ]
+    },
+    {
+      "id": 52,
+      "theme": "pieces and packets",
+      "new": [
+        "piece",
+        "package",
+        "bottle",
+        "glass",
+        "cup",
+        "plate",
+        "tumbler"
+      ],
+      "sentences": [
+        "a1_L052_1",
+        "a1_L052_2",
+        "a1_L052_3"
+      ]
+    },
+    {
+      "id": 53,
+      "theme": "the face",
+      "new": [
+        "ear",
+        "nose",
+        "mouth",
+        "lips",
+        "tongue",
+        "teeth",
+        "chin"
+      ],
+      "sentences": [
+        "a1_L053_1",
+        "a1_L053_2",
+        "a1_L053_3"
+      ]
+    },
+    {
+      "id": 54,
+      "theme": "more of the head",
+      "new": [
+        "cheek",
+        "cheekbone",
+        "jaw",
+        "eyebrow",
+        "pupils",
+        "forehead",
+        "skull",
+        "brain"
+      ],
+      "sentences": [
+        "a1_L054_1",
+        "a1_L054_2",
+        "a1_L054_3"
+      ]
+    },
+    {
+      "id": 55,
+      "theme": "arms and legs",
+      "new": [
+        "neck",
+        "throat",
+        "shoulder",
+        "chest",
+        "elbow",
+        "knee",
+        "finger",
+        "toe",
+        "legs"
+      ],
+      "sentences": [
+        "a1_L055_1",
+        "a1_L055_2",
+        "a1_L055_3"
+      ]
+    },
+    {
+      "id": 56,
+      "theme": "inside the body",
+      "new": [
+        "gut",
+        "intestine",
+        "kidney",
+        "liver",
+        "lung",
+        "spleen",
+        "navel",
+        "body part"
+      ],
+      "sentences": [
+        "a1_L056_1",
+        "a1_L056_2",
+        "a1_L056_3"
+      ]
+    },
+    {
+      "id": 57,
+      "theme": "aches and pains",
+      "new": [
+        "headache",
+        "stomach ache",
+        "sore throat",
+        "cough",
+        "common cold",
+        "runny nose",
+        "flu",
+        "to hurt"
+      ],
+      "sentences": [
+        "a1_L057_1",
+        "a1_L057_2",
+        "a1_L057_3"
+      ]
+    },
+    {
+      "id": 58,
+      "theme": "at the doctor",
+      "new": [
+        "family doctor",
+        "physician",
+        "patient (person)",
+        "consultation hours",
+        "consulting room",
+        "waiting room",
+        "receptionist"
+      ],
+      "sentences": [
+        "a1_L058_1",
+        "a1_L058_2",
+        "a1_L058_3"
+      ]
+    },
+    {
+      "id": 59,
+      "theme": "the appointment",
+      "new": [
+        "appointment",
+        "emergency appointment",
+        "examination",
+        "health card",
+        "health insurance",
+        "sick note",
+        "prevention"
+      ],
+      "sentences": [
+        "a1_L059_1",
+        "a1_L059_2",
+        "a1_L059_3"
+      ]
+    },
+    {
+      "id": 60,
+      "theme": "medicine",
+      "new": [
+        "pill",
+        "drops",
+        "ointment",
+        "plaster",
+        "bandage",
+        "practice",
+        "group practice"
+      ],
+      "sentences": [
+        "a1_L060_1",
+        "a1_L060_2",
+        "a1_L060_3"
+      ]
+    },
+    {
+      "id": 61,
+      "theme": "getting better",
+      "new": [
+        "recovery",
+        "care",
+        "to catch a cold",
+        "to breathe",
+        "to take care",
+        "calm"
+      ],
+      "sentences": [
+        "a1_L061_1",
+        "a1_L061_2",
+        "a1_L061_3"
+      ]
+    },
+    {
+      "id": 62,
+      "theme": "fruit",
+      "new": [
+        "banana",
+        "pear",
+        "cherry",
+        "grape",
+        "lemon",
+        "melon",
+        "strawberry"
+      ],
+      "sentences": [
+        "a1_L062_1",
+        "a1_L062_2",
+        "a1_L062_3"
+      ]
+    },
+    {
+      "id": 63,
+      "theme": "more fruit",
+      "new": [
+        "blueberry",
+        "raspberry",
+        "kiwi",
+        "mandarin",
+        "mango",
+        "fruit salad",
+        "apple juice"
+      ],
+      "sentences": [
+        "a1_L063_1",
+        "a1_L063_2",
+        "a1_L063_3"
+      ]
+    },
+    {
+      "id": 64,
+      "theme": "vegetables",
+      "new": [
+        "potato",
+        "carrot",
+        "tomato",
+        "bean",
+        "pea",
+        "chickpea",
+        "bell pepper",
+        "mushroom"
+      ],
+      "sentences": [
+        "a1_L064_1",
+        "a1_L064_2",
+        "a1_L064_3"
+      ]
+    },
+    {
+      "id": 65,
+      "theme": "in the kitchen",
+      "new": [
+        "flour",
+        "olive oil",
+        "butter",
+        "cream",
+        "honey",
+        "jam",
+        "noodle",
+        "salad"
+      ],
+      "sentences": [
+        "a1_L065_1",
+        "a1_L065_2",
+        "a1_L065_3"
+      ]
+    },
+    {
+      "id": 66,
+      "theme": "meat and dairy",
+      "new": [
+        "beef",
+        "pork",
+        "lamb",
+        "chicken",
+        "ham",
+        "dairy product",
+        "yogurt"
+      ],
+      "sentences": [
+        "a1_L066_1",
+        "a1_L066_2",
+        "a1_L066_3"
+      ]
+    },
+    {
+      "id": 67,
+      "theme": "something sweet",
+      "new": [
+        "cake",
+        "chocolate",
+        "chocolate cake",
+        "gateau",
+        "cookie",
+        "ice cream",
+        "pudding"
+      ],
+      "sentences": [
+        "a1_L067_1",
+        "a1_L067_2",
+        "a1_L067_3"
+      ]
+    },
+    {
+      "id": 68,
+      "theme": "drinks",
+      "new": [
+        "beer",
+        "wine",
+        "juice",
+        "lemonade",
+        "cola",
+        "drink",
+        "sparkling wine"
+      ],
+      "sentences": [
+        "a1_L068_1",
+        "a1_L068_2",
+        "a1_L068_3"
+      ]
+    },
+    {
+      "id": 69,
+      "theme": "eating out",
+      "new": [
+        "pizza",
+        "pizzeria",
+        "bistro",
+        "café",
+        "canteen",
+        "eatery",
+        "french fries",
+        "specialty"
+      ],
+      "sentences": [
+        "a1_L069_1",
+        "a1_L069_2",
+        "a1_L069_3"
+      ]
+    },
+    {
+      "id": 70,
+      "theme": "hunger and thirst",
+      "new": [
+        "hunger",
+        "thirst",
+        "appetite",
+        "food",
+        "lunch break",
+        "to taste",
+        "tasty",
+        "to smell"
+      ],
+      "sentences": [
+        "a1_L070_1",
+        "a1_L070_2",
+        "a1_L070_3"
+      ]
+    },
+    {
+      "id": 71,
+      "theme": "the bakery",
+      "new": [
+        "bakery",
+        "baker",
+        "butcher",
+        "roll",
+        "supermarket",
+        "groceries",
+        "weekend market"
+      ],
+      "sentences": [
+        "a1_L071_1",
+        "a1_L071_2",
+        "a1_L071_3"
+      ]
+    },
+    {
+      "id": 72,
+      "theme": "shopping",
+      "new": [
+        "to shop",
+        "shopping list",
+        "shopping spree",
+        "cash register",
+        "till receipt",
+        "cashier",
+        "special offer",
+        "offer"
+      ],
+      "sentences": [
+        "a1_L072_1",
+        "a1_L072_2",
+        "a1_L072_3"
+      ]
+    },
+    {
+      "id": 73,
+      "theme": "the shops",
+      "new": [
+        "department store",
+        "store",
+        "kiosk",
+        "saleswoman",
+        "salesperson",
+        "vending machine",
+        "to exchange"
+      ],
+      "sentences": [
+        "a1_L073_1",
+        "a1_L073_2",
+        "a1_L073_3"
+      ]
+    },
+    {
+      "id": 74,
+      "theme": "the apartment",
+      "new": [
+        "apartment",
+        "flat",
+        "apartment ad",
+        "apartment search",
+        "dream apartment",
+        "place of residence",
+        "real estate"
+      ],
+      "sentences": [
+        "a1_L074_1",
+        "a1_L074_2",
+        "a1_L074_3"
+      ]
+    },
+    {
+      "id": 75,
+      "theme": "kinds of house",
+      "new": [
+        "single-family house",
+        "multi-family house",
+        "terraced house",
+        "high-rise",
+        "old building",
+        "building",
+        "farm"
+      ],
+      "sentences": [
+        "a1_L075_1",
+        "a1_L075_2",
+        "a1_L075_3"
+      ]
+    },
+    {
+      "id": 76,
+      "theme": "renting",
+      "new": [
+        "rent",
+        "monthly rent",
+        "security deposit",
+        "utility costs",
+        "landlord",
+        "to rent out",
+        "viewing appointment",
+        "furnished"
+      ],
+      "sentences": [
+        "a1_L076_1",
+        "a1_L076_2",
+        "a1_L076_3"
+      ]
+    },
+    {
+      "id": 77,
+      "theme": "rooms at home",
+      "new": [
+        "bedroom",
+        "living room",
+        "children's room",
+        "study",
+        "hallway",
+        "foyer"
+      ],
+      "sentences": [
+        "a1_L077_1",
+        "a1_L077_2",
+        "a1_L077_3"
+      ]
+    },
+    {
+      "id": 78,
+      "theme": "the bathroom",
+      "new": [
+        "bath",
+        "bathtub",
+        "shower",
+        "toilet",
+        "restroom",
+        "washing machine",
+        "dishwasher"
+      ],
+      "sentences": [
+        "a1_L078_1",
+        "a1_L078_2",
+        "a1_L078_3"
+      ]
+    },
+    {
+      "id": 79,
+      "theme": "up and down the house",
+      "new": [
+        "ground floor",
+        "upper floor",
+        "storey",
+        "stairwell",
+        "stairs",
+        "elevator",
+        "entrance",
+        "exit"
+      ],
+      "sentences": [
+        "a1_L079_1",
+        "a1_L079_2",
+        "a1_L079_3"
+      ]
+    },
+    {
+      "id": 80,
+      "theme": "outside the house",
+      "new": [
+        "balcony",
+        "terrace",
+        "garage",
+        "garden party",
+        "house number",
+        "garbage"
+      ],
+      "sentences": [
+        "a1_L080_1",
+        "a1_L080_2",
+        "a1_L080_3"
+      ]
+    },
+    {
+      "id": 81,
+      "theme": "furniture",
+      "new": [
+        "furniture",
+        "sofa",
+        "armchair",
+        "cabinet",
+        "wardrobe",
+        "shelf",
+        "carpet"
+      ],
+      "sentences": [
+        "a1_L081_1",
+        "a1_L081_2",
+        "a1_L081_3"
+      ]
+    },
+    {
+      "id": 82,
+      "theme": "lamps and machines",
+      "new": [
+        "lamp",
+        "lighting",
+        "stove",
+        "refrigerator",
+        "heating",
+        "coffee machine",
+        "electrical device",
+        "device"
+      ],
+      "sentences": [
+        "a1_L082_1",
+        "a1_L082_2",
+        "a1_L082_3"
+      ]
+    },
+    {
+      "id": 83,
+      "theme": "television and pictures",
+      "new": [
+        "television",
+        "radio",
+        "printer",
+        "projector",
+        "to watch tv",
+        "picture",
+        "photo"
+      ],
+      "sentences": [
+        "a1_L083_1",
+        "a1_L083_2",
+        "a1_L083_3"
+      ]
+    },
+    {
+      "id": 84,
+      "theme": "moving house",
+      "new": [
+        "to move",
+        "to move away",
+        "to clear",
+        "to paint",
+        "repair",
+        "workshop",
+        "space"
+      ],
+      "sentences": [
+        "a1_L084_1",
+        "a1_L084_2",
+        "a1_L084_3"
+      ]
+    },
+    {
+      "id": 85,
+      "theme": "clothes",
+      "new": [
+        "pants",
+        "jeans",
+        "dress",
+        "skirt",
+        "blouse",
+        "sweater",
+        "t-shirt"
+      ],
+      "sentences": [
+        "a1_L085_1",
+        "a1_L085_2",
+        "a1_L085_3"
+      ]
+    },
+    {
+      "id": 86,
+      "theme": "more clothes",
+      "new": [
+        "coat",
+        "winter coat",
+        "anorak",
+        "suit",
+        "jogging suit",
+        "cardigan",
+        "scarf"
+      ],
+      "sentences": [
+        "a1_L086_1",
+        "a1_L086_2",
+        "a1_L086_3"
+      ]
+    },
+    {
+      "id": 87,
+      "theme": "socks and shoes",
+      "new": [
+        "sock",
+        "stocking",
+        "glove",
+        "cap",
+        "sports shoe",
+        "ski",
+        "garments",
+        "threads"
+      ],
+      "sentences": [
+        "a1_L087_1",
+        "a1_L087_2",
+        "a1_L087_3"
+      ]
+    },
+    {
+      "id": 88,
+      "theme": "bags and style",
+      "new": [
+        "bag",
+        "backpack",
+        "suitcase",
+        "fashion",
+        "model",
+        "shape",
+        "color"
+      ],
+      "sentences": [
+        "a1_L088_1",
+        "a1_L088_2",
+        "a1_L088_3"
+      ]
+    },
+    {
+      "id": 89,
+      "theme": "the train station",
+      "new": [
+        "railway",
+        "main station",
+        "platform",
+        "track",
+        "regional train",
+        "intercity train",
+        "tram"
+      ],
+      "sentences": [
+        "a1_L089_1",
+        "a1_L089_2",
+        "a1_L089_3"
+      ]
+    },
+    {
+      "id": 90,
+      "theme": "tickets",
+      "new": [
+        "single ticket",
+        "day ticket",
+        "short distance",
+        "means of transport",
+        "bus stop",
+        "replacement bus service"
+      ],
+      "sentences": [
+        "a1_L090_1",
+        "a1_L090_2",
+        "a1_L090_3"
+      ]
+    },
+    {
+      "id": 91,
+      "theme": "coming and going",
+      "new": [
+        "departure",
+        "arrival",
+        "arrival time",
+        "flight departure",
+        "to depart",
+        "to fly off",
+        "to get in",
+        "to get out",
+        "to transfer"
+      ],
+      "sentences": [
+        "a1_L091_1",
+        "a1_L091_2",
+        "a1_L091_3"
+      ]
+    },
+    {
+      "id": 92,
+      "theme": "on the road",
+      "new": [
+        "driver",
+        "passenger",
+        "taxi",
+        "taxi driver",
+        "bicycle",
+        "to ride a bike",
+        "motorcycle"
+      ],
+      "sentences": [
+        "a1_L092_1",
+        "a1_L092_2",
+        "a1_L092_3"
+      ]
+    },
+    {
+      "id": 93,
+      "theme": "cars and roads",
+      "new": [
+        "motor vehicle",
+        "truck",
+        "ship",
+        "highway",
+        "road map",
+        "city map",
+        "intersection",
+        "traffic light"
+      ],
+      "sentences": [
+        "a1_L093_1",
+        "a1_L093_2",
+        "a1_L093_3"
+      ]
+    },
+    {
+      "id": 94,
+      "theme": "parking and the town",
+      "new": [
+        "parking lot",
+        "parking fee",
+        "park",
+        "city forest",
+        "village",
+        "town hall"
+      ],
+      "sentences": [
+        "a1_L094_1",
+        "a1_L094_2",
+        "a1_L094_3"
+      ]
+    },
+    {
+      "id": 95,
+      "theme": "asking for information",
+      "new": [
+        "information desk",
+        "enquiries",
+        "loudspeaker announcement",
+        "announcement",
+        "notice",
+        "guide"
+      ],
+      "sentences": [
+        "a1_L095_1",
+        "a1_L095_2",
+        "a1_L095_3"
+      ]
+    },
+    {
+      "id": 96,
+      "theme": "the trip",
+      "new": [
+        "travel agency",
+        "excursion",
+        "island",
+        "island tour",
+        "beach",
+        "sightseeing",
+        "guided tour",
+        "tourist"
+      ],
+      "sentences": [
+        "a1_L096_1",
+        "a1_L096_2",
+        "a1_L096_3"
+      ]
+    },
+    {
+      "id": 97,
+      "theme": "the hotel",
+      "new": [
+        "double room",
+        "single room",
+        "half board",
+        "front desk",
+        "to stay overnight",
+        "vacation house"
+      ],
+      "sentences": [
+        "a1_L097_1",
+        "a1_L097_2",
+        "a1_L097_3"
+      ]
+    },
+    {
+      "id": 98,
+      "theme": "papers and borders",
+      "new": [
+        "id card",
+        "driver's license",
+        "customs",
+        "abroad",
+        "foreigner",
+        "foreign",
+        "police"
+      ],
+      "sentences": [
+        "a1_L098_1",
+        "a1_L098_2",
+        "a1_L098_3"
+      ]
+    },
+    {
+      "id": 99,
+      "theme": "jobs and hours",
+      "new": [
+        "gig",
+        "workplace",
+        "workday",
+        "end of workday",
+        "job center",
+        "casual work",
+        "part-time job",
+        "half-day",
+        "unemployed"
+      ],
+      "sentences": [
+        "a1_L099_1",
+        "a1_L099_2",
+        "a1_L099_3"
+      ]
+    },
+    {
+      "id": 100,
+      "theme": "professions",
+      "new": [
+        "car mechanic",
+        "office clerk",
+        "engineer",
+        "technician",
+        "cook",
+        "music teacher",
+        "reporter"
+      ],
+      "sentences": [
+        "a1_L100_1",
+        "a1_L100_2",
+        "a1_L100_3"
+      ]
+    },
+    {
+      "id": 101,
+      "theme": "more professions",
+      "new": [
+        "civil servant",
+        "pensioner",
+        "househusband",
+        "housewife",
+        "househusband/housewife",
+        "adult",
+        "human being"
+      ],
+      "sentences": [
+        "a1_L101_1",
+        "a1_L101_2",
+        "a1_L101_3"
+      ]
+    },
+    {
+      "id": 102,
+      "theme": "training and study",
+      "new": [
+        "training",
+        "internship",
+        "internship supervisor",
+        "studies",
+        "to study",
+        "university",
+        "interview"
+      ],
+      "sentences": [
+        "a1_L102_1",
+        "a1_L102_2",
+        "a1_L102_3"
+      ]
+    },
+    {
+      "id": 103,
+      "theme": "the language course",
+      "new": [
+        "german",
+        "german course",
+        "language school",
+        "adult education center",
+        "course",
+        "course book",
+        "course participant"
+      ],
+      "sentences": [
+        "a1_L103_1",
+        "a1_L103_2",
+        "a1_L103_3"
+      ]
+    },
+    {
+      "id": 104,
+      "theme": "in the classroom",
+      "new": [
+        "classroom",
+        "class",
+        "class schedule",
+        "lesson",
+        "homework",
+        "blackboard",
+        "pupil"
+      ],
+      "sentences": [
+        "a1_L104_1",
+        "a1_L104_2",
+        "a1_L104_3"
+      ]
+    },
+    {
+      "id": 105,
+      "theme": "school things",
+      "new": [
+        "exercise",
+        "exercise book",
+        "notebook",
+        "dictionary",
+        "grammar",
+        "chart",
+        "exam"
+      ],
+      "sentences": [
+        "a1_L105_1",
+        "a1_L105_2",
+        "a1_L105_3"
+      ]
+    },
+    {
+      "id": 106,
+      "theme": "writing tools",
+      "new": [
+        "pencil",
+        "ballpoint pen",
+        "pen",
+        "eraser",
+        "sharpener",
+        "paper",
+        "wastepaper basket"
+      ],
+      "sentences": [
+        "a1_L106_1",
+        "a1_L106_2",
+        "a1_L106_3"
+      ]
+    },
+    {
+      "id": 107,
+      "theme": "words on a page",
+      "new": [
+        "sentence",
+        "text",
+        "page",
+        "letter (alphabet)",
+        "example",
+        "dialogue",
+        "list"
+      ],
+      "sentences": [
+        "a1_L107_1",
+        "a1_L107_2",
+        "a1_L107_3"
+      ]
+    },
+    {
+      "id": 108,
+      "theme": "notes and books",
+      "new": [
+        "note slip",
+        "slip of paper",
+        "novel",
+        "library",
+        "kindergarten",
+        "mathematics",
+        "song"
+      ],
+      "sentences": [
+        "a1_L108_1",
+        "a1_L108_2",
+        "a1_L108_3"
+      ]
+    },
+    {
+      "id": 109,
+      "theme": "forms and offices",
+      "new": [
+        "form",
+        "signature",
+        "to sign",
+        "papers",
+        "citizens' office",
+        "registry office",
+        "notification"
+      ],
+      "sentences": [
+        "a1_L109_1",
+        "a1_L109_2",
+        "a1_L109_3"
+      ]
+    },
+    {
+      "id": 110,
+      "theme": "the post office",
+      "new": [
+        "post office",
+        "address",
+        "sender",
+        "recipient",
+        "stamp",
+        "postcard",
+        "postal code"
+      ],
+      "sentences": [
+        "a1_L110_1",
+        "a1_L110_2",
+        "a1_L110_3"
+      ]
+    },
+    {
+      "id": 111,
+      "theme": "writing a letter",
+      "new": [
+        "salutation",
+        "subject line",
+        "part of a letter",
+        "greeting",
+        "farewell",
+        "apology",
+        "apology letter"
+      ],
+      "sentences": [
+        "a1_L111_1",
+        "a1_L111_2",
+        "a1_L111_3"
+      ]
+    },
+    {
+      "id": 112,
+      "theme": "on the phone",
+      "new": [
+        "phone call",
+        "answering machine",
+        "mobile number",
+        "area code",
+        "connection",
+        "goodbye (phone)",
+        "hello (phone)"
+      ],
+      "sentences": [
+        "a1_L112_1",
+        "a1_L112_2",
+        "a1_L112_3"
+      ]
+    },
+    {
+      "id": 113,
+      "theme": "birthdays",
+      "new": [
+        "birthday",
+        "birthday cake",
+        "celebration",
+        "festival",
+        "public holiday",
+        "guest",
+        "invitation"
+      ],
+      "sentences": [
+        "a1_L113_1",
+        "a1_L113_2",
+        "a1_L113_3"
+      ]
+    },
+    {
+      "id": 114,
+      "theme": "christmas",
+      "new": [
+        "christmas",
+        "christmas tree",
+        "christmas party",
+        "christmas present",
+        "santa claus",
+        "snowman"
+      ],
+      "sentences": [
+        "a1_L114_1",
+        "a1_L114_2",
+        "a1_L114_3"
+      ]
+    },
+    {
+      "id": 115,
+      "theme": "easter and other festivals",
+      "new": [
+        "easter",
+        "easter egg",
+        "easter festival",
+        "easter bunny",
+        "oktoberfest",
+        "international women's day"
+      ],
+      "sentences": [
+        "a1_L115_1",
+        "a1_L115_2",
+        "a1_L115_3"
+      ]
+    },
+    {
+      "id": 116,
+      "theme": "the wedding",
+      "new": [
+        "wedding",
+        "wedding party",
+        "bride",
+        "partner",
+        "daughter-in-law",
+        "father-in-law",
+        "sister-in-law"
+      ],
+      "sentences": [
+        "a1_L116_1",
+        "a1_L116_2",
+        "a1_L116_3"
+      ]
+    },
+    {
+      "id": 117,
+      "theme": "grandparents",
+      "new": [
+        "grandma",
+        "grandpa",
+        "grandmother",
+        "grandfather",
+        "grandparents",
+        "mom",
+        "dad"
+      ],
+      "sentences": [
+        "a1_L117_1",
+        "a1_L117_2",
+        "a1_L117_3"
+      ]
+    },
+    {
+      "id": 118,
+      "theme": "relatives and neighbours",
+      "new": [
+        "relative",
+        "acquaintance",
+        "neighbor",
+        "husband",
+        "wife",
+        "family photo",
+        "family name"
+      ],
+      "sentences": [
+        "a1_L118_1",
+        "a1_L118_2",
+        "a1_L118_3"
+      ]
+    },
+    {
+      "id": 119,
+      "theme": "personal details",
+      "new": [
+        "first name",
+        "surname",
+        "marital status",
+        "age",
+        "year of birth",
+        "place of birth",
+        "home country",
+        "homeland"
+      ],
+      "sentences": [
+        "a1_L119_1",
+        "a1_L119_2",
+        "a1_L119_3"
+      ]
+    },
+    {
+      "id": 120,
+      "theme": "married or single",
+      "new": [
+        "married",
+        "single",
+        "divorced",
+        "widowed",
+        "born",
+        "to be born",
+        "to marry",
+        "pregnant"
+      ],
+      "sentences": [
+        "a1_L120_1",
+        "a1_L120_2",
+        "a1_L120_3"
+      ]
+    },
+    {
+      "id": 121,
+      "theme": "free time",
+      "new": [
+        "leisure time",
+        "hobby",
+        "sport",
+        "football",
+        "football player",
+        "tennis",
+        "swimming pool"
+      ],
+      "sentences": [
+        "a1_L121_1",
+        "a1_L121_2",
+        "a1_L121_3"
+      ]
+    },
+    {
+      "id": 122,
+      "theme": "going out",
+      "new": [
+        "cinema",
+        "concert",
+        "disco",
+        "event ticket",
+        "guitar",
+        "fun",
+        "break"
+      ],
+      "sentences": [
+        "a1_L122_1",
+        "a1_L122_2",
+        "a1_L122_3"
+      ]
+    },
+    {
+      "id": 123,
+      "theme": "the weather",
+      "new": [
+        "weather report",
+        "sunny",
+        "cloudy",
+        "windy",
+        "foggy",
+        "wet",
+        "dry",
+        "warm"
+      ],
+      "sentences": [
+        "a1_L123_1",
+        "a1_L123_2",
+        "a1_L123_3"
+      ]
+    },
+    {
+      "id": 124,
+      "theme": "rain and snow",
+      "new": [
+        "to rain",
+        "to snow",
+        "to hail",
+        "to shine",
+        "moon",
+        "one degree below zero",
+        "four degrees above zero",
+        "minus"
+      ],
+      "sentences": [
+        "a1_L124_1",
+        "a1_L124_2",
+        "a1_L124_3"
+      ]
+    },
+    {
+      "id": 125,
+      "theme": "north and south",
+      "new": [
+        "north",
+        "south",
+        "east",
+        "west",
+        "cardinal direction",
+        "berlin",
+        "west germany",
+        "map of germany"
+      ],
+      "sentences": [
+        "a1_L125_1",
+        "a1_L125_2",
+        "a1_L125_3"
+      ]
+    },
+    {
+      "id": 126,
+      "theme": "plants and play",
+      "new": [
+        "plant",
+        "leaf",
+        "lake",
+        "ball",
+        "balloon",
+        "movement",
+        "sports game"
+      ],
+      "sentences": [
+        "a1_L126_1",
+        "a1_L126_2",
+        "a1_L126_3"
+      ]
+    },
+    {
+      "id": 127,
+      "theme": "the morning routine",
+      "new": [
+        "to get up",
+        "to shower",
+        "to bathe",
+        "to get dressed",
+        "to undress",
+        "to put on",
+        "to have breakfast",
+        "to go to bed"
+      ],
+      "sentences": [
+        "a1_L127_1",
+        "a1_L127_2",
+        "a1_L127_3"
+      ]
+    },
+    {
+      "id": 128,
+      "theme": "meeting people",
+      "new": [
+        "to sign up",
+        "to register",
+        "to introduce oneself",
+        "to introduce",
+        "to be called",
+        "to be acquainted with",
+        "to get to know",
+        "to be glad"
+      ],
+      "sentences": [
+        "a1_L128_1",
+        "a1_L128_2",
+        "a1_L128_3"
+      ]
+    },
+    {
+      "id": 129,
+      "theme": "switches and screens",
+      "new": [
+        "to turn on",
+        "to turn off",
+        "to be on",
+        "to be off",
+        "to be open",
+        "to be closed",
+        "to click on",
+        "to install"
+      ],
+      "sentences": [
+        "a1_L129_1",
+        "a1_L129_2",
+        "a1_L129_3"
+      ]
+    },
+    {
+      "id": 130,
+      "theme": "bringing and fetching",
+      "new": [
+        "to hand in",
+        "to pick up",
+        "to bring along",
+        "to come along",
+        "to join in",
+        "to take along",
+        "to fetch",
+        "to pack"
+      ],
+      "sentences": [
+        "a1_L130_1",
+        "a1_L130_2",
+        "a1_L130_3"
+      ]
+    },
+    {
+      "id": 131,
+      "theme": "beginning and ending",
+      "new": [
+        "to start",
+        "to end",
+        "to cancel",
+        "to last",
+        "to delay",
+        "to replace",
+        "to lack",
+        "to fill out"
+      ],
+      "sentences": [
+        "a1_L131_1",
+        "a1_L131_2",
+        "a1_L131_3"
+      ]
+    },
+    {
+      "id": 132,
+      "theme": "sitting and standing",
+      "new": [
+        "to hold",
+        "to hang",
+        "to lay",
+        "to lie",
+        "to sit",
+        "to stand",
+        "to rise"
+      ],
+      "sentences": [
+        "a1_L132_1",
+        "a1_L132_2",
+        "a1_L132_3"
+      ]
+    },
+    {
+      "id": 133,
+      "theme": "walking and coming back",
+      "new": [
+        "to get upset",
+        "to grow up",
+        "to stroll",
+        "to hike",
+        "to be away",
+        "to come back"
+      ],
+      "sentences": [
+        "a1_L133_1",
+        "a1_L133_2",
+        "a1_L133_3"
+      ]
+    },
+    {
+      "id": 134,
+      "theme": "saying and writing",
+      "new": [
+        "to mark",
+        "to mean",
+        "to report",
+        "to spell",
+        "to tell",
+        "to correct",
+        "to talk",
+        "to underline"
+      ],
+      "sentences": [
+        "a1_L134_1",
+        "a1_L134_2",
+        "a1_L134_3"
+      ]
+    },
+    {
+      "id": 135,
+      "theme": "asking politely",
+      "new": [
+        "to request",
+        "to thank",
+        "to recommend",
+        "to excuse",
+        "to congratulate",
+        "to inquire",
+        "to advise",
+        "to wish"
+      ],
+      "sentences": [
+        "a1_L135_1",
+        "a1_L135_2",
+        "a1_L135_3"
+      ]
+    },
+    {
+      "id": 136,
+      "theme": "giving and serving",
+      "new": [
+        "to delight",
+        "to please",
+        "to belong",
+        "to fit",
+        "to gift",
+        "to dispatch",
+        "to serve",
+        "to connect"
+      ],
+      "sentences": [
+        "a1_L136_1",
+        "a1_L136_2",
+        "a1_L136_3"
+      ]
+    },
+    {
+      "id": 137,
+      "theme": "cooking and chores",
+      "new": [
+        "to bake",
+        "to grill",
+        "to peek",
+        "to ring",
+        "to arrange",
+        "to try out",
+        "to smoke",
+        "to wash dishes"
+      ],
+      "sentences": [
+        "a1_L137_1",
+        "a1_L137_2",
+        "a1_L137_3"
+      ]
+    },
+    {
+      "id": 138,
+      "theme": "plans and pictures",
+      "new": [
+        "to tour",
+        "to form",
+        "to print",
+        "to press",
+        "to photograph",
+        "to plan",
+        "to calculate",
+        "to draw"
+      ],
+      "sentences": [
+        "a1_L138_1",
+        "a1_L138_2",
+        "a1_L138_3"
+      ]
+    },
+    {
+      "id": 139,
+      "theme": "allowed and supposed",
+      "new": [
+        "to be allowed to",
+        "should",
+        "to let",
+        "to be alive",
+        "to act",
+        "to earn",
+        "to become"
+      ],
+      "sentences": [
+        "a1_L139_1",
+        "a1_L139_2",
+        "a1_L139_3"
+      ]
+    },
+    {
+      "id": 140,
+      "theme": "visits and clubs",
+      "new": [
+        "visit",
+        "conversation",
+        "group",
+        "contact",
+        "to visit",
+        "to celebrate",
+        "association",
+        "to switch"
+      ],
+      "sentences": [
+        "a1_L140_1",
+        "a1_L140_2",
+        "a1_L140_3"
+      ]
+    },
+    {
+      "id": 141,
+      "theme": "a comfortable room",
+      "new": [
+        "comfortable",
+        "cozy",
+        "uncomfortable",
+        "peaceful",
+        "well-groomed",
+        "wide",
+        "narrow"
+      ],
+      "sentences": [
+        "a1_L141_1",
+        "a1_L141_2",
+        "a1_L141_3"
+      ]
+    },
+    {
+      "id": 142,
+      "theme": "what people are like",
+      "new": [
+        "silly",
+        "mad",
+        "friendly",
+        "glad",
+        "young",
+        "funny",
+        "nice",
+        "unhappy"
+      ],
+      "sentences": [
+        "a1_L142_1",
+        "a1_L142_2",
+        "a1_L142_3"
+      ]
+    },
+    {
+      "id": 143,
+      "theme": "terrible and great",
+      "new": [
+        "terrible",
+        "ugly",
+        "severe",
+        "super",
+        "very good",
+        "great"
+      ],
+      "sentences": [
+        "a1_L143_1",
+        "a1_L143_2",
+        "a1_L143_3"
+      ]
+    },
+    {
+      "id": 144,
+      "theme": "interesting or boring",
+      "new": [
+        "strange",
+        "interesting",
+        "cool",
+        "tricky",
+        "creative",
+        "cultural",
+        "boring",
+        "normal",
+        "typical"
+      ],
+      "sentences": [
+        "a1_L144_1",
+        "a1_L144_2",
+        "a1_L144_3"
+      ]
+    },
+    {
+      "id": 145,
+      "theme": "right and allowed",
+      "new": [
+        "known",
+        "agreed",
+        "valid",
+        "correct",
+        "forbidden",
+        "understood"
+      ],
+      "sentences": [
+        "a1_L145_1",
+        "a1_L145_2",
+        "a1_L145_3"
+      ]
+    },
+    {
+      "id": 146,
+      "theme": "tight and whole",
+      "new": [
+        "tight",
+        "whole",
+        "upright",
+        "high",
+        "maximum",
+        "remaining"
+      ],
+      "sentences": [
+        "a1_L146_1",
+        "a1_L146_2",
+        "a1_L146_3"
+      ]
+    },
+    {
+      "id": 147,
+      "theme": "at work",
+      "new": [
+        "automatic",
+        "work-related",
+        "international",
+        "online",
+        "positive",
+        "practical",
+        "punctual",
+        "independent"
+      ],
+      "sentences": [
+        "a1_L147_1",
+        "a1_L147_2",
+        "a1_L147_3"
+      ]
+    },
+    {
+      "id": 148,
+      "theme": "open or broken",
+      "new": [
+        "occupied",
+        "broken",
+        "closed",
+        "open",
+        "done",
+        "died"
+      ],
+      "sentences": [
+        "a1_L148_1",
+        "a1_L148_2",
+        "a1_L148_3"
+      ]
+    },
+    {
+      "id": 149,
+      "theme": "sweet and fresh",
+      "new": [
+        "bitter",
+        "sweet",
+        "fresh",
+        "affordable",
+        "dead"
+      ],
+      "sentences": [
+        "a1_L149_1",
+        "a1_L149_2",
+        "a1_L149_3"
+      ]
+    },
+    {
+      "id": 150,
+      "theme": "urgent and irregular",
+      "new": [
+        "unscheduled",
+        "direct",
+        "urgent",
+        "pressing",
+        "stressful",
+        "irregular",
+        "separable"
+      ],
+      "sentences": [
+        "a1_L150_1",
+        "a1_L150_2",
+        "a1_L150_3"
+      ]
+    },
+    {
+      "id": 151,
+      "theme": "in the morning, in the evening",
+      "new": [
+        "late morning",
+        "in the evening",
+        "at noon",
+        "in the mornings",
+        "in the afternoon",
+        "at night",
+        "on saturdays",
+        "before noon"
+      ],
+      "sentences": [
+        "a1_L151_1",
+        "a1_L151_2",
+        "a1_L151_3"
+      ]
+    },
+    {
+      "id": 152,
+      "theme": "this week",
+      "new": [
+        "weekend",
+        "on the weekend",
+        "day of the week",
+        "earlier",
+        "currently"
+      ],
+      "sentences": [
+        "a1_L152_1",
+        "a1_L152_2"
+      ]
+    },
+    {
+      "id": 153,
+      "theme": "at last",
+      "new": [
+        "at last",
+        "not until",
+        "right away",
+        "once more",
+        "now then",
+        "immediately",
+        "first of all",
+        "unfortunately"
+      ],
+      "sentences": [
+        "a1_L153_1",
+        "a1_L153_2",
+        "a1_L153_3"
+      ]
+    },
+    {
+      "id": 154,
+      "theme": "how long, how much",
+      "new": [
+        "a bit",
+        "approximately",
+        "in total",
+        "for a long time",
+        "at least",
+        "only",
+        "for hours",
+        "further"
+      ],
+      "sentences": [
+        "a1_L154_1",
+        "a1_L154_2"
+      ]
+    },
+    {
+      "id": 155,
+      "theme": "gladly and certainly",
+      "new": [
+        "certainly",
+        "just",
+        "jointly",
+        "just as",
+        "gladly",
+        "rather",
+        "best of all",
+        "anyway",
+        "absolutely"
+      ],
+      "sentences": [
+        "a1_L155_1",
+        "a1_L155_2",
+        "a1_L155_3"
+      ]
+    },
+    {
+      "id": 156,
+      "theme": "by and per",
+      "new": [
+        "extra",
+        "by",
+        "per",
+        "like this",
+        "on foot"
+      ],
+      "sentences": [
+        "a1_L156_1",
+        "a1_L156_2"
+      ]
+    },
+    {
+      "id": 157,
+      "theme": "above and outside",
+      "new": [
+        "yet",
+        "outside",
+        "above",
+        "below",
+        "at home",
+        "backward",
+        "everywhere",
+        "at all"
+      ],
+      "sentences": [
+        "a1_L157_1",
+        "a1_L157_2",
+        "a1_L157_3"
+      ]
+    },
+    {
+      "id": 158,
+      "theme": "next to and behind",
+      "new": [
+        "on top of",
+        "out of",
+        "beside",
+        "through",
+        "across from",
+        "behind",
+        "next to",
+        "under"
+      ],
+      "sentences": [
+        "a1_L158_1",
+        "a1_L158_2",
+        "a1_L158_3"
+      ]
+    },
+    {
+      "id": 159,
+      "theme": "in front and in the middle",
+      "new": [
+        "center",
+        "around",
+        "middle",
+        "at the back",
+        "in front"
+      ],
+      "sentences": [
+        "a1_L159_1",
+        "a1_L159_2"
+      ]
+    },
+    {
+      "id": 160,
+      "theme": "pointing at things",
+      "new": [
+        "for that",
+        "after that",
+        "about that",
+        "to it",
+        "there (pronoun)",
+        "here is",
+        "here it is",
+        "here you go"
+      ],
+      "sentences": [
+        "a1_L160_1",
+        "a1_L160_2"
+      ]
+    },
+    {
+      "id": 161,
+      "theme": "since and for",
+      "new": [
+        "starting from",
+        "as",
+        "for",
+        "since",
+        "prior to",
+        "gone by"
+      ],
+      "sentences": [
+        "a1_L161_1",
+        "a1_L161_2"
+      ]
+    },
+    {
+      "id": 162,
+      "theme": "polite you",
+      "new": [
+        "you (formal)",
+        "your (formal)",
+        "other",
+        "both",
+        "y'all",
+        "her/him/him"
+      ],
+      "sentences": [
+        "a1_L162_1",
+        "a1_L162_2"
+      ]
+    },
+    {
+      "id": 163,
+      "theme": "everything and nothing",
+      "new": [
+        "everything",
+        "nothing",
+        "not any",
+        "none",
+        "something",
+        "someone"
+      ],
+      "sentences": [
+        "a1_L163_1",
+        "a1_L163_2"
+      ]
+    },
+    {
+      "id": 164,
+      "theme": "attention and order",
+      "new": [
+        "attention",
+        "control",
+        "mobility",
+        "orderliness",
+        "orientation",
+        "plan",
+        "caution"
+      ],
+      "sentences": [
+        "a1_L164_1",
+        "a1_L164_2"
+      ]
+    },
+    {
+      "id": 165,
+      "theme": "help and thanks",
+      "new": [
+        "thanks",
+        "help",
+        "recipe",
+        "tip",
+        "congratulations",
+        "request"
+      ],
+      "sentences": [
+        "a1_L165_1",
+        "a1_L165_2"
+      ]
+    },
+    {
+      "id": 166,
+      "theme": "the computer",
+      "new": [
+        "computer program",
+        "computer game",
+        "computer system",
+        "line",
+        "fax",
+        "sign",
+        "switch",
+        "test"
+      ],
+      "sentences": [
+        "a1_L166_1",
+        "a1_L166_2",
+        "a1_L166_3"
+      ]
+    },
+    {
+      "id": 167,
+      "theme": "things in the house",
+      "new": [
+        "baby food",
+        "canister",
+        "quantity",
+        "fire",
+        "weight",
+        "oil",
+        "machine",
+        "cigarette"
+      ],
+      "sentences": [
+        "a1_L167_1",
+        "a1_L167_2",
+        "a1_L167_3"
+      ]
+    },
+    {
+      "id": 168,
+      "theme": "at the specialist",
+      "new": [
+        "detail",
+        "registration",
+        "main thing",
+        "cough syrup",
+        "adam's apple",
+        "orthopedist",
+        "pizza delivery person"
+      ],
+      "sentences": [
+        "a1_L168_1",
+        "a1_L168_2",
+        "a1_L168_3"
+      ]
+    },
+    {
+      "id": 169,
+      "theme": "paperwork",
+      "new": [
+        "position",
+        "flyer",
+        "disposal",
+        "exchange",
+        "attached",
+        "mistake"
+      ],
+      "sentences": [
+        "a1_L169_1",
+        "a1_L169_2"
+      ]
+    },
+    {
+      "id": 170,
+      "theme": "odds and ends",
+      "new": [
+        "glance",
+        "bow",
+        "admission",
+        "a square meter",
+        "today is march 1st",
+        "local group list"
+      ],
+      "sentences": [
+        "a1_L170_1",
+        "a1_L170_2",
+        "a1_L170_3"
+      ]
+    },
+    {
+      "id": 171,
+      "theme": "moments and luck",
+      "new": [
+        "moment",
+        "end",
+        "part",
+        "finish",
+        "step",
+        "hunch",
+        "lucky day",
+        "matter",
+        "unlucky day",
+        "luck"
+      ],
+      "sentences": [
+        "a1_L171_1",
+        "a1_L171_2",
+        "a1_L171_3"
+      ]
+    },
+    {
+      "id": 172,
+      "theme": "writing to someone politely",
+      "new": [
+        "mister",
+        "lady",
+        "teenager",
+        "male",
+        "female",
+        "esteemed",
+        "heartfelt",
+        "dear",
+        "wonderful",
+        "gorgeous"
+      ],
+      "sentences": [
+        "a1_L172_1",
+        "a1_L172_2",
+        "a1_L172_3"
+      ]
+    },
+    {
+      "id": 173,
+      "theme": "life in town",
+      "new": [
+        "everyday life",
+        "people",
+        "night shift",
+        "dream job",
+        "life",
+        "nursing home",
+        "cellar",
+        "church",
+        "aachen",
+        "hall"
+      ],
+      "sentences": [
+        "a1_L173_1",
+        "a1_L173_2",
+        "a1_L173_3",
+        "a1_L173_4"
+      ]
+    },
+    {
+      "id": 174,
+      "theme": "titles",
+      "new": [
+        "mr.",
+        "mrs.",
+        "doc",
+        "master",
+        "lord",
+        "prince"
+      ],
+      "sentences": [
+        "a1_L174_1",
+        "a1_L174_2"
+      ]
+    },
+    {
+      "id": 175,
+      "theme": "people in charge",
+      "new": [
+        "president",
+        "captain",
+        "colonel",
+        "lieutenant",
+        "inspector"
+      ],
+      "sentences": [
+        "a1_L175_1",
+        "a1_L175_2"
+      ]
+    },
+    {
+      "id": 176,
+      "theme": "police and court",
+      "new": [
+        "cop",
+        "court",
+        "prison",
+        "crime",
+        "witness",
+        "custody",
+        "security",
+        "command",
+        "soldier",
+        "army"
+      ],
+      "sentences": [
+        "a1_L176_1",
+        "a1_L176_2",
+        "a1_L176_3"
+      ]
+    },
+    {
+      "id": 177,
+      "theme": "weapons and fighting",
+      "new": [
+        "enemy",
+        "weapon",
+        "bullet",
+        "bomb",
+        "to attack",
+        "to defend",
+        "to kill",
+        "to destroy",
+        "to burst",
+        "race"
+      ],
+      "sentences": [
+        "a1_L177_1",
+        "a1_L177_2",
+        "a1_L177_3"
+      ]
+    },
+    {
+      "id": 178,
+      "theme": "heaven and hell",
+      "new": [
+        "god",
+        "angel",
+        "devil",
+        "monster",
+        "hell",
+        "soul",
+        "grace",
+        "evil",
+        "to pray",
+        "to worship"
+      ],
+      "sentences": [
+        "a1_L178_1",
+        "a1_L178_2",
+        "a1_L178_3"
+      ]
+    },
+    {
+      "id": 179,
+      "theme": "family and friends",
+      "new": [
+        "uncle",
+        "cousin (m)",
+        "parent",
+        "boyfriend",
+        "darling",
+        "young person",
+        "kiddo",
+        "kid",
+        "dude",
+        "guy"
+      ],
+      "sentences": [
+        "a1_L179_1",
+        "a1_L179_2",
+        "a1_L179_3"
+      ]
+    },
+    {
+      "id": 180,
+      "theme": "people around you",
+      "new": [
+        "idiot",
+        "american",
+        "actor",
+        "coach",
+        "classmate (m)",
+        "beast",
+        "gang",
+        "companionship",
+        "people (nation)"
+      ],
+      "sentences": [
+        "a1_L180_1",
+        "a1_L180_2",
+        "a1_L180_3"
+      ]
+    },
+    {
+      "id": 181,
+      "theme": "little words we say",
+      "new": [
+        "ah",
+        "oh",
+        "hey",
+        "uh",
+        "eh",
+        "huh?",
+        "yeah",
+        "ok",
+        "well",
+        "i'm sorry"
+      ],
+      "sentences": [
+        "a1_L181_1",
+        "a1_L181_2"
+      ]
+    },
+    {
+      "id": 182,
+      "theme": "sorry and sad",
+      "new": [
+        "pity",
+        "welcome",
+        "shame",
+        "sorrow",
+        "doubt",
+        "fault",
+        "harm",
+        "error",
+        "truth",
+        "silence"
+      ],
+      "sentences": [
+        "a1_L182_1",
+        "a1_L182_2",
+        "a1_L182_3"
+      ]
+    },
+    {
+      "id": 183,
+      "theme": "happy and lovely",
+      "new": [
+        "happiness",
+        "pleasure",
+        "beauty",
+        "honor",
+        "awesome",
+        "magnificent",
+        "cute",
+        "pleased",
+        "chill",
+        "tranquil"
+      ],
+      "sentences": [
+        "a1_L183_1",
+        "a1_L183_2",
+        "a1_L183_3"
+      ]
+    },
+    {
+      "id": 184,
+      "theme": "love and jokes",
+      "new": [
+        "to hate",
+        "to desire",
+        "to kiss",
+        "kiss",
+        "to wed",
+        "to treat",
+        "to mock",
+        "to joke",
+        "to swear",
+        "to scream"
+      ],
+      "sentences": [
+        "a1_L184_1",
+        "a1_L184_2",
+        "a1_L184_3"
+      ]
+    },
+    {
+      "id": 185,
+      "theme": "hitting and pulling",
+      "new": [
+        "push-up",
+        "pull-up",
+        "to push",
+        "to pull",
+        "to touch",
+        "to beat",
+        "to hit",
+        "hit",
+        "to cut",
+        "to burn"
+      ],
+      "sentences": [
+        "a1_L185_1",
+        "a1_L185_2",
+        "a1_L185_3"
+      ]
+    },
+    {
+      "id": 186,
+      "theme": "going and coming",
+      "new": [
+        "to go home",
+        "to go back",
+        "to go down",
+        "to go back up",
+        "to flee",
+        "to escape",
+        "to advance",
+        "advance",
+        "to accompany",
+        "to meet up"
+      ],
+      "sentences": [
+        "a1_L186_1",
+        "a1_L186_2",
+        "a1_L186_3"
+      ]
+    },
+    {
+      "id": 187,
+      "theme": "keeping and giving back",
+      "new": [
+        "to keep",
+        "to retain",
+        "to hand over",
+        "to give back",
+        "to bring back",
+        "to share",
+        "to release",
+        "to free",
+        "to abandon",
+        "to put down"
+      ],
+      "sentences": [
+        "a1_L187_1",
+        "a1_L187_2",
+        "a1_L187_3"
+      ]
+    },
+    {
+      "id": 188,
+      "theme": "living and dying",
+      "new": [
+        "to die",
+        "to exist",
+        "to survive",
+        "to grow",
+        "to disappear",
+        "to see again",
+        "to be worth",
+        "to be quiet",
+        "to experience",
+        "living"
+      ],
+      "sentences": [
+        "a1_L188_1",
+        "a1_L188_2",
+        "a1_L188_3"
+      ]
+    },
+    {
+      "id": 189,
+      "theme": "daring and deserving",
+      "new": [
+        "to succeed",
+        "to accomplish",
+        "to dare",
+        "to bet",
+        "to deserve",
+        "to appreciate",
+        "to respect",
+        "to forgive",
+        "to assure",
+        "to seem"
+      ],
+      "sentences": [
+        "a1_L189_1",
+        "a1_L189_2",
+        "a1_L189_3"
+      ]
+    },
+    {
+      "id": 190,
+      "theme": "starting and stopping work",
+      "new": [
+        "to work (informal)",
+        "to conduct",
+        "to pursue",
+        "to file",
+        "to import",
+        "to quit",
+        "to withdraw",
+        "to restart",
+        "to retake",
+        "to cease"
+      ],
+      "sentences": [
+        "a1_L190_1",
+        "a1_L190_2",
+        "a1_L190_3"
+      ]
+    },
+    {
+      "id": 191,
+      "theme": "worry and boredom",
+      "new": [
+        "to fear",
+        "to bear",
+        "to bore",
+        "to tire",
+        "to calm",
+        "to alarm",
+        "to distress",
+        "to count",
+        "to discover",
+        "to look like"
+      ],
+      "sentences": [
+        "a1_L191_1",
+        "a1_L191_2",
+        "a1_L191_3"
+      ]
+    },
+    {
+      "id": 192,
+      "theme": "trouble",
+      "new": [
+        "to disturb",
+        "to shout",
+        "to blow",
+        "to spin",
+        "to fling",
+        "to hang around",
+        "to force",
+        "to oblige",
+        "to commit",
+        "to flunk"
+      ],
+      "sentences": [
+        "a1_L192_1",
+        "a1_L192_2",
+        "a1_L192_3"
+      ]
+    },
+    {
+      "id": 193,
+      "theme": "watching and knowing",
+      "new": [
+        "to know (people)",
+        "to bring (a person)",
+        "to bring (someone)",
+        "to monitor",
+        "to lower",
+        "to deceive",
+        "to take away",
+        "to suffice",
+        "to unblock",
+        "emergency services"
+      ],
+      "sentences": [
+        "a1_L193_1",
+        "a1_L193_2",
+        "a1_L193_3"
+      ]
+    },
+    {
+      "id": 194,
+      "theme": "top and bottom",
+      "new": [
+        "top",
+        "bottom",
+        "one end",
+        "over",
+        "side",
+        "road"
+      ],
+      "sentences": [
+        "a1_L194_1",
+        "a1_L194_2"
+      ]
+    },
+    {
+      "id": 195,
+      "theme": "inside and behind",
+      "new": [
+        "inside",
+        "interior",
+        "in (general)",
+        "in front of",
+        "background",
+        "somewhere else"
+      ],
+      "sentences": [
+        "a1_L195_1",
+        "a1_L195_2"
+      ]
+    },
+    {
+      "id": 196,
+      "theme": "things in a room",
+      "new": [
+        "curtain",
+        "flooring",
+        "light (illumination)",
+        "wire",
+        "vessel",
+        "heap"
+      ],
+      "sentences": [
+        "a1_L196_1",
+        "a1_L196_2"
+      ]
+    },
+    {
+      "id": 197,
+      "theme": "money and places",
+      "new": [
+        "loan",
+        "dollar",
+        "bar",
+        "call",
+        "grave"
+      ],
+      "sentences": [
+        "a1_L197_1",
+        "a1_L197_2"
+      ]
+    },
+    {
+      "id": 198,
+      "theme": "screen and stage",
+      "new": [
+        "image",
+        "tv",
+        "movie theatre",
+        "genre",
+        "voice",
+        "topic",
+        "action",
+        "mission",
+        "continuation",
+        "turn"
+      ],
+      "sentences": [
+        "a1_L198_1",
+        "a1_L198_2",
+        "a1_L198_3",
+        "a1_L198_4"
+      ]
+    },
+    {
+      "id": 199,
+      "theme": "exactly and quickly",
+      "new": [
+        "exact",
+        "exactly",
+        "precisely",
+        "quickly",
+        "gently",
+        "surely",
+        "firstly"
+      ],
+      "sentences": [
+        "a1_L199_1",
+        "a1_L199_2"
+      ]
+    },
+    {
+      "id": 200,
+      "theme": "days and seconds",
+      "new": [
+        "day before yesterday",
+        "day after tomorrow",
+        "someday",
+        "one second",
+        "time period",
+        "integer",
+        "so then"
+      ],
+      "sentences": [
+        "a1_L200_1",
+        "a1_L200_2"
+      ]
+    },
+    {
+      "id": 201,
+      "theme": "how many people",
+      "new": [
+        "few",
+        "several",
+        "each one",
+        "the one",
+        "one (generic)",
+        "others",
+        "large"
+      ],
+      "sentences": [
+        "a1_L201_1",
+        "a1_L201_2"
+      ]
+    },
+    {
+      "id": 202,
+      "theme": "everyone and anyone",
+      "new": [
+        "everyone",
+        "anyone",
+        "anything",
+        "all (pl)",
+        "as much",
+        "so many",
+        "so much"
+      ],
+      "sentences": [
+        "a1_L202_1",
+        "a1_L202_2"
+      ]
+    },
+    {
+      "id": 203,
+      "theme": "which one",
+      "new": [
+        "which one",
+        "which one (f)",
+        "whose",
+        "the (pl)",
+        "this (before a vowel)",
+        "that (f)",
+        "of the (m)",
+        "of the (pl)",
+        "to the",
+        "to the (pl)"
+      ],
+      "sentences": [
+        "a1_L203_1",
+        "a1_L203_2"
+      ]
+    },
+    {
+      "id": 204,
+      "theme": "theirs and ours",
+      "new": [
+        "my (plural)",
+        "their (pl)",
+        "its/his/her (pl)",
+        "to him/her",
+        "at (someone's place)",
+        "among",
+        "towards",
+        "contrary",
+        "of",
+        "neither...nor"
+      ],
+      "sentences": [
+        "a1_L204_1",
+        "a1_L204_2",
+        "a1_L204_3"
+      ]
+    },
+    {
+      "id": 205,
+      "theme": "odd leftovers",
+      "new": [
+        "treasure",
+        "miscellaneous",
+        "assistance",
+        "vacancy",
+        "species",
+        "save"
+      ],
+      "sentences": [
+        "a1_L205_1",
+        "a1_L205_2"
+      ]
+    },
+    {
+      "id": 206,
+      "theme": "last leftovers",
+      "new": [
+        "supposed to",
+        "simple",
+        "capable",
+        "standing",
+        "mouth (of an animal)",
+        "crazy (m)"
+      ],
+      "sentences": [
+        "a1_L206_1",
+        "a1_L206_2"
+      ]
+    }
+  ]
+}
