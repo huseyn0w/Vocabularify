@@ -119,12 +119,13 @@ export const GLUE: Readonly<Record<string, readonly string[]>> = {
   es: ['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'al', 'del', 'a'],
   it: ['il', 'lo', 'la', 'i', 'gli', 'le', "l'", 'un', 'uno', 'una', "un'",
        'al', 'del', 'nel', 'alla', 'della', 'nella'],
-  // 'mı' / 'mi' / 'mu' / 'mü' / 'mısın' / 'misin' / 'musun' / 'müsün' - the
-  // yes/no question particle (vowel-harmonised, with or without the 2nd
-  // person singular ending). Turkish cannot ask a yes/no question without it,
+  // The yes/no question particle, vowel-harmonised, bare or carrying the
+  // person ending: mı/mi/mu/mü, -sın for the 2nd singular, -yım for the 1st,
+  // -yız for the 1st plural. Turkish cannot ask a yes/no question without it,
   // and there is nothing to teach: it is the Turkish spelling of the English
   // inversion/do-support a learner already gets for free.
-  tr: ['bir', 'mı', 'mi', 'mu', 'mü', 'mısın', 'misin', 'musun', 'müsün'],
+  tr: ['bir', 'mı', 'mi', 'mu', 'mü', 'mısın', 'misin', 'musun', 'müsün',
+       'mıyım', 'miyim', 'muyum', 'müyüm', 'mıyız', 'miyiz', 'muyuz', 'müyüz'],
   // 'у' - the Russian possessive construction has no verb of its own. In "У
   // меня есть брат" the verb is "есть" (a form of the taught "to be") and 'у'
   // is purely structural.
