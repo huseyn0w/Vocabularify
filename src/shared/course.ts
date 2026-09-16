@@ -154,7 +154,17 @@ export const NO_FREE_WORD: Readonly<Record<string, readonly string[]>> = {
   // `it` has no ordinary word at all: `ello` and `esso` are literary.
   es: ['it'],
   it: ['it'],
-  tr: ['can', 'in', 'to', 'without'],
+  // Turkish writes these as suffixes on the noun or the verb, and the bank
+  // cell is the suffix itself (`-den`, `-in`, `-ecekti`) or a label
+  // (`gelecek zaman`). `at` is the clock preposition, which is the locative
+  // suffix too; its cell `saatinde` is a paraphrase, not a word for it.
+  tr: [
+    'can', 'in', 'to', 'without', 'at', 'from', 'of',
+    'of the (m)', 'of the (pl)', 'to the', 'to the (pl)',
+    'will', 'would', 'might', 'shall', 'could', 'than',
+    // the `-arak` converb
+    'by (conjunction)'
+  ],
   ru: []
 };
 
